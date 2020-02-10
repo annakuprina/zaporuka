@@ -32,8 +32,7 @@ define( 'DB_USER', 'sampin_wp382' );
 define( 'DB_PASSWORD', '238DS)x.Qp' );
 
 /** MySQL hostname */
-//define( 'DB_HOST', 'localhost' );
-define( 'DB_HOST', 'uashared11.twinservers.net' );
+define( 'DB_HOST', 'localhost' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
