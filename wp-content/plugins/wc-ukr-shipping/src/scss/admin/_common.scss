@@ -1,0 +1,14 @@
+.wc-ukr-shipping-gradient-layer {
+  background: linear-gradient(to right, #a15f93, #8c5381);
+}
+
+.toplevel_page_wc_ukr_shipping_options > ul > li:last-child > a > svg {
+  width: 16px;
+  height: 16px;
+  margin-bottom: -2px;
+  margin-right: 2px;
+}
+
+.toplevel_page_wc_ukr_shipping_options > ul > li:last-child > a:hover path {
+  fill: #00b9eb !important;
+}

@@ -1,0 +1,1168 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: U-Design Core\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-19 08:44-0500\n"
+"PO-Revision-Date: 2019-05-19 11:22-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_nx;_n;esc_attr__;"
+"esc_attr_e;esc_html__;esc_html_e;_x\n"
+"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-u-design-core-activator.php:70
+msgid "Unable to locate WordPress plugin directory."
+msgstr ""
+
+#: includes/shortcodes/class-u-design-core-shortcodes-button.php:158
+msgid "ID:"
+msgstr ""
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:43
+#: includes/shortcodes/class-u-design-core-shortcodes.php:918
+#: includes/widgets/class-latest-posts-widget.php:68
+#: includes/widgets/class-latest-posts-widget.php:196
+#: languages/u-design-core-shortcodes-button-strings.php:116
+#: languages/u-design-core-shortcodes-button-strings.php:118
+#: languages/u-design-core-shortcodes-button-strings.php:246
+msgid "Read more"
+msgstr ""
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:73
+#: includes/shortcodes/class-u-design-core-shortcodes.php:113
+#: includes/shortcodes/class-u-design-core-shortcodes.php:153
+#: includes/shortcodes/class-u-design-core-shortcodes.php:194
+#: includes/shortcodes/class-u-design-core-shortcodes.php:237
+msgid "Read more..."
+msgstr ""
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:294
+msgid "Top of Page"
+msgstr ""
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:294
+msgid "Back to Top"
+msgstr ""
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:910
+#: includes/widgets/class-latest-posts-widget.php:188
+msgid "Latest Posts"
+msgstr ""
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:1071
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:46
+msgid "Top rated products"
+msgstr ""
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:1127
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:72
+msgid "Products"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:34
+msgid "A list or dropdown of a single category's descendants."
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:45
+msgid "U-Design: Custom Category"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:77
+msgid "Select Category"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:140
+msgid "Categories"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:146
+#: includes/widgets/class-google-map-widget.php:116
+#: includes/widgets/class-latest-posts-widget.php:209
+#: includes/widgets/class-login-form-widget.php:139
+#: includes/widgets/class-subpages-widget.php:171
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:151
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:152
+msgid "Category to be displayed:"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:161
+msgid "Show as dropdown"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:167
+msgid "Show post counts"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:173
+msgid "Show hierarchy"
+msgstr ""
+
+#: includes/widgets/class-google-map-widget.php:35
+msgid "A Google Map widget."
+msgstr ""
+
+#: includes/widgets/class-google-map-widget.php:46
+msgid "U-Design: Google Map"
+msgstr ""
+
+#: includes/widgets/class-google-map-widget.php:109
+msgid "Google Map"
+msgstr ""
+
+#: includes/widgets/class-google-map-widget.php:121
+msgid "Google Map Code:"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:35
+msgid "The most recent posts with teaser text"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:46
+msgid "U-Design: Recent Posts"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:107
+#, php-format
+msgid "%1$s by %2$s "
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:215
+msgid "Pick a specific category:"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:223
+msgid "Use the current category (if on category page)."
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:229
+msgid "Number of posts to show:"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:232
+msgid "(at most 15)"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:237
+msgid "Number of posts to skip:"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:240
+msgid "(offset from latest)"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:245
+msgid "Limit the number of words to show for each post:"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:248
+msgid ""
+"(Could also be limited by \"Excerpt Length\" defined in the theme's options "
+"page)"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:255
+msgid "Show date & author info"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:263
+msgid "Show \"more\" link."
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:266
+msgid "The text:"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:274
+#: languages/u-design-core-shortcodes-button-strings.php:247
+msgid "Show thumbnails"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:287
+msgid "Remove thumbnail frame"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:295
+msgid "Show thumbnail frame shadow"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:303
+msgid "Use default image (when no image found)"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:309
+msgid "Thumbnail Dimensions:"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:314
+msgid "(Width X Height) in pixels"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:35
+msgid "A user login form."
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:46
+msgid "U-Design: Login Form"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:68
+msgid "You are logged in as"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:71
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:88
+msgid "Logout"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:77
+msgid "User"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:80
+msgid "Password"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:84
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:90
+msgid "Login"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:85
+msgid "Remember me"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:92
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:92
+msgid "Register"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:95
+msgid "Recover password"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:133
+msgid "Login Form"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:35
+msgid "Display subpages of the present page."
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:46
+msgid "U-Design: Subpages"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:174
+msgid ""
+"Leave the Title field blank if you would like to display the parent page "
+"Title instead."
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:177
+msgid "Sort by:"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:179
+msgid "Page title"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:180
+msgid "Page order"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:181
+msgid "Page ID"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:185
+msgid "Exclude:"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:187
+msgid "Page IDs, separated by commas."
+msgstr ""
+
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:36
+msgid "A widget that displays cart info."
+msgstr ""
+
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:47
+msgid "U-Design: WooCommerce Cart"
+msgstr ""
+
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:87
+msgid "My Account"
+msgstr ""
+
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:98
+#: includes/woocommerce/class-u-design-core-woocommerce.php:451
+msgid "View your shopping cart"
+msgstr ""
+
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:102
+#: includes/woocommerce/class-u-design-core-woocommerce.php:455
+#, php-format
+msgid "Cart: %1$s %2$s "
+msgstr ""
+
+#: includes/woocommerce/class-u-design-core-woocommerce.php:338
+msgid "Home"
+msgstr ""
+
+#: includes/woocommerce/class-u-design-core-woocommerce.php:408
+msgid "No product categories exist."
+msgstr ""
+
+#: includes/woocommerce/class-u-design-core-woocommerce.php:535
+msgid "Cart"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:74
+msgid "U-Design WooCommerce"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:75
+msgid "U-Design theme element"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:80
+msgid "Element Type"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:83
+msgid "WooCommerce products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:84
+msgid "WooCommerce top rated products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:88
+msgid "Select the element type."
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:92
+#: languages/u-design-core-shortcodes-button-strings.php:227
+msgid "Title"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:96
+msgid "Enter title."
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:101
+msgid "Number"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:105
+msgid "Number of products to show."
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:111
+msgid "Show"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:114
+msgid "All products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:115
+msgid "Featured products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:116
+msgid "On-sale products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:124
+msgid "Select what products to show."
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:128
+msgid "Order by"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:131
+msgid "Date"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:132
+msgid "Price"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:133
+msgid "Random"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:134
+msgid "Sales"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:142
+msgid "Select what criteria should the product be ordered by."
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:146
+msgid "Order"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:149
+msgid "DESC"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:150
+msgid "ASC"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:158
+msgid "Select how the product should be ordered (Descending or Ascending)."
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:162
+msgid "Hide free products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:164
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:175
+#: languages/u-design-core-shortcodes-button-strings.php:136
+#: languages/u-design-core-shortcodes-button-strings.php:140
+#: languages/u-design-core-shortcodes-button-strings.php:149
+#: languages/u-design-core-shortcodes-button-strings.php:241
+#: languages/u-design-core-shortcodes-button-strings.php:244
+#: languages/u-design-core-shortcodes-button-strings.php:248
+#: languages/u-design-core-shortcodes-button-strings.php:252
+#: languages/u-design-core-shortcodes-button-strings.php:255
+#: languages/u-design-core-shortcodes-button-strings.php:257
+msgid "Yes"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:173
+msgid "Show hidden products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:184
+msgid "Custom Class"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:188
+msgid ""
+"Use this option to pass a unique CSS class which you may use to style this "
+"particular instance of the content block in the front end with custom CSS."
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:27
+msgid "U-Design Shortcodes"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:29
+msgid "Layout"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:31
+msgid "Columns"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:32
+msgid "U-Design Shortcodes - Insert Columns"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:33
+msgid "Arrangement"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:34
+msgid "Starting Content"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:35
+msgid "Your content here..."
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:37
+msgid "Dividers"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:38
+msgid "U-Design Shortcodes - Insert Divider"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:39
+msgid "Divider Style"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:40
+msgid "Solid line divider"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:41
+msgid "Solid line divider with a link to the top"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:42
+msgid "Invisible, clears the line"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:44
+msgid "Buttons"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:46
+#: languages/u-design-core-shortcodes-button-strings.php:49
+#: languages/u-design-core-shortcodes-button-strings.php:51
+msgid "Flat Button"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:47
+#: languages/u-design-core-shortcodes-button-strings.php:69
+#: languages/u-design-core-shortcodes-button-strings.php:91
+msgid "U-Design Shortcodes - Insert Button"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:48
+#: languages/u-design-core-shortcodes-button-strings.php:74
+#: languages/u-design-core-shortcodes-button-strings.php:92
+msgid "Button Text"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:50
+#: languages/u-design-core-shortcodes-button-strings.php:76
+#: languages/u-design-core-shortcodes-button-strings.php:94
+#: languages/u-design-core-shortcodes-button-strings.php:117
+msgid "Link Title"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:52
+#: languages/u-design-core-shortcodes-button-strings.php:78
+#: languages/u-design-core-shortcodes-button-strings.php:96
+#: languages/u-design-core-shortcodes-button-strings.php:119
+msgid "URL"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:53
+msgid "Padding"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:54
+#: languages/u-design-core-shortcodes-button-strings.php:102
+#: languages/u-design-core-shortcodes-button-strings.php:151
+msgid "Background Color"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:55
+#: languages/u-design-core-shortcodes-button-strings.php:154
+#: languages/u-design-core-shortcodes-button-strings.php:182
+#: languages/u-design-core-shortcodes-button-strings.php:195
+msgid "Border Color"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:56
+msgid "Border Width"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:57
+#: languages/u-design-core-shortcodes-button-strings.php:103
+#: languages/u-design-core-shortcodes-button-strings.php:156
+#: languages/u-design-core-shortcodes-button-strings.php:183
+#: languages/u-design-core-shortcodes-button-strings.php:196
+msgid "Text Color"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:58
+msgid "Text Size"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:59
+#: languages/u-design-core-shortcodes-button-strings.php:82
+#: languages/u-design-core-shortcodes-button-strings.php:104
+#: languages/u-design-core-shortcodes-button-strings.php:120
+#: languages/u-design-core-shortcodes-button-strings.php:184
+#: languages/u-design-core-shortcodes-button-strings.php:211
+#: languages/u-design-core-shortcodes-button-strings.php:294
+msgid "Alignment"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:60
+#: languages/u-design-core-shortcodes-button-strings.php:83
+#: languages/u-design-core-shortcodes-button-strings.php:105
+#: languages/u-design-core-shortcodes-button-strings.php:121
+#: languages/u-design-core-shortcodes-button-strings.php:185
+#: languages/u-design-core-shortcodes-button-strings.php:212
+#: languages/u-design-core-shortcodes-button-strings.php:295
+msgid "Left"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:61
+#: languages/u-design-core-shortcodes-button-strings.php:84
+#: languages/u-design-core-shortcodes-button-strings.php:106
+#: languages/u-design-core-shortcodes-button-strings.php:122
+#: languages/u-design-core-shortcodes-button-strings.php:187
+#: languages/u-design-core-shortcodes-button-strings.php:213
+#: languages/u-design-core-shortcodes-button-strings.php:296
+msgid "Right"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:62
+#: languages/u-design-core-shortcodes-button-strings.php:85
+#: languages/u-design-core-shortcodes-button-strings.php:107
+#: languages/u-design-core-shortcodes-button-strings.php:186
+#: languages/u-design-core-shortcodes-button-strings.php:297
+msgid "Center"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:63
+#: languages/u-design-core-shortcodes-button-strings.php:108
+msgid "None"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:64
+#: languages/u-design-core-shortcodes-button-strings.php:86
+#: languages/u-design-core-shortcodes-button-strings.php:109
+#: languages/u-design-core-shortcodes-button-strings.php:123
+msgid "Link Target"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:65
+#: languages/u-design-core-shortcodes-button-strings.php:87
+#: languages/u-design-core-shortcodes-button-strings.php:110
+#: languages/u-design-core-shortcodes-button-strings.php:124
+msgid "Self"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:66
+#: languages/u-design-core-shortcodes-button-strings.php:88
+#: languages/u-design-core-shortcodes-button-strings.php:111
+#: languages/u-design-core-shortcodes-button-strings.php:125
+msgid "Blank"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:68
+#: languages/u-design-core-shortcodes-button-strings.php:75
+#: languages/u-design-core-shortcodes-button-strings.php:77
+msgid "Simple Button"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:70
+msgid "Type"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:71
+msgid "Default"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:72
+#: languages/u-design-core-shortcodes-button-strings.php:98
+msgid "Small"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:73
+msgid "Round"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:79
+#: languages/u-design-core-shortcodes-button-strings.php:208
+#: languages/u-design-core-shortcodes-button-strings.php:221
+#: languages/u-design-core-shortcodes-button-strings.php:273
+msgid "Style"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:80
+#: languages/u-design-core-shortcodes-button-strings.php:209
+#: languages/u-design-core-shortcodes-button-strings.php:222
+msgid "Dark"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:81
+#: languages/u-design-core-shortcodes-button-strings.php:210
+#: languages/u-design-core-shortcodes-button-strings.php:223
+msgid "Light"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:90
+#: languages/u-design-core-shortcodes-button-strings.php:93
+#: languages/u-design-core-shortcodes-button-strings.php:95
+msgid "Custom Button"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:97
+msgid "Size"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:99
+msgid "Medium"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:100
+msgid "Large"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:101
+msgid "X-Large"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:113
+msgid "Custom More Link"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:114
+msgid "U-Design Shortcodes - Insert Link"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:115
+msgid "Link Text"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:127
+msgid "Content"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:129
+msgid "Content Block"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:130
+msgid "U-Design Shortcodes - Insert Content Block"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:131
+#: languages/u-design-core-shortcodes-button-strings.php:164
+#: languages/u-design-core-shortcodes-button-strings.php:176
+#: languages/u-design-core-shortcodes-button-strings.php:193
+#: languages/u-design-core-shortcodes-button-strings.php:204
+#: languages/u-design-core-shortcodes-button-strings.php:217
+msgid "Sample Content"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:132
+msgid "Image URL"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:133
+msgid ""
+"URL to a background image, if no image is specified the fallback would be "
+"the background color option"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:134
+#: languages/u-design-core-shortcodes-button-strings.php:301
+msgid "Select Image"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:135
+msgid "Background Stretch"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:137
+#: languages/u-design-core-shortcodes-button-strings.php:141
+#: languages/u-design-core-shortcodes-button-strings.php:148
+#: languages/u-design-core-shortcodes-button-strings.php:240
+#: languages/u-design-core-shortcodes-button-strings.php:243
+#: languages/u-design-core-shortcodes-button-strings.php:249
+#: languages/u-design-core-shortcodes-button-strings.php:251
+#: languages/u-design-core-shortcodes-button-strings.php:254
+#: languages/u-design-core-shortcodes-button-strings.php:258
+msgid "No"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:138
+msgid ""
+"Extend the background to maximum width (the width of the browser window)"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:139
+msgid "Fixed Background"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:142
+#: languages/u-design-core-shortcodes-button-strings.php:150
+msgid ""
+"Sets whether the background image is fixed or scrolls with the rest of the "
+"page"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:143
+msgid "Background Position"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:144
+msgid ""
+"You may apply proper syntax for the CSS \"background-position\" property"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:145
+msgid "Background Repeat"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:146
+msgid "Background Size"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:147
+msgid "Parallax Scroll"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:152
+msgid "Content Padding"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:153
+msgid "You may apply proper syntax for the CSS \"padding\" property"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:155
+msgid "Padding Width"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:157
+#: languages/u-design-core-shortcodes-button-strings.php:171
+#: languages/u-design-core-shortcodes-button-strings.php:188
+#: languages/u-design-core-shortcodes-button-strings.php:197
+msgid "Class"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:158
+msgid ""
+"Use this option to pass a unique CSS class which you may use to style this "
+"particular instance of the content block in the front end with custom CSS"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:160
+msgid "Message Box"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:162
+msgid "Predefined"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:163
+#: languages/u-design-core-shortcodes-button-strings.php:175
+#: languages/u-design-core-shortcodes-button-strings.php:192
+msgid "U-Design Shortcodes - Insert Message Box"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:165
+#: languages/u-design-core-shortcodes-button-strings.php:177
+#: languages/u-design-core-shortcodes-button-strings.php:194
+msgid "Replace this text with your message..."
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:166
+msgid "Message Box Type"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:167
+msgid "info"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:168
+msgid "success"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:169
+msgid "warning"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:170
+msgid "erroneous"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:172
+#: languages/u-design-core-shortcodes-button-strings.php:189
+#: languages/u-design-core-shortcodes-button-strings.php:198
+msgid ""
+"Use this option to pass a CSS class which you may use for custom styling."
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:174
+msgid "Custom"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:178
+msgid "Width"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:179
+msgid "Width could be in pixels (px) or percentage (%)"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:180
+msgid "Start Color"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:181
+msgid "End Color"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:191
+msgid "Simple"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:200
+msgid "Quotes"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:202
+msgid "Pullquote"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:203
+msgid "U-Design Shortcodes - Insert Pullquote"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:205
+#: languages/u-design-core-shortcodes-button-strings.php:218
+msgid "Symbol"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:206
+#: languages/u-design-core-shortcodes-button-strings.php:219
+msgid "Symbol 2"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:207
+#: languages/u-design-core-shortcodes-button-strings.php:220
+msgid "Symbol 1"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:215
+msgid "Blockquote (HTML)"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:216
+msgid "U-Design Shortcodes - Insert Blockquote"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:225
+msgid "Recent Posts"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:226
+msgid "U-Design Shortcodes - Insert Recent Posts"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:228
+msgid "Latest from the Blog"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:229
+msgid "Enter categories (IDs)"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:230
+msgid "To choose a catetory use the little dropdown menu above."
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:231
+msgid "For multiple categories enter comma-separated list of IDs."
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:232
+msgid "To include all categories leave the field blank."
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:233
+msgid "Number of posts to show"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:234
+msgid "at most 15"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:235
+msgid "Number of posts to skip"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:236
+msgid "offset from latest"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:237
+msgid "Number of words to show"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:238
+msgid ""
+"If lesser value, \"Excerpt Length\" defined in the theme's Blog Section page "
+"can overwrite this"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:239
+msgid "Show date and author"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:242
+msgid "Show \"more\" link"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:245
+msgid "\"more\" link text"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:250
+msgid "Thumbnail frame"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:253
+msgid "Thumbnail shadow"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:256
+msgid "Default image"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:259
+msgid ""
+"When no image is found for a specific post then a fallback image will be "
+"displayed"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:260
+msgid "Thumbnail width"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:261
+#: languages/u-design-core-shortcodes-button-strings.php:263
+msgid "Width in pixels (px)"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:262
+msgid "Thumbnail height"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:265
+msgid "Accordion"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:267
+msgid "Toggle"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:269
+msgid "Tabs"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:271
+msgid "List Styles"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:272
+msgid "U-Design Shortcodes - Insert Bullets"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:274
+msgid "List Style 1"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:275
+msgid "List Style 2"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:276
+msgid "List Style 3"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:277
+msgid "List Style 4"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:278
+msgid "List Style 5"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:279
+msgid "List Style 6"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:280
+msgid "List Style 7"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:281
+msgid "List Style 8"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:282
+msgid "List Style 9"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:283
+msgid "List Style 10"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:284
+msgid "List Style 11"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:285
+msgid "Sample Content (ul list)"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:287
+msgid "Dropcap"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:288
+msgid "U-Design Shortcodes - Insert Dropcap"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:289
+msgid "Dropcap Letter"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:290
+msgid ""
+"Dropcap - a large initial letter usually used at the beginning of a section."
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:292
+msgid "Image Frame"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:293
+msgid "U-Design Shortcodes - Insert Image Frame"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:298
+msgid "Shadow"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:299
+msgid "Add image frame shadow"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:300
+msgid "Image HTML"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:303
+msgid "Custom Table"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:306
+msgid "Other"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:308
+msgid "Email Obfuscation"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:309
+msgid "U-Design Shortcodes - Obfuscate Email Address"
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:310
+msgid "Email Address"
+msgstr ""
+
+#~ msgid "This is a text string..."
+#~ msgstr "Преведена на Булгарски!!!"

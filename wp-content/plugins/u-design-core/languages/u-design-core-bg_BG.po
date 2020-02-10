@@ -1,0 +1,1216 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: U-Design Core\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-19 08:44-0500\n"
+"PO-Revision-Date: 2019-05-19 11:21-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_nx;_n;esc_attr__;"
+"esc_attr_e;esc_html__;esc_html_e;_x\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-u-design-core-activator.php:70
+msgid "Unable to locate WordPress plugin directory."
+msgstr "Директорията с разширения на WordPress не може да се намери."
+
+#: includes/shortcodes/class-u-design-core-shortcodes-button.php:158
+msgid "ID:"
+msgstr "ID:"
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:43
+#: includes/shortcodes/class-u-design-core-shortcodes.php:918
+#: includes/widgets/class-latest-posts-widget.php:68
+#: includes/widgets/class-latest-posts-widget.php:196
+#: languages/u-design-core-shortcodes-button-strings.php:116
+#: languages/u-design-core-shortcodes-button-strings.php:118
+#: languages/u-design-core-shortcodes-button-strings.php:246
+msgid "Read more"
+msgstr "Прочетете повече"
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:73
+#: includes/shortcodes/class-u-design-core-shortcodes.php:113
+#: includes/shortcodes/class-u-design-core-shortcodes.php:153
+#: includes/shortcodes/class-u-design-core-shortcodes.php:194
+#: includes/shortcodes/class-u-design-core-shortcodes.php:237
+#, fuzzy
+msgid "Read more..."
+msgstr "Прочетете повече"
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:294
+msgid "Top of Page"
+msgstr ""
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:294
+msgid "Back to Top"
+msgstr ""
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:910
+#: includes/widgets/class-latest-posts-widget.php:188
+#, fuzzy
+msgid "Latest Posts"
+msgstr "Последни публикации"
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:1071
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:46
+msgid "Top rated products"
+msgstr ""
+
+#: includes/shortcodes/class-u-design-core-shortcodes.php:1127
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:72
+msgid "Products"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:34
+msgid "A list or dropdown of a single category's descendants."
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:45
+msgid "U-Design: Custom Category"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:77
+#, fuzzy
+msgid "Select Category"
+msgstr "Изберете изображение"
+
+#: includes/widgets/class-custom-category-widget.php:140
+msgid "Categories"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:146
+#: includes/widgets/class-google-map-widget.php:116
+#: includes/widgets/class-latest-posts-widget.php:209
+#: includes/widgets/class-login-form-widget.php:139
+#: includes/widgets/class-subpages-widget.php:171
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:151
+#, fuzzy
+msgid "Title:"
+msgstr "Заглавие"
+
+#: includes/widgets/class-custom-category-widget.php:152
+msgid "Category to be displayed:"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:161
+msgid "Show as dropdown"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:167
+msgid "Show post counts"
+msgstr ""
+
+#: includes/widgets/class-custom-category-widget.php:173
+msgid "Show hierarchy"
+msgstr ""
+
+#: includes/widgets/class-google-map-widget.php:35
+msgid "A Google Map widget."
+msgstr ""
+
+#: includes/widgets/class-google-map-widget.php:46
+#, fuzzy
+msgid "U-Design: Google Map"
+msgstr "Кратки кодове на U-Design"
+
+#: includes/widgets/class-google-map-widget.php:109
+msgid "Google Map"
+msgstr ""
+
+#: includes/widgets/class-google-map-widget.php:121
+msgid "Google Map Code:"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:35
+msgid "The most recent posts with teaser text"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:46
+#, fuzzy
+msgid "U-Design: Recent Posts"
+msgstr "Последни публикации"
+
+#: includes/widgets/class-latest-posts-widget.php:107
+#, php-format
+msgid "%1$s by %2$s "
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:215
+msgid "Pick a specific category:"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:223
+msgid "Use the current category (if on category page)."
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:229
+#, fuzzy
+msgid "Number of posts to show:"
+msgstr "Брой публикации за показване"
+
+#: includes/widgets/class-latest-posts-widget.php:232
+#, fuzzy
+msgid "(at most 15)"
+msgstr "най-много 15"
+
+#: includes/widgets/class-latest-posts-widget.php:237
+#, fuzzy
+msgid "Number of posts to skip:"
+msgstr "Брой публикации за прескачане"
+
+#: includes/widgets/class-latest-posts-widget.php:240
+#, fuzzy
+msgid "(offset from latest)"
+msgstr "изместване от последната"
+
+#: includes/widgets/class-latest-posts-widget.php:245
+#, fuzzy
+msgid "Limit the number of words to show for each post:"
+msgstr "Брой думи за показване"
+
+#: includes/widgets/class-latest-posts-widget.php:248
+#, fuzzy
+msgid ""
+"(Could also be limited by \"Excerpt Length\" defined in the theme's options "
+"page)"
+msgstr ""
+"Ако стойността е по-малка, \"Дължината на откъса\", дефинирана в страницата "
+"на блога, може да я презапише"
+
+#: includes/widgets/class-latest-posts-widget.php:255
+#, fuzzy
+msgid "Show date & author info"
+msgstr "Показване на дата и автор"
+
+#: includes/widgets/class-latest-posts-widget.php:263
+#, fuzzy
+msgid "Show \"more\" link."
+msgstr "Показване на връзка \"повече\""
+
+#: includes/widgets/class-latest-posts-widget.php:266
+msgid "The text:"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:274
+#: languages/u-design-core-shortcodes-button-strings.php:247
+msgid "Show thumbnails"
+msgstr "Показване на миниатюри"
+
+#: includes/widgets/class-latest-posts-widget.php:287
+#, fuzzy
+msgid "Remove thumbnail frame"
+msgstr "Рамка на миниатюрите"
+
+#: includes/widgets/class-latest-posts-widget.php:295
+#, fuzzy
+msgid "Show thumbnail frame shadow"
+msgstr "Показване на миниатюри"
+
+#: includes/widgets/class-latest-posts-widget.php:303
+msgid "Use default image (when no image found)"
+msgstr ""
+
+#: includes/widgets/class-latest-posts-widget.php:309
+#, fuzzy
+msgid "Thumbnail Dimensions:"
+msgstr "Рамка на миниатюрите"
+
+#: includes/widgets/class-latest-posts-widget.php:314
+#, fuzzy
+msgid "(Width X Height) in pixels"
+msgstr "Ширина в пиксели (px)"
+
+#: includes/widgets/class-login-form-widget.php:35
+msgid "A user login form."
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:46
+msgid "U-Design: Login Form"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:68
+msgid "You are logged in as"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:71
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:88
+msgid "Logout"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:77
+msgid "User"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:80
+msgid "Password"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:84
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:90
+msgid "Login"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:85
+msgid "Remember me"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:92
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:92
+msgid "Register"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:95
+msgid "Recover password"
+msgstr ""
+
+#: includes/widgets/class-login-form-widget.php:133
+msgid "Login Form"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:35
+msgid "Display subpages of the present page."
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:46
+#, fuzzy
+msgid "U-Design: Subpages"
+msgstr "Кратки кодове на U-Design"
+
+#: includes/widgets/class-subpages-widget.php:174
+msgid ""
+"Leave the Title field blank if you would like to display the parent page "
+"Title instead."
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:177
+msgid "Sort by:"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:179
+msgid "Page title"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:180
+msgid "Page order"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:181
+msgid "Page ID"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:185
+msgid "Exclude:"
+msgstr ""
+
+#: includes/widgets/class-subpages-widget.php:187
+msgid "Page IDs, separated by commas."
+msgstr ""
+
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:36
+msgid "A widget that displays cart info."
+msgstr ""
+
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:47
+#, fuzzy
+msgid "U-Design: WooCommerce Cart"
+msgstr "Кратки кодове на U-Design"
+
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:87
+msgid "My Account"
+msgstr ""
+
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:98
+#: includes/woocommerce/class-u-design-core-woocommerce.php:451
+msgid "View your shopping cart"
+msgstr ""
+
+#: includes/widgets/class-u-design-core-woocommerce-cart-widget.php:102
+#: includes/woocommerce/class-u-design-core-woocommerce.php:455
+#, php-format
+msgid "Cart: %1$s %2$s "
+msgstr ""
+
+#: includes/woocommerce/class-u-design-core-woocommerce.php:338
+msgid "Home"
+msgstr ""
+
+#: includes/woocommerce/class-u-design-core-woocommerce.php:408
+msgid "No product categories exist."
+msgstr ""
+
+#: includes/woocommerce/class-u-design-core-woocommerce.php:535
+msgid "Cart"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:74
+#, fuzzy
+msgid "U-Design WooCommerce"
+msgstr "Кратки кодове на U-Design"
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:75
+msgid "U-Design theme element"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:80
+msgid "Element Type"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:83
+msgid "WooCommerce products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:84
+msgid "WooCommerce top rated products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:88
+msgid "Select the element type."
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:92
+#: languages/u-design-core-shortcodes-button-strings.php:227
+msgid "Title"
+msgstr "Заглавие"
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:96
+msgid "Enter title."
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:101
+msgid "Number"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:105
+#, fuzzy
+msgid "Number of products to show."
+msgstr "Брой публикации за показване"
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:111
+msgid "Show"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:114
+msgid "All products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:115
+msgid "Featured products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:116
+msgid "On-sale products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:124
+msgid "Select what products to show."
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:128
+msgid "Order by"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:131
+msgid "Date"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:132
+msgid "Price"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:133
+msgid "Random"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:134
+msgid "Sales"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:142
+msgid "Select what criteria should the product be ordered by."
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:146
+msgid "Order"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:149
+msgid "DESC"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:150
+msgid "ASC"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:158
+msgid "Select how the product should be ordered (Descending or Ascending)."
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:162
+msgid "Hide free products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:164
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:175
+#: languages/u-design-core-shortcodes-button-strings.php:136
+#: languages/u-design-core-shortcodes-button-strings.php:140
+#: languages/u-design-core-shortcodes-button-strings.php:149
+#: languages/u-design-core-shortcodes-button-strings.php:241
+#: languages/u-design-core-shortcodes-button-strings.php:244
+#: languages/u-design-core-shortcodes-button-strings.php:248
+#: languages/u-design-core-shortcodes-button-strings.php:252
+#: languages/u-design-core-shortcodes-button-strings.php:255
+#: languages/u-design-core-shortcodes-button-strings.php:257
+msgid "Yes"
+msgstr "Да"
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:173
+msgid "Show hidden products"
+msgstr ""
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:184
+#, fuzzy
+msgid "Custom Class"
+msgstr "Потребителска таблица"
+
+#: includes/woocommerce/vc-elements/udesign-wc-vc-elements.php:188
+#, fuzzy
+msgid ""
+"Use this option to pass a unique CSS class which you may use to style this "
+"particular instance of the content block in the front end with custom CSS."
+msgstr ""
+"Използвайте опцията, за да зададете уникален CSS клас, който можете да "
+"използвате за стилизиране на изгледа на точно този блок за съдържание с "
+"потребителски CSS"
+
+#: languages/u-design-core-shortcodes-button-strings.php:27
+msgid "U-Design Shortcodes"
+msgstr "Кратки кодове на U-Design"
+
+#: languages/u-design-core-shortcodes-button-strings.php:29
+msgid "Layout"
+msgstr "Изглед"
+
+#: languages/u-design-core-shortcodes-button-strings.php:31
+msgid "Columns"
+msgstr "Колони"
+
+#: languages/u-design-core-shortcodes-button-strings.php:32
+msgid "U-Design Shortcodes - Insert Columns"
+msgstr "Кратки кодове на U-Design - Вмъкване на колони"
+
+#: languages/u-design-core-shortcodes-button-strings.php:33
+msgid "Arrangement"
+msgstr "Подреждане"
+
+#: languages/u-design-core-shortcodes-button-strings.php:34
+msgid "Starting Content"
+msgstr "Начално съдържание"
+
+#: languages/u-design-core-shortcodes-button-strings.php:35
+msgid "Your content here..."
+msgstr "Вашето съдържание..."
+
+#: languages/u-design-core-shortcodes-button-strings.php:37
+msgid "Dividers"
+msgstr "Разделители"
+
+#: languages/u-design-core-shortcodes-button-strings.php:38
+msgid "U-Design Shortcodes - Insert Divider"
+msgstr "Кратки кодове на U-Design - Вмъкване на разделител"
+
+#: languages/u-design-core-shortcodes-button-strings.php:39
+msgid "Divider Style"
+msgstr "Стил на разделителя"
+
+#: languages/u-design-core-shortcodes-button-strings.php:40
+msgid "Solid line divider"
+msgstr "Разделител плътна линия"
+
+#: languages/u-design-core-shortcodes-button-strings.php:41
+msgid "Solid line divider with a link to the top"
+msgstr "Разделител плътна линия с връзка към начало"
+
+#: languages/u-design-core-shortcodes-button-strings.php:42
+msgid "Invisible, clears the line"
+msgstr "Невидим, премахва линията"
+
+#: languages/u-design-core-shortcodes-button-strings.php:44
+msgid "Buttons"
+msgstr "Бутони"
+
+#: languages/u-design-core-shortcodes-button-strings.php:46
+#: languages/u-design-core-shortcodes-button-strings.php:49
+#: languages/u-design-core-shortcodes-button-strings.php:51
+msgid "Flat Button"
+msgstr "Плосък бутон"
+
+#: languages/u-design-core-shortcodes-button-strings.php:47
+#: languages/u-design-core-shortcodes-button-strings.php:69
+#: languages/u-design-core-shortcodes-button-strings.php:91
+msgid "U-Design Shortcodes - Insert Button"
+msgstr "Кратки кодове на U-Design - Вмъкване на бутон"
+
+#: languages/u-design-core-shortcodes-button-strings.php:48
+#: languages/u-design-core-shortcodes-button-strings.php:74
+#: languages/u-design-core-shortcodes-button-strings.php:92
+msgid "Button Text"
+msgstr "Текст на бутона"
+
+#: languages/u-design-core-shortcodes-button-strings.php:50
+#: languages/u-design-core-shortcodes-button-strings.php:76
+#: languages/u-design-core-shortcodes-button-strings.php:94
+#: languages/u-design-core-shortcodes-button-strings.php:117
+msgid "Link Title"
+msgstr "Заглавие на връзката"
+
+#: languages/u-design-core-shortcodes-button-strings.php:52
+#: languages/u-design-core-shortcodes-button-strings.php:78
+#: languages/u-design-core-shortcodes-button-strings.php:96
+#: languages/u-design-core-shortcodes-button-strings.php:119
+msgid "URL"
+msgstr "URL"
+
+#: languages/u-design-core-shortcodes-button-strings.php:53
+msgid "Padding"
+msgstr "Отстояние - padding"
+
+#: languages/u-design-core-shortcodes-button-strings.php:54
+#: languages/u-design-core-shortcodes-button-strings.php:102
+#: languages/u-design-core-shortcodes-button-strings.php:151
+msgid "Background Color"
+msgstr "Цвят на фона"
+
+#: languages/u-design-core-shortcodes-button-strings.php:55
+#: languages/u-design-core-shortcodes-button-strings.php:154
+#: languages/u-design-core-shortcodes-button-strings.php:182
+#: languages/u-design-core-shortcodes-button-strings.php:195
+msgid "Border Color"
+msgstr "Цвят на рамката"
+
+#: languages/u-design-core-shortcodes-button-strings.php:56
+msgid "Border Width"
+msgstr "Ширина на рамката"
+
+#: languages/u-design-core-shortcodes-button-strings.php:57
+#: languages/u-design-core-shortcodes-button-strings.php:103
+#: languages/u-design-core-shortcodes-button-strings.php:156
+#: languages/u-design-core-shortcodes-button-strings.php:183
+#: languages/u-design-core-shortcodes-button-strings.php:196
+msgid "Text Color"
+msgstr "Цвят на текста"
+
+#: languages/u-design-core-shortcodes-button-strings.php:58
+msgid "Text Size"
+msgstr "Размер на текста"
+
+#: languages/u-design-core-shortcodes-button-strings.php:59
+#: languages/u-design-core-shortcodes-button-strings.php:82
+#: languages/u-design-core-shortcodes-button-strings.php:104
+#: languages/u-design-core-shortcodes-button-strings.php:120
+#: languages/u-design-core-shortcodes-button-strings.php:184
+#: languages/u-design-core-shortcodes-button-strings.php:211
+#: languages/u-design-core-shortcodes-button-strings.php:294
+msgid "Alignment"
+msgstr "Подравняване"
+
+#: languages/u-design-core-shortcodes-button-strings.php:60
+#: languages/u-design-core-shortcodes-button-strings.php:83
+#: languages/u-design-core-shortcodes-button-strings.php:105
+#: languages/u-design-core-shortcodes-button-strings.php:121
+#: languages/u-design-core-shortcodes-button-strings.php:185
+#: languages/u-design-core-shortcodes-button-strings.php:212
+#: languages/u-design-core-shortcodes-button-strings.php:295
+msgid "Left"
+msgstr "Ляво"
+
+#: languages/u-design-core-shortcodes-button-strings.php:61
+#: languages/u-design-core-shortcodes-button-strings.php:84
+#: languages/u-design-core-shortcodes-button-strings.php:106
+#: languages/u-design-core-shortcodes-button-strings.php:122
+#: languages/u-design-core-shortcodes-button-strings.php:187
+#: languages/u-design-core-shortcodes-button-strings.php:213
+#: languages/u-design-core-shortcodes-button-strings.php:296
+msgid "Right"
+msgstr "Дясно"
+
+#: languages/u-design-core-shortcodes-button-strings.php:62
+#: languages/u-design-core-shortcodes-button-strings.php:85
+#: languages/u-design-core-shortcodes-button-strings.php:107
+#: languages/u-design-core-shortcodes-button-strings.php:186
+#: languages/u-design-core-shortcodes-button-strings.php:297
+msgid "Center"
+msgstr "Центрирано"
+
+#: languages/u-design-core-shortcodes-button-strings.php:63
+#: languages/u-design-core-shortcodes-button-strings.php:108
+msgid "None"
+msgstr "Без"
+
+#: languages/u-design-core-shortcodes-button-strings.php:64
+#: languages/u-design-core-shortcodes-button-strings.php:86
+#: languages/u-design-core-shortcodes-button-strings.php:109
+#: languages/u-design-core-shortcodes-button-strings.php:123
+msgid "Link Target"
+msgstr "Цел на връзката"
+
+#: languages/u-design-core-shortcodes-button-strings.php:65
+#: languages/u-design-core-shortcodes-button-strings.php:87
+#: languages/u-design-core-shortcodes-button-strings.php:110
+#: languages/u-design-core-shortcodes-button-strings.php:124
+msgid "Self"
+msgstr "Същия прозорец"
+
+#: languages/u-design-core-shortcodes-button-strings.php:66
+#: languages/u-design-core-shortcodes-button-strings.php:88
+#: languages/u-design-core-shortcodes-button-strings.php:111
+#: languages/u-design-core-shortcodes-button-strings.php:125
+msgid "Blank"
+msgstr "Нов прозорец"
+
+#: languages/u-design-core-shortcodes-button-strings.php:68
+#: languages/u-design-core-shortcodes-button-strings.php:75
+#: languages/u-design-core-shortcodes-button-strings.php:77
+msgid "Simple Button"
+msgstr "Прост бутон"
+
+#: languages/u-design-core-shortcodes-button-strings.php:70
+msgid "Type"
+msgstr "Вид"
+
+#: languages/u-design-core-shortcodes-button-strings.php:71
+msgid "Default"
+msgstr "По подразбиране"
+
+#: languages/u-design-core-shortcodes-button-strings.php:72
+#: languages/u-design-core-shortcodes-button-strings.php:98
+msgid "Small"
+msgstr "Малък"
+
+#: languages/u-design-core-shortcodes-button-strings.php:73
+msgid "Round"
+msgstr "Кръгъл"
+
+#: languages/u-design-core-shortcodes-button-strings.php:79
+#: languages/u-design-core-shortcodes-button-strings.php:208
+#: languages/u-design-core-shortcodes-button-strings.php:221
+#: languages/u-design-core-shortcodes-button-strings.php:273
+msgid "Style"
+msgstr "Стил"
+
+#: languages/u-design-core-shortcodes-button-strings.php:80
+#: languages/u-design-core-shortcodes-button-strings.php:209
+#: languages/u-design-core-shortcodes-button-strings.php:222
+msgid "Dark"
+msgstr "Тъмен"
+
+#: languages/u-design-core-shortcodes-button-strings.php:81
+#: languages/u-design-core-shortcodes-button-strings.php:210
+#: languages/u-design-core-shortcodes-button-strings.php:223
+msgid "Light"
+msgstr "Светъл"
+
+#: languages/u-design-core-shortcodes-button-strings.php:90
+#: languages/u-design-core-shortcodes-button-strings.php:93
+#: languages/u-design-core-shortcodes-button-strings.php:95
+msgid "Custom Button"
+msgstr "Потребителски бутон"
+
+#: languages/u-design-core-shortcodes-button-strings.php:97
+msgid "Size"
+msgstr "Размер"
+
+#: languages/u-design-core-shortcodes-button-strings.php:99
+msgid "Medium"
+msgstr "Среден"
+
+#: languages/u-design-core-shortcodes-button-strings.php:100
+msgid "Large"
+msgstr "Голям"
+
+#: languages/u-design-core-shortcodes-button-strings.php:101
+msgid "X-Large"
+msgstr "Много голям"
+
+#: languages/u-design-core-shortcodes-button-strings.php:113
+msgid "Custom More Link"
+msgstr "Потребителска връзка \"Повече\""
+
+#: languages/u-design-core-shortcodes-button-strings.php:114
+msgid "U-Design Shortcodes - Insert Link"
+msgstr "Кратки кодове на U-Design - Вмъкване на връзка"
+
+#: languages/u-design-core-shortcodes-button-strings.php:115
+msgid "Link Text"
+msgstr "Текст на връзката"
+
+#: languages/u-design-core-shortcodes-button-strings.php:127
+msgid "Content"
+msgstr "Съдържание"
+
+#: languages/u-design-core-shortcodes-button-strings.php:129
+msgid "Content Block"
+msgstr "Блок за съдържание"
+
+#: languages/u-design-core-shortcodes-button-strings.php:130
+msgid "U-Design Shortcodes - Insert Content Block"
+msgstr "Кратки кодове на U-Design - Вмъкване на блок за съдържание"
+
+#: languages/u-design-core-shortcodes-button-strings.php:131
+#: languages/u-design-core-shortcodes-button-strings.php:164
+#: languages/u-design-core-shortcodes-button-strings.php:176
+#: languages/u-design-core-shortcodes-button-strings.php:193
+#: languages/u-design-core-shortcodes-button-strings.php:204
+#: languages/u-design-core-shortcodes-button-strings.php:217
+msgid "Sample Content"
+msgstr "Примерно съдържание"
+
+#: languages/u-design-core-shortcodes-button-strings.php:132
+msgid "Image URL"
+msgstr "URL на изображението"
+
+#: languages/u-design-core-shortcodes-button-strings.php:133
+msgid ""
+"URL to a background image, if no image is specified the fallback would be "
+"the background color option"
+msgstr ""
+"URL на фоновото изображение; ако не е зададено изображение, заместител ще "
+"бъде цвета на фона"
+
+#: languages/u-design-core-shortcodes-button-strings.php:134
+#: languages/u-design-core-shortcodes-button-strings.php:301
+msgid "Select Image"
+msgstr "Изберете изображение"
+
+#: languages/u-design-core-shortcodes-button-strings.php:135
+msgid "Background Stretch"
+msgstr "Разтягане на фона"
+
+#: languages/u-design-core-shortcodes-button-strings.php:137
+#: languages/u-design-core-shortcodes-button-strings.php:141
+#: languages/u-design-core-shortcodes-button-strings.php:148
+#: languages/u-design-core-shortcodes-button-strings.php:240
+#: languages/u-design-core-shortcodes-button-strings.php:243
+#: languages/u-design-core-shortcodes-button-strings.php:249
+#: languages/u-design-core-shortcodes-button-strings.php:251
+#: languages/u-design-core-shortcodes-button-strings.php:254
+#: languages/u-design-core-shortcodes-button-strings.php:258
+msgid "No"
+msgstr "Не"
+
+#: languages/u-design-core-shortcodes-button-strings.php:138
+msgid ""
+"Extend the background to maximum width (the width of the browser window)"
+msgstr ""
+"Разширяване на фона до максималната ширина (ширината на прозореца на "
+"браузъра)"
+
+#: languages/u-design-core-shortcodes-button-strings.php:139
+msgid "Fixed Background"
+msgstr "Фиксиран фон"
+
+#: languages/u-design-core-shortcodes-button-strings.php:142
+#: languages/u-design-core-shortcodes-button-strings.php:150
+msgid ""
+"Sets whether the background image is fixed or scrolls with the rest of the "
+"page"
+msgstr ""
+"Настройва дали фоновото изображение да бъде фиксирано или да се скролира "
+"заедно със страницата"
+
+#: languages/u-design-core-shortcodes-button-strings.php:143
+msgid "Background Position"
+msgstr "Позиция на фона"
+
+#: languages/u-design-core-shortcodes-button-strings.php:144
+msgid ""
+"You may apply proper syntax for the CSS \"background-position\" property"
+msgstr ""
+"Трябва да приложите правилен синтаксис за CSS характеристиката \"background-"
+"position\""
+
+#: languages/u-design-core-shortcodes-button-strings.php:145
+msgid "Background Repeat"
+msgstr "Повторение на фона"
+
+#: languages/u-design-core-shortcodes-button-strings.php:146
+msgid "Background Size"
+msgstr "Размер на фона"
+
+#: languages/u-design-core-shortcodes-button-strings.php:147
+msgid "Parallax Scroll"
+msgstr "Parallax Scroll"
+
+#: languages/u-design-core-shortcodes-button-strings.php:152
+msgid "Content Padding"
+msgstr "Отстояние на съдържанието"
+
+#: languages/u-design-core-shortcodes-button-strings.php:153
+msgid "You may apply proper syntax for the CSS \"padding\" property"
+msgstr ""
+"Трябва да приложите правилен синтаксис за CSS характеристиката \"padding\""
+
+#: languages/u-design-core-shortcodes-button-strings.php:155
+msgid "Padding Width"
+msgstr "Ширина на отстоянието"
+
+#: languages/u-design-core-shortcodes-button-strings.php:157
+#: languages/u-design-core-shortcodes-button-strings.php:171
+#: languages/u-design-core-shortcodes-button-strings.php:188
+#: languages/u-design-core-shortcodes-button-strings.php:197
+msgid "Class"
+msgstr "Клас"
+
+#: languages/u-design-core-shortcodes-button-strings.php:158
+msgid ""
+"Use this option to pass a unique CSS class which you may use to style this "
+"particular instance of the content block in the front end with custom CSS"
+msgstr ""
+"Използвайте опцията, за да зададете уникален CSS клас, който можете да "
+"използвате за стилизиране на изгледа на точно този блок за съдържание с "
+"потребителски CSS"
+
+#: languages/u-design-core-shortcodes-button-strings.php:160
+msgid "Message Box"
+msgstr "Прозорец за съобщения"
+
+#: languages/u-design-core-shortcodes-button-strings.php:162
+msgid "Predefined"
+msgstr "Зададени"
+
+#: languages/u-design-core-shortcodes-button-strings.php:163
+#: languages/u-design-core-shortcodes-button-strings.php:175
+#: languages/u-design-core-shortcodes-button-strings.php:192
+msgid "U-Design Shortcodes - Insert Message Box"
+msgstr "Кратки кодове на U-Design - Вмъкване на прозорец за съобщения"
+
+#: languages/u-design-core-shortcodes-button-strings.php:165
+#: languages/u-design-core-shortcodes-button-strings.php:177
+#: languages/u-design-core-shortcodes-button-strings.php:194
+msgid "Replace this text with your message..."
+msgstr "Заменете текста с Вашето съобщение..."
+
+#: languages/u-design-core-shortcodes-button-strings.php:166
+msgid "Message Box Type"
+msgstr "Вид на прозореца за съобщения"
+
+#: languages/u-design-core-shortcodes-button-strings.php:167
+msgid "info"
+msgstr "инфо"
+
+#: languages/u-design-core-shortcodes-button-strings.php:168
+msgid "success"
+msgstr "успех"
+
+#: languages/u-design-core-shortcodes-button-strings.php:169
+msgid "warning"
+msgstr "предупреждение"
+
+#: languages/u-design-core-shortcodes-button-strings.php:170
+msgid "erroneous"
+msgstr "грешка"
+
+#: languages/u-design-core-shortcodes-button-strings.php:172
+#: languages/u-design-core-shortcodes-button-strings.php:189
+#: languages/u-design-core-shortcodes-button-strings.php:198
+msgid ""
+"Use this option to pass a CSS class which you may use for custom styling."
+msgstr ""
+
+#: languages/u-design-core-shortcodes-button-strings.php:174
+msgid "Custom"
+msgstr "Потребителски"
+
+#: languages/u-design-core-shortcodes-button-strings.php:178
+msgid "Width"
+msgstr "Ширина"
+
+#: languages/u-design-core-shortcodes-button-strings.php:179
+msgid "Width could be in pixels (px) or percentage (%)"
+msgstr "Ширината може да бъде в пиксели (px) или проценти (%)"
+
+#: languages/u-design-core-shortcodes-button-strings.php:180
+msgid "Start Color"
+msgstr "Начален цвят"
+
+#: languages/u-design-core-shortcodes-button-strings.php:181
+msgid "End Color"
+msgstr "Краен цвят"
+
+#: languages/u-design-core-shortcodes-button-strings.php:191
+msgid "Simple"
+msgstr "Прост"
+
+#: languages/u-design-core-shortcodes-button-strings.php:200
+msgid "Quotes"
+msgstr "Цитати"
+
+#: languages/u-design-core-shortcodes-button-strings.php:202
+msgid "Pullquote"
+msgstr "Издърпан цитат"
+
+#: languages/u-design-core-shortcodes-button-strings.php:203
+msgid "U-Design Shortcodes - Insert Pullquote"
+msgstr "Кратки кодове на U-Design - Вмъкване на издърпан цитат"
+
+#: languages/u-design-core-shortcodes-button-strings.php:205
+#: languages/u-design-core-shortcodes-button-strings.php:218
+msgid "Symbol"
+msgstr "Символ"
+
+#: languages/u-design-core-shortcodes-button-strings.php:206
+#: languages/u-design-core-shortcodes-button-strings.php:219
+msgid "Symbol 2"
+msgstr "Символ 2"
+
+#: languages/u-design-core-shortcodes-button-strings.php:207
+#: languages/u-design-core-shortcodes-button-strings.php:220
+msgid "Symbol 1"
+msgstr "Символ 1"
+
+#: languages/u-design-core-shortcodes-button-strings.php:215
+msgid "Blockquote (HTML)"
+msgstr "Цитат блок (HTML)"
+
+#: languages/u-design-core-shortcodes-button-strings.php:216
+msgid "U-Design Shortcodes - Insert Blockquote"
+msgstr "Кратки кодове на U-Design - Вмъкване на цитат блок"
+
+#: languages/u-design-core-shortcodes-button-strings.php:225
+msgid "Recent Posts"
+msgstr "Последни публикации"
+
+#: languages/u-design-core-shortcodes-button-strings.php:226
+msgid "U-Design Shortcodes - Insert Recent Posts"
+msgstr "Кратки кодове на U-Design - Вмъкване на последни публикации"
+
+#: languages/u-design-core-shortcodes-button-strings.php:228
+msgid "Latest from the Blog"
+msgstr "Най-новите от блога"
+
+#: languages/u-design-core-shortcodes-button-strings.php:229
+msgid "Enter categories (IDs)"
+msgstr "Въведете категории (ID номера)"
+
+#: languages/u-design-core-shortcodes-button-strings.php:230
+msgid "To choose a catetory use the little dropdown menu above."
+msgstr "За да изберете категория, използвайте малкото падащо меню отгоре."
+
+#: languages/u-design-core-shortcodes-button-strings.php:231
+msgid "For multiple categories enter comma-separated list of IDs."
+msgstr ""
+"За няколко категории въведете списък с ID номера, разделени със запетаи."
+
+#: languages/u-design-core-shortcodes-button-strings.php:232
+msgid "To include all categories leave the field blank."
+msgstr "За да включите всички категории, оставете полето празно."
+
+#: languages/u-design-core-shortcodes-button-strings.php:233
+msgid "Number of posts to show"
+msgstr "Брой публикации за показване"
+
+#: languages/u-design-core-shortcodes-button-strings.php:234
+msgid "at most 15"
+msgstr "най-много 15"
+
+#: languages/u-design-core-shortcodes-button-strings.php:235
+msgid "Number of posts to skip"
+msgstr "Брой публикации за прескачане"
+
+#: languages/u-design-core-shortcodes-button-strings.php:236
+msgid "offset from latest"
+msgstr "изместване от последната"
+
+#: languages/u-design-core-shortcodes-button-strings.php:237
+msgid "Number of words to show"
+msgstr "Брой думи за показване"
+
+#: languages/u-design-core-shortcodes-button-strings.php:238
+msgid ""
+"If lesser value, \"Excerpt Length\" defined in the theme's Blog Section page "
+"can overwrite this"
+msgstr ""
+"Ако стойността е по-малка, \"Дължината на откъса\", дефинирана в страницата "
+"на блога, може да я презапише"
+
+#: languages/u-design-core-shortcodes-button-strings.php:239
+msgid "Show date and author"
+msgstr "Показване на дата и автор"
+
+#: languages/u-design-core-shortcodes-button-strings.php:242
+msgid "Show \"more\" link"
+msgstr "Показване на връзка \"повече\""
+
+#: languages/u-design-core-shortcodes-button-strings.php:245
+msgid "\"more\" link text"
+msgstr "текст на връзката \"повече\""
+
+#: languages/u-design-core-shortcodes-button-strings.php:250
+msgid "Thumbnail frame"
+msgstr "Рамка на миниатюрите"
+
+#: languages/u-design-core-shortcodes-button-strings.php:253
+msgid "Thumbnail shadow"
+msgstr "Сянка на миниатюрите"
+
+#: languages/u-design-core-shortcodes-button-strings.php:256
+msgid "Default image"
+msgstr "Изображение по подразбиране"
+
+#: languages/u-design-core-shortcodes-button-strings.php:259
+msgid ""
+"When no image is found for a specific post then a fallback image will be "
+"displayed"
+msgstr ""
+"Когато не се намери изображение за специфична публикация, то се замества с "
+"резервно изображение"
+
+#: languages/u-design-core-shortcodes-button-strings.php:260
+msgid "Thumbnail width"
+msgstr "Ширина на миниатюрата"
+
+#: languages/u-design-core-shortcodes-button-strings.php:261
+#: languages/u-design-core-shortcodes-button-strings.php:263
+msgid "Width in pixels (px)"
+msgstr "Ширина в пиксели (px)"
+
+#: languages/u-design-core-shortcodes-button-strings.php:262
+msgid "Thumbnail height"
+msgstr "Височина на миниатюрата"
+
+#: languages/u-design-core-shortcodes-button-strings.php:265
+msgid "Accordion"
+msgstr "Акордеон"
+
+#: languages/u-design-core-shortcodes-button-strings.php:267
+msgid "Toggle"
+msgstr "Превключване"
+
+#: languages/u-design-core-shortcodes-button-strings.php:269
+msgid "Tabs"
+msgstr "Табове"
+
+#: languages/u-design-core-shortcodes-button-strings.php:271
+msgid "List Styles"
+msgstr "Стил списъци"
+
+#: languages/u-design-core-shortcodes-button-strings.php:272
+msgid "U-Design Shortcodes - Insert Bullets"
+msgstr "Кратки кодове на U-Design - Вмъкване на булети"
+
+#: languages/u-design-core-shortcodes-button-strings.php:274
+msgid "List Style 1"
+msgstr "Стил списък 1"
+
+#: languages/u-design-core-shortcodes-button-strings.php:275
+msgid "List Style 2"
+msgstr "Стил списък 2"
+
+#: languages/u-design-core-shortcodes-button-strings.php:276
+msgid "List Style 3"
+msgstr "Стил списък 3"
+
+#: languages/u-design-core-shortcodes-button-strings.php:277
+msgid "List Style 4"
+msgstr "Стил списък 4"
+
+#: languages/u-design-core-shortcodes-button-strings.php:278
+msgid "List Style 5"
+msgstr "Стил списък 5"
+
+#: languages/u-design-core-shortcodes-button-strings.php:279
+msgid "List Style 6"
+msgstr "Стил списък 6"
+
+#: languages/u-design-core-shortcodes-button-strings.php:280
+msgid "List Style 7"
+msgstr "Стил списък 7"
+
+#: languages/u-design-core-shortcodes-button-strings.php:281
+msgid "List Style 8"
+msgstr "Стил списък 8"
+
+#: languages/u-design-core-shortcodes-button-strings.php:282
+msgid "List Style 9"
+msgstr "Стил списък 9"
+
+#: languages/u-design-core-shortcodes-button-strings.php:283
+msgid "List Style 10"
+msgstr "Стил списък 10"
+
+#: languages/u-design-core-shortcodes-button-strings.php:284
+msgid "List Style 11"
+msgstr "Стил списък 11"
+
+#: languages/u-design-core-shortcodes-button-strings.php:285
+msgid "Sample Content (ul list)"
+msgstr "Примерно съдържание (ul списък)"
+
+#: languages/u-design-core-shortcodes-button-strings.php:287
+msgid "Dropcap"
+msgstr "Бита буква"
+
+#: languages/u-design-core-shortcodes-button-strings.php:288
+msgid "U-Design Shortcodes - Insert Dropcap"
+msgstr "Кратки кодове на U-Design - Вмъкване на бита буква"
+
+#: languages/u-design-core-shortcodes-button-strings.php:289
+msgid "Dropcap Letter"
+msgstr "Знак за бита буква"
+
+#: languages/u-design-core-shortcodes-button-strings.php:290
+msgid ""
+"Dropcap - a large initial letter usually used at the beginning of a section."
+msgstr ""
+"Бита буква - голяма заглавна буква, която обикновено се използва в началото "
+"на секция."
+
+#: languages/u-design-core-shortcodes-button-strings.php:292
+msgid "Image Frame"
+msgstr "Изображение с рамка"
+
+#: languages/u-design-core-shortcodes-button-strings.php:293
+msgid "U-Design Shortcodes - Insert Image Frame"
+msgstr "Кратки кодове на U-Design - Вмъкване на изображение с рамка"
+
+#: languages/u-design-core-shortcodes-button-strings.php:298
+msgid "Shadow"
+msgstr "Сянка"
+
+#: languages/u-design-core-shortcodes-button-strings.php:299
+msgid "Add image frame shadow"
+msgstr "Добавя сянка към изображението с рамка"
+
+#: languages/u-design-core-shortcodes-button-strings.php:300
+msgid "Image HTML"
+msgstr "Изображение HTML"
+
+#: languages/u-design-core-shortcodes-button-strings.php:303
+msgid "Custom Table"
+msgstr "Потребителска таблица"
+
+#: languages/u-design-core-shortcodes-button-strings.php:306
+msgid "Other"
+msgstr "Други"
+
+#: languages/u-design-core-shortcodes-button-strings.php:308
+msgid "Email Obfuscation"
+msgstr "Защита на имейл"
+
+#: languages/u-design-core-shortcodes-button-strings.php:309
+msgid "U-Design Shortcodes - Obfuscate Email Address"
+msgstr "Кратки кодове на U-Design - Защита на имейл адрес"
+
+#: languages/u-design-core-shortcodes-button-strings.php:310
+msgid "Email Address"
+msgstr "Имейл адрес"
+
+#~ msgid "This is a text string..."
+#~ msgstr "Преведена на Булгарски!!!"
