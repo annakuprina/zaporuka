@@ -1,0 +1,477 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#slogan {
+  font-family: "Raleway-Bold";
+}
+#custom-top-bar {
+  height: 45px;
+  background-color: #f3f3f3;
+  margin: auto;
+}
+#custom-top-bar-content {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4px;
+  padding-left: 1px;
+}
+.custom-top-bar-content-left {
+  display: flex;
+  align-items: center;
+}
+.custom-top-bar-content-right {
+  margin-right: -1px;
+}
+.top-bar-help-block {
+  float: right;
+}
+#custom-top-bar div,
+#custom-top-bar div a {
+  color: #a1a1a1;
+  font-size: 12px;
+  font-weight: 400;
+}
+.top-bar-email-block {
+  padding-left: 40px;
+}
+.tel-block-a i,
+.email-block-a i {
+  padding-right: 10px;
+}
+.error404 {
+  box-shadow: 4px 4px 20px rgba(209, 209, 209, 0.2);
+  background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
+  height: 100vh;
+}
+.error_page_padding {
+  text-align: center;
+  margin-top: 20%;
+}
+.error_page h4 {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 506px;
+  margin: 0 auto;
+
+  line-height: 1.2;
+  padding-top: 2px;
+}
+.error_page h3 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 27px;
+
+  margin-left: -2px;
+}
+.error_page p {
+  text-align: center;
+  padding-top: 93px;
+  margin-left: -22px;
+}
+.error_page a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  max-width: 168px;
+  font-family: "Raleway-Bold";
+}
+.error_page a:after {
+  content: url("/wp-content/themes/u-design-child/img/arrow-home.svg");
+  position: absolute;
+  padding-left: 11px;
+  padding-top: 3px;
+}
+
+.contact-info-block .vc_column-inner {
+  padding-right: 60px;
+  padding-left: 14px;
+}
+.map-marker-main-block:before{
+  content: url("/wp-content/themes/u-design-child/img/map_marker.svg");
+  position: absolute;
+  top: 55%;
+  left: 21%;
+}
+.map-marker-main-wrap .vc_column-inner {
+  padding-left: 25%;
+}
+.map-marker-main-block{
+  width: 45%;
+  background: #fff;
+  box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
+  padding: 30px;
+  text-align: center;
+  margin-top: -20%;
+}
+.map-marker-main-block p{
+  text-align: center;
+}
+.contact-second-block .contact-second-text-block > .vc_column-inner{
+  padding: 100px 0 0 0;
+
+}
+.vc_separator.title_dash .vc_sep_holder {
+  min-width: 0;
+  max-width: 58px;
+}
+.vc_separator.title_dash h4 {
+  font-size: 48px;
+  padding: 0 0 0 6.4em;
+}
+.contact-second-block {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.contact-info-block h5 {
+  font-size: 16px;
+}
+.contact-info-block p a {
+  color: #333333;
+}
+.contact_social_icon ul {
+  display: flex;
+}
+.contact_social_icon ul li {
+  padding: 1px 68px 0 0;
+}
+.contact_social_icon .footer-social-link a {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 38px;
+  padding: 0;
+  background: none;
+  /*font-family: "Raleway-Bold";*/
+}
+
+.contact_social_icon a:hover {
+  color: #e78b48 !important;
+  font-weight: bold !important;
+}
+
+.contact_social_icon .footer-social-link a:hover .fa {
+  color: #e78b48 !important;
+  opacity: 1;
+  font-weight: normal !important;
+}
+.contact_social_icon .footer-social-link .fa {
+  opacity: 0.3;
+  color: #333333;
+  font-weight: bold;
+  padding-right: 11px;
+}
+.contact_need_help .vc_btn3.vc_btn3-style-custom {
+  background-image: none;
+  padding-left: 0;
+  padding-top: 11px;
+  margin-left: -1px;
+}
+.h2-title-without-line :last-child h2 {
+  font-size: 48px;
+  margin-bottom: 60px;
+  line-height: 58px;
+}
+.contact_need_help button:after {
+  content: url("/wp-content/themes/u-design-child/img/arrow-help.svg");
+  position: absolute;
+  padding-left: 11px;
+}
+.bank-details-block .vc_tta-tabs-container{
+  margin-right: 0!important;
+}
+.bank-details-block .vc_tta-tab{
+  margin-left: 0!important;
+  width: 50%;
+  text-align: center;
+}
+.wpb-js-composer .vc_tta.vc_general.bank-details-block .vc_tta-tab>a{
+  padding: 30px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  font-family: "Raleway-Bold";
+  opacity: 0.35;
+  color: #333333;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 24px rgba(209, 209, 209, 0.15);
+  border-width: 0;
+  border: none;
+  border-radius: 0;
+}
+.wpb-js-composer .vc_tta.vc_general.bank-details-block .vc_tta-tab.vc_active>a{
+  opacity: 1;
+  color: #333333;
+
+}
+.wpb-js-composer .vc_tta.vc_general.bank-details-block .vc_tta-panel-body{
+  padding-left: 86px;
+  padding-top: 43px;
+}
+.bank-details-block h3{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.bank-details-block .privat-bank-detail-block{
+  padding-left: 28px;
+  padding-bottom: 9px;
+}
+.contact_help_form {
+  padding-top: 85px;
+}
+@media screen and (min-width: 960px) {
+  .container_24 {
+    height: 100%;
+  }
+}
+/*********************** Projects Page *********************************/
+
+.projects-section ul.vc_grid-filter {
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 40px !important;
+  margin-bottom: 60px !important;
+}
+.projects-section .vc_grid-filter li.vc_grid-filter-item{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  line-height: 1.2em;
+}
+.projects-section .vc_grid-filter li.vc_grid-filter-item span{
+  padding: 0 100px 40px 0 !important;
+  border: unset !important;
+  background: transparent !important;
+  color: rgba(51, 51, 51, 0.29) !important;
+  font-family: "Raleway-Bold";
+  font-size: 16px;
+}
+.projects-section .vc_grid-filter li.vc_grid-filter-item.vc_active span{
+  color: #e78b48 !important;
+  opacity: 1;
+}
+.projects-section .vc_grid-filter li.vc_grid-filter-item.vc_active::after{
+  content: "";
+  position: absolute;
+  width: calc(100% - 100px);
+  height: 2px;
+  background-color: #e78b48;
+  left: 0;
+  top: 62px;
+}
+/*********************** Single project page ***************************/
+.proj-milestone-desc-block{
+  box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
+}
+.proj-milestone-desc-text {
+  display: block;
+  box-sizing: border-box;
+  background: white;
+  margin-top: 20px;
+  padding: 40px 30px;
+
+}
+.milestone-desc-wrapper,
+.milestone-desc-wrapper .milestone_task_list{
+  display: flex;
+}
+
+.milestone-desc-wrapper .left_columns_description,
+.milestone-desc-wrapper .right_columns_description,
+.milestone-desc-wrapper .milestone_task_list ul{
+  width: 50%;
+}
+.milestone-desc-wrapper .milestone_desc_text{
+  padding-top: 25px;
+}
+
+.milestone-desc-wrapper .milestone_task_list ul{
+  line-height: 35px;
+  padding-top: 20px;
+}
+.milestone-desc-wrapper .milestone_task_list ul:first-child li:before{
+  content: "\271a";
+  font-size: 10px;
+  padding-right: 10px;
+}
+.milestone-desc-wrapper .milestone_task_list ul:last-child li:before{
+  content: "-";
+  font-size: 21px;
+  font-weight: 700;
+  padding-right: 10px;
+  vertical-align: -7%;
+}
+.proj-milestone-desc-text .text_block{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.proj-milestone-desc-text .text_block{
+  padding-right: 50px;
+}
+.milestone-desc-wrapper .right_columns_description{
+  padding-left: 40px;
+}
+.milestone-desc-wrapper .left_columns_description{
+  padding-left: 10px;
+}
+.help_button_single_block .help{
+  box-shadow: none;
+}
+.proj-timeline-top{
+  padding-top: 85px;
+}
+.proj-timeline-one-step {
+  cursor: pointer;
+}
+.help_button_single_block button:hover{
+  border-color: transparent!important;
+}
+.help_button_single_block button{
+  background: transparent!important;
+}
+.help_button_single_block button{
+  color: #f39856!important;
+  letter-spacing: 0.5px;
+  transform: scale(1, 0.93);
+  padding-top: 10px!important;
+}
+.help_button_single_block button::after{
+  content: url(/wp-content/themes/u-design-child//img/arrow-help.svg);
+  padding-left: 10px;
+}
+
+.single_proj_block4,
+.block-project-partners,
+.single-proj-news-section,
+.single-proj-help-section,
+.single-proj-help-partners-section,
+.single-proj-other-posts-section,
+.privacy-help-section{
+  padding-top: 90px;
+}
+.single-proj-news-section .carousel-news-posts,
+.help-partners-block,
+.block3_help_button{
+  padding-top: 10px;
+}
+.project-partners-carousel-wrapper{
+  padding-top: 35px;
+}
+.single-proj-news-section .vc_pageable-slide-wrapper {
+  padding-bottom: 20px;
+}
+.single-proj-other-posts-section,
+.single-proj-other-posts-section .vc_grid-item{
+  padding-bottom: 55px!important;
+}
+.other-projects-row .vc_grid-item-mini{
+  background: #fff;
+  box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
+}
+.other-projects-row .singl-project-bottom-part{
+  padding: 10px 40px 0 40px;
+  min-height: 320px;
+}
+.other-projects-row .singl-project-top-part .vc_gitem-row-position-top{
+  top: unset;
+  bottom: 0;
+}
+.other-projects-row .project-money-involved,
+.other-projects-row .project-money-quantity{
+  color: #fff;
+}
+.other-projects-row .one-project-progress-wrapper{
+  padding: 0 40px;
+}
+.other-projects-row .one-project-progress-wrapper .one-project-progress {
+  margin-bottom: 20px;
+}
+.other-projects-row .progress-bar{
+  background-color: rgba(165, 165, 165, 0.55);
+}
+.other-projects-row  .singl-project-link{
+  margin-bottom: 0;
+  vertical-align: bottom;
+}
+.other-projects-row .project-text-block{
+  margin-bottom: 5px!important;
+  color: #a5a5a5;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.65px;
+}
+.other-projects-row .singl-project-link-wrapper{
+  position: absolute;
+  left: 40px;
+  bottom: 25px;
+}
+.other-projects-row .singl-project-title{
+  line-height: normal;
+}
+.project-partners-wrapper{
+  background-size: auto!important;
+}
+.project-partners-wrapper .vc_gitem_row{
+  position: unset!important;
+}
+.project-partners-wrapper .vc_gitem-col {padding: 0!important;}
+.project-partners-carousel .vc_grid-item{
+  padding: 0 0 45px 0!important;
+  vertical-align: middle!important;
+}
+.project-partners-carousel .slick-dots{
+  left: 12.8%;
+}
+.help-partners-block .help-partner-patronat{
+  padding-left: 40px;
+}
+.tabs_content {
+  display: none; /* по умолчанию прячем все блоки */
+}
+.tabs_content.active {
+  display: block; /* по умолчанию показываем нужный блок */
+}
+.help_button_single_block .help{
+  display: block;
+  text-align: center;
+}
+.about-proj-excerpt-container{
+  padding: 40px;
+  padding-top: 0;
+}
+
+.about-project-2 .about-proj-excerpt,
+.block_excerpt_container .block_excerpt{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  border-top: 3px solid #e78b48;
+  padding-top: 30px;
+}
+
+/************************* Privacy Policy Page **************************/
+.privacy-section1,
+.privacy-section2{
+  padding-top: 60px;
+}
+.before_rectangle_block p::before{
+  content: url("/wp-content/themes/u-design-child//img/rectangle-icon.svg");
+  padding-right: 25px;
+  vertical-align: 4%;
+}
+.before_rectangle_block{
+  margin-bottom: 10px;
+}
+.block_excerpt_container{
+  padding: 0px 0 0 65px;
+}
+.privacy-help-section{
+  padding-bottom: 45px;
+}

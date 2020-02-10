@@ -1,0 +1,171 @@
+/**
+ * Theme Name: U-Design Child
+ * Theme URI: http://themeforest.net/item/udesign-responsive-wordpress-theme/253220?ref=AndonDesign
+ * Description: This is a child theme of U-Design.
+ * Author: Andon
+ * Author URI: http://themeforest.net/user/andondesign/portfolio?ref=AndonDesign
+ * Template: u-design
+ * Version: 1.0.0
+ */
+
+/** 
+ * IMPORTANT: By default this file is not loaded since it has no CSS preloaded. Loading it blank
+ * will result in a CSS file needlessly being loaded. This will usually not affect the site appearance, 
+ * but it's inefficient and extends your page's loading time.
+ * 
+ * If you decide to use this file make sure to enable it from the theme's 'General Options' section first, 
+ * it's the last checkbox called 'Custom Styles'.
+ */
+                 
+/*********** ADD YOUR CUSTOM CSS CODE BELOW THIS LINE: ***********/
+/* Hide Feedback button at specific screen width or less */
+.hide-temporary{display:none!important;}
+.header-contact{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;	
+	font-size: 1.3em;
+}
+.get-in-touch-title{
+	text-transform:uppercase;
+	max-width: 1015px;
+	margin: 0 auto;
+}
+.managed-service,.project-service{
+	display:block;
+	font-size:10px;
+	text-transform:uppercase;
+	font-weight:bold;
+	text-align:center;
+	min-width: 135px;
+  max-width: 135px;	
+	padding: 7px 0;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+.managed-service{color:#ffffff;background:#6cb40d;}
+.managed-service:hover{color:#000000;}
+.project-service{color:#000000;background:#dcdcdc;}
+.service-sku{color:#969696;font-size:11px;}
+.buttons-cell{
+	min-width:180px;
+	padding: 20px 0 20px 30px;
+}
+#logo{top: 15px!important;}
+.one_fourth .menu .bold a{font-weight:bold;}
+.entry {padding: 10px 0 0px;}
+#page-content{padding-bottom:0;}
+#feedback a.feedback{
+	border-radius: 4px!important;
+	padding: 10px 45px;
+	left: auto;
+	right: -120px;
+}
+#footer-bg{display:none!important;}
+#bottom .widget_nav_menu li a:before{display:none;}
+#bottom .widget_nav_menu li a{background:none;}
+#bottom_4 h3.bottom-col-title{
+	  margin-top: 0;
+    padding-top: 8px;
+} 
+.ptsTableFrontedShell .first-columt{padding: 0 10px;}
+.ptsTableFrontedShell .request-button{
+		background-color: #76B843;
+		border: 1px solid #76B843!important;
+		padding: 10px 20px 10px 20px!important;
+}
+.ptsTableFrontedShell .request-button:hover{background: #76B843!important;}
+.ptsTableFrontedShell .request-button a{
+	color:#fff!important;
+  font-size: 14px!important;
+}
+.partner-channel-form{   
+    max-width: 440px;
+}
+.servise-form input,.servise-form textarea, .partner-channel-form input, .partner-channel-form textarea{
+	padding: 0 10px;   
+	min-width: 410px;
+  max-width: 410px;
+	width:100%;
+  border: unset;
+	height:40px;
+  font-size: 15px;
+}
+
+.servise-form input::-webkit-input-placeholder,.servise-form textarea::-webkit-input-placeholder, .partner-channel-form input::-webkit-input-placeholder, .partner-channel-form textarea::-webkit-input-placeholder{color:#babab9;}
+.servise-form input::-moz-placeholder,.servise-form textarea::-moz-placeholder, .partner-channel-form input::-moz-placeholder, .partner-channel-form textarea::-moz-placeholder{color:#babab9;}
+.servise-form input::ms-input-placeholder,.servise-form textarea::ms-input-placeholder, .partner-channel-form input::ms-input-placeholder, .partner-channel-form textarea::ms-input-placeholder{color:#babab9;}
+body input.wpcf7-phonetext::-webkit-input-placeholder{color:#babab9!important;}
+.servise-form textarea, .partner-channel-form textarea{
+	height:280px;
+	padding:10px;
+	display: block;
+}
+.careers-form textarea{height: 250px;}
+.careers-form .careers-form-attach .wpcf7-file{padding: 0;}
+.servise-form input[type="radio" ],.partner-channel-form input[type="radio" ]{
+	width:auto;
+	height:auto;
+	min-width:unset;
+}
+.servise-form  .wpcf7-list-item-label,.partner-channel-form  .wpcf7-list-item-label{
+		color: #333132;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/*.servise-form  input[name="mobile-phone"], .partner-channel-form  input[name="mobile-phone"] {
+	min-width:430px;
+}*/
+.servise-form span.wpcf7-list-item, .partner-channel-form span.wpcf7-list-item{margin:0;}
+.servise-form .wpcf7-submit, .partner-channel-form .wpcf7-submit{
+    background-color: #76B843;
+    border: 1px solid #76B843;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    max-width: 320px;
+    width: 100%;
+    min-width: unset;
+    padding: 20px 0;
+    height: auto;
+    border-radius: 3px;
+}
+.servise-form .form-label,.partner-channel-form .form-label{color:#333132;}
+.servise-form input[name="service-subject"]{display:none!important;}
+.servise-form .contact-page-link{text-align: right;}
+.servise-form .contact-page-link a{
+	  font-size: 11px;
+    color: #333132;
+    text-decoration: underline;
+}
+.servise-form .servise-form-top-section,
+.resourses-form input{
+	margin-bottom: 15px;
+}
+.servise-form .servise-form-middle-section-right,.servise-form .servise-form-middle-section-left{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.servise-form .servise-form-middle-section{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.servise-form .servise-form-bottom-section{text-align:center;}
+.mobile-form-row{display:none!important;}
+@media screen and (max-width: 1240px) {
+    #feedback { display: none; }
+}
+@media screen and (max-width: 959px) and (min-width: 720px){
+	#top-wrapper .container_24{width:100%;}
+	#logo>h1>a{max-width: 230px; }
+	#logo{top: 0px!important;}
+}
