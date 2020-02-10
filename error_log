@@ -1,0 +1,165 @@
+[31-Jan-2020 16:16:36 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:16:36 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:16:36 Etc/GMT-2] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function apply_filters(), 1 passed in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 260 and exactly 2 expected in /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php:181
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php(260): apply_filters('vc_gitem_templa...')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(325): other_project_timeline('', '', 'other_project_t...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(other_...', 'do_shortcode_ta...', '[other_project_...')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/helpers/helpers.php(240): do_shortcode('[other_project_...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/templates/shortcodes/vc_column_text.php(31): in /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php on line 181
+[31-Jan-2020 16:17:08 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:17:08 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:17:08 Etc/GMT-2] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function apply_filters(), 1 passed in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 259 and exactly 2 expected in /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php:181
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php(259): apply_filters('vc_gitem_templa...')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(325): other_project_timeline('', '', 'other_project_t...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(other_...', 'do_shortcode_ta...', '[other_project_...')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/helpers/helpers.php(240): do_shortcode('[other_project_...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/templates/shortcodes/vc_column_text.php(31): in /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php on line 181
+[31-Jan-2020 16:17:46 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:17:46 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:17:46 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:18:17 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:18:17 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:18:17 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:19:14 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:19:14 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:19:14 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:21:15 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:21:15 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:21:15 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:22:30 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:22:30 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:22:30 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:23:36 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:23:36 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:23:36 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:23:52 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:23:52 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:23:52 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:24:31 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:24:31 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:24:31 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:25:26 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:25:26 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:25:26 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:25:53 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:25:53 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:25:53 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:27:32 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:27:32 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:27:32 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:28:38 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:28:38 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:28:38 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:28:51 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:28:51 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:28:51 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:29:35 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:29:35 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:29:35 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:30:35 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:30:35 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:30:35 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:31:39 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:31:39 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:31:39 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:33:15 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:33:15 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:33:15 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:33:53 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:33:53 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:33:53 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:34:08 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:34:08 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:34:08 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:34:12 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:34:12 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:34:12 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:34:36 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:34:36 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:34:36 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:40:23 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:40:23 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:40:23 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:42:27 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:42:27 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:42:27 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:43:10 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:43:10 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:43:10 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
+[31-Jan-2020 16:44:32 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 304
+[31-Jan-2020 16:44:32 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 304
+[31-Jan-2020 16:44:32 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:44:32 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:46:42 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:46:42 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 255
+[31-Jan-2020 16:47:47 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 305
+[31-Jan-2020 16:47:47 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 305
+[31-Jan-2020 16:48:17 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 305
+[31-Jan-2020 16:48:17 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 305
+[31-Jan-2020 16:48:46 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 305
+[31-Jan-2020 16:48:46 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 305
+[31-Jan-2020 16:49:07 Etc/GMT-2] PHP Warning:  array_merge(): Expected parameter 2 to be an array, string given in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 308
+[31-Jan-2020 16:49:07 Etc/GMT-2] PHP Warning:  extract() expects parameter 1 to be array, null given in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 308
+[31-Jan-2020 16:49:07 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 312
+[31-Jan-2020 16:49:07 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 312
+[31-Jan-2020 16:50:28 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 16:50:28 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 16:57:02 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 16:57:02 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 16:57:24 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 16:57:24 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 16:58:44 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 16:58:44 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 17:02:15 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 17:02:15 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 17:05:00 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 17:05:00 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 17:06:27 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 17:06:27 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 17:09:46 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 17:09:46 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 17:12:33 Etc/GMT-2] PHP Warning:  A non-numeric value encountered in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[31-Jan-2020 17:12:33 Etc/GMT-2] PHP Warning:  Division by zero in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 264
+[06-Feb-2020 14:17:43 Etc/GMT-2] Помилка БД WordPress Table 'sampin_wp382.wp4t_opt_properties_float' doesn't exist для запиту SELECT SQL_CALC_FOUND_ROWS  wp4t_posts.ID FROM wp4t_posts  LEFT JOIN wp4t_term_relationships ON (wp4t_posts.ID = wp4t_term_relationships.object_id) LEFT JOIN wp4t_wc_product_meta_lookup wc_product_meta_lookup ON wp4t_posts.ID = wc_product_meta_lookup.product_id 
+ LEFT JOIN wp4t_opt_properties_float opt_price ON wp4t_posts.ID = opt_price.post_id  WHERE 1=1  AND ( 
+  wp4t_posts.ID NOT IN (
+				SELECT object_id
+				FROM wp4t_term_relationships
+				WHERE term_taxonomy_id IN (7)
+			) 
+  AND 
+  wp4t_term_relationships.term_taxonomy_id IN (18)
+) AND wp4t_posts.post_type = 'product' AND (wp4t_posts.post_status = 'publish' OR wp4t_posts.post_status = 'acf-disabled' OR wp4t_posts.post_status = 'private') AND opt_price.property="_price" AND opt_price.value  >= 310.000000 AND opt_price.value  <= 500.000000  GROUP BY wp4t_posts.ID ORDER BY wp4t_posts.post_date DESC, wp4t_posts.ID DESC LIMIT 0, 9 спричинена require('wp-blog-header.php'), wp, WP->main, WP->query_posts, WP_Query->query, WP_Query->get_posts
+[07-Feb-2020 16:01:16 Etc/GMT-2] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:290
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(325): vc_custom_post_meta_render('', '', 'vc_custom_post_...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(vc_cus...', 'do_shortcode_ta...', '[vc_custom_post...')
+#3 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/templates/shortcodes/vc_gitem_col.php(33): do_shortcode('[vc_custom_post...')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-wpbakeryshortcode.php(271): require('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-wpbakeryshortcode.php(244): WPBakeryShortCode->loadTemplate(Array, '[vc_custom_post...')
+#6  in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 290
+[07-Feb-2020 16:02:17 Etc/GMT-2] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_post_meta(), 0 passed in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 290 and at least 1 expected in /home/sampin/zaporuka.testit.in.ua/wp-includes/post.php:2109
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php(290): get_post_meta()
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(325): vc_custom_post_meta_render('', '', 'vc_custom_post_...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(vc_cus...', 'do_shortcode_ta...', '[vc_custom_post...')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/templates/shortcodes/vc_gitem_col.php(33): do_shortcode('[vc_custom_post...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-wpbakeryshort in /home/sampin/zaporuka.testit.in.ua/wp-includes/post.php on line 2109
+[07-Feb-2020 16:02:26 Etc/GMT-2] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_post_meta(), 0 passed in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php on line 290 and at least 1 expected in /home/sampin/zaporuka.testit.in.ua/wp-includes/post.php:2109
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php(290): get_post_meta()
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(325): vc_custom_post_meta_render('', '', 'vc_custom_post_...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(vc_cus...', 'do_shortcode_ta...', '[vc_custom_post...')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/templates/shortcodes/vc_gitem_col.php(33): do_shortcode('[vc_custom_post...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-wpbakeryshort in /home/sampin/zaporuka.testit.in.ua/wp-includes/post.php on line 2109
+[07-Feb-2020 17:01:05 Etc/GMT-2] PHP Parse error:  syntax error, unexpected '}' in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php on line 126
+[07-Feb-2020 17:01:09 Etc/GMT-2] PHP Parse error:  syntax error, unexpected '}' in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php on line 126
+[07-Feb-2020 17:16:45 Etc/GMT-2] PHP Parse error:  syntax error, unexpected '=' in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/woocommerce/single-product/short-description.php on line 35
+[07-Feb-2020 17:38:47 Etc/GMT-2] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vc_gitem_template_attribute_custom_meta ' not found or invalid function name in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288
