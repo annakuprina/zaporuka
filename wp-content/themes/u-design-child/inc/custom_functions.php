@@ -64,7 +64,7 @@ function shortcode_milestones(){
                 }
             ?>
                 <!-- ONE STEP -->
-                <div class="proj-timeline-one-step <?php echo $class; ?>" data-id="<?php echo $i; ?>">
+                <div class="proj-timeline-one-step <?php echo $class; ?> one-tab-link" data-id="<?php echo $i; ?>">
                     <!-- Hidden  timeline for mob version-->
                     <div class="one-step-timeline-mob">
                         <p class="one-step-timeline-inner"></p>
