@@ -1,0 +1,58 @@
+2020-01-29T17:17:55+02:00 CRITICAL syntax error, unexpected '$total_amount_timelineamount' (T_VARIABLE), expecting ',' or ';' в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 259
+
+2020-01-29T17:17:56+02:00 CRITICAL syntax error, unexpected '$total_amount_timelineamount' (T_VARIABLE), expecting ',' or ';' у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 259
+
+2020-01-29T17:18:08+02:00 CRITICAL syntax error, unexpected '$total_amount_timelineamount' (T_VARIABLE), expecting ',' or ';' в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 259
+
+2020-01-29T17:18:17+02:00 CRITICAL syntax error, unexpected '$total_amount_timelineamount' (T_VARIABLE), expecting ',' or ';' в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 259
+
+2020-01-29T17:39:26+02:00 CRITICAL syntax error, unexpected end of file в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 145
+
+2020-01-29T17:39:27+02:00 CRITICAL syntax error, unexpected end of file в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 145
+
+2020-01-29T17:39:27+02:00 CRITICAL syntax error, unexpected end of file у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php доступно 145
+
+2020-01-29T17:39:29+02:00 CRITICAL syntax error, unexpected end of file в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 145
+
+2020-01-29T17:39:30+02:00 CRITICAL syntax error, unexpected end of file у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php доступно 145
+
+2020-01-29T17:40:05+02:00 CRITICAL syntax error, unexpected end of file в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 145
+
+2020-01-29T17:40:09+02:00 CRITICAL syntax error, unexpected end of file у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php доступно 145
+
+2020-01-29T17:40:30+02:00 CRITICAL syntax error, unexpected end of file у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php доступно 145
+
+2020-01-29T17:40:45+02:00 CRITICAL syntax error, unexpected end of file у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php доступно 145
+
+2020-01-29T17:40:47+02:00 CRITICAL syntax error, unexpected end of file в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 145
+
+2020-01-29T17:41:14+02:00 CRITICAL syntax error, unexpected end of file в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 145
+
+2020-01-29T17:41:32+02:00 CRITICAL syntax error, unexpected end of file в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 145
+
+2020-01-29T17:41:43+02:00 CRITICAL syntax error, unexpected end of file в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 145
+
+2020-01-29T17:41:51+02:00 CRITICAL syntax error, unexpected end of file у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php доступно 145
+
+2020-01-29T17:48:46+02:00 CRITICAL syntax error, unexpected '{' в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 144
+
+2020-01-29T17:48:50+02:00 CRITICAL syntax error, unexpected '{' в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 144
+
+2020-01-29T17:48:59+02:00 CRITICAL syntax error, unexpected '{' в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 144
+
+2020-01-29T17:49:04+02:00 CRITICAL syntax error, unexpected '{' в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 144
+
+2020-01-29T17:49:48+02:00 CRITICAL syntax error, unexpected '{' в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 144
+
+2020-01-29T17:49:48+02:00 CRITICAL syntax error, unexpected '{' у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php доступно 144
+
+2020-01-29T17:51:05+02:00 CRITICAL syntax error, unexpected '{' в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 144
+
+2020-01-29T17:51:09+02:00 CRITICAL syntax error, unexpected '{' у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php доступно 144
+
+2020-01-29T17:51:11+02:00 CRITICAL syntax error, unexpected '{' у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php доступно 144
+
+2020-01-29T17:51:23+02:00 CRITICAL syntax error, unexpected '{' у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php доступно 144
+
+2020-01-29T17:51:28+02:00 CRITICAL syntax error, unexpected '{' в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/functions.php на строке 144
+

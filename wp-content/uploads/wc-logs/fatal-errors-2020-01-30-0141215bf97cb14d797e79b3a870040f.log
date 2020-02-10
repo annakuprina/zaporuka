@@ -1,0 +1,841 @@
+2020-01-30T12:50:15+02:00 CRITICAL syntax error, unexpected ';', expecting ')' у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 250
+
+2020-01-30T12:50:25+02:00 CRITICAL syntax error, unexpected ';', expecting ')' в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 250
+
+2020-01-30T16:05:34+02:00 CRITICAL Uncaught Error: Call to undefined function has_rows() in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:254
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(325): other_project_timeline('', '', 'other_project_t...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(other_...', 'do_shortcode_ta...', '[other_project_...')
+#3 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/helpers/helpers.php(240): do_shortcode('[other_project_...')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/templates/shortcodes/vc_column_text.php(31): wpb_js_remove_wpautop('<p>[other_proje...', true)
+#5 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-wpbakeryshortcode.php(271): require('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/ у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 254
+
+2020-01-30T16:05:56+02:00 CRITICAL Uncaught Error: Call to undefined function has_rows() in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:254
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(325): other_project_timeline('', '', 'other_project_t...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(other_...', 'do_shortcode_ta...', '[other_project_...')
+#3 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/helpers/helpers.php(240): do_shortcode('[other_project_...')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/templates/shortcodes/vc_column_text.php(31): wpb_js_remove_wpautop('<p>[other_proje...', true)
+#5 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-wpbakeryshortcode.php(271): require('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/ у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 254
+
+2020-01-30T16:56:04+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-cron.php(44): require_once('/home/sampin/za...')
+#7 {main}
+  thrown в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 294
+
+2020-01-30T16:56:11+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:56:11+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:56:11+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:56:11+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:56:15+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:56:37+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:56:41+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:56:44+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:56:55+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:56:56+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:09+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-cron.php(44): require_once('/home/sampin/za...')
+#7 {main}
+  thrown в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 294
+
+2020-01-30T16:57:20+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:21+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:22+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:31+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:32+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:32+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:33+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:37+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:45+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:45+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:46+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:47+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:49+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:57:58+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:58:12+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-cron.php(44): require_once('/home/sampin/za...')
+#7 {main}
+  thrown в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 294
+
+2020-01-30T16:58:12+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:58:19+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:58:40+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:58:43+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:58:45+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:59:00+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:59:07+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:59:19+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-cron.php(44): require_once('/home/sampin/za...')
+#7 {main}
+  thrown в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 294
+
+2020-01-30T16:59:19+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:59:26+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T16:59:28+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T17:00:27+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-cron.php(44): require_once('/home/sampin/za...')
+#7 {main}
+  thrown в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 294
+
+2020-01-30T17:00:28+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T17:00:33+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:294
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 294
+
+2020-01-30T17:00:58+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:295
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 295
+
+2020-01-30T17:01:02+02:00 CRITICAL Uncaught TypeError: Argument 1 passed to mapacfvcGridItemShortcodes() must be of the type array, null given, called in /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php on line 288 and defined in /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/acf-vc-integrator/acf-vc-integrator.php:177
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): mapacfvcGridItemShortcodes(NULL)
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(206): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/params/vc_grid_item/class-vc-grid-item.php(28): apply_filters('vc_grid_item_sh...', Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/params/vc_grid_item/class-vc-grid-item.php(153): Vc_Grid_Item->shortcodes()
+#4 /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/autoload/vc-grid-item-editor.php(101): Vc_Grid_Item->mapShortcodes()
+#5 /home/sampin/zaporuka. в /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/acf-vc-integrator/acf-vc-integrator.php на строке 177
+
+2020-01-30T17:01:39+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:295
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-cron.php(44): require_once('/home/sampin/za...')
+#7 {main}
+  thrown в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 295
+
+2020-01-30T17:01:39+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:295
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 295
+
+2020-01-30T17:01:40+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:295
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 295
+
+2020-01-30T17:01:43+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:295
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 295
+
+2020-01-30T17:02:48+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-cron.php(44): require_once('/home/sampin/za...')
+#7 {main}
+  thrown в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 304
+
+2020-01-30T17:02:48+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:03:10+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:03:10+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:03:10+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:03:36+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:03:36+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:03:36+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:03:52+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-cron.php(44): require_once('/home/sampin/za...')
+#7 {main}
+  thrown в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 304
+
+2020-01-30T17:04:01+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:04:01+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design/assets/css/admin/custom-editor-style.php(8): require_once('/home/sampin/za...')
+#7 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:04:01+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:04:28+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:04:31+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:304
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 304
+
+2020-01-30T17:04:38+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:300
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 300
+
+2020-01-30T17:04:54+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:300
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-cron.php(44): require_once('/home/sampin/za...')
+#7 {main}
+  thrown в /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php на строке 300
+
+2020-01-30T17:05:09+02:00 CRITICAL Uncaught Error: Class 'Vc_Grid_Item_Editor' not found in /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php:300
+Stack trace:
+#0 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(288): eq_lineup_title->eq_lineup_title_mapping('')
+#1 /home/sampin/zaporuka.testit.in.ua/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /home/sampin/zaporuka.testit.in.ua/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/sampin/zaporuka.testit.in.ua/wp-settings.php(523): do_action('init')
+#4 /home/sampin/zaporuka.testit.in.ua/wp-config.php(95): require_once('/home/sampin/za...')
+#5 /home/sampin/zaporuka.testit.in.ua/wp-load.php(37): require_once('/home/sampin/za...')
+#6 /home/sampin/zaporuka.testit.in.ua/wp-blog-header.php(13): require_once('/home/sampin/za...')
+#7 /home/sampin/zaporuka.testit.in.ua/index.php(17): require('/home/sampin/za...')
+#8 {main}
+  thrown у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 300
+
+2020-01-30T17:10:10+02:00 CRITICAL syntax error, unexpected '?>' у /home/sampin/zaporuka.testit.in.ua/wp-content/themes/u-design-child/inc/custom_functions.php доступно 343
+
+2020-01-30T17:37:14+02:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 135168 bytes) у /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/polylang/frontend/frontend-auto-translate.php доступно 193
+
+2020-01-30T17:37:47+02:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 69632 bytes) у /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/polylang/frontend/frontend-auto-translate.php доступно 193
+
+2020-01-30T17:54:40+02:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 131072 bytes) у /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/params/vc_grid_item/shortcodes.php доступно 530
+
+2020-01-30T18:05:43+02:00 CRITICAL Allowed memory size of 536870912 bytes exhausted (tried to allocate 131072 bytes) у /home/sampin/zaporuka.testit.in.ua/wp-content/plugins/js_composer/include/params/vc_grid_item/shortcodes.php доступно 530
+
