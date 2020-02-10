@@ -1,0 +1,468 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Liqpay&Wordpress\n"
+"POT-Creation-Date: 2017-07-27 08:50+0200\n"
+"PO-Revision-Date: 2017-11-06 22:01+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: .\n"
+"X-Poedit-SearchPath-2: ../..\n"
+
+#: ../liqpay.php:76 ../liqpay.php:468
+msgid "Liqpay buy"
+msgstr "Liqpay"
+
+#: ../liqpay.php:77 ../liqpay.php:421
+msgid "Payment Journal"
+msgstr "Журнал транзакций"
+
+#: ../liqpay.php:78 ../liqpay.php:113
+msgid "Button generation"
+msgstr "Генерировать форму"
+
+#: ../liqpay.php:79
+msgid "List of services"
+msgstr "Список услуг"
+
+#: ../liqpay.php:80
+msgid "Product List"
+msgstr "Список продуктов"
+
+#: ../liqpay.php:81
+msgid "Discounts for members"
+msgstr "Скидки"
+
+#: ../liqpay.php:83
+msgid "Sale of codes / passwords"
+msgstr "Продажа кодов / паролей"
+
+#: ../liqpay.php:85
+msgid "Setting"
+msgstr "Настройки"
+
+#: ../liqpay.php:114
+msgid ""
+"Please fill in the fields below and click \"Generate Code\", insert the code "
+"in the correct location on the site."
+msgstr ""
+"Заполните поля ниже и нажмите «Генерировать форму», вставьте код в нужном "
+"месте на сайте."
+
+#: ../liqpay.php:136
+msgid "For how many days need access?"
+msgstr "Дна сколько нужен доступ?"
+
+#: ../liqpay.php:137 ../liqpay.php:476
+msgid "Purpose of payment"
+msgstr "Назначение платежа"
+
+#: ../liqpay.php:193
+msgid "Select a product"
+msgstr "Выбрать продукт"
+
+#: ../liqpay.php:196
+msgid ""
+"Purpose of payment (if the field is filled, then client can not change the "
+"\"Purpose of payment\" )"
+msgstr ""
+"Назначение платежа (если поле заполнено, клиент не может изменить "
+"«Назначение платежа»)"
+
+#: ../liqpay.php:214
+msgid ""
+"Amount and currency (if the field is filled, then client can not change the  "
+"amount)"
+msgstr "Сумма и валюта (если поле заполнено, клиент не может изменить сумму)\""
+
+#: ../liqpay.php:215
+msgid "The text for the \"Pay\" button (*)"
+msgstr "Текст для кнопки Купить"
+
+#: ../liqpay.php:219
+msgid "Hide field name?"
+msgstr "Скрыть имя и email?"
+
+#: ../liqpay.php:222
+msgid "Show discount field?"
+msgstr "Показывать поле для скидки?"
+
+#: ../liqpay.php:227
+msgid "Form for hidden content."
+msgstr "Форма для скрытого контента."
+
+#: ../liqpay.php:230
+msgid "Generate Code"
+msgstr "Генерировать форму"
+
+#: ../liqpay.php:236
+msgid "Html code"
+msgstr "Html код"
+
+#: ../liqpay.php:239
+msgid "Your form will be like this ..."
+msgstr "Ваша форма будет выглядеть примерно так ..."
+
+#: ../liqpay.php:425
+msgid "Order_id"
+msgstr "ID платежа"
+
+#: ../liqpay.php:426 ../liqpay.php:441
+msgid "Date"
+msgstr "Дата"
+
+#: ../liqpay.php:427 ../liqpay.php:442
+msgid "Transaction #"
+msgstr "№ транзакции"
+
+#: ../liqpay.php:428 ../liqpay.php:443
+msgid "Status"
+msgstr "Статус"
+
+#: ../liqpay.php:429 ../liqpay.php:444
+msgid "Error code"
+msgstr "Код ошибки"
+
+#: ../liqpay.php:430 ../liqpay.php:445
+msgid "Sum"
+msgstr "Сумма"
+
+#: ../liqpay.php:431 ../liqpay.php:446
+msgid "Currency"
+msgstr "Валюта"
+
+#: ../liqpay.php:432 ../liqpay.php:447
+msgid "Phone"
+msgstr "Телефон"
+
+#: ../liqpay.php:433 ../liqpay.php:448
+msgid "Comment"
+msgstr "Коментарий"
+
+#: ../liqpay.php:434 ../liqpay.php:449
+msgid "email"
+msgstr "email"
+
+#: ../liqpay.php:435 ../liqpay.php:450
+msgid "IP"
+msgstr "IP"
+
+#: ../liqpay.php:440
+msgid "Order ID"
+msgstr "ID платежа"
+
+#: ../liqpay.php:469
+msgid ""
+"Please fill in the fields below and click 'Buy', then you'll be taken to a "
+"secure site LiqPay.ua, in which you need to fill in details of your card "
+"(Visa / MasterCard)"
+msgstr ""
+"Пожалуйста, заполните поля ниже и нажмите «Купить», после чего вы попадете "
+"на безопасный сайт LiqPay.ua, в котором вам необходимо заполнить данные "
+"своей карты (Visa / MasterCard)"
+
+#: ../liqpay.php:474
+msgid "First name"
+msgstr "Имя"
+
+#: ../liqpay.php:477
+msgid "Amount"
+msgstr "Кол-во"
+
+#: ../liqpay.php:483
+msgid "Select a currency"
+msgstr "Выбрать валюту"
+
+#: ../liqpay.php:485
+msgid "Buy"
+msgstr "Купить"
+
+#: ../liqpay.php:495 ../liqpay.php:794 ../liqpay.php:807 ../liqpay.php:890
+#: ../uslugi.php:22 ../uslugi.php:92 ../uslugi.php:115
+msgid "Hacker?"
+msgstr "Хакер что-ли? "
+
+#: ../liqpay.php:565
+msgid "Settings for Liqpay&Wordpress!"
+msgstr "Настройки для Liqpay&Wordpress!"
+
+#: ../liqpay.php:575
+msgid "Days left"
+msgstr "Дней осталось:"
+
+#: ../liqpay.php:579
+msgid "Public key:"
+msgstr "ПуБличный ключ:"
+
+#: ../liqpay.php:581
+msgid ""
+"Public key (merchant_id) is a unique record of the merchant, which is issued "
+"at the time of registration of your store in liqpay system."
+msgstr "Публичный ключ (получать ключ необходимо в кабинете Liqpay)"
+
+#: ../liqpay.php:584
+msgid "Private key:"
+msgstr "Приватный ключ:"
+
+#: ../liqpay.php:586
+msgid ""
+"The private key (signature_id) is the unique signature of the merchant, "
+"which is issued at the time of registration of your store in liqpay system."
+msgstr "Приватный ключ (получать ключ необходимо в кабинете Liqpay)"
+
+#: ../liqpay.php:589
+msgid "Your phone number:"
+msgstr "Ваш телефон:"
+
+#: ../liqpay.php:591
+msgid ""
+"Your phone number that is connected to your store, entered in the "
+"international format (380501234567)."
+msgstr "Ваш телефон в формате (380501234567)."
+
+#: ../liqpay.php:594
+msgid "Email:"
+msgstr "Email:"
+
+#: ../liqpay.php:596
+msgid "Your mail that will receive reports on payment."
+msgstr "Email c которого будут отправляться отчеты об оплате."
+
+#: ../liqpay.php:599
+msgid "Name of your company:"
+msgstr "Название компании:"
+
+#: ../liqpay.php:601
+msgid ""
+"Enter the name of your company (store). This text clients will see in the "
+"message field (from whom) it will look something like this (from whom: 'The "
+"name of your company' / Mail Address from the next field) /"
+msgstr ""
+"Введите название своей компании (магазина). Это текстовое поле клиенты "
+"увидят в поле сообщения (от кого)."
+
+#: ../liqpay.php:604
+msgid "Your mail sender:"
+msgstr "Ваш Email:"
+
+#: ../liqpay.php:606
+msgid ""
+"Your mail will be sent with the letter which your customers  that paid for "
+"your services"
+msgstr "Email с которым вы регистрировались в системе Liqpay"
+
+#: ../liqpay.php:610
+msgid "Commission:"
+msgstr "Комиссия:"
+
+#: ../liqpay.php:612
+msgid ""
+"Enter only numbers without any signs, the commission charged to the "
+"customer, if you don't need any fee, please type 0"
+msgstr ""
+"Комиссия, взымаемая с клиента, (вводите только числа без каких-либо знаков) "
+"если комиссия не нужна введите в поле 0 пожалуйста"
+
+#: ../liqpay.php:616
+msgid "Commission's field name:"
+msgstr "Название поля комиссии:"
+
+#: ../liqpay.php:618
+msgid "The name of the commission of the field on the Checkout page"
+msgstr "Название поля комиссии на странице «Оформление заказа»"
+
+#: ../liqpay.php:622
+msgid "Commission on checkout (YES)/ in Liqpay page (NO):"
+msgstr "Комиссия при оформлении заказа (ДА) / на странице Liqpay (НЕТ):"
+
+#: ../liqpay.php:625 ../liqpay.php:627
+msgid "Yes"
+msgstr "Да"
+
+#: ../liqpay.php:628 ../liqpay.php:630 ../liqpay.php:655 ../liqpay.php:657
+msgid "No"
+msgstr "Нет"
+
+#: ../liqpay.php:633
+msgid ""
+"Choose where to apply the Commission: Yes - at Checkout page; No - on the "
+"side of Liqpay"
+msgstr ""
+"Выберите, где применить комиссию: Да - на странице оформления заказа; Нет - "
+"на стороне Liqpay"
+
+#: ../liqpay.php:637
+msgid "Commission Type:"
+msgstr "Тип комиссии:"
+
+#: ../liqpay.php:640 ../liqpay.php:642
+msgid "Percent"
+msgstr "Процент"
+
+#: ../liqpay.php:643 ../liqpay.php:645 ../liqpay.php:661
+msgid "Custom"
+msgstr "Произвольная"
+
+#: ../liqpay.php:648
+msgid "Type of commission or a percentage or fixed amount"
+msgstr "Комиссия платежа"
+
+#: ../liqpay.php:652
+msgid "Use Currency Converter?:"
+msgstr "Использовать конвертор валют?:"
+
+#: ../liqpay.php:658 ../liqpay.php:660
+msgid "Privatbank"
+msgstr "ПриватБанк"
+
+#: ../liqpay.php:663
+msgid "Custom Exchange"
+msgstr "Произвольный курс"
+
+#: ../liqpay.php:666
+msgid "Type of Currency Converter for generated form"
+msgstr "Тип конвертора валют для генерированных форм"
+
+#: ../liqpay.php:669
+msgid "Default currency"
+msgstr "Валюта по умолчанию"
+
+#: ../liqpay.php:687
+msgid "Select default currency for products."
+msgstr ""
+"Выберите валюту для продуктов которая будет использоваться по умолчанию "
+"(используется для конвертора валют)."
+
+#: ../liqpay.php:693 ../liqpay.php:714
+msgid "Purchase"
+msgstr "Покупка"
+
+#: ../liqpay.php:694 ../liqpay.php:715
+msgid "Sale"
+msgstr "Продажа"
+
+#: ../liqpay.php:734
+msgid "Language"
+msgstr "Язык"
+
+#: ../liqpay.php:746
+msgid "Select interface language."
+msgstr "Выбрать язык."
+
+#: ../liqpay.php:748
+msgid "Link to the page:"
+msgstr "Ссылка на страницу"
+
+#: ../liqpay.php:750
+msgid ""
+"Link to the page on which the user will be taken after the payment (up to "
+"510 characters)."
+msgstr ""
+"Ссылка на страницу, на которую пользователь будет отправлен после оплаты, "
+"если поле  оставить пустым, то, по умолчанию пользователь будет "
+"перенаправлен на страницу Thank You WooCommrece."
+
+#: ../liqpay.php:766
+msgid ""
+"Activate test mode (In test mode, the transfer takes place, but the money "
+"will not be charged) is only used to verify the operation be sure to "
+"disconnect AFTER THE TEST."
+msgstr ""
+"Активируйте тестовый режим (в тестовом режиме передача происходит, но деньги "
+"не будут списаны) используется только для проверки операции обязательно "
+"отключить ПОСЛЕ ТЕСТА."
+
+#: ../liqpay.php:770
+msgid "Save"
+msgstr "Сохранить"
+
+#: ../oplata.php:94
+msgid "Cansel the payment and empty the card"
+msgstr "Отменить платеж и очистить корзину"
+
+#: ../woocommerce.php:37
+msgid "Enable/Disable"
+msgstr "Вкл/Выкл"
+
+#: ../woocommerce.php:39
+msgid "Enable Liqpay Payment Module."
+msgstr "Включить  шлюз оплаты Liqpay"
+
+#: ../woocommerce.php:42
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: ../woocommerce.php:44
+msgid "This controls the title which the user sees during checkout."
+msgstr "Заголовок, который пользователь видит на странице оформления заказа."
+
+#: ../woocommerce.php:45
+msgid "Liqpay"
+msgstr "Liqpay"
+
+#: ../woocommerce.php:47
+msgid "Description:"
+msgstr "Описание"
+
+#: ../woocommerce.php:49
+msgid "This controls the description which the user sees during checkout."
+msgstr "Описание, которое пользователь видит на странице оформления заказа."
+
+#: ../woocommerce.php:50
+msgid ""
+"Pay securely by Credit or Debit card or internet banking through Liqpay "
+"Secure Servers."
+msgstr ""
+"Безопасно оплатить кредитной или дебетовой картой через Liqpay Secure "
+"Servers."
+
+#: ../woocommerce.php:55
+msgid "Liqpay Payment Gateway"
+msgstr "Платежный шлюз Liqpay"
+
+#: ../woocommerce.php:56
+msgid "Liqpay is most popular payment gateway for online shopping in Ukraine"
+msgstr "Liqpay - самый популярный платежный шлюз для онлайн-покупок в Украине"
+
+#: ../woocommerce.php:74
+msgid ""
+"Thank you for your order, please click the button below to pay with Liqpay."
+msgstr ""
+"Благодарим вас за заказ. Для оплаты с помощью Liqpay нажмите кнопку ниже."
+
+#: ../woocommerce.php:123
+msgid "Pay via Liqpay"
+msgstr "Оплатить с помощью Liqpay"
+
+#: ../woocommerce.php:123
+msgid "Cancel order &amp; restore cart"
+msgstr "Отменить заказ и восстановить корзину"
+
+#: ../woocommerce.php:128
+msgid ""
+"Thank you for your order. We are now redirecting you to Payment Gateway to "
+"make payment."
+msgstr ""
+"Спасибо за ваш заказ. Теперь мы перенаправляем вас к платежному шлюзу для "
+"осуществления платежа."
+
+#~ msgid "YES"
+#~ msgstr "ДА"
+
+#~ msgid "NO"
+#~ msgstr "Нет"
+
+#~ msgid "Shelf life:"
+#~ msgstr "Срок годности:"
+
+#~ msgid "Shelf life of links in minutes."
+#~ msgstr "Срок хранения ссылок в минутах."

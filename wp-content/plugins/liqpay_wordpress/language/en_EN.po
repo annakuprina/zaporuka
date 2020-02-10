@@ -1,0 +1,396 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Liqpay&Wordpress\n"
+"POT-Creation-Date: 2017-05-09 11:03+0200\n"
+"PO-Revision-Date: 2017-05-09 11:03+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: ../liqpay.php:72 ../liqpay.php:443
+msgid "Liqpay buy"
+msgstr ""
+
+#: ../liqpay.php:73 ../liqpay.php:396
+msgid "Payment Journal"
+msgstr ""
+
+#: ../liqpay.php:74 ../liqpay.php:109
+msgid "Button generation"
+msgstr ""
+
+#: ../liqpay.php:75
+msgid "List of services"
+msgstr ""
+
+#: ../liqpay.php:76
+msgid "Product List"
+msgstr ""
+
+#: ../liqpay.php:77
+msgid "Discounts for members"
+msgstr ""
+
+#: ../liqpay.php:79
+msgid "Sale of codes / passwords"
+msgstr ""
+
+#: ../liqpay.php:81
+msgid "Setting"
+msgstr ""
+
+#: ../liqpay.php:110
+msgid ""
+"Please fill in the fields below and click \"Generate Code\", insert the code "
+"in the correct location on the site."
+msgstr ""
+
+#: ../liqpay.php:132
+msgid "For how many days need access?"
+msgstr ""
+
+#: ../liqpay.php:133 ../liqpay.php:451
+msgid "Purpose of payment"
+msgstr ""
+
+#: ../liqpay.php:179
+msgid ""
+"Purpose of payment (if the field is filled, then client can not change the "
+"\"Purpose of payment\" )"
+msgstr ""
+
+#: ../liqpay.php:197
+msgid ""
+"Amount and currency (if the field is filled, then client can not change the  "
+"amount)\" )"
+msgstr ""
+
+#: ../liqpay.php:198
+msgid "The text for the \"Pay\" button (*)\" )"
+msgstr ""
+
+#: ../liqpay.php:209
+msgid "Select a product"
+msgstr ""
+
+#: ../liqpay.php:212
+msgid "Hide field name?"
+msgstr ""
+
+#: ../liqpay.php:215
+msgid "Show discount field?"
+msgstr ""
+
+#: ../liqpay.php:220
+msgid "Form for hidden content."
+msgstr ""
+
+#: ../liqpay.php:223
+msgid "Generate Code"
+msgstr ""
+
+#: ../liqpay.php:229
+msgid "Html code"
+msgstr ""
+
+#: ../liqpay.php:232
+msgid "Your form will be like this ..."
+msgstr ""
+
+#: ../liqpay.php:400
+msgid "Order_id"
+msgstr ""
+
+#: ../liqpay.php:401 ../liqpay.php:416
+msgid "Date"
+msgstr ""
+
+#: ../liqpay.php:402 ../liqpay.php:417
+msgid "Transaction #"
+msgstr ""
+
+#: ../liqpay.php:403 ../liqpay.php:418
+msgid "Status"
+msgstr ""
+
+#: ../liqpay.php:404 ../liqpay.php:419
+msgid "Error code"
+msgstr ""
+
+#: ../liqpay.php:405 ../liqpay.php:420
+msgid "Sum"
+msgstr ""
+
+#: ../liqpay.php:406 ../liqpay.php:421
+msgid "Currency"
+msgstr ""
+
+#: ../liqpay.php:407 ../liqpay.php:422
+msgid "Phone"
+msgstr ""
+
+#: ../liqpay.php:408 ../liqpay.php:423
+msgid "Comment"
+msgstr ""
+
+#: ../liqpay.php:409 ../liqpay.php:424
+msgid "email"
+msgstr ""
+
+#: ../liqpay.php:410 ../liqpay.php:425
+msgid "IP"
+msgstr ""
+
+#: ../liqpay.php:415
+msgid "Order ID"
+msgstr ""
+
+#: ../liqpay.php:444
+msgid ""
+"Please fill in the fields below and click 'Buy', then you'll be taken to a "
+"secure site LiqPay.com, in which you need to fill in details of your card "
+"(Visa / MasterCard)"
+msgstr ""
+
+#: ../liqpay.php:449
+msgid "First name"
+msgstr ""
+
+#: ../liqpay.php:452
+msgid "Amount"
+msgstr ""
+
+#: ../liqpay.php:458
+msgid "Select a currency"
+msgstr ""
+
+#: ../liqpay.php:460
+msgid "Buy"
+msgstr ""
+
+#: ../liqpay.php:470 ../liqpay.php:657 ../liqpay.php:670 ../liqpay.php:753
+#: ../uslugi.php:22 ../uslugi.php:92 ../uslugi.php:115
+msgid "Hacker?"
+msgstr ""
+
+#: ../liqpay.php:510
+msgid "Settings for Liqpay&Wordpress!"
+msgstr ""
+
+#: ../liqpay.php:520
+msgid "Days left"
+msgstr ""
+
+#: ../liqpay.php:524
+msgid "Public key:"
+msgstr ""
+
+#: ../liqpay.php:526
+msgid ""
+"Public key (merchant_id) is a unique record of the merchant, which is issued "
+"at the time of registration of your store in liqpay system."
+msgstr ""
+
+#: ../liqpay.php:529
+msgid "Private key:"
+msgstr ""
+
+#: ../liqpay.php:531
+msgid ""
+"The private key (signature_id) is the unique signature of the merchant, "
+"which is issued at the time of registration of your store in liqpay system."
+msgstr ""
+
+#: ../liqpay.php:534
+msgid "Your phone number:"
+msgstr ""
+
+#: ../liqpay.php:536
+msgid ""
+"Your phone number that is connected to your store, entered in the "
+"international format (380501234567)."
+msgstr ""
+
+#: ../liqpay.php:539
+msgid "Email:"
+msgstr ""
+
+#: ../liqpay.php:541
+msgid "Your mail that will receive reports on payment."
+msgstr ""
+
+#: ../liqpay.php:544
+msgid "Name of your company:"
+msgstr ""
+
+#: ../liqpay.php:546
+msgid ""
+"Enter the name of your company (store). This text clients will see in the "
+"message field (from whom) it will look something like this (from whom: 'The "
+"name of your company' / Mail Address from the next field) /"
+msgstr ""
+
+#: ../liqpay.php:549
+msgid "Your mail sender:"
+msgstr ""
+
+#: ../liqpay.php:551
+msgid ""
+"Your mail will be sent with the letter which your customers  that paid for "
+"your services"
+msgstr ""
+
+#: ../liqpay.php:555
+msgid "Commission:"
+msgstr ""
+
+#: ../liqpay.php:557
+msgid ""
+"Enter only numbers without any signs, the commission charged to the customer"
+msgstr ""
+
+#: ../liqpay.php:561
+msgid "Commission's field name:"
+msgstr ""
+
+#: ../liqpay.php:563
+msgid "The name of the commission of the field on the Checkout page"
+msgstr ""
+
+#: ../liqpay.php:567
+msgid "Commission on checkout / in Liqpay page:"
+msgstr ""
+
+#: ../liqpay.php:578
+msgid ""
+"Choose where to apply the Commission: Yes - at Checkout page; No - on the "
+"side of Liqpay"
+msgstr ""
+
+#: ../liqpay.php:582
+msgid "Commission Type:"
+msgstr ""
+
+#: ../liqpay.php:587
+msgid "Percent"
+msgstr ""
+
+#: ../liqpay.php:590
+msgid "Fixed"
+msgstr ""
+
+#: ../liqpay.php:593
+msgid "Type of commission or a percentage or fixed amount"
+msgstr ""
+
+#: ../liqpay.php:600
+msgid "Language"
+msgstr ""
+
+#: ../liqpay.php:612
+msgid "Select interface language."
+msgstr ""
+
+#: ../liqpay.php:614
+msgid "Link to the page:"
+msgstr ""
+
+#: ../liqpay.php:616
+msgid ""
+"Link to the page on which the user will be taken after the payment (up to "
+"510 characters)."
+msgstr ""
+
+#: ../liqpay.php:620
+msgid "Shelf life:"
+msgstr ""
+
+#: ../liqpay.php:622
+msgid "Shelf life of links in minutes."
+msgstr ""
+
+#: ../liqpay.php:629
+msgid ""
+"Activate test mode (In test mode, the transfer takes place, but the money "
+"will not be charged) is only used to verify the operation be sure to "
+"disconnect AFTER THE TEST."
+msgstr ""
+
+#: ../liqpay.php:633
+msgid "Save"
+msgstr ""
+
+#: ../oplata.php:94
+msgid "Cansel the payment and empty the card"
+msgstr ""
+
+#: ../woocommerce.php:37
+msgid "Enable/Disable"
+msgstr ""
+
+#: ../woocommerce.php:39
+msgid "Enable Liqpay Payment Module."
+msgstr ""
+
+#: ../woocommerce.php:42
+msgid "Title:"
+msgstr ""
+
+#: ../woocommerce.php:44
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: ../woocommerce.php:45
+msgid "Liqpay"
+msgstr ""
+
+#: ../woocommerce.php:47
+msgid "Description:"
+msgstr ""
+
+#: ../woocommerce.php:49
+msgid "This controls the description which the user sees during checkout."
+msgstr ""
+
+#: ../woocommerce.php:50
+msgid ""
+"Pay securely by Credit or Debit card or internet banking through Liqpay "
+"Secure Servers."
+msgstr ""
+
+#: ../woocommerce.php:55
+msgid "Liqpay Payment Gateway"
+msgstr ""
+
+#: ../woocommerce.php:56
+msgid "Liqpay is most popular payment gateway for online shopping in Ukraine"
+msgstr ""
+
+#: ../woocommerce.php:74
+msgid ""
+"Thank you for your order, please click the button below to pay with Liqpay."
+msgstr ""
+
+#: ../woocommerce.php:123
+msgid "Pay via Liqpay"
+msgstr ""
+
+#: ../woocommerce.php:123
+msgid "Cancel order &amp; restore cart"
+msgstr ""
+
+#: ../woocommerce.php:128
+msgid ""
+"Thank you for your order. We are now redirecting you to Payment Gateway to "
+"make payment."
+msgstr ""
