@@ -286,18 +286,18 @@ h6,
   content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
   padding-left: 10px;
 }
-.projects-section ul.vc_grid-filter {
+.section-projects ul.vc_tta-tabs-list {
   border-bottom: 1px solid #d8d8d8;
   padding-bottom: 40px !important;
   margin-bottom: 60px !important;
 }
-.projects-section .vc_grid-filter li.vc_grid-filter-item{
+.section-projects .vc_tta-tabs-list li.vc_tta-tab{
   padding: 0;
   margin: 0;
   position: relative;
   line-height: 1.2em;
 }
-.projects-section .vc_grid-filter li.vc_grid-filter-item span{
+.section-projects .vc_tta-tabs-list li.vc_tta-tab span{
   padding: 0 100px 40px 0 !important;
   border: unset !important;
   background: transparent !important;
@@ -305,11 +305,11 @@ h6,
   font-family: "Raleway-Bold";
   font-size: 16px;
 }
-.projects-section .vc_grid-filter li.vc_grid-filter-item.vc_active span{
+.section-projects .vc_tta-tabs-list li.vc_tta-tab.vc_active span{
   color: #e78b48 !important;
   opacity: 1;
 }
-.projects-section .vc_grid-filter li.vc_grid-filter-item.vc_active::after{
+.section-projects .vc_tta-tabs-list li.vc_tta-tab.vc_active::after{
   content: "";
   position: absolute;
   width: calc(100% - 100px);
