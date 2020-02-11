@@ -258,10 +258,11 @@ h6,
 }
 .custom-container .content_column .wpb_text_column{
   background: #fff;
-  padding: 28px 30px;
+  padding: 23px 30px;
 }
 .custom-container .content_column h5{
   font-family: "Proxima-Nova-Bold";
+  font-size: 31px;
 }
 .custom-container .content_column  .column_text{
   line-height: normal;
@@ -285,6 +286,9 @@ h6,
 .custom-container .content_column.help_column p::after {
   content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
   padding-left: 10px;
+}
+.section-projects{
+  padding-top: 65px;
 }
 .section-projects ul.vc_tta-tabs-list {
   border-bottom: 1px solid #d8d8d8;
@@ -339,6 +343,10 @@ h6,
   background-color: #e78b48;
   left: 0;
   top: 62px
+}
+.projects_section3 {
+  padding-top: 40px;
+  padding-bottom: 43px;
 }
 /*********************** Single project page ***************************/
 .proj-milestone-desc-block{
