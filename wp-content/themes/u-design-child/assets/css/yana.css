@@ -288,8 +288,14 @@ h6,
 }
 .section-projects ul.vc_tta-tabs-list {
   border-bottom: 1px solid #d8d8d8;
-  padding-bottom: 40px !important;
-  margin-bottom: 60px !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 45px !important;
+}
+.section-projects .vc_tta-tab>a,
+.section-projects .vc_tta-tab.vc_active>a,
+.section-projects .vc_tta-tab>a:hover{
+  border-color: transparent;
+  background-color: unset;
 }
 .section-projects .vc_tta-tabs-list li.vc_tta-tab{
   padding: 0;
