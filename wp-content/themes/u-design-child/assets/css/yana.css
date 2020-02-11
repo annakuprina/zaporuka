@@ -247,6 +247,9 @@ h6,
   margin-right:auto!important;
   margin: 0 auto;
 }
+.custom-container .header_align{
+  align-items: center!important;
+}
 .custom-container .left_margin_column{
   margin-left: 48px;
 }
