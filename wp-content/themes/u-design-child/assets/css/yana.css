@@ -561,3 +561,21 @@ h6,
 .privacy-help-section{
   padding-bottom: 45px;
 }
+
+/*************************** Directions Page ****************************/
+.directions_srction1_right_block_wrapper{
+  background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
+}
+.directions_srction1_right_block{
+  padding: 30px 100px 60px;
+  color: #ffff;
+}
+.directions_srction1_text_block{
+
+}
+.directions_srction1_button button{
+  border-color: transparent;
+  background-color: unset;
+  background-image: none;
+  color: #ffff;
+}
