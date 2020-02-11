@@ -1440,11 +1440,14 @@ color: #e78b48 !important;
 .woocommerce.single-product .woocommerce-images span.jssora02r{
 	background: transparent;
 }
-.woocommerce.single-product .woocommerce-images span.jssora02l::afrer{
-    content: url(/wp-content/themes/u-design-child/img/arrow-right-product-gallery.png);
+.woocommerce.single-product .woocommerce-images span.jssora02l{
+    background: url(/wp-content/themes/u-design-child/img/arrow-right-product-gallery.png);
+	background-repeat: no-repeat;
 }
-.woocommerce.single-product .woocommerce-images span.jssora02r::afrer{
-    content: url(/wp-content/themes/u-design-child/img/arrow-left-product-gallery.png);	
+.woocommerce.single-product .woocommerce-images span.jssora02r{
+    background: url(/wp-content/themes/u-design-child/img/arrow-left-product-gallery.png);	
+    background-repeat: no-repeat;
+    opacity: 0.2;
 }
 .woocommerce.single-product .woocommerce-images .jssort03{margin-top: 20px;}
 .woocommerce.single-product .woocommerce-images div [u="prototype"] .c{
