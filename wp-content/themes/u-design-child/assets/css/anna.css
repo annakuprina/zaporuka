@@ -1437,14 +1437,21 @@ color: #e78b48 !important;
 	background: unset;
 }
 .woocommerce.single-product .woocommerce-images span.jssora02l,
-.woocommerce.single-product .woocommerce-images span.jssora02r{
+.woocommerce.single-product .woocommerce-images span.jssora02r,
+.woocommerce.single-product .woocommerce-images span.jssora02ldn,
+.woocommerce.single-product .woocommerce-images span.jssora02rdn{
 	background: transparent;
+    width: 22px!important;
+    height: 16px!important;
+    top:35%!important;
 }
-.woocommerce.single-product .woocommerce-images span.jssora02l{
+.woocommerce.single-product .woocommerce-images span.jssora02r,
+.woocommerce.single-product .woocommerce-images span.jssora02rdn{
     background: url(/wp-content/themes/u-design-child/img/arrow-right-product-gallery.png);
 	background-repeat: no-repeat;
 }
-.woocommerce.single-product .woocommerce-images span.jssora02r{
+.woocommerce.single-product .woocommerce-images span.jssora02l,
+.woocommerce.single-product .woocommerce-images span.jssora02ldn{
     background: url(/wp-content/themes/u-design-child/img/arrow-left-product-gallery.png);	
     background-repeat: no-repeat;
     opacity: 0.2;
