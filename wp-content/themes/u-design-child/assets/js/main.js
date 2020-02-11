@@ -133,9 +133,4 @@ jQuery(document).ready(function($) {
     //adaptiveHeight: true
   });
 
-
-  // refresh sliders after click on tab
-  $('.one-tab-link').click(function(){
-      $(".slick-media-slider").slick('refresh');
-  });
 });
