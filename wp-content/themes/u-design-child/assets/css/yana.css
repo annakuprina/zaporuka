@@ -255,11 +255,11 @@ h6,
   opacity: 0.3;
   font-weight: 700;
 }
-.custom-container.help_column .wpb_text_column{
+.custom-container .content_column.help_column .wpb_text_column{
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
   padding: 53px;
 }
-.custom-container.help_column .content_column p{
+.custom-container .content_column.help_column p{
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
