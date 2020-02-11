@@ -47,8 +47,8 @@ if ( $product->is_in_stock() ) : ?>
 		<div class="submit-share-wrapper">
 
 			<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-			
-			<a href="https://www.facebook.com/sharer.php?<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" class="share">
+
+			<a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'> 
 				<span class="one-project-share">
 						<?php
 							if(ICL_LANGUAGE_CODE=='uk'){
