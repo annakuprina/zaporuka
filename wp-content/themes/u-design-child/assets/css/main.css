@@ -2193,6 +2193,30 @@ footer .footer-mob a.designer-link {
   position: relative;
 }
 
+.sliders-tabs-wrapper {
+  display: flex;
+  font-family: "Raleway-Bold";
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 56px;
+  padding-bottom: 32px;
+}
+
+.sliders-tabs-wrapper .one-tab-link {
+  color: #333;
+  padding: 8px 0;
+  cursor: pointer;
+  opacity: 0.3;
+  font-weight: 700;
+}
+
+.sliders-tabs-wrapper .one-tab-link:nth-child(1) {
+  margin-right: 101px;
+}
+
+.sliders-tabs-wrapper .one-tab-link:nth-child(2) {
+  margin-right: 101px;
+}
+
 .tab-active:after {
   content: "";
   height: 2px;

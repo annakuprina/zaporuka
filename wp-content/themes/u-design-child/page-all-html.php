@@ -1118,13 +1118,13 @@ get_header();
 
 
 <div class="sliders-tabs-wrapper">
-    <div class="proj-timeline-one-step one-tab-link tab-active" data-id="1">
+    <div class="one-tab-link tab-active" data-id="1">
 		Фотографiї
     </div>
-    <div class="proj-timeline-one-step one-tab-link" data-id="2">
+    <div class="one-tab-link" data-id="2">
 		Вiдео
     </div>
-    <div class="proj-timeline-one-step one-tab-link" data-id="3">
+    <div class="one-tab-link" data-id="3">
 		Супутнi документи
     </div>
 </div>
