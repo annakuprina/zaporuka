@@ -1338,7 +1338,7 @@ color: #e78b48 !important;
 .woocommerce.single-product div.product div.images{
     margin-bottom: 0;
 } 
-.woocommerce.single-product .woocommerce-tabs.wc-tabs-wrapper{
+.woocommerce.single-product .woocommerce-tabs.wc-tabs-wrapper .woocommerce-Tabs-panel{
 	margin-top: 120px;
 }
 .woocommerce.single-product div.product p.price{
@@ -1445,17 +1445,40 @@ color: #e78b48 !important;
     height: 16px!important;
     top:35%!important;
 }
-.woocommerce.single-product .woocommerce-images span.jssora02r,
-.woocommerce.single-product .woocommerce-images span.jssora02rdn{
-    background: url(/wp-content/themes/u-design-child/img/arrow-right-product-gallery.png);
-	background-repeat: no-repeat;
+.woocommerce.single-product .woocommerce-images span.jssora02r{
+	right: 30px!important;
+    background: url(/wp-content/themes/u-design-child/img/arrow-left-product-gallery.png);
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
-.woocommerce.single-product .woocommerce-images span.jssora02l,
-.woocommerce.single-product .woocommerce-images span.jssora02ldn{
+.woocommerce.single-product .woocommerce-images span.jssora02r:hover,
+.woocommerce.single-product .woocommerce-images span.jssora02rdn{
+	background: url(/wp-content/themes/u-design-child/img/arrow-right-product-gallery.png);
+	opacity: 1;
+}
+.woocommerce.single-product .woocommerce-images span.jssora02l{
+	left: 30px!important;
     background: url(/wp-content/themes/u-design-child/img/arrow-left-product-gallery.png);	
     background-repeat: no-repeat;
     opacity: 0.2;
 }
+.woocommerce.single-product .woocommerce-images span.jssora02l:hover,
+.woocommerce.single-product .woocommerce-images span.jssora02ldn{
+	background: url(/wp-content/themes/u-design-child/img/arrow-right-product-gallery.png);
+	opacity: 1;
+	background-repeat: no-repeat;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
 .woocommerce.single-product .woocommerce-images .jssort03{margin-top: 20px;}
 .woocommerce.single-product .woocommerce-images div [u="prototype"] .c{
 	cursor: pointer;
