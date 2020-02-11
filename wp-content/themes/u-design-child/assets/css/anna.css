@@ -1488,10 +1488,10 @@ color: #e78b48 !important;
 }
 .woocommerce.single-product .woocommerce-images .jssort03{margin-top: 20px;}
 .woocommerce.single-product .woocommerce-images .jssort03>div{
-	background-color: transparent;
+	background-color: transparent!important;
 }
 .woocommerce.single-product .woocommerce-images .jssort03 div [u="slides"]{
-	left: 0;
+	left: 0!important;
 }
 .woocommerce.single-product .woocommerce-images div [u="prototype"] .c{
 	cursor: pointer;
