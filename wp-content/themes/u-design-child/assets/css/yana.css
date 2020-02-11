@@ -304,7 +304,7 @@ h6,
   line-height: 1.2em;
 }
 .section-projects .vc_tta-tab>a{
-  padding-left: 0;
+  padding-left: 0!important;
 }
 .section-projects .vc_tta-tabs-list li.vc_tta-tab span{
   padding: 0 100px 40px 0 !important;
@@ -330,6 +330,15 @@ h6,
 .section-projects .vc_tta-tabs-list li.vc_tta-tab:hover span{
   color: #e78b48 !important;
   opacity: 1;
+}
+.section-projects .vc_tta-tabs-list li.vc_tta-tab:hover::after{
+  content: "";
+  position: absolute;
+  width: calc(100% - 120px);
+  height: 2px;
+  background-color: #e78b48;
+  left: 0;
+  top: 62px
 }
 /*********************** Single project page ***************************/
 .proj-milestone-desc-block{
