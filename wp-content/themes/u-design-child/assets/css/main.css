@@ -1985,7 +1985,8 @@ footer .footer-mob a.designer-link {
   .home-first-post-image .vc_custom_1580744275019 {
     position: absolute;
     top: 236px;
-    left: calc((100% - 290px)/2);
+    left: calc((100% - 400px)/2);
+
   }
 
   .home-first-post-image .vc_custom_1580744267781 {
@@ -1999,6 +2000,18 @@ footer .footer-mob a.designer-link {
 
   .home-first-post-image .vc_gitem-row-position-middle {
     position: static;
+  }
+
+  .home-first-post-form-help .help_form_wrapper {
+    min-width: 400px;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-first-post-image .vc_custom_1580744275019 {
+    left: calc((100% - 290px)/2);
+
   }
 
   .home-first-post-form-help .help_form_wrapper {
