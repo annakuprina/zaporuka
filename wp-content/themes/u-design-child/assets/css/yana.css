@@ -294,14 +294,17 @@ h6,
 .section-projects .vc_tta-tab>a,
 .section-projects .vc_tta-tab.vc_active>a,
 .section-projects .vc_tta-tab>a:hover{
-  border-color: transparent;
-  background-color: unset;
+  border-color: transparent!important;
+  background-color: unset!important;
 }
 .section-projects .vc_tta-tabs-list li.vc_tta-tab{
   padding: 0;
   margin: 0;
   position: relative;
   line-height: 1.2em;
+}
+.section-projects .vc_tta-tab>a{
+  padding-left: 0;
 }
 .section-projects .vc_tta-tabs-list li.vc_tta-tab span{
   padding: 0 100px 40px 0 !important;
@@ -318,11 +321,15 @@ h6,
 .section-projects .vc_tta-tabs-list li.vc_tta-tab.vc_active::after{
   content: "";
   position: absolute;
-  width: calc(100% - 100px);
+  width: calc(100% - 120px);
   height: 2px;
   background-color: #e78b48;
   left: 0;
   top: 62px;
+}
+.section-projects .vc_tta-tabs-list li.vc_tta-tab:hover span{
+  color: #e78b48 !important;
+  opacity: 1;
 }
 /*********************** Single project page ***************************/
 .proj-milestone-desc-block{
