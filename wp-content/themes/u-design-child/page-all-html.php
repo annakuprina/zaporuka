@@ -1114,31 +1114,23 @@ get_header();
 			</div>
 		</div><!--end documents-slider-->         
   </div>
-
-
-
-
-
 </div>
 
 
-<div class="proj-timeline-steps">
-    <!-- ONE STEP -->
-    <div class="proj-timeline-one-step in-progress" data-id="1">
-			one
-    </div><!-- end proj-timeline-one-step -->
-                <!-- ONE STEP -->
-    <div class="proj-timeline-one-step " data-id="2">
-		two
-    </div><!-- end proj-timeline-one-step -->
-                <!-- ONE STEP -->
-    <div class="proj-timeline-one-step " data-id="3">
-		tree
-    </div><!-- end proj-timeline-one-step -->
+<div class="sliders-tabs-wrapper">
+    <div class="proj-timeline-one-step one-tab-link tab-active" data-id="1">
+		Фотографiї
+    </div>
+    <div class="proj-timeline-one-step one-tab-link" data-id="2">
+		Вiдео
+    </div>
+    <div class="proj-timeline-one-step one-tab-link" data-id="3">
+		Супутнi документи
+    </div>
 </div>
 
 <div class="proj-milestone-desc-block">
-    <div class="proj-milestone-desc-text tabs_content active" data-id="1">
+    <div class="tabs_content active" data-id="1">
     	<!-- PHOTO SLIDER -->
 		<div class="photo-slider slick-media-slider" >
 			<div class="photo-slide">
@@ -1156,7 +1148,7 @@ get_header();
 		</div><!--end photo-slider-->
 
     </div>
-    <div class="proj-milestone-desc-text tabs_content" data-id="2">
+    <div class="tabs_content" data-id="2">
     	<!-- VIDEO SLIDER -->
 		<div class="video-slider slick-media-slider">
 			<div>
@@ -1211,7 +1203,7 @@ get_header();
 			</div>
 		</div><!--end video-slider--> 
     </div>
-    <div class="proj-milestone-desc-text tabs_content" data-id="3">
+    <div class="tabs_content" data-id="3">
     	<!-- DOCUMENTS SLIDER -->
 		<div class="documents-slider slick-media-slider">
 			<div class="documents-slide">
