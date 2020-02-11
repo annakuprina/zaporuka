@@ -148,7 +148,6 @@ h6,
   line-height: 38px;
   padding: 0;
   background: none;
-  /*font-family: "Raleway-Bold";*/
 }
 
 .contact_social_icon a:hover {
@@ -232,7 +231,23 @@ h6,
   }
 }
 /*********************** Projects Page *********************************/
-
+.custom-container{
+  max-width: 1140px;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  margin: 0 auto;
+}
+.custom-container .content_column{
+  padding: 0px 14px;
+}
+.custom-container .content_column .wpb_text_column{
+  background: #fff;
+  padding: 22px 41px;
+}
+.custom-container .content_column p{
+  opacity: 0.3;
+  font-weight: 700;
+}
 .projects-section ul.vc_grid-filter {
   border-bottom: 1px solid #d8d8d8;
   padding-bottom: 40px !important;
