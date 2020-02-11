@@ -573,9 +573,14 @@ h6,
 .directions_srction1_text_block{
 
 }
-.directions_srction1_button button{
-  border-color: transparent;
-  background-color: unset;
-  background-image: none;
-  color: #ffff;
+.directions_srction1_button button {
+  border-color: transparent!important;
+  background-color: unset!important;
+  background-image: none!important;
+  color: #ffff!important;
+  padding-left: 0!important;
+}
+.directions_srction1_button button::after {
+  content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
+  padding-left: 10px;
 }
