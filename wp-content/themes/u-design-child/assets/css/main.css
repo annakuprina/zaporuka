@@ -2090,86 +2090,6 @@ footer .footer-mob a.designer-link {
   }
 }
 
-#tabs .media-sliders-tabs a {
-  padding: 8px 0;
-}
-
-#tabs .ui-state-active, 
-#tabs .ui-widget-content 
-#tabs .ui-state-active, 
-#tabs .ui-widget-header .ui-state-active {
-  background: transparent;
-  border: none;
-}
-
-#tabs .ui-widget-header {
-  background: transparent;
-}
-
-#tabs {
-  background: transparent;
-  border: none;
-  margin-bottom: 50px;
-  margin-top: 80px;
-}
-
-#tabs ul {
-  border: none;
-}
-
-#tabs .ui-state-default, #tabs .ui-widget-content .ui-state-default, #tabs .ui-widget-header .ui-state-default {
-  border: none;
-  background: transparent;
-}
-
-#tabs a,
-#tabs a:link,
-#tabs a:visited {
-  color: #333;
-}
-
-#tabs .media-sliders-tabs {
-  margin-bottom: 50px;
-  font-family: "Raleway-Bold";
-  border-bottom: 1px solid #d8d8d8;
-  margin-bottom: 56px;
-  padding-bottom: 32px
-}
-
-#tabs .ui-tabs-panel {
-  padding: 0;
-}
-
-#tabs .media-sliders-tabs li:nth-child(1) {
-  margin-right: 101px;
-}
-
-#tabs .media-sliders-tabs li:nth-child(1) a {
-  padding-left: 0;
-}
-
-
-#tabs .media-sliders-tabs li:nth-child(2) {
-  margin-right: 101px;
-}
-
-#tabs .media-sliders-tabs li:nth-child(3) a {
-  padding-right: 0;
-}
-
-
-#tabs .slick-dots {
-  bottom: -100px;
-}
-
-#tabs .ui-tabs-active a {
-  color: #e78b48;
-  opacity: 1;
-  position: relative;
-}
-
-
-
 .video-slider .play-video-icon {
   content:"";
   position: absolute;
@@ -2184,7 +2104,7 @@ footer .footer-mob a.designer-link {
 
 .video-slider-text {
   font-family: "Raleway-Semibold";
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
   padding-top: 21px;
 }
@@ -2198,7 +2118,7 @@ footer .footer-mob a.designer-link {
   font-family: "Raleway-Bold";
   border-bottom: 1px solid #d8d8d8;
   margin-bottom: 56px;
-  padding-bottom: 32px;
+  padding-bottom: 28px;
 }
 
 .sliders-tabs-wrapper .one-tab-link {
@@ -2223,6 +2143,35 @@ footer .footer-mob a.designer-link {
   background: #e78b48;
   position: absolute;
   width: 100%;
-  bottom: -33px;
+  bottom: -29px;
   left: 0;
+}
+
+
+.sliders-tabs-wrapper .slick-dots {
+  bottom: -75px;
+}
+
+@media screen and (max-width: 1024px) {
+  .video-slider-text {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .sliders-tabs-wrapper {
+    padding-bottom: 8px;
+  }
+
+  .sliders-tabs-wrapper .tab-active:after {
+    bottom: -9px;
+  }
+
+  .sliders-tabs-wrapper {
+    margin-bottom: 45px;
+  }
+
+  .sliders-tabs-wrapper .slick-dots {
+    position: absolute;
+    bottom: -54px;
+  }
 }

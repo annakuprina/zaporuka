@@ -1016,211 +1016,112 @@ get_header();
 <!----------------------------------
 	PHOTO, VIDEO, DOCUMENTS SLIDERS 
 ----------------------------------->
+<div class="sliders-tabs">
+	<div class="sliders-tabs-wrapper">
+		<div class="one-tab-link tab-active" data-id="1">
+			Фотографiї
+		</div>
+		<div class="one-tab-link" data-id="2">
+			Вiдео
+		</div>
+		<div class="one-tab-link" data-id="3">
+			Супутнi документи
+		</div>
+	</div>
 
+	<div class="proj-milestone-desc-block">
+		<div class="tabs_content active" data-id="1">
+			<!-- PHOTO SLIDER -->
+			<div class="photo-slider slick-media-slider" >
+				<div class="photo-slide">
+					<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
+				</div>
+				<div class="photo-slide">
+					<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
+				</div>
+				<div class="photo-slide">
+					<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
+				</div>
+				<div class="photo-slide">
+					<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
+				</div>
+			</div><!--end photo-slider-->
 
+		</div>
+		<div class="tabs_content" data-id="2">
+			<!-- VIDEO SLIDER -->
+			<div class="video-slider slick-media-slider">
+				<div>
+					<a
+						href="https://www.youtube.com/embed/gPuI_pbCYOI"
+						target="_blank"
+						class="thumbnail">
+						<p class="video-slider-img-wrapper">
+							<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
+							<span class="play-video-icon"></span>
+						</p>
+					</a>
+					<p class="video-slider-text">Переможець конкурсу «Благодійник року» у номінації «Благодійна організація»</p>
+				</div>
 
+				<div>
+					<a
+						href="https://www.youtube.com/embed/gPuI_pbCYOI"
+						target="_blank"
+						class="thumbnail">
+						<p class="video-slider-img-wrapper">
+							<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
+							<span class="play-video-icon"></span>
+						</p>
+					</a>
+					<p class="video-slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, et.</p>
+				</div>
 
+				<div>
+					<a href="https://www.youtube.com/embed/gPuI_pbCYOI"
+						target="_blank"
+						class="thumbnail">
+						<p class="video-slider-img-wrapper">
+							<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
+							<span class="play-video-icon"></span>
+						</p>
+					</a>
+					<p class="video-slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, et.</p>
+				</div>
 
-<div id="tabs">
-
-  <ul class="media-sliders-tabs">
-    <li ><a class="media-slider-one-tab" href="#tabs-1" onclick="return false;">Фотографiї</a></li>
-    <li ><a class="media-slider-one-tab" href="#tabs-2" onclick="return false;">Вiдео</a></li>
-    <li ><a class="media-slider-one-tab" href="#tabs-3" onclick="return false;">Супутнi документи</a></li>                
-  </ul>
-  <div class="tabb" id="tabs-1">
-		<div class="photo-slider slick-media-slider" >
-			<div class="photo-slide">
-				<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
-			</div>
-			<div class="photo-slide">
-				<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
-			</div>
-			<div class="photo-slide">
-				<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
-			</div>
-			<div class="photo-slide">
-				<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
-			</div>
-		</div><!--end photo-slider-->          
-  </div>
-  <div class="tabb"  id="tabs-2">
-		<div class="video-slider slick-media-slider">
-			<div>
-				<a
-					href="https://www.youtube.com/embed/gPuI_pbCYOI"
-					target="_blank"
-					class="thumbnail">
-					<p class="video-slider-img-wrapper">
-						<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
-						<span class="play-video-icon"></span>
-					</p>
-				</a>
-				<p class="video-slider-text">Переможець конкурсу «Благодійник року» у номінації «Благодійна організація»</p>
-			</div>
-
-			<div>
-				<a
-					href="https://www.youtube.com/embed/gPuI_pbCYOI"
-					target="_blank"
-					class="thumbnail">
-					<p class="video-slider-img-wrapper">
-						<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
-						<span class="play-video-icon"></span>
-					</p>
-				</a>
-				<p class="video-slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, et.</p>
-			</div>
-
-			<div>
-				<a href="https://www.youtube.com/embed/gPuI_pbCYOI"
-					target="_blank"
-					class="thumbnail">
-					<p class="video-slider-img-wrapper">
-						<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
-						<span class="play-video-icon"></span>
-					</p>
-				</a>
-				<p class="video-slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, et.</p>
-			</div>
-
-			<div>
-				<a
-					href="https://www.youtube.com/embed/gPuI_pbCYOI"
-					target="_blank"
-					class="thumbnail">
-					<p class="video-slider-img-wrapper">
-						<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
-						<span class="play-video-icon"></span>
-					</p>
-				</a>
-				<p class="video-slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, et.</p>
-			</div>
-		</div><!--end video-slider-->         
-  </div>
-  <div class="tabb"  id="tabs-3">
-		<div class="documents-slider slick-media-slider">
-			<div class="documents-slide">
-				<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka1.jpg">
-			</div>
-			<div class="documents-slide">
-				<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka2.jpg">
-			</div>
-			<div class="documents-slide">
-				<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka1.jpg">
-			</div>
-			<div class="documents-slide">
-				<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka2.jpg">
-			</div>
-		</div><!--end documents-slider-->         
-  </div>
-</div>
-
-
-<div class="sliders-tabs-wrapper">
-    <div class="one-tab-link tab-active" data-id="1">
-		Фотографiї
-    </div>
-    <div class="one-tab-link" data-id="2">
-		Вiдео
-    </div>
-    <div class="one-tab-link" data-id="3">
-		Супутнi документи
-    </div>
-</div>
-
-<div class="proj-milestone-desc-block">
-    <div class="tabs_content active" data-id="1">
-    	<!-- PHOTO SLIDER -->
-		<div class="photo-slider slick-media-slider" >
-			<div class="photo-slide">
-				<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
-			</div>
-			<div class="photo-slide">
-				<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
-			</div>
-			<div class="photo-slide">
-				<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
-			</div>
-			<div class="photo-slide">
-				<img src="/wp-content/themes/u-design-child/img/tulen.jpg">
-			</div>
-		</div><!--end photo-slider-->
-
-    </div>
-    <div class="tabs_content" data-id="2">
-    	<!-- VIDEO SLIDER -->
-		<div class="video-slider slick-media-slider">
-			<div>
-				<a
-					href="https://www.youtube.com/embed/gPuI_pbCYOI"
-					target="_blank"
-					class="thumbnail">
-					<p class="video-slider-img-wrapper">
-						<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
-						<span class="play-video-icon"></span>
-					</p>
-				</a>
-				<p class="video-slider-text">Переможець конкурсу «Благодійник року» у номінації «Благодійна організація»</p>
-			</div>
-
-			<div>
-				<a
-					href="https://www.youtube.com/embed/gPuI_pbCYOI"
-					target="_blank"
-					class="thumbnail">
-					<p class="video-slider-img-wrapper">
-						<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
-						<span class="play-video-icon"></span>
-					</p>
-				</a>
-				<p class="video-slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, et.</p>
-			</div>
-
-			<div>
-				<a href="https://www.youtube.com/embed/gPuI_pbCYOI"
-					target="_blank"
-					class="thumbnail">
-					<p class="video-slider-img-wrapper">
-						<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
-						<span class="play-video-icon"></span>
-					</p>
-				</a>
-				<p class="video-slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, et.</p>
-			</div>
-
-			<div>
-				<a
-					href="https://www.youtube.com/embed/gPuI_pbCYOI"
-					target="_blank"
-					class="thumbnail">
-					<p class="video-slider-img-wrapper">
-						<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
-						<span class="play-video-icon"></span>
-					</p>
-				</a>
-				<p class="video-slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, et.</p>
-			</div>
-		</div><!--end video-slider--> 
-    </div>
-    <div class="tabs_content" data-id="3">
-    	<!-- DOCUMENTS SLIDER -->
-		<div class="documents-slider slick-media-slider">
-			<div class="documents-slide">
-				<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka1.jpg">
-			</div>
-			<div class="documents-slide">
-				<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka2.jpg">
-			</div>
-			<div class="documents-slide">
-				<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka1.jpg">
-			</div>
-			<div class="documents-slide">
-				<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka2.jpg">
-			</div>
-		</div><!--end documents-slider--> 
-    </div>
-</div>
+				<div>
+					<a
+						href="https://www.youtube.com/embed/gPuI_pbCYOI"
+						target="_blank"
+						class="thumbnail">
+						<p class="video-slider-img-wrapper">
+							<img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg">
+							<span class="play-video-icon"></span>
+						</p>
+					</a>
+					<p class="video-slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, et.</p>
+				</div>
+			</div><!--end video-slider--> 
+		</div>
+		<div class="tabs_content" data-id="3">
+			<!-- DOCUMENTS SLIDER -->
+			<div class="documents-slider slick-media-slider">
+				<div class="documents-slide">
+					<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka1.jpg">
+				</div>
+				<div class="documents-slide">
+					<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka2.jpg">
+				</div>
+				<div class="documents-slide">
+					<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka1.jpg">
+				</div>
+				<div class="documents-slide">
+					<img src="<?php echo get_stylesheet_directory_uri()?>/img/zaporuka2.jpg">
+				</div>
+			</div><!--end documents-slider--> 
+		</div>
+	</div>
+</div><!-- end sliders-tabs -->
 
 
 <?php
