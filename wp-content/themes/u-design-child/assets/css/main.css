@@ -1968,9 +1968,14 @@ footer .footer-mob a.designer-link {
     height: 1000px;
   }
 
+  .vc_gitem-animated-block .vc_gitem-zone-img {
+    display: none;
+  }
+
   .home-first-post-image .vc_gitem-row-position-middle {
     display: flex;
     flex-direction: column;
+    margin-top: 200px;
   }
   
   #home-page-content .home-first-post-image {
@@ -1980,6 +1985,11 @@ footer .footer-mob a.designer-link {
   .home-first-post-image .vc_custom_1580744275019 {
     position: absolute;
     top: 236px;
+    left: calc((100% - 290px)/2);
+  }
+
+  .home-first-post-image .vc_custom_1580744267781 {
+    padding-right: 0 !important;
   }
 
   .home-first-post-image {
@@ -1989,6 +1999,11 @@ footer .footer-mob a.designer-link {
 
   .home-first-post-image .vc_gitem-row-position-middle {
     position: static;
+  }
+
+  .home-first-post-form-help .help_form_wrapper {
+    min-width: 290px;
+    max-width: 290px;
   }
 }
 
