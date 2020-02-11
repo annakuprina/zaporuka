@@ -28,26 +28,6 @@ if ( ! $short_description ) {
 }
 
 ?>
-<div class="fake-count">
-	<div class="quantity-text">
-		<?
-		if(ICL_LANGUAGE_CODE=='uk'){
-	        echo 'Кiлькiсть';
-	    }
-	    elseif(ICL_LANGUAGE_CODE=='ru'){
-	        echo 'Kоличество';
-	    }
-	    elseif(ICL_LANGUAGE_CODE=='en'){
-	        echo  'Quantity';
-	    }
-		?>
-	</div>
-	<div class="quantity quantity-numers">
-		<div class="quantity-nav"><div class="quantity-button quantity-up">+</div></div>
-		<input type="number" readonly="readonly"  class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" size="4" inputmode="numeric">
-		<div class="quantity-nav"><div class="quantity-button quantity-down">-</div></div>
-	</div>
-</div>
 <div class="woocommerce-product-details__short-description">
 	<?php echo $short_description; // WPCS: XSS ok. ?>
 </div>
