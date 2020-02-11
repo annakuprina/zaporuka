@@ -1254,6 +1254,16 @@ color: #e78b48 !important;
   margin-bottom: 60px;
   display: none;
 }
+.woocommerce.single-product div.product form.cart .button{
+	background-color: transparent;
+    color: #e78b48;
+  	font-family: "Raleway-Bold";
+    font-size: 14px;
+}
+.woocommerce.single-product div.product form.cart .button::after {
+    content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+    padding-left: 10px;
+}
 .woocommerce-hidden-price-filter.show-me{
   display: block;
 }
