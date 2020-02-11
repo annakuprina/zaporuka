@@ -1254,16 +1254,6 @@ color: #e78b48 !important;
   margin-bottom: 60px;
   display: none;
 }
-.woocommerce.single-product div.product form.cart .button{
-	background-color: transparent;
-    color: #e78b48;
-  	font-family: "Raleway-Bold";
-    font-size: 14px;
-}
-.woocommerce.single-product div.product form.cart .button::after {
-    content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
-    padding-left: 10px;
-}
 .woocommerce-hidden-price-filter.show-me{
   display: block;
 }
@@ -1331,6 +1321,7 @@ color: #e78b48 !important;
   font-size: 32px;
   line-height: 1em;
   padding-top: 30px;
+  padding-bottom: 22px;
 }
 .woocommerce.single-product .product_meta,
 .woocommerce.single-product div.product .woocommerce-tabs ul.tabs{
@@ -1344,6 +1335,54 @@ color: #e78b48 !important;
 }
 .woocommerce.single-product .left-text{
   max-width: 600px;
+}
+.woocommerce.single-product .woocommerce-product-details__short-description{
+	padding-bottom: 35px;
+    border-bottom: 1px solid #d8d8d8;
+}
+.woocommerce.single-product div.product form.cart .button{
+	background-color: transparent;
+    color: #e78b48;
+  	font-family: "Raleway-Bold";
+    font-size: 14px;
+}
+.woocommerce.single-product div.product form.cart .button::after {
+    content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+    padding-left: 10px;
+}
+.woocommerce.single-product .fake-count{
+	display: -webkit-flex;
+	display: flex;
+}
+.woocommerce.single-product .fake-count .quantity-text{
+	color: #333333;
+    font-family: "Raleway-Bold";
+    font-size: 14px;
+	margin-right: 35px;
+}
+.woocommerce.single-product .fake-count .quantity.quantity-numers{
+	
+}
+.woocommerce.single-product .fake-count .quantity.quantity-numers .quantity-nav{
+	float: unset;
+	position: relative;
+	height: unset;
+}
+.woocommerce.single-product .fake-count .quantity.quantity-numers .quantity-button.quantity-up{
+    position: relative;
+    height: 100%;
+    top: unset;
+    border-bottom: unset;	
+}
+.woocommerce.single-product .fake-count .quantity.quantity-numers .quantity-button.quantity-down{
+    position: relative;
+    bottom: unset;
+    height: 100%;	
+}
+.woocommerce.single-product .fake-count .quantity.quantity-numers .qty{
+	float: unset;
+	background: transparent;
+	user-select: none;
 }
 
 
