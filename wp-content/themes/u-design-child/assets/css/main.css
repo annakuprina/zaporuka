@@ -2168,15 +2168,7 @@ footer .footer-mob a.designer-link {
   position: relative;
 }
 
-#tabs .ui-tabs-active a:after {
-  content: "";
-  height: 2px;
-  background: #e78b48;
-  position: absolute;
-  width: 100%;
-  bottom: -33px;
-  left: 0;
-}
+
 
 .video-slider .play-video-icon {
   content:"";
@@ -2199,4 +2191,14 @@ footer .footer-mob a.designer-link {
 
 .video-slider-img-wrapper {
   position: relative;
+}
+
+.tab-active:after {
+  content: "";
+  height: 2px;
+  background: #e78b48;
+  position: absolute;
+  width: 100%;
+  bottom: -33px;
+  left: 0;
 }
