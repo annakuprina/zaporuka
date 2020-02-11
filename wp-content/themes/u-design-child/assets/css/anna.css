@@ -1149,7 +1149,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   padding-left: 10px;
 }
 .shop-custom-wrapper .woocommerce-loop-product__link,
-.woocommerce.single-product .related ul.products li.product{
+.woocommerce.single-product .related .woocommerce-loop-product__link{
   position: relative;
   display: -webkit-flex;
   display: flex;
@@ -1373,6 +1373,7 @@ color: #e78b48 !important;
 	display: flex;
 	-webkit-align-items: center;
 	align-items: center;
+	margin-bottom: 10px;
 }
 .woocommerce.single-product .fake-count .quantity-text{
 	color: #333333;
