@@ -71,49 +71,7 @@ jQuery(document).ready(function($) {
     itemSelector: ".documents-slide > img"
   });
 
-
-   // hide all sliders inside tab content wrapper but first slider
-  $(".media-slider:not(:eq(0))").css("opacity", "0");
-
-  /*CHANGE SLIDER (Photo, Video or Documents by click on appropriate on tab)*/
-  $(".media-slider-one-tab").on("click", function() {
-    var clickedTabDataId = $(this).attr("data-id"); //get data-id attribute of clicked tab
-    /*Find tab-content with same data-id attribute like clicked title*/
-    $(".media-slider").each(function() {
-
-	    var tabsContentDataId = $(this).attr("data-id");
-	    /*hide all sliders but the slider with the same data-id like clicked tab*/
-	    if (clickedTabDataId == tabsContentDataId) {
-
-		    var currentSliderHeight = jQuery(this).height();/*array with sliders should have the same height like current visible slider.*/
-		    $(".media-sliders-wrapper").height(currentSliderHeight + 50);
-	        $(".media-slider").css({"opacity": "0","z-index":"-1"});
-	        $(this).css({"opacity": "1","z-index":"3"});
-
-	    }
-    });
-
-    /*if second tab is clicked*/
-	if ( $(this).attr("data-id") == 2 ) {
-		console.log('this is 2');
-		// console.log('offset'+$(this).position().left);
-
-		$(this).position().left;
-	    var currentSliderHeight = $(".media-slider:eq(1)").height();/*count height of current visible slider.*/
-		$(".media-slider:eq(1)").css('top', - (currentSliderHeight - 35) + 'px')
-	}
-
-
-    /*if third tab is clicked*/
-	if ( $(this).attr("data-id") == 3 ) {
-		console.log('this is 3');
-	    var currentSliderHeight = $(".media-slider:eq(2)").height();/*count height of current visible slider.*/
-	    var previousSliderHeight = $(".media-slider:eq(1)").height();/*count height of previous visible slider.*/
-		$(".media-slider:eq(2)").css('top', - (currentSliderHeight + previousSliderHeight - 72) + 'px')
-	}
-  });
-
-   $('.slide').slick({
+    $('.slide').slick({
       dots: false,
       infinite: true,
       speed: 300,
@@ -122,18 +80,9 @@ jQuery(document).ready(function($) {
     });
 
 
-	$('#tabs').tabs().find( 'ul.ui-tabs-nav a' ).bind( 'click', function(e){
-        e.preventDefault();
-	});
-
-
-    $('.media-slider-one-tab').click(function(e){
+    // refresh sliders after click on tab
+    $('.one-tab-link').click(function(){
        $(".slick-media-slider").slick('refresh');
     });
-
-    $('.proj-timeline-one-step').click(function(e){
-       $(".slick-media-slider").slick('refresh');
-    });
-
 
 });
