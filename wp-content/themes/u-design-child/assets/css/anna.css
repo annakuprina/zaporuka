@@ -1501,6 +1501,29 @@ color: #e78b48 !important;
     height: 100%;
     object-fit: cover;	
 }
+.woocommerce.single-product .submit-share-wrapper{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;    
+    align-items: center;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.woocommerce.single-product .submit-share-wrapper .one-project-share{
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 5px;
+    font-family: "Raleway-Bold";
+}
+.woocommerce.single-product .submit-share-wrapper .one-project-socials .fa-facebook{
+    color: #a9a9a9;
+    position: relative;
+    left: 2px;
+    top: 1px;
+    transition: 0.4s ease;	
+}
+
 
 
 @media screen and (min-width: 720px) {
