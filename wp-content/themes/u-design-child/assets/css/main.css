@@ -1800,7 +1800,6 @@ footer .footer-mob a.designer-link {
 
 .footer-mob-politics p {
   line-height: 15px;
-  /*font-family: "Raleway-Regular";*/
   font-family: "Raleway-Light";
 }
 
@@ -1934,6 +1933,7 @@ footer .footer-mob a.designer-link {
   .home-first-post-form-help .help-form-amount-right {
     width: 100%;
   }
+
   .home-first-post-form-help
     .help-form-inner-wrapper
     .help-form-amount
@@ -2021,8 +2021,6 @@ footer .footer-mob a.designer-link {
   margin: 0 21px;
 }
 
-
-
 .video-slider .slick-list {
   margin: 0 -21px;
 }
@@ -2081,21 +2079,11 @@ footer .footer-mob a.designer-link {
 
 /*Slick lightbox*/
 .slick-lightbox {
-  background: rgba(51, 51, 51, 0.3);
-}
-
-.slick-lightbox-close {
-  position: absolute;
-  top: 15px;
-  width: 24px;
-  height: 24px;
-  font-size: 24px;
+  background: rgba(51, 51, 51, 0.3) !important;
 }
 
 .slick-lightbox-close:before {
-  width: 24px;
-  height: 24px;
-  font-size: 24px;
+  font-size: 38px;
 }
 
 @media screen and (max-width: 700px) {
@@ -2153,6 +2141,10 @@ footer .footer-mob a.designer-link {
   margin-right: 101px;
 }
 
+.sliders-tabs-wrapper .tab-active {
+  color: #e78b48;
+}
+
 .sliders-tabs-wrapper .tab-active:after {
   content: "";
   height: 2px;
@@ -2204,13 +2196,10 @@ footer .footer-mob a.designer-link {
   }
 
   .sliders-tabs-wrapper .tab-active:after {
-    bottom: 5px;
-    left: 0;
+    bottom: 20px;
+    left: -34px;
     width: 20px;
-  }
-
-  .sliders-tabs-wrapper .tab-active {
-    color: #e78b48;
+    height: 3px;
   }
 
   .sliders-tabs-wrapper .one-tab-link {
@@ -2234,7 +2223,5 @@ footer .footer-mob a.designer-link {
   .sliders-tabs-wrapper {
     margin-bottom: 15px;
   }
-
-
 }
 
