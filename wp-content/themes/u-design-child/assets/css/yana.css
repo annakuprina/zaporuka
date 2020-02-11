@@ -239,6 +239,8 @@ h6,
 }
 .custom-container .content_column{
   padding: 0px 14px;
+  max-height: 140px!important;
+  max-width: 200px!important;
 }
 .custom-container .content_column .wpb_text_column{
   background: #fff;
@@ -257,13 +259,18 @@ h6,
 }
 .custom-container .content_column.help_column .wpb_text_column{
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
-  padding: 53px;
+  padding: 52.5px;
 }
 .custom-container .content_column.help_column p{
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   opacity: 1;
+  font-family: "Raleway-Bold";
+}
+.custom-container .content_column.help_column p::after {
+  content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
+  padding-left: 10px;
 }
 .projects-section ul.vc_grid-filter {
   border-bottom: 1px solid #d8d8d8;
