@@ -92,17 +92,18 @@ function shortcode_project_for_home(  ){
 
 	foreach( $projects_array as $post ){
 		$display_mark =  get_field("show-on-home-page", $post->ID);
+		var_dump($display_mark);
 		if ($display_mark[0]=="Да"){
             $featured_post_id = $post->ID;
-            $featured_post_title = the_title();
-            $featured_post_excerpt = the_excerpt();
+            $featured_post_title = $post->title;
+            $featured_post_excerpt = $post->excerpt;
         }
 	}
 
-/*	var_dump($featured_post_id);
+	var_dump($featured_post_id);
 	var_dump($featured_post_title);
 	var_dump($featured_post_excerpt);
-*/
+
 	
 	?>
 	<!-- One project -->
