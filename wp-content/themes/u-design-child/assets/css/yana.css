@@ -620,7 +620,9 @@ directions_section1_wrapper{
   font-size: 20px;
   font-weight: 700;
 }
-
+.team-member-info-hover .vc_gitem-acf-label{
+  font-family: "Raleway-Bold";
+}
 .team-member-title{
   padding-left: 40px;
   padding-bottom: 10px;
