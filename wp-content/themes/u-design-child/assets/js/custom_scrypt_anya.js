@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
   $('.fake-count .quantity-numers .quantity-nav .quantity-button').click(function(){
     var quantity = $(this).parents('.quantity-numers').find('input[name="quantity"]').val();
     console.log(quantity);
-    $('.woocommercesingle-product .cart .quantity input[type=number]').val('15');
+    $('.woocommerce.single-product .cart .quantity input[type=number]').val(quantity);
   });
 
 
