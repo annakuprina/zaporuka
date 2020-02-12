@@ -168,8 +168,8 @@ function shortcode_parthers_on_home(  ){
 								<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
 								<!-- Slide text -->
 								<div class="partners-slide-text">
-									<p><?php the_title();?></p>
-									<a class="partner-link" href="<?php the_content();?>"><?php the_content();?></a>
+									<p><?php echo $post->post_title;?></p>
+									<a class="partner-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
 								</div>
 							</div><!-- end one slide-->
 						<?php
@@ -190,8 +190,8 @@ function shortcode_parthers_on_home(  ){
 							<!-- Slide text -->
 							<div class="partners-slide-text">
 								<p>
-									<?php the_title();?>
-									<a class="partner-link" href="<?php the_content();?>"><?php the_content();?></a>
+									<?php echo $post->post_title;?>
+									<a class="partner-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
 								</p>
 							</div>
 						</div><!-- end one slide-->
