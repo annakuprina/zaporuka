@@ -68,6 +68,7 @@ jQuery(document).ready(function($) {
 
 
   //change original woo quantity
+  
   jQuery('.fake-count .quantity-numers .quantity-nav .quantity-button.quantity-up').click(function(){   
     jQuery('.woocommerce.single-product .cart .quantity .quantity-button.quantity-up').click();
   });

@@ -1,6 +1,8 @@
 jQuery(document).ready(function($) {
     $(function() {
         $('.one-tab-link').on('click', function() {
+            // refresh sliders after click on tab
+            $(".slick-media-slider").slick('refresh');
             $('.one-tab-link').removeClass('tab-active');
             $(this).addClass('tab-active');
 

@@ -1800,7 +1800,6 @@ footer .footer-mob a.designer-link {
 
 .footer-mob-politics p {
   line-height: 15px;
-  /*font-family: "Raleway-Regular";*/
   font-family: "Raleway-Light";
 }
 
@@ -1934,6 +1933,7 @@ footer .footer-mob a.designer-link {
   .home-first-post-form-help .help-form-amount-right {
     width: 100%;
   }
+
   .home-first-post-form-help
     .help-form-inner-wrapper
     .help-form-amount
@@ -1955,10 +1955,11 @@ footer .footer-mob a.designer-link {
 
   .home-first-post-image .vc_gitem-row-position-middle {
     justify-content: space-between;
-    align-items: center;
   }
 
-
+  .home-first-post-image .vc_custom_1580744267781 {
+    padding-right: 30px !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1967,14 +1968,55 @@ footer .footer-mob a.designer-link {
     height: 1000px;
   }
 
+  .vc_gitem-animated-block .vc_gitem-zone-img {
+    display: none;
+  }
+
   .home-first-post-image .vc_gitem-row-position-middle {
     display: flex;
     flex-direction: column;
-    /*top: 60%;*/
+    margin-top: 200px;
   }
   
   #home-page-content .home-first-post-image {
     max-height: 1000px;
+  }
+
+  .home-first-post-image .vc_custom_1580744275019 {
+    position: absolute;
+    top: 236px;
+    left: calc((100% - 400px)/2);
+
+  }
+
+  .home-first-post-image .vc_custom_1580744267781 {
+    padding-right: 0 !important;
+  }
+
+  .home-first-post-image {
+    background-size: 100% 520px;
+    background-position: top;
+  }
+
+  .home-first-post-image .vc_gitem-row-position-middle {
+    position: static;
+  }
+
+  .home-first-post-form-help .help_form_wrapper {
+    min-width: 400px;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-first-post-image .vc_custom_1580744275019 {
+    left: calc((100% - 290px)/2);
+
+  }
+
+  .home-first-post-form-help .help_form_wrapper {
+    min-width: 290px;
+    max-width: 290px;
   }
 }
 
@@ -2020,8 +2062,6 @@ footer .footer-mob a.designer-link {
 .video-slider .slick-slide {
   margin: 0 21px;
 }
-
-
 
 .video-slider .slick-list {
   margin: 0 -21px;
@@ -2075,13 +2115,18 @@ footer .footer-mob a.designer-link {
   height: 400px;
 }
 
-
-
 .media-slider {
   position: relative;
 }
 
+/*Slick lightbox*/
+.slick-lightbox {
+  background: rgba(51, 51, 51, 0.3) !important;
+}
 
+.slick-lightbox-close:before {
+  font-size: 38px;
+}
 
 @media screen and (max-width: 700px) {
   .slick-lightbox-slick-iframe {
@@ -2089,86 +2134,6 @@ footer .footer-mob a.designer-link {
     height: 300px;
   }
 }
-
-#tabs .media-sliders-tabs a {
-  padding: 8px 0;
-}
-
-#tabs .ui-state-active, 
-#tabs .ui-widget-content 
-#tabs .ui-state-active, 
-#tabs .ui-widget-header .ui-state-active {
-  background: transparent;
-  border: none;
-}
-
-#tabs .ui-widget-header {
-  background: transparent;
-}
-
-#tabs {
-  background: transparent;
-  border: none;
-  margin-bottom: 50px;
-  margin-top: 80px;
-}
-
-#tabs ul {
-  border: none;
-}
-
-#tabs .ui-state-default, #tabs .ui-widget-content .ui-state-default, #tabs .ui-widget-header .ui-state-default {
-  border: none;
-  background: transparent;
-}
-
-#tabs a,
-#tabs a:link,
-#tabs a:visited {
-  color: #333;
-}
-
-#tabs .media-sliders-tabs {
-  margin-bottom: 50px;
-  font-family: "Raleway-Bold";
-  border-bottom: 1px solid #d8d8d8;
-  margin-bottom: 56px;
-  padding-bottom: 32px
-}
-
-#tabs .ui-tabs-panel {
-  padding: 0;
-}
-
-#tabs .media-sliders-tabs li:nth-child(1) {
-  margin-right: 101px;
-}
-
-#tabs .media-sliders-tabs li:nth-child(1) a {
-  padding-left: 0;
-}
-
-
-#tabs .media-sliders-tabs li:nth-child(2) {
-  margin-right: 101px;
-}
-
-#tabs .media-sliders-tabs li:nth-child(3) a {
-  padding-right: 0;
-}
-
-
-#tabs .slick-dots {
-  bottom: -100px;
-}
-
-#tabs .ui-tabs-active a {
-  color: #e78b48;
-  opacity: 1;
-  position: relative;
-}
-
-
 
 .video-slider .play-video-icon {
   content:"";
@@ -2184,7 +2149,7 @@ footer .footer-mob a.designer-link {
 
 .video-slider-text {
   font-family: "Raleway-Semibold";
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
   padding-top: 21px;
 }
@@ -2193,12 +2158,16 @@ footer .footer-mob a.designer-link {
   position: relative;
 }
 
+.sliders-tabs {
+  margin-bottom: 100px;
+}
+
 .sliders-tabs-wrapper {
   display: flex;
   font-family: "Raleway-Bold";
   border-bottom: 1px solid #d8d8d8;
   margin-bottom: 56px;
-  padding-bottom: 32px;
+  padding-bottom: 28px;
 }
 
 .sliders-tabs-wrapper .one-tab-link {
@@ -2209,20 +2178,92 @@ footer .footer-mob a.designer-link {
   color: rgba(51, 51, 51, .3);
 }
 
-.sliders-tabs-wrapper .one-tab-link:nth-child(1) {
-  margin-right: 101px;
-}
-
+.sliders-tabs-wrapper .one-tab-link:nth-child(1),
 .sliders-tabs-wrapper .one-tab-link:nth-child(2) {
   margin-right: 101px;
 }
 
-.tab-active:after {
+.sliders-tabs-wrapper .tab-active {
+  color: #e78b48;
+}
+
+.sliders-tabs-wrapper .tab-active:after {
   content: "";
   height: 2px;
   background: #e78b48;
   position: absolute;
   width: 100%;
-  bottom: -33px;
+  bottom: -29px;
   left: 0;
 }
+
+.sliders-tabs .slick-dots {
+  bottom: -75px;
+}
+
+@media screen and (max-width: 1024px) {
+  .video-slider-text {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .sliders-tabs-wrapper {
+    padding-bottom: 8px;
+  }
+
+  .sliders-tabs-wrapper .tab-active:after {
+    bottom: -9px;
+  }
+
+  .sliders-tabs-wrapper {
+    margin-bottom: 45px;
+  }
+
+  .sliders-tabs .slick-dots {
+    position: absolute;
+    bottom: -62px;
+  }
+
+  .sliders-tabs-wrapper .one-tab-link:nth-child(1),
+  .sliders-tabs-wrapper .one-tab-link:nth-child(2) {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sliders-tabs-wrapper {
+    flex-direction: column;
+    border-bottom: none;
+    padding-left: 40px;
+  }
+
+  .sliders-tabs-wrapper .tab-active:after {
+    bottom: 20px;
+    left: -34px;
+    width: 20px;
+    height: 3px;
+  }
+
+  .sliders-tabs-wrapper .one-tab-link {
+    font-size: 14px;  
+  }
+
+  .sliders-tabs-wrapper .one-tab-link:nth-child(1),
+  .sliders-tabs-wrapper .one-tab-link:nth-child(2) {
+    margin-right: initial;
+  }
+  
+  .sliders-tabs-wrapper .one-tab-link:nth-child(2) {
+    margin-top: -6px;
+    margin-bottom: -4px;
+  }
+
+  .sliders-tabs-wrapper .one-tab-link:nth-child(3) {
+    margin-bottom: -2px;
+  }
+
+  .sliders-tabs-wrapper {
+    margin-bottom: 15px;
+  }
+}
+

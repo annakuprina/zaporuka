@@ -231,21 +231,41 @@ h6,
   }
 }
 /*********************** Projects Page *********************************/
+.vc_custom_1581425588110.project_banner_wrapper_section1{
+  background-position: unset!important;
+}
+.project_banner_section1{
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.project_banner_section1 .vc_column-inner{
+  padding-top:0!important;
+}
 .custom-container{
-  max-width: 1140px;
+  max-width: 1145px;
   margin-left:auto!important;
   margin-right:auto!important;
   margin: 0 auto;
 }
+.custom-container .header_align{
+  align-items: center!important;
+}
+.custom-container .left_margin_column{
+  margin-left: 48px;
+}
 .custom-container .content_column{
-  padding: 0px 14px;
+  padding-right: 0!important;
+  padding-left: 10px!important;
+  max-height: 140px!important;
+  max-width: 205px!important;
 }
 .custom-container .content_column .wpb_text_column{
   background: #fff;
-  padding: 28px 30px;
+  padding: 23px 30px;
 }
 .custom-container .content_column h5{
   font-family: "Proxima-Nova-Bold";
+  font-size: 31px;
 }
 .custom-container .content_column  .column_text{
   line-height: normal;
@@ -255,28 +275,45 @@ h6,
   opacity: 0.3;
   font-weight: 700;
 }
-.custom-container.help_column .wpb_text_column{
+.custom-container .content_column.help_column .wpb_text_column{
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
-  padding: 53px;
+  padding: 52.5px 45px;
 }
-.custom-container.help_column .content_column p{
+.custom-container .content_column.help_column p{
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   opacity: 1;
+  font-family: "Raleway-Bold";
 }
-.projects-section ul.vc_grid-filter {
+.custom-container .content_column.help_column p::after {
+  content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
+  padding-left: 10px;
+}
+.section-projects{
+  padding-top: 65px;
+}
+.section-projects ul.vc_tta-tabs-list {
   border-bottom: 1px solid #d8d8d8;
-  padding-bottom: 40px !important;
-  margin-bottom: 60px !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 45px !important;
 }
-.projects-section .vc_grid-filter li.vc_grid-filter-item{
+.section-projects .vc_tta-tab>a,
+.section-projects .vc_tta-tab.vc_active>a,
+.section-projects .vc_tta-tab>a:hover{
+  border-color: transparent!important;
+  background-color: unset!important;
+}
+.section-projects .vc_tta-tabs-list li.vc_tta-tab{
   padding: 0;
   margin: 0;
   position: relative;
   line-height: 1.2em;
 }
-.projects-section .vc_grid-filter li.vc_grid-filter-item span{
+.section-projects .vc_tta-tab>a{
+  padding-left: 0!important;
+}
+.section-projects .vc_tta-tabs-list li.vc_tta-tab span{
   padding: 0 100px 40px 0 !important;
   border: unset !important;
   background: transparent !important;
@@ -284,18 +321,35 @@ h6,
   font-family: "Raleway-Bold";
   font-size: 16px;
 }
-.projects-section .vc_grid-filter li.vc_grid-filter-item.vc_active span{
+.section-projects .vc_tta-tabs-list li.vc_tta-tab.vc_active span{
   color: #e78b48 !important;
   opacity: 1;
 }
-.projects-section .vc_grid-filter li.vc_grid-filter-item.vc_active::after{
+.section-projects .vc_tta-tabs-list li.vc_tta-tab.vc_active::after{
   content: "";
   position: absolute;
-  width: calc(100% - 100px);
+  width: calc(100% - 120px);
   height: 2px;
   background-color: #e78b48;
   left: 0;
   top: 62px;
+}
+.section-projects .vc_tta-tabs-list li.vc_tta-tab:hover span{
+  color: #e78b48 !important;
+  opacity: 1;
+}
+.section-projects .vc_tta-tabs-list li.vc_tta-tab:hover::after{
+  content: "";
+  position: absolute;
+  width: calc(100% - 120px);
+  height: 2px;
+  background-color: #e78b48;
+  left: 0;
+  top: 62px
+}
+.projects_section3 {
+  padding-top: 40px;
+  padding-bottom: 43px;
 }
 /*********************** Single project page ***************************/
 .proj-milestone-desc-block{
@@ -506,4 +560,28 @@ h6,
 }
 .privacy-help-section{
   padding-bottom: 45px;
+}
+
+/*************************** Directions Page ****************************/
+.directions_srction1_right_block_wrapper{
+  background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
+}
+.directions_srction1_right_block{
+  padding: 60px 100px;
+  color: #ffff;
+}
+.directions_srction1_text_block{
+  padding-top: 15px;
+}
+.directions_srction1_button button {
+  border-color: transparent!important;
+  background-color: unset!important;
+  background-image: none!important;
+  color: #ffff!important;
+  padding-left: 0!important;
+  padding-top: 0!important;
+}
+.directions_srction1_button button::after {
+  content: url("/wp-content/themes/u-design-child/img/arrow-home.svg");
+  padding-left: 10px;
 }
