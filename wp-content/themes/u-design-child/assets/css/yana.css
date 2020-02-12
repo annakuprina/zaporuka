@@ -584,6 +584,9 @@ directions_section1_wrapper{
   content: url("/wp-content/themes/u-design-child/img/arrow-home.svg");
   padding-left: 10px;
 }
+.directions_section2_tabs{
+  padding-top: 40px;
+}
 .directions_section2_row_title1 {
   padding-top: 70px;
 }
