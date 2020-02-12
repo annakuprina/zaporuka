@@ -87,7 +87,7 @@ function shortcode_project_for_home(  ){
 			<div class="one-project">
 				<div class="one-project-left"><img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg"></div>
 				<div class="one-project-right">
-					<div class="one-project-title">Проекти</div>
+					<div class="one-project-title"><?php pll_e( 'Проекти');?></div>
 					<div class="one-project-info">
 						<p class="one-project-info-title">
 							Центр для онкохворих дiтей «Дача»
