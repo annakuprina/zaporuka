@@ -1364,14 +1364,15 @@ color: #e78b48 !important;
   max-width: 600px;
 }
 .woocommerce.single-product .woocommerce-product-details__short-description{
-	padding-bottom: 35px;
-    border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #d8d8d8;
 }
 .woocommerce.single-product div.product form.cart .button{
-	background-color: transparent;
-    color: #e78b48;
-  	font-family: "Raleway-Bold";
-    font-size: 14px;
+  background-color: transparent;
+  color: #e78b48;
+  font-family: "Raleway-Bold";
+  font-size: 14px;
+  padding: 0;
 }
 .woocommerce.single-product div.product form.cart .button::after {
     content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
@@ -1524,8 +1525,20 @@ color: #e78b48 !important;
     top: 1px;
     transition: 0.4s ease;	
 }
-
-
+.woocommerce-error, .woocommerce-info, .woocommerce-message{
+  border-top: unset;
+  background-color: transparent;
+  padding: 1em 0 1em 3.5em;
+}
+.woocommerce-message::before{color:#e78b48;}
+.woocommerce-error a, .woocommerce-info a, .woocommerce-message a{
+  background: transparent;
+  color:#e78b48;
+}
+.woocommerce-error a, .woocommerce-info a, .woocommerce-message a::after{
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  padding-left: 10px;
+}
 
 @media screen and (min-width: 720px) {
   .customize-header.u-design-fixed-menu-on.fixed-menu #top-wrapper {
