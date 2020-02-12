@@ -181,7 +181,7 @@ add_action( 'manage_projects_posts_custom_column' , 'set_custom_projects_columns
 function set_custom_projects_columns_data( $column, $post_id ) {
     if ( 'displayOnHome' === $column ) {
         $display_mark =  get_field("show-on-home-page", $post_id);
-        echo $display_mark;
+        var_dump($display_mark);
     }
 
 }
