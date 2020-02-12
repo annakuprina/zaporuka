@@ -99,10 +99,10 @@ function shortcode_project_for_home(  ){
         }
 	}
 
-	var_dump($featured_post_id);
+/*	var_dump($featured_post_id);
 	var_dump($featured_post_title);
 	var_dump($featured_post_excerpt);
-
+*/
 	
 	?>
 	<!-- One project -->
