@@ -167,3 +167,21 @@ function remove_image_zoom_support() {
     remove_theme_support( 'wc-product-gallery-zoom' );
 }
 add_action( 'wp', 'remove_image_zoom_support', 100 );
+
+
+/* Add custom column "ON home" to post type projects  */
+add_filter( 'manage_projects_posts_columns', 'set_custom_projects_columns' );
+function set_custom_projects_columns( $columns ) {
+  $columns['displayOnHome'] = __( 'On Home' );
+  return $columns;
+}
+
+/* Add the data to the custom columns for the book post type:*/
+add_action( 'manage_projects_posts_custom_column' , 'set_custom_projects_columns_data', 10, 2 );
+function set_custom_projects_columns_data( $column, $post_id ) {
+    if ( 'displayOnHome' === $column ) {
+        $display_mark =  get_field("show-on-home-page", $post_id);
+        echo $display_mark;
+    }
+
+}
