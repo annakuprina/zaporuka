@@ -172,7 +172,7 @@ add_action( 'wp', 'remove_image_zoom_support', 100 );
 /* Add custom column "ON home" to post type projects  */
 add_filter( 'manage_projects_posts_columns', 'set_custom_projects_columns' );
 function set_custom_projects_columns( $columns ) {
-  $columns['displayOnHome'] = __( 'On Home' );
+  $columns['displayOnHome'] = __( 'На главной' );
   return $columns;
 }
 
@@ -182,7 +182,12 @@ function set_custom_projects_columns_data( $column ) {
     global $post;
     if ( 'displayOnHome' === $column ) {
         $display_mark =  get_field("show-on-home-page", $post->ID);
-        var_dump($display_mark);
+        if ($display_mark[0]=="Да"){
+            echo "Да";
+        }
+        else{
+            echo "-";
+        }      
     }
 
 }
