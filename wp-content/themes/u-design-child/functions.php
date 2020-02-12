@@ -178,9 +178,10 @@ function set_custom_projects_columns( $columns ) {
 
 /* Add the data to the custom columns for the book post type:*/
 add_action( 'manage_projects_posts_custom_column' , 'set_custom_projects_columns_data', 10, 2 );
-function set_custom_projects_columns_data( $column, $post_id ) {
+function set_custom_projects_columns_data( $column ) {
+    global $post;
     if ( 'displayOnHome' === $column ) {
-        $display_mark =  get_field("show-on-home-page", $post_id);
+        $display_mark =  get_field("show-on-home-page", $post->ID);
         var_dump($display_mark);
     }
 
