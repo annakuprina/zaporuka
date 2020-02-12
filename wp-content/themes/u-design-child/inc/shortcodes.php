@@ -80,7 +80,7 @@ add_shortcode('help_form', 'shortcode_help_form');
 
 /* one project for home page */
 function shortcode_project_for_home(  ){
-
+	ob_start();
 	$featured_post_id = 0;
 	$featured_post_title = '';
 
@@ -90,6 +90,7 @@ function shortcode_project_for_home(  ){
 	));	
 
 	foreach( $posts as $post ){
+		var_dump($post->ID);
 		$display_mark =  get_field("show-on-home-page", $post->ID);
 		if ($display_mark[0]=="Да"){
             $featured_post_id = $post->ID;
@@ -100,7 +101,7 @@ function shortcode_project_for_home(  ){
 	var_dump($featured_post_id);
 	var_dump($featured_post_title);
 
-	ob_start();
+	
 	?>
 	<!-- One project -->
 			<div class="one-project">
