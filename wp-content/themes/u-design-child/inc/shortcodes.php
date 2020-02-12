@@ -79,7 +79,26 @@ add_shortcode('help_form', 'shortcode_help_form');
 
 
 /* one project for home page */
-function shortcode_project_for_home(  ){	
+function shortcode_project_for_home(  ){
+
+	$featured_post_id = 0;
+	$featured_post_title = '';
+
+	$projects_array = get_posts( array(
+		'numberposts' => -1,
+		'post_type'   => 'projects'
+	));	
+
+	foreach( $posts as $post ){
+		$display_mark =  get_field("show-on-home-page", $post->ID);
+		if ($display_mark[0]=="Да"){
+            $featured_post_id = $post->ID;
+            $featured_post_title = the_title();
+        }
+	}
+
+	var_dump($featured_post_id);
+	var_dump($featured_post_title);
 
 	ob_start();
 	?>
