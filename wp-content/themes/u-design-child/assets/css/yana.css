@@ -601,3 +601,14 @@ directions_section1_wrapper{
   padding-top: 50px;
   padding-bottom: 43px;
 }
+
+
+/*************************** Our Team ***************************/
+.our-team-hover-wrapper{
+  box-shadow: 4px 4px 20px rgba(209, 209, 209, 0.2);
+  background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
+}
+.our-team-front-wrapper,
+.our-team-hover-wrapper{
+  color: #ffffff;
+}
