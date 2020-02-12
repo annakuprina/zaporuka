@@ -1532,10 +1532,11 @@ color: #e78b48 !important;
 }
 .woocommerce-message::before{color:#e78b48;}
 .woocommerce-error a, .woocommerce-info a, .woocommerce-message a{
-  background: transparent;
-  color:#e78b48;
+  background-color: transparent!important;
+  color:#e78b48!important;
+  padding-right: 0!important;
 }
-.woocommerce-error a, .woocommerce-info a, .woocommerce-message a::after{
+.woocommerce-error a::after, .woocommerce-info a::after, .woocommerce-message a::after{
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
   padding-left: 10px;
 }
