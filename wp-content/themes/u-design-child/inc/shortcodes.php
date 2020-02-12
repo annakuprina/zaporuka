@@ -103,7 +103,7 @@ function shortcode_project_for_home(  ){
 	?>
 	<!-- One project -->
 			<div class="one-project">
-				<div class="one-project-left"><img src="<?php echo get_stylesheet_directory_uri()?>/img/one-project-img.jpg"></div>
+				<div class="one-project-left"><img src="<?php echo get_the_post_thumbnail_url($featured_post_id, 'full'); ?>"></div>
 				<div class="one-project-right">
 					<div class="one-project-title"><?php pll_e( 'Проекти');?></div>
 					<div class="one-project-info">
