@@ -149,6 +149,10 @@ add_shortcode('project_for_home', 'shortcode_project_for_home');
 /* partners on home */
 function shortcode_parthers_on_home(  ){	
 	ob_start();
+	$partners_array = get_posts( array(
+		'numberposts' => -1,
+		'post_type'   => 'partners'
+	));	
 	?>
 			<!----------
 				PARTNERS
@@ -157,133 +161,43 @@ function shortcode_parthers_on_home(  ){
 				<h3 class="partners-title">Партнери</h3>	
 				<!-- PARTNERS SLIDER DESKTOP-->
 				<div class="partners-slider">
-
-						<!-- One slide -->
-						<div class="partners-slide soleterre-slide">
-							<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
-							<!-- Slide text -->
-							<div class="partners-slide-text">
-								<p>Associazione Soleterre</p>
-								<p>Strategie di Pace —</p>
-								<p>головний партнер фонду.</p>
-								<a class="partner-link" href="www.soleterre.org">www.soleterre.org</a>
-							</div>
-						</div><!-- end one slide-->
-
-						<!-- One slide -->
-						<div class="partners-slide styler-slide"> 
-							<img src="<?php echo get_stylesheet_directory_uri()?>/img/styler.jpg">
-							<!-- Slide text -->
-							<div class="partners-slide-text"> 
-								<p>Медіапартнер проекту</p>
-								<p><span class="dacha">«Дача» — </span><span class="rbk-ukraine">РБК-Украина.</span></p>
-								<a class="partner-link" href="www.rbc.ua">www.rbc.ua</a>
-							</div>
-						</div><!-- end one slide-->
-
-						<!-- One slide -->
-						<div class="partners-slide golos-stolitsy-slide">
-							<img src="<?php echo get_stylesheet_directory_uri()?>/img/golos-stolitsy.jpg">
-							<!-- Slide text -->
-							<div class="partners-slide-text">
-								<p>Голос столиці –</p>
-								<p>інформаційна</p>
-								<p>радіостанція.</p>
-								<a class="partner-link" href="www.gs.fm">www.gs.fm</a>
-							</div>
-						</div><!-- end one slide-->
-
-						<!-- One slide -->
-						<div class="partners-slide"> 
-							<img src="<?php echo get_stylesheet_directory_uri()?>/img/test-logo1.png">
-							<!-- Slide text -->
-							<div class="partners-slide-text"> 
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aut consequuntur atque explicabo eos nesciunt! Aliquid aut consequuntur atque explicabo eos</p>
-								<a class="partner-link" href="www.rbc.ua">www.rbc.ua</a>
-							</div>
-						</div><!-- end one slide-->
-
-						<!-- One slide -->
-						<div class="partners-slide">
-							<img src="<?php echo get_stylesheet_directory_uri()?>/img/test-logo2.png">
-							<!-- Slide text -->
-							<div class="partners-slide-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam est necessitatibus debitis, provident vel aspernatur.</p>
-								<a class="partner-link" href="www.gs.fm">www.gs.fm</a>
-							</div>
-						</div><!-- end one slide-->	
+						<?php
+						foreach( $partners_array as $post ){ ?>
+							<!-- One slide -->
+							<div class="partners-slide soleterre-slide">
+								<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
+								<!-- Slide text -->
+								<div class="partners-slide-text">
+									<p><?php echo the_title();?></p>
+									<a class="partner-link" href="<?php echo the_content();?>"><?php echo the_content();?></a>
+								</div>
+							</div><!-- end one slide-->
+						<?php
+						}
+						?>
 				</div><!-- end partners slider-->
 
 				<!-- PARTNERS SLIDER MOBILE-->
 				<div class="partners-slider-mob">
+					<?php
+					foreach( $partners_array as $post ){ ?>
 						<!-- One slide -->
 						<div class="partners-slide soleterre-slide">
 
 						<div class="partners-slider-mob-img">
-							<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+							<img src="?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
 						</div>
 							<!-- Slide text -->
 							<div class="partners-slide-text">
 								<p>
-									Associazione Soleterre Strategie di Pace —	головний партнер фонду.
-									<a class="partner-link" href="www.soleterre.org">www.soleterre.org</a>
+									<?php echo the_title();?>
+									<a class="partner-link" href="<?php echo the_content();?>"><?php echo the_content();?></a>
 								</p>
 							</div>
 						</div><!-- end one slide-->
-
-						<!-- One slide -->
-						<div class="partners-slide styler-slide"> 
-							<div class="partners-slider-mob-img">
-								<img src="<?php echo get_stylesheet_directory_uri()?>/img/styler.jpg">
-							</div>
-
-							<!-- Slide text -->
-							<div class="partners-slide-text"> 
-								<p>Медіапартнер проекту «Дача» —  РБК-Украина, незалежна українська інформаційна агенція.</p>
-								<p> www.rbc.ua</p>
-							</div>
-						</div><!-- end one slide-->
-
-						<!-- One slide -->
-						<div class="partners-slide golos-stolitsy-slide">
-							<div class="partners-slider-mob-img">
-								<img src="<?php echo get_stylesheet_directory_uri()?>/img/golos-stolitsy.jpg">
-							</div>
-
-							<!-- Slide text -->
-							<div class="partners-slide-text">
-								<p>Голос столиці –</p>
-								<p>інформаційна</p>
-								<p>радіостанція.</p>
-								<a class="partner-link" href="www.gs.fm">www.gs.fm</a>
-							</div>
-						</div><!-- end one slide-->
-
-						<!-- One slide -->
-						<div class="partners-slide"> 
-							<div class="partners-slider-mob-img">
-								<img src="<?php echo get_stylesheet_directory_uri()?>/img/test-logo1.png">
-							</div>
-
-							<!-- Slide text -->
-							<div class="partners-slide-text"> 
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aut consequuntur atque explicabo eos nesciunt! Aliquid aut consequuntur atque explicabo eos</p>
-								<a class="partner-link" href="www.rbc.ua">www.rbc.ua</a>
-							</div>
-						</div><!-- end one slide-->
-
-						<!-- One slide -->
-						<div class="partners-slide">
-							<div class="partners-slider-mob-img">
-								<img src="<?php echo get_stylesheet_directory_uri()?>/img/test-logo2.png">
-							</div>
-
-							<!-- Slide text -->
-							<div class="partners-slide-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam est necessitatibus debitis, provident vel aspernatur.</p>
-								<a class="partner-link" href="www.gs.fm">www.gs.fm</a>
-							</div>
-						</div><!-- end one slide-->	
+					<?php
+					}
+					?>
 				</div><!-- end partners-slider-mob-->
 			</div><!-- end partners-->
 
@@ -308,128 +222,129 @@ function shortcode_friends_volunteers(  ){
 				<!---------
 					FRIENDS 
 				----------->
-				<div class="friends">
-					<h3 class="friends-title">Друзi</h3>	
+				<div class="friends-wrapper">
+					<div class="friends">
+						<h3 class="friends-title">Друзi</h3>	
 
-					<!-- FRIENDS SLIDER -->
-					<div class="friends-slider">
+						<!-- FRIENDS SLIDER -->
+						<div class="friends-slider">
 
-						<!-- ONE SLIDE -->
-						<div class="friends-slide">
-							<div class="friends-slide-row">	
-								<p class="friends-name">KVADRA INVEST</p>
-								<a class="friends-link" href="http://kvadrainvest.com/">kvadrainvest.com</a>
-							</div>
+							<!-- ONE SLIDE -->
+							<div class="friends-slide">
+								<div class="friends-slide-row">	
+									<p class="friends-name">KVADRA INVEST</p>
+									<a class="friends-link" href="http://kvadrainvest.com/">kvadrainvest.com</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">UniСredit Foundation</p>
-								<a class="friends-link" href="http://www.unicreditfoundation.org/">www.unicreditfoundation.org</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">UniСredit Foundation</p>
+									<a class="friends-link" href="http://www.unicreditfoundation.org/">www.unicreditfoundation.org</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Un gesto per loro onlus</p>
-								<a class="friends-link" href="http://www.ungestoperloro.org/">www.ungestoperloro.org</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Un gesto per loro onlus</p>
+									<a class="friends-link" href="http://www.ungestoperloro.org/">www.ungestoperloro.org</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Івент-медійна компанія Естет</p>
-								<a class="friends-link" href="http://www.estet.com.ua/">www.estet.com.ua</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Івент-медійна компанія Естет</p>
+									<a class="friends-link" href="http://www.estet.com.ua/">www.estet.com.ua</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Райффайзен Банк Аваль</p>
-								<a class="friends-link" href="http://www.aval.ua/">www.aval.ua</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Райффайзен Банк Аваль</p>
+									<a class="friends-link" href="http://www.aval.ua/">www.aval.ua</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Компанія KSF Technologies</p>
-								<a class="friends-link" href="http://www.ksftech.com/">www.ksftech.com</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Компанія KSF Technologies</p>
+									<a class="friends-link" href="http://www.ksftech.com/">www.ksftech.com</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Авіаційне агенство Airlife</p>
-								<a class="friends-link" href="http://www.airlife.ua/">www.airlife.ua</a>
-							</div>
-						</div><!-- end one slide-->
+								<div class="friends-slide-row">	
+									<p class="friends-name">Авіаційне агенство Airlife</p>
+									<a class="friends-link" href="http://www.airlife.ua/">www.airlife.ua</a>
+								</div>
+							</div><!-- end one slide-->
 
-						<!-- ONE SLIDE -->
-						<div class="friends-slide">
-							<div class="friends-slide-row">	
-								<p class="friends-name">KVADRA INVEST</p>
-								<a class="friends-link" href="http://kvadrainvest.com/">kvadrainvest.com</a>
-							</div>
+							<!-- ONE SLIDE -->
+							<div class="friends-slide">
+								<div class="friends-slide-row">	
+									<p class="friends-name">KVADRA INVEST</p>
+									<a class="friends-link" href="http://kvadrainvest.com/">kvadrainvest.com</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">UniСredit Foundation</p>
-								<a class="friends-link" href="http://www.unicreditfoundation.org/">www.unicreditfoundation.org</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">UniСredit Foundation</p>
+									<a class="friends-link" href="http://www.unicreditfoundation.org/">www.unicreditfoundation.org</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Un gesto per loro onlus</p>
-								<a class="friends-link" href="http://www.ungestoperloro.org/">www.ungestoperloro.org</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Un gesto per loro onlus</p>
+									<a class="friends-link" href="http://www.ungestoperloro.org/">www.ungestoperloro.org</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Івент-медійна компанія Естет</p>
-								<a class="friends-link" href="http://www.estet.com.ua/">www.estet.com.ua</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Івент-медійна компанія Естет</p>
+									<a class="friends-link" href="http://www.estet.com.ua/">www.estet.com.ua</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Райффайзен Банк Аваль</p>
-								<a class="friends-link" href="http://www.aval.ua/">www.aval.ua</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Райффайзен Банк Аваль</p>
+									<a class="friends-link" href="http://www.aval.ua/">www.aval.ua</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Компанія KSF Technologies</p>
-								<a class="friends-link" href="http://www.ksftech.com/">www.ksftech.com</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Компанія KSF Technologies</p>
+									<a class="friends-link" href="http://www.ksftech.com/">www.ksftech.com</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Авіаційне агенство Airlife</p>
-								<a class="friends-link" href="http://www.airlife.ua/">www.airlife.ua</a>
-							</div>
-						</div><!-- end one slide-->
-						
-						<!-- ONE SLIDE -->
-						<div class="friends-slide">
-							<div class="friends-slide-row">	
-								<p class="friends-name">KVADRA INVEST</p>
-								<a class="friends-link" href="http://kvadrainvest.com/">kvadrainvest.com</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Авіаційне агенство Airlife</p>
+									<a class="friends-link" href="http://www.airlife.ua/">www.airlife.ua</a>
+								</div>
+							</div><!-- end one slide-->
+							
+							<!-- ONE SLIDE -->
+							<div class="friends-slide">
+								<div class="friends-slide-row">	
+									<p class="friends-name">KVADRA INVEST</p>
+									<a class="friends-link" href="http://kvadrainvest.com/">kvadrainvest.com</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">UniСredit Foundation</p>
-								<a class="friends-link" href="http://www.unicreditfoundation.org/">www.unicreditfoundation.org</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">UniСredit Foundation</p>
+									<a class="friends-link" href="http://www.unicreditfoundation.org/">www.unicreditfoundation.org</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Un gesto per loro onlus</p>
-								<a class="friends-link" href="http://www.ungestoperloro.org/">www.ungestoperloro.org</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Un gesto per loro onlus</p>
+									<a class="friends-link" href="http://www.ungestoperloro.org/">www.ungestoperloro.org</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Івент-медійна компанія Естет</p>
-								<a class="friends-link" href="http://www.estet.com.ua/">www.estet.com.ua</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Івент-медійна компанія Естет</p>
+									<a class="friends-link" href="http://www.estet.com.ua/">www.estet.com.ua</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Райффайзен Банк Аваль</p>
-								<a class="friends-link" href="http://www.aval.ua/">www.aval.ua</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Райффайзен Банк Аваль</p>
+									<a class="friends-link" href="http://www.aval.ua/">www.aval.ua</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Компанія KSF Technologies</p>
-								<a class="friends-link" href="http://www.ksftech.com/">www.ksftech.com</a>
-							</div>
+								<div class="friends-slide-row">	
+									<p class="friends-name">Компанія KSF Technologies</p>
+									<a class="friends-link" href="http://www.ksftech.com/">www.ksftech.com</a>
+								</div>
 
-							<div class="friends-slide-row">	
-								<p class="friends-name">Авіаційне агенство Airlife</p>
-								<a class="friends-link" href="http://www.airlife.ua/">www.airlife.ua</a>
-							</div>
-						</div><!-- end one slide-->
-					</div><!-- end friends slider -->
-				</div><!-- end friends -->
-
+								<div class="friends-slide-row">	
+									<p class="friends-name">Авіаційне агенство Airlife</p>
+									<a class="friends-link" href="http://www.airlife.ua/">www.airlife.ua</a>
+								</div>
+							</div><!-- end one slide-->
+						</div><!-- end friends slider -->
+					</div><!-- end friends -->
+				</div><!-- end friends-wrapper-->
 				<!-------------
 					VOLUNTEERS 
 				-------------->
