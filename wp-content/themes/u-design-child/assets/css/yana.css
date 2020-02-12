@@ -607,8 +607,33 @@ directions_section1_wrapper{
 .our-team-hover-wrapper{
   box-shadow: 4px 4px 20px rgba(209, 209, 209, 0.2);
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
+  padding: 40px;
+  padding-bottom: 30px;
 }
 .our-team-front-wrapper,
 .our-team-hover-wrapper{
   color: #ffffff;
+}
+.team-member-title,
+.team-member-title-hover{
+  font-family: "Raleway-Bold";
+  font-size: 20px;
+  font-weight: 700;
+}
+.team-member-info-hover .vc_gitem-acf-label{
+  font-family: "Raleway-Bold";
+}
+.team-member-title{
+  padding-left: 40px;
+  padding-bottom: 10px;
+}
+.team-member-title-hover{
+  padding-top: 10px;
+}
+.our-team-hover-wrapper.vc_gitem-zone-b .vc_gitem-row-position-middle{
+  top: 41%;
+}
+
+.our-team-hover-wrapper .team-member-info-hover{
+  padding-top: 37px;
 }
