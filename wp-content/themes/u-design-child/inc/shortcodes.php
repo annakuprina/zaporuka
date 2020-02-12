@@ -82,8 +82,6 @@ add_shortcode('help_form', 'shortcode_help_form');
 function shortcode_project_for_home(  ){
 	ob_start();
 	$featured_post_id = 0;
-	$featured_post_title = '';
-	$featured_post_excerpt = '';
 
 	$projects_array = get_posts( array(
 		'numberposts' => -1,
@@ -92,19 +90,16 @@ function shortcode_project_for_home(  ){
 
 	foreach( $projects_array as $post ){
 		$display_mark =  get_field("show-on-home-page", $post->ID);
-		var_dump($display_mark);
 		if ($display_mark[0]=="Да"){
             $featured_post_id = $post->ID;
-            $featured_post_title = $post->title;
-            $featured_post_excerpt = $post->excerpt;
         }
 	}
+	$total_collected = (int) get_field("total-collected", $featured_post_id);
+    $total_amount = (int) get_field("total-amount", $featured_post_id);
+    $progress_bar = (int) $total_collected * 100 / (int) $total_amount;
 
-	var_dump($featured_post_id);
-	var_dump($featured_post_title);
-	var_dump($featured_post_excerpt);
+	if($featured_post_id):
 
-	
 	?>
 	<!-- One project -->
 			<div class="one-project">
@@ -113,35 +108,37 @@ function shortcode_project_for_home(  ){
 					<div class="one-project-title"><?php pll_e( 'Проекти');?></div>
 					<div class="one-project-info">
 						<p class="one-project-info-title">
-							Центр для онкохворих дiтей «Дача»
+							<?php echo get_the_title($featured_post_id);?>
 						</p>
 						<p class="one-project-info-text">
-							Центр Дача — це дім для проживання онкохворих дітей та їхніх родин, які приїздять на лікування до Києва.
+							<?php echo get_the_excerpt($featured_post_id);?>
 						</p>
 					</div>
 					<div class="one-project-progress">
 						<div class="one-project-progress-top">
 							<p class="project-money">
-								<span class="project-money-quantity">2 156 790 грн.</span>
+								<span class="project-money-quantity"><?php echo $total_collected; ?></span>
 								<span class="project-money-involved"><?php pll_e( 'залучено');?></span>
 							</p>
-							<p class="project-money-collected">18 000 000 грн.</p>
+							<p class="project-money-collected"><?php echo $total_amount; ?></p>
 						</div>
 						<div class="one-project-progress-bottom">
 							<div class="progress-bar">
-								<span class="progress-done"></span>
+								<span class="progress-done" style="width: <?php echo $progress_bar; ?>%;"></span>
 								<span class="progress-dot"></span>
 							</div>
 						</div>
 
 					</div>
-					<a href="#" class="one-project-help">
+					<a href="<?php echo get_permalink($featured_post_id);?>#help_section_anchore" class="one-project-help">
 						<span><?php pll_e( 'Допомогти');?></span> 
 					</a>
 				</div><!-- end one-project-right -->
 			</div><!-- end one-project -->
 
 	<?php
+	endif;
+
 	$html = ob_get_clean();
 	return $html;
 
