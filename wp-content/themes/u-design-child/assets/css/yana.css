@@ -602,7 +602,6 @@ directions_section1_wrapper{
   padding-bottom: 43px;
 }
 
-
 /*************************** Our Team ***************************/
 .our-team-hover-wrapper{
   box-shadow: 4px 4px 20px rgba(209, 209, 209, 0.2);
@@ -628,12 +627,18 @@ directions_section1_wrapper{
   padding-bottom: 10px;
 }
 .team-member-title-hover{
-  padding-top: 10px;
+  padding-top: 5px;
 }
 .our-team-hover-wrapper.vc_gitem-zone-b .vc_gitem-row-position-middle{
   top: 41%;
 }
-
 .our-team-hover-wrapper .team-member-info-hover{
   padding-top: 37px;
+}
+.our_team_section .vc_grid-btn-load_more a {
+  background: unset !important;
+  color: #e78b48 !important;
+  font-family: "Raleway-Bold";
+  font-size: 14px;
+  padding-top: 0;
 }
