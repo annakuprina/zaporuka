@@ -164,7 +164,7 @@ function shortcode_parthers_on_home(  ){
 						<?php
 						foreach( $partners_array as $post ){ ?>
 							<!-- One slide -->
-							<div class="partners-slide soleterre-slide">
+							<div class="partners-slide">
 								<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
 								<!-- Slide text -->
 								<div class="partners-slide-text">
@@ -182,7 +182,7 @@ function shortcode_parthers_on_home(  ){
 					<?php
 					foreach( $partners_array as $post ){ ?>
 						<!-- One slide -->
-						<div class="partners-slide soleterre-slide">
+						<div class="partners-slide">
 
 						<div class="partners-slider-mob-img">
 							<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
