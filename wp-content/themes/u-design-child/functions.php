@@ -115,6 +115,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Залишилось  зiбрати:');
   pll_register_string('u-design-child', 'залучено');
   pll_register_string('u-design-child', 'Допомогти');
+  pll_register_string('u-design-child', 'Проекти');
 });
 
 
