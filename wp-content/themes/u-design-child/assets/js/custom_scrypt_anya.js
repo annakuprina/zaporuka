@@ -68,12 +68,13 @@ jQuery(document).ready(function($) {
 
 
   //change original woo quantity
-  $('.fake-count .quantity-numers .quantity-nav .quantity-button').click(function(){
-    var quantity = $(this).parents('.quantity-numers').find('input[name="quantity"]').val();
-    console.log(quantity);
-    $('.woocommerce.single-product .cart .quantity input[type=number]').val(quantity);
+  
+  jQuery('.fake-count .quantity-numers .quantity-nav .quantity-button.quantity-up').click(function(){   
+    jQuery('.woocommerce.single-product .cart .quantity .quantity-button.quantity-up').click();
   });
-
+  jQuery('.fake-count .quantity-numers .quantity-nav .quantity-button.quantity-down').click(function(){   
+    jQuery('.woocommerce.single-product .cart .quantity .quantity-button.quantity-down').click();
+  });
 
 //help form validation   
 jQuery.validator.addMethod("lettersonly", function(value, element) {

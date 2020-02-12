@@ -1337,7 +1337,8 @@ color: #e78b48 !important;
 .woocommerce.single-product div.product form.cart,
 .woocommerce.single-product div.product div.images{
     margin-bottom: 0;
-} 
+}
+.woocommerce.single-product div.product form.cart{display: none;} 
 .woocommerce.single-product .woocommerce-tabs.wc-tabs-wrapper .woocommerce-Tabs-panel{
 	padding-top: 120px;
 }
