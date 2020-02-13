@@ -219,8 +219,10 @@ function shortcode_friends_volunteers(  ){
 	));	
 
 	$friends_slider = ceil($friends_array/7);
+	var_dump($friends_slider);
 
 	$friends_array_by_7 = array_chunk($friends_array, 7, true);
+	var_dump($friends_array_by_7);
 	?>
 
 <!-------------------------
@@ -234,24 +236,8 @@ function shortcode_friends_volunteers(  ){
 					<div class="friends">
 						<h3 class="friends-title">Друзi</h3>	
 
-						<!-- FRIENDS SLIDER -->
-						<div class="friends-slider">
-							<?php for( $i= 0 ; $i < $friends_slider ; $i++ ): ?>
-							<!-- ONE SLIDE -->
-							<div class="friends-slide">
-								<?php
-				                foreach( $friends_array_by_7 as $post ){ ?>
-				                  <div class="friends-slide-row"> 
-				                    <p class="friends-name"><?php echo $post->post_title;?></p>
-				                    <a class="friends-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
-				                  </div>
-				                <?php
-				                }
-				                ?>
-							</div><!-- end one slide-->
-						<?php endfor;?>
-							
-						</div><!-- end friends slider -->
+						
+						
 					</div><!-- end friends -->
 				</div><!-- end friends-wrapper-->
 				<!-------------
