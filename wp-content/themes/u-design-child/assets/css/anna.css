@@ -1714,7 +1714,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   padding-left: 10px;
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
 }
-
+.woocommerce .cart-collaterals table tr.woocommerce-shipping-totals.shipping{display: none;}
 
 
 @media screen and (min-width: 720px) {
