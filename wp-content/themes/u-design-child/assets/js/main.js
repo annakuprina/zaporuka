@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    dots: true,
+    dots: true
   });
 
   // VOLUNTEERS SLIDER DESKTOP
@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    dots: true,
+    dots: true
   });
 
   // PHOTO SLIDER
@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
           slidesToShow: 1,
           slidesToScroll: 1
         }
-      },
+      }
     ]
   });
 
@@ -87,7 +87,7 @@ jQuery(document).ready(function($) {
           slidesToShow: 1,
           slidesToScroll: 1
         }
-      },
+      }
     ]
   });
   // lightbox for video slider
@@ -115,7 +115,7 @@ jQuery(document).ready(function($) {
           slidesToShow: 1,
           slidesToScroll: 1
         }
-      },
+      }
     ]
   });
 
@@ -125,12 +125,26 @@ jQuery(document).ready(function($) {
     itemSelector: ".documents-slide > img"
   });
 
-  $('.slide').slick({
+  $(".slide").slick({
     dots: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 1,
+    slidesToShow: 1
     //adaptiveHeight: true
   });
 
+  $(".sliders-tabs-wrapper .one-tab-link").on("click", function() {
+    $(".one-tab-link").removeClass("tab-active");
+    $(this).addClass("tab-active");
+
+    var clickedTitleDataId = $(this).attr("data-id"); //get data-id attribute of clicked title
+    /*Find tab-content with same data-id attribute like clicked title*/
+    $(".tabs_content").each(function() {
+      var tabsContentDataId = $(this).attr("data-id");
+      if (clickedTitleDataId == tabsContentDataId) {
+        $(".tabs_content").css({ "z-index": "-1", position: "absolute" });
+        $(this).css({ "z-index": "1", position: "relative" });
+      }
+    });
+  });
 });

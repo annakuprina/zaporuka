@@ -23,13 +23,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'sampin_wp382' );
+define( 'DB_NAME', 'zaporuka' );
 
 /** MySQL database username */
-define( 'DB_USER', 'sampin_wp382' );
+define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '238DS)x.Qp' );
+define( 'DB_PASSWORD', '' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
