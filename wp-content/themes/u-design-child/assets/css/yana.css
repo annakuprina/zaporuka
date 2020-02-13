@@ -416,19 +416,18 @@ h6,
 .proj-timeline-one-step {
   cursor: pointer;
 }
-.help_button_single_block button:hover{
+.help_button_single_block .vc_btn3:hover{
   border-color: transparent!important;
 }
-.help_button_single_block button{
+
+.help_button_single_block .vc_btn3{
   background: transparent!important;
-}
-.help_button_single_block button{
   color: #f39856!important;
   letter-spacing: 0.5px;
   transform: scale(1, 0.93);
   padding-top: 10px!important;
 }
-.help_button_single_block button::after{
+.help_button_single_block .vc_btn3::after{
   content: url(/wp-content/themes/u-design-child//img/arrow-help.svg);
   padding-left: 10px;
 }
@@ -641,4 +640,7 @@ directions_section1_wrapper{
   font-family: "Raleway-Bold";
   font-size: 14px;
   padding-top: 0;
+}
+.write_about_us_carousel .vc_grid.vc_row .vc_grid-item {
+  vertical-align: middle;
 }

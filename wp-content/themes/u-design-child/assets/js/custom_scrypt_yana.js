@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
         slidesToShow: 4,
         slidesToScroll: 4
     });
-    $(".wtite_about_us_carousel .vc_pageable-slide-wrapper").slick({
+    $(".write_about_us_carousel .vc_pageable-slide-wrapper").slick({
         dots: true,
         arrows: false,
         slidesToShow: 3,
