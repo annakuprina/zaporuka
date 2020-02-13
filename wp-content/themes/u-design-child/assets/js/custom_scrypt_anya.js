@@ -161,26 +161,5 @@ else if (lang === 'en-US'){
   });
 
 
- 
-var progress_timeline = function(){
-      $('.other-projects-row .vc_grid-item').each(function() {
-          var moneyTotalAmount = $(this).find('.project-money-collected-inner').text();
-          console.log('moneyTotalAmount='+moneyTotalAmount);
-          var moneyCurrentCollected= $(this).find('.project-money-quantity-inner').text();
-          console.log('moneyCurrentCollected='+moneyCurrentCollected);
-
-          var progressBarTimeline = moneyCurrentCollected * 100 / moneyTotalAmount;
-          console.log('progressBarTimeline='+progressBarTimeline);
-          $(this).find('.progress-done').width(progressBarTimeline+'%');
-      })
-  }
-
-  setTimeout(function(){
-    progress_timeline();
-  }, 2500);
-
-
-
-
 
 });
