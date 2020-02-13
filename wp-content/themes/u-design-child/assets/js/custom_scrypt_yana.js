@@ -32,8 +32,6 @@ jQuery(document).ready(function($) {
     $(".write_about_us_carousel .vc_pageable-slide-wrapper").slick({
         dots: true,
         arrows: false,
-        // infinite: true,
-        variableWidth: true,
         slidesToShow: 3,
         slidesToScroll: 3
     });
