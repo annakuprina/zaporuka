@@ -238,20 +238,21 @@ function shortcode_friends_volunteers(  ){
 						<h3 class="friends-title">Друзi</h3>	
 
 						<!-- FRIENDS SLIDER -->
-						<?php
-						foreach( $friends_array_by_7 as $post_wrapper ){
-						    echo '<div class="friends-slide">';
-						    foreach( $post_wrapper as $post ){ ?>
-						        <div class="friends-slide-row"> 
-		                            <p class="friends-name"><?php echo $post->post_title;?></p>
-		                            <a class="friends-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
-	                         	</div>
-						    <?php    
-						    }
-						    echo '</div>';
-						}
-						?>						
-
+						<div class="friends-slider">
+							<?php
+							foreach( $friends_array_by_7 as $post_wrapper ){
+							    echo '<div class="friends-slide">';
+							    foreach( $post_wrapper as $post ){ ?>
+							        <div class="friends-slide-row"> 
+			                            <p class="friends-name"><?php echo $post->post_title;?></p>
+			                            <a class="friends-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
+		                         	</div>
+							    <?php    
+							    }
+							    echo '</div>';
+							}
+							?>						
+						</div><!-- end friends slider -->
 					</div><!-- end friends -->
 				</div><!-- end friends-wrapper-->
 				<!-------------
