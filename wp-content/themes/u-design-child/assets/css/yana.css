@@ -602,7 +602,9 @@ h6,
   padding-top: 50px;
   padding-bottom: 43px;
 }
-
+.custom-container .content_column.help_column p{
+  cursor: pointer;
+}
 /*************************** Our Team ***************************/
 .our-team-hover-wrapper{
   box-shadow: 4px 4px 20px rgba(209, 209, 209, 0.2);
@@ -645,6 +647,7 @@ h6,
 }
 .write_about_us_carousel .vc_grid.vc_row .vc_grid-item {
   vertical-align: middle;
+  width: auto;
 }
 .write_about_us_button_wrapper .help_button_single_block .vc_btn3{
   padding-top: 23px!important;
@@ -652,6 +655,7 @@ h6,
 .write_about_us_carousel .vc_gitem-zone-a .vc_gitem-row-position-top{
   position: inherit;
 }
+
 .write_about_us_carousel img{
   margin-left: auto;
   margin-right: auto;
