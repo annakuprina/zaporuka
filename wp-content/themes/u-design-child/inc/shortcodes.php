@@ -243,8 +243,8 @@ function shortcode_friends_volunteers(  ){
 						    echo '<div class="friends-slide">';
 						    foreach( $post_wrapper as $post ){ ?>
 						        <div class="friends-slide-row"> 
-		                            <p class="friends-name"><?php echo $post[$i]->post_title;?></p>
-		                            <a class="friends-link" href="<?php echo $post[$i]->post_content;?>"><?php echo $post[$is]->post_content;?></a>
+		                            <p class="friends-name"><?php echo $post->post_title;?></p>
+		                            <a class="friends-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
 	                         	</div>
 						    <?php    
 						    }
