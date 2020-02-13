@@ -647,6 +647,8 @@ h6,
 }
 .write_about_us_carousel .vc_grid.vc_row .vc_grid-item {
   vertical-align: middle;
+}
+.write_about_us_carousel .vc_grid-item.slick-active{
   width: auto;
 }
 .write_about_us_button_wrapper .help_button_single_block .vc_btn3{
