@@ -62,6 +62,7 @@ select:-webkit-autofill:focus {
 }
 #navigation-menu ul.sf-menu > li > a > span {
   color: #333333;
+  font-family: "Raleway-Regular";
 }
 #navigation-menu ul.sf-menu > li > a:hover,
 #navigation-menu ul.sf-menu > li > a:hover span,
@@ -1709,6 +1710,24 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
   padding-left: 10px;
 }
+
+/*        Cart Page        */
+.woocommerce-cart-form,
+.checkout.woocommerce-checkout{
+  padding-top: 120px;
+}
+.woocommerce-cart .wc-proceed-to-checkout a,
+.woocommerce_checkout_place_order{
+  background-color: transparent;
+  color: #e78b48 !important;
+}
+.woocommerce-cart .wc-proceed-to-checkout a::after,
+.woocommerce_checkout_place_order::after{
+  padding-left: 10px;
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+}
+
+
 
 @media screen and (min-width: 720px) {
   .customize-header.u-design-fixed-menu-on.fixed-menu #top-wrapper {
