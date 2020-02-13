@@ -76,7 +76,13 @@ jQuery(document).ready(function($) {
         }
       });
   }, 2500);
-    
+  
+  //scroll to help form on project page    
+  $('.custom-container .content_column.help_column p').click(function(e){
+    $('html, body').animate({
+        scrollTop: $("#help_section").offset().top -100
+    }, 1000);
+  });
 
   //active tab for shop filter
   var path = window.location.pathname;
