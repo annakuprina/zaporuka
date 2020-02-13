@@ -18,10 +18,24 @@ jQuery(document).ready(function($) {
     $('#sendSmsModalfromHelpForm').addClass('opened');
     $('body').addClass('noscroll');
   });
-  //close help sms modal help block
+  //close help sms modal from help block
   $('#sendSmsModalfromHelpForm .closemodale, #sendSmsModalfromHelpForm .help-other').click(function (e) {
       e.preventDefault();
       $('#sendSmsModalfromHelpForm').removeClass('opened');
+      $('body').removeClass('noscroll');
+  });
+
+
+//call help big modal
+  $('.help-header-link a').click(function(e){
+    e.preventDefault();
+    $('#ModalHelpForm').addClass('opened');
+    $('body').addClass('noscroll');
+  });
+  //close help big modal
+  $('#ModalHelpForm .closemodale').click(function (e) {
+      e.preventDefault();
+      $('#ModalHelpForm').removeClass('opened');
       $('body').removeClass('noscroll');
   });
 

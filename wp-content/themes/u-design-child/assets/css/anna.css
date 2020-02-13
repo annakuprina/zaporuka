@@ -257,7 +257,7 @@ footer a.designer-link {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9505;
+  z-index: 9525;
 }
 .opened:before {
   display: block;
@@ -276,7 +276,7 @@ footer a.designer-link {
   position: fixed;
   left: 50%;
   top: -100%;
-  z-index: 9510;
+  z-index: 9530;
   width: 100%;
   max-width: 560px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -318,11 +318,15 @@ footer a.designer-link {
   height: 24px;
   right: 60px;
   top: 40px;
-  z-index: 9511;
+  z-index: 9531;
 }
 .opened .closemodale {
   display: block;
 }
+#ModalHelpForm .modal-dialog{max-width: 1140px;z-index: 9520;}
+#ModalHelpForm .closemodale{z-index: 9521;}
+#ModalHelpForm .modale:before{z-index: 9515;}
+
 /*  (end) The Send SMS Modal   */
 
 /*  Home page first post   */
