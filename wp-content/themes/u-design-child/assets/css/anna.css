@@ -1059,16 +1059,12 @@ footer a.designer-link {
   font-size: 14px;
 }
 input[type="checkbox"]:checked,
-input[type="checkbox"]:not(:checked),
-input[type="radio"]:checked,
-input[type="radio"]:not(:checked) {
+input[type="checkbox"]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
 input[type="checkbox"]:checked + label,
-input[type="checkbox"]:not(:checked) + label,
-input[type="radio"]:checked + label,
-input[type="radio"]:not(:checked) + label {
+input[type="checkbox"]:not(:checked) + label {
   display: inline-block !important;
   position: relative;
   padding-left: 28px;
@@ -1076,9 +1072,7 @@ input[type="radio"]:not(:checked) + label {
   cursor: pointer;
 }
 input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:not(:checked) + label:before,
-input[type="radio"]:checked + label:before,
-input[type="radio"]:not(:checked) + label:before {
+input[type="checkbox"]:not(:checked) + label:before {
   content: "";
   position: absolute;
   left: 0px;
@@ -1094,9 +1088,7 @@ input[type="checkbox"]:not(:checked) + label:before {
   border-radius: 1px;
 }
 input[type="checkbox"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:after,
-input[type="radio"]:checked + label:after,
-input[type="radio"]:not(:checked) + label:after {
+input[type="checkbox"]:not(:checked) + label:after{
   content: "";
   position: absolute;
   -webkit-transition: all 0.2s ease;
@@ -1120,21 +1112,17 @@ input[type="checkbox"]:not(:checked) + label:after {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-input[type="checkbox"]:not(:checked) + label:after,
-input[type="radio"]:not(:checked) + label:after {
+input[type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
 }
-input[type="checkbox"] + label.error,
-input[type="radio"] + label.error {
+input[type="checkbox"] + label.error {
   position: absolute;
   left: -28px;
   top: 23px;
   line-height: 1em;
 }
 input[type="checkbox"]:checked + label.error:before,
-input[type="checkbox"]:not(:checked) + label.error:before,
-input[type="radio"]:checked + label.error:before,
-input[type="radio"]:not(:checked) + label.error:before {
+input[type="checkbox"]:not(:checked) + label.error:before {
   top: -20px;
 }
 input[type="checkbox"]:checked + label.error:after,
@@ -1717,12 +1705,12 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   padding-top: 120px;
 }
 .woocommerce-cart .wc-proceed-to-checkout a,
-.woocommerce_checkout_place_order{
-  background-color: transparent;
-  color: #e78b48 !important;
+#place_order{
+  background-color: transparent!important;
+  color: #e78b48!important;
 }
 .woocommerce-cart .wc-proceed-to-checkout a::after,
-.woocommerce_checkout_place_order::after{
+#place_order::after{
   padding-left: 10px;
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
 }
