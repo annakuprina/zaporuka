@@ -560,9 +560,7 @@ h6,
 }
 
 /*************************** Directions Page ****************************/
-.directions_section1_wrapper{
-  padding-bottom: 35px;
-}
+
 .directions_section1_right_block_wrapper{
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
 }
@@ -645,6 +643,15 @@ h6,
   font-size: 14px;
   padding-top: 0;
 }
+.write-aboutus-wrapper {
+  padding-top: 130px;
+}
+.write-aboutus-carousel-wrapper{
+  padding-top: 25px;
+}
+.write-aboutus-carousel-wrapper .slick-list{
+  padding-bottom: 10px;
+}
 .write_about_us_carousel .vc_grid.vc_row .vc_grid-item {
   vertical-align: middle;
 }
@@ -654,4 +661,7 @@ h6,
 }
 .write_about_us_carousel .vc_gitem-zone-a .vc_gitem-row-position-top{
   position: inherit;
+}
+.testimonials_section{
+  padding-top: 100px;
 }
