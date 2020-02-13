@@ -217,6 +217,10 @@ function shortcode_friends_volunteers(  ){
 		'numberposts' => -1,
 		'post_type'   => 'friends'
 	));	
+
+	$friends_slider = ceil($friends_array/7);
+
+	$friends_array_by_7 = array_chunk($friends_array, 7, true);
 	?>
 
 <!-------------------------
@@ -232,98 +236,21 @@ function shortcode_friends_volunteers(  ){
 
 						<!-- FRIENDS SLIDER -->
 						<div class="friends-slider">
-
+							<?php for( $i= 0 ; $i < $friends_slider ; $i++ ): ?>
 							<!-- ONE SLIDE -->
 							<div class="friends-slide">
 								<?php
-				                $count = 1 ;
-				                foreach( $friends_array as $post ){ ?>
+				                foreach( $friends_array_by_7 as $post ){ ?>
 				                  <div class="friends-slide-row"> 
 				                    <p class="friends-name"><?php echo $post->post_title;?></p>
 				                    <a class="friends-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
 				                  </div>
 				                <?php
-				                if ($count == 7) break;
-				                $count ++;
 				                }
 				                ?>
 							</div><!-- end one slide-->
-
-							<!-- ONE SLIDE -->
-							<div class="friends-slide">
-								<div class="friends-slide-row">	
-									<p class="friends-name">KVADRA INVEST</p>
-									<a class="friends-link" href="http://kvadrainvest.com/">kvadrainvest.com</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">UniСredit Foundation</p>
-									<a class="friends-link" href="http://www.unicreditfoundation.org/">www.unicreditfoundation.org</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Un gesto per loro onlus</p>
-									<a class="friends-link" href="http://www.ungestoperloro.org/">www.ungestoperloro.org</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Івент-медійна компанія Естет</p>
-									<a class="friends-link" href="http://www.estet.com.ua/">www.estet.com.ua</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Райффайзен Банк Аваль</p>
-									<a class="friends-link" href="http://www.aval.ua/">www.aval.ua</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Компанія KSF Technologies</p>
-									<a class="friends-link" href="http://www.ksftech.com/">www.ksftech.com</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Авіаційне агенство Airlife</p>
-									<a class="friends-link" href="http://www.airlife.ua/">www.airlife.ua</a>
-								</div>
-							</div><!-- end one slide-->
+						<?php endfor;?>
 							
-							<!-- ONE SLIDE -->
-							<div class="friends-slide">
-								<div class="friends-slide-row">	
-									<p class="friends-name">KVADRA INVEST</p>
-									<a class="friends-link" href="http://kvadrainvest.com/">kvadrainvest.com</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">UniСredit Foundation</p>
-									<a class="friends-link" href="http://www.unicreditfoundation.org/">www.unicreditfoundation.org</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Un gesto per loro onlus</p>
-									<a class="friends-link" href="http://www.ungestoperloro.org/">www.ungestoperloro.org</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Івент-медійна компанія Естет</p>
-									<a class="friends-link" href="http://www.estet.com.ua/">www.estet.com.ua</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Райффайзен Банк Аваль</p>
-									<a class="friends-link" href="http://www.aval.ua/">www.aval.ua</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Компанія KSF Technologies</p>
-									<a class="friends-link" href="http://www.ksftech.com/">www.ksftech.com</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Авіаційне агенство Airlife</p>
-									<a class="friends-link" href="http://www.airlife.ua/">www.airlife.ua</a>
-								</div>
-							</div><!-- end one slide-->
 						</div><!-- end friends slider -->
 					</div><!-- end friends -->
 				</div><!-- end friends-wrapper-->
