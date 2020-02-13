@@ -649,7 +649,9 @@ h6,
 .write_about_us_button_wrapper .help_button_single_block .vc_btn3{
   padding-top: 23px!important;
 }
-
+.write_about_us_carousel .vc_gitem-zone-a .vc_gitem-row-position-top{
+  position: inherit;
+}
 .write_about_us_carousel img{
   margin-left: auto;
   margin-right: auto;
