@@ -219,10 +219,13 @@ function shortcode_friends_volunteers(  ){
 	));	
 
 	$friends_slider = ceil(count($friends_array)/7);
-	var_dump($friends_slider);
+	
 
-	//$friends_array_by_7 = array_chunk($friends_array, 7, true);
-	var_dump($friends_array);
+	$friends_array_by_7 = array_chunk($friends_array, 7, true);
+	
+	echo "<pre>";
+	var_dump($friends_array_by_7);
+	echo "</pre>";
 	?>
 
 <!-------------------------
