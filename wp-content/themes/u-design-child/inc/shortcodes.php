@@ -218,11 +218,11 @@ function shortcode_friends_volunteers(  ){
 		'post_type'   => 'friends'
 	));	
 
-	$friends_slider = ceil($friends_array/7);
+	$friends_slider = ceil(count($friends_array)/7);
 	var_dump($friends_slider);
 
-	$friends_array_by_7 = array_chunk($friends_array, 7, true);
-	var_dump($friends_array_by_7);
+	//$friends_array_by_7 = array_chunk($friends_array, 7, true);
+	var_dump($friends_array);
 	?>
 
 <!-------------------------
@@ -237,7 +237,7 @@ function shortcode_friends_volunteers(  ){
 						<h3 class="friends-title">Друзi</h3>	
 
 						
-						
+
 					</div><!-- end friends -->
 				</div><!-- end friends-wrapper-->
 				<!-------------
