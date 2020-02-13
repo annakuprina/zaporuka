@@ -312,7 +312,7 @@ footer a.designer-link {
 }
 .closemodale {
   display: none;
-  position: absolute;
+  position: fixed;
   box-shadow: 0 0 black;
   width: 24px;
   height: 24px;
