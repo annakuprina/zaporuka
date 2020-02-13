@@ -247,7 +247,7 @@ function shortcode_orange_help_form(){
 				<div class="help-item-title"><?php echo $help_by_sms; ?></div>
 				<div class="help-item-info">
 					<div class="help-item-deskr"><?php echo $help_by_sms_hover; ?></div>
-					<a href="#" class="help-item-link"><?php echo $help_by_sms_hover_text_link; ?></a>
+					<a href="#" class="help-item-link sms-popup-show"><?php echo $help_by_sms_hover_text_link; ?></a>
 				</div>
 			</div><!-- end help-item -->
 

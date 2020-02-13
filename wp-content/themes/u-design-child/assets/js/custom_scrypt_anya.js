@@ -1,14 +1,41 @@
 jQuery(document).ready(function($) {
-	//call help sms modal 
+	//call help sms modal from header
 	$('#custom-top-bar .top-bar-help-block a').click(function(e){
 		e.preventDefault();
 		$('#sendSmsModalfromHeader').addClass('opened');
 		$('body').addClass('noscroll');
 	});
-  //close help sms modal 
-	$('.closemodale').click(function (e) {
+  //close help sms modal from header
+	$('#sendSmsModalfromHeader .closemodale').click(function (e) {
       e.preventDefault();
       $('#sendSmsModalfromHeader').removeClass('opened');
+      $('body').removeClass('noscroll');
+  });
+
+  //call help sms modal from help block
+  $('.help-right .help-item .sms-popup-show').click(function(e){
+    e.preventDefault();
+    $('#sendSmsModalfromHelpForm').addClass('opened');
+    $('body').addClass('noscroll');
+  });
+  //close help sms modal from help block
+  $('#sendSmsModalfromHelpForm .closemodale, #sendSmsModalfromHelpForm .help-other').click(function (e) {
+      e.preventDefault();
+      $('#sendSmsModalfromHelpForm').removeClass('opened');
+      $('body').removeClass('noscroll');
+  });
+
+
+//call help big modal
+  $('.help-header-link a').click(function(e){
+    e.preventDefault();
+    $('#ModalHelpForm').addClass('opened');
+    $('body').addClass('noscroll');
+  });
+  //close help big modal
+  $('#ModalHelpForm .closemodale').click(function (e) {
+      e.preventDefault();
+      $('#ModalHelpForm').removeClass('opened');
       $('body').removeClass('noscroll');
   });
 
@@ -49,7 +76,13 @@ jQuery(document).ready(function($) {
         }
       });
   }, 2500);
-    
+  
+  //scroll to help form on project page    
+  $('.custom-container .content_column.help_column p').click(function(e){
+    $('html, body').animate({
+        scrollTop: $("#help_section").offset().top -100
+    }, 1000);
+  });
 
   //active tab for shop filter
   var path = window.location.pathname;

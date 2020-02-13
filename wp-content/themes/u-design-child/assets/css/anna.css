@@ -257,7 +257,7 @@ footer a.designer-link {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1001;
+  z-index: 9525;
 }
 .opened:before {
   display: block;
@@ -271,12 +271,11 @@ footer a.designer-link {
 .modal-dialog {
   padding: 40px;
   background: #fefefe;
-  border: #333333 solid 0px;
-  margin-left: -200px;
+  margin-left: -280px;
   position: fixed;
   left: 50%;
   top: -100%;
-  z-index: 1011;
+  z-index: 9530;
   width: 100%;
   max-width: 560px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -294,26 +293,40 @@ footer a.designer-link {
   font-weight: 400;
   line-height: 26px;
 }
-
 .modal-header h2 {
   color: #333333;
   font-size: 20px;
   font-weight: 700;
   padding-bottom: 25px;
 }
+.modal-footer{padding-top: 43px;} 
+.modal-footer .help-other{
+  color: #e78b48;
+  font-family: "Raleway-Bold";
+  font-size: 14px;
+}
+.modal-footer .help-other::after{
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  padding-left: 10px;
+}
 .closemodale {
   display: none;
-  position: absolute;
+  position: fixed;
   box-shadow: 0 0 black;
   width: 24px;
   height: 24px;
   right: 60px;
   top: 40px;
-  z-index: 1002;
+  z-index: 9531;
 }
 .opened .closemodale {
   display: block;
 }
+#ModalHelpForm.modale:before{z-index: 9515;}
+#ModalHelpForm .modal-dialog{max-width: 1140px;z-index: 9520;padding: 0;margin-left: -570px;}
+#ModalHelpForm .closemodale{z-index: 9521;}
+
+
 /*  (end) The Send SMS Modal   */
 
 /*  Home page first post   */
@@ -380,8 +393,20 @@ footer a.designer-link {
 .home-page-section2 {
   margin-top: 85px;
 }
+.home-page-section2 .section2-image-wrapper .wpb_wrapper,
+.home-page-section2 .section2-image-wrapper .wpb_wrapper .vc_single_image-wrapper{
+  width: 100%;
+  height: 100%;
+}
 .home-page-section2 .section2-image {
   margin-bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-page-section2 .section2-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .home-page-section2 .section2-text-wrapper {
   background-color: #ffffff;
