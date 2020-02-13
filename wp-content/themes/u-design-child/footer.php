@@ -116,7 +116,7 @@ $logo_img_url = ( $udesign_options['custom_logo_img'] ) ? esc_url($udesign_optio
     <div class="modal-body">
             <span><?php echo $popup_sms_text; ?></span>
     <div class="modal-footer">
-      <a href="#" class="btn" id="btn_ingresar"><span><?php echo $popup_sms_link; ?></span></a>
+      <a href="#" class="help-other"><span><?php echo $popup_sms_link; ?></span></a>
     </div>
   </div>
   </div>
