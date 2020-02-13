@@ -649,3 +649,15 @@ h6,
 .write_about_us_button_wrapper .help_button_single_block .vc_btn3{
   padding-top: 23px!important;
 }
+.write_about_us_carousel .vc_single_image-wrapper{
+  float: left;
+  width: 150px;
+  height: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+.write_about_us_carousel img{
+  margin-left: auto;
+  margin-right: auto;
+}
