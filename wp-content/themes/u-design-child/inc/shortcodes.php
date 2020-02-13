@@ -239,14 +239,14 @@ function shortcode_friends_volunteers(  ){
 
 						<!-- FRIENDS SLIDER -->
 			            <div class="friends-slider">
-			              <?php for( $i= 0 ; $i < $friends_slider ; $i++ ): ?>
+			              <?php for( $i=0 ; $i<=$friends_slider ; $i++ ): ?>
 			              <!-- ONE SLIDE -->
 			              <div class="friends-slide">
 			                <?php
 			                        foreach( $friends_array_by_7 as $post ){ ?>
 			                          <div class="friends-slide-row"> 
-			                            <p class="friends-name"><?php echo $post->post_title;?></p>
-			                            <a class="friends-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
+			                            <p class="friends-name"><?php echo $post[$i]->post_title;?></p>
+			                            <a class="friends-link" href="<?php echo $post[$i]->post_content;?>"><?php echo $post[$is]->post_content;?></a>
 			                          </div>
 			                        <?php
 			                        }
