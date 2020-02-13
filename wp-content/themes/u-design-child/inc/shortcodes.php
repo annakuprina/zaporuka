@@ -213,6 +213,10 @@ add_shortcode('our_partners_home', 'shortcode_parthers_on_home');
 /* FRIENDS AND VOLUNTEERS on home page*/
 function shortcode_friends_volunteers(  ){	
 	ob_start();
+	$friends_array = get_posts( array(
+		'numberposts' => -1,
+		'post_type'   => 'friends'
+	));	
 	?>
 
 <!-------------------------
@@ -231,40 +235,15 @@ function shortcode_friends_volunteers(  ){
 
 							<!-- ONE SLIDE -->
 							<div class="friends-slide">
-								<div class="friends-slide-row">	
-									<p class="friends-name">KVADRA INVEST</p>
-									<a class="friends-link" href="http://kvadrainvest.com/">kvadrainvest.com</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">UniСredit Foundation</p>
-									<a class="friends-link" href="http://www.unicreditfoundation.org/">www.unicreditfoundation.org</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Un gesto per loro onlus</p>
-									<a class="friends-link" href="http://www.ungestoperloro.org/">www.ungestoperloro.org</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Івент-медійна компанія Естет</p>
-									<a class="friends-link" href="http://www.estet.com.ua/">www.estet.com.ua</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Райффайзен Банк Аваль</p>
-									<a class="friends-link" href="http://www.aval.ua/">www.aval.ua</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Компанія KSF Technologies</p>
-									<a class="friends-link" href="http://www.ksftech.com/">www.ksftech.com</a>
-								</div>
-
-								<div class="friends-slide-row">	
-									<p class="friends-name">Авіаційне агенство Airlife</p>
-									<a class="friends-link" href="http://www.airlife.ua/">www.airlife.ua</a>
-								</div>
+								<?php
+								foreach( $friends_array as $post ){ ?>
+									<div class="friends-slide-row">	
+										<p class="friends-name"><?php echo $post->post_title;?></p>
+										<a class="friends-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?>a>
+									</div>
+								<?php
+								}
+								?>
 							</div><!-- end one slide-->
 
 							<!-- ONE SLIDE -->
