@@ -271,8 +271,7 @@ footer a.designer-link {
 .modal-dialog {
   padding: 40px;
   background: #fefefe;
-  border: #333333 solid 0px;
-  margin-left: -200px;
+  margin-left: -280px;
   position: fixed;
   left: 50%;
   top: -100%;
@@ -323,9 +322,10 @@ footer a.designer-link {
 .opened .closemodale {
   display: block;
 }
-#ModalHelpForm .modal-dialog{max-width: 1140px;z-index: 9520;}
+#ModalHelpForm.modale:before{z-index: 9515;}
+#ModalHelpForm .modal-dialog{max-width: 1140px;z-index: 9520;padding: 0;margin-left: -570px;}
 #ModalHelpForm .closemodale{z-index: 9521;}
-#ModalHelpForm .modale:before{z-index: 9515;}
+
 
 /*  (end) The Send SMS Modal   */
 
