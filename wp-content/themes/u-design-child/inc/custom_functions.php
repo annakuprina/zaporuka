@@ -411,6 +411,32 @@ function my_module_add_grid_content_shortcodes( $shortcodes ) {
 
 add_shortcode( 'vc_post_content', 'vc_post_content_render' );
 function vc_post_content_render() {
-    return '{{ post_data:post_description }}';
+    return '{{ do_shortcode_post_content }}';
 }
 
+add_filter( 'vc_gitem_template_attribute_do_shortcode_post_content', 'vc_gitem_template_attribute_do_shortcode_post_content', 10, 2 );
+
+function vc_gitem_template_attribute_do_shortcode_post_content( $value, $data ) {
+    /**
+     * @var null|Wp_Post $post ;
+     * @var string $data ;
+     */
+    extract( array_merge( array(
+        'post' => null,
+        'data' => '',
+    ), $data ) );
+    $atts_extended = array();
+    parse_str( $data, $atts_extended );
+
+    WPBMap::addAllMappedShortcodes();
+
+    $output = do_shortcode( $post->post_content );
+    ob_start();
+//  do_action( 'wp_enqueue_scripts' );
+//  wp_print_styles();
+//  wp_print_scripts();
+//  wp_print_footer_scripts();
+    $output .= ob_get_clean();
+
+    return $output;
+}
