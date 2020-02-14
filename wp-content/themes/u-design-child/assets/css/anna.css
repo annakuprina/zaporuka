@@ -1712,8 +1712,8 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   padding: 1em 12px!important;
 }
 #place_order{
-  float: unset;
-  padding: 0;
+  float: unset!important;
+  padding: 0!important;
 }
 .woocommerce-cart .wc-proceed-to-checkout a::after,
 #place_order::after{
@@ -1760,6 +1760,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 }
 .woocommerce-checkout #payment ul.payment_methods{
   border-bottom: unset;
+  padding: 0;
 }
 
 
