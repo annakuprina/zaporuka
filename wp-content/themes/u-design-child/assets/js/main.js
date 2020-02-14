@@ -134,17 +134,16 @@ jQuery(document).ready(function($) {
   });
 
   /*TABS WITH SLIDERS. one project page*/
-
   $(".sliders-tabs-wrapper .one-tab-link").on("click", function() {
     $(".sliders-tabs-wrapper .one-tab-link").removeClass("tab-active");
     $(this).addClass("tab-active");
 
     var clickedTitleDataId = $(this).attr("data-id"); //get data-id attribute of clicked title
     /*Find tab-content with same data-id attribute like clicked title*/
-    $(".sliders-tabs-wrapper .tabs_content").each(function() {
+    $(".slider_tabs_content").each(function() {
       var tabsContentDataId = $(this).attr("data-id");
       if (clickedTitleDataId == tabsContentDataId) {
-        $(".sliders-tabs-wrapper .tabs_content").css({
+        $(".slider_tabs_content ").css({
           "z-index": "-1",
           position: "absolute"
         });

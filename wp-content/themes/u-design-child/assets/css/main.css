@@ -2222,20 +2222,16 @@ footer .footer-mob a.designer-link {
 /*---------------------------
   ONE PROJECT PAGE. SLIDERS
 ----------------------------*/
-.sliders-tabs .tabs_content {
-  display: block;
-}
 
-.sliders-tabs .tabs_content:nth-child(2),
-.sliders-tabs .tabs_content:nth-child(3) {
-  display: block;
-  z-index: -1;
-  position: absolute;
-}
-.sliders-tabs .tabs_content:nth-child(1) {
-  display: block;
+.photo_tab_content {
   z-index: 1;
   position: relative;
+}
+.video_tab_content,
+.document_tab_content {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
 }
 
 .slick-media-slider .slick-slide {
