@@ -97,6 +97,9 @@ function shortcode_milestones(){
                 } else{
                     $active_tab = '';
                 }
+                var_dump($active_tab);
+                var_dump($item["milestone-name"] . ' == ' . $milestone_name_active);
+                ?>
                 ?>
                 <div class="proj-milestone-desc-text tabs_content <?php echo $active_tab; ?>" data-id="<?php echo $i; ?>">
                     <div class="milestone-desc-wrapper">
@@ -360,11 +363,10 @@ function zaporuka_photo_video_doc(){
                 <div class="photo-slider slick-media-slider" >
                     <?php foreach ($project_photos as $item) { ?>
                         <div class="photo-slide">
-                            <img src="<?php echo $item["photo"]["url"]; ?>">
+                            <img src="<?php echo $item["photo"]["url"]; ?>" />
                         </div>
                     <?php } ?>
                 </div><!--end photo-slider-->
-
             </div>
             <div class="tabs_content" data-id="2">
                 <!-- VIDEO SLIDER -->
@@ -373,10 +375,9 @@ function zaporuka_photo_video_doc(){
                         <div>
                             <a href="<?php echo $item["video-link"];?>" target="_blank" class="thumbnail">
                                 <p class="video-slider-img-wrapper">
-                                    <img src="<?php echo $item["image-for-video"]["url"]; ?>">
+                                    <img src="<?php echo $item["image-for-video"]["url"]; ?>" />
                                     <span class="play-video-icon"></span>
                                 </p>
-
                             </a>
                             <p class="video-slider-text"><?php echo $item["description"];?></p>
                         </div>
