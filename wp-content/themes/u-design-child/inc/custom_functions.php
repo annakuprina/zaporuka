@@ -63,6 +63,7 @@ function shortcode_milestones(){
                     $active_tab = '';
                 }
             ?>
+
                 <!-- ONE STEP -->
                 <div class="proj-timeline-one-step <?php echo $class; ?> one-tab-link" data-id="<?php echo $i; ?>">
                     <!-- Hidden  timeline for mob version-->
