@@ -356,7 +356,7 @@ function zaporuka_photo_video_doc(){
             </div>
         </div>
         <div class="proj-milestone-desc-block">
-            <div class="slider_tabs_content active" data-id="1">
+            <div class="slider_tabs_content photo_tab_content active" data-id="1">
                 <!-- PHOTO SLIDER -->
                 <div class="photo-slider slick-media-slider" >
                     <?php foreach ($project_photos as $item) { ?>
@@ -366,7 +366,7 @@ function zaporuka_photo_video_doc(){
                     <?php } ?>
                 </div><!--end photo-slider-->
             </div>
-            <div class="slider_tabs_content" data-id="2">
+            <div class="slider_tabs_content video_tab_content" data-id="2">
                 <!-- VIDEO SLIDER -->
                 <div class="video-slider slick-media-slider">
                     <?php foreach ($project_videos as $item) { ?>
@@ -382,7 +382,7 @@ function zaporuka_photo_video_doc(){
                     <?php } ?>
                 </div><!--end video-slider-->
             </div>
-            <div class="slider_tabs_content" data-id="3">
+            <div class="slider_tabs_content document_tab_content" data-id="3">
                 <!-- DOCUMENTS SLIDER -->
                 <div class="documents-slider slick-media-slider">
                     <?php foreach ($project_docs as $item) { ?>
