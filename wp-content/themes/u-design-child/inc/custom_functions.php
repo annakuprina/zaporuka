@@ -341,56 +341,80 @@ function zaporuka_photo_video_doc(){
 	PHOTO, VIDEO, DOCUMENTS SLIDERS
 ----------------------------------->
     <!-- TABS -->
-    <div class="media-sliders-tabs">
-        <p data-id="1" class="media-slider-one-tab">Фотографiї</p>
-        <p data-id="2" class="media-slider-one-tab">Вiдео</p>
-        <p data-id="3" class="media-slider-one-tab">Супутнi документи</p>
-    </div>
 
-    <!-- MEDIA SLIDERS WRAPPER -->
-    <div class="media-sliders-wrapper">
-        <!-- PHOTO SLIDER -->
-        <div class="media-slider" data-id="1">
-            <div class="photo-slider" >
-                <?php foreach ($project_photos as $item) { ?>
-                    <div class="photo-slide">
-                        <img src="<?php echo $item["photo"]["url"]; ?>">
-                    </div>
-                <?php } ?>
-            </div><!--end photo-slider-->
-        </div><!--end media-slider-->
+    <div class="sliders-tabs">
+        <div class="sliders-tabs-wrapper">
+            <div class="one-tab-link tab-active" data-id="1">
+                Фотографiї
+            </div>
+            <div class="one-tab-link" data-id="2">
+                Вiдео
+            </div>
+            <div class="one-tab-link" data-id="3">
+                Супутнi документи
+            </div>
+        </div>
+        <div class="proj-milestone-desc-block">
+            <div class="tabs_content active" data-id="1">
+                <!-- PHOTO SLIDER -->
+                <div class="photo-slider slick-media-slider" >
+                    <?php foreach ($project_photos as $item) { ?>
+                        <div class="photo-slide">
+                            <img src="<?php echo $item["photo"]["url"]; ?>">
+                        </div>
+                    <?php } ?>
+                </div><!--end photo-slider-->
 
-        <!-- VIDEO SLIDER -->
-        <div class="media-slider" data-id="2">
-            <div class="video-slider">
-                <?php foreach ($project_videos as $item) { ?>
-                    <div>
-                         <a href="<?php echo $item["video-link"];?>" target="_blank" class="thumbnail">
-                            <img src="<?php echo $item["image-for-video"]["url"]; ?>">
-                            <i class="fa fa-play-circle" aria-hidden="true"></i>
-                            <p><?php echo $item["description"];?></p>
-                        </a>
-                    </div>
-                <?php } ?>
-            </div><!--end video-slider-->
-        </div><!--end media-slider-->
+            </div>
+            <div class="tabs_content" data-id="2">
+                <!-- VIDEO SLIDER -->
+                <div class="video-slider slick-media-slider">
+                    <?php foreach ($project_videos as $item) { ?>
+                        <div>
+                            <a href="<?php echo $item["video-link"];?>" target="_blank" class="thumbnail">
+                                <p class="video-slider-img-wrapper">
+                                    <img src="<?php echo $item["image-for-video"]["url"]; ?>">
+                                    <span class="play-video-icon"></span>
+                                </p>
 
-        <!-- DOCUMENTS SLIDER -->
-        <div class="media-slider" data-id="3">
-            <div class="documents-slider">
-                <?php foreach ($project_docs as $item) { ?>
-                    <div class="documents-slide">
-                        <img src="<?php echo $item["document"]["url"];?>">
-                    </div>
-                <?php } ?>
-            </div><!--end documents-slider-->
-        </div><!--end media-slider-->
-    </div><!--end media-sliders-wrapper-->
-
+                            </a>
+                            <p class="video-slider-text"><?php echo $item["description"];?></p>
+                        </div>
+                    <?php } ?>
+                </div><!--end video-slider-->
+            </div>
+            <div class="tabs_content" data-id="3">
+                <!-- DOCUMENTS SLIDER -->
+                <div class="documents-slider slick-media-slider">
+                    <?php foreach ($project_docs as $item) { ?>
+                        <div class="documents-slide">
+                            <img src="<?php echo $item["document"]["url"];?>">
+                        </div>
+                    <?php } ?>
+                </div><!--end documents-slider-->
+            </div>
+        </div>
+    </div><!-- end sliders-tabs -->
     <?php
     $html = ob_get_clean();
     return $html;
-
 }
 add_shortcode( 'zaporuka_photo_video_doc', 'zaporuka_photo_video_doc' );
 
+add_filter( 'vc_grid_item_shortcodes', 'my_module_add_grid_content_shortcodes' );
+function my_module_add_grid_content_shortcodes( $shortcodes ) {
+    $shortcodes['vc_post_id'] = array(
+        'name' => __( 'Post content', 'fluidtopics' ),
+        'base' => 'vc_post_content',
+        'category' => __( 'Content', 'fluidtopics' ),
+        'description' => __( 'Show current post content', 'fluidtopics' ),
+        'post_type' => Vc_Grid_Item_Editor::postType(),
+    );
+
+    return $shortcodes;
+}
+
+add_shortcode( 'vc_post_content', 'vc_post_content_render' );
+function vc_post_content_render() {
+    return '{{ post_data:post_content }}';
+}
