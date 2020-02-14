@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 
   $(function() {
     $(".one-tab-link").on("click", function() {
-      $(".one-tab-link").removeClass("tab-active");
+      console.log("tab is clicked");
       $(this).addClass("tab-active");
 
       var clickedTitleDataId = $(this).attr("data-id"); //get data-id attribute of clicked title
@@ -34,7 +34,11 @@ jQuery(document).ready(function($) {
       /*Find tab-content with same data-id attribute like clicked title*/
       $(".tabs_content").each(function() {
         var tabsContentDataId = $(this).attr("data-id");
+        console.log("we have content with id " + tabsContentDataId);
+
         if (clickedTitleDataId == tabsContentDataId) {
+          console.log("the same like " + clickedTitleDataId);
+
           $(".tabs_content").removeClass("active");
           $(this).addClass("active");
         }
