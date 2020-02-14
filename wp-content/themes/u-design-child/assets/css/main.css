@@ -2185,7 +2185,7 @@ footer .footer-mob a.designer-link {
   font-size: 14px;
   font-weight: 700;
   line-height: 22px;
-  width: 250px;
+  /* width: 250px; */
 }
 
 .slick-vertical .rewards-slide {
