@@ -99,7 +99,7 @@ function shortcode_milestones(){
                 }
 //                var_dump($active_tab);
 //                var_dump($item["milestone-name"] . ' == ' . $milestone_name_active);
-                ?>
+
                 ?>
                 <div class="proj-milestone-desc-text tabs_content <?php echo $active_tab; ?>" data-id="<?php echo $i; ?>">
                     <div class="milestone-desc-wrapper">
