@@ -1,5 +1,22 @@
 jQuery(document).ready(function($) {
     $(function() {
+        $('.proj-timeline-one-step').on('click', function() {
+
+            $('.proj-timeline-one-step').removeClass('tab-active');
+            $(this).addClass('tab-active');
+
+            var clickedTitleDataId = $(this).attr("data-id"); //get data-id attribute of clicked title
+            /*Find tab-content with same data-id attribute like clicked title*/
+            $('.tabs_content').each(function() {
+                var tabsContentDataId=$(this).attr("data-id");
+                if (clickedTitleDataId==tabsContentDataId) {
+                    $('.tabs_content').removeClass('active');
+                    $(this).addClass('active');
+                }
+            })
+        });
+    });
+    $(function() {
         $('.one-tab-link').on('click', function() {
 
             $('.one-tab-link').removeClass('tab-active');
