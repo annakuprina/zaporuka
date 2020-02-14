@@ -1104,6 +1104,7 @@ get_header();
 			</div><!--end video-slider--> 
 		</div>
 		<div class="tabs_content" data-id="3">
+			
 			<!-- DOCUMENTS SLIDER -->
 			<div class="documents-slider slick-media-slider">
 				<div class="documents-slide">
@@ -1123,6 +1124,38 @@ get_header();
 	</div>
 </div><!-- end sliders-tabs -->
 
+
+<!-- OUR REVARDS SLIDER(vertical mobile) -->
+<div class="rewards-slider" >
+	<div class="rewards-slide">
+		1 Переможець конкурсу «Благодійник року» у номінації «Благодійна організація»
+	</div>
+	<div class="rewards-slide">
+		2 Лауреат Національної медичної премії в номінації «Особливий внесок в охорону здоров’я».
+	</div>
+	<div class="rewards-slide">
+		3 Лідер Національного рейтингу Благодійників у номінації «Витрати у сфері охорони здоров’я».
+	</div>
+	<div class="rewards-slide">
+		4 Лідер Національного рейтингу Благодійників у номінації «Витрати у сфері охорони здоров’я».
+	</div>
+	<div class="rewards-slide">
+		5 Лідер Національного рейтингу Благодійників у номінації «Витрати у сфері охорони здоров’я».
+	</div>
+	<div class="rewards-slide">
+		6 Лауреат Національної медичної премії в номінації «Особливий внесок в охорону здоров’я».
+	</div>
+	<div class="rewards-slide">
+		7 Лауреат Національної медичної премії в номінації «Особливий внесок в охорону здоров’я».
+	</div>
+	<div class="rewards-slide">
+		8 Переможець конкурсу «Благодійник року» у номінації «Благодійна організація».
+	</div>
+	<div class="rewards-slide">
+		9 Переможець конкурсу «Благодійник року» у номінації «Благодійна організація».
+	</div>
+</div><!--end rewards-slider-->
+</div>
 
 <?php
 
