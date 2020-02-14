@@ -665,3 +665,6 @@ h6,
 .testimonials_section{
   padding-top: 100px;
 }
+.reviews-item-content{
+  line-height: 28px;
+}
