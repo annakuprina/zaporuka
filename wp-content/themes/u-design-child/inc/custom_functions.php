@@ -394,8 +394,10 @@ function zaporuka_photo_video_doc(){
 }
 add_shortcode( 'zaporuka_photo_video_doc', 'zaporuka_photo_video_doc' );
 
-add_filter( 'vc_grid_item_shortcodes', 'my_module_add_grid_shortcodes' );
-function my_module_add_grid_shortcodes( $shortcodes ) {
+
+
+add_filter( 'vc_grid_item_shortcodes', 'my_module_add_grid_content_shortcodes' );
+function my_module_add_grid_content_shortcodes( $shortcodes ) {
     $shortcodes['vc_post_id'] = array(
         'name' => __( 'Post content', 'fluidtopics' ),
         'base' => 'vc_post_content',
