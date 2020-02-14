@@ -1740,7 +1740,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce .cart-collaterals table tr {
     background: unset;
 }
-.woocommerce form .form-row textarea{font-family: "Raleway-Regular";}
+.woocommerce form .form-row textarea{font-family: "Raleway-Regular";    resize: none;}
 .checkout.woocommerce-checkout input.input-text{box-shadow:unset;color: #333333;font-size: 14px;}
 .checkout.woocommerce-checkout .select2-container {    z-index: 10;}
 .checkout.woocommerce-checkout .select2-container--default .select2-selection--single{
