@@ -415,5 +415,6 @@ function my_module_add_grid_content_shortcodes( $shortcodes ) {
 
 add_shortcode( 'vc_post_content', 'vc_post_content_render' );
 function vc_post_content_render() {
-    return '{{ post_data:post_content }}';
+    $html = "<div class='reviews-item-content'>" . '{{ post_data:post_content }}' . "</div>";
+    return $html;
 }
