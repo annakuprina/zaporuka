@@ -151,7 +151,8 @@ jQuery(document).ready(function($) {
   $(".ocpc-main2058101900").owlCarousel({
     responsive: {
       1140: {
-        items: 2
+        items: 2,
+        nav: false
       }
     }
   });
