@@ -394,3 +394,21 @@ function zaporuka_photo_video_doc(){
 }
 add_shortcode( 'zaporuka_photo_video_doc', 'zaporuka_photo_video_doc' );
 
+add_filter( 'vc_grid_item_shortcodes', 'my_module_add_grid_shortcodes' );
+function my_module_add_grid_shortcodes( $shortcodes ) {
+    $shortcodes['vc_post_id'] = array(
+        'name' => __( 'Post content', 'fluidtopics' ),
+        'base' => 'vc_post_content',
+        'category' => __( 'Content', 'fluidtopics' ),
+        'description' => __( 'Show current post content', 'fluidtopics' ),
+        'post_type' => Vc_Grid_Item_Editor::postType(),
+    );
+
+    return $shortcodes;
+}
+
+add_shortcode( 'vc_post_content', 'vc_post_content_render' );
+function vc_post_content_render() {
+    return '{{ post_data:post_content }}';
+}
+
