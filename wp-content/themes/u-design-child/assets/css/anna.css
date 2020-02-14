@@ -1560,6 +1560,9 @@ color: #e78b48 !important;
 .checkout.woocommerce-checkout{
   padding-top: 120px;
 }
+.checkout.woocommerce-checkout{
+  padding-bottom: 60px;
+}
 .woocommerce-cart .wc-proceed-to-checkout a,
 #place_order{
   background-color: transparent!important;
@@ -1618,7 +1621,7 @@ color: #e78b48 !important;
   border-bottom: unset;
   padding: 0;
 }
-
+.woocommerce-checkout #payment ul.payment_methods li img{margin:0;}
 
 @media screen and (min-width: 720px) {
   .customize-header.u-design-fixed-menu-on.fixed-menu #top-wrapper {
