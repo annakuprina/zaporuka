@@ -2091,7 +2091,9 @@ footer .footer-mob a.designer-link {
   }
 }
 
-/*HOME PAGE SECTION2*/
+/*---------------------
+  HOME PAGE SECTION2
+----------------------*/
 .home-page-section2 .vc_custom_1579168278861 {
   max-width: 1155px;
 }
@@ -2174,7 +2176,28 @@ footer .footer-mob a.designer-link {
 } */
 /*end home page section2*/
 
-/*HOME PAGE SECTION4*/
+/*---------------------
+  HOME PAGE SECTION3
+----------------------*/
+.rewards-slider {
+  color: #333333;
+  font-family: "Proxima-Nova-Regular";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  width: 250px;
+}
+
+.slick-vertical .rewards-slide {
+  border-top: 3px solid #e78b48;
+  padding-top: 21px;
+  padding-bottom: 59px;
+}
+/*end home page section3*/
+
+/*---------------------
+  HOME PAGE SECTION4
+----------------------*/
 .home-page-section4-top-part .h2-header-line {
   margin-bottom: 50px;
 }

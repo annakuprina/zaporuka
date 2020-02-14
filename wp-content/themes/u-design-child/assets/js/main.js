@@ -133,6 +133,8 @@ jQuery(document).ready(function($) {
     //adaptiveHeight: true
   });
 
+  /*TABS WITH SLIDERS. one project page*/
+
   $(".sliders-tabs-wrapper .one-tab-link").on("click", function() {
     $(".one-tab-link").removeClass("tab-active");
     $(this).addClass("tab-active");
@@ -148,12 +150,54 @@ jQuery(document).ready(function($) {
     });
   });
 
-  $(".ocpc-main2058101900").owlCarousel({
-    responsive: {
-      1140: {
-        items: 2,
-        nav: false
+  /*home-page-section3 Owl carousel(adaptivity from 1140px to 768px).
+  This carousel is made using plugin "Post Slider Carousel & Custom Post Grids".
+  Horizontal  slider with 2 slides. Visible  from 1140px to 768px. 
+  For screen less then 768px owl slider from plugin is hidden,and vertical slick slider is shown.
+  And uses Owl carousel. There is no possibility to make carousel adaptive, using admin panel.
+  So on window resize we should destroy existing carousel and show 2 or 3 slides, depending on window size.*/
+
+  $(window)
+    .on("resize", function() {
+      if ($(window).width() < 1140) {
+        $(".owl-carousel").owlCarousel("destroy");
+        $(".owl-carousel").owlCarousel({
+          items: 2,
+          nav: false
+        });
+      } else {
+        $(".owl-carousel").owlCarousel("destroy");
+        $(".owl-carousel").owlCarousel({
+          items: 3,
+          nav: false
+        });
       }
+    })
+    .resize();
+
+  //home-page-section3 Slick carousel(Mobile version for screens less then 768px).
+  $(".rewards-slider").slick({
+    dots: true,
+    arrows: false,
+    vertical: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    verticalSwiping: true
+    // width: 250
+  });
+
+  var maxHeight = -1;
+  $(".rewards-slide").each(function() {
+    if ($(this).height() > maxHeight) {
+      maxHeight = $(this).height();
+    }
+  });
+  $(".rewards-slide").each(function() {
+    if ($(this).height() < maxHeight) {
+      $(this).css(
+        "margin",
+        Math.ceil((maxHeight - $(this).height()) / 2) + "px 0"
+      );
     }
   });
 });
