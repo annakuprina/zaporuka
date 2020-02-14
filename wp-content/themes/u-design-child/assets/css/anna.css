@@ -1708,6 +1708,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 #place_order{
   background-color: transparent!important;
   color: #e78b48!important;
+  text-align: left!important;
 }
 .woocommerce-cart .wc-proceed-to-checkout a::after,
 #place_order::after{
@@ -1715,6 +1716,31 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
 }
 .woocommerce .cart-collaterals table tr.woocommerce-shipping-totals.shipping{display: none;}
+.woocommerce .woocommerce-cart-form table.shop_table{
+  border: unset;
+  border-radius: 0;
+}
+.woocommerce .cart_totals table.shop_table,
+.woocommerce .woocommerce-checkout-review-order table.shop_table{
+  border-radius: 0;
+}
+.woocommerce-page table.cart td.actions .button,
+.woocommerce .cart_totals h2{
+  display: none;
+}
+.woocommerce-page .cart-collaterals .cart_totals tr th{text-align: left;}
+.woocommerce .cart-collaterals table tr {
+    background: unset;
+}
+.woocommerce form .form-row textarea{font-family: "Raleway-Regular";}
+.checkout.woocommerce-checkout input.input-text{box-shadow:unset;color: #333333;}
+.checkout.woocommerce-checkout .select2-container {    z-index: 10;}
+.checkout.woocommerce-checkout .select2-container--default .select2-selection--single{
+    border: 1px solid #DDD9D9;
+    border-radius: 0;
+    color: #333333;
+}
+#order_review_heading{    padding-top: 30px;}
 
 
 @media screen and (min-width: 720px) {
