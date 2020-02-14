@@ -191,3 +191,57 @@ function set_custom_projects_columns_data( $column ) {
     }
 
 }
+
+/*  Add langeages for  wc ukr shipping*/
+add_filter('wc_ukr_shipping_language', function ($lang) {
+    if (pll_current_language() === 'uk') {
+        return 'uk';
+    }
+    if (pll_current_language() === 'en') {
+        return 'en';
+    }
+
+    return 'ua';
+});
+
+
+/*  Add translations for  wc ukr shipping*/
+add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) {
+    $currentLanguage = wp_doing_ajax() ? $_COOKIE['pll_language'] : pll_current_language();
+  
+    if ($currentLanguage === 'ru') {
+        return [
+            'method_title' => 'Доставка службой Новая почта',
+            'block_title' => 'Укажите отделение Новой почты',
+            'placeholder_area' => 'Выберите область',
+            'placeholder_city' => 'Выберите город',
+            'placeholder_warehouse' => 'Выберите отделение',
+            'address_title' => 'Нужна адресная доставка?',
+            'address_placeholder' => 'Введите адрес доставки'
+        ];
+    }
+
+    if ($currentLanguage === 'en') {
+        return [
+            'method_title' => 'Nova Posta',
+            'block_title' => 'Enter Nova Posta department',
+            'placeholder_area' => 'Select region',
+            'placeholder_city' => 'Select City',
+            'placeholder_warehouse' => 'Select department',
+            'address_title' => 'Need address delivery?',
+            'address_placeholder' => 'Enter shipping address'
+        ];
+    }
+  
+
+    return [
+        'method_title' => 'Доставка службою Нова пошта',
+        'block_title' => 'Вкажіть відділення Нової пошти',
+        'placeholder_area' => 'Оберіть область',
+        'placeholder_city' => 'Оберіть місто',
+        'placeholder_warehouse' => 'Оберіть відділення',
+        'address_title' => 'Потрібна адресна доставка?',
+        'address_placeholder' => 'Введіть адресу доставки'
+    ];
+   
+});
