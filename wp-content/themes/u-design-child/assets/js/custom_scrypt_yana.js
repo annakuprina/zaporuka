@@ -1,29 +1,4 @@
 jQuery(document).ready(function($) {
-  //   $(function() {
-  //     $(".proj-timeline-one-step").on("click", function() {
-  //         // $('.proj-timeline-one-step').removeClass('tab-active');
-  //         // $(this).addClass('tab-active');
-  //         console.log("clicked here");
-
-  //         var clickedTitleDataId = $(this).attr("data-id"); //get data-id attribute of clicked title
-  //         console.log(tabsContentDataId);
-
-  //         /*Find tab-content with same data-id attribute like clicked title*/
-  //         $(".tabs_content").each(function() {
-  //         console.log("clicked here");
-
-  //         var tabsContentDataId = $(this).attr("data-id");
-
-  //         if (clickedTitleDataId == tabsContentDataId) {
-  //             console.log("clicked here");
-
-  //             $(".tabs_content").removeClass("active");
-  //             $(this).addClass("active");
-  //         }
-  //     });
-  //     });
-  //   });
-
   $(function() {
     $(".one-tab-link").on("click", function() {
       console.log("tab is clicked");
