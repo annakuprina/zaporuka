@@ -64,7 +64,7 @@ function shortcode_milestones(){
                 }
             ?>
                 <!-- ONE STEP -->
-                <div class="proj-timeline-one-step <?php echo $class; ?> one-tab-link" data-id="<?php echo $i; ?>">
+                <div class="proj-timeline-one-step <?php echo $class; ?> " data-id="<?php echo $i; ?>">
                     <!-- Hidden  timeline for mob version-->
                     <div class="one-step-timeline-mob">
                         <p class="one-step-timeline-inner"></p>
@@ -97,8 +97,8 @@ function shortcode_milestones(){
                 } else{
                     $active_tab = '';
                 }
-                var_dump($active_tab);
-                var_dump($item["milestone-name"] . ' == ' . $milestone_name_active);
+//                var_dump($active_tab);
+//                var_dump($item["milestone-name"] . ' == ' . $milestone_name_active);
                 ?>
                 ?>
                 <div class="proj-milestone-desc-text tabs_content <?php echo $active_tab; ?>" data-id="<?php echo $i; ?>">
