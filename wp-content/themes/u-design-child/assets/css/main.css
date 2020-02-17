@@ -83,7 +83,6 @@ button {
 
 body {
   font-family: "Raleway-Regular";
-  overflow-x: visible;
 }
 
 .slick-dots .slick-active button {
@@ -120,6 +119,19 @@ h3 {
     font-size: 24px;
   }
 }
+
+/*-------
+  HEADER
+---------*/
+@media screen and (max-width: 719px) {
+  #top-elements {
+    flex-direction: column;
+  }
+  #top-elements.container_24 {
+    width: calc(100% - 20px);
+  }
+}
+/*-----end header-------*/
 
 .partners-title {
   margin-bottom: 38px;
