@@ -83,7 +83,7 @@ require_once THEME_INCLUDES . '/custom_ajax.php';
         <div class="clear"></div>
         <?php
     }
-    //add_action( 'udesign_top_wrapper_top', 'udesign_add_secondary_navigation_bar_custom', 10);
+    add_action( 'udesign_top_wrapper_top', 'udesign_add_secondary_navigation_bar_custom', 10);
 
 //add 5 column to footer
 register_sidebar(array(
