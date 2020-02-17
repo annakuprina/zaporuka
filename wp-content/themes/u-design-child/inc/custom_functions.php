@@ -424,9 +424,7 @@ function my_module_add_grid_testimonials_shortcodes( $shortcodes ) {
     $shortcodes['vc_post_id'] = array(
         'name' => __( ' Custom Testimonials', 'fluidtopics' ),
         'base' => 'vc_testimonials_content',
-        'category' => __( 'Content', 'fluidtopics' ),
-        'description' => __( 'Show current testimonials', 'fluidtopics' ),
-        'post_type' => Vc_Grid_Item_Editor::postType(),
+        'category' => __( 'Content', 'fluidtopics' )
     );
 
     return $shortcodes;
