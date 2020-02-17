@@ -418,3 +418,59 @@ function vc_post_content_render() {
     $html = "<div class='reviews-item-content'>" . '{{ post_data:post_content }}' . "</div>";
     return $html;
 }
+
+add_filter( 'vc_grid_item_shortcodes', 'my_module_add_grid_testimonials_shortcodes' );
+function my_module_add_grid_testimonials_shortcodes( $shortcodes ) {
+    $shortcodes['vc_post_id'] = array(
+        'name' => __( ' Custom Testimonials', 'fluidtopics' ),
+        'base' => 'vc_testimonials_content',
+        'category' => __( 'Content', 'fluidtopics' ),
+        'description' => __( 'Show current testimonials', 'fluidtopics' ),
+        'post_type' => Vc_Grid_Item_Editor::postType(),
+    );
+
+    return $shortcodes;
+}
+
+add_shortcode( 'vc_testimonials_content', 'vc_testimonials_content_render' );
+function vc_testimonials_content_render() {
+    $args = array(
+        'post_type' => 'reviews',
+        'posts_per_page' => 2,
+    );
+    $testimonials = get_posts( $args );
+    foreach( $testimonials as $post ) {
+        var_dump($post->ID);
+        ob_start();
+        ?>
+        <!------------
+            REVIEWS
+        ------------->
+
+        <div class="reviews-wrapper">
+            <div class="reviews-item">
+                <div class="reviews-item-title">
+                    <p><?php the_title() ?></p>
+                    <p> м. Авдіївка</p>
+                </div>
+                <div class="reviews-item-text">
+                    <?php the_content() ?>
+                </div><!-- end reviews-item-text -->
+            </div><!-- end reviews-item -->
+
+        </div><!-- end reviews-wrapper -->
+        <!--        <div class="pagination-block">-->
+        <!--        </div>-->
+        <div class="pagination">
+            <ul>
+                <li class="nav-previous"><?php next_posts_link('← ' . 'Предыдущие'); ?></li>
+                <li class="nav-next"><?php previous_posts_link('Следующие' . ' →'); ?></li>
+            </ul>
+        </div>
+
+        <?php
+    }
+    wp_reset_postdata();
+    $html = ob_get_clean();
+    return $html;
+}
