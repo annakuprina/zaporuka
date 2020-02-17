@@ -463,8 +463,8 @@ class custom_reviews_class extends WPBakeryShortCode {
             for($i=0;$i<$n;$i++) {
                 $id = $loop->posts[$i]->ID;
 
-                $name = get_field('client_name', $id);
-                $region = get_field('region', $id);
+                $name =  "{{ post_meta_value:client_name }}";
+                $region = "{{ post_meta_value:region }}";
                 $content_review = $loop->posts[$i]->post_content;
                 ob_start();
                 ?>
