@@ -1617,8 +1617,11 @@ color: #e78b48 !important;
   color: #e78b48;
 }
 .return-to-shop .wc-backward{
-  padding: 0;
-  color: #e78b48;
+  padding: 0!important;
+  color: #e78b48!important;
+}
+.return-to-shop .wc-backward:hover{
+  background-color: transparent!important;
 }
 .return-to-shop .wc-backward::after{
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
