@@ -2226,6 +2226,8 @@ footer .footer-mob a.designer-link {
 .photo_tab_content {
   z-index: 1;
   position: relative;
+  /* max-width: 1140px; */
+  width: 100%;
 }
 .video_tab_content,
 .document_tab_content {
