@@ -57,7 +57,7 @@ h2.portfolio-single-column { font-size:2.0004em; }
 
     @media screen and (max-width: 719px) {
         #logo { top: 6px; }
-        #logo h1 a, #logo .site-name a { background:transparent url(http://zaporuka.testit.in.ua/wp-content/uploads/2020/01/Logo.png) no-repeat 0 100%; height:37px; }
+        #logo h1 a, #logo .site-name a { background:transparent url(http://zaporuka/wp-content/uploads/2020/02/mob-logo.png) no-repeat 0 100%; height:37px; }
         #wrapper-1, #top-wrapper, #c1-header, #c2-header, #c3-header, #rev-slider-header, #page-content-title, #home-page-content, #page-content, .no_title_section #page-content, #before-content, #bottom-bg, #footer-bg, #before-content::before, #home-page-content::before, #page-content::before, #footer-bg::before { background-image:none; }
     }
     @media screen and (max-width: 959px) {
@@ -82,10 +82,13 @@ h2.portfolio-single-column { font-size:2.0004em; }
             background-size: inherit;
         }
     
+        #top-elements { min-height:37px; }
         #c2-slider .slide-desc h2 { font-size:1.7em !important; line-height:1.6; }
     }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 720px) and (max-width: 959px) {
+    #sticky-menu-alias, #sticky-menu-logo { display: none !important; } }
+@media screen and (min-width: 960px) {
     .u-design-fixed-menu-on.fixed-menu #top-elements,
     .u-design-fixed-menu-on.fixed-menu #secondary-navigation-bar-wrapper {
         display: none;

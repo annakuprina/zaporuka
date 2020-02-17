@@ -188,6 +188,33 @@ jQuery(document).ready(function($) {
     // width: 250
   });
 
+  /*HEADER ADAPTIVITY*/
+  $(window)
+    .on("resize", function() {
+      if ($("div").hasClass("mean-bar")) {
+        console.log("has mean-bar CLASS!");
+        $("#main-top-menu").wrap('<div class="mob-menu-wrapper"></div>');
+        $(".mob-menu-wrapper").append('<div class="mob-menu-right"></div>');
+        $("#main-top-menu").append(
+          '<div class="mob-menu-left"></div><div class="mob-menu-right"></div>'
+        );
+
+        $(".help-header-link").appendTo(".mob-menu-right");
+
+        $(".top-bar-help-block").appendTo(".mob-menu-right");
+
+        $(".top-bar-tel-block").appendTo(".mob-menu-right");
+        $(".top-bar-email-block").appendTo(".mob-menu-right");
+
+        $(
+          '<div class="header-mob-socials"><a class="header-mob-soc-fb"><i class="fa fa-facebook" aria-hidden="true"></i></a><a class="header-mob-soc-youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a><a class="header-mob-soc-insta"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>'
+        ).appendTo(".mob-menu-right");
+
+        $(".mob-menu-wrapper .current-menu-parent").appendTo(".mob-menu-right");
+      }
+    })
+    .resize();
+
   // $(window)
   //   .on("resize", function() {
   //     var maxHeight = -1;
