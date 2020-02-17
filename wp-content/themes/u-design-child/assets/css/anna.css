@@ -1169,6 +1169,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
 .shop-custom-wrapper .product:hover,
 .woocommerce.single-product .related ul.products li.product:hover{
@@ -1663,9 +1664,7 @@ color: #e78b48 !important;
     opacity: 1;
   }
   .customize-header.u-design-fixed-menu-on.fixed-menu #custom-top-bar,
-  .customize-header.u-design-fixed-menu-on.fixed-menu
-    #navigation-menu
-    #sticky-menu-logo {
+  .customize-header.u-design-fixed-menu-on.fixed-menu #navigation-menu #sticky-menu-logo {
     display: none;
   }
   .customize-header.u-design-fixed-menu-on.fixed-menu #top-elements {

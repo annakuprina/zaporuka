@@ -48,7 +48,7 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 				<?php udesign_top_wrapper_top(); ?>
 				<div id="top-elements" class="container_24">
 					<?php udesign_top_elements_inside( is_front_page() ); ?>
-					<?php udesign_top_wrapper_bottom( is_front_page() ); ?>
+					<?php //udesign_top_wrapper_bottom( is_front_page() ); ?>
 					<span class="cart-count-in-main-header">
 						<?php if( WC()->cart->get_cart_contents_count() > 0 ): ?>
 							<span class="cart-customlocation cart-count"><span class="plus"></span><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span>
