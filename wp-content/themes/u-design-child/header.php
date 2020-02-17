@@ -34,8 +34,7 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 	<?php echo $udesign_options['google_analytics']; ?>
 	<?php udesign_head_bottom(); ?>
 </head>
-<!-- <body <?php udesign_inside_body_tag(); ?> <?php body_class( array ( $udesign_responsive_body_class, $udesign_menu_auto_arrows, $udesign_menu_drop_shadows, $udesign_fixed_main_menu, $udesign_custom_classes ) ); ?>> -->
-<body <?php udesign_inside_body_tag(); ?> <?php body_class( array ( $udesign_responsive_body_class, $udesign_menu_auto_arrows, $udesign_menu_drop_shadows, $udesign_fixed_main_menu ) ); ?>>
+<body <?php udesign_inside_body_tag(); ?> <?php body_class( array ( $udesign_responsive_body_class, $udesign_menu_auto_arrows, $udesign_menu_drop_shadows, $udesign_fixed_main_menu, $udesign_custom_classes ) ); ?>>
 	<?php do_action( 'wp_body_open' ); // Since WordPress 5.2 ?>
 	<?php udesign_body_top(); ?>
     
