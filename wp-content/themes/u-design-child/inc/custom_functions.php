@@ -430,45 +430,67 @@ function my_module_add_grid_testimonials_shortcodes( $shortcodes ) {
     return $shortcodes;
 }
 
-add_shortcode( 'vc_testimonials_content', 'vc_testimonials_content_render' );
-function vc_testimonials_content_render() {
-    $args = array(
-        'post_type' => 'reviews',
-        'posts_per_page' => 2,
-    );
-    $testimonials = get_posts( $args );
-    foreach( $testimonials as $post ) {
-        var_dump($post->ID);
-        ob_start();
-        ?>
-        <!------------
-            REVIEWS
-        ------------->
 
-        <div class="reviews-wrapper">
-            <div class="reviews-item">
-                <div class="reviews-item-title">
-                    <p><?php the_title() ?></p>
-                    <p> м. Авдіївка</p>
-                </div>
-                <div class="reviews-item-text">
-                    <?php the_content() ?>
-                </div><!-- end reviews-item-text -->
-            </div><!-- end reviews-item -->
-
-        </div><!-- end reviews-wrapper -->
-        <!--        <div class="pagination-block">-->
-        <!--        </div>-->
-        <div class="pagination">
-            <ul>
-                <li class="nav-previous"><?php next_posts_link('← ' . 'Предыдущие'); ?></li>
-                <li class="nav-next"><?php previous_posts_link('Следующие' . ' →'); ?></li>
-            </ul>
-        </div>
-
-        <?php
+class custom_reviews_class extends WPBakeryShortCode {
+    // Element Init
+    function __construct() {
+        add_action( 'init', array( $this, 'custom_reviews_mapping' ) );
+        add_shortcode( 'vc_testimonials_content', array( $this, 'vc_testimonials_content' ) );
     }
-    wp_reset_postdata();
-    $html = ob_get_clean();
-    return $html;
+    // Element Mapping
+    public function custom_reviews_mapping() {
+//			 Map the block with vc_map()
+        vc_map( array(
+            'name' => __( ' Custom Testimonials', 'fluidtopics' ),
+            'base' => 'vc_testimonials_content',
+            'category' => __( 'Content', 'fluidtopics' )
+        ));
+    }
+    // Element HTML
+    public function vc_testimonials_content( $atts )
+    {
+        WPBMap::addAllMappedShortcodes();
+        ob_start();
+
+        $args = array(
+            'post_type' => 'reviews',
+            'posts_per_page' => 2,
+        );
+        $testimonials = get_posts( $args );
+        foreach( $testimonials as $post ) {
+            var_dump($post->ID);
+            ob_start();
+            ?>
+            <!------------
+                REVIEWS
+            ------------->
+
+            <div class="reviews-wrapper">
+                <div class="reviews-item">
+                    <div class="reviews-item-title">
+                        <p><?php the_title() ?></p>
+                        <p> м. Авдіївка</p>
+                    </div>
+                    <div class="reviews-item-text">
+                        <?php the_content() ?>
+                    </div><!-- end reviews-item-text -->
+                </div><!-- end reviews-item -->
+
+            </div><!-- end reviews-wrapper -->
+            <!--        <div class="pagination-block">-->
+            <!--        </div>-->
+            <div class="pagination">
+                <ul>
+                    <li class="nav-previous"><?php next_posts_link('← ' . 'Предыдущие'); ?></li>
+                    <li class="nav-next"><?php previous_posts_link('Следующие' . ' →'); ?></li>
+                </ul>
+            </div>
+
+            <?php
+        }
+        wp_reset_postdata();
+        $html = ob_get_clean();
+        return $html;
+    }
 }
+$custom_reviews_class = new custom_reviews_class;
