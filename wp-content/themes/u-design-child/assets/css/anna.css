@@ -1704,11 +1704,19 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .checkout.woocommerce-checkout{
   padding-top: 120px;
 }
+.checkout.woocommerce-checkout{
+  padding-bottom: 60px;
+}
 .woocommerce-cart .wc-proceed-to-checkout a,
 #place_order{
   background-color: transparent!important;
   color: #e78b48!important;
   text-align: left!important;
+  padding: 1em 12px!important;
+}
+#place_order{
+  float: unset!important;
+  padding: 0!important;
 }
 .woocommerce-cart .wc-proceed-to-checkout a::after,
 #place_order::after{
@@ -1716,11 +1724,12 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
 }
 .woocommerce .cart-collaterals table tr.woocommerce-shipping-totals.shipping{display: none;}
-.woocommerce .woocommerce-cart-form table.shop_table{
+.woocommerce .woocommerce-cart-form table.shop_table,
+.woocommerce .cart_totals table.shop_table,
+.woocommerce .woocommerce-order-details table.shop_table{
   border: unset;
   border-radius: 0;
 }
-.woocommerce .cart_totals table.shop_table,
 .woocommerce .woocommerce-checkout-review-order table.shop_table{
   border-radius: 0;
 }
@@ -1729,18 +1738,50 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   display: none;
 }
 .woocommerce-page .cart-collaterals .cart_totals tr th{text-align: left;}
-.woocommerce .cart-collaterals table tr {
+.woocommerce .cart-collaterals table tr{
     background: unset;
 }
-.woocommerce form .form-row textarea{font-family: "Raleway-Regular";}
-.checkout.woocommerce-checkout input.input-text{box-shadow:unset;color: #333333;}
+.woocommerce form .form-row textarea{font-family: "Raleway-Regular";    resize: none;}
+.checkout.woocommerce-checkout input.input-text{box-shadow:unset;color: #333333;font-size: 14px;}
 .checkout.woocommerce-checkout .select2-container {    z-index: 10;}
 .checkout.woocommerce-checkout .select2-container--default .select2-selection--single{
     border: 1px solid #DDD9D9;
     border-radius: 0;
     color: #333333;
+    font-size: 14px;
 }
-#order_review_heading{    padding-top: 30px;}
+#order_review_heading,
+#nova_poshta_shipping_fields h3{padding-top: 30px;}
+.wc-ukr-shipping-checkbox{
+  color: #e78b48;
+}
+.woocommerce-checkout #payment{
+  background: transparent;
+  padding: 50px 0 0 0;
+}
+.woocommerce-checkout #payment div.form-row.place-order{
+  padding: 0;
+}
+.woocommerce-checkout #payment ul.payment_methods{
+  border-bottom: unset;
+  padding: 0;
+}
+.woocommerce-checkout #payment ul.payment_methods li img{margin:0;}
+.woocommerce-order{
+  padding-top: 120px;
+}
+.woocommerce-thankyou-order-received{
+  font-family: "Raleway-Bold";
+  font-size: 2.0004em;  
+}
+.woocommerce .woocommerce-customer-details address{
+  border: unset;
+  padding: 6px 0;
+}
+.woocommerce .woocommerce-order-details table.shop_table th,
+.woocommerce .woocommerce-order-details table.shop_table td{
+  padding: 9px 0;
+}
 
 
 @media screen and (min-width: 720px) {
