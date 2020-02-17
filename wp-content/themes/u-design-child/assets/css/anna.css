@@ -1302,7 +1302,8 @@ color: #e78b48 !important;
   padding: 4px 0;
 }
 .woocommerce-hidden-price-filter .berocket_aapf_widget li.slider span.right input{text-align: right;}
-.shop-custom-wrapper .woocommerce-info{
+.shop-custom-wrapper .woocommerce-info,
+.cart-empty.woocommerce-info{
   background-color: transparent;
   border-top: unset;
   text-align: left;
@@ -1312,7 +1313,11 @@ color: #e78b48 !important;
   font-weight: bold;
   line-height: 2em;
 }
-.shop-custom-wrapper .woocommerce-info::before{display: none;}
+.cart-empty.woocommerce-info{
+  margin-bottom: 0;
+}
+.shop-custom-wrapper .woocommerce-info::before,
+.cart-empty.woocommerce-info::before{display: none;}
 .cart-count-in-main-header{
   position: absolute;
   right: 8px;
@@ -1610,6 +1615,14 @@ color: #e78b48 !important;
 #nova_poshta_shipping_fields h3{padding-top: 30px;}
 .wc-ukr-shipping-checkbox{
   color: #e78b48;
+}
+.return-to-shop .wc-backward{
+  padding: 0;
+  color: #e78b48;
+}
+.return-to-shop .wc-backward::after{
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  padding-left: 10px;  
 }
 .woocommerce-checkout #payment{
   background: transparent;
