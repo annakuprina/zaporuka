@@ -161,7 +161,7 @@ h3 {
 }
 
 .no_title_section #page-content {
-  background-color: #ececec;
+  background-color: #fbfbfb;
 }
 
 .one-project {
@@ -2352,6 +2352,7 @@ footer .footer-mob a.designer-link {
 
 .slick-lightbox-close:before {
   font-size: 38px;
+  content: url(../../img/close-modal.svg);
 }
 
 @media screen and (max-width: 700px) {
