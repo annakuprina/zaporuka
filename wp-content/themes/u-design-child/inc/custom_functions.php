@@ -460,40 +460,41 @@ class custom_reviews_class extends WPBakeryShortCode {
         if ($loop->post_count > 0) {
             $n = sizeof($loop->posts);
             $nPos = 1;
-            for($i=0;$i<$n;$i++){
+            for($i=0;$i<$n;$i++) {
                 $id = $loop->posts[$i]->ID;
 
-                $name = get_field('client_name',$id);
-                $region = get_field('region',$id);
+                $name = get_field('client_name', $id);
+                $region = get_field('region', $id);
                 $content_review = $loop->posts[$i]->post_content;
-            ob_start();
-            ?>
-            <!------------
-                REVIEWS
-            ------------->
+                ob_start();
+                ?>
+                <!------------
+                    REVIEWS
+                ------------->
 
-            <div class="reviews-wrapper">
-                <div class="reviews-item">
-                    <div class="reviews-item-title">
-                        <p><?php echo $name; ?></p>
-                        <p> <?php echo $region; ?></p>
-                    </div>
-                    <div class="reviews-item-text">
-                        <?php echo $content_review; ?>
-                    </div><!-- end reviews-item-text -->
-                </div><!-- end reviews-item -->
+                <div class="reviews-wrapper">
+                    <div class="reviews-item">
+                        <div class="reviews-item-title">
+                            <p><?php echo $name; ?></p>
+                            <p> <?php echo $region; ?></p>
+                        </div>
+                        <div class="reviews-item-text">
+                            <?php echo $content_review; ?>
+                        </div><!-- end reviews-item-text -->
+                    </div><!-- end reviews-item -->
 
-            </div><!-- end reviews-wrapper -->
-            <!--        <div class="pagination-block">-->
-            <!--        </div>-->
-            <div class="pagination">
-                <ul>
-                    <li class="nav-previous"><?php next_posts_link('← ' . 'Предыдущие'); ?></li>
-                    <li class="nav-next"><?php previous_posts_link('Следующие' . ' →'); ?></li>
-                </ul>
-            </div>
+                </div><!-- end reviews-wrapper -->
+                <!--        <div class="pagination-block">-->
+                <!--        </div>-->
+                <div class="pagination">
+                    <ul>
+                        <li class="nav-previous"><?php next_posts_link('← ' . 'Предыдущие'); ?></li>
+                        <li class="nav-next"><?php previous_posts_link('Следующие' . ' →'); ?></li>
+                    </ul>
+                </div>
 
-            <?php
+                <?php
+            }
         }
         wp_reset_postdata();
         $html = ob_get_clean();
