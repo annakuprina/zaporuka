@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    dots: true,
+    dots: true
   });
 
   // VOLUNTEERS SLIDER DESKTOP
@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    dots: true,
+    dots: true
   });
 
   // PHOTO SLIDER
@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
           slidesToShow: 1,
           slidesToScroll: 1
         }
-      },
+      }
     ]
   });
 
@@ -87,7 +87,7 @@ jQuery(document).ready(function($) {
           slidesToShow: 1,
           slidesToScroll: 1
         }
-      },
+      }
     ]
   });
   // lightbox for video slider
@@ -115,7 +115,7 @@ jQuery(document).ready(function($) {
           slidesToShow: 1,
           slidesToScroll: 1
         }
-      },
+      }
     ]
   });
 
@@ -125,12 +125,81 @@ jQuery(document).ready(function($) {
     itemSelector: ".documents-slide > img"
   });
 
-  $('.slide').slick({
+  $(".slide").slick({
     dots: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 1,
+    slidesToShow: 1
     //adaptiveHeight: true
   });
 
+  /*TABS WITH SLIDERS. one project page*/
+  $(".sliders-tabs-wrapper .one-tab-link").on("click", function() {
+    $(".sliders-tabs-wrapper .one-tab-link").removeClass("tab-active");
+    $(this).addClass("tab-active");
+
+    var clickedTitleDataId = $(this).attr("data-id"); //get data-id attribute of clicked title
+    /*Find tab-content with same data-id attribute like clicked title*/
+    $(".slider_tabs_content").each(function() {
+      var tabsContentDataId = $(this).attr("data-id");
+      if (clickedTitleDataId == tabsContentDataId) {
+        $(".slider_tabs_content ").css({
+          "z-index": "-1",
+          position: "absolute"
+        });
+        $(this).css({ "z-index": "1", position: "relative" });
+      }
+    });
+  });
+
+  /*home-page-section3 Owl carousel(adaptivity from 1140px to 768px).
+  This carousel is made using plugin "Post Slider Carousel & Custom Post Grids".
+  Horizontal  slider with 2 slides. Visible  from 1140px to 768px. 
+  For screen less then 768px owl slider from plugin is hidden,and vertical slick slider is shown.
+  And uses Owl carousel. There is no possibility to make carousel adaptive, using admin panel.
+  So on window resize we should destroy existing carousel and show 2 or 3 slides, depending on window size.*/
+
+  $(window)
+    .on("resize", function() {
+      if ($(window).width() < 1140) {
+        $(".owl-carousel").owlCarousel("destroy");
+        $(".owl-carousel").owlCarousel({
+          items: 2,
+          nav: false
+        });
+      } else {
+        $(".owl-carousel").owlCarousel("destroy");
+        $(".owl-carousel").owlCarousel({
+          items: 3,
+          nav: false
+        });
+      }
+    })
+    .resize();
+
+  //home-page-section3 Slick carousel(Mobile version for screens less then 768px).
+  $(".rewards-slider").slick({
+    dots: true,
+    arrows: false,
+    vertical: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    verticalSwiping: true
+    // width: 250
+  });
+
+  var maxHeight = -1;
+  $(".rewards-slide").each(function() {
+    if ($(this).height() > maxHeight) {
+      maxHeight = $(this).height();
+    }
+  });
+  $(".rewards-slide").each(function() {
+    if ($(this).height() < maxHeight) {
+      $(this).css(
+        "margin",
+        Math.ceil((maxHeight - $(this).height()) / 2) + "px 0"
+      );
+    }
+  });
 });

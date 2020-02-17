@@ -416,19 +416,19 @@ h6,
 .proj-timeline-one-step {
   cursor: pointer;
 }
-.help_button_single_block button:hover{
+.help_button_single_block .vc_btn3:hover{
   border-color: transparent!important;
 }
-.help_button_single_block button{
+
+.help_button_single_block .vc_btn3{
   background: transparent!important;
-}
-.help_button_single_block button{
   color: #f39856!important;
   letter-spacing: 0.5px;
   transform: scale(1, 0.93);
   padding-top: 10px!important;
+  font-family: "Raleway-Bold";
 }
-.help_button_single_block button::after{
+.help_button_single_block .vc_btn3::after{
   content: url(/wp-content/themes/u-design-child//img/arrow-help.svg);
   padding-left: 10px;
 }
@@ -512,7 +512,8 @@ h6,
   padding: 0 0 45px 0!important;
   vertical-align: middle!important;
 }
-.project-partners-carousel .slick-dots{
+.project-partners-carousel .slick-dots,
+.write_about_us_carousel .slick-dots{
   left: 12.8%;
 }
 .help-partners-block .help-partner-patronat{
@@ -559,9 +560,7 @@ h6,
 }
 
 /*************************** Directions Page ****************************/
-directions_section1_wrapper{
-  padding-bottom: 35px;
-}
+
 .directions_section1_right_block_wrapper{
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
 }
@@ -601,7 +600,9 @@ directions_section1_wrapper{
   padding-top: 50px;
   padding-bottom: 43px;
 }
-
+.custom-container .content_column.help_column p{
+  cursor: pointer;
+}
 /*************************** Our Team ***************************/
 .our-team-hover-wrapper{
   box-shadow: 4px 4px 20px rgba(209, 209, 209, 0.2);
@@ -641,4 +642,41 @@ directions_section1_wrapper{
   font-family: "Raleway-Bold";
   font-size: 14px;
   padding-top: 0;
+}
+.write-aboutus-wrapper {
+  padding-top: 130px;
+}
+.write-aboutus-carousel-wrapper{
+  padding-top: 25px;
+}
+.write-aboutus-carousel-wrapper .slick-list{
+  padding-bottom: 10px;
+}
+.write_about_us_carousel .vc_grid.vc_row .vc_grid-item {
+  vertical-align: middle;
+}
+
+.write_about_us_button_wrapper .help_button_single_block .vc_btn3{
+  padding-top: 23px!important;
+}
+.write_about_us_carousel .vc_gitem-zone-a .vc_gitem-row-position-top{
+  position: inherit;
+}
+.testimonials_section{
+  padding-top: 100px;
+}
+.reviews-item{
+  height: 440px;
+}
+.reviews-item .vc_gitem_row .vc_gitem-col{
+  padding: 0 0 10px;
+}
+.reviews-item-subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 30px;
+}
+.reviews-item-content{
+  line-height: 28px;
 }
