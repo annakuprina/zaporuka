@@ -1617,6 +1617,7 @@ color: #e78b48 !important;
   color: #e78b48;
 }
 .return-to-shop .wc-backward{
+  background-color: transparent!important;
   padding: 0!important;
   color: #e78b48!important;
 }
