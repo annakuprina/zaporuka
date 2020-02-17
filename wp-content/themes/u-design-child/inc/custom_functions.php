@@ -454,11 +454,18 @@ class custom_reviews_class extends WPBakeryShortCode {
 
         $args = array(
             'post_type' => 'reviews',
-            'posts_per_page' => 2,
+            'posts_per_page' => 2
         );
-        $testimonials = get_posts( $args );
-        foreach( $testimonials as $post ) {
-            var_dump($post->ID);
+        $loop = new WP_Query($args);
+        if ($loop->post_count > 0) {
+            $n = sizeof($loop->posts);
+            $nPos = 1;
+            for($i=0;$i<$n;$i++){
+                $id = $loop->posts[$i]->ID;
+
+                $name = get_field('client_name',$id);
+                $region = get_field('region',$id);
+                $content_review = $loop->posts[$i]->post_content;
             ob_start();
             ?>
             <!------------
@@ -468,11 +475,11 @@ class custom_reviews_class extends WPBakeryShortCode {
             <div class="reviews-wrapper">
                 <div class="reviews-item">
                     <div class="reviews-item-title">
-                        <p><?php the_title() ?></p>
-                        <p> м. Авдіївка</p>
+                        <p><?php echo $name; ?></p>
+                        <p> <?php echo $region; ?></p>
                     </div>
                     <div class="reviews-item-text">
-                        <?php the_content() ?>
+                        <?php echo $content_review; ?>
                     </div><!-- end reviews-item-text -->
                 </div><!-- end reviews-item -->
 
