@@ -505,7 +505,7 @@ class custom_reviews_class extends WPBakeryShortCode {
 <!--                --><?php //previous_posts_link('&raquo;') ?>
 <!--                --><?php //next_posts_link('&laquo;', $new_query->max_num_pages) ?>
 <!--            </div>-->
-            <?php kama_pagenavi(); ?>
+            <?php echo kama_pagenavi(); ?>
         </div>
             <?php
 
