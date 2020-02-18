@@ -69,9 +69,9 @@ jQuery(document).ready(function($) {
     $('.page-numbers').removeClass('current');
     $(this).addClass('current');
     var link = $(this).attr('href');
-    $('.reviews-wrapper').fadeOut(100, function(){
+    $('.reviews-wrapper').fadeOut(0, function(){
       $(this).load(link + ' .reviews-wrapper', function() {
-        $(this).fadeIn(100);
+        $(this).fadeIn(0);
       });
     });
   });
