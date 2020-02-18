@@ -102,6 +102,9 @@ select:-webkit-autofill:focus {
 #main-menu ul.sf-menu .pll-parent-menu-item .sub-menu li a {
   color: #333333;
 }
+#main-menu ul.sf-menu .pll-parent-menu-item .sub-menu li a span{
+   font-family: "Raleway-Regular";
+}
 #main-menu ul.sf-menu .pll-parent-menu-item .sub-menu li a:hover {
   color: #e78b48;
   font-weight: 700;
