@@ -38,8 +38,8 @@ function udesign_child_theme_styles() {
     wp_enqueue_script( 'jquery-ui-js', CHILD_DIR . '/assets/js/jquery-ui.min.js' );
 
     if ( is_page('pro-nas') ){
-        wp_enqueue_script( 'artabr_lm_ajax', CHILD_DIR . '/js/ajax.js', true );
-        wp_enqueue_script( 'historyjs', CHILD_DIR . '/js/history.js', true );
+        wp_enqueue_script( 'artabr_lm_ajax', CHILD_DIR . '/assets/js/ajax.js', true );
+        wp_enqueue_script( 'historyjs', CHILD_DIR . '/assets/js/history.js', true );
 
         // Add parameters for the JS
         global $wp_query;
