@@ -489,9 +489,8 @@ class custom_reviews_class extends WPBakeryShortCode {
                     ?>
                     <div class="reviews-item">
                         <div class="reviews-item-title">
-                            <p><?php echo $post_id; ?></p>
                             <p><?php echo $name; ?></p>
-                            <p> <?php echo $region; ?></p>
+                            <p><?php echo $region; ?></p>
                         </div>
                         <div class="reviews-item-text">
                             <?php the_content(); ?>
@@ -500,31 +499,28 @@ class custom_reviews_class extends WPBakeryShortCode {
                 <?php endwhile; ?>
 
             </div><!-- end reviews-wrapper -->
-            <!--        <div class="pagination-block">-->
-            <!--        </div>-->
-<!--            <div class="pagination">-->
-                <?php //previous_posts_link('&raquo;') ?>
-                <?php //next_posts_link('&laquo;', $new_query->max_num_pages) ?>
 
-<!--            </div>-->
-            <nav class="pagination">
-                <?php
-                $big = 999999999;
-                echo paginate_links( array(
-                    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-                    'format' => '?paged=%#%',
-                    'current' => max( 1, get_query_var('paged') ),
-                    'total' => $new_query->max_num_pages,
-                    'prev_text' => '&laquo;',
-                    'next_text' => '&raquo;'
-                ) );
-                ?>
-            </nav>
+            <div class="pagination-block">
+                <?php previous_posts_link('&raquo;') ?>
+                <?php next_posts_link('&laquo;', $new_query->max_num_pages) ?>
+
+            </div>
+<!--            <nav class="pagination">-->
+<!--                --><?php
+//                $big = 999999999;
+//                echo paginate_links( array(
+//                    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+//                    'format' => '?paged=%#%',
+//                    'current' => max( 1, get_query_var('paged') ),
+//                    'total' => $new_query->max_num_pages,
+//                    'prev_text' => '&laquo;',
+//                    'next_text' => '&raquo;'
+//                ) );
+//                ?>
+<!--            </nav>-->
             <?php wp_reset_postdata(); ?>
         </div>
-            <?php
-
-
+        <?php
         $html = ob_get_clean();
         return $html;
     }
