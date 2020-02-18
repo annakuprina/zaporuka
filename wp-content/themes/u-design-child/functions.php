@@ -51,10 +51,7 @@ function udesign_child_theme_styles() {
             array(
                 'startPage'     => $paged,
                 'maxPages'      => $max,
-                'nextLink'      => next_posts( $max, false ),
-                'i18n_loadmore' => __( ' Показать еще...', 'mythemeshop' ),
-                'i18n_nomore'   => __( ' Больше нет', 'mythemeshop' ),
-                'i18n_loading'  => __( ' Загрузка...', 'mythemeshop' ),
+                'nextLink'      => next_posts( $max, false )
             )
         );
     }
