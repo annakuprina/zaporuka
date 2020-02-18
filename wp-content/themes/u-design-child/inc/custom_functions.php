@@ -467,7 +467,6 @@ class custom_reviews_class extends WPBakeryShortCode {
                     $post_id = get_the_ID();
                     $name =  get_field('client_name',$post_id);
                     $region = get_field('region',$post_id);
-                    $content_review = the_content();
                     ?>
                    <div class="reviews-item">
                        <div class="reviews-item-title">
@@ -475,7 +474,7 @@ class custom_reviews_class extends WPBakeryShortCode {
                            <p> <?php echo $region; ?></p>
                        </div>
                        <div class="reviews-item-text">
-                           <?php echo $content_review; ?>
+                           <?php the_content(); ?>
                        </div><!-- end reviews-item-text -->
                    </div><!-- end reviews-item -->
                 <?php endwhile; ?>
