@@ -68,7 +68,7 @@ jQuery(document).ready(function($) {
     e.preventDefault();
     var link = $(this).attr('href');
     $('.reviews-wrapper').fadeOut(500, function(){
-      $(this).load(link + ' #content', function() {
+      $(this).load(link + ' .reviews-wrapper', function() {
         $(this).fadeIn(500);
       });
     });
