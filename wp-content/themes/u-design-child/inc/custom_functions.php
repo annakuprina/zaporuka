@@ -501,11 +501,12 @@ class custom_reviews_class extends WPBakeryShortCode {
             </div><!-- end reviews-wrapper -->
             <!--        <div class="pagination-block">-->
             <!--        </div>-->
-<!--            <div class="pagination">-->
-<!--                --><?php //previous_posts_link('&raquo;') ?>
-<!--                --><?php //next_posts_link('&laquo;', $new_query->max_num_pages) ?>
-<!--            </div>-->
-            <?php echo kama_pagenavi(); ?>
+            <div class="pagination">
+                <?php //previous_posts_link('&raquo;') ?>
+                <?php //next_posts_link('&laquo;', $new_query->max_num_pages) ?>
+                <?php echo kama_pagenavi('post_type=reviews'); ?>
+            </div>
+
         </div>
             <?php
 
