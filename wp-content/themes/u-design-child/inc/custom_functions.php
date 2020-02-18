@@ -477,7 +477,6 @@ class custom_reviews_class extends WPBakeryShortCode {
                    $region = get_field('region',$id);
                    $content_review = $loop->posts[$i]->post_content;
                    ?>
-
                    <div class="reviews-item">
                        <div class="reviews-item-title">
                            <p><?php echo $name; ?></p>
