@@ -124,6 +124,62 @@ h3 {
 /*-------
   HEADER
 ---------*/
+.mob-menu-left {
+  width: 50%;
+}
+/* 
+.mob-menu-left #menu-item-1185 {
+  display: none;
+} */
+
+.mean-bar #menu-item-1185 {
+  list-style: none;
+}
+
+.mob-menu-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mob-menu-right a {
+  color: #fff;
+}
+
+.mean-bar .top-bar-email-block {
+  padding-left: 0;
+  font-family: "Proxima-Nova-Semibold";
+  font-size: 12px;
+}
+
+.mean-bar .top-bar-tel-block {
+  font-family: "Proxima-Nova-Semibold";
+  font-size: 12px;
+}
+
+.mean-bar #menu-item-305 {
+  margin-bottom: 17px;
+}
+
+.mean-bar #menu-item-305::after {
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  padding-left: 10px;
+}
+
+.mean-bar .top-bar-help-block {
+  margin-bottom: 58px;
+  line-height: 17px;
+}
+
+.mean-container .top-bar-help-block a {
+  color: #fff;
+  font-size: 12px;
+}
+
+.mean-bar .help-header-link {
+  display: block !important;
+}
+
 #custom-top-bar {
   padding: 0 20px;
 }
@@ -150,7 +206,7 @@ h3 {
 }
 
 .mean-container .mean-nav ul li a {
-  padding: 10px 0;
+  padding: 0 0 13px 0;
 }
 
 .mean-container a.meanmenu-reveal {
@@ -170,10 +226,6 @@ h3 {
   width: 50%;
 }
 
-.help-header-link {
-  display: block;
-}
-
 .mean-bar .header-mob-socials {
   display: flex;
 }
@@ -187,12 +239,16 @@ h3 {
 }
 
 .mean-bar #sticky-menu-logo {
+  width: 100%;
   display: block !important;
 }
 
 .mean-container .mean-nav {
   margin-top: 0;
   padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .mob-menu-wrapper {
@@ -2307,22 +2363,38 @@ footer .footer-mob a.designer-link {
 }
 
 .home-page-section3 .h2-header-line {
-  margin-bottom: 68px;
+  margin-bottom: 60px;
+}
+
+.home-page-section3 .owl-stage {
+  height: 184px;
+}
+
+.home-page-section3 .owl-stage-outer {
+  height: 184px;
 }
 
 .home-page-section3 .h2-header-line::before {
   content: "";
-  width: 64px;
-  height: 4px;
+  width: 58px;
+  height: 3px;
   background-color: #e78b48;
-  left: -122px;
+  left: -110px;
   position: absolute;
-  top: 27px;
+  top: 29px;
 }
 
 .home-page-section3 .owl-carousel .owl-item .ocpc-topbox p {
-  font-size: 23px;
-  line-height: 34px;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.home-page-section3 .owl-item.active:nth-child(1) {
+  margin-right: 33px;
+}
+
+.home-page-section3 .owl-item.active:nth-child(2) {
+  margin-right: 33px;
 }
 
 /*end home page section3*/

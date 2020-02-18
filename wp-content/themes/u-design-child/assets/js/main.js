@@ -192,25 +192,60 @@ jQuery(document).ready(function($) {
   $(window)
     .on("resize", function() {
       if ($("div").hasClass("mean-bar")) {
-        console.log("has mean-bar CLASS!");
-        $("#main-top-menu").wrap('<div class="mob-menu-wrapper"></div>');
-        $(".mob-menu-wrapper").append('<div class="mob-menu-right"></div>');
-        $("#main-top-menu").append(
-          '<div class="mob-menu-left"></div><div class="mob-menu-right"></div>'
-        );
+        // console.log("has mean-bar CLASS!");
+        // $("#main-top-menu").wrap('<div class="mob-menu-wrapper"></div>');
 
-        $(".help-header-link").appendTo(".mob-menu-right");
+        /*make 2 parts of header: left and right*/
+        $(".mean-nav").append('<div class="mob-menu-wrapper"></div>');
 
-        $(".top-bar-help-block").appendTo(".mob-menu-right");
+        // $(".top-bar-help-block")
+        //   .eq(0)
+        //   .appendTo(".mob-menu-right");
+        // $(".top-bar-tel-block").appendTo(".mob-menu-right");
+        // $(".top-bar-email-block").appendTo(".mob-menu-right");
+        // $("#main-top-menu li").each(function(i) {
+        //   $(this).appendTo(".mob-menu-left");
+        // });
+        // $(
+        //   '<div class="header-mob-socials"><a class="header-mob-soc-fb"><i class="fa fa-facebook" aria-hidden="true"></i></a><a class="header-mob-soc-youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a><a class="header-mob-soc-insta"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>'
+        // ).appendTo(".mob-menu-right");
+        // $(".mob-menu-wrapper .current-menu-parent").appendTo(".mob-menu-right");
+        $("#main-top-menu").appendTo(".mob-menu-wrapper");
+        $('<div class="mob-menu-right"></div>').appendTo(".mob-menu-wrapper");
 
-        $(".top-bar-tel-block").appendTo(".mob-menu-right");
-        $(".top-bar-email-block").appendTo(".mob-menu-right");
+        /*Right part of header*/
 
+        /* Допомогти */
+        $(".help-header-link")
+          .eq(0)
+          .clone()
+          .appendTo(".mob-menu-right");
+
+        /* "Допомогти, вiдправивши смс на номер 88077" */
+        $(".top-bar-help-block")
+          .clone()
+          .appendTo(".mob-menu-right");
+
+        /* Phone */
+        $(".top-bar-tel-block")
+          .clone()
+          .appendTo(".mob-menu-right");
+
+        /* Email */
+        $(".top-bar-email-block")
+          .clone()
+          .appendTo(".mob-menu-right");
+
+        /* Add social links block to the right part of menu*/
         $(
           '<div class="header-mob-socials"><a class="header-mob-soc-fb"><i class="fa fa-facebook" aria-hidden="true"></i></a><a class="header-mob-soc-youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a><a class="header-mob-soc-insta"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>'
         ).appendTo(".mob-menu-right");
-
         $(".mob-menu-wrapper .current-menu-parent").appendTo(".mob-menu-right");
+
+        /* Languages */
+        $("#menu-item-1185")
+          .clone()
+          .appendTo(".mob-menu-right");
       }
     })
     .resize();
