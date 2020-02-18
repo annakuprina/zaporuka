@@ -64,11 +64,11 @@ jQuery(document).ready(function($) {
     slidesToScroll: 3
   });
 
-  $('.reviews-wrapper').on('click', '.pagination a', function(e){
+  $('.reviews').on('click', '.pagination a', function(e){
     e.preventDefault();
     var link = $(this).attr('href');
-    $('.reviews-wrapper').fadeOut(500, function(){
-      $(this).load(link + ' .reviews-wrapper', function() {
+    $('.reviews').fadeOut(500, function(){
+      $(this).load(link + ' .reviews', function() {
         $(this).fadeIn(500);
       });
     });
