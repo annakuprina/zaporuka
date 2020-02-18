@@ -466,7 +466,7 @@ class custom_reviews_class extends WPBakeryShortCode {
                 $name =  "{{ post_meta_value:client_name }}";
                 $region = "{{ post_meta_value:region }}";
                 $content_review = $loop->posts[$i]->post_content;
-                var_dump($content_review);
+                var_dump($loop->posts[$i]);
                 ob_start();
                 ?>
                 <!------------
