@@ -496,6 +496,22 @@ class custom_reviews_class extends WPBakeryShortCode {
                     <li class="nav-next"><?php previous_posts_link('Следующие' . ' →'); ?></li>
                 </ul>
             </div>
+            <div id="content">
+                <?php
+                $new_query = new WP_Query();
+                $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;;
+                $new_query->query('post_type=reviews&showposts=2'.'&paged='.$paged);
+                ?>
+
+                <?php while ($new_query->have_posts()) : $new_query->the_post(); ?>
+                    <?php the_title(); ?>
+
+                <?php endwhile; ?>
+                <div id="pagination">
+                    <?php next_posts_link('&laquo; Older Entries', $new_query->max_num_pages) ?>
+                    <?php previous_posts_link('Newer Entries &raquo;') ?>
+                </div>
+            </div><!-- #content -->
             <?php
         }
         wp_reset_postdata();

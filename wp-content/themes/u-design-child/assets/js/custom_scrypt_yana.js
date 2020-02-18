@@ -63,4 +63,15 @@ jQuery(document).ready(function($) {
     slidesToShow: 3,
     slidesToScroll: 3
   });
+
+  $('#content').on('click', '#pagination a', function(e){
+    e.preventDefault();
+    var link = $(this).attr('href');
+    $('#content').fadeOut(500, function(){
+      $(this).load(link + ' #content', function() {
+        $(this).fadeIn(500);
+      });
+    });
+  });
+
 });
