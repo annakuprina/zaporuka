@@ -64,10 +64,10 @@ jQuery(document).ready(function($) {
     slidesToScroll: 3
   });
 
-  $('#content').on('click', '#pagination a', function(e){
+  $('.reviews-wrapper').on('click', '.pagination a', function(e){
     e.preventDefault();
     var link = $(this).attr('href');
-    $('#content').fadeOut(500, function(){
+    $('.reviews-wrapper').fadeOut(500, function(){
       $(this).load(link + ' #content', function() {
         $(this).fadeIn(500);
       });

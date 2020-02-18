@@ -452,30 +452,22 @@ class custom_reviews_class extends WPBakeryShortCode {
         WPBMap::addAllMappedShortcodes();
         ob_start();
 
-        $args = array(
-            'post_type' => 'reviews',
-            'posts_per_page' => 2
-        );
-        $loop = new WP_Query($args);
+        $new_query = new WP_Query();
+        $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;;
+        $new_query->query('post_type=reviews&showposts=2'.'&paged='.$paged);
 
-//                var_dump($loop->posts[$i]);
         ob_start();
         ?>
-                <!------------
-                    REVIEWS
-                ------------->
-        <?php
-        if ($loop->post_count > 0) { ?>
+        <!------------
+            REVIEWS
+         ------------->
             <div class="reviews-wrapper">
                <?php
-               $n = sizeof($loop->posts);
-               $nPos = 1;
-               for($i=0;$i<$n;$i++) {
-                   $id = $loop->posts[$i]->ID;
-
-                   $name =  get_field('client_name',$id);
-                   $region = get_field('region',$id);
-                   $content_review = $loop->posts[$i]->post_content;
+                while ($new_query->have_posts()) : $new_query->the_post();
+                $post_id = the_ID();
+                   $name =  get_field('client_name',$post_id);
+                   $region = get_field('region',$post_id);
+                   $content_review = the_content();
                    ?>
                    <div class="reviews-item">
                        <div class="reviews-item-title">
@@ -486,34 +478,16 @@ class custom_reviews_class extends WPBakeryShortCode {
                            <?php echo $content_review; ?>
                        </div><!-- end reviews-item-text -->
                    </div><!-- end reviews-item -->
-               <?php } ?>
+               <?php endwhile; ?>
             </div><!-- end reviews-wrapper -->
             <!--        <div class="pagination-block">-->
             <!--        </div>-->
             <div class="pagination">
-                <ul>
-                    <li class="nav-previous"><?php next_posts_link('← ' . 'Предыдущие'); ?></li>
-                    <li class="nav-next"><?php previous_posts_link('Следующие' . ' →'); ?></li>
-                </ul>
+                <?php next_posts_link('&laquo;', $new_query->max_num_pages) ?>
+                <?php previous_posts_link('&raquo;') ?>
             </div>
-            <div id="content">
-                <?php
-                $new_query = new WP_Query();
-                $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;;
-                $new_query->query('post_type=reviews&showposts=2'.'&paged='.$paged);
-                ?>
-
-                <?php while ($new_query->have_posts()) : $new_query->the_post(); ?>
-                    <?php the_title(); ?>
-
-                <?php endwhile; ?>
-                <div id="pagination">
-                    <?php next_posts_link('&laquo; Older Entries', $new_query->max_num_pages) ?>
-                    <?php previous_posts_link('Newer Entries &raquo;') ?>
-                </div>
-            </div><!-- #content -->
             <?php
-        }
+
         wp_reset_postdata();
         $html = ob_get_clean();
         return $html;
