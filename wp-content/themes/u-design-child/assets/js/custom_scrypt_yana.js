@@ -69,10 +69,11 @@ jQuery(document).ready(function($) {
     $('.page-numbers').removeClass('current');
     $(this).addClass('current');
     var link = $(this).attr('href');
-    // $('.reviews-wrapper').fadeOut(0, function(){
-      $(this).load(link + ' .reviews-wrapper');
-    // });
+    $('.reviews-wrapper').fadeOut(0, function(){
+      $('.reviews-block').empty();
+      $(this).load(link + ' .reviews-wrapper', function() {
+        $(this).fadeIn(0);
+      });
+    });
   });
-
-
 });
