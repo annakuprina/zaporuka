@@ -66,6 +66,8 @@ jQuery(document).ready(function($) {
 
   $('.reviews-block').on('click', '.pagination-block a', function(e){
     e.preventDefault();
+    $('.page-numbers').removeClass('current');
+    $(this).addClass('current');
     var link = $(this).attr('href');
     $('.reviews-wrapper').fadeOut(100, function(){
       $(this).load(link + ' .reviews-wrapper', function() {
