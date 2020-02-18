@@ -70,9 +70,10 @@ jQuery(document).ready(function($) {
     $(this).addClass('current');
     var link = $(this).attr('href');
     // $('.reviews-wrapper').fadeOut(0, function(){
+      $('.reviews-block').empty();
       $(this).load(link + ' .reviews-wrapper');
+    //     $(this).fadeIn(0);
+    //   });
     // });
   });
-
-
 });
