@@ -489,6 +489,7 @@ class custom_reviews_class extends WPBakeryShortCode {
                     ?>
                     <div class="reviews-item">
                         <div class="reviews-item-title">
+                            <p><?php echo $post_id; ?></p>
                             <p><?php echo $name; ?></p>
                             <p><?php echo $region; ?></p>
                         </div>
@@ -501,8 +502,19 @@ class custom_reviews_class extends WPBakeryShortCode {
             </div><!-- end reviews-wrapper -->
 
             <div class="pagination-block">
-                <?php previous_posts_link('&raquo;') ?>
-                <?php next_posts_link('&laquo;', $new_query->max_num_pages) ?>
+<!--                --><?php //previous_posts_link('&raquo;') ?>
+<!--                --><?php //next_posts_link('&laquo;', $new_query->max_num_pages) ?>
+                <?php
+                $big = 999999999;
+                echo paginate_links( array(
+                    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+                    'format' => '?paged=%#%',
+                    'current' => max( 1, get_query_var('paged') ),
+                    'total' => $new_query->max_num_pages,
+                    'prev_text' => '&laquo;',
+                    'next_text' => '&raquo;'
+                ) );
+                ?>
 
             </div>
 <!--            <nav class="pagination">-->
