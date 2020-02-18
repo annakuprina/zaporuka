@@ -64,15 +64,15 @@ jQuery(document).ready(function($) {
     slidesToScroll: 3
   });
 
-  // $('.reviews-block').on('click', '.pagination a', function(e){
-  //   e.preventDefault();
-  //   var link = $(this).attr('href');
-  //   $('.reviews-block').fadeOut(500, function(){
-  //     $(this).load(link + ' .reviews-block', function() {
-  //       $(this).fadeIn(500);
-  //     });
-  //   });
-  // });
+  $('.reviews-block').on('click', '.pagination-block a', function(e){
+    e.preventDefault();
+    var link = $(this).attr('href');
+    $('.reviews-wrapper').fadeOut(100, function(){
+      $(this).load(link + ' .reviews-wrapper', function() {
+        $(this).fadeIn(100);
+      });
+    });
+  });
 
 
 });
