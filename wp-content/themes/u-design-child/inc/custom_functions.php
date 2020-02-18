@@ -443,13 +443,30 @@ class custom_reviews_class extends WPBakeryShortCode {
         vc_map( array(
             'name' => __( ' Custom Testimonials', 'fluidtopics' ),
             'base' => 'vc_testimonials_content',
-            'category' => __( 'Content', 'fluidtopics' )
+            'category' => __( 'Content', 'fluidtopics' ),
+            'params' => array(
+                array(
+                    'type' => 'textfield',
+                    'param_name' => 'special_class',
+                    'heading' => esc_html__( 'Special class', 'fluidtopics' ),
+                    'value' => '',
+                    'admin_label' => false,
+                    'weight' => 0,
+                    'group' => 'Custom Group',
+                ),
+            )
         ));
     }
     // Element HTML
     public function vc_testimonials_content( $atts )
     {
         WPBMap::addAllMappedShortcodes();
+        /**
+         * @var string $special_class
+         */
+        extract(shortcode_atts(array(
+            'special_class' => '',
+        ), $atts));
         ob_start();
 
         $new_query = new WP_Query();
@@ -461,23 +478,26 @@ class custom_reviews_class extends WPBakeryShortCode {
         <!------------
             REVIEWS
          ------------->
+        <div class="reviews-block <?php echo $special_class; ?>">
+
             <div class="reviews-wrapper">
-               <?php
+                <?php
                 while ($new_query->have_posts()) : $new_query->the_post();
                     $post_id = get_the_ID();
                     $name =  get_field('client_name',$post_id);
                     $region = get_field('region',$post_id);
                     ?>
-                   <div class="reviews-item">
-                       <div class="reviews-item-title">
-                           <p><?php echo $name; ?></p>
-                           <p> <?php echo $region; ?></p>
-                       </div>
-                       <div class="reviews-item-text">
-                           <?php the_content(); ?>
-                       </div><!-- end reviews-item-text -->
-                   </div><!-- end reviews-item -->
+                    <div class="reviews-item">
+                        <div class="reviews-item-title">
+                            <p><?php echo $name; ?></p>
+                            <p> <?php echo $region; ?></p>
+                        </div>
+                        <div class="reviews-item-text">
+                            <?php the_content(); ?>
+                        </div><!-- end reviews-item-text -->
+                    </div><!-- end reviews-item -->
                 <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
             </div><!-- end reviews-wrapper -->
             <!--        <div class="pagination-block">-->
             <!--        </div>-->
@@ -485,9 +505,10 @@ class custom_reviews_class extends WPBakeryShortCode {
                 <?php previous_posts_link('&raquo;') ?>
                 <?php next_posts_link('&laquo;', $new_query->max_num_pages) ?>
             </div>
+        </div>
             <?php
 
-        wp_reset_postdata();
+
         $html = ob_get_clean();
         return $html;
     }
