@@ -30,7 +30,9 @@ jQuery(document).ready(function($) {
   });
 
   //call help big modal
-  $(".help-header-link a, .mob-menu-right #menu-item-305 a").click(function(e) {
+  $(
+    ".help-header-link a,.mob-menu-right #menu-item-305 a, #menu-Futer-Dopomogti-ukr li:eq(0) a,#menu-Futer-Dopomogti-rus  li:eq(0) a,#menu-Futer-Dopomogti-en li:eq(0) a"
+  ).click(function(e) {
     e.preventDefault();
     $("#ModalHelpForm").addClass("opened");
     $("body").addClass("noscroll");

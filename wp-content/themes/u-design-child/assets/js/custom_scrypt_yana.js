@@ -63,4 +63,16 @@ jQuery(document).ready(function($) {
     slidesToShow: 3,
     slidesToScroll: 3
   });
+
+  $('.reviews-block').on('click', '.pagination-block a', function(e){
+    e.preventDefault();
+    $('.page-numbers').removeClass('current');
+    $(this).addClass('current');
+    var link = $(this).attr('href');
+    $('.reviews-wrapper').fadeOut(0, function(){
+      $(this).load(link + ' .reviews-wrapper', function() {
+        $(this).fadeIn(0);
+      });
+    });
+  });
 });

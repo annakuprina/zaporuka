@@ -443,62 +443,99 @@ class custom_reviews_class extends WPBakeryShortCode {
         vc_map( array(
             'name' => __( ' Custom Testimonials', 'fluidtopics' ),
             'base' => 'vc_testimonials_content',
-            'category' => __( 'Content', 'fluidtopics' )
+            'category' => __( 'Content', 'fluidtopics' ),
+            'params' => array(
+                array(
+                    'type' => 'textfield',
+                    'param_name' => 'special_class',
+                    'heading' => esc_html__( 'Special class', 'fluidtopics' ),
+                    'value' => '',
+                    'admin_label' => false,
+                    'weight' => 0,
+                    'group' => 'Custom Group',
+                ),
+            )
         ));
     }
     // Element HTML
     public function vc_testimonials_content( $atts )
     {
         WPBMap::addAllMappedShortcodes();
+        /**
+         * @var string $special_class
+         */
+        extract(shortcode_atts(array(
+            'special_class' => '',
+        ), $atts));
         ob_start();
 
-        $args = array(
-            'post_type' => 'reviews',
-            'posts_per_page' => 2
-        );
-        $loop = new WP_Query($args);
-        if ($loop->post_count > 0) {
-            $n = sizeof($loop->posts);
-            $nPos = 1;
-            for($i=0;$i<$n;$i++) {
-                $id = $loop->posts[$i]->ID;
+        $new_query = new WP_Query();
+        $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;;
+        $new_query->query('post_type=reviews&showposts=2'.'&paged='.$paged);
 
-                $name =  "{{ post_meta_value:client_name }}";
-                $region = "{{ post_meta_value:region }}";
-                $content_review = $loop->posts[$i]->post_content;
-                ob_start();
-                ?>
-                <!------------
-                    REVIEWS
-                ------------->
+        ob_start();
+        ?>
+        <!------------
+            REVIEWS
+         ------------->
+        <div class="reviews-block <?php echo $special_class; ?>">
 
-                <div class="reviews-wrapper">
+            <div class="reviews-wrapper">
+                <?php
+                while ($new_query->have_posts()) : $new_query->the_post();
+                    $post_id = get_the_ID();
+                    $name =  get_field('client_name',$post_id);
+                    $region = get_field('region',$post_id);
+                    ?>
                     <div class="reviews-item">
                         <div class="reviews-item-title">
-                            <p><?php $name; ?></p>
-                            <p> <?php $region; ?></p>
+                            <p><?php echo $post_id; ?></p>
+                            <p><?php echo $name; ?></p>
+                            <p><?php echo $region; ?></p>
                         </div>
                         <div class="reviews-item-text">
-                            <?php echo $content_review; ?>
+                            <?php the_content(); ?>
                         </div><!-- end reviews-item-text -->
                     </div><!-- end reviews-item -->
+                <?php endwhile; ?>
 
-                </div><!-- end reviews-wrapper -->
-                <!--        <div class="pagination-block">-->
-                <!--        </div>-->
-                <div class="pagination">
-                    <ul>
-                        <li class="nav-previous"><?php next_posts_link('← ' . 'Предыдущие'); ?></li>
-                        <li class="nav-next"><?php previous_posts_link('Следующие' . ' →'); ?></li>
-                    </ul>
-                </div>
+            </div><!-- end reviews-wrapper -->
 
+            <div class="pagination-block">
+<!--                --><?php //previous_posts_link('&raquo;') ?>
+<!--                --><?php //next_posts_link('&laquo;', $new_query->max_num_pages) ?>
                 <?php
-            }
-        }
-        wp_reset_postdata();
+                $big = 999999999;
+                echo paginate_links( array(
+                    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+                    'format' => '?paged=%#%',
+                    'current' => max( 1, get_query_var('paged') ),
+                    'total' => $new_query->max_num_pages,
+                    'prev_text' => '&laquo;',
+                    'next_text' => '&raquo;'
+                ) );
+                ?>
+
+            </div>
+<!--            <nav class="pagination">-->
+<!--                --><?php
+//                $big = 999999999;
+//                echo paginate_links( array(
+//                    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+//                    'format' => '?paged=%#%',
+//                    'current' => max( 1, get_query_var('paged') ),
+//                    'total' => $new_query->max_num_pages,
+//                    'prev_text' => '&laquo;',
+//                    'next_text' => '&raquo;'
+//                ) );
+//                ?>
+<!--            </nav>-->
+            <?php wp_reset_postdata(); ?>
+        </div>
+        <?php
         $html = ob_get_clean();
         return $html;
     }
 }
 $custom_reviews_class = new custom_reviews_class;
+
