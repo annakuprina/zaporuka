@@ -471,7 +471,7 @@ class custom_reviews_class extends WPBakeryShortCode {
 
         $new_query = new WP_Query();
         $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;;
-        $new_query->query('post_type=reviews&showposts=-1'.'&paged='.$paged);
+        $new_query->query('post_type=reviews&showposts=2'.'&paged='.$paged);
 
         ob_start();
         ?>
