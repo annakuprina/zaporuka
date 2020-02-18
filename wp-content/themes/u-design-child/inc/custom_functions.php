@@ -418,3 +418,87 @@ function vc_post_content_render() {
     $html = "<div class='reviews-item-content'>" . '{{ post_data:post_content }}' . "</div>";
     return $html;
 }
+
+add_filter( 'vc_grid_item_shortcodes', 'my_module_add_grid_testimonials_shortcodes' );
+function my_module_add_grid_testimonials_shortcodes( $shortcodes ) {
+    $shortcodes['vc_post_id'] = array(
+        'name' => __( ' Custom Testimonials', 'fluidtopics' ),
+        'base' => 'vc_testimonials_content',
+        'category' => __( 'Content', 'fluidtopics' )
+    );
+
+    return $shortcodes;
+}
+
+
+class custom_reviews_class extends WPBakeryShortCode {
+    // Element Init
+    function __construct() {
+        add_action( 'init', array( $this, 'custom_reviews_mapping' ) );
+        add_shortcode( 'vc_testimonials_content', array( $this, 'vc_testimonials_content' ) );
+    }
+    // Element Mapping
+    public function custom_reviews_mapping() {
+//			 Map the block with vc_map()
+        vc_map( array(
+            'name' => __( ' Custom Testimonials', 'fluidtopics' ),
+            'base' => 'vc_testimonials_content',
+            'category' => __( 'Content', 'fluidtopics' )
+        ));
+    }
+    // Element HTML
+    public function vc_testimonials_content( $atts )
+    {
+        WPBMap::addAllMappedShortcodes();
+        ob_start();
+
+        $args = array(
+            'post_type' => 'reviews',
+            'posts_per_page' => 2
+        );
+        $loop = new WP_Query($args);
+        if ($loop->post_count > 0) {
+            $n = sizeof($loop->posts);
+            $nPos = 1;
+            for($i=0;$i<$n;$i++) {
+                $id = $loop->posts[$i]->ID;
+
+                $name =  "{{ post_meta_value:client_name }}";
+                $region = "{{ post_meta_value:region }}";
+                $content_review = $loop->posts[$i]->post_content;
+                ob_start();
+                ?>
+                <!------------
+                    REVIEWS
+                ------------->
+
+                <div class="reviews-wrapper">
+                    <div class="reviews-item">
+                        <div class="reviews-item-title">
+                            <p><?php $name; ?></p>
+                            <p> <?php $region; ?></p>
+                        </div>
+                        <div class="reviews-item-text">
+                            <?php echo $content_review; ?>
+                        </div><!-- end reviews-item-text -->
+                    </div><!-- end reviews-item -->
+
+                </div><!-- end reviews-wrapper -->
+                <!--        <div class="pagination-block">-->
+                <!--        </div>-->
+                <div class="pagination">
+                    <ul>
+                        <li class="nav-previous"><?php next_posts_link('← ' . 'Предыдущие'); ?></li>
+                        <li class="nav-next"><?php previous_posts_link('Следующие' . ' →'); ?></li>
+                    </ul>
+                </div>
+
+                <?php
+            }
+        }
+        wp_reset_postdata();
+        $html = ob_get_clean();
+        return $html;
+    }
+}
+$custom_reviews_class = new custom_reviews_class;

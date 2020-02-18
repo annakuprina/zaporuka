@@ -44,7 +44,7 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 		
 		if( ! udesign_check_page_layout_option( 'no_header' ) ) : 
 			?>
-			<header id="top-wrapper">
+		<header id="top-wrapper">
 				<?php udesign_top_wrapper_top(); ?>
 				<div id="top-elements" class="container_24">
 					<?php udesign_top_elements_inside( is_front_page() ); ?>
@@ -56,9 +56,7 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 							<span class="cart-customlocation cart-count"></span>
 						<?php endif;?>	
 					</span>
-				</div>
-				<!-- end top-elements -->
-				
+				</div>			
 			</header>
 			<!-- end top-wrapper -->
 			<?php 
