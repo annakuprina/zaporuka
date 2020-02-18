@@ -489,6 +489,7 @@ class custom_reviews_class extends WPBakeryShortCode {
                     ?>
                     <div class="reviews-item">
                         <div class="reviews-item-title">
+                            <p><?php echo $post_id; ?></p>
                             <p><?php echo $name; ?></p>
                             <p> <?php echo $region; ?></p>
                         </div>
@@ -504,7 +505,7 @@ class custom_reviews_class extends WPBakeryShortCode {
             <div class="pagination">
                 <?php //previous_posts_link('&raquo;') ?>
                 <?php //next_posts_link('&laquo;', $new_query->max_num_pages) ?>
-                <?php echo kama_pagenavi('post_type=reviews'); ?>
+                <?php echo kama_pagenavi(); ?>
             </div>
 
         </div>
@@ -560,7 +561,7 @@ function kama_pagenavi( $args = array(), $wp_query = null ){
     if( ! $args ) $args = array();
     if( $args instanceof WP_Query ){
         $wp_query = $args;
-        $args     = array();
+        $args     = array('post_type'=>'reviews');
     }
 
     $default = apply_filters( 'kama_pagenavi_args', $default ); // чтобы можно было установить свои значения по умолчанию
