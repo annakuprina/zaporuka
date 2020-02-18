@@ -449,10 +449,6 @@ h3 {
   #sidebar {
     width: initial;
   }
-
-  /* .container_24 {
-    width: initial;
-  } */
 }
 /* Media for one Project block(home page) */
 @media screen and (max-width: 500px) {
@@ -1538,7 +1534,7 @@ h3 {
 }
 
 .reviews-item {
-  /* width: calc((100% - 40px) / 2); */
+  width: calc((100% - 40px) / 2);
   background: #fff;
   padding: 40px;
   margin-bottom: 30px;
@@ -2309,6 +2305,26 @@ footer .footer-mob a.designer-link {
   padding-top: 21px;
   padding-bottom: 59px;
 }
+
+.home-page-section3 .h2-header-line {
+  margin-bottom: 68px;
+}
+
+.home-page-section3 .h2-header-line::before {
+  content: "";
+  width: 64px;
+  height: 4px;
+  background-color: #e78b48;
+  left: -122px;
+  position: absolute;
+  top: 27px;
+}
+
+.home-page-section3 .owl-carousel .owl-item .ocpc-topbox p {
+  font-size: 23px;
+  line-height: 34px;
+}
+
 /*end home page section3*/
 
 /*---------------------
