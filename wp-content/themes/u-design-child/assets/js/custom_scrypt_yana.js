@@ -64,14 +64,15 @@ jQuery(document).ready(function($) {
     slidesToScroll: 3
   });
 
-  $('.reviews').on('click', '.pagination a', function(e){
+  $('.reviews-block').on('click', '.pagination a', function(e){
     e.preventDefault();
     var link = $(this).attr('href');
-    $('.reviews').fadeOut(500, function(){
-      $(this).load(link + ' .reviews', function() {
+    $('.reviews-block').fadeOut(500, function(){
+      $(this).load(link + ' .reviews-block', function() {
         $(this).fadeIn(500);
       });
     });
   });
+
 
 });
