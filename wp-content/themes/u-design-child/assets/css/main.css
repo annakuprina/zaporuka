@@ -83,6 +83,7 @@ button {
 
 body {
   font-family: "Raleway-Regular";
+  min-width: 100%; /*made for header to not overflow viewport*/
 }
 
 .slick-dots .slick-active button {
@@ -123,6 +124,109 @@ h3 {
 /*-------
   HEADER
 ---------*/
+#custom-top-bar {
+  padding: 0 20px;
+}
+
+#top-elements {
+  padding: 0 20px;
+}
+
+.mean-container .mean-bar {
+  /* background: #fff; */
+  background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
+}
+
+.mean-container .mean-nav {
+  background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
+}
+
+.mean-container .mean-nav ul li a,
+.mean-container .mean-nav ul li li a {
+  text-transform: none;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: none;
+}
+
+.mean-container .mean-nav ul li a {
+  padding: 10px 0;
+}
+
+.mean-container a.meanmenu-reveal {
+  right: 33px !important;
+  color: transparent;
+}
+
+.mean-container a.meanmenu-reveal span {
+  width: 25px;
+}
+
+.meanmenu-reveal.meanclose:before {
+  content: url(../../img/close-modal.svg);
+}
+
+.mean-bar #main-top-menu {
+  width: 50%;
+}
+
+.help-header-link {
+  display: block;
+}
+
+.mean-bar .header-mob-socials {
+  display: flex;
+}
+
+.header-mob-soc-fb {
+  margin-right: 10px;
+}
+
+.header-mob-soc-youtube {
+  margin-right: 10px;
+}
+
+.mean-bar #sticky-menu-logo {
+  display: block !important;
+}
+
+.mean-container .mean-nav {
+  margin-top: 0;
+  padding: 0 20px;
+}
+
+.mob-menu-wrapper {
+  display: flex;
+}
+
+.mob-menu-wrapper a {
+  color: #fff;
+}
+
+.mob-menu-wrapper .top-bar-mail-icon svg path {
+  fill: #fff;
+}
+
+.mob-menu-wrapper .top-bar-tel-block,
+.mob-menu-wrapper .top-bar-email-block {
+  font-family: "Proxima-Nova-Semibold";
+  font-size: 14px;
+}
+
+.mob-menu-wrapper .top-bar-email-block {
+  padding-left: 0;
+}
+
+.mob-menu-wrapper .top-bar-email-block a {
+  display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+  #top-elements #main-menu ul.sf-menu .pll-parent-menu-item > a > span {
+    padding-left: 60px;
+  }
+}
+
 @media screen and (max-width: 719px) {
   #top-elements {
     flex-direction: column;
