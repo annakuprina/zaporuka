@@ -475,8 +475,8 @@ class custom_reviews_class extends WPBakeryShortCode {
                 <div class="reviews-wrapper">
                     <div class="reviews-item">
                         <div class="reviews-item-title">
-                            <p><?php echo $name; ?></p>
-                            <p> <?php echo $region; ?></p>
+                            <p><?php $name; ?></p>
+                            <p> <?php $region; ?></p>
                         </div>
                         <div class="reviews-item-text">
                             <?php echo $content_review; ?>
