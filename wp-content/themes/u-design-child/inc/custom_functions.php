@@ -464,11 +464,11 @@ class custom_reviews_class extends WPBakeryShortCode {
             <div class="reviews-wrapper">
                <?php
                 while ($new_query->have_posts()) : $new_query->the_post();
-                $post_id = the_ID();
-                   $name =  get_field('client_name',$post_id);
-                   $region = get_field('region',$post_id);
-                   $content_review = the_content();
-                   ?>
+                    $post_id = get_the_ID();
+                    $name =  get_field('client_name',$post_id);
+                    $region = get_field('region',$post_id);
+                    $content_review = the_content();
+                    ?>
                    <div class="reviews-item">
                        <div class="reviews-item-title">
                            <p><?php echo $name; ?></p>
@@ -478,13 +478,13 @@ class custom_reviews_class extends WPBakeryShortCode {
                            <?php echo $content_review; ?>
                        </div><!-- end reviews-item-text -->
                    </div><!-- end reviews-item -->
-               <?php endwhile; ?>
+                <?php endwhile; ?>
             </div><!-- end reviews-wrapper -->
             <!--        <div class="pagination-block">-->
             <!--        </div>-->
             <div class="pagination">
-                <?php next_posts_link('&laquo;', $new_query->max_num_pages) ?>
                 <?php previous_posts_link('&raquo;') ?>
+                <?php next_posts_link('&laquo;', $new_query->max_num_pages) ?>
             </div>
             <?php
 
