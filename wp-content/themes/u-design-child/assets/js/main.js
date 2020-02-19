@@ -227,10 +227,7 @@ jQuery(document).ready(function($) {
         $(".mob-menu-wrapper .current-menu-parent").appendTo(".mob-menu-right");
 
         /* Languages */
-        $("#menu-item-1185")
-          .eq(1)
-          .clone()
-          .appendTo(".mob-menu-right");
+        $(".mob-menu-wrapper #menu-item-1185").appendTo(".mob-menu-right");
 
         /*Add hrefs to header socials. 
         We take 3 social links "href" attributes(fb, insta, youtube)
