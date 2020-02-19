@@ -225,6 +225,7 @@ jQuery(document).ready(function($) {
           .clone()
           .appendTo(".mob-menu-right");
 
+
         /* Add social links block to the right part of menu(without href attributes. Hrefs will be added below)*/
         $(
           '<div class="header-mob-socials"><a class="header-mob-soc-fb"><i class="fa fa-facebook" aria-hidden="true"></i></a><a class="header-mob-soc-youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a><a class="header-mob-soc-insta"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>'
@@ -233,6 +234,7 @@ jQuery(document).ready(function($) {
 
         /* Languages */
         $(".mob-menu-wrapper #menu-item-1185").appendTo(".mob-menu-right");
+
 
         /*Add hrefs to header socials. 
         We take 3 social links "href" attributes(fb, insta, youtube)

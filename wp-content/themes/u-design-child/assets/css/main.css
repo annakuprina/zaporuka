@@ -287,7 +287,6 @@ h3 {
 
 .mean-bar #sticky-menu-logo {
   width: 200px;
-  display: block !important;
 }
 
 .mean-container .mean-nav {
@@ -2711,7 +2710,8 @@ footer .footer-mob a.designer-link {
   left: -110px;
   position: absolute;
   top: 29px;
-} */
+}
+
 
 .home-page-section3 .owl-carousel .owl-item .ocpc-topbox p {
   font-size: 20px;
