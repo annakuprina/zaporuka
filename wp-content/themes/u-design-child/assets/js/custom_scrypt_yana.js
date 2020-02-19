@@ -68,5 +68,23 @@ jQuery(document).ready(function($) {
   //     });
   //   });
   // });
-
+  $('.pagination-block').on('click', '#post', function(e) {
+    console.log('pagClick');
+    e.preventDefault();
+    var nth  = jQuery("#post").attr('data-cpta');
+    var lmt  = jQuery("#post").attr('data-limit');
+    var ajax_url = ajax_params.ajax_url;
+    var cpta = jQuery("#post").attr('data-posttype');
+    jQuery.ajax({
+      url		:ajax_url,
+      type	:'post',
+      data	:{ 'action':'cptapagination','number':nth,'limit':lmt,'cptapost':cpta },
+      beforeSend	: function(){
+        jQuery(".reviews-wrapper").html("<p style='text-align:center;'>Loading please wait...!</p>");
+      },
+      success :function(pvalue){
+        jQuery(".reviews-wrapper").html(pvalue);
+      }
+    });
+  });
 });
