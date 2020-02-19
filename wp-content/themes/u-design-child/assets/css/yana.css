@@ -680,3 +680,19 @@ h6,
 .reviews-item-content{
   line-height: 28px;
 }
+.list-cptapagination{
+  display: flex;
+  justify-content: center;
+}
+.pagination-block a {
+  padding: 0 20px;
+  opacity: 0.3;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+}
+.pagination-block a.active_review {
+  opacity: 1;
+  color: #e78b48;
+  font-weight: 700;
+}

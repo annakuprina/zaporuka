@@ -1722,7 +1722,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   padding-left: 10px;
 }
 
-/*        Cart Page        */
+/*        Cart, Checkout and ThankYou Pages        */
 .woocommerce-cart-form,
 .checkout.woocommerce-checkout {
   padding-top: 120px;
@@ -1836,6 +1836,27 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce .woocommerce-order-details table.shop_table td {
   padding: 9px 0;
 }
+.pending-order-wrapper{
+  padding-bottom: 110px;
+}
+.pending-order-wrapper p{
+  font-size: 34px;
+  color: #e78b48;
+  font-weight: bold
+}
+.pending-order-wrapper a.wc-backward{
+  margin-top: 45px;
+  background-color: transparent !important;
+  padding: 0 !important;
+  color: #e78b48 !important;
+}
+.pending-order-wrapper a.wc-backward::after{
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  padding-left: 10px;
+}
+
+
+
 
 @media screen and (min-width: 720px) {
   .customize-header.u-design-fixed-menu-on.fixed-menu #top-wrapper {
