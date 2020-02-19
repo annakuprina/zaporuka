@@ -543,77 +543,31 @@ function cptapagination_callback() {
         $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'offset' => $cptaOffsetValue,'post_status' => 'publish');
     }
     $cptaQuery = new WP_Query( $args );
-    if( $cptaQuery->have_posts() ){ ?>
-        <div class="reviews-block">
-            <div class="reviews-wrapper">
-                <?php while( $cptaQuery->have_posts() ) {
-                    $post_id = get_the_ID();
-                    $name =  get_field('client_name',$post_id);
-                    $region = get_field('region',$post_id); ?>
-                    <div class="reviews-item">
-                        <div class="reviews-item-title">
-                            <p><?php echo $post_id; ?></p>
-                            <p><?php echo $name; ?></p>
-                            <p><?php echo $region; ?></p>
-                        </div>
-                        <div class="reviews-item-text">
-                            <?php the_content(); ?>
-                        </div><!-- end reviews-item-text -->
-                    </div><!-- end reviews-item -->
-                <?php } ?>
-                <?php wp_reset_postdata(); ?>
-            </div>
-            <div class="pagination-block">
-                <?php
-                $cpta_args = array('posts_per_page' => -1,'post_type' => 'reviews','post_status' => 'publish');
-                $cptaLimit = 2;
-                $cpta_Query = new WP_Query( $cpta_args );
-                $cpta_Count = count($cpta_Query->posts);
-                $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
-                $last = ceil( $cpta_Paginationlist );
-                $adjacents = "2";
-                $setPagination = "";
-                $cptaType = 'reviews';
-                if( $cpta_Paginationlist > 0 ){
+    $html = "";
+    if( $cptaQuery->have_posts() ){
+        $html .= "<div class='reviews-block'>";
+        $html .= "<div class='reviews-wrapper'>";
+        while ($cptaQuery->have_posts()) : $cptaQuery->the_post();
 
-                    $setPagination .="<ul class='list-cptapagination'>";
-                    $setPagination .="<li class='pagitext'><a href='' data-cpta='1' data-limit='$cptaLimit'>Prev</a></li>";
-
-                    if ( $cpta_Paginationlist < 7 + ($adjacents * 2) ){
-
-                        for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
-
-                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
-                            $setPagination .="<li><a href='' id='post' class='$active' data-posttype='$cptaType' data-cpta='$cpta' data-limit='$cptaLimit' >$cpta</a></li>";
-
-                        }
-
-                    } else if ( $cpta_Paginationlist > 5 + ($adjacents * 2) ){
-
-                        for( $cpta=1; $cpta <= 4 + ($adjacents * 2); $cpta++){
-                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
-                            $setPagination .="<li><a href='' id='post' class='$active' data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
-                        }
-                        $setPagination .="<li class='pagitext dots'>...</li>";
-                        $setPagination .="<li class='pagitext'><a href='' data-cpta='$last' data-limit='$cptaLimit'>".$last."</a></li>";
-
-                    } else {
-
-                        for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
-                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
-                            $setPagination .="<li><a href='' id='post' class='$active' data-posttype='$cptaType'data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
-                        }
-
-                    }
-                    $setPagination .="<li class='pagitext'><a href='' data-cpta='2' data-limit='$cptaLimit'>Next</a></li>";
-                    $setPagination .="</ul>";
-                }
-                echo $setPagination;
-                ?>
-
-            </div>
-        </div>
-    <?php }
+            $post_id = get_the_ID();
+            $name =  get_field('client_name',$post_id);
+            $region = get_field('region',$post_id);
+            $html .= "<div class='reviews-item'>";
+            $html .= "<div class='reviews-item-title'>";
+            $html .= "<p>" . $post_id . "</p>";
+            $html .= "<p>" . $name . "</p>";
+            $html .= "<p>" . $region . "</p>";
+            $html .= "</div>";
+            $html .= "<div class='reviews-item-text'>";
+            $html .=  the_content();
+            $html .= "</div>";
+            $html .= "</div>";
+        endwhile;
+        $html .= "</div>";
+        $html .= "</div>";
+        echo $html;
+        wp_die();
+    }
 
 }
 

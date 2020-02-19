@@ -71,10 +71,10 @@ jQuery(document).ready(function($) {
   $('.pagination-block').on('click', '#post', function(e) {
     console.log('pagClick');
     e.preventDefault();
-    var nth  = jQuery("#post").attr('data-cpta');
-    var lmt  = jQuery("#post").attr('data-limit');
+    var nth  = $(this).attr('data-cpta');
+    var lmt  = $(this).attr('data-limit');
     var ajax_url = ajax_params.ajax_url;
-    var cpta = jQuery("#post").attr('data-posttype');
+    var cpta = $(this).attr('data-posttype');
     jQuery.ajax({
       url		:ajax_url,
       type	:'post',
@@ -83,6 +83,7 @@ jQuery(document).ready(function($) {
         jQuery(".reviews-wrapper").html("<p style='text-align:center;'>Loading please wait...!</p>");
       },
       success :function(pvalue){
+        console.log(pvalue);
         jQuery(".reviews-wrapper").html(pvalue);
       }
     });
