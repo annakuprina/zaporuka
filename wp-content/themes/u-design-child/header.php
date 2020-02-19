@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Set some theme global variables.
+
 global $udesign_options, $current_slider, $udesign_responsive;
 $current_slider = $udesign_options['current_slider'];
 $udesign_responsive = ( isset( $udesign_options['enable_responsive'] ) && $udesign_options['enable_responsive'] ) ? $udesign_options['enable_responsive'] : '';
@@ -21,6 +22,17 @@ $udesign_menu_drop_shadows = ( isset( $udesign_options['show_menu_drop_shadows']
 $udesign_fixed_main_menu = ( isset( $udesign_options['fixed_main_menu'] ) && $udesign_options['fixed_main_menu'] ) ? 'u-design-fixed-menu-on' : '';
 $udesign_responsive_pinch_to_zoom = ( isset( $udesign_options['responsive_pinch_to_zoom'] ) && $udesign_options['responsive_pinch_to_zoom'] ) ? '' : ', maximum-scale=1.0';
 $udesign_custom_classes = 'customize-header';
+/*social links*/
+$options = get_option('ThemeOptions');
+$facebook_link = !empty($options['facebook_link']) ? $options['facebook_link'] : false;
+$instagram_link = !empty($options['instagram_link']) ? $options['instagram_link'] : false;
+$youtube_link = !empty($options['youtube_link']) ? $options['youtube_link'] : false;
+
+$help_with_sms_label = !empty($options['popup_sms_title_' . ICL_LANGUAGE_CODE]) ? $options['popup_sms_title_' . ICL_LANGUAGE_CODE] : false;
+$help_label = !empty($options['title_help_block_' . ICL_LANGUAGE_CODE]) ? $options['title_help_block_' . ICL_LANGUAGE_CODE] : 'Допомогти';
+$phone_number = !empty($options['main_phone_number']) ? $options['main_phone_number'] : false;
+$email = !empty($options['main_email']) ? $options['main_email'] : false;
+
 set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 'no_container' ) ); // Page specific layout options based on "U-Design Options" metabox selection.
 ?>
 <?php udesign_html_before(); // The DOCTYPE is inserted via this hook in functions.php. ?>
@@ -57,6 +69,34 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 						<?php endif;?>	
 					</span>
 				</div>			
+			</header>
+
+			<header id="header-mob">
+					<div class="header-mob-left"><?php echo udesign_nav();?></div>
+					<div class="header-mob-right">
+
+
+						<div class="help-header-link"><a href="#"><span><?php echo $help_label; ?></span></a></div>
+						
+						<div class="top-bar-help-block"><a href="#"><span><?php echo $help_with_sms_label; ?></span></a></div>
+
+						<div class="top-bar-tel-block"><a href="tel:<?php echo $phone_number; ?>" class="tel-block-a"><i class="fa fa-phone" aria-hidden="true"></i></i><?php echo $phone_number; ?></a></div>
+						<div class="top-bar-email-block"><a href="mailto:<?php echo $email; ?>" class="email-block-a"><i class="top-bar-mail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g opacity=".4"><path fill="#333" d="M1.55 1.195L4.646 4.23c.193.19.509.19.703 0l3.101-3.035a.25.25 0 1 1 .352.356L6.773 3.539l2.024 1.902a.25.25 0 0 1-.344.364L6.418 3.887l-.719.703a1.01 1.01 0 0 1-1.406 0l-.711-.7-2.035 1.915a.25.25 0 0 1-.344-.364l2.02-1.902-2.024-1.988a.25.25 0 1 1 .352-.356zM0 .75v5.5c0 .415.335.75.75.75h8.5c.415 0 .75-.335.75-.75V.75A.748.748 0 0 0 9.25 0H.75A.748.748 0 0 0 0 .75z"/></g></g></svg></i><?php echo $email; ?></a></div>
+						
+
+						<div class="header-mob-socials">
+							<li><a class="header-mob-soc-fb" href="<?php echo $facebook_link;?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a class="header-mob-soc-youtube" href="<?php echo $youtube_link;?>" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+							<li><a class="header-mob-soc-insta" href="<?php echo $instagram_link;?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						</div>
+						<div class="header-mob-lang-wrapper">
+							<a href="#pll_switcher" class="sf-with-ul"><span><?php echo pll_current_language( 'name' );?></span></a>
+								<ul class="header-mob-lang">
+									<?php pll_the_languages();?>
+								</ul>
+							<span class="expand-button" href="#"></span>
+						</div><!-- end header-mob-lang-wrapper -->
+					</div><!-- end header-mob-right -->
 			</header>
 			<!-- end top-wrapper -->
 			<?php 

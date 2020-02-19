@@ -258,6 +258,13 @@ jQuery(document).ready(function($) {
     })
     .resize();
 
+  $(".expand-button").click(function() {
+    $(this)
+      .prev("ul")
+      .slideToggle();
+    $(this).toggleClass("expand-button-opened");
+  });
+
   // $(window)
   //   .on("resize", function() {
   //     var maxHeight = -1;
