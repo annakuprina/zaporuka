@@ -391,8 +391,8 @@ footer a.designer-link {
   font-family: "Raleway-Bold" !important;
   margin-bottom: 60px;
   position: relative;
-  font-size: 53px;
-  line-height: 63px;
+  font-size: 48px;
+  line-height: 59px;
 }
 .h2-header-line::before {
   content: "";
@@ -495,7 +495,8 @@ footer a.designer-link {
   display: none;
 }
 .home-page-section3 .owl-carousel .owl-item .ocpc-topbox {
-  max-width: 346px;
+  /* max-width: 346px; */
+  max-width: 315px;
   border-top: 3px solid #e78b48;
   /* margin-right: 100px; */
 }
@@ -507,7 +508,7 @@ footer a.designer-link {
   color: #333333;
   font-weight: bold;
   line-height: 30px;
-  padding: 31px 0 40px 0;
+  padding: 28px 0 40px 0;
 }
 .home-page-section3 .owl-theme .owl-dots .owl-dot span {
   background-color: #a5a5a5;

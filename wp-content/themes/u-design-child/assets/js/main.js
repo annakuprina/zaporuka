@@ -192,25 +192,66 @@ jQuery(document).ready(function($) {
   $(window)
     .on("resize", function() {
       if ($("div").hasClass("mean-bar")) {
-        console.log("has mean-bar CLASS!");
-        $("#main-top-menu").wrap('<div class="mob-menu-wrapper"></div>');
-        $(".mob-menu-wrapper").append('<div class="mob-menu-right"></div>');
-        $("#main-top-menu").append(
-          '<div class="mob-menu-left"></div><div class="mob-menu-right"></div>'
-        );
+        /*make new structure for mobile header: add "mob-menu-wrapper" block
+        and put "ul#main-top-menu" and "mob-menu-right" block inside the wrapper*/
+        $(".mean-nav").append('<div class="mob-menu-wrapper"></div>');
+        $("#main-top-menu").appendTo(".mob-menu-wrapper");
+        $('<div class="mob-menu-right"></div>').appendTo(".mob-menu-wrapper");
 
-        $(".help-header-link").appendTo(".mob-menu-right");
+        /*Right part of header. Append parts form right part from desktop version of header*/
+        /* Допомогти */
+        $(".help-header-link")
+          .eq(0)
+          .clone()
+          .appendTo(".mob-menu-right");
 
-        $(".top-bar-help-block").appendTo(".mob-menu-right");
+        /* "Допомогти, вiдправивши смс на номер 88077" */
+        $(".top-bar-help-block")
+          .clone()
+          .appendTo(".mob-menu-right");
 
-        $(".top-bar-tel-block").appendTo(".mob-menu-right");
-        $(".top-bar-email-block").appendTo(".mob-menu-right");
+        /* Phone */
+        $(".top-bar-tel-block")
+          .clone()
+          .appendTo(".mob-menu-right");
 
+        /* Email */
+        $(".top-bar-email-block")
+          .clone()
+          .appendTo(".mob-menu-right");
+
+        /* Add social links block to the right part of menu(without href attributes. Hrefs will be added below)*/
         $(
           '<div class="header-mob-socials"><a class="header-mob-soc-fb"><i class="fa fa-facebook" aria-hidden="true"></i></a><a class="header-mob-soc-youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a><a class="header-mob-soc-insta"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>'
         ).appendTo(".mob-menu-right");
-
         $(".mob-menu-wrapper .current-menu-parent").appendTo(".mob-menu-right");
+
+        /* Languages */
+        $("#menu-item-1185")
+          .eq(1)
+          .clone()
+          .appendTo(".mob-menu-right");
+
+        /*Add hrefs to header socials. 
+        We take 3 social links "href" attributes(fb, insta, youtube)
+        from footer and add them to header social links*/
+        var fbLink = $(".footer-mob-socials a")
+          .eq(0)
+          .attr("href"); //take fb href from footer
+
+        $(".header-mob-soc-fb").attr("href", fbLink); //add href to header fb link
+
+        var instaLink = $(".footer-mob-socials a")
+          .eq(1)
+          .attr("href"); //take insta href from footer
+
+        $(".header-mob-soc-insta").attr("href", instaLink); //add href to header insta link
+
+        var youtubeLink = $(".footer-mob-socials a")
+          .eq(2)
+          .attr("href"); //take youtube href from footer
+
+        $(".header-mob-soc-youtube").attr("href", youtubeLink); //add href to header youtube link
       }
     })
     .resize();
