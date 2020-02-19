@@ -1856,6 +1856,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 
 
 
+
 @media screen and (min-width: 720px) {
   .customize-header.u-design-fixed-menu-on.fixed-menu #top-wrapper {
     opacity: 1;
