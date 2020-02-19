@@ -188,6 +188,11 @@ jQuery(document).ready(function($) {
     // width: 250
   });
 
+  if ($("a:not(.meanclose)")) {
+    console.log("has close");
+    $(".mob-menu-wrapper").css("display", "none");
+  }
+
   /*HEADER ADAPTIVITY*/
   $(window)
     .on("resize", function() {

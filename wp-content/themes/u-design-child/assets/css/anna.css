@@ -102,8 +102,8 @@ select:-webkit-autofill:focus {
 #main-menu ul.sf-menu .pll-parent-menu-item .sub-menu li a {
   color: #333333;
 }
-#main-menu ul.sf-menu .pll-parent-menu-item .sub-menu li a span{
-   font-family: "Raleway-Regular";
+#main-menu ul.sf-menu .pll-parent-menu-item .sub-menu li a span {
+  font-family: "Raleway-Regular";
 }
 #main-menu ul.sf-menu .pll-parent-menu-item .sub-menu li a:hover {
   color: #e78b48;
@@ -275,9 +275,10 @@ footer a.designer-link {
 .modal-dialog {
   padding: 40px;
   background: #fefefe;
-  margin-left: -280px;
   position: fixed;
-  left: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
   top: -100%;
   z-index: 9530;
   width: 100%;
