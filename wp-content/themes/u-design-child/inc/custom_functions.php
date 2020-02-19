@@ -517,19 +517,6 @@ class custom_reviews_class extends WPBakeryShortCode {
                 ?>
 
             </div>
-<!--            <nav class="pagination">-->
-<!--                --><?php
-//                $big = 999999999;
-//                echo paginate_links( array(
-//                    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-//                    'format' => '?paged=%#%',
-//                    'current' => max( 1, get_query_var('paged') ),
-//                    'total' => $new_query->max_num_pages,
-//                    'prev_text' => '&laquo;',
-//                    'next_text' => '&raquo;'
-//                ) );
-//                ?>
-<!--            </nav>-->
             <?php wp_reset_postdata(); ?>
         </div>
         <?php
@@ -538,4 +525,50 @@ class custom_reviews_class extends WPBakeryShortCode {
     }
 }
 $custom_reviews_class = new custom_reviews_class;
+
+function my_get_posts_for_pagination() {
+    $paged = $_GET['page']; // Page number
+    $html = '';
+    $pag = 0;
+    if( filter_var( intval( $paged ), FILTER_VALIDATE_INT ) ) {
+        $pag = $paged;
+        $args = array(
+            'post_type' => 'reviews',
+            'paged' => $pag, // Uses the page number passed via AJAX
+            'posts_per_page' => 2 // Change this as you wish
+        );
+        $loop = new WP_Query( $args ); ?>
+        <div class="reviews-block">
+
+            <div class="reviews-wrapper">
+                <?php
+        if( $loop->have_posts() ) {
+            while( $loop->have_posts() ) {
+                $post_id = get_the_ID();
+                $name =  get_field('client_name',$post_id);
+                $region = get_field('region',$post_id); ?>
+
+                <div class="reviews-item">
+                    <div class="reviews-item-title">
+                        <p><?php echo $post_id; ?></p>
+                        <p><?php echo $name; ?></p>
+                        <p><?php echo $region; ?></p>
+                    </div>
+                    <div class="reviews-item-text">
+                        <?php the_content(); ?>
+                    </div><!-- end reviews-item-text -->
+                </div><!-- end reviews-item -->
+            <?php }
+
+            wp_reset_query();
+        }
+    }
+
+    echo $html;
+    exit();
+
+}
+
+add_action( 'wp_ajax_my_pagination', 'my_get_posts_for_pagination' );
+add_action( 'wp_ajax_nopriv_my_pagination', 'my_get_posts_for_pagination' );
 
