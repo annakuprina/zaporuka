@@ -68,8 +68,8 @@ jQuery(document).ready(function($) {
   //     });
   //   });
   // });
-  if( $( ".pagination-block" ).length ) {
-    $( ".pagination-block" ).wpPagination();
+  if( $( ".reviews-block" ).length ) {
+    $( ".reviews-block" ).wpPagination();
   }
   $.fn.wpPagination = function( options ) {
     options = $.extend({
