@@ -559,7 +559,7 @@ function cptapagination_callback() {
             $html .= "<p>" . $region . "</p>";
             $html .= "</div>";
             $html .= "<div class='reviews-item-text'>";
-            $html .=  the_content();
+            $html .=  get_the_content();
             $html .= "</div>";
             $html .= "</div>";
         endwhile;
