@@ -431,42 +431,11 @@ function my_module_add_grid_testimonials_shortcodes( $shortcodes ) {
 }
 
 
-class custom_reviews_class extends WPBakeryShortCode {
-    // Element Init
-    function __construct() {
-        add_action( 'init', array( $this, 'custom_reviews_mapping' ) );
-        add_shortcode( 'vc_testimonials_content', array( $this, 'vc_testimonials_content' ) );
-    }
-    // Element Mapping
-    public function custom_reviews_mapping() {
-//			 Map the block with vc_map()
-        vc_map( array(
-            'name' => __( ' Custom Testimonials', 'fluidtopics' ),
-            'base' => 'vc_testimonials_content',
-            'category' => __( 'Content', 'fluidtopics' ),
-            'params' => array(
-                array(
-                    'type' => 'textfield',
-                    'param_name' => 'special_class',
-                    'heading' => esc_html__( 'Special class', 'fluidtopics' ),
-                    'value' => '',
-                    'admin_label' => false,
-                    'weight' => 0,
-                    'group' => 'Custom Group',
-                ),
-            )
-        ));
-    }
+
     // Element HTML
-    public function vc_testimonials_content( $atts )
-    {
-        WPBMap::addAllMappedShortcodes();
-        /**
-         * @var string $special_class
-         */
-        extract(shortcode_atts(array(
-            'special_class' => '',
-        ), $atts));
+add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
+    function vc_testimonials_content(){
+
         ob_start();
 
         $new_query = new WP_Query();
@@ -478,7 +447,7 @@ class custom_reviews_class extends WPBakeryShortCode {
         <!------------
             REVIEWS
          ------------->
-        <div class="reviews-block <?php echo $special_class; ?>">
+        <div class="reviews-block">
 
             <div class="reviews-wrapper">
                 <?php
@@ -500,75 +469,151 @@ class custom_reviews_class extends WPBakeryShortCode {
                 <?php endwhile; ?>
 
             </div><!-- end reviews-wrapper -->
-
+            <?php wp_reset_postdata(); ?>
             <div class="pagination-block">
-<!--                --><?php //previous_posts_link('&raquo;') ?>
-<!--                --><?php //next_posts_link('&laquo;', $new_query->max_num_pages) ?>
                 <?php
-                $big = 999999999;
-                echo paginate_links( array(
-                    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-                    'format' => '?paged=%#%',
-                    'current' => max( 1, get_query_var('paged') ),
-                    'total' => $new_query->max_num_pages,
-                    'prev_text' => '&laquo;',
-                    'next_text' => '&raquo;'
-                ) );
+                $cpta_args = array('posts_per_page' => -1,'post_type' => 'reviews','post_status' => 'publish');
+                $cptaLimit = 2;
+                $cpta_Query = new WP_Query( $cpta_args );
+                $cpta_Count = count($cpta_Query->posts);
+                $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
+                $last = ceil( $cpta_Paginationlist );
+                $adjacents = "2";
+                $setPagination = "";
+                $cptaType = 'reviews';
+                if( $cpta_Paginationlist > 0 ){
+
+                    $setPagination .="<ul class='list-cptapagination'>";
+                    $setPagination .="<li class='pagitext'><a href='' data-cpta='1' data-limit='$cptaLimit'>Prev</a></li>";
+
+                    if ( $cpta_Paginationlist < 7 + ($adjacents * 2) ){
+
+                        for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
+
+                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
+                            $setPagination .="<li><a href='' id='post' class='$active' data-posttype='$cptaType' data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
+
+                        }
+
+                    } else if ( $cpta_Paginationlist > 5 + ($adjacents * 2) ){
+
+                        for( $cpta=1; $cpta <= 4 + ($adjacents * 2); $cpta++){
+                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
+                            $setPagination .="<li><a href='' id='post' class='$active' data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
+                        }
+                        $setPagination .="<li class='pagitext dots'>...</li>";
+                        $setPagination .="<li class='pagitext'><a href='' data-cpta='$last' data-limit='$cptaLimit'>".$last."</a></li>";
+
+                    } else {
+
+                        for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
+                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
+                            $setPagination .="<li><a href='' id='post' class='$active' data-posttype='$cptaType'data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
+                        }
+
+                    }
+                    $setPagination .="<li class='pagitext'><a href='' data-cpta='2' data-limit='$cptaLimit'>Next</a></li>";
+                    $setPagination .="</ul>";
+                }
+                echo $setPagination;
                 ?>
 
             </div>
-            <?php wp_reset_postdata(); ?>
+
         </div>
         <?php
         $html = ob_get_clean();
         return $html;
     }
-}
-$custom_reviews_class = new custom_reviews_class;
 
-function my_get_posts_for_pagination() {
-    $paged = $_GET['page']; // Page number
-    $html = '';
-    $pag = 0;
-    if( filter_var( intval( $paged ), FILTER_VALIDATE_INT ) ) {
-        $pag = $paged;
-        $args = array(
-            'post_type' => 'reviews',
-            'paged' => $pag, // Uses the page number passed via AJAX
-            'posts_per_page' => 2 // Change this as you wish
-        );
-        $loop = new WP_Query( $args ); ?>
-        <div class="reviews-block">
 
-            <div class="reviews-wrapper">
-                <?php
-        if( $loop->have_posts() ) {
-            while( $loop->have_posts() ) {
-                $post_id = get_the_ID();
-                $name =  get_field('client_name',$post_id);
-                $region = get_field('region',$post_id); ?>
+add_action( 'wp_ajax_cptapagination', 'cptapagination_callback' );
+add_action( 'wp_ajax_nopriv_cptapagination', 'cptapagination_callback' );
 
-                <div class="reviews-item">
-                    <div class="reviews-item-title">
-                        <p><?php echo $post_id; ?></p>
-                        <p><?php echo $name; ?></p>
-                        <p><?php echo $region; ?></p>
-                    </div>
-                    <div class="reviews-item-text">
-                        <?php the_content(); ?>
-                    </div><!-- end reviews-item-text -->
-                </div><!-- end reviews-item -->
-            <?php }
-
-            wp_reset_query();
-        }
+function cptapagination_callback() {
+    global $wpdb;
+    $cptaNumber = absint($_POST['number']);
+    $cptaLimit  = absint($_POST['limit']);
+    $cptaType = sanitize_text_field($_POST['cptapost']);
+    if( $cptaNumber == "1" ){
+        $cptaOffsetValue = "0";
+        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'post_status' => 'publish');
+    }else{
+        $cptaOffsetValue = ($cptaNumber-1)*$cptaLimit;
+        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'offset' => $cptaOffsetValue,'post_status' => 'publish');
     }
+    $cptaQuery = new WP_Query( $args );
+    if( $cptaQuery->have_posts() ){ ?>
+        <div class="reviews-block">
+            <div class="reviews-wrapper">
+                <?php while( $cptaQuery->have_posts() ) {
+                    $post_id = get_the_ID();
+                    $name =  get_field('client_name',$post_id);
+                    $region = get_field('region',$post_id); ?>
+                    <div class="reviews-item">
+                        <div class="reviews-item-title">
+                            <p><?php echo $post_id; ?></p>
+                            <p><?php echo $name; ?></p>
+                            <p><?php echo $region; ?></p>
+                        </div>
+                        <div class="reviews-item-text">
+                            <?php the_content(); ?>
+                        </div><!-- end reviews-item-text -->
+                    </div><!-- end reviews-item -->
+                <?php } ?>
+                <?php wp_reset_postdata(); ?>
+            </div>
+            <div class="pagination-block">
+                <?php
+                $cpta_args = array('posts_per_page' => -1,'post_type' => 'reviews','post_status' => 'publish');
+                $cptaLimit = 2;
+                $cpta_Query = new WP_Query( $cpta_args );
+                $cpta_Count = count($cpta_Query->posts);
+                $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
+                $last = ceil( $cpta_Paginationlist );
+                $adjacents = "2";
+                $setPagination = "";
+                $cptaType = 'reviews';
+                if( $cpta_Paginationlist > 0 ){
 
-    echo $html;
-    exit();
+                    $setPagination .="<ul class='list-cptapagination'>";
+                    $setPagination .="<li class='pagitext'><a href='' data-cpta='1' data-limit='$cptaLimit'>Prev</a></li>";
+
+                    if ( $cpta_Paginationlist < 7 + ($adjacents * 2) ){
+
+                        for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
+
+                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
+                            $setPagination .="<li><a href='' id='post' class='$active' data-posttype='$cptaType' data-cpta='$cpta' data-limit='$cptaLimit' >$cpta</a></li>";
+
+                        }
+
+                    } else if ( $cpta_Paginationlist > 5 + ($adjacents * 2) ){
+
+                        for( $cpta=1; $cpta <= 4 + ($adjacents * 2); $cpta++){
+                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
+                            $setPagination .="<li><a href='' id='post' class='$active' data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
+                        }
+                        $setPagination .="<li class='pagitext dots'>...</li>";
+                        $setPagination .="<li class='pagitext'><a href='' data-cpta='$last' data-limit='$cptaLimit'>".$last."</a></li>";
+
+                    } else {
+
+                        for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
+                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
+                            $setPagination .="<li><a href='' id='post' class='$active' data-posttype='$cptaType'data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
+                        }
+
+                    }
+                    $setPagination .="<li class='pagitext'><a href='' data-cpta='2' data-limit='$cptaLimit'>Next</a></li>";
+                    $setPagination .="</ul>";
+                }
+                echo $setPagination;
+                ?>
+
+            </div>
+        </div>
+    <?php }
 
 }
-
-add_action( 'wp_ajax_my_pagination', 'my_get_posts_for_pagination' );
-add_action( 'wp_ajax_nopriv_my_pagination', 'my_get_posts_for_pagination' );
 
