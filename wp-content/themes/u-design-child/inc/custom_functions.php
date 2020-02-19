@@ -490,7 +490,7 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
 
                         for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
 
-                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
+                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active_review"; }else{ $active=""; }
                             $setPagination .="<li><a href='' id='post' class='$active' data-posttype='$cptaType' data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
 
                         }
@@ -498,8 +498,8 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                     } else if ( $cpta_Paginationlist > 5 + ($adjacents * 2) ){
 
                         for( $cpta=1; $cpta <= 4 + ($adjacents * 2); $cpta++){
-                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
-                            $setPagination .="<li><a href='' id='post' class='$active' data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
+                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active_review"; }else{ $active=""; }
+                            $setPagination .="<li><a href='' id='post' class='.$active.' data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
                         }
                         $setPagination .="<li class='pagitext dots'>...</li>";
                         $setPagination .="<li class='pagitext'><a href='' data-cpta='$last' data-limit='$cptaLimit'>".$last."</a></li>";
@@ -507,8 +507,8 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                     } else {
 
                         for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
-                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active"; }else{ $active=""; }
-                            $setPagination .="<li><a href='' id='post' class='$active' data-posttype='$cptaType'data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
+                            if( $cpta ==  0 || $cpta ==  1 ){ $active="active_review"; }else{ $active=""; }
+                            $setPagination .="<li><a href='' id='post' class='.$active.' data-posttype='$cptaType'data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
                         }
 
                     }
