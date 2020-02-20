@@ -20,7 +20,7 @@ $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $optio
   	   <div class="help-form-inner-title">
 			<?php echo $help_label; ?>
   	   </div>
-	   <form action="http://zaporuka.testit.in.ua/wp-content/plugins/liqpay_wordpress/liqpay-form.php" method="POST" class="help_form">
+	   <form action="/wp-content/plugins/liqpay_wordpress/liqpay-form.php" method="POST" class="help_form">
 		   	<input type="hidden" name="date" value="'.date('d.m.Y H:i:s' ).'" required/><input type="hidden" name="liqpay_product_id"  value=""/>
 		   	<input type="hidden" name="hidden_content"  value=""/>
 		   	<input type="hidden" name="url_page"  value=[url_page]/>
