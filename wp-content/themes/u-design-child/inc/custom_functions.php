@@ -512,6 +512,7 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
 
                 if( $cpta_Paginationlist > 0 ){
 
+
                     $setPagination .="<ul class='list-cptapagination'>";
                     $setPagination .="<li class='pagitext'><a href='' class='step-backward' data-posttype='$cptaType' data-cpta='1' data-limit='$cptaLimit'></a></li>";
                     $setPagination .="<li class='pagitext'><a href='' class='step-prev' data-posttype='$cptaType' data-cpta='1' data-limit='$cptaLimit'></i></a></li>";
