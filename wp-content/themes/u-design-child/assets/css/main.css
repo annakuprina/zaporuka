@@ -2534,8 +2534,11 @@ footer .footer-mob a.designer-link {
   margin-bottom: 0;
 }
 
-.home-page-section2 .section2-text-wrapper .vc_btn3,
-.home-page-section2 .section2-text-wrapper .vc_btn3:hover {
+.home-page-section2 .section2-text-wrapper .vc_btn3:link,
+.home-page-section2 .section2-text-wrapper .vc_btn3:visited,
+.home-page-section2 .section2-text-wrapper .vc_btn3:focus,
+.home-page-section2 .section2-text-wrapper .vc_btn3:hover,
+.home-page-section2 .section2-text-wrapper .vc_btn3:active {
   color: #e78b48;
   visibility: visible;
   transition: none;
@@ -2568,11 +2571,9 @@ footer .footer-mob a.designer-link {
 
   #main-content .home-page-section2 .section2-columns .section2-single-column {
     padding: 20px 30px;
+    height: 190px;
   }
-  .home-page-section2 .section2-text-wrapper .vc_btn3 {
-    display: block;
-    padding: 15px 30px;
-  }
+
   .home-page-section2 .section2-text p {
     font-size: 16px;
     line-height: 30px;
@@ -2619,6 +2620,16 @@ footer .footer-mob a.designer-link {
 }
 
 @media screen and (max-width: 1024px) {
+  #main-content .home-page-section2 .section2-columns .section2-single-column {
+    padding: 20px 30px;
+    height: initial;
+  }
+
+  .home-page-section2 .section2-text-wrapper .vc_btn3 {
+    display: block;
+    padding: 15px 30px;
+  }
+
   .home-page-section2 .vc_custom_1579168278861 {
     max-width: calc(100% - 40px);
   }
