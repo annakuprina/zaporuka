@@ -335,7 +335,7 @@ h3 {
 #header-mob {
   display: none;
   justify-content: space-between;
-  padding: 0 20px;
+  flex-direction: column;
 }
 
 #header-mob .help-header-link {
@@ -493,14 +493,65 @@ h3 {
   padding-left: 13px;
 }
 
-#header-mob #sticky-menu-alias,
-#header-mob #sticky-menu-logo {
-  display: block !important;
-}
-
 #header-mob .header-mob-socials {
   list-style: none;
   display: flex;
+}
+
+.hamburger {
+  width: 26px;
+  height: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger span {
+  display: block;
+  background: #424343;
+  height: 2px;
+  width: 100%;
+}
+
+.header-mob-bottom {
+  display: none;
+}
+
+.header-mob-bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger.active {
+  display: flex;
+}
+
+.header-mob-top {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+
+#header-mob .header-mob-logo img.active {
+  display: block;
+}
+
+#header-mob .close {
+  cursor: pointer;
+}
+
+#header-mob .close:before {
+  content: url(../../img/close-modal.svg);
+}
+
+.header-mob-top.active {
+  background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
+}
+
+.header-mob-logo img {
+  display: none;
 }
 
 #header-mob .header-mob-socials a {
