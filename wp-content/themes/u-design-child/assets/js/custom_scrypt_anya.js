@@ -62,28 +62,9 @@ jQuery(document).ready(function($) {
       $(this).toggleClass("active");
       $("#ModalHelpForm #paid").val($(this).attr("summ"));
     }); 
-  }
-  else{
-    $(".help-form-amount-right .amount-button").click(function(e) {
-      e.preventDefault();
-      $(".help-form-amount-right .amount-button").not(this).removeClass("active");
-      $(this).toggleClass("active");
-      $("#paid").val($(this).attr("summ"));
-    });    
-  }
-
-  if($('#ModalHelpForm').hasClass('opened')){
     $("#ModalHelpForm #paid").on("input", function(e) {
       $("#ModalHelpForm .help-form-amount-right .amount-button").removeClass("active");
     });
-  }
-  else{
-    $("#paid").on("input", function(e) {
-      $(".help-form-amount-right .amount-button").removeClass("active");
-    });
-  }
-
-  if($('#ModalHelpForm').hasClass('opened')){
     $("#ModalHelpForm .help_form .help-form-subscribe .subscribe-link").click(function(e) {
       e.preventDefault();
       $("#ModalHelpForm .help_form .help-form-subscribe .subscribe-link").removeClass("active");
@@ -92,6 +73,15 @@ jQuery(document).ready(function($) {
     });
   }
   else{
+    $(".help-form-amount-right .amount-button").click(function(e) {
+      e.preventDefault();
+      $(".help-form-amount-right .amount-button").not(this).removeClass("active");
+      $(this).toggleClass("active");
+      $("#paid").val($(this).attr("summ"));
+    }); 
+    $("#paid").on("input", function(e) {
+      $(".help-form-amount-right .amount-button").removeClass("active");
+    });   
     $(".help_form .help-form-subscribe .subscribe-link").click(function(e) {
       e.preventDefault();
       $(".help_form .help-form-subscribe .subscribe-link").removeClass("active");
@@ -99,6 +89,7 @@ jQuery(document).ready(function($) {
       $('.help_form input[name="pay_type"]').val($(this).attr("paytype"));
     });
   }
+
 
   //news orange gradient for items without photo
   setTimeout(function() {
