@@ -66,7 +66,11 @@ if($_POST['custom_action'] == 'true'){
                         <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta="<?php echo $next; ?>" ></a></li>
                         <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
                     </ul>
-                    <div class="count_pages"><span class="paged_review"><?php echo $paged; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
+                    <?php if ( ($t2+1) == $last ) { ?>
+                        <div class="count_pages"><span class="paged_review"><?php echo $last; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
+                    <?php } else{ ?>
+                        <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . ($t2+6); ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
+                   <?php  } ?>
                 <?php } ?>
             </div>
         </div>
@@ -547,7 +551,7 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                         <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta='2' ></a></li>
                         <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
                     </ul>
-                    <div class="count_pages"><span class="paged_review">1</span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
+                    <div class="count_pages"><span class="paged_review">1-6</span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
                 <?php } ?>
             </div>
         </div>
