@@ -51,18 +51,24 @@ if($_POST['custom_action'] == 'true'){
                     <ul class='list-cptapagination'>
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
                         <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta="<?php echo $prev; ?>"></i></a></li>
-                        <?php if($paged > 6) {
-                                $start_num = $paged-5;
-                                $finish_num = $paged;
+                        <?php
+                        if($paged < 7) {
+                            $start_num = 1;
+                            $finish_num = 6;
+                        } else {
+                            $start_num = $paged;
+                            if( $last <= $paged+5 ) {
+                                $finish_num = $last;
                             } else{
-                                $start_num = 1;
-                                $finish_num = 6;
+                                $finish_num = $paged+5;
                             }
-                            for( $cpta=$start_num; $cpta <= $finish_num; $cpta++){
-                                if( $cpta == $paged ){ $active="active_review"; }else{ $active=""; }
-                                ?>
-                                <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>"><?php echo $cpta;?></a></li>
-                            <?php } ?>
+                        }
+
+                        for( $cpta=$start_num; $cpta <= $finish_num; $cpta++){
+                            if( $cpta == $paged ){ $active="active_review"; }else{ $active=""; }
+                            ?>
+                            <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>"><?php echo $cpta;?></a></li>
+                        <?php } ?>
                         <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta="<?php echo $next; ?>" ></a></li>
                         <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
                     </ul>
