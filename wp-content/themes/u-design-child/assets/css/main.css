@@ -369,6 +369,10 @@ h3 {
 #header-mob #main-top-menu a span {
   color: #fff;
 }
+#header-mob #navigation-menu ul.sf-menu > li.current-menu-item > a > span,
+#header-mob #navigation-menu ul.sf-menu > li.current_page_item > a > span {
+  color: #fff !important;
+}
 
 #header-mob .top-bar-tel-block,
 #header-mob .top-bar-email-block {
@@ -491,7 +495,7 @@ h3 {
 
 #header-mob #sticky-menu-alias,
 #header-mob #sticky-menu-logo {
-  display: block;
+  display: block !important;
 }
 
 #header-mob .header-mob-socials {
@@ -3347,15 +3351,23 @@ footer .footer-mob a.designer-link {
   POPUPS
 ---------*/
 #ModalHelpForm.opened .modal-dialog {
-  left: 50%;
-  top: 50%;
   box-shadow: none;
   background: transparent;
-  transform: translate(-50%, -50%);
+  width: calc(100% - 40px);
 }
 
-@media screen and (max-width: 1300px) {
-  #ModalHelpForm .modal-dialog {
-    width: calc(100% - 40px);
+@media screen and (max-width: 1200px) {
+  #ModalHelpForm .closemodale {
+    right: 20px;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #ModalHelpForm.opened .modal-dialog {
+    height: calc(100% - 110px);
+    overflow-y: scroll;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
