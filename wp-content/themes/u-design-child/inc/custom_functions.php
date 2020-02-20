@@ -74,7 +74,7 @@ if($_POST['custom_action'] == 'true'){
                         <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta="<?php echo $next; ?>" ></a></li>
                         <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
                     </ul>
-                    <div class="count_pages"><span class="paged_review"><?php echo $paged; ?></span> сторiнка з <span class="paged_review"><?php echo $cpta_Paginationlist; ?></span></div>
+                    <div class="count_pages"><span class="paged_review"><?php echo $paged; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
                 <?php } ?>
             </div>
         </div>
@@ -544,7 +544,6 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                 $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
                 $last = ceil( $cpta_Paginationlist );
                 $adjacents = "2";
-                $cptaType = 'reviews';
                 if( $cpta_Paginationlist > 0 ){ ?>
                     <ul class='list-cptapagination'>
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
@@ -572,7 +571,7 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                         <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta='2' ></a></li>
                         <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
                     </ul>
-                    <div class="count_pages"><span class="paged_review">1</span> сторiнка з <span class="paged_review"><?php echo $cpta_Paginationlist; ?></span></div>
+                    <div class="count_pages"><span class="paged_review">1</span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
                 <?php } ?>
             </div>
         </div>

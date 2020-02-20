@@ -59,7 +59,6 @@ jQuery(document).ready(function($) {
 
   $(document).on('click', '.pagination-block a', function(e) {
     e.preventDefault();
-    console.log('click');
     var nth  = $(this).attr('data-cpta');
     var ajax_url = '/wp-content/themes/u-design-child/inc/custom_functions.php';
     jQuery.ajax({
@@ -68,9 +67,6 @@ jQuery(document).ready(function($) {
       data	:{ 'custom_action':'true','number':nth },
       success :function(pvalue){
         jQuery(".reviews-block").html(pvalue);
-        // $('.pagination-block a').removeClass('active_review');
-        // $(".pagination-block").find("[data-cpta='" + nth + "']").not('.step-arrow').addClass('active_review');
-
       }
     });
   });
