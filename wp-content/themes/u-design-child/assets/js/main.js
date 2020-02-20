@@ -188,10 +188,10 @@ jQuery(document).ready(function($) {
     // width: 250
   });
 
-  if ($("a:not(.meanclose)")) {
-    console.log("has close");
-    $(".mob-menu-wrapper").css("display", "none");
-  }
+  $(".expand-button").click(function() {
+    $(".header-mob-lang").slideToggle();
+    $(this).toggleClass("expand-button-opened");
+  });
 
   // $(window)
   //   .on("resize", function() {

@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
   //call help sms modal from header
   $(
-    "#custom-top-bar .top-bar-help-block a, .mob-menu-right .top-bar-help-block a"
+    "#custom-top-bar .top-bar-help-block a, #header-mob .top-bar-help-block a"
   ).click(function(e) {
     e.preventDefault();
     $("#sendSmsModalfromHeader").addClass("opened");
