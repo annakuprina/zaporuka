@@ -53,45 +53,15 @@ if($_POST['custom_action'] == 'true'){
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
                         <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>"></i></a></li>
                         <?php
-//                        if( isset( $prev_click ) ){
-//                            if($paged < 7) {
-//                                $start_num = 1;
-//                                $finish_num = 6;
-//                            } else {
-//                                if ( ($paged % 6) == 0 ) {
-//                                    $start_num = $paged-5;
-//                                    $finish_num = $paged;
-//                                }
-//                                $start_num = $paged-5;
-////                                if( $last <= $paged+5 ) {
-////                                    $finish_num = $last;
-////                                } else{
-////                                    $finish_num = $paged+5;
-////                                }
-//                            }
-//                        } else{
-                        $t = ceil($paged/6 );
+                        $t = ceil($paged/6 )-1;
                         $t2 = $t*6;
-//                        if ($t == 0) {
-//                            $start_num = 1;
-//                            $finish_num = 6;
-//                        }
-//                            if($paged < 7) {
-//                                $start_num = 1;
-//                                $finish_num = 6;
-//                            } else {
-//                                $start_num = $paged;
-//                                if( $last <= $paged+5 ) {
-//                                    $finish_num = $last;
-//                                } else{
-//                                    $finish_num = $paged+5;
-//                                }
-//                            }
-//                        }
-                        for( $cpta=$t2; $cpta < $t2+7; $cpta++){
+                        for( $cpta=$t2+1; $cpta <= $t2+6; $cpta++){
+                            if ( $cpta > $last ) {
+                                continue;
+                            }
                             if( $cpta == $paged ){ $active="active_review"; }else{ $active=""; }
                             ?>
-                            <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $t2+1;?>"><?php echo $t2+1;?></a></li>
+                            <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>"><?php echo $cpta;?></a></li>
                         <?php } ?>
                         <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta="<?php echo $next; ?>" ></a></li>
                         <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
