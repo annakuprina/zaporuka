@@ -2,6 +2,7 @@
 
 if($_POST['custom_action'] == 'true'){
     include __DIR__ . '/../../../../wp-load.php';
+
     $cptaNumber = absint($_POST['number']);
     $cptaLimit  = absint($_POST['limit']);
     $cptaType = sanitize_text_field($_POST['cptapost']);
@@ -13,6 +14,8 @@ if($_POST['custom_action'] == 'true'){
         $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'offset' => $cptaOffsetValue,'post_status' => 'publish');
     }
     $cptaQuery = new WP_Query( $args );
+//    $pages = $cptaQuery->max_num_pages;
+//    var_dump($pages);
     $html = "";
     if( isset($cptaQuery->posts) ){
         $html .= "<div class='reviews-block'>";
@@ -506,39 +509,31 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                 $adjacents = "2";
                 $setPagination = "";
                 $cptaType = 'reviews';
+
                 if( $cpta_Paginationlist > 0 ){
 
                     $setPagination .="<ul class='list-cptapagination'>";
-                    $setPagination .="<li class='pagitext'><a href='' class='step-backward' data-cpta='1' data-limit='$cptaLimit'></a></li>";
-                    $setPagination .="<li class='pagitext'><a href='' data-cpta='1' data-limit='$cptaLimit'><</i></a></li>";
+                    $setPagination .="<li class='pagitext'><a href='' class='step-backward' data-posttype='$cptaType' data-cpta='1' data-limit='$cptaLimit'></a></li>";
+                    $setPagination .="<li class='pagitext'><a href='' class='step-prev' data-posttype='$cptaType' data-cpta='1' data-limit='$cptaLimit'></i></a></li>";
 
                     if ( $cpta_Paginationlist < 7 + ($adjacents * 2) ){
-
                         for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
-
                             if( $cpta ==  0 || $cpta ==  1 ){ $active="active_review"; }else{ $active=""; }
                             $setPagination .="<li><a href='' id='post' class='$active' data-posttype='$cptaType' data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
-
                         }
-
                     } else if ( $cpta_Paginationlist > 5 + ($adjacents * 2) ){
-
                         for( $cpta=1; $cpta <= 4 + ($adjacents * 2); $cpta++){
                             if( $cpta ==  0 || $cpta ==  1 ){ $active="active_review"; }else{ $active=""; }
                             $setPagination .="<li><a href='' id='post' class='.$active.' data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
                         }
-                        $setPagination .="<li class='pagitext'><a href='' data-cpta='$last' data-limit='$cptaLimit'>".$last."</a></li>";
-
                     } else {
-
                         for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
                             if( $cpta ==  0 || $cpta ==  1 ){ $active="active_review"; }else{ $active=""; }
                             $setPagination .="<li><a href='' id='post' class='.$active.' data-posttype='$cptaType'data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
                         }
-
                     }
-                    $setPagination .="<li class='pagitext'><a href='' data-cpta='2' data-limit='$cptaLimit'>></a></li>";
-                    $setPagination .="<li class='pagitext'><a href='' class='step-forward' data-cpta='$last' data-limit='$cptaLimit'></a></li>";
+                    $setPagination .="<li class='pagitext'><a href='' class='step-next' data-posttype='$cptaType' data-cpta='2' data-limit='$cptaLimit'></a></li>";
+                    $setPagination .="<li class='pagitext'><a href='' class='step-forward' data-posttype='$cptaType' data-cpta='$last' data-limit='$cptaLimit'></a></li>";
                     $setPagination .="</ul>";
                 }
                 echo $setPagination;

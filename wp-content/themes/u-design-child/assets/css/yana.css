@@ -683,29 +683,47 @@ h6,
   justify-content: center;
 }
 .pagination-block a {
-  padding: 0 20px;
+  padding: 0 5px;
   opacity: 0.3;
   color: #333333;
   font-size: 14px;
   font-weight: 400;
+  font-family: "Proxima-Nova-Regular";
 }
 .pagination-block a.active_review {
   opacity: 1;
   color: #e78b48;
   font-weight: 700;
 }
-.step-forward,
-.step-backward {
+.pagination-block .step-forward,
+.pagination-block .step-backward,
+.pagination-block .step-prev,
+.pagination-block .step-next{
   width: 17px;
   height: 17px;
-  border-radius: 2px;
-  background-color: #ffffff;
+  padding: 0;
+}
+.pagination-block .step-next{
+  padding-left: 25px;
+}
+.pagination-block .step-prev{
+  padding-right: 25px;
 }
 .step-forward:before{
   content: url("/wp-content/themes/u-design-child/img/step-forward.svg");
-  background-color: #ffffff;
 }
 .step-backward:before{
   content: url("/wp-content/themes/u-design-child/img/step-backward.svg");
-  background-color: #ffffff;
+}
+.step-prev:before{
+  content: url("/wp-content/themes/u-design-child/img/prev-arrow.svg");
+}
+.step-next:before{
+  content: url("/wp-content/themes/u-design-child/img/next-arrow.svg");
+}
+.step-forward:before,
+.step-backward:before,
+.step-prev:before,
+.step-next:before{
+  vertical-align: -3px;
 }
