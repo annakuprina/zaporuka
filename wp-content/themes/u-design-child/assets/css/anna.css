@@ -765,9 +765,7 @@ footer a.designer-link {
   margin-bottom: 60px !important;
 }
 .section-news.tab-wrapper .vc_grid-filter li.vc_grid-filter-item,
-.shop-custom-wrapper
-  .woocommerce-custom-category-filter
-  li.category-filter-item {
+.shop-custom-wrapper .woocommerce-custom-category-filter li.category-filter-item {
   padding: 0;
   margin: 0;
   position: relative;
@@ -800,14 +798,8 @@ footer a.designer-link {
 }
 .section-news.tab-wrapper .vc_grid-filter li.vc_grid-filter-item.vc_active span,
 .section-news.tab-wrapper .vc_grid-filter li.vc_grid-filter-item:hover span,
-.shop-custom-wrapper
-  .woocommerce-custom-category-filter
-  li.category-filter-item.active
-  a,
-.shop-custom-wrapper
-  .woocommerce-custom-category-filter
-  li.category-filter-item:hover
-  a {
+.shop-custom-wrapper  .woocommerce-custom-category-filter  li.category-filter-item.active   a,
+.shop-custom-wrapper  .woocommerce-custom-category-filter  li.category-filter-item:hover   a {
   color: #e78b48 !important;
   opacity: 1;
 }

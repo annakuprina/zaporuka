@@ -55,24 +55,37 @@ jQuery(document).ready(function($) {
   );
 
   //show amount summ on click 100, 250, 1000  in help form
-  $(".help-form-amount-right .amount-button").click(function(e) {
+  $(".home-first-post-form-help .help-form-amount-right .amount-button").click(function(e) {
     e.preventDefault();
-    $(".help-form-amount-right .amount-button")
-      .not(this)
-      .removeClass("active");
+    $(".home-first-post-form-help .help-form-amount-right .amount-button").not(this).removeClass("active");
     $(this).toggleClass("active");
-    $("#paid").val($(this).attr("summ"));
+    $(".home-first-post-form-help #paid").val($(this).attr("summ"));
   });
-
-  $("#paid").on("input", function(e) {
-    $(".help-form-amount-right .amount-button").removeClass("active");
-  });
-
-  $(".help_form .help-form-subscribe .subscribe-link").click(function(e) {
+  $(".modal-body .help-form-amount-right .amount-button").click(function(e) {
     e.preventDefault();
-    $(".help_form .help-form-subscribe .subscribe-link").removeClass("active");
+    $(".modal-body .help-form-amount-right .amount-button").not(this).removeClass("active");
+    $(this).toggleClass("active");
+    $(".modal-body #paid").val($(this).attr("summ"));
+  });
+
+  $(".home-first-post-form-help #paid").on("input", function(e) {
+    $(".home-first-post-form-help .help-form-amount-right .amount-button").removeClass("active");
+  });
+  $(".modal-body #paid").on("input", function(e) {
+    $(".modal-body .help-form-amount-right .amount-button").removeClass("active");
+  });
+
+  $(".home-first-post-form-help .help_form .help-form-subscribe .subscribe-link").click(function(e) {
+    e.preventDefault();
+    $(".home-first-post-form-help .help_form .help-form-subscribe .subscribe-link").removeClass("active");
     $(this).addClass("active");
-    $('.help_form input[name="pay_type"]').val($(this).attr("paytype"));
+    $('.home-first-post-form-help .help_form input[name="pay_type"]').val($(this).attr("paytype"));
+  });
+  $(".modal-body .help_form .help-form-subscribe .subscribe-link").click(function(e) {
+    e.preventDefault();
+    $(".modal-body .help_form .help-form-subscribe .subscribe-link").removeClass("active");
+    $(this).addClass("active");
+    $('.modal-body .help_form input[name="pay_type"]').val($(this).attr("paytype"));
   });
 
   //news orange gradient for items without photo
