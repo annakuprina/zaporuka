@@ -52,8 +52,15 @@ if($_POST['custom_action'] == 'true'){
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
                         <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta="<?php echo $prev; ?>"></i></a></li>
                         <?php if ( $cpta_Paginationlist < 7 + ($adjacents * 2) ){
-                            for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
-                                if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
+                            if($paged > 6) {
+                                $start_num = $paged-5;
+                                $finish_num = $paged;
+                            } else{
+                                $start_num = 1;
+                                $finish_num = 6;
+                            }
+                            for( $cpta=$start_num; $cpta <= $finish_num; $cpta++){
+                                if( $cpta == $paged ){ $active="active_review"; }else{ $active=""; }
                                 ?>
                                 <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>"><?php echo $cpta;?></a></li>
                             <?php }
@@ -223,13 +230,13 @@ function shortcode_project_banner(){
     $total_collected = (int) get_field("total-collected", $post_id);
     $total_amount = (int) get_field("total-amount", $post_id);
     $progress_bar = (int) $total_collected * 100 / (int) $total_amount;
-
+    $general_image = get_field("general-project-image", $post_id);
     ob_start();
     ?>
     <!-- ONE PROJECT BANNER -->
     <div class="one-project-banner">
         <div class="one-project-banner-image">
-            <img src="<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>">
+            <img src="<?php echo $general_image; ?>">
         </div>
         <div class="container_24 container_24-project-page" id="content-container">
             <div class="one-project-banner-inner">
@@ -548,8 +555,8 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                     <ul class='list-cptapagination'>
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
                         <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta='1'></i></a></li>
-                        <?php if ( $cpta_Paginationlist < 7 + ($adjacents * 2) ){
-                            for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
+                        <?php if ( $cpta_Paginationlist < 6 + ($adjacents * 2) ){
+                            for( $cpta=1; $cpta<=6; $cpta++){
                                 if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
                                 ?>
                                 <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>"><?php echo $cpta;?></a></li>

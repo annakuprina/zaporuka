@@ -65,6 +65,9 @@ jQuery(document).ready(function($) {
       url	:ajax_url,
       type	:'post',
       data	:{ 'custom_action':'true','number':nth },
+      beforeSend : function(){
+
+      },
       success :function(pvalue){
         jQuery(".reviews-block").html(pvalue);
       }

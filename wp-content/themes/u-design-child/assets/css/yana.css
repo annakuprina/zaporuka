@@ -422,6 +422,7 @@ h6,
 
 .help_button_single_block .vc_btn3{
   background: transparent!important;
+  border: transparent!important;
   color: #f39856!important;
   letter-spacing: 0.5px;
   transform: scale(1, 0.93);
@@ -429,7 +430,7 @@ h6,
   font-family: "Raleway-Bold";
 }
 .help_button_single_block .vc_btn3::after{
-  content: url(/wp-content/themes/u-design-child//img/arrow-help.svg);
+  content: url("/wp-content/themes/u-design-child/img/arrow-help.svg");
   padding-left: 10px;
 }
 
@@ -444,12 +445,16 @@ h6,
 }
 .single-proj-news-section .carousel-news-posts,
 .help-partners-block,
-.block3_help_button{
+.block3_help_button {
   padding-top: 10px;
+}
+.project-partners-carousel-wrapper .help_button_single_block{
+  padding-top: 12px;
 }
 .project-partners-carousel-wrapper{
   padding-top: 35px;
 }
+
 .single-proj-news-section .vc_pageable-slide-wrapper {
   padding-bottom: 20px;
 }
@@ -548,7 +553,7 @@ h6,
   padding-top: 60px;
 }
 .before_rectangle_block p::before{
-  content: url("/wp-content/themes/u-design-child//img/rectangle-icon.svg");
+  content: url("/wp-content/themes/u-design-child/img/rectangle-icon.svg");
   padding-right: 25px;
   vertical-align: 4%;
 }
@@ -665,7 +670,9 @@ h6,
 .testimonials_section{
   padding-top: 100px;
 }
-
+.reviews-item{
+  box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
+}
 .reviews-item .vc_gitem_row .vc_gitem-col{
   padding: 0 0 10px;
 }
