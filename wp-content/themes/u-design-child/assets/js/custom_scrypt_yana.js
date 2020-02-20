@@ -61,10 +61,12 @@ jQuery(document).ready(function($) {
     e.preventDefault();
     var nth  = $(this).attr('data-cpta');
     var ajax_url = '/wp-content/themes/u-design-child/inc/custom_functions.php';
+    var prev = $(this).attr('data-prev');
+
     jQuery.ajax({
       url	:ajax_url,
       type	:'post',
-      data	:{ 'custom_action':'true','number':nth },
+      data	:{ 'custom_action':'true','number':nth,'prev':prev },
       beforeSend : function(){
 
       },
