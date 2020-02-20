@@ -58,12 +58,16 @@ if($_POST['custom_action'] == 'true'){
                                 $start_num = 1;
                                 $finish_num = 6;
                             } else {
-                                $start_num = $paged-5;
-                                if( $last <= $paged+5 ) {
-                                    $finish_num = $last;
-                                } else{
-                                    $finish_num = $paged+5;
+                                if ( ($paged % 6) == 0 ) {
+                                    $start_num = $paged-5;
+                                    $finish_num = $paged;
                                 }
+                                $start_num = $paged-5;
+//                                if( $last <= $paged+5 ) {
+//                                    $finish_num = $last;
+//                                } else{
+//                                    $finish_num = $paged+5;
+//                                }
                             }
                         } else{
                             if($paged < 7) {
