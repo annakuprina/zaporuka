@@ -3,6 +3,7 @@
 if($_POST['custom_action'] == 'true'){
     include __DIR__ . '/../../../../wp-load.php';
     $cptaNumber = $paged = absint($_POST['number']);
+    $prev_click = $_POST['prev'];
     $cptaLimit  = 2;
     $cptaType = 'reviews';
     if( $cptaNumber == "1" ){
@@ -50,20 +51,33 @@ if($_POST['custom_action'] == 'true'){
                 if( $cpta_Paginationlist > 0 ){ ?>
                     <ul class='list-cptapagination'>
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
-                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta="<?php echo $prev; ?>"></i></a></li>
+                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>"></i></a></li>
                         <?php
-                        if($paged < 7) {
-                            $start_num = 1;
-                            $finish_num = 6;
-                        } else {
-                            $start_num = $paged;
-                            if( $last <= $paged+5 ) {
-                                $finish_num = $last;
-                            } else{
-                                $finish_num = $paged+5;
+                        if( isset( $prev_click ) ){
+                            if($paged < 7) {
+                                $start_num = 1;
+                                $finish_num = 6;
+                            } else {
+                                $start_num = $paged-5;
+                                if( $last <= $paged+5 ) {
+                                    $finish_num = $last;
+                                } else{
+                                    $finish_num = $paged+5;
+                                }
+                            }
+                        } else{
+                            if($paged < 7) {
+                                $start_num = 1;
+                                $finish_num = 6;
+                            } else {
+                                $start_num = $paged;
+                                if( $last <= $paged+5 ) {
+                                    $finish_num = $last;
+                                } else{
+                                    $finish_num = $paged+5;
+                                }
                             }
                         }
-
                         for( $cpta=$start_num; $cpta <= $finish_num; $cpta++){
                             if( $cpta == $paged ){ $active="active_review"; }else{ $active=""; }
                             ?>
