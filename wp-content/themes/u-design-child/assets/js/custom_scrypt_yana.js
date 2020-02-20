@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
     slidesToScroll: 3
   });
 
-  $('.pagination-block').on('click', '#post', function(e) {
+  $('.pagination-block').on('click', 'a', function(e) {
     e.preventDefault();
     var nth  = $(this).attr('data-cpta');
     var lmt  = $(this).attr('data-limit');
