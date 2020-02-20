@@ -57,20 +57,20 @@ jQuery(document).ready(function($) {
     slidesToScroll: 3
   });
 
-  $('.pagination-block').on('click', 'a', function(e) {
+  $(document).on('click', '.pagination-block a', function(e) {
     e.preventDefault();
+    console.log('click');
     var nth  = $(this).attr('data-cpta');
-    var lmt  = $(this).attr('data-limit');
     var ajax_url = '/wp-content/themes/u-design-child/inc/custom_functions.php';
-    var cpta = $(this).attr('data-posttype');
-    $('.pagination-block a').removeClass('active_review');
-    $(this).addClass('active_review');
     jQuery.ajax({
       url	:ajax_url,
       type	:'post',
-      data	:{ 'custom_action':'true','number':nth,'limit':lmt,'cptapost':cpta },
+      data	:{ 'custom_action':'true','number':nth },
       success :function(pvalue){
-        jQuery(".reviews-wrapper").html(pvalue);
+        jQuery(".reviews-block").html(pvalue);
+        // $('.pagination-block a').removeClass('active_review');
+        // $(".pagination-block").find("[data-cpta='" + nth + "']").not('.step-arrow').addClass('active_review');
+
       }
     });
   });
