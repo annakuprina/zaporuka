@@ -1,4 +1,44 @@
 <?php
+
+if($_POST['custom_action'] == 'true'){
+    include __DIR__ . '/../../../../wp-load.php';
+    $cptaNumber = absint($_POST['number']);
+    $cptaLimit  = absint($_POST['limit']);
+    $cptaType = sanitize_text_field($_POST['cptapost']);
+    if( $cptaNumber == "1" ){
+        $cptaOffsetValue = "0";
+        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'post_status' => 'publish');
+    }else{
+        $cptaOffsetValue = ($cptaNumber-1)*$cptaLimit;
+        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'offset' => $cptaOffsetValue,'post_status' => 'publish');
+    }
+    $cptaQuery = new WP_Query( $args );
+    $html = "";
+    if( isset($cptaQuery->posts) ){
+        $html .= "<div class='reviews-block'>";
+        $html .= "<div class='reviews-wrapper'>";
+        for($i=0;$i<sizeof($cptaQuery->posts);++$i){
+            $post_id = $cptaQuery->posts[$i]->ID;
+            $name =  $cptaQuery->posts[$i]->post_title;
+            $region = get_post_meta($post_id, 'region', true);
+            $review_content = $cptaQuery->posts[$i]->post_content;
+            $html .= "<div class='reviews-item'>";
+            $html .= "<div class='reviews-item-title'>";
+            $html .= "<p>" . $post_id . "</p>";
+            $html .= "<p>" . $name . "</p>";
+            $html .= "<p>" . $region . "</p>";
+            $html .= "</div>";
+            $html .= "<div class='reviews-item-text'>";
+            $html .=  "<p>" . $review_content . "</p>";
+            $html .= "</div>";
+            $html .= "</div>";
+        }
+        $html .= "</div>";
+        $html .= "</div>";
+        echo $html;
+        die();
+    }
+}
 function shortcode_milestones(){
     $post = get_post();
     $post_id = $post->ID;
@@ -419,29 +459,12 @@ function vc_post_content_render() {
     return $html;
 }
 
-add_filter( 'vc_grid_item_shortcodes', 'my_module_add_grid_testimonials_shortcodes' );
-function my_module_add_grid_testimonials_shortcodes( $shortcodes ) {
-    $shortcodes['vc_post_id'] = array(
-        'name' => __( ' Custom Testimonials', 'fluidtopics' ),
-        'base' => 'vc_testimonials_content',
-        'category' => __( 'Content', 'fluidtopics' )
-    );
-
-    return $shortcodes;
-}
-
-
-
     // Element HTML
 add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
     function vc_testimonials_content(){
-
-        ob_start();
-
         $new_query = new WP_Query();
-        $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;;
+        $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;
         $new_query->query('post_type=reviews&showposts=2'.'&paged='.$paged);
-
         ob_start();
         ?>
         <!------------
@@ -451,10 +474,12 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
 
             <div class="reviews-wrapper">
                 <?php
-                while ($new_query->have_posts()) : $new_query->the_post();
-                    $post_id = get_the_ID();
-                    $name =  get_field('client_name',$post_id);
-                    $region = get_field('region',$post_id);
+                for($i=0;$i<sizeof($new_query->posts);++$i){
+//                while ($new_query->have_posts()) : $new_query->the_post();
+                    $post_id = $new_query->posts[$i]->ID;
+                    $name =  $new_query->posts[$i]->post_title;
+                    $region = get_post_meta($post_id, 'region', true);
+                    $review_content = $new_query->posts[$i]->post_content;
                     ?>
                     <div class="reviews-item">
                         <div class="reviews-item-title">
@@ -463,10 +488,10 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                             <p><?php echo $region; ?></p>
                         </div>
                         <div class="reviews-item-text">
-                            <?php the_content(); ?>
+                            <p><?php echo $review_content; ?></p>
                         </div><!-- end reviews-item-text -->
                     </div><!-- end reviews-item -->
-                <?php endwhile; ?>
+                <?php } ?>
 
             </div><!-- end reviews-wrapper -->
             <?php wp_reset_postdata(); ?>
@@ -484,7 +509,8 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                 if( $cpta_Paginationlist > 0 ){
 
                     $setPagination .="<ul class='list-cptapagination'>";
-                    $setPagination .="<li class='pagitext'><a href='' data-cpta='1' data-limit='$cptaLimit'>Prev</a></li>";
+                    $setPagination .="<li class='pagitext'><a href='' class='step-backward' data-cpta='1' data-limit='$cptaLimit'></a></li>";
+                    $setPagination .="<li class='pagitext'><a href='' data-cpta='1' data-limit='$cptaLimit'><</i></a></li>";
 
                     if ( $cpta_Paginationlist < 7 + ($adjacents * 2) ){
 
@@ -501,7 +527,6 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                             if( $cpta ==  0 || $cpta ==  1 ){ $active="active_review"; }else{ $active=""; }
                             $setPagination .="<li><a href='' id='post' class='.$active.' data-cpta='$cpta' data-limit='$cptaLimit'>$cpta</a></li>";
                         }
-                        $setPagination .="<li class='pagitext dots'>...</li>";
                         $setPagination .="<li class='pagitext'><a href='' data-cpta='$last' data-limit='$cptaLimit'>".$last."</a></li>";
 
                     } else {
@@ -512,7 +537,8 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                         }
 
                     }
-                    $setPagination .="<li class='pagitext'><a href='' data-cpta='2' data-limit='$cptaLimit'>Next</a></li>";
+                    $setPagination .="<li class='pagitext'><a href='' data-cpta='2' data-limit='$cptaLimit'>></a></li>";
+                    $setPagination .="<li class='pagitext'><a href='' class='step-forward' data-cpta='$last' data-limit='$cptaLimit'></a></li>";
                     $setPagination .="</ul>";
                 }
                 echo $setPagination;
@@ -527,47 +553,48 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
     }
 
 
-add_action( 'wp_ajax_cptapagination', 'cptapagination_callback' );
-add_action( 'wp_ajax_nopriv_cptapagination', 'cptapagination_callback' );
+//add_action( 'wp_ajax_cptapagination', 'cptapagination_callback' );
+//add_action( 'wp_ajax_nopriv_cptapagination', 'cptapagination_callback' );
 
-function cptapagination_callback() {
-    global $wpdb;
-    $cptaNumber = absint($_POST['number']);
-    $cptaLimit  = absint($_POST['limit']);
-    $cptaType = sanitize_text_field($_POST['cptapost']);
-    if( $cptaNumber == "1" ){
-        $cptaOffsetValue = "0";
-        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'post_status' => 'publish');
-    }else{
-        $cptaOffsetValue = ($cptaNumber-1)*$cptaLimit;
-        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'offset' => $cptaOffsetValue,'post_status' => 'publish');
-    }
-    $cptaQuery = new WP_Query( $args );
-    $html = "";
-    if( $cptaQuery->have_posts() ){
-        $html .= "<div class='reviews-block'>";
-        $html .= "<div class='reviews-wrapper'>";
-        while ($cptaQuery->have_posts()) : $cptaQuery->the_post();
 
-            $post_id = get_the_ID();
-            $name =  get_field('client_name',$post_id);
-            $region = get_field('region',$post_id);
-            $html .= "<div class='reviews-item'>";
-            $html .= "<div class='reviews-item-title'>";
-            $html .= "<p>" . $post_id . "</p>";
-            $html .= "<p>" . $name . "</p>";
-            $html .= "<p>" . $region . "</p>";
-            $html .= "</div>";
-            $html .= "<div class='reviews-item-text'>";
-            $html .=  get_the_content();
-            $html .= "</div>";
-            $html .= "</div>";
-        endwhile;
-        $html .= "</div>";
-        $html .= "</div>";
-        echo $html;
-        wp_die();
-    }
-
-}
+//function cptapagination_callback() {
+//    global $wpdb;
+//    $cptaNumber = absint($_POST['number']);
+//    $cptaLimit  = absint($_POST['limit']);
+//    $cptaType = sanitize_text_field($_POST['cptapost']);
+//    if( $cptaNumber == "1" ){
+//        $cptaOffsetValue = "0";
+//        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'post_status' => 'publish');
+//    }else{
+//        $cptaOffsetValue = ($cptaNumber-1)*$cptaLimit;
+//        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'offset' => $cptaOffsetValue,'post_status' => 'publish');
+//    }
+//    $cptaQuery = new WP_Query( $args );
+//    $html = "";
+//    if( $cptaQuery->have_posts() ){
+//        $html .= "<div class='reviews-block'>";
+//        $html .= "<div class='reviews-wrapper'>";
+//        while ($cptaQuery->have_posts()) : $cptaQuery->the_post();
+//
+//            $post_id = get_the_ID();
+//            $name =  get_field('client_name',$post_id);
+//            $region = get_field('region',$post_id);
+//            $html .= "<div class='reviews-item'>";
+//            $html .= "<div class='reviews-item-title'>";
+//            $html .= "<p>" . $post_id . "</p>";
+//            $html .= "<p>" . $name . "</p>";
+//            $html .= "<p>" . $region . "</p>";
+//            $html .= "</div>";
+//            $html .= "<div class='reviews-item-text'>";
+//            $html .=  get_the_content();
+//            $html .= "</div>";
+//            $html .= "</div>";
+//        endwhile;
+//        $html .= "</div>";
+//        $html .= "</div>";
+//        echo $html;
+//        wp_die();
+//    }
+//
+//}
 

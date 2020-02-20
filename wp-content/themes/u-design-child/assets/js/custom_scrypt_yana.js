@@ -57,33 +57,18 @@ jQuery(document).ready(function($) {
     slidesToScroll: 3
   });
 
-  // $('.reviews-block').on('click', '.pagination-block a', function(e){
-  //   e.preventDefault();
-  //   $('.page-numbers').removeClass('current');
-  //   $(this).addClass('current');
-  //   var link = $(this).attr('href');
-  //   $('.reviews-wrapper').fadeOut(0, function(){
-  //     $(this).load(link + ' .reviews-wrapper', function() {
-  //       $(this).fadeIn(0);
-  //     });
-  //   });
-  // });
   $('.pagination-block').on('click', '#post', function(e) {
-
     e.preventDefault();
     var nth  = $(this).attr('data-cpta');
     var lmt  = $(this).attr('data-limit');
-    var ajax_url = ajax_params.ajax_url;
+    var ajax_url = '/wp-content/themes/u-design-child/inc/custom_functions.php';
     var cpta = $(this).attr('data-posttype');
     $('.pagination-block a').removeClass('active_review');
     $(this).addClass('active_review');
     jQuery.ajax({
       url	:ajax_url,
       type	:'post',
-      data	:{ 'action':'cptapagination','number':nth,'limit':lmt,'cptapost':cpta },
-      beforeSend	: function(){
-        jQuery(".reviews-wrapper").html("<p style='text-align:center;'>Loading please wait...!</p>");
-      },
+      data	:{ 'custom_action':'true','number':nth,'limit':lmt,'cptapost':cpta },
       success :function(pvalue){
         jQuery(".reviews-wrapper").html(pvalue);
       }
