@@ -68,7 +68,9 @@ if($_POST['custom_action'] == 'true'){
                     </ul>
                     <?php if ( ($t2+1) == $last ) { ?>
                         <div class="count_pages"><span class="paged_review"><?php echo $last; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
-                    <?php } else{ ?>
+                    <?php } else if ( ($last - (($t2+1))) < 6 ) { ?>
+                        <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . $last; ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
+                        <?php } else {?>
                         <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . ($t2+6); ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
                    <?php  } ?>
                 <?php } ?>
