@@ -53,23 +53,23 @@ if($_POST['custom_action'] == 'true'){
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
                         <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>"></i></a></li>
                         <?php
-                        if( isset( $prev_click ) ){
-                            if($paged < 7) {
-                                $start_num = 1;
-                                $finish_num = 6;
-                            } else {
-                                if ( ($paged % 6) == 0 ) {
-                                    $start_num = $paged-5;
-                                    $finish_num = $paged;
-                                }
-                                $start_num = $paged-5;
-//                                if( $last <= $paged+5 ) {
-//                                    $finish_num = $last;
-//                                } else{
-//                                    $finish_num = $paged+5;
+//                        if( isset( $prev_click ) ){
+//                            if($paged < 7) {
+//                                $start_num = 1;
+//                                $finish_num = 6;
+//                            } else {
+//                                if ( ($paged % 6) == 0 ) {
+//                                    $start_num = $paged-5;
+//                                    $finish_num = $paged;
 //                                }
-                            }
-                        } else{
+//                                $start_num = $paged-5;
+////                                if( $last <= $paged+5 ) {
+////                                    $finish_num = $last;
+////                                } else{
+////                                    $finish_num = $paged+5;
+////                                }
+//                            }
+//                        } else{
                             if($paged < 7) {
                                 $start_num = 1;
                                 $finish_num = 6;
@@ -81,7 +81,7 @@ if($_POST['custom_action'] == 'true'){
                                     $finish_num = $paged+5;
                                 }
                             }
-                        }
+//                        }
                         for( $cpta=$start_num; $cpta <= $finish_num; $cpta++){
                             if( $cpta == $paged ){ $active="active_review"; }else{ $active=""; }
                             ?>
