@@ -771,6 +771,7 @@ footer a.designer-link {
   margin: 0;
   position: relative;
   line-height: 1.2em;
+  background: transparent;
 }
 .section-news.tab-wrapper .vc_grid-filter li.vc_grid-filter-item span,
 .shop-custom-wrapper
