@@ -64,7 +64,7 @@ $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $optio
 	    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $help_label; ?>" /></div>
 	    	 	<div class="help-form-oferta">
 	    	 		<input type="checkbox" id="oferta" name="oferta" required>
-	  				<label for="oferta"><?php echo $agree_help_label; ?> <a href="<?php echo $agree_link; ?>"><?php echo $agree_link_label; ?></a>*</label>
+	  				<label for="oferta"><?php echo $agree_help_label; ?> <a href="<?php echo $agree_link; ?>" target="_blank" ><?php echo $agree_link_label; ?></a>*</label>
 	    	 	</div>
 	    	 </div>	  	
 		</form>

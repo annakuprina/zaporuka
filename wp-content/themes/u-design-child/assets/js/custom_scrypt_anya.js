@@ -32,9 +32,7 @@ jQuery(document).ready(function($) {
   });
 
   //call help big modal
-  $(
-    ".help-header-link a,.mob-menu-right #menu-item-305 a, #menu-Futer-Dopomogti-ukr li:eq(0) a,#menu-Futer-Dopomogti-rus  li:eq(0) a,#menu-Futer-Dopomogti-en li:eq(0) a"
-  ).click(function(e) {
+  $(".help-header-link a,.mob-menu-right #menu-item-305 a, #menu-Futer-Dopomogti-ukr li:eq(0) a,#menu-Futer-Dopomogti-rus  li:eq(0) a,#menu-Futer-Dopomogti-en li:eq(0) a").click(function(e) {
     e.preventDefault();
     callHelpPopup = true;
     $("#ModalHelpForm").addClass("opened");
@@ -48,12 +46,8 @@ jQuery(document).ready(function($) {
     $("body").removeClass("noscroll");
   });
 
-  $(".home-page-section2 .section2-columns .section2-single-column").click(
-    function() {
-      var text = $(this)
-        .find(".vc_cta3-actions")
-        .find("a")
-        .attr("href");
+  $(".home-page-section2 .section2-columns .section2-single-column").click(function() {
+    var text = $(this).find(".vc_cta3-actions").find("a").attr("href");
       window.location.href = text;
     }
   );
