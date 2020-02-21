@@ -366,6 +366,7 @@ function my_module_add_grid_shortcodes( $shortcodes ) {
     return $shortcodes;
 }
 // output function
+
 add_shortcode( 'vc_custom_post_meta', 'vc_custom_post_meta_render' );
 function vc_custom_post_meta_render() {
 
@@ -396,8 +397,6 @@ function vc_custom_post_meta_render() {
     $html = ob_get_clean();
     return $html;
 }
-
-
 
 function zaporuka_photo_video_doc(){
     $post = get_post();
@@ -563,6 +562,54 @@ function about_video_button() {
             Дивитись вiдео
         </a>
     </div>
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
+add_shortcode( 'shortcode_list_of_reports', 'list_of_reports' );
+function list_of_reports() {
+    $args = array(
+        'posts_per_page'   => -1,
+        'post_type'        => 'reporting',
+    );
+    $new_query = new WP_Query($args);
+    $report = '';
+    ob_start();
+    ?>
+    <div>
+        <ul>
+            <?php for($i=0;$i<sizeof($new_query->posts);++$i){ ?>
+                <li><?php echo $new_query->posts[$i]->post_title;?></li>
+            <?php } ?>
+        </ul>
+    </div>
+
+    <a href="<?php echo $report; ?>" download>
+        <div class="">
+            ......
+        </div>
+    </a>
+
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
+add_shortcode( 'shortcode_list_of_children', 'list_of_children' );
+function list_of_children() {
+    $args = array(
+        'posts_per_page'   => 6,
+        'post_type'        => 'children',
+    );
+    $new_query = new WP_Query($args);
+
+    ob_start();
+    ?>
+
+        <div class="">
+            ......
+        </div>
+
+
     <?php
     $html = ob_get_clean();
     return $html;
