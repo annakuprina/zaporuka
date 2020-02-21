@@ -669,9 +669,7 @@ h6,
 .write_about_us_carousel .vc_gitem-zone-a .vc_gitem-row-position-top{
   position: inherit;
 }
-.testimonials_section{
-  padding-top: 100px;
-}
+
 .reviews-item{
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
@@ -752,6 +750,9 @@ h6,
   position: absolute;
   opacity: 0.3
 }
+.testimonials_section{
+  padding-top: 90px;
+}
 .aboutus_section2 {
   padding-top: 85px;
 }
@@ -768,10 +769,13 @@ h6,
 .aboutus_section3 .h2-header-line{
   margin-bottom: 40px;
 }
+.aboutus_section3{
+  padding-top: 40px;
+}
 .aboutus_section3 .about_team_text{
   padding-bottom: 25px;
 }
 .about_block6{
-  padding-top: 90px;
+  padding-top: 75px;
   padding-bottom: 45px;
 }
