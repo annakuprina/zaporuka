@@ -18,6 +18,7 @@ if($_POST['custom_action'] == 'true'){
     if( isset($cptaQuery->posts) ){ ?>
         <div class='reviews-block'>
             <div class='reviews-wrapper'>
+                <div class="preloader"></div>
                 <?php for($i=0;$i<sizeof($cptaQuery->posts);++$i){
                     $post_id = $cptaQuery->posts[$i]->ID;
                     $name =  $cptaQuery->posts[$i]->post_title;
@@ -512,8 +513,8 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
             REVIEWS
          ------------->
         <div class="reviews-block">
-
             <div class="reviews-wrapper">
+                <div class="preloader"></div>
                 <?php
                 for($i=0;$i<sizeof($new_query->posts);++$i){
                     $post_id = $new_query->posts[$i]->ID;
