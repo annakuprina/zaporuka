@@ -20,10 +20,10 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="woocommerce-order">
 
-	<?php if ( $order->get_status()) ;
+	<?php if ( $order) ;
 
 
-		var_dump( $order )
+		var_dump( $order->get_status() );
 
 		do_action( 'woocommerce_before_thankyou', $order->get_id() ); ?>
 
