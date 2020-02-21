@@ -76,4 +76,5 @@ jQuery(document).ready(function($) {
       }
     });
   });
+  $(".video_button").slickLightbox({});
 });
