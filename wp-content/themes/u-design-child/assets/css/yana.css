@@ -614,12 +614,15 @@ h6,
 .aboutus_section1{
   padding: 150px 130px;
 }
-.aboutus_section1 h2{
+.aboutus_section1 h2,
+.aboutus_section1 .video_button a{
   font-family: Raleway-Bold!important;
 }
-.aboutus_section1 .video_button button{
-
-  color: #ffff;
+.aboutus_section1 .video_button{
+  text-align: right;
+}
+.aboutus_section1 .video_button a{
+  font-size: 14px;
 }
 .aboutus_section1 .video_button a:before{
   content: url("../../img/play_video_big.svg");
@@ -633,7 +636,8 @@ h6,
   padding-bottom: 30px;
 }
 .our-team-front-wrapper,
-.our-team-hover-wrapper{
+.our-team-hover-wrapper,
+.aboutus_section1 .video_button a{
   color: #ffffff;
 }
 .team-member-title,
