@@ -91,27 +91,23 @@ jQuery(document).ready(function($) {
 
 
   //add payment description to Help form
-  if(window.type_of_help == 'pay'){
-    if(window.location.href.indexOf("/projects/") > -1) {
-      var project_name = $('#page-title .single-pagetitle').text();
+  if(window.location.href.indexOf("/projects/") > -1) {
+    var project_name = $('#page-title .single-pagetitle').text();
+    if(window.type_of_help == 'pay'){
       $('.help_form #plata').val("Однократное перечисление средств на проект " + project_name);
     }
     else{
-      $('.help_form #plata').val("Однократное перечисление средств (без привязки к проекту)");
+      $('.help_form #plata').val("Ежемесячное перечисление средств на проект " + project_name);
     }
   }
   else{
-    if(window.location.href.indexOf("/projects/") > -1) {
-      var project_name = $('#page-title .single-pagetitle').text();
-      $('.help_form #plata').val("Ежемесячное перечисление средств на проект " + project_name);
+    if(window.type_of_help == 'pay'){
+      $('.help_form #plata').val("Однократное перечисление средств (без привязки к проекту)");
     }
     else{
       $('.help_form #plata').val("Ежемесячное перечисление средств (без привязки к проекту)");
     }
   }
-
-
-
 
   //news orange gradient for items without photo
   setTimeout(function() {
