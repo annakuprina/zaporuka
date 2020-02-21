@@ -83,7 +83,7 @@ h6,
   font-family: "Raleway-Bold";
 }
 .error_page a:after {
-  content: url("/wp-content/themes/u-design-child/img/arrow-home.svg");
+  content: url("../../img/arrow-home.svg");
   position: absolute;
   padding-left: 11px;
   padding-top: 3px;
@@ -94,7 +94,7 @@ h6,
   padding-left: 14px;
 }
 .map-marker-main-block:before{
-  content: url("/wp-content/themes/u-design-child/img/map_marker.svg");
+  content: url("../../img/map_marker.svg");
   position: absolute;
   top: 55%;
   left: 21%;
@@ -178,7 +178,7 @@ h6,
   line-height: 58px;
 }
 .contact_need_help button:after {
-  content: url("/wp-content/themes/u-design-child/img/arrow-help.svg");
+  content: url("../../img/arrow-help.svg");
   position: absolute;
   padding-left: 11px;
 }
@@ -287,7 +287,7 @@ h6,
   font-family: "Raleway-Bold";
 }
 .custom-container .content_column.help_column p::after {
-  content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
+  content: url(../../img/arrow-home.svg);
   padding-left: 10px;
 }
 .section-tabs{
@@ -430,7 +430,7 @@ h6,
   font-family: "Raleway-Bold";
 }
 .help_button_single_block .vc_btn3::after{
-  content: url("/wp-content/themes/u-design-child/img/arrow-help.svg");
+  content: url("../../img/arrow-help.svg");
   padding-left: 10px;
 }
 
@@ -555,7 +555,7 @@ h6,
   padding-top: 60px;
 }
 .before_rectangle_block p::before{
-  content: url("/wp-content/themes/u-design-child/img/rectangle-icon.svg");
+  content: url("../../img/rectangle-icon.svg");
   padding-right: 25px;
   vertical-align: 4%;
 }
@@ -587,7 +587,7 @@ h6,
   padding-top: 0!important;
 }
 .directions_section1_button button::after {
-  content: url("/wp-content/themes/u-design-child/img/arrow-home.svg");
+  content: url("../../img/arrow-home.svg");
   padding-left: 10px;
 }
 .directions_section2_tabs .vc_tta-panel-body{overflow: inherit!important;}
@@ -611,6 +611,16 @@ h6,
   cursor: pointer;
 }
 /*************************** Our Team ***************************/
+.aboutus_section1{
+  padding: 150px 130px;
+}
+.aboutus_section1 h2{
+  font-family: Raleway-Bold!important;
+}
+.aboutus_section1 .video_button button:before{
+  content: url("../../img/play_video.svg") no-repeat;
+  background: #ddd;
+}
 .our-team-hover-wrapper{
   box-shadow: 4px 4px 20px rgba(209, 209, 209, 0.2);
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
@@ -717,16 +727,16 @@ h6,
   padding-right: 25px;
 }
 .step-forward:before{
-  content: url("/wp-content/themes/u-design-child/img/step-forward.svg");
+  content: url("../../img/step-forward.svg");
 }
 .step-backward:before{
-  content: url("/wp-content/themes/u-design-child/img/step-backward.svg");
+  content: url("../../img/step-backward.svg");
 }
 .step-prev:before{
-  content: url("/wp-content/themes/u-design-child/img/prev-arrow.svg");
+  content: url("../../img/prev-arrow.svg");
 }
 .step-next:before{
-  content: url("/wp-content/themes/u-design-child/img/next-arrow.svg");
+  content: url("../../img/next-arrow.svg");
 }
 .step-arrow:before {
   vertical-align: -3px;
@@ -744,7 +754,7 @@ h6,
 }
 .preloader {
   display: none;
-  background: url("/wp-content/themes/u-design-child/img/preloader.svg") center center no-repeat;
+  background: url("../../img/preloader.svg") center center no-repeat;
   height: 100%;
   width: 100%;
   position: absolute;
