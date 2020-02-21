@@ -440,7 +440,8 @@ h6,
 .single-proj-help-section,
 .single-proj-help-partners-section,
 .single-proj-other-posts-section,
-.privacy-help-section{
+.privacy-help-section,
+.photo_video_block5{
   padding-top: 90px;
 }
 .single-proj-news-section .carousel-news-posts,
@@ -448,6 +449,7 @@ h6,
 .block3_help_button {
   padding-top: 10px;
 }
+
 .project-partners-carousel-wrapper .help_button_single_block{
   padding-top: 12px;
 }
@@ -749,4 +751,21 @@ h6,
   width: 100%;
   position: absolute;
   opacity: 0.3
+}
+.aboutus_section2{
+  padding-top: 85px;
+  padding-bottom: 90px;
+}
+.aboutus_section2 .block_excerpt_container{
+  padding: 25px 0 0 60px;
+}
+.aboutus_section2 .block_excerpt {
+  margin-bottom: 60px;
+}
+.aboutus_section2 .h2-header-line{
+  margin-bottom: 40px;
+}
+.about_block6{
+  padding-top: 90px;
+  padding-bottom: 45px;
 }
