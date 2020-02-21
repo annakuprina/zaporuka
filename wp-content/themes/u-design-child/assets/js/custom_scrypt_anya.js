@@ -53,7 +53,6 @@ jQuery(document).ready(function($) {
 
   //add payment description to Help form
   function change_payment_description(type_of_help){
-     var type_of_help = 'pay';
      if(window.location.href.indexOf("/projects/") > -1) {
         var project_name = $('#page-title .single-pagetitle').text();
         if(type_of_help == 'pay'){
