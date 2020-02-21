@@ -618,7 +618,7 @@ h6,
   font-family: Raleway-Bold!important;
 }
 .aboutus_section1 .video_button button:before{
-  content: url("../../img/play_video.svg") no-repeat;
+  content: url("../../img/play_video.svg");
   background: #ddd;
 }
 .our-team-hover-wrapper{
