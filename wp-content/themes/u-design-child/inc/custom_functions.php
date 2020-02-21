@@ -3,6 +3,7 @@
 if($_POST['custom_action'] == 'true'){
     include __DIR__ . '/../../../../wp-load.php';
     $cptaNumber = $paged = absint($_POST['number']);
+    $prev_click = $_POST['prev'];
     $cptaLimit  = 2;
     $cptaType = 'reviews';
     if( $cptaNumber == "1" ){
@@ -50,31 +51,28 @@ if($_POST['custom_action'] == 'true'){
                 if( $cpta_Paginationlist > 0 ){ ?>
                     <ul class='list-cptapagination'>
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
-                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta="<?php echo $prev; ?>"></i></a></li>
-                        <?php if ( $cpta_Paginationlist < 7 + ($adjacents * 2) ){
-                            for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
-                                if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
-                                ?>
-                                <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>"><?php echo $cpta;?></a></li>
-                            <?php }
-                        } else if ( $cpta_Paginationlist > 5 + ($adjacents * 2) ){
-                            for( $cpta=1; $cpta <= 4 + ($adjacents * 2); $cpta++){
-                                if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
-                                ?>
-                                <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" ><?php echo $cpta;?></a></li>
-                            <?php }
-                        } else {
-                            for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
-                                if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
-                                ?>
-                                <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" ><?php echo $cpta;?></a></li>
-                            <?php }
-                        }
-                        ?>
+                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>"></i></a></li>
+                        <?php
+                        $t = ceil($paged/6 )-1;
+                        $t2 = $t*6;
+                        for( $cpta=$t2+1; $cpta <= $t2+6; $cpta++){
+                            if ( $cpta > $last ) {
+                                continue;
+                            }
+                            if( $cpta == $paged ){ $active="active_review"; }else{ $active=""; }
+                            ?>
+                            <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>"><?php echo $cpta;?></a></li>
+                        <?php } ?>
                         <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta="<?php echo $next; ?>" ></a></li>
                         <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
                     </ul>
-                    <div class="count_pages"><span class="paged_review"><?php echo $paged; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
+                    <?php if ( ($t2+1) == $last ) { ?>
+                        <div class="count_pages"><span class="paged_review"><?php echo $last; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
+                    <?php } else if ( ($last - (($t2+1))) < 6 ) { ?>
+                        <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . $last; ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
+                        <?php } else {?>
+                        <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . ($t2+6); ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
+                   <?php  } ?>
                 <?php } ?>
             </div>
         </div>
@@ -223,13 +221,13 @@ function shortcode_project_banner(){
     $total_collected = (int) get_field("total-collected", $post_id);
     $total_amount = (int) get_field("total-amount", $post_id);
     $progress_bar = (int) $total_collected * 100 / (int) $total_amount;
-
+    $general_image = get_field("general-project-image", $post_id);
     ob_start();
     ?>
     <!-- ONE PROJECT BANNER -->
     <div class="one-project-banner">
         <div class="one-project-banner-image">
-            <img src="<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>">
+            <img src="<?php echo $general_image; ?>">
         </div>
         <div class="container_24 container_24-project-page" id="content-container">
             <div class="one-project-banner-inner">
@@ -543,35 +541,19 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
                 $cpta_Count = count($cpta_Query->posts);
                 $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
                 $last = ceil( $cpta_Paginationlist );
-                $adjacents = "2";
                 if( $cpta_Paginationlist > 0 ){ ?>
                     <ul class='list-cptapagination'>
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
                         <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta='1'></i></a></li>
-                        <?php if ( $cpta_Paginationlist < 7 + ($adjacents * 2) ){
-                            for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
+                            <?php for( $cpta=1; $cpta<=6; $cpta++){
                                 if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
                                 ?>
                                 <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>"><?php echo $cpta;?></a></li>
-                            <?php }
-                        } else if ( $cpta_Paginationlist > 5 + ($adjacents * 2) ){
-                            for( $cpta=1; $cpta <= 4 + ($adjacents * 2); $cpta++){
-                                if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
-                                ?>
-                                <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" ><?php echo $cpta;?></a></li>
-                            <?php }
-                        } else {
-                            for( $cpta=1; $cpta<=$cpta_Paginationlist; $cpta++){
-                                if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
-                                ?>
-                                <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" ><?php echo $cpta;?></a></li>
-                            <?php }
-                        }
-                        ?>
+                            <?php } ?>
                         <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta='2' ></a></li>
                         <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
                     </ul>
-                    <div class="count_pages"><span class="paged_review">1</span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
+                    <div class="count_pages"><span class="paged_review">1-6</span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
                 <?php } ?>
             </div>
         </div>
