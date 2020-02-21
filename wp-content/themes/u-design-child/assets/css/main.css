@@ -1910,6 +1910,7 @@ h3 {
 .reviews-wrapper {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .reviews-item {

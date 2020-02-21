@@ -744,8 +744,7 @@ h6,
 }
 .preloader {
   display: none;
-  background: #ccc;
-  /*background: #ccc url("/wp-content/themes/u-design-child/img/preloader.jpg") center center no-repeat;*/
+  background: url("/wp-content/themes/u-design-child/img/preloader.svg") center center no-repeat;
   height: 100%;
   width: 100%;
   position: absolute;
