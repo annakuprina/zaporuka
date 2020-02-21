@@ -27,6 +27,7 @@ $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $optio
 		   	<input type="hidden" name="ip"  value=[ip]/>
 		   	<input type="hidden" name="pay_type"  value="pay"/>
 		    <input type="hidden" name="subscribe_type"  value="month"/>
+		    <input type="hidden" id="plata" name="plata" value="">
 		    <div class="help-form-amount">
 		    	<div class="help-form-amount-left">
 		    		<input class="textarea-small val" type="text" id="paid" name="paid"  value="" placeholder="<?php echo $amount_label; ?>" required/> 
