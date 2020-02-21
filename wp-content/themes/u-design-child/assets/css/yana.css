@@ -618,15 +618,13 @@ h6,
   font-family: Raleway-Bold!important;
 }
 .aboutus_section1 .video_button button{
-  background-color: transparent!important;
-  border: none!important;
-  border-color: unset!important;
-  color: #ffff!important;
+
+  color: #ffff;
 }
-.aboutus_section1 .video_button button:before{
+.aboutus_section1 .video_button a:before{
   content: url("../../img/play_video_big.svg");
   padding-right: 10px;
-  vertical-align: -18px;
+  vertical-align: -25px;
 }
 .our-team-hover-wrapper{
   box-shadow: 4px 4px 20px rgba(209, 209, 209, 0.2);
