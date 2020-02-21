@@ -93,7 +93,7 @@ jQuery(document).ready(function($) {
   //add payment description to Help form
   if(window.location.href.indexOf("/projects/") > -1) {
     var project_name = $('#page-title .single-pagetitle').text();
-    if(type_of_help == pay){
+    if(type_of_help == 'pay'){
       $('.help_form #plata').val("Однократное перечисление средств на проект " + project_name);
     }
     else{
@@ -101,7 +101,8 @@ jQuery(document).ready(function($) {
     }
   }
   else{
-    if(type_of_help == pay){
+    var project_name = $('#page-title .single-pagetitle').text();
+    if(type_of_help == 'pay'){
       $('.help_form #plata').val("Однократное перечисление средств (без привязки к проекту)");
     }
     else{
