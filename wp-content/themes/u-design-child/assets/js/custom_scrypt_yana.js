@@ -68,10 +68,11 @@ jQuery(document).ready(function($) {
       type	:'post',
       data	:{ 'custom_action':'true','number':nth,'prev':prev },
       beforeSend : function(){
-
+        $('.preloader').css('display', 'block');
       },
       success :function(pvalue){
         jQuery(".reviews-block").html(pvalue);
+        $('.preloader').css('display', 'none');
       }
     });
   });
