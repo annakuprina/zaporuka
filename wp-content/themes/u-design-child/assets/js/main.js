@@ -193,6 +193,12 @@ jQuery(document).ready(function($) {
     $(this).toggleClass("expand-button-opened");
   });
 
+  $(".header-mob-top").click(function() {
+    $(".header-mob-bottom").slideToggle();
+    $(".header-mob-logo img").toggleClass("active");
+    $(".header-mob-top").toggleClass("active");
+    $(".hamburger").toggleClass("active");
+  });
   // $(window)
   //   .on("resize", function() {
   //     var maxHeight = -1;

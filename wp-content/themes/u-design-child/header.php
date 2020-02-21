@@ -32,6 +32,8 @@ $help_with_sms_label = !empty($options['popup_sms_title_' . ICL_LANGUAGE_CODE]) 
 $help_label = !empty($options['title_help_block_' . ICL_LANGUAGE_CODE]) ? $options['title_help_block_' . ICL_LANGUAGE_CODE] : 'Допомогти';
 $phone_number = !empty($options['main_phone_number']) ? $options['main_phone_number'] : false;
 $email = !empty($options['main_email']) ? $options['main_email'] : false;
+$logo_mob_img_url = $udesign_options['fixed_menu_logo'];
+$logo_img_url = $udesign_options['custom_logo_img'];
 
 set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 'no_container' ) ); // Page specific layout options based on "U-Design Options" metabox selection.
 ?>
@@ -72,31 +74,46 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 			</header>
 
 			<header id="header-mob">
-					<div class="header-mob-left"><?php echo udesign_nav();?></div>
-					<div class="header-mob-right">
-
-
-						<div class="help-header-link"><a href="#"><span><?php echo $help_label; ?></span></a></div>
-						
-						<div class="top-bar-help-block"><a href="#"><span><?php echo $help_with_sms_label; ?></span></a></div>
-
-						<div class="top-bar-tel-block"><a href="tel:<?php echo $phone_number; ?>" class="tel-block-a"><i class="fa fa-phone" aria-hidden="true"></i></i><?php echo $phone_number; ?></a></div>
-						<div class="top-bar-email-block"><a href="mailto:<?php echo $email; ?>" class="email-block-a"><i class="top-bar-mail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g opacity=".4"><path fill="#333" d="M1.55 1.195L4.646 4.23c.193.19.509.19.703 0l3.101-3.035a.25.25 0 1 1 .352.356L6.773 3.539l2.024 1.902a.25.25 0 0 1-.344.364L6.418 3.887l-.719.703a1.01 1.01 0 0 1-1.406 0l-.711-.7-2.035 1.915a.25.25 0 0 1-.344-.364l2.02-1.902-2.024-1.988a.25.25 0 1 1 .352-.356zM0 .75v5.5c0 .415.335.75.75.75h8.5c.415 0 .75-.335.75-.75V.75A.748.748 0 0 0 9.25 0H.75A.748.748 0 0 0 0 .75z"/></g></g></svg></i><?php echo $email; ?></a></div>
-						
-
-						<div class="header-mob-socials">
-							<li><a class="header-mob-soc-fb" href="<?php echo $facebook_link;?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a class="header-mob-soc-youtube" href="<?php echo $youtube_link;?>" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-							<li><a class="header-mob-soc-insta" href="<?php echo $instagram_link;?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				<div class="header-mob-top">
+					<div class="header-mob-logo">
+						<img class="active" src="<?php echo $logo_img_url ?>" alt="">
+						<img  src="<?php echo $logo_mob_img_url ?>" alt="">
+					</div>
+					<div class="header-mob-nav">
+						<div class="hamburger active">
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
-						<div class="header-mob-lang-wrapper">
-							<a href="#pll_switcher" class="sf-with-ul"><span><?php echo pll_current_language( 'name' );?></span></a>
-								<ul class="header-mob-lang">
-									<?php pll_the_languages();?>
-								</ul>
-							<span class="expand-button" href="#"></span>
-						</div><!-- end header-mob-lang-wrapper -->
-					</div><!-- end header-mob-right -->
+						<div class="close"></div>
+
+					</div>
+				</div>
+			
+				<div class="header-mob-bottom">
+					<div class="header-mob-bottom-wrapper">
+						<div class="header-mob-left"><?php echo udesign_nav();?></div>
+						<div class="header-mob-right">
+							<div class="help-header-link"><a href="#"><span><?php echo $help_label; ?></span></a></div>
+							<div class="top-bar-help-block"><a href="#"><span><?php echo $help_with_sms_label; ?></span></a></div>
+							<div class="top-bar-tel-block"><a href="tel:<?php echo $phone_number; ?>" class="tel-block-a"><i class="fa fa-phone" aria-hidden="true"></i></i><?php echo $phone_number; ?></a></div>
+							<div class="top-bar-email-block"><a href="mailto:<?php echo $email; ?>" class="email-block-a"><i class="top-bar-mail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g opacity=".4"><path fill="#333" d="M1.55 1.195L4.646 4.23c.193.19.509.19.703 0l3.101-3.035a.25.25 0 1 1 .352.356L6.773 3.539l2.024 1.902a.25.25 0 0 1-.344.364L6.418 3.887l-.719.703a1.01 1.01 0 0 1-1.406 0l-.711-.7-2.035 1.915a.25.25 0 0 1-.344-.364l2.02-1.902-2.024-1.988a.25.25 0 1 1 .352-.356zM0 .75v5.5c0 .415.335.75.75.75h8.5c.415 0 .75-.335.75-.75V.75A.748.748 0 0 0 9.25 0H.75A.748.748 0 0 0 0 .75z"/></g></g></svg></i><?php echo $email; ?></a></div>
+							<div class="header-mob-socials">
+								<li><a class="header-mob-soc-fb" href="<?php echo $facebook_link;?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a class="header-mob-soc-youtube" href="<?php echo $youtube_link;?>" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+								<li><a class="header-mob-soc-insta" href="<?php echo $instagram_link;?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							</div>
+							<div class="header-mob-lang-wrapper">
+								<a href="#pll_switcher" class="sf-with-ul"><span><?php echo pll_current_language( 'name' );?></span></a>
+									<ul class="header-mob-lang">
+										<?php pll_the_languages();?>
+									</ul>
+								<span class="expand-button" href="#"></span>
+							</div><!-- end header-mob-lang-wrapper -->
+						</div><!-- end header-mob-right -->
+					</div><!--end header-mob-bottom-wrapper -->
+				</div><!--end header-mob-bottom -->
+
 			</header>
 			<!-- end top-wrapper -->
 			<?php 
