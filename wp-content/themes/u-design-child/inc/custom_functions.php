@@ -371,7 +371,6 @@ function vc_custom_post_meta_render() {
 
     $total_collected_timeline = "{{ post_meta_value:total-collected }}";
     $total_amount_timeline = '{{ post_data:total-amount }}';
-    //var_dump("{{ custom_meta }}");
     ob_start();
     ?>
     <div class="one-project-progress-wrapper">
@@ -398,19 +397,7 @@ function vc_custom_post_meta_render() {
     return $html;
 }
 
-add_filter( 'vc_gitem_template_attribute_custom_meta', 'vc_gitem_template_attribute_custom_meta ', 10, 3 );
-function vc_gitem_template_attribute_custom_meta( $value, $data ) {
-    /**
-     * @var Wp_Post $post
-     * @var string $data
-     */
-    extract( array_merge( array(
-        'post' => null,
-        'data' => '',
-    ), $data ) );
 
-    return var_export( get_post_meta( $post->ID, 'total-collected' ), true );
-}
 
 function zaporuka_photo_video_doc(){
     $post = get_post();
@@ -566,7 +553,7 @@ function vc_testimonials_content(){
 add_shortcode( 'about_video_button', 'about_video_button' );
 function about_video_button() {
 
-    $about_video = "{{ post_meta_value:about_video }}";
+    $about_video = get_post_meta( get_the_ID(), 'about_video' );
     ob_start();
     ?>
     <div class="video_button">
