@@ -503,7 +503,7 @@ function vc_post_content_render() {
 }
 
 add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
-    function vc_testimonials_content(){
+function vc_testimonials_content(){
         $new_query = new WP_Query();
         $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;
         $new_query->query('post_type=reviews&showposts=2'.'&paged='.$paged);
@@ -562,3 +562,23 @@ add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
         $html = ob_get_clean();
         return $html;
     }
+
+add_shortcode( 'about_video_button', 'about_video_button' );
+function about_video_button() {
+
+    $about_video = "{{ post_meta_value:about_video }}";
+    ob_start();
+    ?>
+    <div class="video_button">
+        <a
+                href="<?php echo $about_video; ?>"
+                target="_blank"
+                class="thumbnail">
+            Дивитись вiдео
+        </a>
+
+    </div>
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
