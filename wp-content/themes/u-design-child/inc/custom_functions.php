@@ -552,8 +552,7 @@ function vc_testimonials_content(){
 
 add_shortcode( 'about_video_button', 'about_video_button' );
 function about_video_button() {
-
-    $about_video = get_post_meta( get_the_ID(), 'about_video' );
+    $about_video = get_post_meta( get_the_ID(), 'about_video', true );
     ob_start();
     ?>
     <div class="video_button">
@@ -563,7 +562,6 @@ function about_video_button() {
                 class="thumbnail">
             Дивитись вiдео
         </a>
-
     </div>
     <?php
     $html = ob_get_clean();
