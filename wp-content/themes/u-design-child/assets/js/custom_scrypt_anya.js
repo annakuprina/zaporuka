@@ -1,4 +1,6 @@
 jQuery(document).ready(function($) {
+
+  var callHelpPopup = false;
   //call help sms modal from header
   $(
     "#custom-top-bar .top-bar-help-block a, #header-mob .top-bar-help-block a"
@@ -34,12 +36,14 @@ jQuery(document).ready(function($) {
     ".help-header-link a,.mob-menu-right #menu-item-305 a, #menu-Futer-Dopomogti-ukr li:eq(0) a,#menu-Futer-Dopomogti-rus  li:eq(0) a,#menu-Futer-Dopomogti-en li:eq(0) a"
   ).click(function(e) {
     e.preventDefault();
+    callHelpPopup = true;
     $("#ModalHelpForm").addClass("opened");
     $("body").addClass("noscroll");
   });
   //close help big modal
   $("#ModalHelpForm .closemodale").click(function(e) {
     e.preventDefault();
+    callHelpPopup = false;
     $("#ModalHelpForm").removeClass("opened");
     $("body").removeClass("noscroll");
   });
@@ -55,7 +59,7 @@ jQuery(document).ready(function($) {
   );
 
   //show amount summ on click 100, 250, 1000  in help form
-  if($('#ModalHelpForm').hasClass('opened')){
+  if(callHelpPopup){
     $("#ModalHelpForm .help-form-amount-right .amount-button").click(function(e) {
       e.preventDefault();
       $("#ModalHelpForm .help-form-amount-right .amount-button").not(this).removeClass("active");

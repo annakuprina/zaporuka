@@ -909,13 +909,12 @@ footer a.designer-link {
   align-items: center;
 }
 .help-form-inner-wrapper .help-form-amount {
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
 }
 .help-form-inner-wrapper .help-form-amount .help-form-amount-left {
-  width: 50%;
-  position: relative;
-  padding-top: 12px;
+width: 50%;
+position: relative;;
 }
 .help-form-inner-wrapper .help-form-amount,
 .help-form-inner-wrapper .help-form-subscribe {
