@@ -33,14 +33,14 @@ jQuery(document).ready(function($) {
   //call help big modal
   $(".help-header-link a,.mob-menu-right #menu-item-305 a, #menu-Futer-Dopomogti-ukr li:eq(0) a,#menu-Futer-Dopomogti-rus  li:eq(0) a,#menu-Futer-Dopomogti-en li:eq(0) a").click(function(e) {
     e.preventDefault();
-    callHelpPopup = true;
+    window.callHelpPopup = true;
     $("#ModalHelpForm").addClass("opened");
     $("body").addClass("noscroll");
   });
   //close help big modal
   $("#ModalHelpForm .closemodale").click(function(e) {
     e.preventDefault();
-    callHelpPopup = false;
+    window.callHelpPopup = false;
     $("#ModalHelpForm").removeClass("opened");
     $("body").removeClass("noscroll");
   });
@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
   );
 
   //show amount summ on click 100, 250, 1000  in help form
-  if(callHelpPopup){
+  if(window.callHelpPopup){
     $("#ModalHelpForm .help-form-amount-right .amount-button").click(function(e) {
       e.preventDefault();
       $("#ModalHelpForm .help-form-amount-right .amount-button").not(this).removeClass("active");
@@ -67,7 +67,7 @@ jQuery(document).ready(function($) {
       $("#ModalHelpForm .help_form .help-form-subscribe .subscribe-link").removeClass("active");
       $(this).addClass("active");
       $('#ModalHelpForm .help_form input[name="pay_type"]').val($(this).attr("paytype"));
-      type_of_help = $(this).attr("paytype");
+      window.type_of_help = $(this).attr("paytype");
     });
   }
   else{
@@ -85,30 +85,33 @@ jQuery(document).ready(function($) {
       $(".help_form .help-form-subscribe .subscribe-link").removeClass("active");
       $(this).addClass("active");
       $('.help_form input[name="pay_type"]').val($(this).attr("paytype"));
-      type_of_help = $(this).attr("paytype");
+      window.type_of_help = $(this).attr("paytype");
     });
   }
 
 
   //add payment description to Help form
-  if(window.location.href.indexOf("/projects/") > -1) {
-    var project_name = $('#page-title .single-pagetitle').text();
-    if(type_of_help == 'pay'){
+  if(window.type_of_help == 'pay'){
+    if(window.location.href.indexOf("/projects/") > -1) {
+      var project_name = $('#page-title .single-pagetitle').text();
       $('.help_form #plata').val("Однократное перечисление средств на проект " + project_name);
     }
     else{
-      $('.help_form #plata').val("Ежемесячное перечисление средств на проект " + project_name);
+      $('.help_form #plata').val("Однократное перечисление средств (без привязки к проекту)");
     }
   }
   else{
-    var project_name = $('#page-title .single-pagetitle').text();
-    if(type_of_help == 'pay'){
-      $('.help_form #plata').val("Однократное перечисление средств (без привязки к проекту)");
+    if(window.location.href.indexOf("/projects/") > -1) {
+      var project_name = $('#page-title .single-pagetitle').text();
+      $('.help_form #plata').val("Ежемесячное перечисление средств на проект " + project_name);
     }
     else{
       $('.help_form #plata').val("Ежемесячное перечисление средств (без привязки к проекту)");
     }
   }
+
+
+
 
   //news orange gradient for items without photo
   setTimeout(function() {
