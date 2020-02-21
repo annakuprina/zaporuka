@@ -21,6 +21,10 @@ defined( 'ABSPATH' ) || exit;
 <div class="woocommerce-order">
 	<?php 
 	if ( $order ) :
+
+		do_action( 'woocommerce_before_thankyou', $order->get_id() ); ?>
+
+		<?php 
 		if ( $order->has_status( 'pending' ) ) : ?>
 			<div class="pending-order-wrapper">
 				<p class="woocommerce-notice woocommerce-notice--pending woocommerce-thankyou-pending-actions">
@@ -56,11 +60,7 @@ defined( 'ABSPATH' ) || exit;
 				<a class="button wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>"> <?php _e( 'Return to shop', 'woocommerce' ) ?> </a>
 			<div>
 		<?php else:
-		
-
-			do_action( 'woocommerce_before_thankyou', $order->get_id() ); ?>
-
-			<?php if ( $order->has_status( 'failed' ) ) : ?>
+			if ( $order->has_status( 'failed' ) ) : ?>
 
 				<p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed"><?php esc_html_e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
 
@@ -109,8 +109,8 @@ defined( 'ABSPATH' ) || exit;
 
 			<?php endif; ?>
 
-			<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
-			<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
+		<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
+		<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
 		<?php endif; ?>
 	<?php else : ?>
 
