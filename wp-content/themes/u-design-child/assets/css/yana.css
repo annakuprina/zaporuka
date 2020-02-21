@@ -752,9 +752,11 @@ h6,
   position: absolute;
   opacity: 0.3
 }
-.aboutus_section2{
+.aboutus_section2 {
   padding-top: 85px;
-  padding-bottom: 90px;
+}
+.about_section4{
+  padding-top: 80px;
 }
 .aboutus_section2 .block_excerpt_container{
   padding: 25px 0 0 60px;
@@ -762,8 +764,12 @@ h6,
 .aboutus_section2 .block_excerpt {
   margin-bottom: 60px;
 }
-.aboutus_section2 .h2-header-line{
+.aboutus_section2 .h2-header-line,
+.aboutus_section3 .h2-header-line{
   margin-bottom: 40px;
+}
+.aboutus_section3 .about_team_text{
+  padding-bottom: 25px;
 }
 .about_block6{
   padding-top: 90px;
