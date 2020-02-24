@@ -24,8 +24,6 @@ defined( 'ABSPATH' ) || exit;
 
 		do_action( 'woocommerce_before_thankyou', $order->get_id() ); ?>
 
-		<?php var_dump( $order->get_status() );?>
-
 		<?php if ( $order->has_status( 'failed' ) ) : ?>
 
 			<p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed"><?php esc_html_e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
@@ -40,7 +38,6 @@ defined( 'ABSPATH' ) || exit;
 		<?php else : ?>
 
 			<?php if( $order->get_status() != 'pending'):?>
-				<?php header("Refresh:0");?>
 
 				<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 
