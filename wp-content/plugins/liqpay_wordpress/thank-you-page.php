@@ -92,17 +92,13 @@ if (!isset($wpdb))
                             if (status != res) {
 
                                 status = res;
-                                
+
                                 location.reload();
 
                             }else {
                                
 
                                 if (status == "failure" || status == "success" || status == "sandbox") {
-                                    console.log('status == res');
-                                    console.log(status);
-                                    console.log(res);
-
                                     clearInterval(get_payment_status);
                                     console.log('post-interval');
 
