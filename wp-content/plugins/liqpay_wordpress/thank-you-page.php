@@ -195,10 +195,22 @@ if ($status == "failure") {
     die;
 
 } elseif ($status == "success" || $status == "sandbox") {
+    $order_id = $_REQUEST["order_id"];
+
+    var_dump($order_id);
+
+     global $woocommerce;
+
+    $order = new WC_Order($order_id);
+
+    $result_url = $order->get_checkout_order_received_url();
+
+
+    var_dump($result_url)
 
     $content = get_option('thank_page_content_success');
 
-    echo $content;
+    //echo $content;
 
     die;
 
