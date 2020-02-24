@@ -208,7 +208,7 @@ if ($status == "failure") {
 
 html, body {
 
-  background: rgb(122, 183, 43);
+  background: #e78b48;
 
   width: 100%;
 
