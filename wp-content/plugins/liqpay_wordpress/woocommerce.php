@@ -324,8 +324,6 @@ function woocommerce_liqpay_liqpay_init(){
 
       global $woocommerce;
 
-      var_dump('check_liqpay_response');
-
       if(isset($_REQUEST['txnid']) && isset($_REQUEST['mihpayid'])){
 
         $order_id_time = $_REQUEST['txnid'];
