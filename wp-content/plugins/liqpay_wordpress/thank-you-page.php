@@ -54,7 +54,7 @@ if (!isset($wpdb))
 
 
 
-                $js.ajax({
+                /*$js.ajax({
 
                     type: "POST",
 
@@ -70,7 +70,7 @@ if (!isset($wpdb))
 
                     }
 
-                })
+                })*/
 
 
 
@@ -91,23 +91,21 @@ if (!isset($wpdb))
 
                             if (status != res) {
 
-                              console.log('status != res)');
-                              console.log(status);
-                              console.log(res);
-
                                 status = res;
 
                                 location.reload();
 
                             }else {
-                                console.log('status == res)');
-                                console.log(status);
-                                console.log(res);
+                               
 
                                 if (status == "failure" || status == "success" || status == "sandbox") {
+                                    console.log('status == res');
+                                    console.log(status);
+                                    console.log(res);
 
                                     clearInterval(get_payment_status);
                                     location.reload();
+                                    console.log('post-interval');
 
                                 }
 
