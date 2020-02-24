@@ -576,19 +576,36 @@ function list_of_reports() {
     $report = '';
     ob_start();
     ?>
-    <div>
-        <ul>
-            <?php for($i=0;$i<sizeof($new_query->posts);++$i){ ?>
-                <li><?php echo $new_query->posts[$i]->post_title;?></li>
+    <div class="list_reports_wrapper">
+        <ul >
+            <?php for($i=0;$i<sizeof($new_query->posts);++$i){
+                if ( $i == 0 ) {$active_report = 'tab-active'; }else{$active_report = '';}
+                ?>
+                <li class="one-tab-link <?php echo $active_report; ?>" data-id="<?php echo $i; ?>"><?php echo $new_query->posts[$i]->post_title;?></li>
             <?php } ?>
         </ul>
     </div>
-
-    <a href="<?php echo $report; ?>" download>
-        <div class="">
-            ......
+    <?php for($i=0;$i<sizeof($new_query->posts);++$i){
+        if ($i % 2 == 0) { $class = 'h2-header-without-line';}else{$class='h2-header-line';}
+        if ( $i == 0 ) {$active_report = 'active'; }else{$active_report = '';}
+        $post_id = $new_query->posts[$i]->ID;
+        $reports = get_field('reports', $post_id);
+//        var_dump($reports);
+        ?>
+        <div class="tabs_content <?php echo $active_report; ?>" data-id="<?php echo $i; ?>">
+            <div class="download_report_wrapper">
+                <?php foreach ($reports as $report) { ?>
+                    <a href="<?php echo $report['reporting_file']['url']; ?>" download>
+                        <div class="">
+                            <?php echo $report['reporting_title']; ?>
+                            <p>Завантажити</p>
+                        </div>
+                    </a>
+                <?php } ?>
+            </div>
         </div>
-    </a>
+    <?php } ?>
+
 
     <?php
     $html = ob_get_clean();

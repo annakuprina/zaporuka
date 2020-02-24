@@ -758,7 +758,8 @@ h6,
   right: 0;
   top: 12px;
 }
-.paged_review{
+.paged_review,
+.list_reports_wrapper li{
   font-family: Proxima-Nova-Regular;
 }
 .preloader {
@@ -800,4 +801,35 @@ h6,
 }
 
 /**************************************** Reporting Page *************************************/
-
+.list_reports_wrapper ul{
+  display: flex;
+}
+.list_reports_wrapper li{
+  padding-right: 30px;
+  padding-bottom: 30px;
+  cursor: pointer;
+  color: rgba(51, 51, 51, 0.29) !important;
+  font-family: "Raleway-Bold";
+  font-size: 16px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.29);
+}
+.list_reports_wrapper li.tab-active{
+  color: #e78b48 !important;
+  opacity: 1;
+  border-bottom: 2px solid #e78b48;
+}
+.download_report_wrapper{
+  display: flex;
+}
+.download_report_wrapper a{
+  width: 50%;
+}
+/*.list_reports_wrapper li.tab-active::after {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  width: calc(100% - 120px);*/
+/*  height: 2px;*/
+/*  background-color: #e78b48;*/
+/*  left: 0;*/
+/*  top: 62px;*/
+/*}*/
