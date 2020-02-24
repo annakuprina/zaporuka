@@ -455,7 +455,7 @@ function woocommerce_liqpay_liqpay_init(){
 
               add_action('the_content', array(&$this, 'showMessage'));
 
-            }catch(Exception $e){
+            }}catch(Exception $e){
 
                         // $errorOccurred = true;
 
