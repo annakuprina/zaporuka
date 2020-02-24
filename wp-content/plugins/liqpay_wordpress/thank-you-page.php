@@ -206,7 +206,7 @@ if ($status == "failure") {
     $result_url = $order->get_checkout_order_received_url();
 
 
-    var_dump($result_url)
+    var_dump($result_url);
 
     $content = get_option('thank_page_content_success');
 
