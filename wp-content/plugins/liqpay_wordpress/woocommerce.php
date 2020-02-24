@@ -358,6 +358,9 @@ function woocommerce_liqpay_liqpay_init(){
 
             $transauthorised = false;
 
+            var_dump('$order -> status woocommerce.php');
+            var_dump($order -> status);
+
             if($order -> status !=='completed'){
 
               if($hash == $checkhash)
@@ -371,11 +374,6 @@ function woocommerce_liqpay_liqpay_init(){
 
 
                 if($status=="success"){
-
-                   var_dump($status);
-                  var_dump($hash);
-                  var_dump($order -> status);
-
 
                   $transauthorised = true;
 
@@ -457,7 +455,7 @@ function woocommerce_liqpay_liqpay_init(){
 
               add_action('the_content', array(&$this, 'showMessage'));
 
-            }}catch(Exception $e){
+            }catch(Exception $e){
 
                         // $errorOccurred = true;
 
