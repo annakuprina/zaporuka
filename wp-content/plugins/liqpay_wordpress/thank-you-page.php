@@ -107,6 +107,7 @@ if (!isset($wpdb))
                                 if (status == "failure" || status == "success" || status == "sandbox") {
 
                                     clearInterval(get_payment_status);
+                                    location.reload();
 
                                 }
 
