@@ -86,6 +86,8 @@ if (!isset($wpdb))
 
                         success: function (res) {
 
+                            console.log(status);
+
                             if (status != res) {
 
                                 status = res;
@@ -134,18 +136,11 @@ if (isset($_REQUEST['action']) && $_REQUEST['action'] == "thank_you_page_state")
 
     $status = $_REQUEST["status"];
 
-    var_dump('$status 1 thank_you_page_state');
-    var_dump($status);
-
     print_r($_REQUEST['action']);
 
     update_option('liqpay_thankyou_' . $order_id, $status);
 
     $status = get_option("liqpay_thankyou_" . $order_id);
-
-    var_dump('$status 2 thank_you_page_state');
-    var_dump($status);
-
 
     print_r("<br>");
 
@@ -189,7 +184,7 @@ if (isset($_GET['server_order_id'])) {
 
 
 
-
+var_dump($status);
 
 if ($status == "failure") {
 

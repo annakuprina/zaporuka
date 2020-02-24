@@ -358,8 +358,6 @@ function woocommerce_liqpay_liqpay_init(){
 
             $transauthorised = false;
 
-            var_dump('$order -> status woocommerce.php');
-            var_dump($order -> status);
 
             if($order -> status !=='completed'){
 
