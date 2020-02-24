@@ -26,7 +26,7 @@ if (!isset($wpdb))
                     order_id = params.server_order_id;
                 }
 
-                /*$js.ajax({
+                $js.ajax({
                     type: "POST",
                     url: ajaxurl,
                     async: false,
@@ -34,7 +34,7 @@ if (!isset($wpdb))
                     success: function (res) {
                         status = res;
                     }
-                })*/
+                })
 
                 get_payment_status = setInterval(function () {
                     $js.ajax({
@@ -135,7 +135,7 @@ p {
   top: -35px;
   right: -85px;
   text-transform: uppercase;
-  color: ##333333
+  color: rgb(122, 183, 43);
   font-family: helvetica, sans-serif;
   font-weight: bold;
 }
