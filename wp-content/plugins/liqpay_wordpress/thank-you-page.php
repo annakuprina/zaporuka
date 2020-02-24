@@ -99,12 +99,7 @@ if (!isset($wpdb))
                                
 
                                 if (status == "failure" || status == "success" || status == "sandbox") {
-                                    console.log('status == res');
-                                    console.log(status);
-                                    console.log(res);
-
                                     clearInterval(get_payment_status);
-                                    location.reload();
                                     console.log('post-interval');
 
                                 }
@@ -190,10 +185,6 @@ if (isset($_GET['server_order_id'])) {
 }
 
 
-var_dump( $_REQUEST["status"]);
-$server_order_id = $_GET['server_order_id'];
-var_dump( get_option("liqpay_thankyou_" . $server_order_id));
-var_dump($status);
 
 if ($status == "failure") {
 
