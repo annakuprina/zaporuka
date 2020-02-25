@@ -260,7 +260,7 @@ function acf_read_only($field) {
 /*  зачисление/списание средств на проект администратором  */
 add_action( 'admin_menu', 'register_page_load_money_to_project' );
 function register_page_load_money_to_project(){
-    add_menu_page( 'Зачислить/списать вручную', 'Зачислить вручную', 'edit_others_posts', 'page_load_money_to_project', 'page_load_money_to_project_function' ); 
+    add_menu_page( 'Зачислить/списать вручную', 'Зачислить/списать вручную', 'edit_others_posts', 'page_load_money_to_project', 'page_load_money_to_project_function' ); 
 }
 
 function page_load_money_to_project_function(){
