@@ -305,7 +305,6 @@ function page_load_money_to_project_function(){
         </form>
     <div>
 <?php
-
     if (isset($_POST['send_load_money_form'])){
         $current_value = get_field( "total-collected", $_POST['project_list_for_load_money'] );
         $new_value=0;
@@ -318,7 +317,7 @@ function page_load_money_to_project_function(){
 
         update_field('total-collected', $new_value , $_POST['project_list_for_load_money']);
         ?>
-        <h3 style="color:#00669b;">Проект "<?php echo $_POST['project_list_for_load_money']; ?>" был обновлен</h3>
+        <h3 style="color:#00669b;">Проект "<?php echo get_the_title($_POST['project_list_for_load_money']); ?>" был обновлен</h3>
     <?php }
 
 }
