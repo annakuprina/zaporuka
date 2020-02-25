@@ -328,5 +328,5 @@ function page_load_money_to_project_function(){
 add_filter( 'pll_copy_post_metas', 'copy_post_metas' );
  
 function copy_post_metas( $metas ) {
-    return array_merge( $metas, array( 'total-collected' ) );
+    return array_merge( $metas, array( 'total-collected','total-amount', 'show-on-home-page','current-completed' ) );
 }
