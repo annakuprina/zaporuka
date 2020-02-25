@@ -1847,6 +1847,11 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   padding-left: 10px;
 }
 .directions_section1_right_block .vc_column-inner{max-width: 485px;}
+.directions_section_left_inner_wrapper .vc_column_container .vc_column-inner{
+  max-width: 683px;
+  margin: 0 auto;
+  float: right;
+}
 @media screen and (min-width: 720px) {
   .customize-header.u-design-fixed-menu-on.fixed-menu #top-wrapper {
     opacity: 1;
