@@ -260,7 +260,7 @@ function acf_read_only($field) {
 /*  зачисление/списание средств на проект администратором  */
 add_action( 'admin_menu', 'register_page_load_money_to_project' );
 function register_page_load_money_to_project(){
-    add_menu_page( 'Зачислить вручную', 'Зачислить вручную', 'edit_others_posts', 'page_load_money_to_project', 'page_load_money_to_project_function' ); 
+    add_menu_page( 'Зачислить/списать вручную', 'Зачислить вручную', 'edit_others_posts', 'page_load_money_to_project', 'page_load_money_to_project_function' ); 
 }
 
 function page_load_money_to_project_function(){
@@ -285,9 +285,12 @@ function page_load_money_to_project_function(){
         {
             margin-top: 10px;
         }
+        .load_money_to_project_wrapper sup{
+            font-weight: normal;font-size: 0.8em;
+        }
     </style>
     <div class="load_money_to_project_wrapper">
-        <h3>Зачислить/списать сумму вручную</h3>
+        <h3>Зачислить/списать сумму вручную <br><sup>(зачисление/списание средств автоматически применяется для проектов других языковых версий (список проектов зависит от выбранной языковой опции (все языки или один)))</sup></h3>
         <form action method="POST" class="load_money_to_project">
             <fieldset class="type_operation_group">
                 <legend>Выберите вид операции:</legend>
@@ -320,4 +323,10 @@ function page_load_money_to_project_function(){
         <h3 style="color:#00669b;">Проект "<?php echo get_the_title($_POST['project_list_for_load_money']); ?>" был обновлен</h3>
     <?php }
 
+}
+
+add_filter( 'pll_copy_post_metas', 'copy_post_metas' );
+ 
+function copy_post_metas( $metas ) {
+    return array_merge( $metas, array( 'total-collected' ) );
 }
