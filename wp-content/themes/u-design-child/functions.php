@@ -262,19 +262,22 @@ function page_load_money_to_project_function(){
         'post_type'   => 'projects'
     )); 
 ?>
-    <form action method="POST" class="load_money_to_project">
-        <fieldset class="type_operation_group">
-            <legend>Выберите вид операции</legend>
-            <label><input type="radio" value="zachislit" name="type_operation" required>Зачислить средства на проект</label><br>
-            <label><input type="radio" value="spisat" name="type_operation">Списать сумму с проекта</label>
-        </fieldset>
-        <select class="project-list-for-load-money" required>
-            <option disabled selected value="">Выберите проект</option>
-            <?php foreach( $partners_array as $post ){ ?>
-                <option value="<?php echo $post->ID;?>"><?php echo $post->post_title;?></option>
-            <?php } ?>
-        </select>
-        <input type="submit" value="Отправить">
-    </form>
+    <div class="load_money_to_project_wrapper">
+        <h3>Зачислить/списать сумму вручную</h3>
+        <form action method="POST" class="load_money_to_project">
+            <fieldset class="type_operation_group">
+                <legend>Выберите вид операции:</legend>
+                <label><input type="radio" value="zachislit" name="type_operation" required>Зачислить средства на проект</label><br>
+                <label><input type="radio" value="spisat" name="type_operation">Списать сумму с проекта</label>
+            </fieldset>
+            <select class="project_list_for_load_money" required>
+                <option disabled selected value="">Выберите проект</option>
+                <?php foreach( $projects_array as $post ){ ?>
+                    <option value="<?php echo $post->ID;?>"><?php echo $post->post_title;?></option>
+                <?php } ?>
+            </select><br>
+            <input type="submit" class="button-primary send_load_money_form" value="Отправить">
+        </form>
+    <div>
 <?php
 }
