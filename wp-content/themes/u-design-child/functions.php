@@ -257,14 +257,22 @@ function register_page_load_money_to_project(){
 }
 
 function page_load_money_to_project_function(){
+    $projects_array = get_posts( array(
+        'numberposts' => -1,
+        'post_type'   => 'projects'
+    )); 
 ?>
     <form action method="POST" class="load_money_to_project">
-        <input type="radio" value="zachislit" name="type_operation">
-        <input type="radio" value="spisat" name="type_operation">
-        <select>
-            <option selected>----Select project----</option>
-            <option>Project 1</option>
-            <option>Project 2</option>
+        <fieldset class="type_operation_group">
+            <legend>Выберите вид операции</legend>
+            <label><input type="radio" value="zachislit" name="type_operation" required>Зачислить средства на проект</label><br>
+            <label><input type="radio" value="spisat" name="type_operation">Списать сумму с проекта</label>
+        </fieldset>
+        <select class="project-list-for-load-money" required>
+            <option disabled selected value="">Выберите проект</option>
+            <?php foreach( $partners_array as $post ){ ?>
+                <option value="<?php echo $post->ID;?>"><?php echo $post->post_title;?></option>
+            <?php } ?>
         </select>
         <input type="submit" value="Отправить">
     </form>
