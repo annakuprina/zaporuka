@@ -250,6 +250,22 @@ add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) 
 });
 
 
+/* read only for ACF fields */
+add_action('acf/render_field_settings/type=text', 'add_readonly_and_disabled_to_text_field');
+  function add_readonly_and_disabled_to_text_field($field) {
+    acf_render_field_setting( $field, array(
+      'label'      => __('Read Only?','acf'),
+      'instructions'  => '',
+      'type'      => 'radio',
+      'name'      => 'readonly',
+      'choices'    => array(
+        1        => __("Yes",'acf'),
+        0        => __("No",'acf'),
+      ),
+      'layout'  =>  'horizontal',
+    ));
+  }
+
 /*  зачисление/списание средств на проект администратором  */
 add_action( 'admin_menu', 'register_page_load_money_to_project' );
 function register_page_load_money_to_project(){
@@ -270,14 +286,21 @@ function page_load_money_to_project_function(){
                 <label><input type="radio" value="zachislit" name="type_operation" required>Зачислить средства на проект</label><br>
                 <label><input type="radio" value="spisat" name="type_operation">Списать сумму с проекта</label>
             </fieldset>
-            <select class="project_list_for_load_money" required>
+            <select class="project_list_for_load_money" name="project_list_for_load_money" required>
                 <option disabled selected value="">Выберите проект</option>
                 <?php foreach( $projects_array as $post ){ ?>
                     <option value="<?php echo $post->ID;?>"><?php echo $post->post_title;?></option>
                 <?php } ?>
             </select><br>
-            <input type="submit" class="button-primary send_load_money_form" value="Отправить">
+            <input type="submit" name="send_load_money_form" class="button-primary send_load_money_form" value="Отправить">
         </form>
     <div>
 <?php
+
+    if (isset($_POST['send_load_money_form'])){ 
+        update_field('total-collected', '123456', $_POST['type_operation']);
+        ?>
+        <h3>Проект "<?php echo $_POST['project_list_for_load_money']; ?>" был обновлен</h3>
+    <?php }
+
 }
