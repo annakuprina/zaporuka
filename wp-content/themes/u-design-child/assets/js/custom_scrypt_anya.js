@@ -33,14 +33,14 @@ jQuery(document).ready(function($) {
   //call help big modal
   $(".help-header-link a,.mob-menu-right #menu-item-305 a, #menu-Futer-Dopomogti-ukr li:eq(0) a,#menu-Futer-Dopomogti-rus  li:eq(0) a,#menu-Futer-Dopomogti-en li:eq(0) a").click(function(e) {
     e.preventDefault();
-    window.callHelpPopup = true;
+    callHelpPopup = true;
     $("#ModalHelpForm").addClass("opened");
     $("body").addClass("noscroll");
   });
   //close help big modal
   $("#ModalHelpForm .closemodale").click(function(e) {
     e.preventDefault();
-    window.callHelpPopup = false;
+    callHelpPopup = false;
     $("#ModalHelpForm").removeClass("opened");
     $("body").removeClass("noscroll");
   });
@@ -74,46 +74,28 @@ jQuery(document).ready(function($) {
 
   change_payment_description('pay');
 
-  //show amount summ on click 100, 250, 1000  in help form
-/*  if(window.callHelpPopup){
-    $("#ModalHelpForm .help-form-amount-right .amount-button").click(function(e) {
-      e.preventDefault();
-      $("#ModalHelpForm .help-form-amount-right .amount-button").not(this).removeClass("active");
-      $(this).toggleClass("active");
-      $("#ModalHelpForm #paid").val($(this).attr("summ"));
-    }); 
-    $("#ModalHelpForm #paid").on("input", function(e) {
-      $("#ModalHelpForm .help-form-amount-right .amount-button").removeClass("active");
-    });
-    $("#ModalHelpForm .help_form .help-form-subscribe .subscribe-link").click(function(e) {
-      e.preventDefault();
-      $("#ModalHelpForm .help_form .help-form-subscribe .subscribe-link").removeClass("active");
-      $(this).addClass("active");
-      $('#ModalHelpForm .help_form input[name="pay_type"]').val($(this).attr("paytype"));
-      window.type_of_help = $(this).attr("paytype");
-    });
-  }
-  else{*/
-    $(".help-form-amount-right .amount-button").click(function(e) {
-      e.preventDefault();
-      $(".help-form-amount-right .amount-button").not(this).removeClass("active");
-      $(this).toggleClass("active");
-      $("#paid").val($(this).attr("summ"));
-    }); 
-    $("#paid").on("input", function(e) {
-      $(".help-form-amount-right .amount-button").removeClass("active");
-    });   
-    $(".help_form .help-form-subscribe .subscribe-link").click(function(e) {
-      e.preventDefault();
-      $(".help_form .help-form-subscribe .subscribe-link").removeClass("active");
-      $(this).addClass("active");
-      $('.help_form input[name="pay_type"]').val($(this).attr("paytype"));      
-      change_payment_description($(this).attr("paytype"));
-    });
-  /*}*/
 
+  $(".help_form .amount-button").click(function(e) {
+    e.preventDefault();
+    var parent = jQuery(this).parent();
+    parent.find('.amount-button').not(this).removeClass("active");
+    $(this).toggleClass("active");
+    $(parent).parent().find('.help-form-amount-left #paid').val($(this).attr("summ"));
+  });
 
+  $(".help_form #paid").on("input", function(e) {
+    var parent = jQuery(this).parents('.help_form');
+    parent.find('.amount-button').removeClass("active");
+  });   
 
+  $(".help_form .help-form-subscribe .subscribe-link").click(function(e) {
+    e.preventDefault();
+    var parent = jQuery(this).parents('.help_form');
+    parent.find(".help-form-subscribe .subscribe-link").removeClass("active");
+    $(this).addClass("active");
+    parent.find('input[name="pay_type"]').val($(this).attr("paytype"));      
+    change_payment_description($(this).attr("paytype"));
+  });
 
   //news orange gradient for items without photo
   setTimeout(function() {
@@ -230,7 +212,10 @@ jQuery(document).ready(function($) {
     message_oferta_required = "Please agree with the offer";
   }
 
-  $(".help_form").validate({
+  var form_popup_parent = $( ".help_form" ).parents('.modal-body');
+  var form_page_parent = $( ".help_form" ).parents('.wpb_wrapper');
+
+  form_popup_parent.find('.help_form').validate({
     rules: {
       paid: {
         required: true,
@@ -274,4 +259,50 @@ jQuery(document).ready(function($) {
       }
     }
   });
+
+  form_page_parent.find('.help_form').validate({
+    rules: {
+      paid: {
+        required: true,
+        number: true
+      },
+      fio: {
+        required: true,
+        lettersonly: true
+      },
+      mail: {
+        required: true,
+        email: true
+      },
+      phone: {
+        required: true,
+        digits: true
+      },
+      oferta: {
+        required: true
+      }
+    },
+    messages: {
+      paid: {
+        required: message_amount_free,
+        number: message_amount_not_number
+      },
+      fio: {
+        required: message_fio_free,
+        lettersonly: message_fio_not_text
+      },
+      mail: {
+        required: message_mail_required,
+        email: message_mail_required
+      },
+      phone: {
+        required: message_phone_required,
+        digits: message_phone_only_number
+      },
+      oferta: {
+        required: message_oferta_required
+      }
+    }
+  });
+
 });
