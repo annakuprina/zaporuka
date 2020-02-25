@@ -250,21 +250,12 @@ add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) 
 });
 
 
-/* read only for ACF fields */
-add_action('acf/render_field_settings/type=text', 'add_readonly_and_disabled_to_text_field');
-  function add_readonly_and_disabled_to_text_field($field) {
-    acf_render_field_setting( $field, array(
-      'label'      => __('Read Only?','acf'),
-      'instructions'  => '',
-      'type'      => 'radio',
-      'name'      => 'readonly',
-      'choices'    => array(
-        1        => __("Yes",'acf'),
-        0        => __("No",'acf'),
-      ),
-      'layout'  =>  'horizontal',
-    ));
-  }
+/* read only for ACF fields for total-collected field*/
+add_filter('acf/load_field/name=total-collected', 'acf_read_only');
+function acf_read_only($field) {
+    $field['readonly'] = 1;
+    return $field;
+}
 
 /*  зачисление/списание средств на проект администратором  */
 add_action( 'admin_menu', 'register_page_load_money_to_project' );
@@ -278,6 +269,23 @@ function page_load_money_to_project_function(){
         'post_type'   => 'projects'
     )); 
 ?>
+    <style>
+        .load_money_to_project{
+            font-size: 1.1em;
+        }
+        .load_money_to_project .type_operation_group{
+            margin-bottom: 10px;
+        }
+        .load_money_to_project .type_operation_group legend{
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .load_money_to_project .send_load_money_form,
+        .load_money_to_project .amount_for_project
+        {
+            margin-top: 10px;
+        }
+    </style>
     <div class="load_money_to_project_wrapper">
         <h3>Зачислить/списать сумму вручную</h3>
         <form action method="POST" class="load_money_to_project">
@@ -292,15 +300,25 @@ function page_load_money_to_project_function(){
                     <option value="<?php echo $post->ID;?>"><?php echo $post->post_title;?></option>
                 <?php } ?>
             </select><br>
+            <input type="number" name="amount_for_project" class="amount_for_project" value="" placeholder="Введите сумму"><br>
             <input type="submit" name="send_load_money_form" class="button-primary send_load_money_form" value="Отправить">
         </form>
     <div>
 <?php
 
-    if (isset($_POST['send_load_money_form'])){ 
-        update_field('total-collected', '123456', $_POST['type_operation']);
+    if (isset($_POST['send_load_money_form'])){
+        $current_value = get_field( "total-collected", $_POST['project_list_for_load_money'] );
+        $new_value=0;
+        if( $_POST['type_operation'] == 'zachislit'){
+            $new_value = $current_value + $_POST['amount_for_project'];
+        }
+        else{
+            $new_value = $current_value - $_POST['amount_for_project'];
+        }
+
+        update_field('total-collected', $new_value , $_POST['project_list_for_load_money']);
         ?>
-        <h3>Проект "<?php echo $_POST['project_list_for_load_money']; ?>" был обновлен</h3>
+        <h3 style="color:#00669b;">Проект "<?php echo $_POST['project_list_for_load_money']; ?>" был обновлен</h3>
     <?php }
 
 }
