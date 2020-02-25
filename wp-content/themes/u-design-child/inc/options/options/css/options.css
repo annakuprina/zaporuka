@@ -378,12 +378,20 @@ border: 1px solid #e5e5e5;
 	margin: 40px 0px;
 	border-bottom: 1px solid #DFDFDF;
 }
-
-
-
-
-
 .nhp-opts-screenshot{
 	max-width: 300px;
 	display:block;
+}
+.load_money_to_project{
+    font-size: 1.1em;
+}
+.load_money_to_project .type_operation_group{
+	margin-bottom: 10px;
+}
+.load_money_to_project .type_operation_group .legend{
+	font-weight: bold;
+    margin-bottom: 5px;
+}
+.load_money_to_project .send_load_money_form{
+	margin-top: 10px;
 }
