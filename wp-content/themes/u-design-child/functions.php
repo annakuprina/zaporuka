@@ -112,7 +112,7 @@ register_sidebar(array(
 ));
 
 
-
+//string translation
 add_action('init', function() {
   pll_register_string('u-design-child', 'Таймлайн проекту');
   pll_register_string('u-design-child', 'Залишилось  зiбрати:');
@@ -195,7 +195,7 @@ function set_custom_projects_columns_data( $column ) {
 
 }
 
-/*  Add langeages for  wc ukr shipping*/
+/*  Add languages for  wc ukr shipping*/
 add_filter('wc_ukr_shipping_language', function ($lang) {
     if (pll_current_language() === 'uk') {
         return 'uk';
@@ -248,3 +248,25 @@ add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) 
     ];
    
 });
+
+
+/*  зачисление/списание средств на проект администратором  */
+add_action( 'admin_menu', 'register_page_load_money_to_project' );
+function register_page_load_money_to_project(){
+    add_menu_page( 'Зачислить вручную', 'Зачислить вручную', 'edit_others_posts', 'page_load_money_to_project', 'page_load_money_to_project_function' ); 
+}
+
+function page_load_money_to_project_function(){
+?>
+    <form action method="POST" class="load_money_to_project">
+        <input type="radio" value="zachislit" name="type_operation">
+        <input type="radio" value="spisat" name="type_operation">
+        <select>
+            <option selected>----Select project----</option>
+            <option>Project 1</option>
+            <option>Project 2</option>
+        </select>
+        <input type="submit" value="Отправить">
+    </form>
+<?php
+}
