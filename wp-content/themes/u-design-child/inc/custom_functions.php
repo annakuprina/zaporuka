@@ -592,29 +592,32 @@ function list_of_reports() {
         $reporting = get_field('reporting', $post_id);
 
         ?>
-    <div class="tabs_content <?php echo $active_report; ?> reports_section" data-id="<?php echo $i; ?>">
-        <?php for ( $n = 0; $n < count($reporting); ++$n) {
-            if ( $n % 2 == 0 ) { $class = 'h2-header-line'; }else{ $class = 'h2-header-without-line'; }
-            ?>
-            <div>
-                <div><h2 class="<?php echo $class; ?>"><?php echo $reporting[$n]['report_type']; ?></h2></div>
-                <div class="download_report_wrapper">
-                    <?php foreach ($reporting[$n]['report'] as $report) { ?>
-                        <div>
-                            <a href="<?php echo $report['report_file']['url']; ?>" download>
-                                <div class="report_text">
-                                    <?php echo $report['report_title']; ?>
-                                    <p>Завантажити</p>
-                                </div>
-                            </a>
-                        </div>
+    <div class="tabs_content <?php echo $active_report; ?> " data-id="<?php echo $i; ?>">
+        <div class = "reports_section">
+            <?php for ( $n = 0; $n < count($reporting); ++$n) {
+                if ( $n % 2 == 0 ) { $class = 'h2-header-line'; }else{ $class = 'h2-header-without-line'; }
+                ?>
+                <div>
+                    <div><h2 class="<?php echo $class; ?>"><?php echo $reporting[$n]['report_type']; ?></h2></div>
+                    <div class="download_report_wrapper">
+                        <?php foreach ($reporting[$n]['report'] as $report) { ?>
+                            <div>
+                                <a href="<?php echo $report['report_file']['url']; ?>" download>
+                                    <div class="report_text">
+                                        <?php echo $report['report_title']; ?>
+                                        <p>Завантажити</p>
+                                    </div>
+                                </a>
+                            </div>
 
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
                 </div>
-            </div>
 
 
             <?php } ?>
+        </div>
+
     </div>
     <?php } ?>
 
