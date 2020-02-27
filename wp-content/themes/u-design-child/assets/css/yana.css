@@ -805,6 +805,13 @@ h6,
   display: flex;
   flex-wrap: wrap;
 }
+.reports_section > div {
+  width: 48.246%;
+  margin-bottom: 40px;
+}
+.reports_section > div:nth-child(odd) {
+  margin-right: 40px;
+}
 .list_reports_wrapper ul{
   display: flex;
 }
@@ -822,13 +829,7 @@ h6,
   opacity: 1;
   border-bottom: 2px solid #e78b48;
 }
-.reports_sections > div {
-  width: 48.246%;
-  margin-bottom: 40px;
-}
-.reports_sections > div:nth-child(odd) {
-  margin-right: 40px;
-}
+
 .download_report_wrapper > div {
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
   background-color: #ffffff;
