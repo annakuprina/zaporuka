@@ -592,7 +592,7 @@ function list_of_reports() {
         $reporting = get_field('reporting', $post_id);
 
         ?>
-    <div class="tabs_content <?php echo $active_report; ?> reports_sections" data-id="<?php echo $i; ?>">
+    <div class="tabs_content <?php echo $active_report; ?> reports_section" data-id="<?php echo $i; ?>">
         <?php for ( $n = 0; $n < count($reporting); ++$n) {
             if ( $n % 2 == 0 ) { $class = 'h2-header-line'; }else{ $class = 'h2-header-without-line'; }
             ?>

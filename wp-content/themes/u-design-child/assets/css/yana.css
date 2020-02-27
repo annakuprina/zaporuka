@@ -801,7 +801,7 @@ h6,
 }
 
 /**************************************** Reporting Page *************************************/
-.reports_section{
+.tabs_content.reports_section{
   display: flex;
   flex-wrap: wrap;
 }
