@@ -586,26 +586,37 @@ function list_of_reports() {
         </ul>
     </div>
     <?php for($i=0;$i<sizeof($new_query->posts);++$i){
-        if ($i % 2 == 0) { $class = 'h2-header-without-line';}else{$class='h2-header-line';}
+
         if ( $i == 0 ) {$active_report = 'active'; }else{$active_report = '';}
         $post_id = $new_query->posts[$i]->ID;
-        $reports = get_field('reports', $post_id);
-//        var_dump($reports);
-        ?>
-        <div class="tabs_content <?php echo $active_report; ?>" data-id="<?php echo $i; ?>">
-            <div class="download_report_wrapper">
-                <?php foreach ($reports as $report) { ?>
-                    <a href="<?php echo $report['reporting_file']['url']; ?>" download>
-                        <div class="">
-                            <?php echo $report['reporting_title']; ?>
-                            <p>Завантажити</p>
-                        </div>
-                    </a>
-                <?php } ?>
-            </div>
-        </div>
-    <?php } ?>
+        $reporting = get_field('reporting', $post_id);
 
+        ?>
+    <div class="tabs_content <?php echo $active_report; ?>" data-id="<?php echo $i; ?>">
+        <?php for ( $n = 0; $n < count($reporting); ++$n) {
+            if ( $n % 2 == 0 ) { $class = 'h2-header-line'; }else{ $class = 'h2-header-without-line'; }
+            ?>
+            <div>
+                <div><h2 class="<?php echo $class; ?>"><?php echo $reporting[$n]['report_type']; ?></h2></div>
+                <div class="download_report_wrapper">
+                    <?php foreach ($reporting[$n]['report'] as $report) { ?>
+                        <div>
+                            <a href="<?php echo $report['report_file']['url']; ?>" download>
+                                <div class="report_text">
+                                    <?php echo $report['report_title']; ?>
+                                    <p>Завантажити</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    <?php } ?>
+                </div>
+            </div>
+
+
+            <?php } ?>
+    </div>
+    <?php } ?>
 
     <?php
     $html = ob_get_clean();
