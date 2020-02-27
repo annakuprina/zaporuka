@@ -833,6 +833,7 @@ h6,
 .download_report_wrapper > div {
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
   background-color: #ffffff;
+  margin-bottom: 40px;
 }
 
 .download_report_wrapper .report_text {
@@ -844,4 +845,11 @@ h6,
 }
 .download_report_wrapper > div:hover a{
   color: #ffffff;
+}
+.h2-header-without-line{
+  color: #333333;
+  font-family: "Raleway-Bold" !important;
+  position: relative;
+  font-size: 48px;
+  line-height: 59px;
 }
