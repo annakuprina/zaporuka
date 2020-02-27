@@ -595,7 +595,7 @@ function list_of_reports() {
     <div class="tabs_content <?php echo $active_report; ?> " data-id="<?php echo $i; ?>">
         <div class = "reports_section">
             <?php for ( $n = 0; $n < count($reporting); ++$n) {
-                if ( $n % 2 == 0 ) { $class = 'h2-header-line'; }else{ $class = 'h2-title-without-line'; }
+                if ( $n % 2 == 0 ) { $class = 'h2-header-line'; }else{ $class = 'h2-header-without-line'; }
                 ?>
                 <div>
                     <div><h2 class="<?php echo $class; ?>"><?php echo $reporting[$n]['report_type']; ?></h2></div>
