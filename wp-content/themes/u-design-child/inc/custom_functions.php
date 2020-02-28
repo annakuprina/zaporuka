@@ -51,7 +51,7 @@ if($_POST['custom_action'] == 'true'){
                 if ( $paged == $last ) {$next = $last;} else{$next = $paged + 1;}
                 if( $cpta_Paginationlist > 0 ){ ?>
                     <ul class='list-cptapagination'>
-                        <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
+                        <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
                         <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
                         <?php
                         $t = ceil($paged/6 )-1;
@@ -65,7 +65,7 @@ if($_POST['custom_action'] == 'true'){
                             <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"><?php echo $cpta;?></a></li>
                         <?php } ?>
                         <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta="<?php echo $next; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                        <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
+                        <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
                     </ul>
                     <?php if ( ($t2+1) == $last ) { ?>
                         <div class="count_pages"><span class="paged_review"><?php echo $last; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
@@ -148,7 +148,7 @@ if($_POST['show_children'] == 'true'){
                 if ( $paged == $last ) {$next = $last;} else{$next = $paged + 1;}
                 if( $cpta_Paginationlist > 0 ){ ?>
                     <ul class='list-cptapagination'>
-                        <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
+                        <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
                         <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
                         <?php
                         $t = ceil($paged/6 )-1;
@@ -162,7 +162,7 @@ if($_POST['show_children'] == 'true'){
                             <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"><?php echo $cpta;?></a></li>
                         <?php } ?>
                         <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta="<?php echo $next; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                        <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
+                        <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
                     </ul>
                     <?php if ( ($t2+1) == $last ) { ?>
                         <div class="count_pages"><span class="paged_review"><?php echo $last; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
@@ -628,7 +628,7 @@ function vc_testimonials_content(){
                 $last = ceil( $cpta_Paginationlist );
                 if( $cpta_Paginationlist > 0 ){ ?>
                     <ul class='list-cptapagination'>
-                        <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
+                        <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
                         <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
                             <?php for( $cpta=1; $cpta<=6; $cpta++){
                                 if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
@@ -636,7 +636,7 @@ function vc_testimonials_content(){
                                 <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"><?php echo $cpta;?></a></li>
                             <?php } ?>
                         <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta='2' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                        <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
+                        <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
                     </ul>
                     <div class="count_pages"><span class="paged_review">1-6</span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
                 <?php } ?>
@@ -776,7 +776,7 @@ function list_of_children() {
             $last = ceil( $cpta_Paginationlist );
             if( $cpta_Paginationlist > 0 ){ ?>
                 <ul class='list-cptapagination'>
-                    <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
+                    <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
                     <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
                     <?php for( $cpta=1; $cpta<=6; $cpta++){
                         if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
