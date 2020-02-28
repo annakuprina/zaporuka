@@ -17,7 +17,7 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 
 ?>
 
-<div id="content-container" class="container_24 error_page">
+<div id="content-container" class="container_24 error_page thank-donation-page">
 	<main id="main-content" role="main" class="grid_24">
 		<div class="main-content-padding error_page_padding">
 			<?php
@@ -29,6 +29,7 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 				endwhile;
 			endif;
 			?>
+			<p class="to-home"><a href="<?php echo home_url(); ?>"><?php echo $back_button; ?></a></p>
 		</div><!-- end main-content-padding -->
 	</main><!-- end main-content -->
 </div><!-- end content-container -->
