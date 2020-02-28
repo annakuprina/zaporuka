@@ -573,7 +573,6 @@ function list_of_reports() {
         'post_type'        => 'reporting',
     );
     $new_query = new WP_Query($args);
-    $report = '';
     ob_start();
     ?>
     <div class="list_reports_wrapper">
@@ -581,7 +580,9 @@ function list_of_reports() {
             <?php for($i=0;$i<sizeof($new_query->posts);++$i){
                 if ( $i == 0 ) {$active_report = 'tab-active'; }else{$active_report = '';}
                 ?>
-                <li class="one-tab-link <?php echo $active_report; ?>" data-id="<?php echo $i; ?>"><?php echo $new_query->posts[$i]->post_title;?></li>
+                <li class="one-tab-link <?php echo $active_report; ?>" data-id="<?php echo $i; ?>">
+                    <span class=""><?php echo $new_query->posts[$i]->post_title;?></span>
+                </li>
             <?php } ?>
         </ul>
     </div>
