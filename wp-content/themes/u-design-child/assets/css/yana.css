@@ -708,10 +708,12 @@ h6,
   display: flex;
   justify-content: center;
 }
-.pagination-block{
+.pagination-block,
+.pagination-children{
   position: relative;
 }
-.pagination-block a {
+.pagination-block a,
+.pagination-children a {
   padding: 0 5px;
   opacity: 0.3;
   color: #333333;
@@ -719,20 +721,24 @@ h6,
   font-weight: 400;
   font-family: "Proxima-Nova-Regular";
 }
-.pagination-block a.active_review {
+.pagination-block a.active_review,
+.pagination-children a.active_review {
   opacity: 1;
   color: #e78b48;
   font-weight: 700;
 }
-.pagination-block .step-arrow {
+.pagination-block .step-arrow,
+.pagination-children .step-arrow {
   width: 17px;
   height: 17px;
   padding: 0;
 }
-.pagination-block .step-next{
+.pagination-block .step-next,
+.pagination-children .step-next{
   padding-left: 25px;
 }
-.pagination-block .step-prev{
+.pagination-block .step-prev,
+.pagination-children .step-prev{
   padding-right: 25px;
 }
 .step-forward:before{
