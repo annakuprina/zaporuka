@@ -1882,6 +1882,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .page-template-thanks-for-donation p.to-home a::after{
     content: url(../../img/arrow-home.svg);
     padding-left: 11px;
+    position: relative;
 }
 
 
