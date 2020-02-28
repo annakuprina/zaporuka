@@ -802,7 +802,7 @@ h6,
 
 /**************************************** Reporting Page *************************************/
 .reporting_section_tabs{
-  padding-bottom: 45px;
+  padding-bottom: 85px;
 }
 .tabs_content .reports_section{
   display: flex;
@@ -863,13 +863,14 @@ li.one-tab-link:hover {
 }
 
 .download_report_wrapper .report_text {
-  padding: 47px 40px;
+  padding: 38px 40px;
 }
 .download_report_wrapper > div:hover{
   box-shadow: 4px 4px 20px rgba(209, 209, 209, 0.2);
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
 }
-.download_report_wrapper > div:hover a{
+.download_report_wrapper > div:hover a,
+.download_report_wrapper > div:hover .report_title{
   color: #ffffff;
 }
 .h2-header-without-line{
@@ -881,6 +882,10 @@ li.one-tab-link:hover {
 }
 .report_title{
   color: #333333;
+  font-family: "Raleway-Bold";
+  font-size: 20px;
+  line-height: 26px;
+  padding-bottom: 20px;
 }
 .report_download:after{
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
@@ -889,4 +894,7 @@ li.one-tab-link:hover {
 }
 .download_report_wrapper > div:hover .report_download:after{
   content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
+}
+.reports_section h2{
+  padding-bottom: 40px;
 }
