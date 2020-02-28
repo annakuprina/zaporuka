@@ -603,7 +603,7 @@ function list_of_reports() {
                     <div class="download_report_wrapper">
                         <?php foreach ($reporting[$n]['report'] as $report) { ?>
                             <div>
-                                <a href="<?php echo $report['report_file']['url']; ?>" download>
+                                <a href="<?php echo $report['report_file']; ?>" download>
                                     <div class="report_text">
                                         <p class="report_title"><?php echo $report['report_title']; ?></p>
                                         <p class="report_download">Завантажити</p>
