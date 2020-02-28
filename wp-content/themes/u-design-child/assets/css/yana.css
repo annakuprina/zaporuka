@@ -801,6 +801,9 @@ h6,
 }
 
 /**************************************** Reporting Page *************************************/
+.reporting_section_tabs{
+  padding-bottom: 45px;
+}
 .tabs_content .reports_section{
   display: flex;
   flex-wrap: wrap;
@@ -811,6 +814,9 @@ h6,
 }
 .reports_section > div:nth-child(odd) {
   margin-right: 40px;
+}
+.list_reports_wrapper {
+  padding: 110px 0;
 }
 .list_reports_wrapper ul{
   display: flex;
@@ -827,8 +833,6 @@ h6,
 }
 .list_reports_wrapper li.tab-active{
   color: #e78b48 !important;
-  opacity: 1;
-
 }
 .list_reports_wrapper li.tab-active:after{
   content: ' ';
@@ -850,8 +854,7 @@ li.one-tab-link:hover:after {
 }
 
 li.one-tab-link:hover {
-  color: #9a9a9a !important;
-  opacity: 1;
+  color: #e78b48 !important;
 }
 .download_report_wrapper > div {
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
@@ -875,4 +878,15 @@ li.one-tab-link:hover {
   position: relative;
   font-size: 48px;
   line-height: 59px;
+}
+.report_title{
+  color: #333333;
+}
+.report_download:after{
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  position: absolute;
+  padding-left: 10px;
+}
+.download_report_wrapper > div:hover .report_download:after{
+  content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
 }

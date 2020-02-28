@@ -605,8 +605,8 @@ function list_of_reports() {
                             <div>
                                 <a href="<?php echo $report['report_file']['url']; ?>" download>
                                     <div class="report_text">
-                                        <?php echo $report['report_title']; ?>
-                                        <p>Завантажити</p>
+                                        <p class="report_title"><?php echo $report['report_title']; ?></p>
+                                        <p class="report_download">Завантажити</p>
                                     </div>
                                 </a>
                             </div>
