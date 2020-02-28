@@ -4,8 +4,8 @@ if($_POST['custom_action'] == 'true'){
     include __DIR__ . '/../../../../wp-load.php';
     $cptaNumber = $paged = absint($_POST['number']);
     $prev_click = $_POST['prev'];
-    $cptaLimit  = 2;
-    $cptaType = 'reviews';
+    $cptaLimit  = $_POST['limit'];
+    $cptaType = $_POST['post_type'];
     if( $cptaNumber == "1" ){
         $cptaOffsetValue = "0";
         $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'post_status' => 'publish');
@@ -52,7 +52,7 @@ if($_POST['custom_action'] == 'true'){
                 if( $cpta_Paginationlist > 0 ){ ?>
                     <ul class='list-cptapagination'>
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
-                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>"></i></a></li>
+                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
                         <?php
                         $t = ceil($paged/6 )-1;
                         $t2 = $t*6;
@@ -62,9 +62,9 @@ if($_POST['custom_action'] == 'true'){
                             }
                             if( $cpta == $paged ){ $active="active_review"; }else{ $active=""; }
                             ?>
-                            <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>"><?php echo $cpta;?></a></li>
+                            <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"><?php echo $cpta;?></a></li>
                         <?php } ?>
-                        <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta="<?php echo $next; ?>" ></a></li>
+                        <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta="<?php echo $next; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
                         <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
                     </ul>
                     <?php if ( ($t2+1) == $last ) { ?>
@@ -524,6 +524,7 @@ function vc_testimonials_content(){
                 <?php
                 $cpta_args = array('posts_per_page' => -1,'post_type' => 'reviews','post_status' => 'publish');
                 $cptaLimit = 2;
+                $cptaType = 'reviews';
                 $cpta_Query = new WP_Query( $cpta_args );
                 $cpta_Count = count($cpta_Query->posts);
                 $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
@@ -531,13 +532,13 @@ function vc_testimonials_content(){
                 if( $cpta_Paginationlist > 0 ){ ?>
                     <ul class='list-cptapagination'>
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
-                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta='1'></i></a></li>
+                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
                             <?php for( $cpta=1; $cpta<=6; $cpta++){
                                 if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
                                 ?>
-                                <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>"><?php echo $cpta;?></a></li>
+                                <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"><?php echo $cpta;?></a></li>
                             <?php } ?>
-                        <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta='2' ></a></li>
+                        <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta='2' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
                         <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>"></a></li>
                     </ul>
                     <div class="count_pages"><span class="paged_review">1-6</span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
@@ -624,21 +625,20 @@ function list_of_reports() {
 }
 add_shortcode( 'shortcode_list_of_children', 'list_of_children' );
 function list_of_children() {
-    $args = array(
-        'posts_per_page'   => 6,
-        'post_type'        => 'children',
-    );
-    $new_query = new WP_Query($args);
+    $new_query = new WP_Query();
+    $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;
+    $new_query->query('post_type=children&showposts=6'.'&paged='.$paged);
+
     ob_start();
     ?>
     <div class="children-wrapper">
     <?php for($i=0;$i<sizeof($new_query->posts);++$i){
         $post_id = $new_query->posts[$i]->ID;
         $thumbnail = get_the_post_thumbnail_url($post_id);
-        $child_age = get_post_meta($post_id, 'child_age');
-        $help_amount = get_post_meta($post_id, 'help_amount');
-        $kind_of_help = get_post_meta($post_id, 'kind_of_help');
-        $region = get_post_meta($post_id, 'region');
+        $child_age = get_post_meta($post_id, 'child_age', true);
+        $help_amount = get_post_meta($post_id, 'help_amount', true);
+        $kind_of_help = get_post_meta($post_id, 'kind_of_help', true);
+        $region = get_post_meta($post_id, 'region', true);
 
         ?>
         <!-- One-child -->
@@ -663,6 +663,31 @@ function list_of_children() {
             </div>
         </div><!-- end one-child  -->
         <?php } ?>
+        <?php wp_reset_postdata(); ?>
+        <div class="pagination-block">
+            <?php
+            $cpta_args = array('posts_per_page' => -1,'post_type' => 'children','post_status' => 'publish');
+            $cptaLimit = 6;
+            $cptaType = 'children';
+            $cpta_Query = new WP_Query( $cpta_args );
+            $cpta_Count = count($cpta_Query->posts);
+            $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
+            $last = ceil( $cpta_Paginationlist );
+            if( $cpta_Paginationlist > 0 ){ ?>
+                <ul class='list-cptapagination'>
+                    <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1'></a></li>
+                    <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
+                    <?php for( $cpta=1; $cpta<=6; $cpta++){
+                        if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
+                        ?>
+                        <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"><?php echo $cpta;?></a></li>
+                    <?php } ?>
+                    <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta='2' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
+                    <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
+                </ul>
+                <div class="count_pages"><span class="paged_review">1-6</span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
+            <?php } ?>
+        </div>
     </div>
 
 
