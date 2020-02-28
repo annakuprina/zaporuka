@@ -823,15 +823,14 @@ h6,
   color: rgba(51, 51, 51, 0.29) !important;
   font-family: "Raleway-Bold";
   font-size: 16px;
-}
-.list_reports_wrapper li.tab-active,
-.list_reports_wrapper li:hover{
-  color: #e78b48 !important;
-  opacity: 1;
   position: relative;
 }
-.list_reports_wrapper li.tab-active:after,
-.list_reports_wrapper li:hover{
+.list_reports_wrapper li.tab-active{
+  color: #e78b48 !important;
+  opacity: 1;
+
+}
+.list_reports_wrapper li.tab-active:after{
   content: ' ';
   position: absolute;
   bottom: -1px;
