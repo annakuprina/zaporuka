@@ -916,6 +916,7 @@ li.one-tab-link:hover {
   color: #e78b48;
   font-size: 42px;
   font-family: "Raleway-Bold";
+  line-height: 59px;
 }
 .pagination-children{
   padding-top: 15px;

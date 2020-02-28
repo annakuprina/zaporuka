@@ -1805,6 +1805,7 @@ h3 {
   width: 353px;
   margin-bottom: 40px!important;
   min-height: 303px;
+  box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
 
 .child-top {
