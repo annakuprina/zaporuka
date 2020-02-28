@@ -930,3 +930,17 @@ li.one-tab-link:hover {
 .children-wrapper .preloader{
   top: -5%;
 }
+
+
+/********************************* Single article *********************************/
+.single_article_section1.vc_custom_1582904966998 {
+  background-position: unset !important;
+}
+.single_section1_text{
+  color: white;
+  font-size: 48px;
+  line-height: 58px;
+  font-family: "Raleway-Bold";
+  padding: 78px 0 78px 115px;
+  width: 69%;
+}
