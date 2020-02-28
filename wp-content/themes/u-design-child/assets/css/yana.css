@@ -839,6 +839,20 @@ h6,
   background-color: #e78b48;
   left: 0;
 }
+li.one-tab-link:hover:after {
+  content: ' ';
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #e78b48;
+  left: 0;
+}
+
+li.one-tab-link:hover {
+  color: #9a9a9a !important;
+  opacity: 1;
+}
 .download_report_wrapper > div {
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
   background-color: #ffffff;
