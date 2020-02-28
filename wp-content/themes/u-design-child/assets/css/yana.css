@@ -863,7 +863,7 @@ li.one-tab-link:hover {
 }
 
 .download_report_wrapper .report_text {
-  padding: 38px 40px;
+  padding: 40px;
 }
 .download_report_wrapper > div:hover{
   box-shadow: 4px 4px 20px rgba(209, 209, 209, 0.2);
@@ -897,4 +897,8 @@ li.one-tab-link:hover {
 }
 .reports_section h2{
   padding-bottom: 40px;
+}
+.report_download {
+  font-family: "Raleway-Bold";
+  font-size: 14px;
 }
