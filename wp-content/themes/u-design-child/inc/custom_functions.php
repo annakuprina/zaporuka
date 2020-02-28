@@ -587,11 +587,9 @@ function list_of_reports() {
         </ul>
     </div>
     <?php for($i=0;$i<sizeof($new_query->posts);++$i){
-
         if ( $i == 0 ) {$active_report = 'active'; }else{$active_report = '';}
         $post_id = $new_query->posts[$i]->ID;
         $reporting = get_field('reporting', $post_id);
-
         ?>
     <div class="tabs_content <?php echo $active_report; ?> " data-id="<?php echo $i; ?>">
         <div class = "reports_section">
@@ -620,9 +618,7 @@ function list_of_reports() {
         </div>
 
     </div>
-    <?php } ?>
-
-    <?php
+    <?php }
     $html = ob_get_clean();
     return $html;
 }
@@ -633,13 +629,41 @@ function list_of_children() {
         'post_type'        => 'children',
     );
     $new_query = new WP_Query($args);
-
     ob_start();
     ?>
+    <div class="children-wrapper">
+    <?php for($i=0;$i<sizeof($new_query->posts);++$i){
+        $post_id = $new_query->posts[$i]->ID;
+        $thumbnail = get_the_post_thumbnail_url($post_id);
+        $child_age = get_post_meta($post_id, 'child_age');
+        $help_amount = get_post_meta($post_id, 'help_amount');
+        $kind_of_help = get_post_meta($post_id, 'kind_of_help');
+        $region = get_post_meta($post_id, 'region');
 
-        <div class="">
-            ......
-        </div>
+        ?>
+        <!-- One-child -->
+        <div class="child">
+            <div class="child-top">
+                <div class="child-photo"><img src="<?php echo $thumbnail; ?>"></div>
+                <div class="child-info">
+                    <p class="child-name-and-age">
+                        <span class="child-name"><?php echo $new_query->posts[$i]->post_title;?></span>
+                        <span>,</span>
+                        <span class="child-age"><?php echo $child_age; ?></span>
+                        <span>,</span>
+                    </p>
+                    <p class="child-region">
+                        <?php echo $region; ?>
+                    </p>
+                </div><!-- end child-info -->
+            </div><!-- end child-top -->
+            <div class="child-bottom">
+                <?php echo $new_query->posts[$i]->post_content; ?> Сума
+                допомоги – <span class="help-amount"><?php echo $help_amount; ?></span><span class="kind-of-help"> <?php echo $kind_of_help; ?></span> .
+            </div>
+        </div><!-- end one-child  -->
+        <?php } ?>
+    </div>
 
 
     <?php

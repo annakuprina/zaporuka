@@ -902,3 +902,13 @@ li.one-tab-link:hover {
   font-family: "Raleway-Bold";
   font-size: 14px;
 }
+.reports_section .h2-header-line::before{
+  top: calc((100% - 45px) / 2);
+}
+
+.zvit_children_count{
+  color: #e78b48;
+  /*font-family: "Proxima Nova Rg";*/
+  font-size: 42px;
+  font-family: "Raleway-Bold";
+}
