@@ -740,6 +740,7 @@ function list_of_children() {
     ?>
     <div class='children-block'>
         <div class="children-wrapper">
+            <div class="preloader"></div>
             <?php for($i=0;$i<sizeof($new_query->posts);++$i){
             $post_id = $new_query->posts[$i]->ID;
             $thumbnail = get_the_post_thumbnail_url($post_id);
