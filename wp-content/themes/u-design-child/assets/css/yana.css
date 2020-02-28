@@ -926,3 +926,6 @@ li.one-tab-link:hover {
 .children-block{
   padding-bottom: 30px;
 }
+.children-wrapper .preloader{
+  top: -5%;
+}
