@@ -1803,7 +1803,8 @@ h3 {
   background: #fff;
   padding: 40px 40px;
   width: 353px;
-  margin-bottom: 40px;
+  margin-bottom: 40px!important;
+  min-height: 303px;
 }
 
 .child-top {
