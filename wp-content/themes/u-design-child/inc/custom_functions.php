@@ -765,7 +765,7 @@ function list_of_children() {
             <?php } ?>
         </div>
         <?php wp_reset_postdata(); ?>
-        <div class="pagination-block">
+        <div class="pagination-children">
             <?php
             $cpta_args = array('posts_per_page' => -1,'post_type' => 'children','post_status' => 'publish');
             $cptaLimit = 6;
