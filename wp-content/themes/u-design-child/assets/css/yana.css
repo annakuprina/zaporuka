@@ -914,7 +914,15 @@ li.one-tab-link:hover {
 
 .zvit_children_count{
   color: #e78b48;
-  /*font-family: "Proxima Nova Rg";*/
   font-size: 42px;
   font-family: "Raleway-Bold";
+}
+.pagination-children{
+  padding-top: 15px;
+}
+.pagination-children .count_pages{
+  top: 18px;
+}
+.children-block{
+  padding-bottom: 30px;
 }
