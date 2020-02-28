@@ -1852,6 +1852,39 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   margin: 0 auto;
   float: right;
 }
+
+.page-template-thanks-for-donation{
+    background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
+    height: 100vh;  
+}
+.page-template-thanks-for-donation h2{
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 700;
+}
+.page-template-thanks-for-donation p{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 0;
+}
+.page-template-thanks-for-donation p.to-home{
+    text-align: center;
+    padding-top: 93px;
+}
+.page-template-thanks-for-donation p.to-home a{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    max-width: 168px;
+    font-family: "Raleway-Bold";
+}
+.page-template-thanks-for-donation p.to-home a::after{
+    content: url(../../img/arrow-home.svg);
+    padding-left: 11px;
+}
+
+
 @media screen and (min-width: 720px) {
   .customize-header.u-design-fixed-menu-on.fixed-menu #top-wrapper {
     opacity: 1;
