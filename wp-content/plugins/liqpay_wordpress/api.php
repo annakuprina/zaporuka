@@ -208,11 +208,6 @@ class LiqPay
 
 
         $signature = $this->cnb_signature($params);
-        print_r($params,1)
-        var_dump($params); 
-        var_dump($signature); 
-
-        die();
 
         return sprintf('
 
