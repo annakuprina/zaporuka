@@ -205,11 +205,14 @@ class LiqPay
         $data      = base64_encode( json_encode($params) );
 
 
-        var_dump($data); die();
+
 
         $signature = $this->cnb_signature($params);
+        print_r($params,1)
+        var_dump($params); 
+        var_dump($signature); 
 
-        
+        die();
 
         return sprintf('
 
