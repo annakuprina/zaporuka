@@ -52,7 +52,8 @@ if (!function_exists('admin_custom_js')) {
             wp_enqueue_script('dataTables');
             wp_register_script('dataTables_yadcf', plugins_url('/js/jquery.dataTables.yadcf.js', __FILE__), array('jquery', 'dataTables'));
             wp_enqueue_script('dataTables_yadcf');
-            wp_register_script('dataTables_js', plugins_url('/js/datatable.js', __FILE__), array('jquery', 'dataTables'));
+            wp_register_script( 'dataTables_js',plugins_url('/js/datatable.js', __FILE__), array('jquery', 'dataTables'));
+            wp_localize_script( 'dataTables_js', 'ajax_params', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
             wp_enqueue_script('dataTables_js');
         }
         wp_register_script('liqpay_admin_script', plugins_url('/js/liqpay_admin.js', __FILE__), array('jquery'));
