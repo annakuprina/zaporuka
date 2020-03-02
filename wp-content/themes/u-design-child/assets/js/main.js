@@ -32,6 +32,14 @@ jQuery(document).ready(function($) {
     dots: true
   });
 
+  // VOLUNTEERS SLIDER MOB
+  $(".volunteers-slider-mob").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true
+  });
+
   // PHOTO SLIDER
   $(".photo-slider").slick({
     slidesToShow: 3,
@@ -187,9 +195,11 @@ jQuery(document).ready(function($) {
     // width: 250
   });
 
-  $(".expand-button").click(function() {
+  $(".header-mob-lang-switcher").click(function() {
     $(".header-mob-lang").slideToggle();
-    $(this).toggleClass("expand-button-opened");
+    $(this)
+      .find(".expand-button")
+      .toggleClass("expand-button-opened");
   });
 
   $(".header-mob-top").click(function() {
