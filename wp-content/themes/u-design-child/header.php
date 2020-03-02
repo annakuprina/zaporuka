@@ -109,18 +109,19 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 								<li><a class="header-mob-soc-insta" href="<?php echo $instagram_link;?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 							</div>
 							<div class="header-mob-lang-wrapper">
-								<a href="#pll_switcher" class="sf-with-ul"><span><?php echo pll_current_language( 'name' );?></span></a>
+								<a href="#pll_switcher" class="sf-with-ul header-mob-lang-switcher"><span><?php echo pll_current_language( 'name' );?></span>
+									<span class="expand-button" href="#"></span>
+								</a>
 									<ul class="header-mob-lang">
 										<?php pll_the_languages();?>
 									</ul>
-								<span class="expand-button" href="#"></span>
 							</div><!-- end header-mob-lang-wrapper -->
 						</div><!-- end header-mob-right -->
 
 
 						<div class="header-mob-bottom-links">
 							<span><a href="<?php echo $privacy_policy_link; ?>" class="privacy-policy"><?php echo $privacy_policy_text; ?></a></span>
-							<span><a  href="<?php echo $disclaimer_link; ?>" class="disclaimer"><?php echo $disclaimer_text; ?></a></span>
+							<span><a href="<?php echo $disclaimer_link; ?>" class="disclaimer"><?php echo $disclaimer_text; ?></a></span>
 							<span class="copyright"><?php echo $copyright_text; ?></span>
 						</div>
 					</div><!--end header-mob-bottom-wrapper -->
