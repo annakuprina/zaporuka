@@ -57,12 +57,7 @@ jQuery(document).ready(function($) {
     slidesToShow: 3,
     slidesToScroll: 3
   });
-  $(".wpb_gallery_slides").slick({
-    dots: true,
-    arrows: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+
 
   $(document).on('click', '.pagination-block a', function(e) {
     e.preventDefault();
@@ -108,4 +103,10 @@ jQuery(document).ready(function($) {
   });
   $(".video_button").slickLightbox({});
 
+  $(".single_section3 .vc_pageable-slide-wrapper").slick({
+    dots: true,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
 });
