@@ -844,7 +844,7 @@ class section_post_info_class extends WPBakeryShortCode {
         ?>
         <div class="custom_post_info">
             <div class="right_info_block">
-                <div class="post_category"><?php echo strtoupper($post_category[0]); ?></div>
+                <div class="post_category_class"><?php echo strtoupper($post_category[0]); ?></div>
                 <div><?php echo date_i18n('d F Y', $post_date ); ?></div>
             </div>
             <div>

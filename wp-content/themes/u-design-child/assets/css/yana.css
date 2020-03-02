@@ -964,6 +964,9 @@ li.one-tab-link:hover {
   justify-content: space-between;
   width: 32%;
 }
+.custom_post_info .post_category_class{
+  text-transform: uppercase;
+}
 .custom_post_info .fa-facebook{
   color: #a9a9a9;
 }
