@@ -863,4 +863,29 @@ class section_post_info_class extends WPBakeryShortCode {
         return $html;
     }
 }
-$eq_section_title = new section_post_info_class;
+$section_post_info_class = new section_post_info_class;
+
+add_shortcode( 'custom_social_block_pro', 'custom_social_block' );
+function custom_social_block(){
+    $options = get_option('ThemeOptions');
+    $facebook_link = !empty($options['facebook_link']) ? $options['facebook_link'] : false;
+    $instagram_link = !empty($options['instagram_link']) ? $options['instagram_link'] : false;
+    ob_start();
+    ?>
+    <div class="proj-timeline-info news_social_info">
+        <div class="proj-timeline-info-left">
+            <p class="left-to-collect-text"><?php pll_e( 'Долучайтесь до БФ Запорука у соцмережах');?></p>
+        </div><!-- end proj-timeline-info-left -->
+        <div class="proj-timeline-info-right">
+            <a href="#" class="proj-timeline-help">
+                <span class="proj-timeline-help-text"><a href="<?php echo $facebook_link;?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+            </a>
+            <a href="#" class="proj-timeline-share">
+                <span class="proj-timeline-share-text"<a href="<?php echo $instagram_link;?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+            </a>
+        </div><!-- end proj-timeline-info-right -->
+    </div><!-- end proj-timeline-info -->
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}

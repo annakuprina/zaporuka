@@ -985,3 +985,7 @@ li.one-tab-link:hover {
   font-family: "Raleway-Bold";
   line-height: 26px;
 }
+.proj-timeline-info.news_social_info{
+  min-width: 310px;
+  height: 151px;
+}
