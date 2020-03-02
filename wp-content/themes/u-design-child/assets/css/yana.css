@@ -984,6 +984,8 @@ li.one-tab-link:hover {
   color: #ffffff!important;
   font-family: "Raleway-Bold";
   line-height: 26px;
+  font-size: 14px;
+  padding: 30px 0 15px 0;
 }
 .proj-timeline-info.news_social_info{
   min-width: 310px;
@@ -998,4 +1000,20 @@ li.one-tab-link:hover {
   line-height: 26px;
   font-family: Raleway-Bold;
   letter-spacing: 0.2px;
+}
+.news_social_info .proj-timeline-info-right{
+  justify-content: center;
+  width: calc(100% - 185px);
+  text-align: center;
+}
+
+.news_social_info .proj-timeline-info-right a span{
+  padding-left: 10px;
+}
+.news_social_info .proj-timeline-info-right a:last-child{
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+.news_social_info .fa-facebook,
+.news_social_info .fa-instagram {
+  padding-top: 3px;
 }
