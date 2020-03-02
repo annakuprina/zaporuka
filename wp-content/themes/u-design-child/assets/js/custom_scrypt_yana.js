@@ -103,10 +103,11 @@ jQuery(document).ready(function($) {
   });
   $(".video_button").slickLightbox({});
 
-  $(".single_section3 .vc_pageable-slide-wrapper").slick({
+  $(".media_slider_block .vc_pageable-slide-wrapper").slick({
     dots: true,
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1
   });
+
 });
