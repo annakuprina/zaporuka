@@ -63,9 +63,6 @@ if (isset($_POST['data'])) {
     $user_phone = $obj->{'user_phone'};
     $liqpay_post_id =  $obj->{'liqpay_post_id'};
 
-    var_dump($obj);
-    die();
-
     global $wpdb, $table_prefix;
 
     $table_answer_code = $table_prefix . 'liqpay_answer_code';
