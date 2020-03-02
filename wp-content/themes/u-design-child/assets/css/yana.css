@@ -1020,3 +1020,13 @@ li.one-tab-link:hover {
 .news_social_info .fa-instagram {
   padding-top: 3px;
 }
+
+.media_slider_block .slick-list {
+  height: 500px;
+}
+.media_slider_block .slick-track {
+  height: 500px;
+}
+.media_slider_block li {
+  height: 500px;
+}
