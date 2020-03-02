@@ -970,7 +970,7 @@ li.one-tab-link:hover {
   padding-left: 50px;
 }
 .single_news_two_posts a{
-  color: #ffffff;
+  color: #ffffff!important;
   font-family: "Raleway-Bold";
   line-height: 26px;
 }
