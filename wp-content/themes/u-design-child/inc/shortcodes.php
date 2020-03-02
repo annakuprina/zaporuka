@@ -155,6 +155,7 @@ function shortcode_parthers_on_home(  ){
 		'numberposts' => -1,
 		'post_type'   => 'partners'
 	));	
+	$partners_array_by_2 = array_chunk($partners_array, 2, true);
 	?>
 			<!----------
 				PARTNERS
@@ -182,20 +183,24 @@ function shortcode_parthers_on_home(  ){
 				<!-- PARTNERS SLIDER MOBILE-->
 				<div class="partners-slider-mob">
 					<?php
-					foreach( $partners_array as $post ){ ?>
+					foreach( $partners_array_by_2 as $post_wrapper ){ ?>
 						<!-- One slide -->
 						<div class="partners-slide">
-
-						<div class="partners-slider-mob-img">
-							<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
-						</div>
-							<!-- Slide text -->
-							<div class="partners-slide-text">
-								<p>
-									<?php echo $post->post_title;?>
-									<a class="partner-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
-								</p>
-							</div>
+							<? foreach( $post_wrapper as $post ){ ?>
+							<div class="partners-slide-item">
+								<div class="partners-slider-mob-img">
+									<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
+								</div>
+								<!-- Slide text -->
+								<div class="partners-slide-text">
+									<p>
+										<?php echo $post->post_title;?>
+										<a class="partner-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
+									</p>
+								</div>
+							</div><!-- end partners-slide-item -->
+							<?php
+							}?>
 						</div><!-- end one slide-->
 					<?php
 					}
