@@ -52,8 +52,10 @@ else {
 $merchant_id = get_option('liqpay_merchant_id');
 $signature = get_option('liqpay_signature_id');
 $url = "https://liqpay.ua/?do=clickNbuy&button=" . $signature;
-$hidden_content = '';
 
+
+
+$merchant_id = get_option('liqpay_merchant_id');
 $url = @(strtolower($_SERVER["HTTPS"]) != 'on') ? 'http://' . $_SERVER["SERVER_NAME"] : 'https://' . $_SERVER["SERVER_NAME"];
 $url .= ($_SERVER["SERVER_PORT"] != 80) ? ":" . $_SERVER["SERVER_PORT"] : "";
 $url .= $_SERVER["REQUEST_URI"];
@@ -91,6 +93,16 @@ if($pay_type == 'subscribe') {
 }
 $liq_order_id = false;
 
+
+if(!isset($_POST['liqpay_post_id'])){
+    $liqpay_post_id = "1";
+}
+else{
+    $liqpay_post_id = $_POST['liqpay_post_id'];
+}
+
+
+
 if(isset($_POST['order_id'])) {
     $liq_order_id = $_POST['order_id'];
 }
@@ -124,6 +136,18 @@ $liq_order_id = $liq_order_id."_".md5(rand(0,10000));
 if ($_POST['mail'] !== "") update_option($liq_order_id.'-liqpay_mail_buyer',$_POST['mail']);
 else
 	update_option($liq_order_id.'-liqpay_mail_buyer',$current_user->user_email);
+
+if ($_POST['phone'] !== "") 
+	{		
+		$user_phone = $_POST['phone'];
+	}
+else
+	{
+		global $woocommerce;
+   		$order = new WC_Order($liq_order_id);
+		$user_phone =$order->get_billing_email();
+	}
+
 
 
 
@@ -190,7 +214,7 @@ $description .= "   " . $plata;
 $lqsignature = base64_encode(sha1($signature . $amount . $valuta . $merchant_id . $liq_order_id . 'buy' . $description . $result_url . $server_url,1));
 $testmode = get_option('liqpay_check_testmode');
 /////////////////****************************************************************** API 3.0
-$json_string = array('version' => '3','public_key' => $merchant_id,'amount' => $amount,'currency' => $valuta,'description' => $description,'order_id' => $liq_order_id,'action' => $pay_type, 'subscribe_periodicity'=> $subscribe_type, 'public_phone'=> $liqpay_phone,'subscribe_date_start'=> date("Y-m-d H:i:s"), 'server_url' => $server_url,'result_url' => $result_url,'pay_way' => 'card,liqpay,delayed,invoice,privat24','language' => $lang,'sandbox' => $testmode);
+$json_string = array('version' => '3','public_key' => $merchant_id,'amount' => $amount,'currency' => $valuta,'description' => $description,'order_id' => $liq_order_id,'action' => $pay_type, 'subscribe_periodicity'=> $subscribe_type, 'public_phone'=> $liqpay_phone,'user_phone'=> $user_phone,'subscribe_date_start'=> date("Y-m-d H:i:s"), 'server_url' => $server_url,'result_url' => $result_url,'liqpay_post_id' => $liqpay_post_id,'pay_way' => 'card,liqpay,delayed,invoice,privat24','language' => $lang,'sandbox' => $testmode);
 //$split_rules = array ( array('public_key'=>'i4579887814','amount'=>8.5, 'commission_payer' => 'receiver','server_url' => $server_url));
 $data = base64_encode(json_encode($json_string));
 $liqpay = new LiqPay($merchant_id,$signature);
