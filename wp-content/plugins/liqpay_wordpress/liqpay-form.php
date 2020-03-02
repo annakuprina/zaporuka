@@ -216,14 +216,11 @@ $testmode = get_option('liqpay_check_testmode');
 /////////////////****************************************************************** API 3.0
 $json_string = array('version' => '3','public_key' => $merchant_id,'amount' => $amount,'currency' => $valuta,'description' => $description,'order_id' => $liq_order_id,'action' => $pay_type, 'subscribe_periodicity'=> $subscribe_type, 'public_phone'=> $liqpay_phone,'user_phone'=> $user_phone,'subscribe_date_start'=> date("Y-m-d H:i:s"), 'server_url' => $server_url,'result_url' => $result_url,'liqpay_post_id' => $liqpay_post_id,'pay_way' => 'card,liqpay,delayed,invoice,privat24','language' => $lang,'sandbox' => $testmode);
 
-var_dump( $json_string );
-die();
-
 //$split_rules = array ( array('public_key'=>'i4579887814','amount'=>8.5, 'commission_payer' => 'receiver','server_url' => $server_url));
 $data = base64_encode(json_encode($json_string));
 $liqpay = new LiqPay($merchant_id,$signature);
 $html = $liqpay->cnb_form(
-	array('version' => '3','amount' => $amount,'currency' => $valuta,'description' => $description,'order_id' => $liq_order_id,'server_url' => $server_url,'result_url' => $result_url,'action' => $pay_type, 'public_phone'=> $liqpay_phone, 'subscribe_periodicity'=> $subscribe_type, 'subscribe_date_start'=> date("Y-m-d H:i:s"), 'pay_way' => 'card,liqpay,delayed,invoice,privat24','language' => $lang,'sandbox' => $testmode//,
+	array('version' => '3','amount' => $amount,'currency' => $valuta,'description' => $description,'order_id' => $liq_order_id,'server_url' => $server_url,'result_url' => $result_url,'action' => $pay_type, 'public_phone'=> $liqpay_phone,'user_phone'=> $user_phone,'liqpay_post_id' => $liqpay_post_id, 'subscribe_periodicity'=> $subscribe_type, 'subscribe_date_start'=> date("Y-m-d H:i:s"), 'pay_way' => 'card,liqpay,delayed,invoice,privat24','language' => $lang,'sandbox' => $testmode//,
 		// 'split_rules' => json_encode($split_rules)
 	));
 echo $html;
