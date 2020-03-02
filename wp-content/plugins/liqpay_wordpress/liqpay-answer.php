@@ -60,6 +60,8 @@ if (isset($_POST['data'])) {
     $sender_phone = $obj->{'sender_phone'};
     $ip_adress = $obj->{'ip'};
     $xdate = date("Y.m.d H:i:s");
+    $user_phone = $obj->{'user_phone'};
+    $liqpay_post_id =  $obj->{'liqpay_post_id'};
 
     global $wpdb, $table_prefix;
 
@@ -80,10 +82,11 @@ if (isset($_POST['data'])) {
     if (!$to)
         $to = $current_user->user_email;
 
+
     if (($current_user->user_firstname) || ($current_user->user_lastname) || ($current_user->user_login))
         $fio = $current_user->user_firstname . " " . $current_user->user_lastname . " " . $current_user->user_login;
     $new_code = 1;
-    insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $sender_phone, 0, $valuta, $to, $ip_adress);
+    insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $user_phone, 0, $valuta, $to, $ip_adress);
 
     if ($testmode)
         $subject = "Отчет по оплате (TEST) ";
@@ -165,6 +168,12 @@ if (isset($_POST['data'])) {
         else
             $message = $text;
         $mail = get_option('liqpay_mail');
+
+        if( $liqpay_post_id != 1){
+            $current_value = get_field( "total-collected", $liqpay_post_id );
+            $new_value = $current_value + $liqpay_post_id;
+            update_field('total-collected', $new_value , $liqpay_post_id);
+        }
 
 /////////////////////////////////////////////////////////////////////////////
         global $code, $product_id;
