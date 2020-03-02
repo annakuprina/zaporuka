@@ -817,3 +817,50 @@ function list_of_children() {
     $html = ob_get_clean();
     return $html;
 }
+
+
+class section_post_info_class extends WPBakeryShortCode {
+    // Element Init
+    function __construct() {
+        add_action( 'init', array( $this, 'section_post_info_mapping' ) );
+        add_shortcode( 'section_post_info', array( $this, 'section_post_info_html' ) );
+    }
+    // Element Mapping
+    public function section_post_info_mapping() {
+        vc_map( array(
+            "name" => esc_html__("Post info", "eq"),
+            "base" => "section_post_info",
+            'category' => __('Content', 'text-domain')
+        ));
+    }
+    // Element HTML
+    public function section_post_info_html( $atts ) {
+        WPBMap::addAllMappedShortcodes();
+        global $post;
+
+        $post_category = wp_get_post_categories( $post->ID, array('fields' => 'names') );
+        $post_date = time($post->post_date);
+        ob_start();
+        ?>
+        <div class="custom_post_info">
+            <div class="right_info_block">
+                <div><?php echo strtoupper($post_category[0]); ?></div>
+                <div><?php echo date_i18n('d F Y', $post_date ); ?></div>
+            </div>
+            <div>
+                <div>
+                    <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
+                    <span class="one-project-socials">
+					    <i class="fa fa-facebook" aria-hidden="true"></i>
+				    </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <?php
+
+        $html = ob_get_clean();
+        return $html;
+    }
+}
+$eq_section_title = new section_post_info_class;

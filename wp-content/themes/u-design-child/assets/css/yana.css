@@ -933,7 +933,7 @@ li.one-tab-link:hover {
 
 
 /********************************* Single article *********************************/
-.single_article_section1 {
+.single_article_section1.vc_custom_1582905650845 {
   background-position: unset !important;
 }
 .single_section1_text{
@@ -943,4 +943,19 @@ li.one-tab-link:hover {
   font-family: "Raleway-Bold";
   padding: 78px 0 78px 115px;
   width: 69%;
+}
+.custom_post_info{
+  display: flex;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d8d8d8;
+  color: #a5a5a5;
+  justify-content: space-between;
+}
+.custom_post_info .right_info_block{
+  display: flex;
+  justify-content: space-between;
+  wwidth: 30.3%;
+}
+.custom_post_info .fa-facebook{
+  color: #a9a9a9;
 }
