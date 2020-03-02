@@ -24,7 +24,6 @@ function insertdb($order_id1, $xdate, $transaction_id1, $status1, $summa1, $data
 {
     global $wpdb, $table_prefix;
     $table_liqpay = $table_prefix . 'liqpay';
-    if (!$sender_phone1) $sender_phone1 = '0';
     if (!isset($wpdb))
         require_once('../../../wp-config.php');
     $sql1 = "Select status from {$table_liqpay} where order_id = '{$order_id1}' and status = 'success'";
@@ -86,6 +85,7 @@ if (isset($_POST['data'])) {
     if (($current_user->user_firstname) || ($current_user->user_lastname) || ($current_user->user_login))
         $fio = $current_user->user_firstname . " " . $current_user->user_lastname . " " . $current_user->user_login;
     $new_code = 1;
+    
     insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $user_phone, 0, $valuta, $to, $ip_adress);
 
     if ($testmode)
