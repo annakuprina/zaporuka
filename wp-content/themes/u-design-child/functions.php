@@ -39,6 +39,8 @@ function udesign_child_theme_styles() {
 
     wp_enqueue_script( 'anya-js', CHILD_DIR . '/assets/js/custom_scrypt_anya.js' );
     wp_enqueue_script( 'jquery-ui-js', CHILD_DIR . '/assets/js/jquery-ui.min.js' );
+
+    wp_deregister_style('font-awesome');
 }
 add_action( 'wp_enqueue_scripts', 'udesign_child_theme_styles', 99 );
 
