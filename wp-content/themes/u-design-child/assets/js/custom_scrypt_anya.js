@@ -55,12 +55,16 @@ jQuery(document).ready(function($) {
   function change_payment_description(type_of_help){
      if(window.location.href.indexOf("/projects/") > -1) {
         var project_name = $('#page-title .single-pagetitle').text();
+        var project_id_full =  $('.single-projects article.projects ').attr('id');
+        var project_id_full_arr = project_id_full.split('-');
+         var project_id = project_id_full_arr[1];
         if(type_of_help == 'pay'){
           $('.help_form #plata').val("Однократное перечисление средств на проект " + project_name);
         }
         else{
           $('.help_form #plata').val("Ежемесячное перечисление средств на проект " + project_name);
         }
+        $('.help_form #liqpay_post_id').val(project_id);
       }
       else{
         if(type_of_help == 'pay'){
@@ -69,6 +73,7 @@ jQuery(document).ready(function($) {
         else{
           $('.help_form #plata').val("Ежемесячное перечисление средств (без привязки к проекту)");
         }
+        $('.help_form #liqpay_post_id').val('823'); //823 = project id of "Запорука" private project
       }
   }
 
