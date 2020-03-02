@@ -99,7 +99,7 @@ jQuery(document).ready(function($) {
   });
   $(".video_button").slickLightbox({});
 
-  $(".media_slider_block .vc_pageable-slide-wrapper").slick({
+  $(".media_slider_block .wpb_gallery_slides").slick({
     dots: true,
     arrows: true,
     slide: 'li',
