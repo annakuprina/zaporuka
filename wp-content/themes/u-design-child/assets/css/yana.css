@@ -933,8 +933,13 @@ li.one-tab-link:hover {
 
 
 /********************************* Single article *********************************/
+
 .single_article_section1.vc_custom_1582905650845 {
   background-position: unset !important;
+}
+.single_article_section1_wrapper{
+  max-width: 1140px;
+  margin: 0 auto;
 }
 .single_section1_text{
   color: white;
