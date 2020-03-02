@@ -939,15 +939,15 @@ li.one-tab-link:hover {
 }
 .single_article_section1_wrapper{
   max-width: 1140px;
-  margin: 0 auto;
+  margin: 0 auto!important;
 }
 .single_section1_text{
   color: white;
   font-size: 48px;
   line-height: 58px;
   font-family: "Raleway-Bold";
-  padding: 78px 0 78px 115px;
-  width: 69%;
+  padding: 78px 0;
+  width: 57%;
 }
 .single_section2{
   padding-top: 20px;
