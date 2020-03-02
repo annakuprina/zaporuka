@@ -22,6 +22,7 @@ $udesign_menu_drop_shadows = ( isset( $udesign_options['show_menu_drop_shadows']
 $udesign_fixed_main_menu = ( isset( $udesign_options['fixed_main_menu'] ) && $udesign_options['fixed_main_menu'] ) ? 'u-design-fixed-menu-on' : '';
 $udesign_responsive_pinch_to_zoom = ( isset( $udesign_options['responsive_pinch_to_zoom'] ) && $udesign_options['responsive_pinch_to_zoom'] ) ? '' : ', maximum-scale=1.0';
 $udesign_custom_classes = 'customize-header';
+
 /*social links*/
 $options = get_option('ThemeOptions');
 $facebook_link = !empty($options['facebook_link']) ? $options['facebook_link'] : false;
@@ -34,6 +35,11 @@ $phone_number = !empty($options['main_phone_number']) ? $options['main_phone_num
 $email = !empty($options['main_email']) ? $options['main_email'] : false;
 $logo_mob_img_url = $udesign_options['fixed_menu_logo'];
 $logo_img_url = $udesign_options['custom_logo_img'];
+$copyright_text = !empty($options['column_1_text_' . ICL_LANGUAGE_CODE]) ? $options['column_1_text_' . ICL_LANGUAGE_CODE] : false;
+$privacy_policy_text = !empty($options['column_2_title_' . ICL_LANGUAGE_CODE]) ? $options['column_2_title_' . ICL_LANGUAGE_CODE] : false;
+$privacy_policy_link = !empty($options['column_2_link_' . ICL_LANGUAGE_CODE]) ? $options['column_2_link_' . ICL_LANGUAGE_CODE] : false;
+$disclaimer_text = !empty($options['column_3_title_' . ICL_LANGUAGE_CODE]) ? $options['column_3_title_' . ICL_LANGUAGE_CODE] : false;
+$disclaimer_link = !empty($options['column_3_link_' . ICL_LANGUAGE_CODE]) ? $options['column_3_link_' . ICL_LANGUAGE_CODE] : false;
 
 set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 'no_container' ) ); // Page specific layout options based on "U-Design Options" metabox selection.
 ?>
@@ -76,8 +82,8 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 			<header id="header-mob">
 				<div class="header-mob-top">
 					<div class="header-mob-logo">
-						<img class="active" src="<?php echo $logo_img_url ?>" alt="">
-						<img  src="<?php echo $logo_mob_img_url ?>" alt="">
+						<img class="active header-mob-logo-black" src="<?php echo $logo_img_url ?>" alt="">
+						<img class="header-mob-logo-white" src="<?php echo $logo_mob_img_url ?>" alt="">
 					</div>
 					<div class="header-mob-nav">
 						<div class="hamburger active">
@@ -86,9 +92,8 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 							<span></span>
 						</div>
 						<div class="close"></div>
-
 					</div>
-				</div>
+				</div><!--end header-mob-top -->
 			
 				<div class="header-mob-bottom">
 					<div class="header-mob-bottom-wrapper">
@@ -111,6 +116,13 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 								<span class="expand-button" href="#"></span>
 							</div><!-- end header-mob-lang-wrapper -->
 						</div><!-- end header-mob-right -->
+
+
+						<div class="header-mob-bottom-links">
+							<span><a href="<?php echo $privacy_policy_link; ?>" class="privacy-policy"><?php echo $privacy_policy_text; ?></a></span>
+							<span><a  href="<?php echo $disclaimer_link; ?>" class="disclaimer"><?php echo $disclaimer_text; ?></a></span>
+							<span class="copyright"><?php echo $copyright_text; ?></span>
+						</div>
 					</div><!--end header-mob-bottom-wrapper -->
 				</div><!--end header-mob-bottom -->
 

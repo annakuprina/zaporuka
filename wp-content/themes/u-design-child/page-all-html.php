@@ -61,7 +61,7 @@ get_header();
 				<div class="partners-slider">
 
 						<!-- One slide -->
-						<div class="partners-slide soleterre-slide">
+						<div class="partners-slide">
 							<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
 							<!-- Slide text -->
 							<div class="partners-slide-text">
@@ -73,7 +73,7 @@ get_header();
 						</div><!-- end one slide-->
 
 						<!-- One slide -->
-						<div class="partners-slide styler-slide"> 
+						<div class="partners-slide"> 
 							<img src="<?php echo get_stylesheet_directory_uri()?>/img/styler.jpg">
 							<!-- Slide text -->
 							<div class="partners-slide-text"> 
@@ -84,7 +84,7 @@ get_header();
 						</div><!-- end one slide-->
 
 						<!-- One slide -->
-						<div class="partners-slide golos-stolitsy-slide">
+						<div class="partners-slide">
 							<img src="<?php echo get_stylesheet_directory_uri()?>/img/golos-stolitsy.jpg">
 							<!-- Slide text -->
 							<div class="partners-slide-text">
@@ -115,15 +115,46 @@ get_header();
 							</div>
 						</div><!-- end one slide-->	
 				</div><!-- end partners slider-->
-
+	
 				<!-- PARTNERS SLIDER MOBILE-->
 				<div class="partners-slider-mob">
-						<!-- One slide -->
-						<div class="partners-slide soleterre-slide">
+					<!-- ONE SLIDE(2 partners in 1 slide) -->
+					<div class="partners-slide">
+						<!-- Partners slide item (1 of 2 partners in slide) -->
+						<div class="partners-slide-item">
+							<div class="partners-slider-mob-img">
+								<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+							</div>
+							<!-- Slide text -->
+							<div class="partners-slide-text">
+								<p>
+									Associazione Soleterre Strategie di Pace — головний партнер фонду.
+									<a class="partner-link" href="www.soleterre.org">www.soleterre.org</a>
+								</p>
+							</div>
+						</div><!-- end partners-slide-item -->
 
-						<div class="partners-slider-mob-img">
-							<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
-						</div>
+						<!-- Partners slide item (1 of 2 partners in slide) -->
+						<div class="partners-slide-item">
+							<div class="partners-slider-mob-img">
+								<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+							</div>
+
+							<!-- Slide text -->
+							<div class="partners-slide-text"> 
+								<p>Медіапартнер проекту «Дача» —  РБК-Украина, незалежна українська інформаційна агенція.</p>
+								<p> www.rbc.ua</p>
+							</div>
+						</div><!-- end partners-slide-item -->
+					</div><!-- end one slide-->
+
+					<!-- ONE SLIDE(2 partners in 1 slide) -->
+					<div class="partners-slide">
+						<!-- Partners slide item (1 of 2 partners in slide) -->
+						<div class="partners-slide-item">
+							<div class="partners-slider-mob-img">
+								<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+							</div>
 							<!-- Slide text -->
 							<div class="partners-slide-text">
 								<p>
@@ -131,10 +162,10 @@ get_header();
 									<a class="partner-link" href="www.soleterre.org">www.soleterre.org</a>
 								</p>
 							</div>
-						</div><!-- end one slide-->
+						</div><!-- end partners-slide-item -->
 
-						<!-- One slide -->
-						<div class="partners-slide styler-slide"> 
+						<!-- Partners slide item (1 of 2 partners in slide) -->
+						<div class="partners-slide-item">
 							<div class="partners-slider-mob-img">
 								<img src="<?php echo get_stylesheet_directory_uri()?>/img/styler.jpg">
 							</div>
@@ -144,49 +175,10 @@ get_header();
 								<p>Медіапартнер проекту «Дача» —  РБК-Украина, незалежна українська інформаційна агенція.</p>
 								<p> www.rbc.ua</p>
 							</div>
-						</div><!-- end one slide-->
-
-						<!-- One slide -->
-						<div class="partners-slide golos-stolitsy-slide">
-							<div class="partners-slider-mob-img">
-								<img src="<?php echo get_stylesheet_directory_uri()?>/img/golos-stolitsy.jpg">
-							</div>
-
-							<!-- Slide text -->
-							<div class="partners-slide-text">
-								<p>Голос столиці –</p>
-								<p>інформаційна</p>
-								<p>радіостанція.</p>
-								<a class="partner-link" href="www.gs.fm">www.gs.fm</a>
-							</div>
-						</div><!-- end one slide-->
-
-						<!-- One slide -->
-						<div class="partners-slide"> 
-							<div class="partners-slider-mob-img">
-								<img src="<?php echo get_stylesheet_directory_uri()?>/img/test-logo1.png">
-							</div>
-
-							<!-- Slide text -->
-							<div class="partners-slide-text"> 
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aut consequuntur atque explicabo eos nesciunt! Aliquid aut consequuntur atque explicabo eos</p>
-								<a class="partner-link" href="www.rbc.ua">www.rbc.ua</a>
-							</div>
-						</div><!-- end one slide-->
-
-						<!-- One slide -->
-						<div class="partners-slide">
-							<div class="partners-slider-mob-img">
-								<img src="<?php echo get_stylesheet_directory_uri()?>/img/test-logo2.png">
-							</div>
-
-							<!-- Slide text -->
-							<div class="partners-slide-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam est necessitatibus debitis, provident vel aspernatur.</p>
-								<a class="partner-link" href="www.gs.fm">www.gs.fm</a>
-							</div>
-						</div><!-- end one slide-->	
+						</div><!-- end partners-slide-item -->
+					</div><!-- end one slide-->
 				</div><!-- end partners-slider-mob-->
+
 			</div><!-- end partners-->
 
 			<!-------------------------
