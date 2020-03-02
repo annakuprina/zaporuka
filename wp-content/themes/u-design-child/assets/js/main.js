@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
   // PARTNERS SLIDER DESKTOP
   $(".partners-slider").slick({
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     arrows: false,
     // autoplay: true
     autoplaySpeed: 10000
@@ -10,11 +10,10 @@ jQuery(document).ready(function($) {
 
   // PARTNERS SLIDER MOBILE
   $(".partners-slider-mob").slick({
-    dots: true,
-    vertical: true,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    verticalSwiping: true
+    arrows: false,
+    dots: true
   });
 
   // FRIENDS SLIDER (DESKTOP AND MOBILE)
@@ -196,8 +195,9 @@ jQuery(document).ready(function($) {
   $(".header-mob-top").click(function() {
     $(".header-mob-bottom").slideToggle();
     $(".header-mob-logo img").toggleClass("active");
-    $(".header-mob-top").toggleClass("active");
+    $("#header-mob").toggleClass("active");
     $(".hamburger").toggleClass("active");
+    $(".header-mob-top .close").toggleClass("active");
   });
   // $(window)
   //   .on("resize", function() {
