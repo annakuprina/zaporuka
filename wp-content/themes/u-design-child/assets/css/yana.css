@@ -957,11 +957,20 @@ li.one-tab-link:hover {
 .custom_post_info .right_info_block{
   display: flex;
   justify-content: space-between;
-  width: 30.3%;
+  width: 32%;
 }
 .custom_post_info .fa-facebook{
   color: #a9a9a9;
 }
 .text_under_post_info{
   padding-top: 40px;
+}
+
+.single_news_two_posts{
+  padding-left: 50px;
+}
+.single_news_two_posts a{
+  color: #ffffff;
+  font-family: "Raleway-Bold";
+  line-height: 26px;
 }
