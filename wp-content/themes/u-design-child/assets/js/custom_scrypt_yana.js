@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
     slidesToShow: 3,
     slidesToScroll: 3
   });
-  $(".wpb_image_grid_ul").slick({
+  $(".wpb_gallery_slides").slick({
     dots: true,
     arrows: true,
     slidesToShow: 1,
