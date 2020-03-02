@@ -160,15 +160,15 @@ if ($js('#table_list').length > 0) {
 
             ],
 
-            'sAjaxSource': ajaxurl+'?page=liqpay_list',
+            //'sAjaxSource': ajaxurl+'?page=liqpay_list',
 
-            /*'ajax':{
+            'ajax':{
 
                 'url': ajaxurl+'?action=get_liqpay_list_page',
 
                 "dataType": "json"
 
-            },*/
+            },
 
             "sServerMethod": "POST",
 
