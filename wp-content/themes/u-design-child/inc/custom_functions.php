@@ -877,12 +877,8 @@ function custom_social_block(){
             <p class="left-to-collect-text"><?php pll_e( 'Долучайтесь до БФ Запорука у соцмережах');?></p>
         </div><!-- end proj-timeline-info-left -->
         <div class="proj-timeline-info-right">
-            <a href="#" class="proj-timeline-help">
-                <span class="proj-timeline-help-text"><a href="<?php echo $facebook_link;?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
-            </a>
-            <a href="#" class="proj-timeline-share">
-                <span class="proj-timeline-share-text"<a href="<?php echo $instagram_link;?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
-            </a>
+            <a href="<?php echo $facebook_link;?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            <a href="<?php echo $instagram_link;?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
         </div><!-- end proj-timeline-info-right -->
     </div><!-- end proj-timeline-info -->
     <?php

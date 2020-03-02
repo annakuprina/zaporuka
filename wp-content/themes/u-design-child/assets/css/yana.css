@@ -989,3 +989,13 @@ li.one-tab-link:hover {
   min-width: 310px;
   height: 151px;
 }
+.news_social_info  .proj-timeline-info-left{
+  padding: 40px 10px 40px 30px;
+  width: 185px;
+}
+.news_social_info .left-to-collect-text{
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Raleway-Bold;
+  letter-spacing: 0.2px;
+}
