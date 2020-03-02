@@ -57,8 +57,6 @@ jQuery(document).ready(function($) {
     slidesToShow: 3,
     slidesToScroll: 3
   });
-
-
   $(document).on('click', '.pagination-block a', function(e) {
     e.preventDefault();
     var nth  = $(this).attr('data-cpta');
@@ -66,7 +64,6 @@ jQuery(document).ready(function($) {
     var prev = $(this).attr('data-prev');
     var post_type = $(this).attr('data-type');
     var limit = $(this).attr('data-limit');
-
     jQuery.ajax({
       url	:ajax_url,
       type	:'post',
@@ -87,7 +84,6 @@ jQuery(document).ready(function($) {
     var prev = $(this).attr('data-prev');
     var post_type = $(this).attr('data-type');
     var limit = $(this).attr('data-limit');
-
     jQuery.ajax({
       url	:ajax_url,
       type	:'post',
@@ -106,6 +102,7 @@ jQuery(document).ready(function($) {
   $(".media_slider_block .vc_pageable-slide-wrapper").slick({
     dots: true,
     arrows: true,
+    slide: 'li',
     slidesToShow: 1,
     slidesToScroll: 1
   });
