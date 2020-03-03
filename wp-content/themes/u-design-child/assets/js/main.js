@@ -140,13 +140,13 @@ jQuery(document).ready(function($) {
     itemSelector: ".documents-slide > img"
   });
 
-  $(".slide").slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1
-    //adaptiveHeight: true
-  });
+  // $(".slide").slick({
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 300,
+  //   slidesToShow: 1
+  //   //adaptiveHeight: true
+  // });
 
   /*TABS WITH SLIDERS. one project page*/
   $(".sliders-tabs-wrapper .one-tab-link").on("click", function() {
@@ -167,47 +167,42 @@ jQuery(document).ready(function($) {
     });
   });
 
-  /*home-page-section3 Owl carousel(adaptivity from 1140px to 768px).
-  This carousel is made using plugin "Post Slider Carousel & Custom Post Grids".
-  Horizontal  slider with 2 slides. Visible  from 1140px to 768px. 
-  For screen less then 768px owl slider from plugin is hidden,and vertical slick slider is shown.
-  And uses Owl carousel. There is no possibility to make carousel adaptive, using admin panel.
-  So on window resize we should destroy existing carousel and show 2 or 3 slides, depending on window size.*/
-
-  // $(window)
-  //   .on("resize", function() {
-  //     if ($(window).width() < 1140) {
-  //       $(".owl-carousel").owlCarousel("destroy");
-  //       $(".owl-carousel").owlCarousel({
-  //         items: 2,
-  //         nav: false
-  //       });
-
-  //       if ($(window).width() < 700) {
-  //         $(".owl-carousel").owlCarousel("destroy");
-  //         $(".owl-carousel").owlCarousel({
-  //           items: 3,
-  //           nav: false
-  //         });
-  //       }
-  //     } else {
-  //       $(".owl-carousel").owlCarousel("destroy");
-  //       $(".owl-carousel").owlCarousel({
-  //         items: 3,
-  //         nav: false
-  //       });
-  //     }
-  //   })
-  //   .resize();
-
-  //REWARDS SLIDER MOBILE(index page)
-  $(".rewards_slider_mob").slick({
+  //REWARDS SLIDER DESKTOP(index page)
+  $(".rewards-desktop").slick({
     dots: true,
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
+    verticalSwiping: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      }
+      // {
+      //   breakpoint: 650,
+      //   settings: {
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1,
+      //     infinite: true,
+      //     dots: true
+      //   }
+      // }
+    ]
+  });
+
+  //REWARDS SLIDER MOBILE(index page)
+  $(".rewards-slider-mob").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     verticalSwiping: true
-    // width: 250
   });
 
   $(".header-mob-lang-switcher").click(function() {
@@ -224,6 +219,7 @@ jQuery(document).ready(function($) {
     $(".hamburger").toggleClass("active");
     $(".header-mob-top .close").toggleClass("active");
   });
+
   // $(window)
   //   .on("resize", function() {
   //     var maxHeight = -1;
