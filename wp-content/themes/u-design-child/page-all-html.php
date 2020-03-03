@@ -1168,16 +1168,23 @@ get_header();
 
 	<!-- DONORS MOBILE -->
 	<div class="donors-mobile-slider">
-		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
-		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
-		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
-		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
-		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
-		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
-		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
-		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
-		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
-		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<div class="donors-one-slide">
+			<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+			<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+			<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		</div> 
+
+		<div class="donors-one-slide">
+			<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+			<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+			<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		</div> 
+
+		<div class="donors-one-slide">
+			<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+			<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+			<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		</div> 
 	</div><!--end donors-mobile-->
 </div><!--end donors-->
 
