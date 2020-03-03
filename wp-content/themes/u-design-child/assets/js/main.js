@@ -126,7 +126,7 @@ jQuery(document).ready(function($) {
     ]
   });
 
-  /*DONORS SLIDER MOBILE*/
+  /*DONORS SLIDER*/
   $(".donors-mobile-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,

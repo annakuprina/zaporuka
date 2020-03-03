@@ -125,6 +125,7 @@ h3 {
 /*-------
   HEADER
 ---------*/
+
 #menu-item-1185 .sub-menu span {
   font-size: 16px;
   font-weight: 100;
@@ -143,7 +144,7 @@ h3 {
   width: 100%;
   position: fixed;
   top: 0;
-  box-shadow: 1px 2px 7px 0px #dadada;
+  box-shadow: 1px 2px 7px 0px #afafaf;
 }
 
 #header-mob #main-top-menu {
@@ -420,6 +421,10 @@ h3 {
   color: #fff !important;
 }
 
+#navigation-menu ul.sf-menu > li > a > span {
+  padding: 10px 0 10px 19px;
+}
+
 @media screen and (max-width: 1200px) {
   #top-elements #main-menu ul.sf-menu .pll-parent-menu-item > a > span {
     padding-left: 30px;
@@ -444,6 +449,15 @@ h3 {
 
   #navigation-menu #menu-item-305 span {
     padding-left: 10px;
+  }
+
+  #custom-top-bar {
+    padding: 0 15px;
+  }
+
+  #top-elements {
+    padding: 0px 30px 0 15px;
+    max-width: unset;
   }
 }
 
@@ -1176,11 +1190,27 @@ h3 {
   }
 }
 
-/*DONORS DESKTOP*/
-.donors-wrapper {
+/*DONORS*/
+.donors-desktop {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.donors-desktop img {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.donors-one-slide {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donors-one-slide img {
+  margin-bottom: 40px;
 }
 
 /*BANNER FOR ONE PROJECT PAGE*/
@@ -3022,6 +3052,35 @@ footer .footer-mob a.designer-link {
   }
 }
 /*end home page section6*/
+
+/*-----------------
+  PROJECTS PAGE
+-----------------*/
+.project_banner_section1 {
+  padding: 65px 20px;
+}
+
+/* .project_banner_section1 .vc_row .wpb_column:nth-child(2) {
+  width: 0;
+}
+
+.project_banner_section1 .vc_row .wpb_column:nth-child(4),
+.project_banner_section1 .vc_row .wpb_column:nth-child(5) {
+  width: 195px;
+} */
+
+.project_banner_section1 .custom-container .left_margin_column {
+  margin-left: 0;
+}
+
+.vc_row.vc_row-o-equal-height > .vc_column_container {
+  overflow: hidden;
+}
+/* 
+.custom-container .content_column .wpb_text_column {
+  width: 195px;
+  min-width: 195px;
+} */
 
 /*---------------------------
   ONE PROJECT PAGE. SLIDERS
