@@ -817,3 +817,129 @@ function list_of_children() {
     $html = ob_get_clean();
     return $html;
 }
+
+
+class section_post_info_class extends WPBakeryShortCode {
+    // Element Init
+    function __construct() {
+        add_action( 'init', array( $this, 'section_post_info_mapping' ) );
+        add_shortcode( 'section_post_info', array( $this, 'section_post_info_html' ) );
+    }
+    // Element Mapping
+    public function section_post_info_mapping() {
+        vc_map( array(
+            "name" => esc_html__("Post info", "eq"),
+            "base" => "section_post_info",
+            'category' => __('Content', 'text-domain')
+        ));
+    }
+    // Element HTML
+    public function section_post_info_html( $atts ) {
+        WPBMap::addAllMappedShortcodes();
+        global $post;
+
+        $post_category = wp_get_post_categories( $post->ID, array('fields' => 'names') );
+        $post_date = time($post->post_date);
+        ob_start();
+        ?>
+        <div class="custom_post_info">
+            <div class="right_info_block">
+                <div class="post_category_class"><?php echo $post_category[0]; ?></div>
+                <div class="post_date_class"><?php echo date_i18n('d F Y', $post_date ); ?></div>
+            </div>
+            <div>
+                <div>
+                    <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
+                    <span class="one-project-socials">
+					    <i class="fa fa-facebook" aria-hidden="true"></i>
+				    </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <?php
+
+        $html = ob_get_clean();
+        return $html;
+    }
+}
+$section_post_info_class = new section_post_info_class;
+
+add_shortcode( 'custom_social_block_pro', 'custom_social_block' );
+function custom_social_block(){
+    $options = get_option('ThemeOptions');
+    $facebook_link = !empty($options['facebook_link']) ? $options['facebook_link'] : false;
+    $instagram_link = !empty($options['instagram_link']) ? $options['instagram_link'] : false;
+    ob_start();
+    ?>
+    <div class="proj-timeline-info news_social_info">
+        <div class="proj-timeline-info-left">
+            <p class="left-to-collect-text"><?php pll_e( 'Долучайтесь до БФ Запорука у соцмережах');?></p>
+        </div><!-- end proj-timeline-info-left -->
+        <div class="proj-timeline-info-right">
+            <a href="<?php echo $facebook_link;?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            <a href="<?php echo $instagram_link;?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+        </div><!-- end proj-timeline-info-right -->
+    </div><!-- end proj-timeline-info -->
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
+
+add_shortcode( 'post_photo_gallery_pro', 'shortcode_post_photo_gallery' );
+function shortcode_post_photo_gallery(){
+    $post = get_post();
+    $post_id = $post->ID;
+    $post_photos = get_field( "post_photos", $post_id );
+    if( wp_is_mobile() ){ echo 'true'; } else {echo 'false';}
+    ob_start();
+    ?>
+    <div class="post_photo_gallery">
+        <?php foreach ($post_photos as $item) { ?>
+            <div>
+                <img src="<?php echo $item["post_photo"]; ?>" alt="">
+            </div>
+        <?php } ?>
+    </div>
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
+add_shortcode( 'shortcode_donors_gallery', 'shortcode_donory_gallery' );
+function shortcode_donory_gallery(){
+    $donors_array = get_posts( array(
+        'numberposts' => -1,
+        'post_type'   => 'donors'
+    ));
+    $donors_array_by_2 = array_chunk($donors_array, 3, true);
+
+    ob_start();
+    ?>
+    <div class="donors">
+        <!-- DONORS DESKTOP -->
+        <div class="donors-desktop">
+            <?php for($i=0;$i<sizeof($donors_array);++$i){
+
+                $post_id = $donors_array[$i]->ID;
+                $thumbnail = get_the_post_thumbnail_url($post_id);
+                ?>
+                <img src="<?php echo $thumbnail; ?>">
+            <?php } ?>
+        </div>
+        <!-- DONORS MOBILE -->
+        <div class="donors-mobile-slider">
+            <?php foreach( $donors_array_by_2 as $post_wrapper ){ ?>
+                <div class="donors-one-slide">
+                    <?php foreach( $post_wrapper as $post ){ ?>
+                        <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
+                    <?php } ?>
+                </div>
+
+            <?php } ?>
+        </div>
+    </div>
+
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}

@@ -52,7 +52,8 @@ if (!function_exists('admin_custom_js')) {
             wp_enqueue_script('dataTables');
             wp_register_script('dataTables_yadcf', plugins_url('/js/jquery.dataTables.yadcf.js', __FILE__), array('jquery', 'dataTables'));
             wp_enqueue_script('dataTables_yadcf');
-            wp_register_script('dataTables_js', plugins_url('/js/datatable.js', __FILE__), array('jquery', 'dataTables'));
+            wp_register_script( 'dataTables_js',plugins_url('/js/datatable.js', __FILE__), array('jquery', 'dataTables'));
+            wp_localize_script( 'dataTables_js', 'ajax_params', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
             wp_enqueue_script('dataTables_js');
         }
         wp_register_script('liqpay_admin_script', plugins_url('/js/liqpay_admin.js', __FILE__), array('jquery'));
@@ -356,7 +357,7 @@ function get_liqpay_list_page()
     }
 
     $table_liqpay = $wpdb->prefix . 'liqpay';
-    $query = " SELECT SQL_CALC_FOUND_ROWS w.order_id id, w.xdate, w.transaction_id,w.status, w.err_code, w.summa, w.valuta,  w.sender_phone,  w.comments, w.email, w.ip
+    $query = " SELECT SQL_CALC_FOUND_ROWS w.order_id id, w.xdate, w.transaction_id,w.status, w.err_code, w.summa, w.valuta, w.sender_phone,   w.comments, w.email, w.ip
             FROM $table_liqpay as w ";
     $query .= " $sWhere ";
     $query .= " $sOrder ";
@@ -1156,6 +1157,7 @@ END IF;
     $table_downloadcodes = $wpdb->prefix . 'liqpay_downloadcodes';
     $table_uslugi = $wpdb->prefix . 'liqpay_uslugi';
     $table_skidki = $wpdb->prefix . 'liqpay_skidki';
+    $table_project_history = $wpdb->prefix . 'liqpay_project_history';
 
     $mirgate_ordre_id = "Update {$table_liqpay} set order_id = id where order_id is null;";
     $wpdb->query($mirgate_ordre_id);
@@ -1207,11 +1209,27 @@ CREATE TABLE IF NOT EXISTS `" . $table_skidki . "` (
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ";
+
+    $sql6 = "
+CREATE TABLE IF NOT EXISTS `" . $table_project_history . "` (
+`id` int(10) NOT NULL AUTO_INCREMENT,
+`project_id` VARCHAR(20) NULL DEFAULT NULL,
+`transaction_id` INT(11) NOT NULL,
+`date` DATETIME NOT NULL,
+`users_name` varchar(100) NOT NULL,
+`users_phone` varchar(100) NOT NULL,
+`users_email` varchar(100) NOT NULL,
+`summa` FLOAT NOT NULL,
+`type_operation` varchar(100) NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+";
     $wpdb->query($sql1);
     $wpdb->query($sql2);
     $wpdb->query($sql3);
     $wpdb->query($sql4);
     $wpdb->query($sql5);
+    $wpdb->query($sql6);
     //Значения по умолчанию для настроек магазина
     add_option('liqpay_shop_id', 'Не задано');
     add_option('liqpay_secret_key', 'Не задано');

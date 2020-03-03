@@ -947,14 +947,112 @@ li.one-tab-link:hover {
 }
 
 /********************************* Single article *********************************/
-.single_article_section1 {
+
+.single_article_section1.vc_custom_1582905650845 {
   background-position: unset !important;
+}
+.single_article_section1_wrapper {
+  max-width: 1140px;
+  margin: 0 auto !important;
 }
 .single_section1_text {
   color: white;
   font-size: 48px;
   line-height: 58px;
   font-family: "Raleway-Bold";
-  padding: 78px 0 78px 115px;
-  width: 69%;
+  padding: 78px 0;
+  width: 57%;
+}
+.single_section2 {
+  padding-top: 20px;
+}
+.custom_post_info {
+  display: flex;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d8d8d8;
+  color: #a5a5a5;
+  justify-content: space-between;
+}
+.custom_post_info .right_info_block {
+  display: flex;
+  justify-content: space-between;
+  width: 34%;
+}
+.custom_post_info .post_category_class {
+  text-transform: uppercase;
+}
+.custom_post_info .post_date_class {
+  text-transform: lowercase;
+}
+.custom_post_info .fa-facebook {
+  color: #a9a9a9;
+}
+.text_under_post_info {
+  padding-top: 40px;
+}
+
+.single_news_two_posts {
+  padding-left: 50px;
+}
+.single_news_two_posts a {
+  color: #ffffff !important;
+  font-family: "Raleway-Bold";
+  line-height: 26px;
+  font-size: 14px;
+  padding: 25px 0 24px 0;
+}
+.single_news_two_posts .vc_gitem-post-data-source-post_title a {
+  font-size: 16px;
+}
+.proj-timeline-info.news_social_info {
+  min-width: 310px;
+  height: 151px;
+}
+.news_social_info .proj-timeline-info-left {
+  padding: 40px 10px 40px 30px;
+  width: 185px;
+}
+.news_social_info .left-to-collect-text {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Raleway-Bold;
+  letter-spacing: 0.2px;
+}
+.news_social_info .proj-timeline-info-right {
+  width: calc(100% - 185px);
+  text-align: center;
+}
+
+.news_social_info .proj-timeline-info-right a span {
+  padding-left: 10px;
+}
+.news_social_info .proj-timeline-info-right a:last-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 25px 0 20px 0;
+}
+.news_social_info .fa-facebook,
+.news_social_info .fa-instagram {
+  padding-top: 3px;
+}
+.single_section3 {
+  padding-top: 80px;
+}
+.single_section3 .h2-header-line {
+  margin-bottom: 40px;
+}
+.single_section4 h2-header-line {
+  margin-bottom: 60px;
+}
+.media_slider_block .slick-list {
+  padding-bottom: 50px;
+}
+.single_section4 {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.single_section4 .paragraph1 {
+  padding-bottom: 10px;
+}
+.single_section4 .paragraph5 {
+  padding-top: 30px;
 }
