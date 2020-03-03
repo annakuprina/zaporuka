@@ -943,3 +943,43 @@ function shortcode_donory_gallery(){
     $html = ob_get_clean();
     return $html;
 }
+add_shortcode( 'shortcode_awards_slider', 'shortcode_awards_slider' );
+function shortcode_awards_slider(){
+    $awards_array = get_posts( array(
+        'numberposts' => -1,
+        'post_type'   => 'list_of_awards'
+    ));
+    $awards_array_by_2 = array_chunk($awards_array, 3, true);
+
+    ob_start();
+    ?>
+    <div class="donors">
+
+        <!-- DONORS MOBILE -->
+        <div class="donors-mobile-slider">
+            <?php foreach( $awards_array_by_2 as $post_wrapper ){ ?>
+                <div class="donors-one-slide">
+                    <?php foreach( $post_wrapper as $post ){ ?>
+
+                    <?php } ?>
+                </div>
+
+            <?php } ?>
+        </div>
+    </div>
+    <!-- REWARDS SLIDER MOBILE -->
+    <div class="rewards_slider_mob">
+        <?php foreach( $awards_array_by_2 as $post_wrapper ){ ?>
+            <div class="rewards-one-slide">
+                <?php foreach( $post_wrapper as $post ){ ?>
+                    <p class="rewards-one-slide-item"><?php echo $post->post_descriprion?></p>
+                <?php } ?>
+
+            </div>
+        <?php } ?>
+
+    </div><!--end rewards_slider_mob-->
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
