@@ -891,7 +891,7 @@ function shortcode_post_photo_gallery(){
     $post = get_post();
     $post_id = $post->ID;
     $post_photos = get_field( "post_photos", $post_id );
-    if( wp_is_mobile() ){ echo 'true'; } else {echo 'false';}
+
     ob_start();
     ?>
     <div class="post_photo_gallery">
