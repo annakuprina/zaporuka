@@ -1030,6 +1030,9 @@ li.one-tab-link:hover {
 .single_section4 h2-header-line{
   margin-bottom: 60px;
 }
+.media_slider_block{
+  padding-bottom: 1px;
+}
 .media_slider_block .slick-list{
   padding-bottom: 50px;
 }
