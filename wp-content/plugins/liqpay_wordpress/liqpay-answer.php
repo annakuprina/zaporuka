@@ -59,8 +59,6 @@ if (isset($_POST['data'])) {
     $sender_phone = $obj->{'sender_phone'};
     $ip_adress = $obj->{'ip'};
     $xdate = date("Y.m.d H:i:s");
-    $user_phone = $obj->{'user_phone'};
-    $liqpay_post_id =  $obj->{'liqpay_post_id'};
 
     global $wpdb, $table_prefix;
 
@@ -78,6 +76,10 @@ if (isset($_POST['data'])) {
         $current_user = wp_get_current_user();
     }
     $to = get_option($order_id_md5 . '-liqpay_mail_buyer');
+
+    $user_phone = get_option($order_id_md5 . '-user_phoner');
+    $liqpay_post_id =  get_option($order_id_md5 . '-liqpay_post_id');
+
     if (!$to)
         $to = $current_user->user_email;
 
@@ -171,7 +173,7 @@ if (isset($_POST['data'])) {
 
         if( $liqpay_post_id != 1){
             $current_value = get_field( "total-collected", $liqpay_post_id );
-            $new_value = $current_value + $liqpay_post_id;
+            $new_value = $current_value + $summa;
             update_field('total-collected', $new_value , $liqpay_post_id);
         }
 
