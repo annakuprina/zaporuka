@@ -937,7 +937,8 @@ li.one-tab-link:hover {
 .single_article_section1.vc_custom_1582905650845 {
   background-position: unset !important;
 }
-.single_article_section1_wrapper{
+.single_article_section1_wrapper,
+.aboutus_section1_wrapper {
   max-width: 1140px;
   margin: 0 auto!important;
 }
