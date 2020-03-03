@@ -957,7 +957,7 @@ function shortcode_awards_slider(){
         <?php foreach( $awards_array_by_2 as $post_wrapper ){ ?>
             <div class="rewards-one-slide">
                 <?php foreach( $post_wrapper as $post ){ ?>
-                    <p class="rewards-one-slide-item"><?php echo $post->post_descriprion?></p>
+                    <p class="rewards-one-slide-item"><?php echo $post->post_content; ?></p>
                 <?php } ?>
 
             </div>
