@@ -1215,6 +1215,9 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+
+}
+.product .related .woocommerce-loop-product__link{
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
 .shop-custom-wrapper .product:hover,
