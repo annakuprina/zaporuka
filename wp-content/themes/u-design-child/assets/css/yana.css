@@ -1046,3 +1046,21 @@ li.one-tab-link:hover {
 .single_section4 .paragraph5{
   padding-top: 30px;
 }
+.media_slider_block .slick-prev {
+  left: 20px !important;
+}
+.media_slider_block .slick-next {
+  right: 20px !important;
+}
+.media_slider_block .slick-next:before {
+  content: url(/wp-content/themes/u-design-child/img/slick-next.svg);
+  color: transparent;
+}
+.media_slider_block .slick-prev:before {
+  content: url(/wp-content/themes/u-design-child/img/slick-prev.svg);
+  color: transparent;
+}
+.media_slider_block .slick-next:hover:before,
+.media_slider_block .slick-prev:hover:before {
+  opacity: 1;
+}
