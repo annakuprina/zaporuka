@@ -885,3 +885,21 @@ function custom_social_block(){
     $html = ob_get_clean();
     return $html;
 }
+
+add_shortcode( 'post_photo_gallery_pro', 'shortcode_post_photo_gallery' );
+function shortcode_post_photo_gallery(){
+    $post = get_post();
+    $post_id = $post->ID;
+    $post_photos = get_field( "post_photos", $post_id );
+    ob_start();
+    ?>
+    <div>
+        <?php foreach ($post_photos as $item) { ?>
+            <img src="<?php echo $item["post_photo"]; ?>" alt="">
+        <?php } ?>
+    </div>
+
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
