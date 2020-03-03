@@ -142,7 +142,7 @@ if ($js('#table_list').length > 0) {
 
                 { "tooltip":"Tooltip text", title: "Валюта"},
 
-                { "tooltip":"Tooltip text", title: "Телефон" },
+                { "tooltip":"Tooltip text", title: "Телефон/ФИО" },
 
                 { "tooltip":"Tooltip text", title: "Коментарий" },
 
