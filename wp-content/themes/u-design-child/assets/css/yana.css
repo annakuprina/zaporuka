@@ -1044,14 +1044,10 @@ li.one-tab-link:hover {
 .single_section4 h2-header-line {
   margin-bottom: 60px;
 }
-<<<<<<< HEAD
-.media_slider_block .slick-list {
-=======
-.media_slider_block{
+.media_slider_block {
   padding-bottom: 1px;
 }
-.media_slider_block .slick-list{
->>>>>>> 789e93931f37f966e02e21f819791b7539b69cea
+.media_slider_block .slick-list {
   padding-bottom: 50px;
 }
 .single_section4 {
@@ -1074,7 +1070,7 @@ li.one-tab-link:hover {
 }
 .media_slider_block .slick-prev:before,
 .media_slider_block .slick-next:before {
-  opacity: .5;
+  opacity: 0.5;
 }
 .media_slider_block .slick-next:before {
   content: url(/wp-content/themes/u-design-child/img/slick-next.svg);
