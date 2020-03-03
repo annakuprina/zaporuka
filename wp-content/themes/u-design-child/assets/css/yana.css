@@ -1051,10 +1051,11 @@ li.one-tab-link:hover {
   z-index: 99999;
 }
 .media_slider_block .slick-next {
-  right: 20px !important;
+  right: 30px !important;
   z-index: 99999;
 }
-.media_slider_block .slick-prev:before, .slick-next:before {
+.media_slider_block .slick-prev:before,
+.media_slider_block .slick-next:before {
   opacity: .5;
 }
 .media_slider_block .slick-next:before {
