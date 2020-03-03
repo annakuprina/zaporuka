@@ -1047,7 +1047,7 @@ li.one-tab-link:hover {
   padding-top: 30px;
 }
 .media_slider_block .slick-prev {
-  left: 20px !important;
+  left: 30px !important;
   z-index: 99999;
 }
 .media_slider_block .slick-next {
