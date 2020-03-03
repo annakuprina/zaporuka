@@ -919,7 +919,6 @@ function shortcode_donory_gallery(){
         <!-- DONORS DESKTOP -->
         <div class="donors-desktop">
             <?php for($i=0;$i<sizeof($donors_array);++$i){
-
                 $post_id = $donors_array[$i]->ID;
                 $thumbnail = get_the_post_thumbnail_url($post_id);
                 ?>
@@ -952,18 +951,25 @@ function shortcode_awards_slider(){
     $awards_array_by_2 = array_chunk($awards_array, 3, true);
     ob_start();
     ?>
-    <!-- REWARDS SLIDER MOBILE -->
-    <div class="rewards_slider_mob">
-        <?php foreach( $awards_array_by_2 as $post_wrapper ){ ?>
-            <div class="rewards-one-slide">
-                <?php foreach( $post_wrapper as $post ){ ?>
-                    <p class="rewards-one-slide-item"><?php echo $post->post_content; ?></p>
-                <?php } ?>
+    <div class="rewards">
+        <!-- DONORS DESKTOP -->
+        <div class="rewards-desktop">
+            <?php for($i=0;$i<sizeof($awards_array);++$i){ ?>
+                <p class="rewards-one-item"><?php echo $awards_array[$i]->post_content; ?></p>
+            <?php } ?>
+        </div>
+        <!-- REWARDS SLIDER MOBILE -->
+        <div class="rewards-slider-mob">
+            <?php foreach( $awards_array_by_2 as $post_wrapper ){ ?>
+                <div class="rewards-one-slide">
+                    <?php foreach( $post_wrapper as $post ){ ?>
+                        <p class="rewards-one-slide-item"><?php echo $post->post_content; ?></p>
+                    <?php } ?>
+                </div>
+            <?php } ?>
 
-            </div>
-        <?php } ?>
-
-    </div><!--end rewards_slider_mob-->
+        </div><!--end rewards_slider_mob-->
+    </div>
     <?php
     $html = ob_get_clean();
     return $html;
