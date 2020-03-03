@@ -24,7 +24,6 @@ function insertdb($order_id1, $xdate, $transaction_id1, $status1, $summa1, $data
 {
     global $wpdb, $table_prefix;
     $table_liqpay = $table_prefix . 'liqpay';
-    if (!$sender_phone1) $sender_phone1 = '0';
     if (!isset($wpdb))
         require_once('../../../wp-config.php');
     $sql1 = "Select status from {$table_liqpay} where order_id = '{$order_id1}' and status = 'success'";
@@ -77,13 +76,19 @@ if (isset($_POST['data'])) {
         $current_user = wp_get_current_user();
     }
     $to = get_option($order_id_md5 . '-liqpay_mail_buyer');
+
+    $user_phone = get_option($order_id_md5 . '-user_phoner');
+    $liqpay_post_id =  get_option($order_id_md5 . '-liqpay_post_id');
+
     if (!$to)
         $to = $current_user->user_email;
+
 
     if (($current_user->user_firstname) || ($current_user->user_lastname) || ($current_user->user_login))
         $fio = $current_user->user_firstname . " " . $current_user->user_lastname . " " . $current_user->user_login;
     $new_code = 1;
-    insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $sender_phone, 0, $valuta, $to, $ip_adress);
+    
+    insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $user_phone, 0, $valuta, $to, $ip_adress);
 
     if ($testmode)
         $subject = "Отчет по оплате (TEST) ";
@@ -165,6 +170,12 @@ if (isset($_POST['data'])) {
         else
             $message = $text;
         $mail = get_option('liqpay_mail');
+
+        if( $liqpay_post_id != 1){
+            $current_value = get_field( "total-collected", $liqpay_post_id );
+            $new_value = $current_value + $summa;
+            update_field('total-collected', $new_value , $liqpay_post_id);
+        }
 
 /////////////////////////////////////////////////////////////////////////////
         global $code, $product_id;
