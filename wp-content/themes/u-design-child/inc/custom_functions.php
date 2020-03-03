@@ -891,12 +891,52 @@ function shortcode_post_photo_gallery(){
     $post = get_post();
     $post_id = $post->ID;
     $post_photos = get_field( "post_photos", $post_id );
+    if( wp_is_mobile() ){ echo 'true'; } else {echo 'false';}
     ob_start();
     ?>
-    <div>
+    <div class="post_photo_gallery">
         <?php foreach ($post_photos as $item) { ?>
-            <img src="<?php echo $item["post_photo"]; ?>" alt="">
+            <div>
+                <img src="<?php echo $item["post_photo"]; ?>" alt="">
+            </div>
         <?php } ?>
+    </div>
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
+add_shortcode( 'shortcode_donors_gallery', 'shortcode_donory_gallery' );
+function shortcode_donory_gallery(){
+    $donors_array = get_posts( array(
+        'numberposts' => -1,
+        'post_type'   => 'donors'
+    ));
+    $donors_array_by_2 = array_chunk($donors_array, 3, true);
+
+    ob_start();
+    ?>
+    <div class="donors">
+        <!-- DONORS DESKTOP -->
+        <div class="donors-desktop">
+            <?php for($i=0;$i<sizeof($donors_array);++$i){
+
+                $post_id = $donors_array[$i]->ID;
+                $thumbnail = get_the_post_thumbnail_url($post_id);
+                ?>
+                <img src="<?php echo $thumbnail; ?>">
+            <?php } ?>
+        </div>
+        <!-- DONORS MOBILE -->
+        <div class="donors-mobile-slider">
+            <?php foreach( $donors_array_by_2 as $post_wrapper ){ ?>
+                <div class="donors-one-slide">
+                    <?php foreach( $post_wrapper as $post ){ ?>
+                        <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
+                    <?php } ?>
+                </div>
+
+            <?php } ?>
+        </div>
     </div>
 
     <?php
