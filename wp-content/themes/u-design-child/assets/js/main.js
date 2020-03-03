@@ -174,29 +174,36 @@ jQuery(document).ready(function($) {
   And uses Owl carousel. There is no possibility to make carousel adaptive, using admin panel.
   So on window resize we should destroy existing carousel and show 2 or 3 slides, depending on window size.*/
 
-  $(window)
-    .on("resize", function() {
-      if ($(window).width() < 1140) {
-        $(".owl-carousel").owlCarousel("destroy");
-        $(".owl-carousel").owlCarousel({
-          items: 2,
-          nav: false
-        });
-      } else {
-        $(".owl-carousel").owlCarousel("destroy");
-        $(".owl-carousel").owlCarousel({
-          items: 3,
-          nav: false
-        });
-      }
-    })
-    .resize();
+  // $(window)
+  //   .on("resize", function() {
+  //     if ($(window).width() < 1140) {
+  //       $(".owl-carousel").owlCarousel("destroy");
+  //       $(".owl-carousel").owlCarousel({
+  //         items: 2,
+  //         nav: false
+  //       });
 
-  //home-page-section3 Slick carousel(Mobile version for screens less then 768px).
-  $(".rewards-slider").slick({
+  //       if ($(window).width() < 700) {
+  //         $(".owl-carousel").owlCarousel("destroy");
+  //         $(".owl-carousel").owlCarousel({
+  //           items: 3,
+  //           nav: false
+  //         });
+  //       }
+  //     } else {
+  //       $(".owl-carousel").owlCarousel("destroy");
+  //       $(".owl-carousel").owlCarousel({
+  //         items: 3,
+  //         nav: false
+  //       });
+  //     }
+  //   })
+  //   .resize();
+
+  //REWARDS SLIDER MOBILE(index page)
+  $(".rewards_slider_mob").slick({
     dots: true,
     arrows: false,
-    vertical: true,
     slidesToShow: 3,
     slidesToScroll: 3,
     verticalSwiping: true

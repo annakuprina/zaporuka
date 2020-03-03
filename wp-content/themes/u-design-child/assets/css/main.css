@@ -692,7 +692,7 @@ h3 {
   max-width: 435px;
 }
 /* Media for one Project block(home page) */
-@media screen and (max-width: 1300px) {
+/* @media screen and (max-width: 1300px) {
   .one-project {
     flex-direction: column;
     max-height: initial;
@@ -710,12 +710,7 @@ h3 {
     display: flex;
     justify-content: center;
   }
-
-  /* #main-content,
-  #sidebar {
-    width: initial;
-  } */
-}
+} */
 /* Media for one Project block(home page) */
 @media screen and (max-width: 500px) {
   .one-project {
@@ -860,6 +855,10 @@ h3 {
   margin-right: 17px;
 }
 
+.partners-slider-mob .partners-slider-mob-img img {
+  width: 100%;
+}
+
 .partners-slider-mob .partners-slide-text {
   line-height: 23px;
   margin-top: -4px;
@@ -955,7 +954,7 @@ h3 {
 }
 
 .friends-title {
-  margin-bottom: 34px;
+  margin-bottom: 16px;
 }
 
 .friends-slide-row {
@@ -976,7 +975,7 @@ h3 {
 
 .friends-slider .slick-dots {
   position: absolute;
-  bottom: -64px;
+  bottom: -56px;
   left: -2px;
 }
 
@@ -1010,7 +1009,7 @@ h3 {
 
   .friends-slider .slick-dots {
     position: absolute;
-    bottom: -44px;
+    bottom: -56px;
   }
 }
 
@@ -1117,11 +1116,7 @@ h3 {
   }
   .friends-wrapper {
     width: 50%;
-  }
-
-  /* Change position of Friends slider dots */
-  .friends-slider .slick-dots {
-    bottom: -35px;
+    padding-bottom: 50px;
   }
 
   /* Change position of Volunteers slider dots */
@@ -1194,13 +1189,17 @@ h3 {
 .donors-desktop {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 30px;
 }
 
-.donors-desktop img {
-  margin-right: 30px;
-  margin-bottom: 30px;
+.donors-desktop .donors-img-wrapper {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .donors-one-slide {
@@ -1209,8 +1208,8 @@ h3 {
   align-items: center;
 }
 
-.donors-one-slide img {
-  margin-bottom: 40px;
+.donors-one-slide img:not(:last-child) {
+  margin-bottom: 45px;
 }
 
 /*BANNER FOR ONE PROJECT PAGE*/
@@ -1304,14 +1303,24 @@ h3 {
   padding-left: 12px;
 }
 
+.donors-mobile-slider {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .one-project-banner {
     justify-content: center;
     padding-left: 0;
   }
+
   .one-project-banner .one-project-banner-inner {
     margin-left: 0;
     margin: auto;
+  }
+
+  .donors-desktop .donors-img-wrapper {
+    width: 33%;
+    margin-bottom: 50px;
   }
 }
 
@@ -1349,6 +1358,16 @@ h3 {
 
   .one-project-banner .one-project-title {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .donors-desktop {
+    display: none;
+  }
+
+  .donors-mobile-slider {
+    display: block;
   }
 }
 
