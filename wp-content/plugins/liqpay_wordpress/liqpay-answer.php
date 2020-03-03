@@ -31,7 +31,7 @@ function insertdb($order_id1, $xdate, $transaction_id1, $status1, $summa1, $data
     if (is_null($res)) {
         $sql1 = "insert into {$table_liqpay} (`order_id`,`xdate`,`transaction_id`,`status`,`err_code`,`summa`,`valuta`,`sender_first_name`,`sender_phone`,`comments`,`email`,`ip`) 
              values ('" . $order_id1 . "','" . $xdate . "'," . $transaction_id1 . ",'" . $status1 . "','" . $code1 . "','" . $summa1 . "','" . $valuta1 . "','" . $sender_first_name1 . "','" . $sender_phone1 . "','" . $datas1 . "','" . $email1 . "','" . $ip1 . "') 
-             on duplicate key update order_id=VALUES(order_id),xdate=VALUES(xdate),transaction_id=VALUES(transaction_id),status=VALUES(status),err_code=VALUES(err_code),summa=VALUES(summa),valuta=VALUES(valuta),sender_phone=VALUES(sender_phone),comments=VALUES(comments),email=VALUES(email),ip=VALUES(ip);";
+             on duplicate key update order_id=VALUES(order_id),xdate=VALUES(xdate),transaction_id=VALUES(transaction_id),status=VALUES(status),err_code=VALUES(err_code),summa=VALUES(summa),valuta=VALUES(valuta),sender_first_name=VALUES(sender_first_name),sender_phone=VALUES(sender_phone),comments=VALUES(comments),email=VALUES(email),ip=VALUES(ip);";
         $wpdb->query($sql1);
     }else{
         die;
