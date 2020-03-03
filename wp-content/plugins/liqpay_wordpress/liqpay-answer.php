@@ -20,7 +20,7 @@ if (isset($_REQUEST["st"]) && $_REQUEST["st"]) {
 }
 
 
-function insertdb($order_id1, $xdate, $transaction_id1, $status1, $summa1, $datas1, $sender_phone1, $code1, $valuta1, $email1, $ip1)
+function insertdb($order_id1, $xdate, $transaction_id1, $status1, $summa1, $datas1,$sender_first_name1, $sender_phone1, $code1, $valuta1, $email1, $ip1)
 {
     global $wpdb, $table_prefix;
     $table_liqpay = $table_prefix . 'liqpay';
@@ -29,8 +29,8 @@ function insertdb($order_id1, $xdate, $transaction_id1, $status1, $summa1, $data
     $sql1 = "Select status from {$table_liqpay} where order_id = '{$order_id1}' and status = 'success'";
     $res = $wpdb->get_row($sql1);
     if (is_null($res)) {
-        $sql1 = "insert into {$table_liqpay} (`order_id`,`xdate`,`transaction_id`,`status`,`err_code`,`summa`,`valuta`,`sender_phone`,`comments`,`email`,`ip`) 
-             values ('" . $order_id1 . "','" . $xdate . "'," . $transaction_id1 . ",'" . $status1 . "','" . $code1 . "','" . $summa1 . "','" . $valuta1 . "','" . $sender_phone1 . "','" . $datas1 . "','" . $email1 . "','" . $ip1 . "') 
+        $sql1 = "insert into {$table_liqpay} (`order_id`,`xdate`,`transaction_id`,`status`,`err_code`,`summa`,`valuta`,`sender_first_name`,`sender_phone`,`comments`,`email`,`ip`) 
+             values ('" . $order_id1 . "','" . $xdate . "'," . $transaction_id1 . ",'" . $status1 . "','" . $code1 . "','" . $summa1 . "','" . $valuta1 . "','" . $sender_first_name1 . "','" . $sender_phone1 . "','" . $datas1 . "','" . $email1 . "','" . $ip1 . "') 
              on duplicate key update order_id=VALUES(order_id),xdate=VALUES(xdate),transaction_id=VALUES(transaction_id),status=VALUES(status),err_code=VALUES(err_code),summa=VALUES(summa),valuta=VALUES(valuta),sender_phone=VALUES(sender_phone),comments=VALUES(comments),email=VALUES(email),ip=VALUES(ip);";
         $wpdb->query($sql1);
     }else{
@@ -59,6 +59,7 @@ if (isset($_POST['data'])) {
     $sender_phone = $obj->{'sender_phone'};
     $ip_adress = $obj->{'ip'};
     $xdate = date("Y.m.d H:i:s");
+    $sender_first_name = $obj->{'sender_first_name'};
 
     global $wpdb, $table_prefix;
 
@@ -88,7 +89,7 @@ if (isset($_POST['data'])) {
         $fio = $current_user->user_firstname . " " . $current_user->user_lastname . " " . $current_user->user_login;
     $new_code = 1;
     
-    insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $user_phone, 0, $valuta, $to, $ip_adress);
+    insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas,$sender_first_name, $user_phone, 0, $valuta, $to, $ip_adress);
 
     if ($testmode)
         $subject = "Отчет по оплате (TEST) ";
