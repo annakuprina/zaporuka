@@ -959,7 +959,7 @@ function shortcode_awards_slider(){
             <?php } ?>
         </div>
         <!-- REWARDS SLIDER MOBILE -->
-        <div class="rewards_slider_mob">
+        <div class="rewards-slider-mob">
             <?php foreach( $awards_array_by_2 as $post_wrapper ){ ?>
                 <div class="rewards-one-slide">
                     <?php foreach( $post_wrapper as $post ){ ?>
