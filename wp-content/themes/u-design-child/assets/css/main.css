@@ -400,7 +400,7 @@ h3 {
   font-family: "Proxima-Nova-Light";
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 47px;
   line-height: 13px;
 }
@@ -481,6 +481,10 @@ h3 {
   #sendSmsModalfromHeader .modal-dialog {
     max-width: calc(100% - 40px);
     padding: 30px;
+  }
+
+  #header-mob .header-mob-bottom-links {
+    font-size: 10px;
   }
 }
 /*-----end header-------*/
@@ -1170,6 +1174,13 @@ h3 {
   .volunteers-slider-mob .slick-slide {
     margin-bottom: 5px;
   }
+}
+
+/*DONORS DESKTOP*/
+.donors-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /*BANNER FOR ONE PROJECT PAGE*/
@@ -2525,6 +2536,15 @@ footer .footer-mob a.designer-link {
 
   .vc_custom_1579507340150 .help-form-amount-email {
     padding-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  #home-page-content .home-first-post-image {
+    max-height: 720px;
+  }
+  #home-page-content .vc_custom_1419334531994 {
+    padding-top: 60px;
   }
 }
 
