@@ -47,15 +47,20 @@ function insert_history($project_id2, $transaction_id2, $date2, $users_name2, $u
         require_once('../../../wp-config.php');
   
     $sql1 = "Select status from {$table_liqpay} where order_id = '{$project_id}'";
+
+    var_dump($sql1);
+
     $res = $wpdb->get_row($sql1);
     if (is_null($res)) {
         $sql1 = "insert into {$table_liqpay} (`project_id`,`transaction_id`,`date`,`users_name`,`users_phone`,`users_email`,`summa`,`type_operation`) values ('" . $project_id . "','" . $transaction_id2 . "'," . $date2 . ",'" . $users_name2 . "','" . $users_phone2 . "','" . $users_email2 . "','" . $summa2 . "','" . $type_operation2 . "')
              on duplicate key update project_id=VALUES(project_id),transaction_id=VALUES(transaction_id),date=VALUES(date),users_name=VALUES(users_name),users_phone=VALUES(users_phone),users_email=VALUES(users_email),summa=VALUES(summa),type_operation=VALUES(type_operation);";
         $wpdb->query($sql1);
+
+        var_dump($wpdb->query($sql1));
     }else{
         die;
     }  
-
+    die();
 }
 
 if (isset($_POST['data'])) {
