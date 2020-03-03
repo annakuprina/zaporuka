@@ -134,7 +134,7 @@ if ($_POST['phone'] !== "") {
 else{
 	global $woocommerce;
 	$order = new WC_Order($liq_order_id);
-	update_option($liq_order_id.'-user_phoner',$order->get_billing_email());
+	update_option($liq_order_id.'-user_phoner',$order->get_billing_phone());
 }
 if(!isset($_POST['liqpay_post_id'])){
     update_option($liq_order_id.'-liqpay_post_id',1);
@@ -204,7 +204,7 @@ if (isset($_POST['liqpay_product_id']))
 
 update_option($liq_order_id.'-liqpay_product_id',$liqpay_product_id);
 $plata = str_replace(',','.',$plata);
-$description = "   " . $plata;
+$description = $plata;
 
 $sender_first_name = $_POST['fio']; 
 

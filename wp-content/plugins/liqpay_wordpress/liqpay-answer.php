@@ -39,6 +39,19 @@ function insertdb($order_id1, $xdate, $transaction_id1, $status1, $summa1, $data
 
 }
 
+function insert_history($project_id, $transaction_id, $date, $users_name, $users_phone, $users_email, $summa, $type_operation)
+{
+    global $wpdb, $table_prefix;
+    $table_liqpay = $table_prefix . 'liqpay_project_history';
+    if (!isset($wpdb))
+        require_once('../../../wp-config.php');
+  
+    $sql1 = "insert into {$table_liqpay} (`project_id`,`transaction_id`,`date`,`users_name`,`users_phone`,`users_email`,`summa`,`type_operation`) values ('" . $project_id . "','" . $transaction_id . "'," . $date . ",'" . $users_name . "','" . $users_phone . "','" . $users_email . "','" . $summa . "','" . $type_operation . "')";
+    $wpdb->query($sql1);
+  
+
+}
+
 if (isset($_POST['data'])) {
     $json = base64_decode($_POST['data']);
     $obj = json_decode($json);
@@ -81,15 +94,23 @@ if (isset($_POST['data'])) {
     $user_phone = get_option($order_id_md5 . '-user_phoner');
     $liqpay_post_id =  get_option($order_id_md5 . '-liqpay_post_id');
 
+
+
     if (!$to)
         $to = $current_user->user_email;
 
 
-    if (($current_user->user_firstname) || ($current_user->user_lastname) || ($current_user->user_login))
+    if (($current_user->user_firstname) || ($current_user->user_lastname) || ($current_user->user_login)){
         $fio = $current_user->user_firstname . " " . $current_user->user_lastname . " " . $current_user->user_login;
+    }
+    else{
+        $fio = $sender_first_name;
+    }
+
+    $user_phone_fio = $user_phone . ' ' . $fio;
     $new_code = 1;
     
-    insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $user_phone, 0, $valuta, $to, $ip_adress);
+    insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $user_phone_fio, 0, $valuta, $to, $ip_adress);
 
     if ($testmode)
         $subject = "Отчет по оплате (TEST) ";
@@ -118,6 +139,7 @@ if (isset($_POST['data'])) {
     }
 ////////////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     if ($status == "failure") {
+
         $status = "платеж отклонен";
         $text = "Извините но Ваш платеж не прошел...\n";
         $text .= "\n Дата/время  " . $xdate;
@@ -176,7 +198,9 @@ if (isset($_POST['data'])) {
             $current_value = get_field( "total-collected", $liqpay_post_id );
             $new_value = $current_value + $summa;
             update_field('total-collected', $new_value , $liqpay_post_id);
+            insert_history($liqpay_post_id, $transaction_id, $xdate, $sender_first_name, $user_phone, $to, $summa, 'зачислено');
         }
+
 
 /////////////////////////////////////////////////////////////////////////////
         global $code, $product_id;
