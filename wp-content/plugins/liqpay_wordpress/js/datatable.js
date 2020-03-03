@@ -142,8 +142,6 @@ if ($js('#table_list').length > 0) {
 
                 { "tooltip":"Tooltip text", title: "Валюта"},
 
-                { "tooltip":"Tooltip text", title: "Плательщик" },
-
                 { "tooltip":"Tooltip text", title: "Телефон" },
 
                 { "tooltip":"Tooltip text", title: "Коментарий" },
@@ -198,10 +196,6 @@ if ($js('#table_list').length > 0) {
 
                 date_format: 'mm/dd/yyyy'
 
-
-
-
-
             },
 
             {
@@ -211,9 +205,6 @@ if ($js('#table_list').length > 0) {
                 filter_type: "text",
 
                 filter_delay: 500
-
-
-
 
 
             },
@@ -295,18 +286,7 @@ if ($js('#table_list').length > 0) {
 
                 filter_delay: 500
 
-            },
-
-            {
-
-                column_number: 11,
-
-                filter_type: "text",
-
-                filter_delay: 500
-
             }
-
 
 
         ]);
