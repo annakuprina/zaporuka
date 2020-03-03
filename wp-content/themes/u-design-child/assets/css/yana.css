@@ -708,10 +708,12 @@ h6,
   display: flex;
   justify-content: center;
 }
-.pagination-block{
+.pagination-block,
+.pagination-children{
   position: relative;
 }
-.pagination-block a {
+.pagination-block a,
+.pagination-children a {
   padding: 0 5px;
   opacity: 0.3;
   color: #333333;
@@ -719,20 +721,24 @@ h6,
   font-weight: 400;
   font-family: "Proxima-Nova-Regular";
 }
-.pagination-block a.active_review {
+.pagination-block a.active_review,
+.pagination-children a.active_review {
   opacity: 1;
   color: #e78b48;
   font-weight: 700;
 }
-.pagination-block .step-arrow {
+.pagination-block .step-arrow,
+.pagination-children .step-arrow {
   width: 17px;
   height: 17px;
   padding: 0;
 }
-.pagination-block .step-next{
+.pagination-block .step-next,
+.pagination-children .step-next{
   padding-left: 25px;
 }
-.pagination-block .step-prev{
+.pagination-block .step-prev,
+.pagination-children .step-prev{
   padding-right: 25px;
 }
 .step-forward:before{
@@ -801,6 +807,9 @@ h6,
 }
 
 /**************************************** Reporting Page *************************************/
+.reporting_section_tabs{
+  padding-bottom: 85px;
+}
 .tabs_content .reports_section{
   display: flex;
   flex-wrap: wrap;
@@ -812,38 +821,62 @@ h6,
 .reports_section > div:nth-child(odd) {
   margin-right: 40px;
 }
+.list_reports_wrapper {
+  padding: 110px 0;
+}
 .list_reports_wrapper ul{
   display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.29);
 }
 .list_reports_wrapper li{
-  padding-right: 30px;
   padding-bottom: 30px;
   cursor: pointer;
   color: rgba(51, 51, 51, 0.29) !important;
   font-family: "Raleway-Bold";
   font-size: 16px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.29);
+  position: relative;
 }
 .list_reports_wrapper li.tab-active{
   color: #e78b48 !important;
-  opacity: 1;
-  border-bottom: 2px solid #e78b48;
+}
+.list_reports_wrapper li.tab-active:after{
+  content: ' ';
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #e78b48;
+  left: 0;
+}
+li.one-tab-link:hover:after {
+  content: ' ';
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #e78b48;
+  left: 0;
 }
 
+li.one-tab-link:hover {
+  color: #e78b48 !important;
+}
 .download_report_wrapper > div {
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
   background-color: #ffffff;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .download_report_wrapper .report_text {
-  padding: 47px 40px;
+  padding: 40px;
 }
 .download_report_wrapper > div:hover{
   box-shadow: 4px 4px 20px rgba(209, 209, 209, 0.2);
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
 }
-.download_report_wrapper > div:hover a{
+.download_report_wrapper > div:hover a,
+.download_report_wrapper > div:hover .report_title{
   color: #ffffff;
 }
 .h2-header-without-line{
@@ -852,4 +885,160 @@ h6,
   position: relative;
   font-size: 48px;
   line-height: 59px;
+}
+.report_title{
+  color: #333333;
+  font-family: "Raleway-Bold";
+  font-size: 20px;
+  line-height: 26px;
+  padding-bottom: 20px;
+}
+.report_download:after{
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  position: absolute;
+  padding-left: 10px;
+}
+.download_report_wrapper > div:hover .report_download:after{
+  content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
+}
+.reports_section h2{
+  padding-bottom: 40px;
+}
+.report_download {
+  font-family: "Raleway-Bold";
+  font-size: 14px;
+}
+.reports_section .h2-header-line::before{
+  top: calc((100% - 45px) / 2);
+}
+
+.zvit_children_count{
+  color: #e78b48;
+  font-size: 42px;
+  font-family: "Raleway-Bold";
+  line-height: 59px;
+}
+.pagination-children{
+  padding-top: 15px;
+}
+.pagination-children .count_pages{
+  top: 18px;
+}
+.children-block{
+  padding-bottom: 30px;
+}
+.children-wrapper .preloader{
+  top: -5%;
+}
+
+
+/********************************* Single article *********************************/
+
+.single_article_section1.vc_custom_1582905650845 {
+  background-position: unset !important;
+}
+.single_article_section1_wrapper{
+  max-width: 1140px;
+  margin: 0 auto!important;
+}
+.single_section1_text{
+  color: white;
+  font-size: 48px;
+  line-height: 58px;
+  font-family: "Raleway-Bold";
+  padding: 78px 0;
+  width: 57%;
+}
+.single_section2{
+  padding-top: 20px;
+}
+.custom_post_info{
+  display: flex;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d8d8d8;
+  color: #a5a5a5;
+  justify-content: space-between;
+}
+.custom_post_info .right_info_block{
+  display: flex;
+  justify-content: space-between;
+  width: 34%;
+}
+.custom_post_info .post_category_class{
+  text-transform: uppercase;
+}
+.custom_post_info .post_date_class{
+  text-transform: lowercase;
+}
+.custom_post_info .fa-facebook{
+  color: #a9a9a9;
+}
+.text_under_post_info{
+  padding-top: 40px;
+}
+
+.single_news_two_posts{
+  padding-left: 50px;
+}
+.single_news_two_posts a{
+  color: #ffffff!important;
+  font-family: "Raleway-Bold";
+  line-height: 26px;
+  font-size: 14px;
+  padding: 25px 0 24px 0;
+}
+.single_news_two_posts .vc_gitem-post-data-source-post_title a{
+  font-size: 16px;
+}
+.proj-timeline-info.news_social_info{
+  min-width: 310px;
+  height: 151px;
+}
+.news_social_info  .proj-timeline-info-left{
+  padding: 40px 10px 40px 30px;
+  width: 185px;
+}
+.news_social_info .left-to-collect-text{
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Raleway-Bold;
+  letter-spacing: 0.2px;
+}
+.news_social_info .proj-timeline-info-right{
+  width: calc(100% - 185px);
+  text-align: center;
+}
+
+.news_social_info .proj-timeline-info-right a span{
+  padding-left: 10px;
+}
+.news_social_info .proj-timeline-info-right a:last-child{
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 25px 0 20px 0;
+}
+.news_social_info .fa-facebook,
+.news_social_info .fa-instagram {
+  padding-top: 3px;
+}
+.single_section3{
+  padding-top: 80px;
+}
+.single_section3 .h2-header-line{
+  margin-bottom: 40px;
+}
+.single_section4 h2-header-line{
+  margin-bottom: 60px;
+}
+.media_slider_block .slick-list{
+  padding-bottom: 50px;
+}
+.single_section4{
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.single_section4 .paragraph1{
+  padding-bottom: 10px;
+}
+.single_section4 .paragraph5{
+  padding-top: 30px;
 }

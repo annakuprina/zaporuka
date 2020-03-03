@@ -57,17 +57,17 @@ jQuery(document).ready(function($) {
     slidesToShow: 3,
     slidesToScroll: 3
   });
-
   $(document).on('click', '.pagination-block a', function(e) {
     e.preventDefault();
     var nth  = $(this).attr('data-cpta');
     var ajax_url = '/wp-content/themes/u-design-child/inc/custom_functions.php';
     var prev = $(this).attr('data-prev');
-
+    var post_type = $(this).attr('data-type');
+    var limit = $(this).attr('data-limit');
     jQuery.ajax({
       url	:ajax_url,
       type	:'post',
-      data	:{ 'custom_action':'true','number':nth,'prev':prev },
+      data	:{ 'custom_action':'true','number':nth,'prev':prev, 'post_type': post_type,'limit': limit},
       beforeSend : function(){
         $('.preloader').css('display', 'block');
       },
@@ -77,5 +77,36 @@ jQuery(document).ready(function($) {
       }
     });
   });
+  $(document).on('click', '.pagination-children a', function(e) {
+    e.preventDefault();
+    var nth  = $(this).attr('data-cpta');
+    var ajax_url = '/wp-content/themes/u-design-child/inc/custom_functions.php';
+    var prev = $(this).attr('data-prev');
+    var post_type = $(this).attr('data-type');
+    var limit = $(this).attr('data-limit');
+    jQuery.ajax({
+      url	:ajax_url,
+      type	:'post',
+      data	:{ 'show_children':'true','number':nth,'prev':prev, 'post_type': post_type,'limit': limit},
+      beforeSend : function(){
+        $('.preloader').css('display', 'block');
+      },
+      success :function(pvalue){
+        jQuery(".children-block").html(pvalue);
+        $('.preloader').css('display', 'none');
+      }
+    });
+  });
   $(".video_button").slickLightbox({});
+
+  var mediaSlider = function() {
+    $(".media_slider_block .vc_pageable-slide-wrapper").slick({
+      dots: true,
+      arrows: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    })
+  }
+  setTimeout(mediaSlider, 3000);
+
 });

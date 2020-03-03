@@ -39,8 +39,10 @@ function udesign_child_theme_styles() {
 
     wp_enqueue_script( 'anya-js', CHILD_DIR . '/assets/js/custom_scrypt_anya.js' );
     wp_enqueue_script( 'jquery-ui-js', CHILD_DIR . '/assets/js/jquery-ui.min.js' );
+
 }
 add_action( 'wp_enqueue_scripts', 'udesign_child_theme_styles', 99 );
+
 
 /***************** BEGIN ADDING YOUR CODE BELOW: *****************/
 

@@ -22,12 +22,13 @@ $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $optio
   	   </div>
 	   <form action="/wp-content/plugins/liqpay_wordpress/liqpay-form.php" method="POST" class="help_form">
 		   	<input type="hidden" name="date" value="'.date('d.m.Y H:i:s' ).'" required/><input type="hidden" name="liqpay_product_id"  value=""/>
-		   	<input type="hidden" name="hidden_content"  value=""/>
-		   	<input type="hidden" name="url_page"  value=[url_page]/>
+		   	<input type="hidden" name="hidden_content"  value="<?php echo site_url('/storinka-podyaky/');?>"/>
+		   	<input type="hidden" name="url_page"  value="<?php echo site_url('/storinka-podyaky/');?>"/>
 		   	<input type="hidden" name="ip"  value=[ip]/>
 		   	<input type="hidden" name="pay_type"  value="pay"/>
 		    <input type="hidden" name="subscribe_type"  value="month"/>
 		    <input type="hidden" id="plata" name="plata" value="">
+		    <input type="hidden" id="liqpay_post_id" name="liqpay_post_id"  value=""/>
 		    <div class="help-form-amount">
 		    	<div class="help-form-amount-left">
 		    		<input class="textarea-small val" type="text" id="paid" name="paid"  value="" placeholder="<?php echo $amount_label; ?>" required/> 
@@ -154,6 +155,7 @@ function shortcode_parthers_on_home(  ){
 		'numberposts' => -1,
 		'post_type'   => 'partners'
 	));	
+	$partners_array_by_2 = array_chunk($partners_array, 2, true);
 	?>
 			<!----------
 				PARTNERS
@@ -181,20 +183,24 @@ function shortcode_parthers_on_home(  ){
 				<!-- PARTNERS SLIDER MOBILE-->
 				<div class="partners-slider-mob">
 					<?php
-					foreach( $partners_array as $post ){ ?>
+					foreach( $partners_array_by_2 as $post_wrapper ){ ?>
 						<!-- One slide -->
 						<div class="partners-slide">
-
-						<div class="partners-slider-mob-img">
-							<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
-						</div>
-							<!-- Slide text -->
-							<div class="partners-slide-text">
-								<p>
-									<?php echo $post->post_title;?>
-									<a class="partner-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
-								</p>
-							</div>
+							<? foreach( $post_wrapper as $post ){ ?>
+							<div class="partners-slide-item">
+								<div class="partners-slider-mob-img">
+									<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
+								</div>
+								<!-- Slide text -->
+								<div class="partners-slide-text">
+									<p>
+										<?php echo $post->post_title;?>
+										<a class="partner-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
+									</p>
+								</div>
+							</div><!-- end partners-slide-item -->
+							<?php
+							}?>
 						</div><!-- end one slide-->
 					<?php
 					}

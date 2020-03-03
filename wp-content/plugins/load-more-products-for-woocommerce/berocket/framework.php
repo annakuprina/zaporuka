@@ -312,12 +312,12 @@ if( ! class_exists( 'BeRocket_Framework' ) ) {
         public function init() {
             $global_option = $this->get_global_option();
             wp_enqueue_script( "jquery" );
-            if( is_admin() ) {
+            /*if( is_admin() ) {
                 $this->register_font_awesome('fa5live');
             } elseif( ! empty($this->framework_data['fontawesome_frontend']) ) {
                 $this->enqueue_fontawesome();
             }
-
+*/
             wp_add_inline_script(
                 $this->cc->info['plugin_name'] . "_execute_func",
                 ";

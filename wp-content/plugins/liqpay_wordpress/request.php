@@ -1,7 +1,13 @@
-<?php
-if(isset($_POST['action']) && $_POST['action'] == 'getData'){
-
-	echo "1";
-
-
+<?php
+
+if(isset($_POST['action']) && $_POST['action'] == 'getData'){
+
+
+
+	echo "1";
+
+
+
+
+
 }
