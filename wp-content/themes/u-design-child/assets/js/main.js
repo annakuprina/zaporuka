@@ -126,6 +126,14 @@ jQuery(document).ready(function($) {
     ]
   });
 
+  /*DONORS SLIDER MOBILE*/
+  $(".donors-mobile-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true
+  });
+
   // lightbox for documents slider
   $(".documents-slider").slickLightbox({
     src: "src",

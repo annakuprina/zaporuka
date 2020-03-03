@@ -1147,7 +1147,40 @@ get_header();
 		9 Переможець конкурсу «Благодійник року» у номінації «Благодійна організація».
 	</div>
 </div><!--end rewards-slider-->
-</div>
+
+
+<!-- DONORS -->
+<div class="donors">
+	<h3>Донори</h3>
+	<!-- DONORS DESKTOP -->
+	<div class="donors-desktop">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+	</div><!--end donors-desktop-->
+
+	<!-- DONORS MOBILE -->
+	<div class="donors-mobile-slider">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+		<img src="<?php echo get_stylesheet_directory_uri()?>/img/soleterre.jpg">
+	</div><!--end donors-mobile-->
+</div><!--end donors-->
+
 
 <?php
 
