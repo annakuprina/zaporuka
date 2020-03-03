@@ -290,7 +290,7 @@ function get_liqpay_list_page()
     global $wpdb;
 
 
-    $aColumns = array('id', 'xdate', 'transaction_id', 'status', 'err_code', 'summa', 'valuta', 'sender_first_name', 'sender_phone', 'comments', 'email', 'ip');
+    $aColumns = array('id', 'xdate', 'transaction_id', 'status', 'err_code', 'summa', 'valuta', 'sender_phone', 'comments', 'email', 'ip');
     $Search_col = array();
 
     // SQL limit
@@ -357,7 +357,7 @@ function get_liqpay_list_page()
     }
 
     $table_liqpay = $wpdb->prefix . 'liqpay';
-    $query = " SELECT SQL_CALC_FOUND_ROWS w.order_id id, w.xdate, w.transaction_id,w.status, w.err_code, w.summa, w.valuta, w.sender_first_name, w.sender_phone,   w.comments, w.email, w.ip
+    $query = " SELECT SQL_CALC_FOUND_ROWS w.order_id id, w.xdate, w.transaction_id,w.status, w.err_code, w.summa, w.valuta, w.sender_phone,   w.comments, w.email, w.ip
             FROM $table_liqpay as w ";
     $query .= " $sWhere ";
     $query .= " $sOrder ";
@@ -1123,7 +1123,6 @@ function liqpay_activate()
             `summa` FLOAT NOT NULL,
             `valuta` TINYTEXT NOT NULL,
             `sender_phone` TINYTEXT NOT NULL,
-            `sender_first_name` TINYTEXT NOT NULL,
             `comments` TEXT NOT NULL,
             `email` TEXT NULL,
             `ip` TEXT NULL,
