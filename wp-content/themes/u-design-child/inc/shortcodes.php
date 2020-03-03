@@ -149,71 +149,71 @@ add_shortcode('project_for_home', 'shortcode_project_for_home');
 
 
 /* partners on home */
-function shortcode_parthers_on_home(  ){	
-	ob_start();
-	$partners_array = get_posts( array(
-		'numberposts' => -1,
-		'post_type'   => 'partners'
-	));	
-	$partners_array_by_2 = array_chunk($partners_array, 2, true);
-	?>
-			<!----------
-				PARTNERS
-			----------->
-			<div class="partners">
-				<h3 class="partners-title">Партнери</h3>	
-				<!-- PARTNERS SLIDER DESKTOP-->
-				<div class="partners-slider">
-						<?php
-						foreach( $partners_array as $post ){ ?>
-							<!-- One slide -->
-							<div class="partners-slide">
-								<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
-								<!-- Slide text -->
-								<div class="partners-slide-text">
-									<p><?php echo $post->post_title;?></p>
-									<a class="partner-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
-								</div>
-							</div><!-- end one slide-->
-						<?php
-						}
-						?>
-				</div><!-- end partners slider-->
-
-				<!-- PARTNERS SLIDER MOBILE-->
-				<div class="partners-slider-mob">
-					<?php
-					foreach( $partners_array_by_2 as $post_wrapper ){ ?>
-						<!-- One slide -->
-						<div class="partners-slide">
-							<? foreach( $post_wrapper as $post ){ ?>
-							<div class="partners-slide-item">
-								<div class="partners-slider-mob-img">
-									<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
-								</div>
-								<!-- Slide text -->
-								<div class="partners-slide-text">
-									<p>
-										<?php echo $post->post_title;?>
-										<a class="partner-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
-									</p>
-								</div>
-							</div><!-- end partners-slide-item -->
-							<?php
-							}?>
-						</div><!-- end one slide-->
-					<?php
-					}
-					?>
-				</div><!-- end partners-slider-mob-->
-			</div><!-- end partners-->
-
-	<?php
-	$html = ob_get_clean();
-	return $html;
-
-}
-add_shortcode('our_partners_home', 'shortcode_parthers_on_home');
+//function shortcode_parthers_on_home(  ){
+//	ob_start();
+//	$partners_array = get_posts( array(
+//		'numberposts' => -1,
+//		'post_type'   => 'partners'
+//	));
+//	$partners_array_by_2 = array_chunk($partners_array, 2, true);
+//	?>
+<!--			<!------------>
+<!--				PARTNERS-->
+<!--			----------->-->
+<!--			<div class="partners">-->
+<!--				<h3 class="partners-title">Партнери</h3>	-->
+<!--				<!-- PARTNERS SLIDER DESKTOP-->-->
+<!--				<div class="partners-slider">-->
+<!--						--><?php
+//						foreach( $partners_array as $post ){ ?>
+<!--							<!-- One slide -->-->
+<!--							<div class="partners-slide">-->
+<!--								<img src="--><?php //echo get_the_post_thumbnail_url($post->ID, 'full'); ?><!--">-->
+<!--								<!-- Slide text -->-->
+<!--								<div class="partners-slide-text">-->
+<!--									<p>--><?php //echo $post->post_title;?><!--</p>-->
+<!--									<a class="partner-link" href="--><?php //echo $post->post_content;?><!--">--><?php //echo $post->post_content;?><!--</a>-->
+<!--								</div>-->
+<!--							</div><!-- end one slide-->-->
+<!--						--><?php
+//						}
+//						?>
+<!--				</div><!-- end partners slider-->-->
+<!---->
+<!--				<!-- PARTNERS SLIDER MOBILE-->-->
+<!--				<div class="partners-slider-mob">-->
+<!--					--><?php
+//					foreach( $partners_array_by_2 as $post_wrapper ){ ?>
+<!--						<!-- One slide -->-->
+<!--						<div class="partners-slide">-->
+<!--							--><?// foreach( $post_wrapper as $post ){ ?>
+<!--							<div class="partners-slide-item">-->
+<!--								<div class="partners-slider-mob-img">-->
+<!--									<img src="--><?php //echo get_the_post_thumbnail_url($post->ID, 'full'); ?><!--">-->
+<!--								</div>-->
+<!--								<!-- Slide text -->-->
+<!--								<div class="partners-slide-text">-->
+<!--									<p>-->
+<!--										--><?php //echo $post->post_title;?>
+<!--										<a class="partner-link" href="--><?php //echo $post->post_content;?><!--">--><?php //echo $post->post_content;?><!--</a>-->
+<!--									</p>-->
+<!--								</div>-->
+<!--							</div><!-- end partners-slide-item -->-->
+<!--							--><?php
+//							}?>
+<!--						</div><!-- end one slide-->-->
+<!--					--><?php
+//					}
+//					?>
+<!--				</div><!-- end partners-slider-mob-->-->
+<!--			</div><!-- end partners-->-->
+<!---->
+<!--	--><?php
+//	$html = ob_get_clean();
+//	return $html;
+//
+//}
+//add_shortcode('our_partners_home', 'shortcode_parthers_on_home');
 
 
 
