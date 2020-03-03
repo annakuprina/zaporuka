@@ -92,6 +92,15 @@ if (isset($_POST['data'])) {
     $to = get_option($order_id_md5 . '-liqpay_mail_buyer');
 
     $user_phone = get_option($order_id_md5 . '-user_phoner');
+    if($user_phone){
+        $user_phone = $user_phone;
+    }
+    else{
+        global $woocommerce;
+        $order = new WC_Order($order_id);
+        $user_phone = $order->get_billing_phone();
+    }
+
     $liqpay_post_id =  get_option($order_id_md5 . '-liqpay_post_id');
 
 
