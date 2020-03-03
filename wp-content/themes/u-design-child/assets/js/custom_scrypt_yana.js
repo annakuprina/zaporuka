@@ -99,14 +99,11 @@ jQuery(document).ready(function($) {
   });
   $(".video_button").slickLightbox({});
 
-  // var mediaSlider = function() {
-  //   $(".media_slider_block .vc_pageable-slide-wrapper").slick({
-  //     dots: true,
-  //     arrows: true,
-  //     slidesToShow: 1,
-  //     slidesToScroll: 1
-  //   })
-  // }
-  // setTimeout(mediaSlider, 3000);
+  $(".post_photo_gallery").slick({
+    dots: true,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
 
 });
