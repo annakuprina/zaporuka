@@ -920,7 +920,8 @@ position: relative;;
 .help-form-inner-wrapper .help-form-subscribe {
   padding-bottom: 24px;
 }
-.help-form-inner-wrapper .help-form-email-tel {
+.help-form-inner-wrapper .help-form-email-tel,
+.help-form-inner-wrapper .help-form-submit-oferta{
   padding-bottom: 30px;
 }
 .help-form-inner-wrapper .help-form-PIB {
@@ -956,12 +957,16 @@ position: relative;;
   background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
   color: #fff;
 }
-.help-form-inner-wrapper .help-form-text {
+.help-form-inner-wrapper .help-form-text,
+.help-form-inner-wrapper .help-form-cancel-subscription-text a{
   color: rgba(165, 165, 165, 0.8);
   font-size: 12px;
   font-weight: 400;
   padding-bottom: 29px;
   letter-spacing: 0.3px;
+}
+.help-form-inner-wrapper .help-form-cancel-subscription-text a:hover{
+  color: #e78b48;
 }
 .help-form-inner-wrapper .textarea-small,
 .help-form-inner-wrapper .textarea-full {

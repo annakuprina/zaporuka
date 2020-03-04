@@ -12,6 +12,9 @@ $text_help_label = !empty($options['text_help_block_' . ICL_LANGUAGE_CODE]) ? $o
 $agree_help_label = !empty($options['agree_help_block_' . ICL_LANGUAGE_CODE]) ? $options['agree_help_block_' . ICL_LANGUAGE_CODE] : 'Я погоджуюсь з';
 $agree_link_label = !empty($options['agree_link_text_block_' . ICL_LANGUAGE_CODE]) ? $options['agree_link_text_block_' . ICL_LANGUAGE_CODE] : 'офертою*';
 $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $options['agree_link_block_' . ICL_LANGUAGE_CODE] : '#';
+$cancel_subscription_text_block = !empty($options['cancel_subscription_text_block' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_text_block' . ICL_LANGUAGE_CODE] : 'Відмінити регулярний платіж';
+$cancel_subscription_link_block = !empty($options['cancel_subscription_link_block' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_link_block' . ICL_LANGUAGE_CODE] : '#';
+
 
 	ob_start();
 	?>
@@ -62,13 +65,19 @@ $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $optio
 		     <p class="help-form-text">
 	    		<?php echo $text_help_label; ?> 
 	    	</p>
-	    	 <div class="help-form-submit-oferta">
+	    	<div class="help-form-submit-oferta">
 	    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $help_label; ?>" /></div>
 	    	 	<div class="help-form-oferta">
 	    	 		<input type="checkbox" id="oferta" name="oferta" required>
 	  				<label for="oferta"><?php echo $agree_help_label; ?> <a href="<?php echo $agree_link; ?>" target="_blank" ><?php echo $agree_link_label; ?></a>*</label>
 	    	 	</div>
-	    	 </div>	  	
+	    	</div>
+	    	<div class="help-form-cancel-subscription">
+	    		<p class="help-form-cancel-subscription-text">
+	    			<a href="<?php echo $cancel_subscription_link_block; ?>" target="_blank" ><?php echo $cancel_subscription_text_block; ?></a>
+	    		</p>
+	    	</div>
+
 		</form>
       </div>
   </div>
