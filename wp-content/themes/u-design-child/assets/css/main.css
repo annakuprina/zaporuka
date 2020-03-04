@@ -549,7 +549,7 @@ h3 {
 .one-project {
   display: flex;
   background: #fff;
-  max-height: 394px;
+  /* max-height: 394px; */
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
 
@@ -606,6 +606,10 @@ h3 {
   padding: 27px 50px;
 }
 
+.one-project-left img {
+  width: 100%;
+  height: 100%;
+}
 .one-project-progress {
   margin-bottom: 35px;
 }
@@ -692,7 +696,22 @@ h3 {
   max-width: 435px;
 }
 /* Media for one Project block(home page) */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
+  .one-project-right {
+    width: 70%;
+    padding: 20px 30px;
+  }
+
+  .one-project-info {
+    margin-bottom: 30px;
+  }
+
+  .one-project-progress {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .one-project {
     flex-direction: column;
     max-height: initial;
@@ -710,17 +729,12 @@ h3 {
     display: flex;
     justify-content: center;
   }
-
-  /* #main-content,
-  #sidebar {
-    width: initial;
-  } */
 }
-/* Media for one Project block(home page) */
+
 @media screen and (max-width: 500px) {
   .one-project {
     position: relative;
-    width: 291px;
+    /* width: 291px; */
   }
 
   .one-project-progress {
@@ -860,6 +874,10 @@ h3 {
   margin-right: 17px;
 }
 
+.partners-slider-mob .partners-slider-mob-img img {
+  width: 100%;
+}
+
 .partners-slider-mob .partners-slide-text {
   line-height: 23px;
   margin-top: -4px;
@@ -955,7 +973,7 @@ h3 {
 }
 
 .friends-title {
-  margin-bottom: 34px;
+  margin-bottom: 16px;
 }
 
 .friends-slide-row {
@@ -976,7 +994,7 @@ h3 {
 
 .friends-slider .slick-dots {
   position: absolute;
-  bottom: -64px;
+  bottom: -56px;
   left: -2px;
 }
 
@@ -1010,7 +1028,7 @@ h3 {
 
   .friends-slider .slick-dots {
     position: absolute;
-    bottom: -44px;
+    bottom: -56px;
   }
 }
 
@@ -1117,11 +1135,7 @@ h3 {
   }
   .friends-wrapper {
     width: 50%;
-  }
-
-  /* Change position of Friends slider dots */
-  .friends-slider .slick-dots {
-    bottom: -35px;
+    padding-bottom: 50px;
   }
 
   /* Change position of Volunteers slider dots */
@@ -1194,13 +1208,17 @@ h3 {
 .donors-desktop {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 30px;
 }
 
-.donors-desktop img {
-  margin-right: 30px;
-  margin-bottom: 30px;
+.donors-desktop .donors-img-wrapper {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .donors-one-slide {
@@ -1209,8 +1227,8 @@ h3 {
   align-items: center;
 }
 
-.donors-one-slide img {
-  margin-bottom: 40px;
+.donors-one-slide img:not(:last-child) {
+  margin-bottom: 45px;
 }
 
 /*BANNER FOR ONE PROJECT PAGE*/
@@ -1304,14 +1322,24 @@ h3 {
   padding-left: 12px;
 }
 
+.donors-mobile-slider {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .one-project-banner {
     justify-content: center;
     padding-left: 0;
   }
+
   .one-project-banner .one-project-banner-inner {
     margin-left: 0;
     margin: auto;
+  }
+
+  .donors-desktop .donors-img-wrapper {
+    width: 33%;
+    margin-bottom: 50px;
   }
 }
 
@@ -1349,6 +1377,16 @@ h3 {
 
   .one-project-banner .one-project-title {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .donors-desktop {
+    display: none;
+  }
+
+  .donors-mobile-slider {
+    display: block;
   }
 }
 
@@ -2903,31 +2941,50 @@ footer .footer-mob a.designer-link {
 /*---------------------
   HOME PAGE SECTION3
 ----------------------*/
-.rewards-slider {
-  color: #333333;
+.rewards-slider-mob {
   font-family: "Proxima-Nova-Regular";
   font-size: 14px;
   font-weight: 700;
   line-height: 22px;
-  /* width: 250px; */
+  display: none;
 }
 
-.slick-vertical .rewards-slide {
+.rewards-desktop .rewards-one-item {
   border-top: 3px solid #e78b48;
   padding-top: 21px;
   padding-bottom: 59px;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  font-family: "Raleway-Medium";
+}
+
+.rewards-desktop .rewards-one-item {
+  margin: 0 50px;
+}
+
+.rewards-desktop .slick-list {
+  margin: 0 -50px;
+}
+
+.rewards-slider-mob .rewards-one-slide-item {
+  font-family: "Proxima-Nova-Regular";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #333333;
+  border-top: 3px solid #e78b48;
+  padding-top: 21px;
+  margin-bottom: 60px;
+}
+
+.rewards-slider-mob .slick-dots {
+  bottom: -80px;
 }
 
 .home-page-section3 .h2-header-line {
   margin-bottom: 60px;
-}
-
-.home-page-section3 .owl-stage {
-  height: 184px;
-}
-
-.home-page-section3 .owl-stage-outer {
-  height: 184px;
 }
 
 .home-page-section3 .h2-header-line::before {
@@ -2940,23 +2997,42 @@ footer .footer-mob a.designer-link {
   top: 29px;
 }
 
-.home-page-section3 .owl-carousel .owl-item .ocpc-topbox p {
-  font-size: 20px;
-  line-height: 32px;
-}
-
-.home-page-section3 .owl-item.active:nth-child(1) {
-  margin-right: 33px;
-}
-
-.home-page-section3 .owl-item.active:nth-child(2) {
-  margin-right: 33px;
-}
-
 @media screen and (max-width: 1400px) {
   .home-page-section3 .h2-header-line::before {
     left: 0;
     width: 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home-page-section3 .h2-header-line::before {
+    left: 0;
+    width: 40px;
+  }
+
+  .rewards-desktop .rewards-one-item {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .rewards-desktop .rewards-one-item {
+    margin: 0 30px;
+  }
+
+  .rewards-desktop .slick-list {
+    margin: 0 -30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .rewards-desktop {
+    display: none;
+  }
+
+  .rewards-slider-mob {
+    display: block;
+    width: 250px;
+    margin: auto;
   }
 }
 

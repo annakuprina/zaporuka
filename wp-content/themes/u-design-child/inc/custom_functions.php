@@ -922,7 +922,7 @@ function shortcode_donory_gallery(){
                 $post_id = $donors_array[$i]->ID;
                 $thumbnail = get_the_post_thumbnail_url($post_id);
                 ?>
-                <img src="<?php echo $thumbnail; ?>">
+                <div class="donors-img-wrapper"><img src="<?php echo $thumbnail; ?>"></div>
             <?php } ?>
         </div>
         <!-- DONORS MOBILE -->

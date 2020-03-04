@@ -1189,6 +1189,25 @@ get_header();
 </div><!--end donors-->
 
 
+<!-- REWARDS SLIDER MOBILE -->
+<div class="rewards_slider_mob">
+	<div class="rewards-one-slide">
+		<p class="rewards-one-slide-item">Neque porro quisquam est, qui dolorem1 </p>
+		<p class="rewards-one-slide-item">Neque porro quisquam est, qui dolorem2 </p>
+		<p class="rewards-one-slide-item">Neque porro quisquam est, qui dolorem3 </p>
+	</div> 
+	<div class="rewards-one-slide">
+		<p class="rewards-one-slide-item">Neque porro quisquam est, qui dolorem4 </p>
+		<p class="rewards-one-slide-item">Neque porro quisquam est, qui dolorem 5</p>
+		<p class="rewards-one-slide-item">Neque porro quisquam est, qui dolorem 6</p>
+	</div> 
+	<div class="rewards-one-slide">
+		<p class="rewards-one-slide-item">Neque porro quisquam est, qui dolorem 7</p>
+		<p class="rewards-one-slide-item">Neque porro quisquam est, qui dolorem 8</p>
+		<p class="rewards-one-slide-item">Neque porro quisquam est, qui dolorem 9</p>
+	</div> 
+</div><!--end rewards_slider_mob-->
+
 <?php
 
 get_footer();
