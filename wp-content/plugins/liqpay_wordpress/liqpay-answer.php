@@ -51,9 +51,6 @@ function insert_history($project_id2, $transaction_id2, $date2, $users_name2, $u
     $wpdb->query($sql1);
 
 
-    var_dump($sql1);
-
-    var_dump( $wpdb->query($sql1) );
 }
 
 if (isset($_POST['data'])) {
