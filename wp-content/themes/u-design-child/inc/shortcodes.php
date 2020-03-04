@@ -79,7 +79,6 @@ $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $optio
 }
 add_shortcode('help_form', 'shortcode_help_form');
 
-
 /* one project for home page */
 function shortcode_project_for_home(  ){
 	ob_start();
@@ -101,7 +100,6 @@ function shortcode_project_for_home(  ){
     $progress_bar = (int) $total_collected * 100 / (int) $total_amount;
 
 	if($featured_post_id):
-
 	?>
 	<!-- One project -->
 			<div class="one-project">
@@ -147,7 +145,6 @@ function shortcode_project_for_home(  ){
 }
 add_shortcode('project_for_home', 'shortcode_project_for_home');
 
-
 /* partners on home */
 function shortcode_parthers_on_home(  ){
 	ob_start();
@@ -161,7 +158,7 @@ function shortcode_parthers_on_home(  ){
 				PARTNERS
 			----------->
 			<div class="partners">
-				<h3 class="partners-title">Партнери</h3>
+				<h3 class="partners-title"><?php pll_e( 'Партнери');?></h3>
 				<!-- PARTNERS SLIDER DESKTOP-->
 				<div class="partners-slider">
 						<?php
@@ -215,8 +212,6 @@ function shortcode_parthers_on_home(  ){
 }
 add_shortcode('our_partners_home', 'shortcode_parthers_on_home');
 
-
-
 /* FRIENDS AND VOLUNTEERS on home page*/
 function shortcode_friends_volunteers(  ){	
 	ob_start();
@@ -225,7 +220,6 @@ function shortcode_friends_volunteers(  ){
 		'post_type'   => 'friends'
 	));	
 	$friends_array_by_7 = array_chunk($friends_array, 7, true);
-
 	$volunteers_array = get_posts( array(
 		'numberposts' => -1,
 		'post_type'   => 'volunteers'
@@ -233,92 +227,89 @@ function shortcode_friends_volunteers(  ){
 	$volunteers_array_by_6 = array_chunk($volunteers_array, 6, true);
 	$volunteers_array_by_3 = array_chunk($volunteers_array, 3, true);
 
-	
 	?>
+    <!-------------------------
+		FRIENDS AND VOLUNTEERS
+	-------------------------->
+    <div class="friends-and-volunteers">
+        <!---------
+			FRIENDS
+		----------->
+        <div class="friends-wrapper">
+            <div class="friends">
+                <h3 class="friends-title"><?php pll_e( 'Друзi');?></h3>
+                <!-- FRIENDS SLIDER -->
+                <div class="friends-slider">
+                    <?php
+                    foreach( $friends_array_by_7 as $post_wrapper ){
+                        echo '<div class="friends-slide">';
+                        foreach( $post_wrapper as $post ){ ?>
+                            <div class="friends-slide-row">
+                                <p class="friends-name"><?php echo $post->post_title;?></p>
+                                <a class="friends-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
+                            </div>
+                            <?php
+                        }
+                        echo '</div>';
+                    }
+                    ?>
+                </div><!-- end friends slider -->
+            </div><!-- end friends -->
+        </div><!-- end friends-wrapper-->
+        <!-------------
+			VOLUNTEERS
+		-------------->
+        <div class="volunteers">
+            <h3 class="volunteers-title"><?php pll_e( 'Волонтери');?></h3>
 
-<!-------------------------
-				FRIENDS AND VOLUNTEERS
-			-------------------------->
-			<div class="friends-and-volunteers">
-				<!---------
-					FRIENDS 
-				----------->
-				<div class="friends-wrapper">
-					<div class="friends">
-						<h3 class="friends-title">Друзi</h3>	
-
-						<!-- FRIENDS SLIDER -->
-						<div class="friends-slider">
-							<?php
-							foreach( $friends_array_by_7 as $post_wrapper ){
-							    echo '<div class="friends-slide">';
-							    foreach( $post_wrapper as $post ){ ?>
-							        <div class="friends-slide-row"> 
-			                            <p class="friends-name"><?php echo $post->post_title;?></p>
-			                            <a class="friends-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
-		                         	</div>
-							    <?php    
-							    }
-							    echo '</div>';
-							}
-							?>						
-						</div><!-- end friends slider -->
-					</div><!-- end friends -->
-				</div><!-- end friends-wrapper-->
-				<!-------------
-					VOLUNTEERS 
-				-------------->
-				<div class="volunteers">
-					<h3 class="volunteers-title">Волонтери</h3>	
-
-					<!---------------------------
-						VOLUNTEERS SLIDER DESKTOP
-					---------------------------->
-					<div class="volunteers-slider">
-						<!-- ONE SLIDE -->
-						<?php
-						foreach( $volunteers_array_by_6 as $post_wrapper ){
-						    echo '<div class="volunteers-slide">';
-						    foreach( $post_wrapper as $post ){ ?>
-						    	<!-- One volunteer -->
-								<div class="one-volunteer">
-									<div class="one-volunteer-photo"><img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>"></div>
-									<div class="one-volunteer-info">
-										<div class="one-volunteer-name"><?php echo $post->post_title;?></div>
-										<div class="one-volunteer-position"><?php echo $post->post_content;?></div>
-									</div>
-								</div><!-- end one volunteer -->
-						    <?php    
-						    }
-						    echo '</div>';
-						}
-						?>
-					</div>
-					<!---------------------------
-						VOLUNTEERS SLIDER MOBILE
-					---------------------------->
-					<div class="volunteers-slider-mob">
-						<!-- ONE SLIDE -->
-						<?php
-						foreach( $volunteers_array_by_3 as $post_wrapper ){
-						    echo '<div class="volunteers-slide">';
-						    foreach( $post_wrapper as $post ){ ?>
-						    	<!-- One volunteer -->
-								<div class="one-volunteer">
-									<div class="one-volunteer-photo"><img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>"></div>
-									<div class="one-volunteer-info">
-										<div class="one-volunteer-name"><?php echo $post->post_title;?></div>
-										<div class="one-volunteer-position"><?php echo $post->post_content;?></div>
-									</div>
-								</div><!-- end one volunteer -->
-						    <?php    
-						    }
-						    echo '</div>';
-						}
-						?>	
-					</div><!-- end volunteers-slider -->
-				</div><!-- end volunteers -->
-			</div><!-- end friends-and-volunteers -->
+            <!---------------------------
+				VOLUNTEERS SLIDER DESKTOP
+			---------------------------->
+            <div class="volunteers-slider">
+                <!-- ONE SLIDE -->
+                <?php
+                foreach( $volunteers_array_by_6 as $post_wrapper ){
+                    echo '<div class="volunteers-slide">';
+                    foreach( $post_wrapper as $post ){ ?>
+                        <!-- One volunteer -->
+                        <div class="one-volunteer">
+                            <div class="one-volunteer-photo"><img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>"></div>
+                            <div class="one-volunteer-info">
+                                <div class="one-volunteer-name"><?php echo $post->post_title;?></div>
+                                <div class="one-volunteer-position"><?php echo $post->post_content;?></div>
+                            </div>
+                        </div><!-- end one volunteer -->
+                        <?php
+                    }
+                    echo '</div>';
+                }
+                ?>
+            </div>
+            <!---------------------------
+				VOLUNTEERS SLIDER MOBILE
+			---------------------------->
+            <div class="volunteers-slider-mob">
+                <!-- ONE SLIDE -->
+                <?php
+                foreach( $volunteers_array_by_3 as $post_wrapper ){
+                    echo '<div class="volunteers-slide">';
+                    foreach( $post_wrapper as $post ){ ?>
+                        <!-- One volunteer -->
+                        <div class="one-volunteer">
+                            <div class="one-volunteer-photo"><img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>"></div>
+                            <div class="one-volunteer-info">
+                                <div class="one-volunteer-name"><?php echo $post->post_title;?></div>
+                                <div class="one-volunteer-position"><?php echo $post->post_content;?></div>
+                            </div>
+                        </div><!-- end one volunteer -->
+                        <?php
+                    }
+                    echo '</div>';
+                }
+                ?>
+            </div><!-- end volunteers-slider -->
+        </div><!-- end volunteers -->
+    </div><!-- end friends-and-volunteers -->
 
 	<?php
 	$html = ob_get_clean();

@@ -43,9 +43,7 @@ function udesign_child_theme_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'udesign_child_theme_styles', 99 );
 
-
 /***************** BEGIN ADDING YOUR CODE BELOW: *****************/
-
 
 // Add category metabox to page
 function voras_category_for_page() {    
@@ -64,31 +62,30 @@ require_once THEME_INCLUDES . '/custom_ajax.php';
 
 // Secondary navigation bar.
 
-
-    // Insert Secondary Navigation bar at the very top.
-    function udesign_add_secondary_navigation_bar_custom() {
-        $options = get_option('ThemeOptions');
-        $phone_number = !empty($options['main_phone_number']) ? $options['main_phone_number'] : false;
-        $email = !empty($options['main_email']) ? $options['main_email'] : false;
-        $help_with_sms_label = !empty($options['popup_sms_title_' . ICL_LANGUAGE_CODE]) ? $options['popup_sms_title_' . ICL_LANGUAGE_CODE] : false;
-        ?>
-        <nav id="custom-top-bar">
-            <div class="container_24">
-                <div id="custom-top-bar-content">
-                    <div class="custom-top-bar-content-left">
-                        <div class="top-bar-tel-block"><a href="tel:<?php echo $phone_number; ?>" class="tel-block-a"><i class="fa fa-phone" aria-hidden="true"></i></i><?php echo $phone_number; ?></a></div>
-                        <div class="top-bar-email-block"><a href="mailto:<?php echo $email; ?>" class="email-block-a"><i class="top-bar-mail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g opacity=".4"><path fill="#333" d="M1.55 1.195L4.646 4.23c.193.19.509.19.703 0l3.101-3.035a.25.25 0 1 1 .352.356L6.773 3.539l2.024 1.902a.25.25 0 0 1-.344.364L6.418 3.887l-.719.703a1.01 1.01 0 0 1-1.406 0l-.711-.7-2.035 1.915a.25.25 0 0 1-.344-.364l2.02-1.902-2.024-1.988a.25.25 0 1 1 .352-.356zM0 .75v5.5c0 .415.335.75.75.75h8.5c.415 0 .75-.335.75-.75V.75A.748.748 0 0 0 9.25 0H.75A.748.748 0 0 0 0 .75z"/></g></g></svg></i><?php echo $email; ?></a></div>
-                    </div>
-                    <div class="custom-top-bar-content-right">
-                        <span class="top-bar-help-block"><a href="#"><?php echo $help_with_sms_label; ?></a></span>
-                    </div>
+// Insert Secondary Navigation bar at the very top.
+add_action( 'udesign_top_wrapper_top', 'udesign_add_secondary_navigation_bar_custom', 10);
+function udesign_add_secondary_navigation_bar_custom() {
+    $options = get_option('ThemeOptions');
+    $phone_number = !empty($options['main_phone_number']) ? $options['main_phone_number'] : false;
+    $email = !empty($options['main_email']) ? $options['main_email'] : false;
+    $help_with_sms_label = !empty($options['popup_sms_title_' . ICL_LANGUAGE_CODE]) ? $options['popup_sms_title_' . ICL_LANGUAGE_CODE] : false;
+    ?>
+    <nav id="custom-top-bar">
+        <div class="container_24">
+            <div id="custom-top-bar-content">
+                <div class="custom-top-bar-content-left">
+                    <div class="top-bar-tel-block"><a href="tel:<?php echo $phone_number; ?>" class="tel-block-a"><i class="fa fa-phone" aria-hidden="true"></i></i><?php echo $phone_number; ?></a></div>
+                    <div class="top-bar-email-block"><a href="mailto:<?php echo $email; ?>" class="email-block-a"><i class="top-bar-mail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g opacity=".4"><path fill="#333" d="M1.55 1.195L4.646 4.23c.193.19.509.19.703 0l3.101-3.035a.25.25 0 1 1 .352.356L6.773 3.539l2.024 1.902a.25.25 0 0 1-.344.364L6.418 3.887l-.719.703a1.01 1.01 0 0 1-1.406 0l-.711-.7-2.035 1.915a.25.25 0 0 1-.344-.364l2.02-1.902-2.024-1.988a.25.25 0 1 1 .352-.356zM0 .75v5.5c0 .415.335.75.75.75h8.5c.415 0 .75-.335.75-.75V.75A.748.748 0 0 0 9.25 0H.75A.748.748 0 0 0 0 .75z"/></g></g></svg></i><?php echo $email; ?></a></div>
+                </div>
+                <div class="custom-top-bar-content-right">
+                    <span class="top-bar-help-block"><a href="#"><?php echo $help_with_sms_label; ?></a></span>
                 </div>
             </div>
-        </nav>
-        <div class="clear"></div>
-        <?php
-    }
-    add_action( 'udesign_top_wrapper_top', 'udesign_add_secondary_navigation_bar_custom', 10);
+        </div>
+    </nav>
+    <div class="clear"></div>
+    <?php
+}
 
 //add 5 column to footer
 register_sidebar(array(
@@ -101,7 +98,6 @@ register_sidebar(array(
                 'after_widget' => '</div>',
 ));
 
-
 //add widget for footer mobile menu
 register_sidebar(array(
                 'name' => esc_html__('Футер моб левая секция', 'u-design'),
@@ -113,7 +109,6 @@ register_sidebar(array(
                 'after_widget' => '</div>',
 ));
 
-
 //string translation
 add_action('init', function() {
   pll_register_string('u-design-child', 'Таймлайн проекту');
@@ -121,9 +116,22 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'залучено');
   pll_register_string('u-design-child', 'Допомогти');
   pll_register_string('u-design-child', 'Проекти');
+  pll_register_string('u-design-child', 'Поширити у');
+  pll_register_string('u-design-child', 'сторiнка з');
+  pll_register_string('u-design-child', 'Залишилось');
+  pll_register_string('u-design-child', 'з');
+  pll_register_string('u-design-child', 'Подiлитися');
+  pll_register_string('u-design-child', 'Супутнi документи');
+  pll_register_string('u-design-child', 'Вiдео');
+  pll_register_string('u-design-child', 'Фотографiї');
+  pll_register_string('u-design-child', 'Сума допомоги');
+  pll_register_string('u-design-child', 'Завантажити');
+  pll_register_string('u-design-child', 'Дивитись вiдео');
+  pll_register_string('u-design-child', 'Долучайтесь до БФ Запорука у соцмережах');
+  pll_register_string('u-design-child', 'Партнери');
+  pll_register_string('u-design-child', 'Друзi');
+  pll_register_string('u-design-child', 'Волонтери');
 });
-
-
 
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
 function change_existing_currency_symbol( $currency_symbol, $currency ) {
@@ -142,13 +150,10 @@ function change_existing_currency_symbol( $currency_symbol, $currency ) {
     return $currency_symbol;
 }
 
-
-
 /**
  * Show cart contents / total Ajax
  */
 add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
-
 function woocommerce_header_add_to_cart_fragment( $fragments ) {
     global $woocommerce;
 
@@ -166,13 +171,11 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
     return $fragments;
 }
 
-
 /*   Remove zoom effect on WooCommerce product image   */
+add_action( 'wp', 'remove_image_zoom_support', 100 );
 function remove_image_zoom_support() {
     remove_theme_support( 'wc-product-gallery-zoom' );
 }
-add_action( 'wp', 'remove_image_zoom_support', 100 );
-
 
 /* Add custom column "ON home" to post type projects  */
 add_filter( 'manage_projects_posts_columns', 'set_custom_projects_columns' );
@@ -194,7 +197,6 @@ function set_custom_projects_columns_data( $column ) {
             echo "-";
         }      
     }
-
 }
 
 /*  Add languages for  wc ukr shipping*/
@@ -205,10 +207,8 @@ add_filter('wc_ukr_shipping_language', function ($lang) {
     if (pll_current_language() === 'en') {
         return 'en';
     }
-
     return 'ua';
 });
-
 
 /*  Add translations for  wc ukr shipping*/
 add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) {
@@ -237,7 +237,6 @@ add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) 
             'address_placeholder' => 'Enter shipping address'
         ];
     }
-  
 
     return [
         'method_title' => 'Доставка службою Нова пошта',
@@ -251,7 +250,6 @@ add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) 
    
 });
 
-
 /* read only for ACF fields for total-collected field*/
 add_filter('acf/load_field/name=total-collected', 'acf_read_only');
 function acf_read_only($field) {
@@ -264,7 +262,6 @@ add_action( 'admin_menu', 'register_page_load_money_to_project' );
 function register_page_load_money_to_project(){
     add_menu_page( 'Зачислить/списать вручную', 'Зачислить/списать вручную', 'edit_others_posts', 'page_load_money_to_project', 'page_load_money_to_project_function' ); 
 }
-
 function page_load_money_to_project_function(){
     $projects_array = get_posts( array(
         'numberposts' => -1,
@@ -328,7 +325,19 @@ function page_load_money_to_project_function(){
 }
 
 add_filter( 'pll_copy_post_metas', 'copy_post_metas' );
- 
 function copy_post_metas( $metas ) {
     return array_merge( $metas, array( 'total-collected','total-amount', 'show-on-home-page','current-completed' ) );
+}
+
+function check_currency(){
+    if(ICL_LANGUAGE_CODE=='uk'){
+        $symbol =  'грн.';
+    }
+    elseif(ICL_LANGUAGE_CODE=='ru'){
+        $symbol =  'грн.';
+    }
+    elseif(ICL_LANGUAGE_CODE=='en'){
+        $symbol =  'UAN';
+    }
+    return $symbol;
 }

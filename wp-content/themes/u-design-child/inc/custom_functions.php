@@ -1,180 +1,6 @@
 <?php
 
-if($_POST['custom_action'] == 'true'){
-    include __DIR__ . '/../../../../wp-load.php';
-    $cptaNumber = $paged = absint($_POST['number']);
-    $prev_click = $_POST['prev'];
-    $cptaLimit  = $_POST['limit'];
-    $cptaType = $_POST['post_type'];
-    if( $cptaNumber == "1" ){
-        $cptaOffsetValue = "0";
-        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'post_status' => 'publish');
-    }else{
-        $cptaOffsetValue = ($cptaNumber-1)*$cptaLimit;
-        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'offset' => $cptaOffsetValue,'post_status' => 'publish');
-    }
-    $cptaQuery = new WP_Query( $args );
-    $html = "";
-    if( isset($cptaQuery->posts) ){ ?>
-        <div class='reviews-block'>
-            <div class='reviews-wrapper'>
-                <div class="preloader"></div>
-                <?php for($i=0;$i<sizeof($cptaQuery->posts);++$i){
-                    $post_id = $cptaQuery->posts[$i]->ID;
-                    $name =  $cptaQuery->posts[$i]->post_title;
-                    $region = get_post_meta($post_id, 'region', true);
-                    $review_content = $cptaQuery->posts[$i]->post_content;
-                ?>
-                    <div class='reviews-item'>
-                        <div class='reviews-item-title'>
-                            <p><?php echo $name; ?></p>
-                            <p><?php echo $region;?></p>
-                        </div>
-                        <div class='reviews-item-text'>
-                         <p><?php echo $review_content; ?></p>
-                        </div>
-                    </div>
-                <?php } ?>
-            </div>
-            <?php wp_reset_postdata(); ?>
-            <div class="pagination-block">
-                <?php
-                $cpta_args = array('posts_per_page' => -1,'post_type' => 'reviews','post_status' => 'publish');
-                $cptaLimit = $cptaLimit;
-                $cpta_Query = new WP_Query( $cpta_args );
-                $cpta_Count = count($cpta_Query->posts);
-                $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
-                $last = ceil( $cpta_Paginationlist );
-                $adjacents = "2";
-                $cptaType = $cptaType;
-                if ( $paged == 1 ) {$prev = 1;} else{$prev = $paged - 1;}
-                if ( $paged == $last ) {$next = $last;} else{$next = $paged + 1;}
-                if( $cpta_Paginationlist > 0 ){ ?>
-                    <ul class='list-cptapagination'>
-                        <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
-                        <?php
-                        $t = ceil($paged/6 )-1;
-                        $t2 = $t*6;
-                        for( $cpta=$t2+1; $cpta <= $t2+6; $cpta++){
-                            if ( $cpta > $last ) {
-                                continue;
-                            }
-                            if( $cpta == $paged ){ $active="active_review"; }else{ $active=""; }
-                            ?>
-                            <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"><?php echo $cpta;?></a></li>
-                        <?php } ?>
-                        <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta="<?php echo $next; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                        <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                    </ul>
-                    <?php if ( ($t2+1) == $last ) { ?>
-                        <div class="count_pages"><span class="paged_review"><?php echo $last; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
-                    <?php } else if ( ($last - (($t2+1))) < 6 ) { ?>
-                        <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . $last; ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
-                        <?php } else {?>
-                        <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . ($t2+6); ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
-                   <?php  } ?>
-                <?php } ?>
-            </div>
-        </div>
-        <?php
-        die();
-    }
-}
-if($_POST['show_children'] == 'true'){
-    include __DIR__ . '/../../../../wp-load.php';
-    $cptaNumber = $paged = absint($_POST['number']);
-    $prev_click = $_POST['prev'];
-    $cptaLimit  = $_POST['limit'];
-    $cptaType = $_POST['post_type'];
-    if( $cptaNumber == "1" ){
-        $cptaOffsetValue = "0";
-        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'post_status' => 'publish');
-    }else{
-        $cptaOffsetValue = ($cptaNumber-1)*$cptaLimit;
-        $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'offset' => $cptaOffsetValue,'post_status' => 'publish');
-    }
-    $cptaQuery = new WP_Query( $args );
-    $html = "";
-    if( isset($cptaQuery->posts) ){ ?>
-        <div class='children-wrapper'>
-            <div class="preloader"></div>
-            <?php for($i=0;$i<sizeof($cptaQuery->posts);++$i){
-                    $post_id = $cptaQuery->posts[$i]->ID;
-                    $thumbnail = get_the_post_thumbnail_url($post_id);
-                    $child_age = get_post_meta($post_id, 'child_age', true);
-                    $help_amount = get_post_meta($post_id, 'help_amount', true);
-                    $kind_of_help = get_post_meta($post_id, 'kind_of_help', true);
-                    $region = get_post_meta($post_id, 'region', true);
-                    $review_content = $cptaQuery->posts[$i]->post_content;
-                    $review_title = $cptaQuery->posts[$i]->post_title;
-                    ?>
-                    <!-- One-child -->
-                    <div class="child">
-                        <div class="child-top">
-                            <div class="child-photo"><img src="<?php echo $thumbnail; ?>"></div>
-                            <div class="child-info">
-                                <p class="child-name-and-age">
-                                    <span class="child-name"><?php echo $review_title; ?></span>
-                                    <span>,</span>
-                                    <span class="child-age"><?php echo $child_age; ?></span>
-                                    <span>,</span>
-                                </p>
-                                <p class="child-region">
-                                    <?php echo $region; ?>
-                                </p>
-                            </div><!-- end child-info -->
-                        </div><!-- end child-top -->
-                        <div class="child-bottom">
-                            <?php echo $review_content; ?> Сума
-                            допомоги – <span class="help-amount"><?php echo $help_amount; ?></span><span class="kind-of-help"> <?php echo $kind_of_help; ?></span> .
-                        </div>
-                    </div><!-- end one-child  -->
-                <?php } ?>
-        </div>
-        <?php wp_reset_postdata(); ?>
-        <div class="pagination-children">
-            <?php
-            $cpta_args = array('posts_per_page' => -1,'post_type' => $cptaType,'post_status' => 'publish');
-            $cpta_Query = new WP_Query( $cpta_args );
-            $cpta_Count = count($cpta_Query->posts);
-            $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
-            $last = ceil( $cpta_Paginationlist );
-            $adjacents = "2";
-            if ( $paged == 1 ) {$prev = 1;} else{$prev = $paged - 1;}
-            if ( $paged == $last ) {$next = $last;} else{$next = $paged + 1;}
-            if( $cpta_Paginationlist > 0 ){ ?>
-                <ul class='list-cptapagination'>
-                    <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                    <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
-                    <?php
-                    $t = ceil($paged/6 )-1;
-                    $t2 = $t*6;
-                    for( $cpta=$t2+1; $cpta <= $t2+6; $cpta++){
-                        if ( $cpta > $last ) {
-                            continue;
-                        }
-                        if( $cpta == $paged ){ $active="active_review"; }else{ $active=""; }
-                        ?>
-                        <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"><?php echo $cpta;?></a></li>
-                    <?php } ?>
-                    <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta="<?php echo $next; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                    <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                </ul>
-                <?php if ( ($t2+1) == $last ) { ?>
-                    <div class="count_pages"><span class="paged_review"><?php echo $last; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
-                <?php } else if ( ($last - (($t2+1))) < 6 ) { ?>
-                    <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . $last; ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
-                <?php } else {?>
-                    <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . ($t2+6); ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
-                <?php } ?>
-            <?php } ?>
-        </div>
-        <?php
-        die();
-    }
-}
-
+add_shortcode('project_milestones', 'shortcode_milestones');
 function shortcode_milestones(){
     $post = get_post();
     $post_id = $post->ID;
@@ -195,10 +21,10 @@ function shortcode_milestones(){
     <div class="milestones_tabs proj-timeline">
         <!-- Top part: heared and orange right banner  -->
         <div class="proj-timeline-top">
-            <h2 class="h2-header-line">Таймлайн проекту</h2>
+            <h2 class="h2-header-line"><?php pll_e( 'Таймлайн проекту');?></h2>
             <div class="proj-timeline-info">
                 <div class="proj-timeline-info-left">
-                    <p class="left-to-collect-text">Залишилось  зiбрати:</p>
+                    <p class="left-to-collect-text"><?php pll_e( 'Залишилось  зiбрати:');?></p>
                     <p class="left-to-collect-wrapper">
                         <span class="left-to-collect-amount"><?php echo $last_to_collect; ?> </span>
                         <span>грн.</span>
@@ -206,10 +32,10 @@ function shortcode_milestones(){
                 </div><!-- end proj-timeline-info-left -->
                 <div class="proj-timeline-info-right">
                     <a href="#" class="proj-timeline-help">
-                        <span class="proj-timeline-help-text">Допомогти</span>
+                        <span class="proj-timeline-help-text"><?php pll_e( 'Допомогти');?></span>
                     </a>
                     <a href="#" class="proj-timeline-share">
-                        <span class="proj-timeline-share-text">Поширити у</span>
+                        <span class="proj-timeline-share-text"><?php pll_e( 'Поширити у');?></span>
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>
                 </div><!-- end proj-timeline-info-right -->
@@ -253,9 +79,9 @@ function shortcode_milestones(){
                         </div>
                         <div class="one-step-money">
                             <?php if ( $class == 'in-progress' ) { ?>
-                                <span class="one-step-money-text">Залишилось</span>
+                                <span class="one-step-money-text"><?php pll_e( 'Залишилось');?></span>
                                 <span class="money-left-to-collect"> <?php echo $total_collected; ?></span>
-                                <span class="one-step-money-text">з</span>
+                                <span class="one-step-money-text"><?php pll_e( 'з');?></span>
                             <?php } ?>
                             <span class="project-total-cost"><?php echo $item["milestone-amount"]; ?></span>
                             <span>грн.</span>
@@ -307,8 +133,8 @@ function shortcode_milestones(){
     $html = ob_get_clean();
     return $html;
 }
-add_shortcode('project_milestones', 'shortcode_milestones');
 
+add_shortcode('project_banner', 'shortcode_project_banner');
 function shortcode_project_banner(){
     $post = get_post();
     $post_id = $post->ID;
@@ -316,6 +142,7 @@ function shortcode_project_banner(){
     $total_amount = (int) get_field("total-amount", $post_id);
     $progress_bar = (int) $total_collected * 100 / (int) $total_amount;
     $general_image = get_field("general-project-image", $post_id);
+    $symbol = check_currency();
     ob_start();
     ?>
     <!-- ONE PROJECT BANNER -->
@@ -325,7 +152,7 @@ function shortcode_project_banner(){
         </div>
         <div class="container_24 container_24-project-page" id="content-container">
             <div class="one-project-banner-inner">
-                <div class="one-project-title">Проекти</div>
+                <div class="one-project-title"><?php pll_e( 'Проекти');?></div>
                 <div class="one-project-info">
                     <p class="one-project-info-title">
                         <?php echo $post->post_title; ?>
@@ -337,10 +164,10 @@ function shortcode_project_banner(){
                 <div class="one-project-progress">
                     <div class="one-project-progress-top">
                         <p class="project-money">
-                            <span class="project-money-quantity"><span class="project-money-quantity-inner"><?php echo $total_collected; ?></span><span> грн.</span></span>
-                            <span class="project-money-involved">залучено</span>
+                            <span class="project-money-quantity"><span class="project-money-quantity-inner"><?php echo $total_collected; ?></span><span> <?php echo $symbol; ?></span></span>
+                            <span class="project-money-involved"><?php pll_e( 'залучено');?></span>
                         </p>
-                        <p class="project-money-collected"><span class="project-money-collected-inner"><?php echo $total_amount; ?></span><span> грн.</span></p>
+                        <p class="project-money-collected"><span class="project-money-collected-inner"><?php echo $total_amount; ?></span><span> <?php echo $symbol; ?></span></p>
                     </div>
                     <div class="one-project-progress-bottom">
                         <div class="progress-bar">
@@ -352,11 +179,11 @@ function shortcode_project_banner(){
                 <div class="help-and-share">
                     <p class="help-link">
                         <a href="#" class="one-project-help">
-                            <span>Допомогти</span>
+                            <span><?php pll_e( 'Допомогти');?></span>
                         </a>
                     </p>
                     <a href="#" class="share">
-                        <span class="one-project-share">Подiлитися</span>
+                        <span class="one-project-share"><?php pll_e( 'Подiлитися');?></span>
                         <span class="one-project-socials">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
                             </span>
@@ -369,8 +196,8 @@ function shortcode_project_banner(){
     $html = ob_get_clean();
     return $html;
 }
-add_shortcode('project_banner', 'shortcode_project_banner');
 
+add_shortcode('zaporuka_help_form', 'shortcode_orange_help_form');
 function shortcode_orange_help_form(){
     $options = get_option('ThemeOptions');
     $become_partner = !empty($options['become_partner_' . ICL_LANGUAGE_CODE]) ? $options['become_partner_' . ICL_LANGUAGE_CODE] : false;
@@ -444,7 +271,6 @@ function shortcode_orange_help_form(){
     return $html;
 
 }
-add_shortcode('zaporuka_help_form', 'shortcode_orange_help_form');
 
 add_filter( 'vc_grid_item_shortcodes', 'my_module_add_grid_shortcodes' );
 function my_module_add_grid_shortcodes( $shortcodes ) {
@@ -458,25 +284,25 @@ function my_module_add_grid_shortcodes( $shortcodes ) {
 
     return $shortcodes;
 }
-// output function
 
 add_shortcode( 'vc_custom_post_meta', 'vc_custom_post_meta_render' );
 function vc_custom_post_meta_render() {
 
     $total_collected_timeline = "{{ post_meta_value:total-collected }}";
     $total_amount_timeline = '{{ post_data:total-amount }}';
+    $symbol = check_currency();
     ob_start();
     ?>
     <div class="one-project-progress-wrapper">
         <div>
-            <span class="project-money-involved">залучено</span>
+            <span class="project-money-involved"><?php pll_e( 'залучено');?></span>
         </div>
         <div class="one-project-progress">
             <div class="one-project-progress-top">
                 <p class="project-money">
-                    <span class="project-money-quantity"><span class="project-money-quantity-inner"><?php echo $total_collected_timeline; ?></span><span> грн.</span></span>
+                    <span class="project-money-quantity"><span class="project-money-quantity-inner"><?php echo $total_collected_timeline; ?></span><span> <?php echo $symbol; ?></span></span>
                 </p>
-                <p class="project-money-collected"><span class="project-money-collected-inner"><?php echo $total_amount_timeline; ?></span><span> грн.</span></p>
+                <p class="project-money-collected"><span class="project-money-collected-inner"><?php echo $total_amount_timeline; ?></span><span> <?php echo $symbol; ?></span></p>
             </div>
             <div class="one-project-progress-bottom">
                 <div class="progress-bar">
@@ -508,13 +334,13 @@ function zaporuka_photo_video_doc(){
     <div class="sliders-tabs">
         <div class="sliders-tabs-wrapper">
             <div class="one-tab-link tab-active" data-id="1">
-                Фотографiї
+                <?php pll_e( 'Фотографiї');?>
             </div>
             <div class="one-tab-link" data-id="2">
-                Вiдео
+                <?php pll_e( 'Вiдео');?>
             </div>
             <div class="one-tab-link" data-id="3">
-                Супутнi документи
+                <?php pll_e( 'Супутнi документи');?>
             </div>
         </div>
         <div class="proj-milestone-desc-block">
@@ -583,77 +409,76 @@ function vc_post_content_render() {
 
 add_shortcode( 'custom_testimonials_pro', 'vc_testimonials_content' );
 function vc_testimonials_content(){
-        $new_query = new WP_Query();
-        $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;
-        $new_query->query('post_type=reviews&showposts=2'.'&paged='.$paged);
-        ob_start();
-        ?>
-        <!------------
-            REVIEWS
-         ------------->
-        <div class="reviews-block">
-            <div class="reviews-wrapper">
-                <div class="preloader"></div>
-                <?php
-                for($i=0;$i<sizeof($new_query->posts);++$i){
-                    $post_id = $new_query->posts[$i]->ID;
-                    $name =  $new_query->posts[$i]->post_title;
-                    $region = get_post_meta($post_id, 'region', true);
-                    $review_content = $new_query->posts[$i]->post_content;
-                    ?>
-                    <div class="reviews-item">
-                        <div class="reviews-item-title">
-                            <p><?php echo $name; ?></p>
-                            <p><?php echo $region; ?></p>
-                        </div>
-                        <div class="reviews-item-text">
-                            <p><?php echo $review_content; ?></p>
-                        </div><!-- end reviews-item-text -->
-                    </div><!-- end reviews-item -->
-                <?php } ?>
-            </div><!-- end reviews-wrapper -->
-            <?php wp_reset_postdata(); ?>
-            <div class="pagination-block">
-                <?php
-                $cpta_args = array('posts_per_page' => -1,'post_type' => 'reviews','post_status' => 'publish');
-                $cptaLimit = 2;
-                $cptaType = 'reviews';
-                $cpta_Query = new WP_Query( $cpta_args );
-                $cpta_Count = count($cpta_Query->posts);
-                $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
-                $last = ceil( $cpta_Paginationlist );
-                if( $cpta_Paginationlist > 0 ){ ?>
-                    <ul class='list-cptapagination'>
-                        <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
-                            <?php
-                            $t = ceil($paged/6 )-1;
-                            $t2 = $t*6;
-                            for( $cpta=$t2+1; $cpta <= $t2+6; $cpta++){
-                                if ( $cpta > $last ) {
-                                    continue;
-                                }
-                                if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; }
-                                ?>
-                                <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"><?php echo $cpta;?></a></li>
-                            <?php } ?>
-                        <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta='2' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                        <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                    </ul>
-                    <?php if ( ($t2+1) == $last ) { ?>
-                        <div class="count_pages"><span class="paged_review"><?php echo $last; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
-                    <?php } else if ( ($last - (($t2+1))) < 6 ) { ?>
-                        <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . $last; ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
-                    <?php } else {?>
-                        <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . ($t2+6); ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
-                    <?php  } ?>
-                <?php } ?>
-            </div>
+    $new_query = new WP_Query();
+    $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;
+    $new_query->query('post_type=reviews&showposts=2'.'&paged='.$paged);
+    ob_start();
+    ?>
+    <!------------
+        REVIEWS
+    ------------->
+    <div class="reviews-block">
+        <div class="reviews-wrapper">
+            <div class="preloader"></div>
+            <?php
+            for($i=0;$i<sizeof($new_query->posts);++$i){
+                $post_id = $new_query->posts[$i]->ID;
+                $name =  $new_query->posts[$i]->post_title;
+                $region = get_post_meta($post_id, 'region', true);
+                $review_content = $new_query->posts[$i]->post_content;
+                ?>
+                <div class="reviews-item">
+                    <div class="reviews-item-title">
+                        <p><?php echo $name; ?></p>
+                        <p><?php echo $region; ?></p>
+                    </div>
+                    <div class="reviews-item-text">
+                        <p><?php echo $review_content; ?></p>
+                    </div><!-- end reviews-item-text -->
+                </div><!-- end reviews-item -->
+            <?php } ?>
+        </div><!-- end reviews-wrapper -->
+        <?php wp_reset_postdata(); ?>
+        <div class="pagination-block">
+            <?php
+            $cpta_args = array('posts_per_page' => -1,'post_type' => 'reviews','post_status' => 'publish');
+            $cptaLimit = 2;
+            $cptaType = 'reviews';
+            $cpta_Query = new WP_Query( $cpta_args );
+            $cpta_Count = count($cpta_Query->posts);
+            $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
+            $last = ceil( $cpta_Paginationlist );
+            if( $cpta_Paginationlist > 0 ){ ?>
+                <ul class='list-cptapagination'>
+                    <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
+                    <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
+                    <?php
+                    $t = ceil($paged/6 )-1;
+                    $t2 = $t*6;
+                    for( $cpta=$t2+1; $cpta <= $t2+6; $cpta++){
+                        if ( $cpta > $last ) {
+                            continue;
+                        }
+                        if( $cpta ==  $paged ){ $active="active_review"; }else{ $active=""; } ?>
+                        <li><a href='' id='post' class="<?php echo $active;?>" data-cpta="<?php echo $cpta;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"><?php echo $cpta;?></a></li>
+                    <?php } ?>
+                    <li class='pagitext'><a href='' class='step-next step-arrow' data-cpta='2' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
+                    <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
+                </ul>
+                <?php if ( ($t2+1) == $last ) { ?>
+                    <div class="count_pages"><span class="paged_review"><?php echo $last; ?></span> <?php pll_e( 'сторiнка з');?> <span class="paged_review"><?php echo $last; ?></span></div>
+                <?php } else if ( ($last - (($t2+1))) < 6 ) { ?>
+                    <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . $last; ?></span> <?php pll_e( 'сторiнка з');?> <span class="paged_review"><?php echo $last; ?></span></div>
+                <?php } else {?>
+                    <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . ($t2+6); ?></span> <?php pll_e( 'сторiнка з');?> <span class="paged_review"><?php echo $last; ?></span></div>
+                <?php  } ?>
+            <?php } ?>
         </div>
-        <?php
-        $html = ob_get_clean();
-        return $html;
-    }
+    </div>
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
 
 add_shortcode( 'about_video_button', 'about_video_button' );
 function about_video_button() {
@@ -665,13 +490,14 @@ function about_video_button() {
                 href="<?php echo $about_video; ?>"
                 target="_blank"
                 class="thumbnail">
-            Дивитись вiдео
+            <?php pll_e( 'Дивитись вiдео');?>
         </a>
     </div>
     <?php
     $html = ob_get_clean();
     return $html;
 }
+
 add_shortcode( 'shortcode_list_of_reports', 'list_of_reports' );
 function list_of_reports() {
     $args = array(
@@ -710,24 +536,21 @@ function list_of_reports() {
                                 <a href="<?php echo $report['report_file']; ?>" download>
                                     <div class="report_text">
                                         <p class="report_title"><?php echo $report['report_title']; ?></p>
-                                        <p class="report_download">Завантажити</p>
+                                        <p class="report_download"><?php pll_e( 'Завантажити');?></p>
                                     </div>
                                 </a>
                             </div>
-
                         <?php } ?>
                     </div>
                 </div>
-
-
             <?php } ?>
         </div>
-
     </div>
     <?php }
     $html = ob_get_clean();
     return $html;
 }
+
 add_shortcode( 'shortcode_list_of_children', 'list_of_children' );
 function list_of_children() {
     $new_query = new WP_Query();
@@ -767,8 +590,7 @@ function list_of_children() {
                     </div><!-- end child-info -->
                 </div><!-- end child-top -->
                 <div class="child-bottom">
-                    <?php echo $review_content; ?> Сума
-                    допомоги – <span class="help-amount"><?php echo $help_amount; ?></span><span class="kind-of-help"> <?php echo $kind_of_help; ?></span> .
+                    <?php echo $review_content; ?> <?php pll_e( 'Сума допомоги');?> – <span class="help-amount"><?php echo $help_amount; ?></span><span class="kind-of-help"> <?php echo $kind_of_help; ?></span> .
                 </div>
             </div><!-- end one-child  -->
             <?php } ?>
@@ -802,11 +624,11 @@ function list_of_children() {
                     <li class='pagitext'><a href='' class='step-forward step-arrow' data-cpta="<?php echo $last;?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
                 </ul>
                 <?php if ( ($t2+1) == $last ) { ?>
-                    <div class="count_pages"><span class="paged_review"><?php echo $last; ?></span> сторiнка з <span class="paged_review"><?php echo $last; ?></span></div>
+                    <div class="count_pages"><span class="paged_review"><?php echo $last; ?></span> <?php pll_e( 'сторiнка з');?> <span class="paged_review"><?php echo $last; ?></span></div>
                 <?php } else if ( ($last - (($t2+1))) < 6 ) { ?>
-                    <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . $last; ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
+                    <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . $last; ?></span> <?php pll_e( 'сторiнка з');?> <span class="paged_review"><?php echo $last; ?></span></div>
                 <?php } else {?>
-                    <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . ($t2+6); ?></span> сторiнки з <span class="paged_review"><?php echo $last; ?></span></div>
+                    <div class="count_pages"><span class="paged_review"><?php echo ($t2+1) . '-' . ($t2+6); ?></span> <?php pll_e( 'сторiнка з');?> <span class="paged_review"><?php echo $last; ?></span></div>
                 <?php  } ?>
             <?php } ?>
         </div>
@@ -817,7 +639,6 @@ function list_of_children() {
     $html = ob_get_clean();
     return $html;
 }
-
 
 class section_post_info_class extends WPBakeryShortCode {
     // Element Init
@@ -905,6 +726,7 @@ function shortcode_post_photo_gallery(){
     $html = ob_get_clean();
     return $html;
 }
+
 add_shortcode( 'shortcode_donors_gallery', 'shortcode_donory_gallery' );
 function shortcode_donory_gallery(){
     $donors_array = get_posts( array(
@@ -942,6 +764,7 @@ function shortcode_donory_gallery(){
     $html = ob_get_clean();
     return $html;
 }
+
 add_shortcode( 'shortcode_awards_slider', 'shortcode_awards_slider' );
 function shortcode_awards_slider(){
     $awards_array = get_posts( array(
