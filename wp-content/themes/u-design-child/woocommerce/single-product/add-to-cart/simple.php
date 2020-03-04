@@ -50,17 +50,17 @@ if ( $product->is_in_stock() ) : ?>
 
 			<a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'> 
 				<span class="one-project-share">
-						<?php
-							if(ICL_LANGUAGE_CODE=='uk'){
-								echo 'Подiлитися';
-							}
-							elseif(ICL_LANGUAGE_CODE=='ru'){
-								echo 'Поделиться';
-							}
-							elseif(ICL_LANGUAGE_CODE=='en'){
-								echo 'Share';
-							}
-						?>
+                    <?php
+                    if(ICL_LANGUAGE_CODE=='uk'){
+                        echo 'Подiлитися';
+                    }
+                    elseif(ICL_LANGUAGE_CODE=='ru'){
+                        echo 'Поделиться';
+                    }
+                    elseif(ICL_LANGUAGE_CODE=='en'){
+                        echo 'Share';
+                    }
+                    ?>
 				</span> 
 				<span class="one-project-socials">
 					<i class="fa fa-facebook" aria-hidden="true"></i>
