@@ -9,6 +9,7 @@ function shortcode_milestones(){
     $total_amount = (int) get_field("total-amount", $post_id);
     $last_to_collect = $total_amount - $total_collected;
     $milestone_name_active = '';
+    $symbol = check_currency();
     $i = 0;
     foreach ($value as $item) {
         $finished = ( $total_collected  >= (int) $item["milestone-amount"] ) ? 'finished' : '';
@@ -27,7 +28,7 @@ function shortcode_milestones(){
                     <p class="left-to-collect-text"><?php pll_e( 'Залишилось  зiбрати:');?></p>
                     <p class="left-to-collect-wrapper">
                         <span class="left-to-collect-amount"><?php echo $last_to_collect; ?> </span>
-                        <span>грн.</span>
+                        <span><?php echo $symbol; ?>></span>
                     </p>
                 </div><!-- end proj-timeline-info-left -->
                 <div class="proj-timeline-info-right">
@@ -84,7 +85,7 @@ function shortcode_milestones(){
                                 <span class="one-step-money-text"><?php pll_e( 'з');?></span>
                             <?php } ?>
                             <span class="project-total-cost"><?php echo $item["milestone-amount"]; ?></span>
-                            <span>грн.</span>
+                            <span><?php echo $symbol; ?></span>
                         </div><!-- end one-step-money -->
                     </div><!-- end one-step-timeline-wrapper -->
                 </div><!-- end proj-timeline-one-step -->
