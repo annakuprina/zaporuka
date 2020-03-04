@@ -88,6 +88,54 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
 }
 add_shortcode('help_form', 'shortcode_help_form');
 
+
+function shortcode_cancel_subscription_form(){
+$options = get_option('ThemeOptions');
+$cancel_subscription_form_title = !empty($options['cancel_subscription_form_title_block_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_form_title_block_' . ICL_LANGUAGE_CODE] : 'Відмінити регулярний платіж';
+$FIO_label = !empty($options['name_help_block_' . ICL_LANGUAGE_CODE]) ? $options['name_help_block_' . ICL_LANGUAGE_CODE] : 'ПIП';
+$phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $options['phone_help_block_' . ICL_LANGUAGE_CODE] : 'Телефон';
+$cancel_subscription_form_submit_button = !empty($options['cancel_subscription_form_submit_button_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_form_submit_button_' . ICL_LANGUAGE_CODE] : 'Відмінити';
+
+
+
+	ob_start();
+	?>
+  <div class="help_form_wrapper">
+  	<div class="help-form-inner-wrapper">
+  	   <div class="help-form-inner-title">
+			<?php echo $cancel_subscription_form_title; ?>
+  	   </div>
+	   <form action="" method="POST" class="help_form cancel_subscription_form">
+		    <div class="help-form-PIB">
+	    		<input  class="textarea-full" type="text" name="fio" value=""  placeholder="<?php echo $FIO_label; ?>" required/>
+	    	</div>
+		    <div class="help-form-email-tel">
+		    	<div class="help-form-amount-email">
+		    		<input  class="textarea-small" type="email" name="mail" value=""  placeholder="Email" required/>
+		    	</div>
+		    	<div class="help-form-amount-tel">
+		    		<input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
+		    	</div>
+		    </div>
+	    	<div class="help-form-submit-oferta">
+	    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $cancel_subscription_form_submit_button; ?>" /></div>
+	    	 	<div class="help-form-oferta">
+	    	 		<input type="checkbox" id="oferta" name="oferta" required>
+	  				<label for="oferta"><?php echo $agree_help_label; ?> <a href="<?php echo $agree_link; ?>" target="_blank" ><?php echo $agree_link_label; ?></a>*</label>
+	    	 	</div>
+	    	</div>
+
+		</form>
+      </div>
+  </div>
+	<?php
+	$html = ob_get_clean();
+	return $html;
+
+}
+add_shortcode('cancel_subscription_form', 'shortcode_cancel_subscription_form');
+
+
 /* one project for home page */
 function shortcode_project_for_home(  ){
 	ob_start();
