@@ -292,8 +292,10 @@ function vc_custom_post_meta_render() {
     $total_collected_timeline = "{{ post_meta_value:total-collected }}";
     $total_amount_timeline = '{{ post_data:total-amount }}';
     $symbol = check_currency();
+    //
     ob_start();
     ?>
+
     <div class="one-project-progress-wrapper">
         <div>
             <span class="project-money-involved"><?php pll_e( 'залучено');?></span>
