@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
   $(document).on('click', '.pagination-block a', function(e) {
     e.preventDefault();
     var nth  = $(this).attr('data-cpta');
-    var ajax_url = '/wp-content/themes/u-design-child/inc/custom_functions.php';
+    var ajax_url = '/wp-content/themes/u-design-child/inc/custom_ajax.php';
     var prev = $(this).attr('data-prev');
     var post_type = $(this).attr('data-type');
     var limit = $(this).attr('data-limit');
@@ -80,7 +80,7 @@ jQuery(document).ready(function($) {
   $(document).on('click', '.pagination-children a', function(e) {
     e.preventDefault();
     var nth  = $(this).attr('data-cpta');
-    var ajax_url = '/wp-content/themes/u-design-child/inc/custom_functions.php';
+    var ajax_url = '/wp-content/themes/u-design-child/inc/custom_ajax.php';
     var prev = $(this).attr('data-prev');
     var post_type = $(this).attr('data-type');
     var limit = $(this).attr('data-limit');
