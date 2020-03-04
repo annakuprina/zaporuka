@@ -50,7 +50,7 @@ jQuery(document).ready(function($) {
     });
   };
   countProgress();
-  setTimeout(countProgress, 1000);
+  setTimeout(countProgress, 2000);
   $(".other-projects-single-project .vc_pageable-slide-wrapper").slick({
     dots: true,
     arrows: false,
