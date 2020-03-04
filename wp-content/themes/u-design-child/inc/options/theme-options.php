@@ -466,7 +466,7 @@ function setup_framework_options(){
             array(
                 'id' => 'placeholders',
                 'type' => 'info',
-                'desc' => __('Placeholders', 'nhp-opts')
+                'desc' => __('Форма помощи', 'nhp-opts')
             ),
             array(
                 'id' => 'title_help_block_uk',
@@ -646,6 +646,42 @@ function setup_framework_options(){
                 'id' => 'agree_link_block_en',
                 'type' => 'text',
                 'title' => __('Оферта согласен текст ссылка(en)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'cancel_subscription_text_block_uk',
+                'type' => 'text',
+                'title' => __('текст ссылки(ua) "Отменить подписку"', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'cancel_subscription_text_block_ru',
+                'type' => 'text',
+                'title' => __('текст ссылки(ru) "Отменить подписку"', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'cancel_subscription_text_block_en',
+                'type' => 'text',
+                'title' => __('текст ссылки(en) "Отменить подписку"', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'cancel_subscription_link_block_uk',
+                'type' => 'text',
+                'title' => __('ссылка(ua) "Отменить подписку"', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'cancel_subscription_link_block_ru',
+                'type' => 'text',
+                'title' => __('ссылка(ru) "Отменить подписку"', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'cancel_subscription_link_block_en',
+                'type' => 'text',
+                'title' => __('ссылка(en) "Отменить подписку"', 'nhp-opts'),
                 'std' => __('', 'nhp-opts'),
             ),
         )
