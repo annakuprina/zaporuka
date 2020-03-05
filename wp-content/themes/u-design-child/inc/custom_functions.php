@@ -813,6 +813,7 @@ function shortcode_thanks_block(){
     $table_liqpay = $table_prefix . 'liqpay';
     $sql = "SELECT order_id, summa FROM {$table_liqpay} WHERE status = 'success' LIMIT 1";
     $res = $wpdb->get_row($sql);
+    var_dump($res);
     if (isset($res)) {
         $order_id_md5 = $res->order_id;
         $order_sum = $res->summa  . check_currency();
