@@ -327,6 +327,17 @@ jQuery(document).ready(function($) {
 
 
   $('.cancel_subscription_form').submit(function(e){
+    $.ajax({
+          type: 'POST',
+          dataType: 'json',
+          url: MyAjax.ajaxurl,
+          data: { 
+              'action': 'send_cancel_subscription_email'
+          },
+          success: function(data){
+            $('.help_form_wrapper .cansel-message').show();
+          }
+      });
     e.preventDefault();
   });
 

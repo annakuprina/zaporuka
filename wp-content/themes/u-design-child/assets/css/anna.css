@@ -1085,6 +1085,13 @@ footer a.designer-link {
   color: rgba(165, 165, 165, 0.8);
   font-size: 14px;
 }
+.help_form_wrapper .cansel-message{
+  display: none;
+  max-width: 503px;
+  color: #e78b48;
+  font-weight: 700;
+}
+.help-form-inner-wrapper .cancel_subscription_form .help-form-submit-oferta{padding-bottom: 0;}
 input[type="checkbox"]:checked,
 input[type="checkbox"]:not(:checked) {
   position: absolute;

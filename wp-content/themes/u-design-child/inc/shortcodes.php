@@ -90,7 +90,6 @@ add_shortcode('help_form', 'shortcode_help_form');
 function shortcode_cancel_subscription_form(){
 $options = get_option('ThemeOptions');
 $cancel_subscription_form_title = !empty($options['cancel_subscription_form_title_block_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_form_title_block_' . ICL_LANGUAGE_CODE] : 'Відмінити регулярний платіж';
-$FIO_label = !empty($options['name_help_block_' . ICL_LANGUAGE_CODE]) ? $options['name_help_block_' . ICL_LANGUAGE_CODE] : 'ПIП';
 $phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $options['phone_help_block_' . ICL_LANGUAGE_CODE] : 'Телефон';
 $cancel_subscription_form_submit_button = !empty($options['cancel_subscription_form_submit_button_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_form_submit_button_' . ICL_LANGUAGE_CODE] : 'Відмінити';
 $FIO_label = !empty($options['name_help_block_' . ICL_LANGUAGE_CODE]) ? $options['name_help_block_' . ICL_LANGUAGE_CODE] : 'ПIП';
@@ -99,29 +98,39 @@ $phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $opti
 
 	ob_start();
 	?>
-  <div class="help_form_wrapper">
-  	<div class="help-form-inner-wrapper">
-  	   <div class="help-form-inner-title">
-			<?php echo $cancel_subscription_form_title; ?>
-  	   </div>
-	   <form action="" method="POST" class="help_form cancel_subscription_form">
-		    <div class="help-form-PIB">
-	    		<input  class="textarea-full" type="text" name="fio" value=""  placeholder="<?php echo $FIO_label; ?>" required/>
-	    	</div>
-		    <div class="help-form-email-tel">
-		    	<div class="help-form-amount-email">
-		    		<input  class="textarea-small" type="email" name="mail" value=""  placeholder="Email" required/>
+	  <div class="help_form_wrapper">
+	  	<div class="help-form-inner-wrapper">
+	  	   <div class="help-form-inner-title">
+				<?php echo $cancel_subscription_form_title; ?>
+	  	   </div>
+		   <form action="" method="POST" class="help_form cancel_subscription_form">
+			    <div class="help-form-email-tel">
+			    	<div class="help-form-amount-email">
+			    		<input  class="textarea-small" type="email" name="mail" value=""  placeholder="Email" required/>
+			    	</div>
+			    	<div class="help-form-amount-tel">
+			    		<input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
+			    	</div>
+			    </div>
+		    	<div class="help-form-submit-oferta">
+		    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $cancel_subscription_form_submit_button; ?>" /></div>
 		    	</div>
-		    	<div class="help-form-amount-tel">
-		    		<input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
-		    	</div>
-		    </div>
-	    	<div class="help-form-submit-oferta">
-	    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $cancel_subscription_form_submit_button; ?>" /></div>
-	    	</div>
-		</form>
-      </div>
-  </div>
+			</form>
+	      </div>
+	  </div>
+	  <div class="cansel-message">
+	  	<?php
+		if(ICL_LANGUAGE_CODE=='uk'){
+			echo "Для підтвердження скасування регулярного платежу, перевірте пошту та перейдіть за посиланням у листі";
+		}
+		elseif(ICL_LANGUAGE_CODE=='ru'){
+			echo "Для подтверждения отмены регулярного платежа, проверьте почту и перейдите по ссылке в письме";
+		}
+		elseif(ICL_LANGUAGE_CODE=='en'){
+			echo "To confirm the cancel subscription, check your mail and follow the link in the email";
+		}
+	  	?>
+	  </div>
 	<?php
 	$html = ob_get_clean();
 	return $html;
@@ -389,3 +398,31 @@ function shortcode_social_icons (  ) {
     return $html;
 }
 add_shortcode('social_icons', 'shortcode_social_icons');
+
+
+
+add_action( 'wp_ajax_send_cancel_subscription_email', 'send_cancel_subscription_email_function' );
+add_action( 'wp_ajax_nopriv_send_cancel_subscription_email', 'send_cancel_subscription_email_function' );
+
+function send_cancel_subscription_email_function() { 
+    $user_mail = sanitize_text_field( $_POST['mail'] );
+    $user_phone = sanitize_text_field( $_POST['phone'] );
+
+    $mail_body = "Тестовое письмо пока что без проверок\r\n";
+    $mail_body .= 'Phone = ' . $user_phone . "\r\n";
+    $mail_body .= 'Mail = ' . $user_mail;
+
+    send_notification($user_mail,'Отмена регулярного платежа',);
+    exit( json_encode( array( 'result' => 'true' ) ) );
+   
+}
+
+
+function send_notification( $to, $subject, $mail_body ) {
+	$admin_email = get_option( 'admin_email' );
+	$headers  = 'MIME-Version: 1.0' . "\r\n";
+	$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+    $headers .= 'From: БФ "Запорука" <' . $admin_email . '>' . "\r\n";    
+	$mail_sending_result = wp_mail( $to, $subject, $mail_body, $headers );
+	return $mail_sending_result;
+}
