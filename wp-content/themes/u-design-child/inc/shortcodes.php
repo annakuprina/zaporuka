@@ -15,7 +15,6 @@ $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $optio
 $cancel_subscription_text_block = !empty($options['cancel_subscription_text_block_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_text_block_' . ICL_LANGUAGE_CODE] : 'Відмінити регулярний платіж';
 $cancel_subscription_link_block = !empty($options['cancel_subscription_link_block_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_link_block_' . ICL_LANGUAGE_CODE] : '#';
 
-
 	ob_start();
 	?>
   <div class="help_form_wrapper">
@@ -84,7 +83,6 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
 	<?php
 	$html = ob_get_clean();
 	return $html;
-
 }
 add_shortcode('help_form', 'shortcode_help_form');
 
@@ -95,7 +93,8 @@ $cancel_subscription_form_title = !empty($options['cancel_subscription_form_titl
 $FIO_label = !empty($options['name_help_block_' . ICL_LANGUAGE_CODE]) ? $options['name_help_block_' . ICL_LANGUAGE_CODE] : 'ПIП';
 $phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $options['phone_help_block_' . ICL_LANGUAGE_CODE] : 'Телефон';
 $cancel_subscription_form_submit_button = !empty($options['cancel_subscription_form_submit_button_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_form_submit_button_' . ICL_LANGUAGE_CODE] : 'Відмінити';
-
+$FIO_label = !empty($options['name_help_block_' . ICL_LANGUAGE_CODE]) ? $options['name_help_block_' . ICL_LANGUAGE_CODE] : 'ПIП';
+$phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $options['phone_help_block_' . ICL_LANGUAGE_CODE] : 'Телефон';
 
 
 	ob_start();

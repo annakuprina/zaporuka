@@ -35,7 +35,9 @@ function shortcode_milestones(){
                     <a href="#" class="proj-timeline-help">
                         <span class="proj-timeline-help-text"><?php pll_e( 'Допомогти');?></span>
                     </a>
+
                     <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )' class="proj-timeline-share">
+
                         <span class="proj-timeline-share-text"><?php pll_e( 'Поширити у');?></span>
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>
@@ -803,10 +805,12 @@ function shortcode_awards_slider(){
 
 add_shortcode( 'shortcode_thanks_block_pro', 'shortcode_thanks_block' );
 function shortcode_thanks_block(){
-//    if ( isset( $_POST['data'] ) ) {
+
+    if ( isset( $_POST['data'] ) ) {
         $result = json_decode(base64_decode($_POST['data']));
         var_dump($_POST);
-//    }
+     }
+
 
     ob_start();
     ?>
