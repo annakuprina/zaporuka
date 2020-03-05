@@ -812,7 +812,7 @@ function shortcode_thanks_block(){
     global $wpdb, $table_prefix;
     $table_liqpay = $table_prefix . 'liqpay';
     $sql = "SELECT order_id, summa FROM {$table_liqpay} WHERE status = 'success'";
-    $res = $wpdb->query($sql);
+    $res = $wpdb->row($sql);
     var_dump($res);
     if (isset($res)) {
         $order_id_md5 = $res->order_id;
