@@ -1,5 +1,9 @@
 <?php
-
+if (isset($_POST['data'])) {
+    $json = base64_decode($_POST['data']);
+    $obj = json_decode($json);
+    var_dump($obj);
+}
 add_shortcode('project_milestones', 'shortcode_milestones');
 function shortcode_milestones(){
     $post = get_post();
@@ -804,6 +808,7 @@ function shortcode_awards_slider(){
 add_shortcode( 'shortcode_thanks_block_pro', 'shortcode_thanks_block' );
 function shortcode_thanks_block(){
 //    if ( isset( $_POST['data'] ) ) {
+    $privat_key = 'sandbox_GOYIQuopPgKO564Gx8ItU89AUylwtZYwOJBBZWUo';
         $result = json_decode(base64_decode($_POST['data']));
         var_dump($_POST);
 //    }
