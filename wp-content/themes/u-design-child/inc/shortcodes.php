@@ -119,10 +119,6 @@ $cancel_subscription_form_submit_button = !empty($options['cancel_subscription_f
 		    </div>
 	    	<div class="help-form-submit-oferta">
 	    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $cancel_subscription_form_submit_button; ?>" /></div>
-	    	 	<div class="help-form-oferta">
-	    	 		<input type="checkbox" id="oferta" name="oferta" required>
-	  				<label for="oferta"><?php echo $agree_help_label; ?> <a href="<?php echo $agree_link; ?>" target="_blank" ><?php echo $agree_link_label; ?></a>*</label>
-	    	 	</div>
 	    	</div>
 
 		</form>
