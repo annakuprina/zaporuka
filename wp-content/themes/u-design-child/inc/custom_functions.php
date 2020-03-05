@@ -28,14 +28,14 @@ function shortcode_milestones(){
                     <p class="left-to-collect-text"><?php pll_e( 'Залишилось  зiбрати:');?></p>
                     <p class="left-to-collect-wrapper">
                         <span class="left-to-collect-amount"><?php echo $last_to_collect; ?> </span>
-                        <span><?php echo $symbol; ?>></span>
+                        <span><?php echo $symbol; ?></span>
                     </p>
                 </div><!-- end proj-timeline-info-left -->
                 <div class="proj-timeline-info-right">
                     <a href="#" class="proj-timeline-help">
                         <span class="proj-timeline-help-text"><?php pll_e( 'Допомогти');?></span>
                     </a>
-                    <a href="#" class="proj-timeline-share">
+                    <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
                         <span class="proj-timeline-share-text"><?php pll_e( 'Поширити у');?></span>
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>
@@ -65,7 +65,7 @@ function shortcode_milestones(){
                 } else{
                     $active_tab = '';
                 }
-            ?>
+                ?>
                 <!-- ONE STEP -->
                 <div class="proj-timeline-one-step <?php echo $class; ?> one-tab-link" data-id="<?php echo $i; ?>">
                     <!-- Hidden  timeline for mob version-->
@@ -193,7 +193,7 @@ function shortcode_project_banner(){
             </div><!-- end one-project-right -->
         </div>
     </div><!-- end one-project-banner -->
-<?php
+    <?php
     $html = ob_get_clean();
     return $html;
 }
@@ -221,7 +221,7 @@ function shortcode_orange_help_form(){
     $charity_shop_hover_link = !empty($options['charity_shop_hover_link_' . ICL_LANGUAGE_CODE]) ? $options['charity_shop_hover_link_' . ICL_LANGUAGE_CODE] : false;
 
     ob_start();
-?>
+    ?>
 
     <!---------HELP(orange blocks and contact form)---------->
     <div class="help">
@@ -229,41 +229,41 @@ function shortcode_orange_help_form(){
             <?php echo do_shortcode('[help_form]');?>
         </div><!-- end of help-left -->
         <div class="help-right">
-			<!-- One square -->
-			<div class="help-item">
-				<div class="help-item-title"><?php echo $become_partner; ?></div>
-				<div class="help-item-info">
-					<div class="help-item-deskr"><?php echo $become_partner_hover; ?></div>
-					<a href="<?php echo $become_partner_hover_link; ?>" class="help-item-link"><?php echo $become_partner_hover_link_text; ?></a>
-				</div>
-			</div><!-- end help-item -->
+            <!-- One square -->
+            <div class="help-item">
+                <div class="help-item-title"><?php echo $become_partner; ?></div>
+                <div class="help-item-info">
+                    <div class="help-item-deskr"><?php echo $become_partner_hover; ?></div>
+                    <a href="<?php echo $become_partner_hover_link; ?>" class="help-item-link"><?php echo $become_partner_hover_link_text; ?></a>
+                </div>
+            </div><!-- end help-item -->
 
-			<!-- One square -->
-			<div class="help-item">
-				<div class="help-item-title"><?php echo $become_volunteer; ?></div>
-				<div class="help-item-info">
-					<div class="help-item-deskr"><?php echo $become_volunteer_hover; ?></div>
-					<a href="<?php echo $become_volunteer_hover_link; ?>" class="help-item-link"><?php echo $become_volunteer_hover_link_text; ?></a>
-				</div>
-			</div><!-- end help-item -->
+            <!-- One square -->
+            <div class="help-item">
+                <div class="help-item-title"><?php echo $become_volunteer; ?></div>
+                <div class="help-item-info">
+                    <div class="help-item-deskr"><?php echo $become_volunteer_hover; ?></div>
+                    <a href="<?php echo $become_volunteer_hover_link; ?>" class="help-item-link"><?php echo $become_volunteer_hover_link_text; ?></a>
+                </div>
+            </div><!-- end help-item -->
 
-			<!-- One square -->
-			<div class="help-item">
-				<div class="help-item-title"><?php echo $help_by_sms; ?></div>
-				<div class="help-item-info">
-					<div class="help-item-deskr"><?php echo $help_by_sms_hover; ?></div>
-					<a href="#" class="help-item-link sms-popup-show"><?php echo $help_by_sms_hover_text_link; ?></a>
-				</div>
-			</div><!-- end help-item -->
+            <!-- One square -->
+            <div class="help-item">
+                <div class="help-item-title"><?php echo $help_by_sms; ?></div>
+                <div class="help-item-info">
+                    <div class="help-item-deskr"><?php echo $help_by_sms_hover; ?></div>
+                    <a href="#" class="help-item-link sms-popup-show"><?php echo $help_by_sms_hover_text_link; ?></a>
+                </div>
+            </div><!-- end help-item -->
 
-			<!-- One square -->
-			<div class="help-item">
-				<div class="help-item-title"><?php echo $charity_shop; ?></div>
-				<div class="help-item-info">
-					<div class="help-item-deskr"><?php echo $charity_shop_hover; ?></div>
-					<a href="<?php echo $charity_shop_hover_link; ?>" class="help-item-link"><?php echo $charity_shop_hover_link_text; ?></a>
-				</div>
-			</div><!-- end help-item -->
+            <!-- One square -->
+            <div class="help-item">
+                <div class="help-item-title"><?php echo $charity_shop; ?></div>
+                <div class="help-item-info">
+                    <div class="help-item-deskr"><?php echo $charity_shop_hover; ?></div>
+                    <a href="<?php echo $charity_shop_hover_link; ?>" class="help-item-link"><?php echo $charity_shop_hover_link_text; ?></a>
+                </div>
+            </div><!-- end help-item -->
 
         </div><!-- end of help-right -->
     </div><!-- end of help -->
@@ -320,6 +320,7 @@ function vc_custom_post_meta_render() {
     return $html;
 }
 
+add_shortcode( 'zaporuka_photo_video_doc', 'zaporuka_photo_video_doc' );
 function zaporuka_photo_video_doc(){
     $post = get_post();
     $post_id = $post->ID;
@@ -389,7 +390,6 @@ function zaporuka_photo_video_doc(){
     $html = ob_get_clean();
     return $html;
 }
-add_shortcode( 'zaporuka_photo_video_doc', 'zaporuka_photo_video_doc' );
 
 add_filter( 'vc_grid_item_shortcodes', 'my_module_add_grid_content_shortcodes' );
 function my_module_add_grid_content_shortcodes( $shortcodes ) {
@@ -526,29 +526,29 @@ function list_of_reports() {
         $post_id = $new_query->posts[$i]->ID;
         $reporting = get_field('reporting', $post_id);
         ?>
-    <div class="tabs_content <?php echo $active_report; ?> " data-id="<?php echo $i; ?>">
-        <div class = "reports_section">
-            <?php for ( $n = 0; $n < count($reporting); ++$n) {
-                if ( $n % 2 == 0 ) { $class = 'h2-header-line'; }else{ $class = 'h2-header-without-line'; }
-                ?>
-                <div>
-                    <div><h2 class="<?php echo $class; ?>"><?php echo $reporting[$n]['report_type']; ?></h2></div>
-                    <div class="download_report_wrapper">
-                        <?php foreach ($reporting[$n]['report'] as $report) { ?>
-                            <div>
-                                <a href="<?php echo $report['report_file']; ?>" download>
-                                    <div class="report_text">
-                                        <p class="report_title"><?php echo $report['report_title']; ?></p>
-                                        <p class="report_download"><?php pll_e( 'Завантажити');?></p>
-                                    </div>
-                                </a>
-                            </div>
-                        <?php } ?>
+        <div class="tabs_content <?php echo $active_report; ?> " data-id="<?php echo $i; ?>">
+            <div class = "reports_section">
+                <?php for ( $n = 0; $n < count($reporting); ++$n) {
+                    if ( $n % 2 == 0 ) { $class = 'h2-header-line'; }else{ $class = 'h2-header-without-line'; }
+                    ?>
+                    <div>
+                        <div><h2 class="<?php echo $class; ?>"><?php echo $reporting[$n]['report_type']; ?></h2></div>
+                        <div class="download_report_wrapper">
+                            <?php foreach ($reporting[$n]['report'] as $report) { ?>
+                                <div>
+                                    <a href="<?php echo $report['report_file']; ?>" download>
+                                        <div class="report_text">
+                                            <p class="report_title"><?php echo $report['report_title']; ?></p>
+                                            <p class="report_download"><?php pll_e( 'Завантажити');?></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            <?php } ?>
+                        </div>
                     </div>
-                </div>
-            <?php } ?>
+                <?php } ?>
+            </div>
         </div>
-    </div>
     <?php }
     $html = ob_get_clean();
     return $html;
@@ -566,36 +566,36 @@ function list_of_children() {
         <div class="children-wrapper">
             <div class="preloader"></div>
             <?php for($i=0;$i<sizeof($new_query->posts);++$i){
-            $post_id = $new_query->posts[$i]->ID;
-            $thumbnail = get_the_post_thumbnail_url($post_id);
-            $child_age = get_post_meta($post_id, 'child_age', true);
-            $help_amount = get_post_meta($post_id, 'help_amount', true);
-            $kind_of_help = get_post_meta($post_id, 'kind_of_help', true);
-            $region = get_post_meta($post_id, 'region', true);
-            $review_content = $new_query->posts[$i]->post_content;
-            $review_title = $new_query->posts[$i]->post_title;
+                $post_id = $new_query->posts[$i]->ID;
+                $thumbnail = get_the_post_thumbnail_url($post_id);
+                $child_age = get_post_meta($post_id, 'child_age', true);
+                $help_amount = get_post_meta($post_id, 'help_amount', true);
+                $kind_of_help = get_post_meta($post_id, 'kind_of_help', true);
+                $region = get_post_meta($post_id, 'region', true);
+                $review_content = $new_query->posts[$i]->post_content;
+                $review_title = $new_query->posts[$i]->post_title;
 
-            ?>
-            <!-- One-child -->
-            <div class="child">
-                <div class="child-top">
-                    <div class="child-photo"><img src="<?php echo $thumbnail; ?>"></div>
-                    <div class="child-info">
-                        <p class="child-name-and-age">
-                            <span class="child-name"><?php echo $review_title;?></span>
-                            <span>,</span>
-                            <span class="child-age"><?php echo $child_age; ?></span>
-                            <span>,</span>
-                        </p>
-                        <p class="child-region">
-                            <?php echo $region; ?>
-                        </p>
-                    </div><!-- end child-info -->
-                </div><!-- end child-top -->
-                <div class="child-bottom">
-                    <?php echo $review_content; ?> <?php pll_e( 'Сума допомоги');?> – <span class="help-amount"><?php echo $help_amount; ?></span><span class="kind-of-help"> <?php echo $kind_of_help; ?></span> .
-                </div>
-            </div><!-- end one-child  -->
+                ?>
+                <!-- One-child -->
+                <div class="child">
+                    <div class="child-top">
+                        <div class="child-photo"><img src="<?php echo $thumbnail; ?>"></div>
+                        <div class="child-info">
+                            <p class="child-name-and-age">
+                                <span class="child-name"><?php echo $review_title;?></span>
+                                <span>,</span>
+                                <span class="child-age"><?php echo $child_age; ?></span>
+                                <span>,</span>
+                            </p>
+                            <p class="child-region">
+                                <?php echo $region; ?>
+                            </p>
+                        </div><!-- end child-info -->
+                    </div><!-- end child-top -->
+                    <div class="child-bottom">
+                        <?php echo $review_content; ?> <?php pll_e( 'Сума допомоги');?> – <span class="help-amount"><?php echo $help_amount; ?></span><span class="kind-of-help"> <?php echo $kind_of_help; ?></span> .
+                    </div>
+                </div><!-- end one-child  -->
             <?php } ?>
         </div>
         <?php wp_reset_postdata(); ?>
@@ -795,6 +795,31 @@ function shortcode_awards_slider(){
             <?php } ?>
 
         </div><!--end rewards_slider_mob-->
+    </div>
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
+
+add_shortcode( 'shortcode_thanks_block_pro', 'shortcode_thanks_block' );
+function shortcode_thanks_block(){
+    if ( isset( $_POST['data'] ) ) {
+        $result = json_decode(base64_decode($_POST['data']));
+        var_dump($result);
+    }
+
+    ob_start();
+    ?>
+    <div>
+        <div>
+            <div>
+                <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
+                    <span class="one-project-socials"><?php pll_e( 'Подiлитися');?>
+					    <i class="fa fa-facebook" aria-hidden="true"></i>
+				    </span>
+                </a>
+            </div>
+        </div>
     </div>
     <?php
     $html = ob_get_clean();
