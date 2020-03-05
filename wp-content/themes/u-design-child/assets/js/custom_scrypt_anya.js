@@ -297,8 +297,6 @@ jQuery(document).ready(function($) {
     }
   });
 
-
-
   //add payment description to Help form
   function change_payment_description(type_of_help){
      if(window.location.href.indexOf("/projects/") > -1) {
