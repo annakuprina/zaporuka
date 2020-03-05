@@ -335,8 +335,8 @@ jQuery(document).ready(function($) {
               'action': 'send_cancel_subscription_email'
           },
           success: function(data){
+             console.log(data.result );
             if( data.result ) {
-              console.log(data.result );
               $('.cansel-message').show();
             }
             else{
