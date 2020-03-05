@@ -809,19 +809,25 @@ function shortcode_awards_slider(){
 
 add_shortcode( 'shortcode_thanks_block_pro', 'shortcode_thanks_block' );
 function shortcode_thanks_block(){
-
- 
-    if ( isset( $_POST['data'] ) ) {
-        $privat_key = 'sandbox_GOYIQuopPgKO564Gx8ItU89AUylwtZYwOJBBZWUo';
-        $result = json_decode(base64_decode($_POST['data']));
-        var_dump($_POST);
-     }
-
-
+    global $wpdb, $table_prefix;
+    $table_liqpay = $table_prefix . 'liqpay';
+    $sql = "SELECT order_id, summa FROM {$table_liqpay} WHERE status = 'success' LIMIT 1";
+    $res = $wpdb->get_row($sql);
+    if (isset($res)) {
+        $order_id_md5 = $res->order_id;
+        $order_sum = $res->summa  . check_currency();
+        $post_id =  get_option($order_id_md5 . '-liqpay_post_id');
+        $thanks_text = get_post_meta($post_id, 'thanks_text');
+        $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
+    }
     ob_start();
     ?>
-    <div>
+    <div class="thanks-text-wrapper">
         <div>
+            <div><?php pll_e( 'Дякуємо за підтримку!');?></div>
+            <div>
+                <?php echo $thanks_text; ?>
+            </div>
             <div>
                 <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
                     <span class="one-project-socials"><?php pll_e( 'Подiлитися');?>

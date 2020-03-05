@@ -131,6 +131,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Партнери');
   pll_register_string('u-design-child', 'Друзi');
   pll_register_string('u-design-child', 'Волонтери');
+  pll_register_string('u-design-child', 'Дякуємо за підтримку!');
 });
 
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
