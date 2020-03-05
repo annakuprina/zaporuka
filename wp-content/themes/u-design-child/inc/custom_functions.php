@@ -817,7 +817,7 @@ function shortcode_thanks_block(){
         $order_id_md5 = $res->order_id;
         $order_sum = $res->summa  . check_currency();
         $post_id =  get_option($order_id_md5 . '-liqpay_post_id');
-        $thanks_text = get_post_meta($post_id, 'thanks_text');
+        $thanks_text = get_post_meta($post_id, 'thanks_text', true);
         $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
     }
     ob_start();
