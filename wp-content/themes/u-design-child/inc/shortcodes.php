@@ -412,8 +412,14 @@ function send_cancel_subscription_email_function() {
     $mail_body .= 'Phone = ' . $user_phone . "\r\n";
     $mail_body .= 'Mail = ' . $user_mail;
 
-    send_notification($user_mail,'Отмена регулярного платежа',);
-    exit( json_encode( array( 'result' => 'true' ) ) );
+    $result = send_notification($user_mail,'Отмена регулярного платежа', $mail_body);
+    if(!$result){
+    	$message = 'что-то пошло не так (потом рассмотреть разные варианты что именно не так (вас нет в БД, еще что-то ну и сделать переводы))';
+    }
+    var_dump('check email result');
+    var_dump($result);
+
+    exit( json_encode( array( 'result' => $result, 'message'=>$message  ) ) );
    
 }
 

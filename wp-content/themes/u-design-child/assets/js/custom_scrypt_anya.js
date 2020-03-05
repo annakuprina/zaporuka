@@ -335,7 +335,14 @@ jQuery(document).ready(function($) {
               'action': 'send_cancel_subscription_email'
           },
           success: function(data){
-            $('.help_form_wrapper .cansel-message').show();
+            if( data.result ) {
+              console.log(data.result );
+              $('.cansel-message').show();
+            }
+            else{
+              $('.cansel-message').text(data.message);
+              $('.cansel-message').show();
+            }
           }
       });
     e.preventDefault();
