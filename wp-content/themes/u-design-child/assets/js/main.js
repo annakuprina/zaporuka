@@ -220,22 +220,26 @@ jQuery(document).ready(function($) {
     $(".header-mob-top .close").toggleClass("active");
   });
 
-  // $(window)
-  //   .on("resize", function() {
-  //     var maxHeight = -1;
-  //     $(".rewards-slide").each(function() {
-  //       if ($(this).height() > maxHeight) {
-  //         maxHeight = $(this).height();
-  //       }
-  //     });
-  //     $(".rewards-slide").each(function() {
-  //       if ($(this).height() < maxHeight) {
-  //         $(this).css(
-  //           "margin",
-  //           Math.ceil((maxHeight - $(this).height()) / 2) + "px 0"
-  //         );
-  //       }
-  //     });
-  //   })
-  //   .resize();
+  /*DROPDOWN FOR SHOP PAGE MOBILE*/
+
+  // Toggle dropdown
+  $(".category-mob-select").on("click", function() {
+    $(this)
+      .closest("ul")
+      .children("li")
+      .slice(1)
+      .slideToggle();
+  });
+
+  /*Change current category name inside dropdown*/
+  k = 0;
+  setInterval(function() {
+    if (k == 0) {
+      if ($("a").hasClass("active-filter")) {
+        var currentCategory = $(".active-filter").text();
+        $(".current-category-mob").text(currentCategory);
+        k = 1;
+      }
+    }
+  }, 10);
 });
