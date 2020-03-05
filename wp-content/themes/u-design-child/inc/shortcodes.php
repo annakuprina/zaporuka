@@ -405,11 +405,13 @@ add_action( 'wp_ajax_send_cancel_subscription_email', 'send_cancel_subscription_
 add_action( 'wp_ajax_nopriv_send_cancel_subscription_email', 'send_cancel_subscription_email_function' );
 
 function send_cancel_subscription_email_function() { 
-    $user_mail = sanitize_text_field( $_POST['mail'] );
+    $user_mail = sanitize_text_field( $_POST['email'] );
     $user_phone = sanitize_text_field( $_POST['phone'] );
+     var_dump($user_mail); // free
+     var_dump($user_phone); // free
 
-    $mail_body = "Тестовое письмо пока что без проверок\r\n";
-    $mail_body .= 'Phone = ' . $user_phone . "\r\n";
+    $mail_body = "Тестовое письмо пока что без проверок";
+    $mail_body .= 'Phone = ' . $user_phone;
     $mail_body .= 'Mail = ' . $user_mail;
 
     $result = send_notification($user_mail,'Отмена регулярного платежа', $mail_body);
