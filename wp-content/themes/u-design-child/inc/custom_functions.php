@@ -811,7 +811,7 @@ add_shortcode( 'shortcode_thanks_block_pro', 'shortcode_thanks_block' );
 function shortcode_thanks_block(){
     global $wpdb, $table_prefix;
     $table_liqpay = $table_prefix . 'liqpay';
-    $sql = "SELECT order_id, summa FROM {$table_liqpay} WHERE status = 'success' LIMIT 1";
+    $sql = "SELECT order_id, summa FROM {$table_liqpay} WHERE status = 'success' ORDER BY DESC LIMIT 1";
     $res = $wpdb->get_row($sql);
     var_dump($res);
     if (isset($res)) {
