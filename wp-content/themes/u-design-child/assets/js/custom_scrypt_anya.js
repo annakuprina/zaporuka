@@ -325,4 +325,9 @@ jQuery(document).ready(function($) {
 
   change_payment_description('pay');
 
+  $('.cancel_subscription_form').submit(function(e){
+    e.preventDefault();
+  });
+
+
 });
