@@ -102,39 +102,39 @@ function shortcode_project_for_home(  ){
 	if($featured_post_id):
 	?>
 	<!-- One project -->
-			<div class="one-project">
-				<div class="one-project-left"><img src="<?php echo get_the_post_thumbnail_url($featured_post_id, 'full'); ?>"></div>
-				<div class="one-project-right">
-					<div class="one-project-title"><?php pll_e( 'Проекти');?></div>
-					<div class="one-project-info">
-						<p class="one-project-info-title">
-							<?php echo get_the_title($featured_post_id);?>
-						</p>
-						<p class="one-project-info-text">
-							<?php echo get_the_excerpt($featured_post_id);?>
-						</p>
-					</div>
-					<div class="one-project-progress">
-						<div class="one-project-progress-top">
-							<p class="project-money">
-								<span class="project-money-quantity"><?php echo $total_collected; ?></span>
-								<span class="project-money-involved"><?php pll_e( 'залучено');?></span>
-							</p>
-							<p class="project-money-collected"><?php echo $total_amount; ?></p>
-						</div>
-						<div class="one-project-progress-bottom">
-							<div class="progress-bar">
-								<span class="progress-done" style="width: <?php echo $progress_bar; ?>%;"></span>
-								<span class="progress-dot"></span>
-							</div>
-						</div>
+        <div class="one-project">
+            <div class="one-project-left"><img src="<?php echo get_the_post_thumbnail_url($featured_post_id, 'full'); ?>"></div>
+            <div class="one-project-right">
+                <div class="one-project-title"><?php pll_e( 'Проекти');?></div>
+                <div class="one-project-info">
+                    <p class="one-project-info-title">
+                        <?php echo get_the_title($featured_post_id);?>
+                    </p>
+                    <p class="one-project-info-text">
+                        <?php echo get_the_excerpt($featured_post_id);?>
+                    </p>
+                </div>
+                <div class="one-project-progress">
+                    <div class="one-project-progress-top">
+                        <p class="project-money">
+                            <span class="project-money-quantity"><?php echo $total_collected; ?></span>
+                            <span class="project-money-involved"><?php pll_e( 'залучено');?></span>
+                        </p>
+                        <p class="project-money-collected"><?php echo $total_amount; ?></p>
+                    </div>
+                    <div class="one-project-progress-bottom">
+                        <div class="progress-bar">
+                            <span class="progress-done" style="width: <?php echo $progress_bar; ?>%;"></span>
+                            <span class="progress-dot"></span>
+                        </div>
+                    </div>
 
-					</div>
-					<a href="<?php echo get_permalink($featured_post_id);?>#help_section_anchore" class="one-project-help">
-						<span><?php pll_e( 'Допомогти');?></span> 
-					</a>
-				</div><!-- end one-project-right -->
-			</div><!-- end one-project -->
+                </div>
+                <a href="<?php echo get_permalink($featured_post_id);?>#help_section_anchore" class="one-project-help">
+                    <span><?php pll_e( 'Допомогти');?></span>
+                </a>
+            </div><!-- end one-project-right -->
+        </div><!-- end one-project -->
 
 	<?php
 	endif;
@@ -183,7 +183,7 @@ function shortcode_parthers_on_home(  ){
 					foreach( $partners_array_by_2 as $post_wrapper ){ ?>
 						<!-- One slide -->
 						<div class="partners-slide">
-							<? foreach( $post_wrapper as $post ){ ?>
+							<?php foreach( $post_wrapper as $post ){ ?>
 							<div class="partners-slide-item">
 								<div class="partners-slider-mob-img">
 									<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
