@@ -327,11 +327,15 @@ jQuery(document).ready(function($) {
 
 
   $('.cancel_subscription_form').submit(function(e){
+    var client_mail = $(this).find('input[name="mail"]').val();
+    var client_tel = $(this).find('input[name="phone"]').val();
     $.ajax({
           type: 'POST',
           dataType: 'json',
           url: MyAjax.ajaxurl,
-          data: { 
+          data: {
+              'client_mail':client_mail,
+              'client_tel':client_tel,
               'action': 'send_cancel_subscription_email'
           },
           success: function(data){
@@ -348,4 +352,5 @@ jQuery(document).ready(function($) {
     e.preventDefault();
   });
 
+  
 });

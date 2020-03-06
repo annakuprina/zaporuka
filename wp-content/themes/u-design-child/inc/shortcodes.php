@@ -404,25 +404,66 @@ add_shortcode('social_icons', 'shortcode_social_icons');
 add_action( 'wp_ajax_send_cancel_subscription_email', 'send_cancel_subscription_email_function' );
 add_action( 'wp_ajax_nopriv_send_cancel_subscription_email', 'send_cancel_subscription_email_function' );
 
-function send_cancel_subscription_email_function() { 
-    $user_mail = sanitize_text_field( $_POST['email'] );
-    $user_phone = sanitize_text_field( $_POST['phone'] );
-     var_dump($user_mail); // free
-     var_dump($user_phone); // free
+function send_cancel_subscription_email_function() {
+	global $wpdb, $table_prefix;
+	$table_liqpay = $table_prefix . 'liqpay';
+	if (!isset($wpdb))
+        require_once('../../../wp-config.php');
 
-    $mail_body = "Тестовое письмо пока что без проверок";
-    $mail_body .= 'Phone = ' . $user_phone;
-    $mail_body .= 'Mail = ' . $user_mail;
+    //проаерить еще вариант нескольких подписок
 
-    $result = send_notification($user_mail,'Отмена регулярного платежа', $mail_body);
-    if(!$result){
-    	$message = 'что-то пошло не так (потом рассмотреть разные варианты что именно не так (вас нет в БД, еще что-то ну и сделать переводы))';
+    $user_mail = sanitize_text_field( $_POST['client_mail'] );
+    $user_phone = sanitize_text_field( $_POST['client_tel'] );
+    $sql = "Select order_id from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
+    $res = $wpdb->get_row($sql);
+
+
+    if($res){
+    	$liqpay_order_id = $res->order_id;
     }
-    var_dump('check email result');
-    var_dump($result);
-
-    exit( json_encode( array( 'result' => $result, 'message'=>$message  ) ) );
    
+
+    if($liqpay_order_id){
+
+	    /*$liqpay = new LiqPay($public_key, $private_key);
+		$res = $liqpay->api("request", array(
+		'action'        => 'unsubscribe',
+		'version'       => '3',
+		'order_id'      => 'order_id_1'
+		));*/
+
+
+		$mail_body = "Тестовое письмо пока что без проверок";
+
+
+    	$result = send_notification($user_mail,'Отмена регулярного платежа', $mail_body);
+    }
+
+    if(!$res){
+    	if(ICL_LANGUAGE_CODE=='uk'){
+			$message =  'Для введених даних відсутній регулярний платіж';
+		}
+		elseif(ICL_LANGUAGE_CODE=='ru'){
+			$message =  'Для введенных данных отсутствует регулярный платеж';
+		}
+		elseif(ICL_LANGUAGE_CODE=='en'){
+			$message =  'There is no recurring payment for the entered data';
+		}
+    }
+	if(!$result && $res){
+    	if(ICL_LANGUAGE_CODE=='uk'){
+			$message =  'Сталася помилка під час скасування';
+		}
+		elseif(ICL_LANGUAGE_CODE=='ru'){
+			$message =  'Произошла ошибка во время отмены';
+		}
+		elseif(ICL_LANGUAGE_CODE=='en'){
+			$message =  'An error occurred while canceling';
+		}
+    }
+
+
+    exit( json_encode( array( 'result' => $result, 'message'=>$message  ) ) );   
 }
 
 

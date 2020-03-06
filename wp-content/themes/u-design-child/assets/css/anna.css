@@ -1090,6 +1090,7 @@ footer a.designer-link {
   max-width: 503px;
   color: #e78b48;
   font-weight: 700;
+  margin-top: 30px;
 }
 .help-form-inner-wrapper .cancel_subscription_form .help-form-submit-oferta{padding-bottom: 0;}
 input[type="checkbox"]:checked,
