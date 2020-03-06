@@ -811,7 +811,7 @@ add_shortcode( 'shortcode_thanks_block_pro', 'shortcode_thanks_block' );
 function shortcode_thanks_block(){
     global $wpdb, $table_prefix;
     $table_liqpay = $table_prefix . 'liqpay';
-    $res = $wpdb->get_results("SELECT order_id, summa FROM {$table_liqpay} LIMIT 0,1", ARRAY_A);
+    $res = $wpdb->get_results("SELECT order_id, summa FROM {$table_liqpay} LIMIT 0,1");
 
     if (isset($res)) {
         $order_id = $res[0]->order_id;
