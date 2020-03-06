@@ -147,9 +147,6 @@ else{
     update_option($liq_order_id.'-liqpay_post_id',$_POST['liqpay_post_id']);
 }
 
-
-
-
 $liq_key = false;
 if(isset($_POST['key']))
 $liq_key = $_POST['key'];
@@ -199,7 +196,6 @@ else {
 	}
 $amount = round($amount,'2');
 }
-
 
 $valuta = $_POST['menu'];
 $liqpay_product_id = '';
