@@ -122,9 +122,9 @@ if (isset($_POST['data'])) {
     
     insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $user_phone_fio, 0, $valuta, $to, $ip_adress);
 
-//    if( $liqpay_post_id != 1){
+    if( $liqpay_post_id != 1){
         insert_history($liqpay_post_id, $transaction_id, $xdate, $sender_first_name, $user_phone, $to, $summa, 'зачислено');
-//    }
+    }
 
     if ($testmode)
         $subject = "Отчет по оплате (TEST) ";
