@@ -108,9 +108,14 @@ if ($hidden_content)
     $result_url = $_POST['url_page'];
 }
 elseif (!get_option('liqpay_result_url') && isset($_POST['order_id']) && ($_POST['order_id'])){
-    global $woocommerce;
-    $order = new WC_Order($liq_order_id);
-    $result_url = $order->get_checkout_order_received_url();
+	if ( isset($_POST['result_url']) ) {
+		$result_url = $_POST['result_url'];
+	} else{
+		global $woocommerce;
+		$order = new WC_Order($liq_order_id);
+		$result_url = $order->get_checkout_order_received_url();
+	}
+
 }
 else {
     $result_url = get_option('liqpay_result_url');
