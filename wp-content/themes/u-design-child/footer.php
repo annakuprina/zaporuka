@@ -73,21 +73,16 @@ $logo_img_url = ( $udesign_options['custom_logo_img'] ) ? esc_url($udesign_optio
 						<?php echo get_dynamic_column( 'bottom_5', '', 'bottom-widget-area-5' );?>
 						<div class="footer-contact-wrapper">
 							<div class="footer-adress">
-
-                                <span><?php echo $adress; ?></span>
-
+								<span><?php echo $adress; ?></span>
 							</div>
 							<div class="footer-email-tel">
 								<div class="footer-tel"><a href="tel:<?php echo $phone_number; ?>" class="tel-block-a"><i class="fa fa-phone" aria-hidden="true"></i></i><?php echo $phone_number; ?></a></div>
                        	 		<div class="footer-email"><a href="mailto:<?php echo $email; ?>" class="email-block-a"><i class="fa fa-envelope" aria-hidden="true"></i><?php echo $email; ?></a></div>
 							</div>
 						</div>
-
 					</div>
 				</div><!-- end bottom-content-padding -->
-
 		</div><!-- end bottom -->
-
 </section><!-- end bottom-bg -->
 
 <div class="clear"></div>

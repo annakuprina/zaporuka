@@ -48,6 +48,10 @@ do_action( 'woocommerce_before_main_content' );
 	<div class="woocommerce-custom-product-filter">
 		<div class="woocommerce-custom-category-filter-wrapper">
 			<ul class="woocommerce-custom-category-filter">
+				<li class="category-filter-item category-mob-select">
+					<span class="current-category-mob">Оберіть категорію</span>
+					<span class="category-expand-button">
+				</li>
 				<li class="category-filter-item"><a href='<?php echo get_permalink( wc_get_page_id( 'shop' ) ); ?>'>
 					<?php
 						if(ICL_LANGUAGE_CODE=='uk'){
