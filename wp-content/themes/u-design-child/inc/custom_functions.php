@@ -811,15 +811,16 @@ add_shortcode( 'shortcode_thanks_block_pro', 'shortcode_thanks_block' );
 function shortcode_thanks_block(){
     global $wpdb, $table_prefix;
     $table_liqpay = $table_prefix . 'liqpay';
-//    $sql = "SELECT * FROM {$table_liqpay} WHERE status = 'success' ORDER BY id DESC LIMIT 0,1", ARRAY_A;
-    $res = $wpdb->get_results("SELECT order_id, summa FROM {$table_liqpay} LIMIT 0,1");
-//    var_dump($res);
+    $res = $wpdb->get_results("SELECT order_id, summa FROM {$table_liqpay} LIMIT 0,1", ARRAY_A);
+
     if (isset($res)) {
         $order_id = $res[0]->order_id;
         $order_sum = $res[0]->summa  . check_currency();
         $post_id =  get_option($order_id . '-liqpay_post_id');
         $thanks_text = get_post_meta($post_id, 'thanks_text', true);
-        var_dump($thanks_text);
+        var_dump($post_id);
+        echo '<br/>';
+        var_dump($order_id);
         $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
     }
     ob_start();
