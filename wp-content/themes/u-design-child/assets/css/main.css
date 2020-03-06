@@ -182,7 +182,7 @@ h3 {
   width: 100%;
   position: fixed;
   top: 0;
-  box-shadow: 1px 2px 7px 0px #afafaf;
+  box-shadow: 1px 2px 7px 0px #e0e0e0;
 }
 
 #header-mob #main-top-menu {
@@ -3665,12 +3665,26 @@ footer .footer-mob a.designer-link {
   NEWS
 -------*/
 #main-content .section-news.tab-wrapper {
-  padding-top: 116px;
+  padding-top: 121px;
+  margin-bottom: 43px;
 }
 
 #main-content .section-news.tab-wrapper ul.vc_grid-filter {
-  padding-bottom: 36px !important;
+  padding-bottom: 40px !important;
+  display: flex !important;
 }
+
+/* #main-content .section-news.tab-wrapper li.vc_grid-filter-item:nth-child(1) {
+  order: 1;
+}
+
+#main-content .section-news.tab-wrapper li.vc_grid-filter-item:nth-child(2) {
+  order: 3;
+}
+
+#main-content .section-news.tab-wrapper li.vc_grid-filter-item:nth-child(3) {
+  order: 2;
+} */
 
 #main-content
   .section-news.tab-wrapper
@@ -3691,9 +3705,28 @@ footer .footer-mob a.designer-link {
   padding-bottom: 15px;
 }
 
-#main-content .section-news .vc_gitem-col {
-  box-sizing: border-box;
-  padding: 12px 12px 10px 12px;
+#main-content
+  .section-news
+  .section-news-front-wrapper
+  .vc_gitem-row-position-top
+  .vc_gitem-col {
+  padding: 6px 12px 10px 12px;
+}
+
+#main-content
+  .section-news
+  .section-news-front-wrapper
+  .vc_gitem-row-position-middle
+  .vc_gitem-col {
+  padding: 30px 12px 10px 12px;
+}
+
+#main-content
+  .section-news
+  .section-news-front-wrapper
+  .vc_gitem-row-position-bottom
+  .vc_gitem-col {
+  padding: 2px 12px 10px 12px;
 }
 
 #main-content .section-news .news-link a {
@@ -3705,22 +3738,42 @@ footer .footer-mob a.designer-link {
 }
 
 #main-content .section-news .vc_grid .vc_pageable-load-more-btn {
-  text-align: center;
-  margin-top: 20px;
+  margin-top: 19px;
 }
 
-#main-content .section-news.tab-wrapper {
-  margin-bottom: 43px;
+#main-content
+  .section-news
+  .section-news-hover-wrapper.is-background-image
+  .vc_gitem-row-position-middle {
+  bottom: 26px;
 }
 
-/*mews page. Block with 1 news item.
+#main-content
+  .section-news
+  .section-news-hover-wrapper.is-background-image
+  .vc_gitem-row-position-bottom {
+  bottom: -5px;
+}
+
+.section-news
+  .section-news-hover-wrapper.no-background-image
+  .vc_gitem-row-position-top {
+  margin: 20px 24px;
+}
+
+.section-news
+  .section-news-hover-wrapper.no-background-image
+  .vc_gitem-row-position-top
+  .vc_gitem-col {
+  padding: 0;
+}
+/*news page. Block with 1 news item.
 Make all inner blocks position:static instead of position:absolute.
 Because it is impossible to add adaptivity and to add long text inside 
 news item with absolute positions of inner block.*/
 
 /*initially news item block "section-news-front-wrapper" is visible.
 After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
-#main-content .section-news-hover-wrapper .vc_gitem-row-position-top,
 #main-content .section-news-front-wrapper .vc_gitem-row-position-top {
   position: static;
   padding: 0;
@@ -3735,37 +3788,31 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   border-bottom: none;
 }
 
-#main-content .section-news-hover-wrapper .vc_gitem-row-position-middle,
 #main-content .section-news-front-wrapper .vc_gitem-row-position-middle {
   position: static;
   padding: 0;
 }
 
-#main-content .section-news-hover-wrapper .vc_gitem-row-position-bottom,
 #main-content .section-news-front-wrapper .vc_gitem-row-position-bottom {
   position: static;
   padding: 0;
 }
 
-#main-content .section-news .section-news-front-wrapper,
-#main-content .section-news .section-news-hover-wrapper {
+#main-content .section-news .section-news-front-wrapper {
   max-height: unset;
   height: 100%;
 }
 
-#main-content .section-news-hover-wrapper.vc-gitem-zone-height-mode-auto:before,
 #main-content
   .section-news-front-wrapper.vc-gitem-zone-height-mode-auto:before {
   padding-top: 0;
 }
 
-#main-content .section-news .section-news-front-wrapper .vc_gitem-zone-mini,
-#main-content .section-news .section-news-hover-wrapper .vc_gitem-zone-mini {
+#main-content .section-news .section-news-front-wrapper .vc_gitem-zone-mini {
   padding: 0;
 }
 
-#main-content .section-news-front-wrapper .vc_gitem-row-position-middle,
-#main-content .section-news-hover-wrapper .vc_gitem-row-position-middle {
+#main-content .section-news-front-wrapper .vc_gitem-row-position-middle {
   padding-top: 0px !important;
 }
 
@@ -3786,8 +3833,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   height: 100%;
 }
 
-#main-content .section-news .section-news-front-wrapper .vc_gitem-zone-mini,
-#main-content .section-news .section-news-hover-wrapper .vc_gitem-zone-mini {
+#main-content .section-news .section-news-front-wrapper .vc_gitem-zone-mini {
   height: 100%;
 }
 
@@ -3796,13 +3842,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   flex-direction: column;
 }
 
-#main-content .section-news-front-wrapper .vc_gitem-row-position-bottom,
-#main-content .section-news-hover-wrapper .vc_gitem-row-position-bottom {
+#main-content .section-news-front-wrapper .vc_gitem-row-position-bottom {
   margin-top: auto;
-}
-
-#main-content .section-news .vc_grid-filter {
-  display: block !important;
 }
 
 #main-content .section-news .news-categories {
@@ -3827,6 +3868,72 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   display: none;
 }
 
+.is-background-image .vc_gitem-row-position-top {
+  display: none;
+}
+
+#main-content
+  .section-news
+  .section-news-hover-wrapper
+  .vc_gitem-row-position-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-content .section-news .news-categories-hover {
+  border-bottom: none;
+}
+
+#main-content .section-news .news-date-hover {
+  border-bottom: none;
+}
+
+.section-news
+  .section-news-hover-wrapper.no-background-image
+  .vc_gitem-row-position-top {
+  padding-bottom: 0 !important;
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  margin: 27px 41px;
+  opacity: 0.7;
+}
+
+#main-content
+  .section-news
+  .section-news-hover-wrapper.no-background-image
+  .vc_gitem-row-position-middle {
+  padding-top: 87px !important;
+}
+
+#main-content
+  .section-news
+  .section-news-hover-wrapper.no-background-image
+  .vc_gitem-row-position-middle
+  .news-title-hover {
+  margin-bottom: 24px;
+}
+
+#main-content
+  .section-news
+  .section-news-hover-wrapper.no-background-image
+  .vc_gitem-row-position-bottom
+  .vc_gitem-col {
+  padding: 10px 10px 5px 10px;
+}
+
+#main-content
+  .section-news
+  .section-news-hover-wrapper.no-background-image
+  .vc_gitem-post-data-source-post_date {
+  font-family: "Proxima-Nova-Regular";
+}
+
+#main-content
+  .section-news.tab-wrapper
+  .vc_grid-filter
+  li.vc_grid-filter-item:hover::after {
+  top: 59px;
+}
 @media screen and (max-width: 1024px) {
   #main-content
     .section-news
@@ -3838,6 +3945,51 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content .section-news .section-news-front-wrapper,
   #main-content .section-news .section-news-hover-wrapper {
     padding: 15px 20px 20px 20px !important;
+  }
+
+  #main-content .section-news.tab-wrapper ul.vc_grid-filter {
+    flex-direction: column;
+  }
+
+  #main-content
+    .section-news.tab-wrapper
+    .vc_grid-filter
+    li.vc_grid-filter-item::after {
+    display: none;
+  }
+
+  #main-content .section-news.tab-wrapper {
+    padding-top: 50px;
+  }
+
+  #main-content .section-news.tab-wrapper ul.vc_grid-filter {
+    padding-bottom: 16px !important;
+  }
+
+  #main-content .section-news.tab-wrapper ul.vc_grid-filter {
+    margin-bottom: 40px !important;
+  }
+
+  #main-content
+    .section-news.tab-wrapper
+    .vc_grid-filter
+    li.vc_grid-filter-item {
+    margin-bottom: 10px;
+  }
+
+  #main-content .section-news.tab-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-news .section-news-front-wrapper .vc_grid-filter {
+    display: block !important;
+  }
+  .section-news
+    .section-news-hover-wrapper.no-background-image
+    .vc_grid-filter {
+    display: block !important;
   }
 }
 

@@ -231,10 +231,11 @@ jQuery(document).ready(function($) {
         k = 1;
       }
     }
-  }, 10000);
+  }, 10);
 
   /*DROPDOWN FOR NEWS PAGE MOBILE*/
-  $(".section-news .vc_grid-filter ").prepend(
-    "<li class='category-mob-select'>Всi новини111</li>"
-  );
+  // console.log("prr");
+  // $(".section-news .vc_grid-filter").prepend(
+  //   "<li class='category-mob-select'>Всi новини111</li>"
+  // );
 });
