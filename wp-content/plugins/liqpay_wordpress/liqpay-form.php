@@ -123,7 +123,6 @@ if(get_option('liqpay_thanks') == 'yes') {
     $server_url = $url1 . "liqpay-answer.php";
 }
 
-$liq_order_id = $liq_order_id."_".md5(rand(0,10000));
 if ($_POST['mail'] !== "") update_option($liq_order_id.'-liqpay_mail_buyer',$_POST['mail']);
 else
 	update_option($liq_order_id.'-liqpay_mail_buyer',$current_user->user_email);
