@@ -1098,10 +1098,12 @@ footer a.designer-link {
   position: absolute;
 }
 .wpb_wrapper .cansel-message.success-message{
-    color: #e78b48;
+    font-size: 18px;  
     font-weight: 700;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
+.cancel_subscription_form_success_block{display: none;}
+
 .help-form-inner-wrapper .cancel_subscription_form .help-form-submit-oferta{padding-bottom: 0;}
 input[type="checkbox"]:checked,
 input[type="checkbox"]:not(:checked) {

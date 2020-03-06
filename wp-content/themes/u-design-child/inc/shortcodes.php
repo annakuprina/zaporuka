@@ -112,20 +112,20 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 				    	<div class="help-form-amount-tel">
 				    		<input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
 				    	</div>
+				    	<div class="cansel-message error-message">
+						  	<?php
+							if(ICL_LANGUAGE_CODE=='uk'){
+								echo 'Для введених даних відсутній регулярний платіж';
+							}
+							elseif(ICL_LANGUAGE_CODE=='ru'){
+								echo 'Для введенных данных отсутствует регулярный платеж';
+							}
+							elseif(ICL_LANGUAGE_CODE=='en'){
+								echo 'There is no recurring payment for the entered data';
+							}
+						  	?>
+						</div>
 				    </div>
-				    <div class="cansel-message error-message">
-					  	<?php
-						if(ICL_LANGUAGE_CODE=='uk'){
-							echo 'Для введених даних відсутній регулярний платіж';
-						}
-						elseif(ICL_LANGUAGE_CODE=='ru'){
-							echo 'Для введенных данных отсутствует регулярный платеж';
-						}
-						elseif(ICL_LANGUAGE_CODE=='en'){
-							echo 'There is no recurring payment for the entered data';
-						}
-					  	?>
-					</div>
 			    	<div class="help-form-submit-oferta">
 			    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $cancel_subscription_form_submit_button; ?>" /></div>
 			    	</div>
@@ -432,16 +432,47 @@ function send_cancel_subscription_email_function() {
 
     $user_mail = sanitize_text_field( $_POST['client_mail'] );
     $user_phone = sanitize_text_field( $_POST['client_tel'] );
-    $sql = "Select order_id from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
-    $res = $wpdb->get_row($sql);
+    $sql = "Select order_id, comments from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
+    $sql_res = $wpdb->get_results($sql);
 
-
-    if($res){
-    	$liqpay_order_id = $res->order_id;
+    if($sql_res){
+    	//$liqpay_order_id = $sql_res->order_id;
+    	foreach ($sql_res as $value) {
+    		$liqpay_order_id[]=array('order_id'=>$value->order_id,'comments'=>$value->comments);
+    	}
     }
-   
+
+
+    var_dump($sql_res);
+
+    echo "<hr>";
+
+    var_dump($liqpay_order_id);
+   	
 
     if($liqpay_order_id){
+
+
+    	if(ICL_LANGUAGE_CODE=='uk'){
+			$start_message =  "Для підтвердження скасування регулярного платежу перейдіть за посиланням нижче<br><br>";
+			$subject = 'Скасування регулярного платежу';
+		}
+		elseif(ICL_LANGUAGE_CODE=='ru'){
+			$start_message =  "Для подтверждения отмены регулярного платежа перейдите по ссылке ниже<br><br>";
+			$subject = 'Отмена регулярного платежа';
+		}
+		elseif(ICL_LANGUAGE_CODE=='en'){
+			$start_message =  "To confirm the cancellation of the regular payment, follow the link below<br><br>";
+			$subject = 'Cancel recurring payment';
+		}
+    	
+
+    	$mail_body = $start_message;
+
+    	foreach ($liqpay_order_id as $order ) {
+
+    		$mail_body .= $order->comments;
+    	}
 
 	    /*$liqpay = new LiqPay($public_key, $private_key);
 		$res = $liqpay->api("request", array(
@@ -452,16 +483,25 @@ function send_cancel_subscription_email_function() {
 
 		//При нескольких подписках отправлять пользователю в писме несколько ссылок
 
-		$mail_body = "Тестовое письмо пока что без проверок";
+		
 
 
-		$subject = 'Отмена регулярного платежа';
+		
 
     	$result = send_notification($user_mail,$subject, $mail_body);
     }
 
+    echo "<hr>";
 
-    exit( json_encode( array( 'result' => $result  ) ) );   
+    var_dump($mail_body);
+
+    echo "<hr>";
+
+    var_dump($result);
+    die();
+
+
+    exit( json_encode( array( 'result' => $result ) ) );   
 }
 
 

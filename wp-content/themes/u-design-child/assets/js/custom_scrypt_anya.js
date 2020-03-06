@@ -327,31 +327,38 @@ jQuery(document).ready(function($) {
 
 
   $('.cancel_subscription_form').submit(function(e){
+    e.preventDefault(); 
     var client_mail = $(this).find('input[name="mail"]').val();
     var client_tel = $(this).find('input[name="phone"]').val();
-    $.ajax({
-          type: 'POST',
-          dataType: 'json',
-          url: MyAjax.ajaxurl,
-          data: {
-              'client_mail':client_mail,
-              'client_tel':client_tel,
-              'action': 'send_cancel_subscription_email'
-          },
-          success: function(data){
-             console.log(data.result );
-            if( data.result ) {
-              $('.cancel_subscription_form_inner_wrapper').hide();
-              $('.cancel_subscription_form_success_block').show();
+    if($(this).valid()){
+      $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: MyAjax.ajaxurl,
+            data: {
+                'client_mail':client_mail,
+                'client_tel':client_tel,
+                'action': 'send_cancel_subscription_email'
+            },
+            success: function(data){
+               console.log(data.result );
+              if( data.result ) {
+                $('.cancel_subscription_form_inner_wrapper').hide();
+                $('.cancel_subscription_form_success_block').show();
+                $('.help-form-inner-title').hide();
+              }
+              else{
+                $('.cansel-message.error-message').show();
+                $('.cancel_subscription_form_success_block').hide();
+                $('.cancel_subscription_form_inner_wrapper').show();
+                $('.help-form-inner-title').show();           
+              }
             }
-            else{
-              $('.cansel-message.error-message').show();
-              $('.cancel_subscription_form_success_block').hide();
-              $('.cancel_subscription_form_inner_wrapper').show();              
-            }
-          }
-      });
-    e.preventDefault();
+        });
+      }
+      else{
+          return false; 
+      }
   });
 
 
