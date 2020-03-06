@@ -341,16 +341,18 @@ jQuery(document).ready(function($) {
           success: function(data){
              console.log(data.result );
             if( data.result ) {
-              $('.cansel-message').show();
+              $('.cancel_subscription_form_inner_wrapper').hide();
+              $('.cancel_subscription_form_success_block').show();
             }
             else{
-              $('.cansel-message').text(data.message);
-              $('.cansel-message').show();
+              $('.cansel-message.error-message').show();
+              $('.cancel_subscription_form_success_block').hide();
+              $('.cancel_subscription_form_inner_wrapper').show();              
             }
           }
       });
     e.preventDefault();
   });
 
-  
+
 });
