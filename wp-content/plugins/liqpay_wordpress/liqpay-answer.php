@@ -46,8 +46,8 @@ function insert_history($project_id2, $transaction_id2, $date2, $users_name2, $u
     if (!isset($wpdb))
         require_once('../../../wp-config.php'); 
 
-    $sql1 = "insert into {$table_liqpay_project_history} (`project_id`,`transaction_id`,`date`,`users_name`,`users_phone`,`users_email`,`summa`,`type_operation`) values ('" . $project_id2 . "','" . $transaction_id2 . "'," . $date2 . ",'" . $users_name2 . "','" . $users_phone2 . "','" . $users_email2 . "','" . $summa2 . "','" . $type_operation2 . "')
-         on duplicate key update project_id=VALUES(project_id),transaction_id=VALUES(transaction_id),date=VALUES(date),users_name=VALUES(users_name),users_phone=VALUES(users_phone),users_email=VALUES(users_email),summa=VALUES(summa),type_operation=VALUES(type_operation);";
+    $sql1 = "insert into {$table_liqpay_project_history} (`project_id`,`transaction_id`,`order_date`,`users_name`,`users_phone`,`users_email`,`summa`,`type_operation`) values ('" . $project_id2 . "','" . $transaction_id2 . "','" . $date2 . "','" . $users_name2 . "','" . $users_phone2 . "','" . $users_email2 . "','" . $summa2 . "','" . $type_operation2 . "')
+         on duplicate key update project_id=VALUES(project_id),transaction_id=VALUES(transaction_id),order_date=VALUES(order_date),users_name=VALUES(users_name),users_phone=VALUES(users_phone),users_email=VALUES(users_email),summa=VALUES(summa),type_operation=VALUES(type_operation);";
     $wpdb->query($sql1);
 
 
@@ -122,9 +122,9 @@ if (isset($_POST['data'])) {
     
     insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $user_phone_fio, 0, $valuta, $to, $ip_adress);
 
-    if( $liqpay_post_id != 1){
+//    if( $liqpay_post_id != 1){
         insert_history($liqpay_post_id, $transaction_id, $xdate, $sender_first_name, $user_phone, $to, $summa, 'зачислено');
-    }
+//    }
 
     if ($testmode)
         $subject = "Отчет по оплате (TEST) ";

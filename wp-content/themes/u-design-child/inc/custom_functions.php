@@ -1,9 +1,5 @@
 <?php
-if (isset($_POST['data'])) {
-    $json = base64_decode($_POST['data']);
-    $obj = json_decode($json);
-    var_dump($obj);
-}
+
 add_shortcode('project_milestones', 'shortcode_milestones');
 function shortcode_milestones(){
     $post = get_post();
