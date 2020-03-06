@@ -3712,6 +3712,143 @@ footer .footer-mob a.designer-link {
 #main-content .section-news.tab-wrapper {
   margin-bottom: 43px;
 }
+
+/*mews page. Block with 1 news item.
+Make all inner blocks position:static instead of position:absolute.
+Because it is impossible to add adaptivity and to add long text inside 
+news item with absolute positions of inner block.*/
+
+/*initially news item block "section-news-front-wrapper" is visible.
+After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
+#main-content .section-news-hover-wrapper .vc_gitem-row-position-top,
+#main-content .section-news-front-wrapper .vc_gitem-row-position-top {
+  position: static;
+  padding: 0;
+  border-bottom: 1px solid rgba(165, 165, 165, 0.25);
+}
+
+.section-news .news-categories {
+  border-bottom: none;
+}
+
+.section-news .news-date {
+  border-bottom: none;
+}
+
+#main-content .section-news-hover-wrapper .vc_gitem-row-position-middle,
+#main-content .section-news-front-wrapper .vc_gitem-row-position-middle {
+  position: static;
+  padding: 0;
+}
+
+#main-content .section-news-hover-wrapper .vc_gitem-row-position-bottom,
+#main-content .section-news-front-wrapper .vc_gitem-row-position-bottom {
+  position: static;
+  padding: 0;
+}
+
+#main-content .section-news .section-news-front-wrapper,
+#main-content .section-news .section-news-hover-wrapper {
+  max-height: unset;
+  height: 100%;
+}
+
+#main-content .section-news-hover-wrapper.vc-gitem-zone-height-mode-auto:before,
+#main-content
+  .section-news-front-wrapper.vc-gitem-zone-height-mode-auto:before {
+  padding-top: 0;
+}
+
+#main-content .section-news .section-news-front-wrapper .vc_gitem-zone-mini,
+#main-content .section-news .section-news-hover-wrapper .vc_gitem-zone-mini {
+  padding: 0;
+}
+
+#main-content .section-news-front-wrapper .vc_gitem-row-position-middle,
+#main-content .section-news-hover-wrapper .vc_gitem-row-position-middle {
+  padding-top: 0px !important;
+}
+
+#main-content
+  .section-news
+  .vc_grid.vc_row.vc_grid-gutter-35px
+  .vc_pageable-slide-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#main-content .section-news .vc_gitem-animated-block {
+  position: relative;
+  height: 100%;
+}
+
+#main-content .section-news .vc_grid-item-mini {
+  height: 100%;
+}
+
+#main-content .section-news .section-news-front-wrapper .vc_gitem-zone-mini,
+#main-content .section-news .section-news-hover-wrapper .vc_gitem-zone-mini {
+  height: 100%;
+}
+
+#main-content .section-news .vc_gitem-zone-mini {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-content .section-news-front-wrapper .vc_gitem-row-position-bottom,
+#main-content .section-news-hover-wrapper .vc_gitem-row-position-bottom {
+  margin-top: auto;
+}
+
+#main-content .section-news .vc_grid-filter {
+  display: block !important;
+}
+
+#main-content .section-news .news-categories {
+  border-bottom: none;
+}
+
+#main-content .section-news .news-date {
+  border-bottom: none;
+}
+
+#main-content .section-news .vc_gitem-zone-a .vc_gitem-row-position-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-news .vc_gitem-zone-mini .vc_row:after,
+.section-news .vc_gitem-zone-mini .vc_row:before {
+  display: none;
+}
+
+.vc_responsive .section-news .vc_grid-filter-select {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  #main-content
+    .section-news
+    .vc_grid.vc_row.vc_grid-gutter-35px
+    .vc_grid-item {
+    width: 50%;
+  }
+
+  #main-content .section-news .section-news-front-wrapper,
+  #main-content .section-news .section-news-hover-wrapper {
+    padding: 15px 20px 20px 20px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #main-content
+    .section-news
+    .vc_grid.vc_row.vc_grid-gutter-35px
+    .vc_grid-item {
+    width: 100%;
+  }
+}
 /*------
   SHOP
 -------*/
