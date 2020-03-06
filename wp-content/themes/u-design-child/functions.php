@@ -37,7 +37,11 @@ function udesign_child_theme_styles() {
     wp_localize_script( 'yana-js', 'ajax_params', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
     wp_enqueue_script('yana-js');
 
-    wp_enqueue_script( 'anya-js', CHILD_DIR . '/assets/js/custom_scrypt_anya.js' );
+
+    wp_register_script( 'anya-js', CHILD_DIR . '/assets/js/custom_scrypt_anya.js' );
+    wp_localize_script( 'anya-js', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )) );
+    wp_enqueue_script('anya-js');
+
     wp_enqueue_script( 'jquery-ui-js', CHILD_DIR . '/assets/js/jquery-ui.min.js' );
 
 }
@@ -131,6 +135,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Партнери');
   pll_register_string('u-design-child', 'Друзi');
   pll_register_string('u-design-child', 'Волонтери');
+  pll_register_string('u-design-child', 'Дякуємо за підтримку!');
 });
 
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);

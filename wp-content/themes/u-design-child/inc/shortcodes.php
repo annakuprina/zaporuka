@@ -12,9 +12,8 @@ $text_help_label = !empty($options['text_help_block_' . ICL_LANGUAGE_CODE]) ? $o
 $agree_help_label = !empty($options['agree_help_block_' . ICL_LANGUAGE_CODE]) ? $options['agree_help_block_' . ICL_LANGUAGE_CODE] : 'Я погоджуюсь з';
 $agree_link_label = !empty($options['agree_link_text_block_' . ICL_LANGUAGE_CODE]) ? $options['agree_link_text_block_' . ICL_LANGUAGE_CODE] : 'офертою*';
 $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $options['agree_link_block_' . ICL_LANGUAGE_CODE] : '#';
-$cancel_subscription_text_block = !empty($options['cancel_subscription_text_block' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_text_block' . ICL_LANGUAGE_CODE] : 'Відмінити регулярний платіж';
-$cancel_subscription_link_block = !empty($options['cancel_subscription_link_block' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_link_block' . ICL_LANGUAGE_CODE] : '#';
-
+$cancel_subscription_text_block = !empty($options['cancel_subscription_text_block_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_text_block_' . ICL_LANGUAGE_CODE] : 'Відмінити регулярний платіж';
+$cancel_subscription_link_block = !empty($options['cancel_subscription_link_block_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_link_block_' . ICL_LANGUAGE_CODE] : '#';
 
 	ob_start();
 	?>
@@ -26,7 +25,8 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
 	   <form action="/wp-content/plugins/liqpay_wordpress/liqpay-form.php" method="POST" class="help_form">
 		   	<input type="hidden" name="date" value="'.date('d.m.Y H:i:s' ).'" required/><input type="hidden" name="liqpay_product_id"  value=""/>
 		   	<input type="hidden" name="hidden_content"  value="<?php echo site_url('/storinka-podyaky/');?>"/>
-		   	<input type="hidden" name="url_page"  value="<?php echo site_url('/storinka-podyaky/');?>"/>
+<!--		   	<input type="hidden" name="url_page"  value="--><?php //echo site_url('/storinka-podyaky/');?><!--"/>-->
+		   	<input type="hidden" name="result_url"  value="<?php echo site_url('/storinka-podyaky/');?>"/>
 		   	<input type="hidden" name="ip"  value=[ip]/>
 		   	<input type="hidden" name="pay_type"  value="pay"/>
 		    <input type="hidden" name="subscribe_type"  value="month"/>
@@ -84,7 +84,6 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
 	<?php
 	$html = ob_get_clean();
 	return $html;
-
 }
 add_shortcode('help_form', 'shortcode_help_form');
 
@@ -92,42 +91,67 @@ add_shortcode('help_form', 'shortcode_help_form');
 function shortcode_cancel_subscription_form(){
 $options = get_option('ThemeOptions');
 $cancel_subscription_form_title = !empty($options['cancel_subscription_form_title_block_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_form_title_block_' . ICL_LANGUAGE_CODE] : 'Відмінити регулярний платіж';
-$FIO_label = !empty($options['name_help_block_' . ICL_LANGUAGE_CODE]) ? $options['name_help_block_' . ICL_LANGUAGE_CODE] : 'ПIП';
 $phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $options['phone_help_block_' . ICL_LANGUAGE_CODE] : 'Телефон';
 $cancel_subscription_form_submit_button = !empty($options['cancel_subscription_form_submit_button_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_form_submit_button_' . ICL_LANGUAGE_CODE] : 'Відмінити';
-
-
+$FIO_label = !empty($options['name_help_block_' . ICL_LANGUAGE_CODE]) ? $options['name_help_block_' . ICL_LANGUAGE_CODE] : 'ПIП';
+$phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $options['phone_help_block_' . ICL_LANGUAGE_CODE] : 'Телефон';
+$back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options['404_back_main_' . ICL_LANGUAGE_CODE] : 'На головну';
 
 	ob_start();
 	?>
-  <div class="help_form_wrapper">
-  	<div class="help-form-inner-wrapper">
-  	   <div class="help-form-inner-title">
-			<?php echo $cancel_subscription_form_title; ?>
-  	   </div>
-	   <form action="" method="POST" class="help_form cancel_subscription_form">
-		    <div class="help-form-PIB">
-	    		<input  class="textarea-full" type="text" name="fio" value=""  placeholder="<?php echo $FIO_label; ?>" required/>
-	    	</div>
-		    <div class="help-form-email-tel">
-		    	<div class="help-form-amount-email">
-		    		<input  class="textarea-small" type="email" name="mail" value=""  placeholder="Email" required/>
-		    	</div>
-		    	<div class="help-form-amount-tel">
-		    		<input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
-		    	</div>
-		    </div>
-	    	<div class="help-form-submit-oferta">
-	    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $cancel_subscription_form_submit_button; ?>" /></div>
-	    	 	<div class="help-form-oferta">
-	    	 		<input type="checkbox" id="oferta" name="oferta" required>
-	  				<label for="oferta"><?php echo $agree_help_label; ?> <a href="<?php echo $agree_link; ?>" target="_blank" ><?php echo $agree_link_label; ?></a>*</label>
-	    	 	</div>
-	    	</div>
-
-		</form>
-      </div>
-  </div>
+	  <div class="help_form_wrapper">
+	  	<div class="help-form-inner-wrapper">
+	  	   <div class="help-form-inner-title">
+				<?php echo $cancel_subscription_form_title; ?>
+	  	   </div>
+		   <form action="" method="POST" class="help_form cancel_subscription_form">
+		   		<div class="cancel_subscription_form_inner_wrapper">
+				    <div class="help-form-email-tel">
+				    	<div class="help-form-amount-email">
+				    		<input  class="textarea-small" type="email" name="mail" value=""  placeholder="Email" required/>
+				    	</div>
+				    	<div class="help-form-amount-tel">
+				    		<input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
+				    	</div>
+				    	<div class="cansel-message error-message">
+						  	<?php
+							if(ICL_LANGUAGE_CODE=='uk'){
+								echo 'Для введених даних відсутній регулярний платіж';
+							}
+							elseif(ICL_LANGUAGE_CODE=='ru'){
+								echo 'Для введенных данных отсутствует регулярный платеж';
+							}
+							elseif(ICL_LANGUAGE_CODE=='en'){
+								echo 'There is no recurring payment for the entered data';
+							}
+						  	?>
+						</div>
+				    </div>
+			    	<div class="help-form-submit-oferta">
+			    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $cancel_subscription_form_submit_button; ?>" /></div>
+			    	</div>
+			    </div>
+			    <div class="cancel_subscription_form_success_block">
+			    	<div class="cansel-message success-message">
+					  	<?php
+						if(ICL_LANGUAGE_CODE=='uk'){
+							echo "Для підтвердження скасування регулярного платежу, перевірте пошту та перейдіть за посиланням у листі";
+						}
+						elseif(ICL_LANGUAGE_CODE=='ru'){
+							echo "Для подтверждения отмены регулярного платежа, проверьте почту и перейдите по ссылке в письме";
+						}
+						elseif(ICL_LANGUAGE_CODE=='en'){
+							echo "To confirm the cancel subscription, check your mail and follow the link in the email";
+						}
+					  	?>
+					  </div>
+					  <div class="help-form-submit-oferta">
+			    	 	<div class="help-form-submit"><a class="submit-btn" href="<?php echo home_url(); ?>"><?php echo $back_button; ?></a></div>
+			    	</div>
+			    </div>
+			</form>
+	      </div>
+	  </div>
 	<?php
 	$html = ob_get_clean();
 	return $html;
@@ -395,3 +419,96 @@ function shortcode_social_icons (  ) {
     return $html;
 }
 add_shortcode('social_icons', 'shortcode_social_icons');
+
+
+
+add_action( 'wp_ajax_send_cancel_subscription_email', 'send_cancel_subscription_email_function' );
+add_action( 'wp_ajax_nopriv_send_cancel_subscription_email', 'send_cancel_subscription_email_function' );
+
+function send_cancel_subscription_email_function() {
+	global $wpdb, $table_prefix;
+	$table_liqpay = $table_prefix . 'liqpay';
+	if (!isset($wpdb))
+        require_once('../../../wp-config.php');
+
+    $user_mail = sanitize_text_field( $_POST['client_mail'] );
+    $user_phone = sanitize_text_field( $_POST['client_tel'] );
+    $sql = "Select order_id, comments from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
+    $sql_res = $wpdb->get_results($sql);
+
+    if($sql_res){
+    	foreach ($sql_res as $value) {
+    		$liqpay_order_id[]=array('order_id'=>$value->order_id,'comments'=>$value->comments);
+    	}
+    }
+
+
+   	
+
+    if($liqpay_order_id){
+    	if(ICL_LANGUAGE_CODE=='uk'){
+			$start_message =  "Для підтвердження скасування регулярного платежу перейдіть за посиланням нижче\r\n";
+			$subject = 'Скасування регулярного платежу';
+		}
+		elseif(ICL_LANGUAGE_CODE=='ru'){
+			$start_message =  "Для подтверждения отмены регулярного платежа перейдите по ссылке ниже\r\n";
+			$subject = 'Отмена регулярного платежа';
+		}
+		elseif(ICL_LANGUAGE_CODE=='en'){
+			$start_message =  "To confirm the cancellation of the regular payment, follow the link below\r\n";
+			$subject = 'Cancel recurring payment';
+		}
+    	$mail_body = $start_message;
+
+    	$merchant_id = get_option('liqpay_merchant_id');
+		$signature = get_option('liqpay_signature_id');
+
+		var_dump(THEME_DIR);
+		var_dump(WP_PLUGIN_DIR . '/liqpay_wordpress/api.php');
+		//include_once "api.php";
+
+		//require_once WP_PLUGIN_DIR . '/liqpay_wordpress/api.php';
+    	//$liqpay = new LiqPay($merchant_id, $signature);
+		
+
+    	foreach ($liqpay_order_id as $order ) {
+			$mail_body .= $order['comments'] . "\r\n";
+
+			/*$res = $liqpay->api("request", array(
+			'action'        => 'unsubscribe',
+			'version'       => '3',
+			'order_id'      => $order['order_id']
+			));
+
+			var_dump($res);*/
+			//echo "<hr/>" . "\r\n";
+    	}
+
+    	var_dump($mail_body);
+	   
+
+		//При нескольких подписках отправлять пользователю в писме несколько ссылок
+
+		
+
+		die();
+		
+
+    	$result = send_notification($user_mail,$subject, $mail_body);
+    }
+
+    
+
+
+    exit( json_encode( array( 'result' => $result ) ) );   
+}
+
+
+function send_notification( $to, $subject, $mail_body ) {
+	$admin_email = get_option( 'admin_email' );
+	$headers  = 'MIME-Version: 1.0' . "\r\n";
+	$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+    $headers .= 'From: БФ "Запорука" <' . $admin_email . '>' . "\r\n";    
+	$mail_sending_result = wp_mail( $to, $subject, $mail_body, $headers );
+	return $mail_sending_result;
+}
