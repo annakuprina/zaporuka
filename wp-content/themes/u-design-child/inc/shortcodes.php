@@ -94,7 +94,7 @@ $phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $opti
 $cancel_subscription_form_submit_button = !empty($options['cancel_subscription_form_submit_button_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_form_submit_button_' . ICL_LANGUAGE_CODE] : 'Відмінити';
 $FIO_label = !empty($options['name_help_block_' . ICL_LANGUAGE_CODE]) ? $options['name_help_block_' . ICL_LANGUAGE_CODE] : 'ПIП';
 $phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $options['phone_help_block_' . ICL_LANGUAGE_CODE] : 'Телефон';
-
+$back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options['404_back_main_' . ICL_LANGUAGE_CODE] : 'На головну';
 
 	ob_start();
 	?>
@@ -104,32 +104,52 @@ $phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $opti
 				<?php echo $cancel_subscription_form_title; ?>
 	  	   </div>
 		   <form action="" method="POST" class="help_form cancel_subscription_form">
-			    <div class="help-form-email-tel">
-			    	<div class="help-form-amount-email">
-			    		<input  class="textarea-small" type="email" name="mail" value=""  placeholder="Email" required/>
-			    	</div>
-			    	<div class="help-form-amount-tel">
-			    		<input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
+		   		<div class="cancel_subscription_form_inner_wrapper">
+				    <div class="help-form-email-tel">
+				    	<div class="help-form-amount-email">
+				    		<input  class="textarea-small" type="email" name="mail" value=""  placeholder="Email" required/>
+				    	</div>
+				    	<div class="help-form-amount-tel">
+				    		<input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
+				    	</div>
+				    </div>
+				    <div class="cansel-message error-message">
+					  	<?php
+						if(ICL_LANGUAGE_CODE=='uk'){
+							echo 'Для введених даних відсутній регулярний платіж';
+						}
+						elseif(ICL_LANGUAGE_CODE=='ru'){
+							echo 'Для введенных данных отсутствует регулярный платеж';
+						}
+						elseif(ICL_LANGUAGE_CODE=='en'){
+							echo 'There is no recurring payment for the entered data';
+						}
+					  	?>
+					</div>
+			    	<div class="help-form-submit-oferta">
+			    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $cancel_subscription_form_submit_button; ?>" /></div>
 			    	</div>
 			    </div>
-		    	<div class="help-form-submit-oferta">
-		    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $cancel_subscription_form_submit_button; ?>" /></div>
-		    	</div>
+			    <div class="cancel_subscription_form_success_block">
+			    	<div class="cansel-message success-message">
+					  	<?php
+						if(ICL_LANGUAGE_CODE=='uk'){
+							echo "Для підтвердження скасування регулярного платежу, перевірте пошту та перейдіть за посиланням у листі";
+						}
+						elseif(ICL_LANGUAGE_CODE=='ru'){
+							echo "Для подтверждения отмены регулярного платежа, проверьте почту и перейдите по ссылке в письме";
+						}
+						elseif(ICL_LANGUAGE_CODE=='en'){
+							echo "To confirm the cancel subscription, check your mail and follow the link in the email";
+						}
+					  	?>
+					  </div>
+					  <div class="help-form-submit-oferta">
+			    	 	<div class="help-form-submit"><a class="submit-btn" href="<?php echo home_url(); ?>"><?php echo $back_button; ?></a></div>
+			    	</div>
+			    </div>
 			</form>
 	      </div>
-	  </div>
-	  <div class="cansel-message">
-	  	<?php
-		if(ICL_LANGUAGE_CODE=='uk'){
-			echo "Для підтвердження скасування регулярного платежу, перевірте пошту та перейдіть за посиланням у листі";
-		}
-		elseif(ICL_LANGUAGE_CODE=='ru'){
-			echo "Для подтверждения отмены регулярного платежа, проверьте почту и перейдите по ссылке в письме";
-		}
-		elseif(ICL_LANGUAGE_CODE=='en'){
-			echo "To confirm the cancel subscription, check your mail and follow the link in the email";
-		}
-	  	?>
 	  </div>
 	<?php
 	$html = ob_get_clean();
@@ -410,8 +430,6 @@ function send_cancel_subscription_email_function() {
 	if (!isset($wpdb))
         require_once('../../../wp-config.php');
 
-    //проверить еще вариант нескольких подписок
-
     $user_mail = sanitize_text_field( $_POST['client_mail'] );
     $user_phone = sanitize_text_field( $_POST['client_tel'] );
     $sql = "Select order_id from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
@@ -432,50 +450,18 @@ function send_cancel_subscription_email_function() {
 		'order_id'      => 'order_id_1'
 		));*/
 
+		//При нескольких подписках отправлять пользователю в писме несколько ссылок
 
 		$mail_body = "Тестовое письмо пока что без проверок";
 
 
-    	$result = send_notification($user_mail,'Отмена регулярного платежа', $mail_body);
+		$subject = 'Отмена регулярного платежа';
+
+    	$result = send_notification($user_mail,$subject, $mail_body);
     }
 
-    if(!$res){
-    	if(ICL_LANGUAGE_CODE=='uk'){
-			$message =  'Для введених даних відсутній регулярний платіж';
-		}
-		elseif(ICL_LANGUAGE_CODE=='ru'){
-			$message =  'Для введенных данных отсутствует регулярный платеж';
-		}
-		elseif(ICL_LANGUAGE_CODE=='en'){
-			$message =  'There is no recurring payment for the entered data';
-		}
-    }
-    else{
-    	if(ICL_LANGUAGE_CODE=='uk'){
-			$message = "Для підтвердження скасування регулярного платежу, перевірте пошту та перейдіть за посиланням у листі";
-		}
-		elseif(ICL_LANGUAGE_CODE=='ru'){
-			$message = "Для подтверждения отмены регулярного платежа, проверьте почту и перейдите по ссылке в письме";
-		}
-		elseif(ICL_LANGUAGE_CODE=='en'){
-			$message = "To confirm the cancel subscription, check your mail and follow the link in the email";
-		}
-    }
-	if(!$result && $res){
-    	if(ICL_LANGUAGE_CODE=='uk'){
-			$message =  'Сталася помилка під час скасування';
-		}
-		elseif(ICL_LANGUAGE_CODE=='ru'){
-			$message =  'Произошла ошибка во время отмены';
-		}
-		elseif(ICL_LANGUAGE_CODE=='en'){
-			$message =  'An error occurred while canceling';
-		}
-    }
 
-    //проверить еще вариант нескольких подписок - при отмене регулярного платежа удалять запись из таблицы liqpay
-
-    exit( json_encode( array( 'result' => $result, 'message'=>$message  ) ) );   
+    exit( json_encode( array( 'result' => $result  ) ) );   
 }
 
 

@@ -1085,12 +1085,22 @@ footer a.designer-link {
   color: rgba(165, 165, 165, 0.8);
   font-size: 14px;
 }
-.wpb_wrapper .cansel-message{
+.help-form-inner-wrapper .cancel_subscription_form .help-form-email-tel{
+  position: relative;
+  padding-bottom:45px;
+}
+.wpb_wrapper .cansel-message.error-message{
   display: none;
-  max-width: 503px;
-  color: #e78b48;
-  font-weight: 700;
-  margin-top: 30px;
+  color: #d0021b;
+  font-size: 12px;
+  top: 36px;
+  line-height: 1em;
+  position: absolute;
+}
+.wpb_wrapper .cansel-message.success-message{
+    color: #e78b48;
+    font-weight: 700;
+    margin-top: 30px;
 }
 .help-form-inner-wrapper .cancel_subscription_form .help-form-submit-oferta{padding-bottom: 0;}
 input[type="checkbox"]:checked,
