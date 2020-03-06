@@ -104,11 +104,8 @@ if (isset($_POST['data'])) {
 
     $liqpay_post_id =  get_option($order_id . '-liqpay_post_id');
 
-
-
     if (!$to)
         $to = $current_user->user_email;
-
 
     if (($current_user->user_firstname) || ($current_user->user_lastname) || ($current_user->user_login)){
         $fio = $current_user->user_firstname . " " . $current_user->user_lastname . " " . $current_user->user_login;
@@ -133,7 +130,6 @@ if (isset($_POST['data'])) {
     $liqpay_magazin_tmp = get_option('liqpay_magazin');
     $liqpay_mail_sender_tmp = " <" . get_option('liqpay_mail_sender') . ">";
     $headers = "From: " . $liqpay_magazin_tmp . $liqpay_mail_sender_tmp . "\r\n";
-
 
     if (isset($_GET['server_order_id'])) {
         $server_order_id = $_GET['server_order_id'];
