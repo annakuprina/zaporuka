@@ -817,9 +817,9 @@ function shortcode_thanks_block(){
     if (isset($res)) {
         $order_id = $res[0]->order_id;
         $order_sum = $res[0]->summa  . check_currency();
-        $post_id =  get_option(md5($order_id) . '-liqpay_post_id');
+        $post_id =  get_option($order_id . '-liqpay_post_id');
         $thanks_text = get_post_meta($post_id, 'thanks_text', true);
-        var_dump(md5($order_id));
+        var_dump($thanks_text);
         $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
     }
     ob_start();
@@ -828,7 +828,7 @@ function shortcode_thanks_block(){
         <div>
             <div><?php pll_e( 'Дякуємо за підтримку!');?></div>
             <div>
-                <?php //echo $thanks_text; ?>
+                <?php echo $thanks_text; ?>
             </div>
             <div>
                 <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
