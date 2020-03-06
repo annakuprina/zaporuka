@@ -410,7 +410,7 @@ function send_cancel_subscription_email_function() {
 	if (!isset($wpdb))
         require_once('../../../wp-config.php');
 
-    //проаерить еще вариант нескольких подписок
+    //проверить еще вариант нескольких подписок
 
     $user_mail = sanitize_text_field( $_POST['client_mail'] );
     $user_phone = sanitize_text_field( $_POST['client_tel'] );
@@ -450,6 +450,17 @@ function send_cancel_subscription_email_function() {
 			$message =  'There is no recurring payment for the entered data';
 		}
     }
+    else{
+    	if(ICL_LANGUAGE_CODE=='uk'){
+			$message = "Для підтвердження скасування регулярного платежу, перевірте пошту та перейдіть за посиланням у листі";
+		}
+		elseif(ICL_LANGUAGE_CODE=='ru'){
+			$message = "Для подтверждения отмены регулярного платежа, проверьте почту и перейдите по ссылке в письме";
+		}
+		elseif(ICL_LANGUAGE_CODE=='en'){
+			$message = "To confirm the cancel subscription, check your mail and follow the link in the email";
+		}
+    }
 	if(!$result && $res){
     	if(ICL_LANGUAGE_CODE=='uk'){
 			$message =  'Сталася помилка під час скасування';
@@ -462,6 +473,7 @@ function send_cancel_subscription_email_function() {
 		}
     }
 
+    //проверить еще вариант нескольких подписок - при отмене регулярного платежа удалять запись из таблицы liqpay
 
     exit( json_encode( array( 'result' => $result, 'message'=>$message  ) ) );   
 }
