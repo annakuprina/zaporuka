@@ -436,69 +436,67 @@ function send_cancel_subscription_email_function() {
     $sql_res = $wpdb->get_results($sql);
 
     if($sql_res){
-    	//$liqpay_order_id = $sql_res->order_id;
     	foreach ($sql_res as $value) {
     		$liqpay_order_id[]=array('order_id'=>$value->order_id,'comments'=>$value->comments);
     	}
     }
 
 
-    var_dump($sql_res);
-
-    echo "<hr>";
-
-    var_dump($liqpay_order_id);
    	
 
     if($liqpay_order_id){
-
-
     	if(ICL_LANGUAGE_CODE=='uk'){
-			$start_message =  "Для підтвердження скасування регулярного платежу перейдіть за посиланням нижче<br><br>";
+			$start_message =  "Для підтвердження скасування регулярного платежу перейдіть за посиланням нижче\r\n";
 			$subject = 'Скасування регулярного платежу';
 		}
 		elseif(ICL_LANGUAGE_CODE=='ru'){
-			$start_message =  "Для подтверждения отмены регулярного платежа перейдите по ссылке ниже<br><br>";
+			$start_message =  "Для подтверждения отмены регулярного платежа перейдите по ссылке ниже\r\n";
 			$subject = 'Отмена регулярного платежа';
 		}
 		elseif(ICL_LANGUAGE_CODE=='en'){
-			$start_message =  "To confirm the cancellation of the regular payment, follow the link below<br><br>";
+			$start_message =  "To confirm the cancellation of the regular payment, follow the link below\r\n";
 			$subject = 'Cancel recurring payment';
 		}
-    	
-
     	$mail_body = $start_message;
 
-    	foreach ($liqpay_order_id as $order ) {
+    	$merchant_id = get_option('liqpay_merchant_id');
+		$signature = get_option('liqpay_signature_id');
 
-    		$mail_body .= $order->comments;
+		var_dump(THEME_DIR);
+		var_dump(WP_PLUGIN_DIR . '/liqpay_wordpress/api.php');
+		//include_once "api.php";
+
+		//require_once WP_PLUGIN_DIR . '/liqpay_wordpress/api.php';
+    	//$liqpay = new LiqPay($merchant_id, $signature);
+		
+
+    	foreach ($liqpay_order_id as $order ) {
+			$mail_body .= $order['comments'] . "\r\n";
+
+			/*$res = $liqpay->api("request", array(
+			'action'        => 'unsubscribe',
+			'version'       => '3',
+			'order_id'      => $order['order_id']
+			));
+
+			var_dump($res);*/
+			//echo "<hr/>" . "\r\n";
     	}
 
-	    /*$liqpay = new LiqPay($public_key, $private_key);
-		$res = $liqpay->api("request", array(
-		'action'        => 'unsubscribe',
-		'version'       => '3',
-		'order_id'      => 'order_id_1'
-		));*/
+    	var_dump($mail_body);
+	   
 
 		//При нескольких подписках отправлять пользователю в писме несколько ссылок
 
 		
 
-
+		die();
 		
 
     	$result = send_notification($user_mail,$subject, $mail_body);
     }
 
-    echo "<hr>";
-
-    var_dump($mail_body);
-
-    echo "<hr>";
-
-    var_dump($result);
-    die();
+    
 
 
     exit( json_encode( array( 'result' => $result ) ) );   
