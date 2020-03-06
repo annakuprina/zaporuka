@@ -102,7 +102,7 @@ if (isset($_POST['data'])) {
         $user_phone = $order->get_billing_phone();
     }
 
-    $liqpay_post_id =  get_option($order_id_md5 . '-liqpay_post_id');
+    $liqpay_post_id =  get_option($order_id . '-liqpay_post_id');
 
 
 
