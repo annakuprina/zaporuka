@@ -1080,3 +1080,9 @@ li.one-tab-link:hover {
 .media_slider_block .slick-prev:hover:before {
   opacity: 1;
 }
+
+/********************* Thanks block *********************/
+.home-first-thanks-block{
+  background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
+  color: #fff;
+}
