@@ -25,7 +25,7 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
 	   <form action="/wp-content/plugins/liqpay_wordpress/liqpay-form.php" method="POST" class="help_form">
 		   	<input type="hidden" name="date" value="'.date('d.m.Y H:i:s' ).'" required/><input type="hidden" name="liqpay_product_id"  value=""/>
 		   	<input type="hidden" name="hidden_content"  value="<?php echo site_url('/storinka-podyaky/');?>"/>
-		   	<input type="hidden" name="url_page"  value="<?php echo site_url('/storinka-podyaky/');?>"/>
+		   	<input type="hidden" name="url_page"  value="<?php echo site_url('/storinka-podyaky/');?>/[order_id]"/>
 		   	<input type="hidden" name="result_url"  value="<?php echo site_url('/storinka-podyaky/');?>"/>
 		   	<input type="hidden" name="ip"  value=[ip]/>
 		   	<input type="hidden" name="pay_type"  value="pay"/>
