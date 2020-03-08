@@ -1895,20 +1895,21 @@ h3 {
 }
 
 @media screen and (max-width: 1200px) {
-  .children-wrapper {
-    width: 760px;
-    margin: auto;
+  .child {
+    width: calc((100% - 40px) / 3);
+    padding: 20px 20px;
+    min-height: unset;
+  }
+
+  .child-info {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
 @media screen and (max-width: 850px) {
   .children-wrapper {
     width: 100%;
-  }
-
-  .child-info {
-    font-size: 16px;
-    line-height: 20px;
   }
 
   .child {
@@ -4172,6 +4173,114 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     width: 100%;
   }
 }
+
+/*---------
+  REPORTS
+----------*/
+.reporting_section_tabs .list_reports_wrapper {
+  padding: 115px 0 120px 0;
+}
+
+.list_reports_wrapper .one-tab-link span {
+  font-family: "Proxima-Nova-Regular";
+  font-weight: 700;
+}
+
+.list_reports_wrapper .one-tab-link {
+  padding-bottom: 37px;
+}
+
+.reports_section .download_report_wrapper .report_text {
+  padding: 42px 40px 40px 40px;
+}
+
+.reports_section .report_title {
+  padding-bottom: 16px;
+}
+
+.children-block .pagination-children .count_pages {
+  top: 15px;
+}
+
+#main-content .children-block {
+  padding-bottom: 33px;
+}
+
+@media screen and (max-width: 1024px) {
+  .reporting_section_tabs .list_reports_wrapper li.tab-active:after {
+    display: none;
+  }
+
+  .reporting_section_tabs li.one-tab-link:hover:after {
+    display: none;
+  }
+
+  .reporting_section_tabs .list_reports_wrapper ul {
+    flex-wrap: wrap;
+    justify-content: right;
+  }
+
+  .reporting_section_tabs .list_reports_wrapper .one-tab-link {
+    width: 80px;
+  }
+
+  .reporting_section_tabs .list_reports_wrapper .one-tab-link {
+    padding-bottom: 25px;
+  }
+
+  .reporting_section_tabs .list_reports_wrapper {
+    padding: 60px 0 50px 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .reporting_section_tabs .list_reports_wrapper .one-tab-link {
+    width: 65px;
+  }
+
+  .reporting_section_tabs .tabs_content .reports_section > div {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .reports_section .download_report_wrapper .report_text {
+    padding: 25px 30px 25px 30px;
+  }
+
+  #main-content .zvit_children_count {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .h2-header-line {
+    margin-bottom: 40px;
+  }
+
+  #main-content .reporting_section_tabs {
+    padding-bottom: 45px;
+  }
+
+  .children-block .count_pages {
+    position: static;
+  }
+  .children-block .pagination-children .count_pages {
+    margin: auto;
+    display: table;
+  }
+
+  .children-block .list-cptapagination {
+    margin-bottom: 15px;
+  }
+
+  .children-block .child:last-child {
+    margin-bottom: 20px !important;
+  }
+
+  #main-content .children-block {
+    padding-bottom: 0;
+  }
+}
+
 /*------
   SHOP
 -------*/
