@@ -1088,11 +1088,12 @@ li.one-tab-link:hover {
   width: 90%;
   padding: 60px 80px;
 }
-.h2-header-without-line-white{
+.thanks-text-wrapper .h2-header-without-line-white{
   color: #ffffff;
   font-family: Raleway-Bold;
   font-size: 48px;
   line-height: 58px;
+  padding-bottom: 20px;
 }
 .thanks-text-wrapper .thanks-text-block{
   line-height: 28px;
