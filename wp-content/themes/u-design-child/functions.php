@@ -313,16 +313,27 @@ function page_load_money_to_project_function(){
     <div>
 <?php
     if (isset($_POST['send_load_money_form'])){
-        $current_value = get_field( "total-collected", $_POST['project_list_for_load_money'] );
+        $post_id = $_POST['project_list_for_load_money'];
+        $current_value = get_field( "total-collected", $post_id );
         $new_value=0;
         if( $_POST['type_operation'] == 'zachislit'){
             $new_value = $current_value + $_POST['amount_for_project'];
+            $type_operation = 'зачислено';
         }
         else{
             $new_value = $current_value - $_POST['amount_for_project'];
+            $type_operation = 'списано';
         }
 
         update_field('total-collected', $new_value , $_POST['project_list_for_load_money']);
+        $date_operation = date('Y-m-d H:i:s');
+        $admin_email = wp_get_current_user()->user_email;
+        global $wpdb, $table_prefix;
+        $table_liqpay_project_history = $table_prefix . 'liqpay_project_history';
+        $sql = "insert into {$table_liqpay_project_history} (`project_id`,`transaction_id`,`order_date`,`users_name`,`users_phone`,`users_email`,`summa`,`type_operation`) values ('" . $post_id . "','" . $post_id . "','" . $date_operation . "','admin','','" . $admin_email . "','" . $_POST['amount_for_project'] . "','" . $type_operation . "')
+         on duplicate key update project_id=VALUES(project_id),transaction_id=VALUES(transaction_id),order_date=VALUES(order_date),users_name=VALUES(users_name),users_phone=VALUES(users_phone),users_email=VALUES(users_email),summa=VALUES(summa),type_operation=VALUES(type_operation);";
+        $wpdb->query($sql);
+
         ?>
         <h3 style="color:#00669b;">Проект "<?php echo get_the_title($_POST['project_list_for_load_money']); ?>" был обновлен</h3>
     <?php }
@@ -345,4 +356,9 @@ function check_currency(){
         $symbol =  'UAN';
     }
     return $symbol;
+}
+
+if ( $_SERVER ["REQUEST_URI"] == '/storinka-podyaky/new-order' ){
+    wp_safe_redirect(home_url() . '/storinka-podyaky/');
+    exit;
 }
