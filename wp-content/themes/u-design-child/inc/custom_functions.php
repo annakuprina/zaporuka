@@ -856,10 +856,34 @@ function add_custom_history_box(){
 }
 // HTML код блока
 function history_meta_box_callback( $post, $meta ){
-    $screens = $meta['args'];
 
-    // значение поля
-    //$value = get_post_meta( $post->ID, 'my_meta_key', 1 );
-    echo '123';
+    global $wpdb, $table_prefix;
+    $table_liqpay_project_history = $table_prefix . 'liqpay_project_history';
+    $sql = "SELECT * FROM {$table_liqpay_project_history} WHERE project_id = {$post->ID}";
+    $result = $wpdb->get_results($sql);
+    ob_start();
+    if($result) { ?>
+        <table border="1">
+            <tr>
+                <th>Дата</th>
+                <th>Плательщик</th>
+                <th>Сумма</th>
+                <th>Примечание</th>
+            </tr>
+            <?php
+            foreach ($result as $value) { ?>
+                <tr>
+                    <td><?php echo $value->order_date; ?></td>
+                    <td><?php echo $value->users_name; ?> (<?php echo $value->users_email . ' ' . $value->users_phone; ?>)</td>
+                    <td><?php echo $value->summa; ?></td>
+                    <td><?php echo $value->type_operation; ?></td>
+                </tr>
+            <?php } ?>
+        </table>
+    <?php } else {
+        echo 'Нет операций';
+    }
+    $html = ob_get_clean();
+    return $html;
 
 }
