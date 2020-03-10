@@ -347,10 +347,7 @@ function check_currency(){
     return $symbol;
 }
 
-
 if ( $_SERVER ["REQUEST_URI"] == '/storinka-podyaky/new-order' ){
-//    var_dump($_SERVER);
-//    exit;
     wp_safe_redirect(home_url() . '/storinka-podyaky/');
     exit;
 }
