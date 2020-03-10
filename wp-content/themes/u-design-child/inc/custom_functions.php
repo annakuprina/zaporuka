@@ -813,8 +813,19 @@ function shortcode_thanks_block(){
         $order_id = $res[0]->order_id;
         $order_sum = '<span class="order-sum">' . $res[0]->summa . ' '  . check_currency() . '</span>';
         $post_id =  get_option($order_id . '-liqpay_post_id');
-//        $thanks_text = get_post_meta($post_id, 'thanks_text', true);
         $thanks_text = get_field('thanks_text', $post_id);
+        if( !isset($thanks_text) ) {
+            if(ICL_LANGUAGE_CODE=='uk'){
+            $thanks_text = 'Вдячні за вашу пожертву у розмірі [сумма] Всі відправлені вами кошти підуть на допомогу БФ "Запорука".';
+	        }
+            elseif(ICL_LANGUAGE_CODE=='ru'){
+                $thanks_text = 'Благодарны за ваше пожертвование в размере [сумма] Все отправленные вами средства пойдут на помощь БФ "Запорука".';
+            }
+            elseif(ICL_LANGUAGE_CODE=='en'){
+                $thanks_text = 'Thank you for your donation of [сумма] All money you send will go to the assistance of BF "Zaporuka".';
+            }
+
+        }
         $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
     }
 
