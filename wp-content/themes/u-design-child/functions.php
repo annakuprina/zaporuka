@@ -347,10 +347,10 @@ function check_currency(){
     return $symbol;
 }
 
-add_action('init', 'create_rewrite_rules');
-function create_rewrite_rules() {
-    add_rewrite_rule(
-        '/storinka-podyaky/new-order',
-        '/storinka-podyaky/'
-    );
+
+if ( $_SERVER ["REQUEST_URI"] == '/storinka-podyaky/new-order' ){
+//    var_dump($_SERVER);
+//    exit;
+    wp_safe_redirect(home_url() . '/storinka-podyaky/');
+    exit;
 }
