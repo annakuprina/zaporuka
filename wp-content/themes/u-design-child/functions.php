@@ -317,12 +317,17 @@ function page_load_money_to_project_function(){
         $new_value=0;
         if( $_POST['type_operation'] == 'zachislit'){
             $new_value = $current_value + $_POST['amount_for_project'];
+            $type_operation = 'зачислено';
         }
         else{
             $new_value = $current_value - $_POST['amount_for_project'];
+            $type_operation = 'списано';
         }
 
         update_field('total-collected', $new_value , $_POST['project_list_for_load_money']);
+        $date = date('Y-m-d H:i:s');
+        insert_history($_POST['project_list_for_load_money'], $_POST['project_list_for_load_money'], $date, 'admin', '', '', $_POST['amount_for_project'], $type_operation);
+
         ?>
         <h3 style="color:#00669b;">Проект "<?php echo get_the_title($_POST['project_list_for_load_money']); ?>" был обновлен</h3>
     <?php }
