@@ -848,3 +848,18 @@ function shortcode_thanks_block(){
     $html = ob_get_clean();
     return $html;
 }
+add_action('add_meta_boxes', 'add_custom_history_box');
+function add_custom_history_box(){
+    $screens = array( 'post_type', 'projects' );
+    add_meta_box( 'history_sectionid', 'История зачислений/списаний', 'history_meta_box_callback', $screens );
+
+}
+// HTML код блока
+function history_meta_box_callback( $post, $meta ){
+    $screens = $meta['args'];
+
+    // значение поля
+    //$value = get_post_meta( $post->ID, 'my_meta_key', 1 );
+    echo '123';
+
+}
