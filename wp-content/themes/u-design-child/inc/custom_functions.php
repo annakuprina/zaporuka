@@ -851,8 +851,7 @@ function shortcode_thanks_block(){
 add_action('add_meta_boxes', 'add_custom_history_box');
 function add_custom_history_box(){
     $screens = array( 'post_type', 'projects' );
-    add_meta_box( 'history_sectionid', 'История зачислений/списаний', 'history_meta_box_callback', $screens );
-
+    add_meta_box( 'post_payment_history', 'История зачислений/списаний', 'history_meta_box_callback', $screens );
 }
 // HTML код блока
 function history_meta_box_callback( $post, $meta ){
@@ -861,26 +860,43 @@ function history_meta_box_callback( $post, $meta ){
     $table_liqpay_project_history = $table_prefix . 'liqpay_project_history';
     $sql = "SELECT * FROM {$table_liqpay_project_history} WHERE project_id = {$post->ID}";
     $result = $wpdb->get_results($sql);
+//    var_dump($result);
     ob_start();
-    if($result) { ?>
-        <table border="1">
+    if(!empty($result)) { ?>
+        <style>
+            .payment-history{
+                border-collapse: collapse!important;
+            }
+            .payment-history tr{
+                border-bottom: 1px solid #ccd0d4;
+                text-align: left;
+            }
+
+        </style>
+        <table class="payment-history" id="history_payments">
+            <thead>
             <tr>
                 <th>Дата</th>
                 <th>Плательщик</th>
                 <th>Сумма</th>
                 <th>Примечание</th>
             </tr>
-            <?php
-            foreach ($result as $value) {
-                var_dump($value);
-                ?>
-
-            <?php } ?>
+            </thead>
+           <tbody>
+                <?php foreach ($result as $value) { ?>
+                    <tr>
+                        <td><?php echo $value->order_date; ?></td>
+                        <td><?php echo $value->users_name; ?> (<?php echo $value->users_email . ' ' . $value->users_phone; ?>)</td>
+                        <td><?php echo $value->summa; ?></td>
+                        <td><?php echo $value->type_operation; ?></td>
+                    </tr>
+                <?php } ?>
+           </tbody>
         </table>
     <?php } else {
         echo 'Нет операций';
     }
     $html = ob_get_clean();
-    return $html;
+    echo $html;
 
 }

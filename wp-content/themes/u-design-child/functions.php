@@ -37,7 +37,6 @@ function udesign_child_theme_styles() {
     wp_localize_script( 'yana-js', 'ajax_params', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
     wp_enqueue_script('yana-js');
 
-
     wp_register_script( 'anya-js', CHILD_DIR . '/assets/js/custom_scrypt_anya.js' );
     wp_localize_script( 'anya-js', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )) );
     wp_enqueue_script('anya-js');
@@ -46,6 +45,13 @@ function udesign_child_theme_styles() {
 
 }
 add_action( 'wp_enqueue_scripts', 'udesign_child_theme_styles', 99 );
+
+function udesign_child_theme_admin_styles() {
+    wp_enqueue_style( 'fooTables-css', CHILD_DIR . '/assets/css/dataTables/datatables.min.css' );
+    wp_enqueue_script( 'fooTables-js',  CHILD_DIR . '/assets/js/dataTables/datatables.min.js' );
+    wp_enqueue_script( 'custom-admin-js',  CHILD_DIR . '/assets/js/custom_admin.js' );
+}
+add_action( 'admin_enqueue_scripts', 'udesign_child_theme_admin_styles', 99);
 
 /***************** BEGIN ADDING YOUR CODE BELOW: *****************/
 
@@ -339,7 +345,7 @@ function page_load_money_to_project_function(){
 
 add_filter( 'pll_copy_post_metas', 'copy_post_metas' );
 function copy_post_metas( $metas ) {
-    return array_merge( $metas, array( 'total-collected','total-amount', 'show-on-home-page','current-completed' ) );
+    return array_merge( $metas, array( 'total-collected','total-amount', 'show-on-home-page','current-completed','post_payment_history' ) );
 }
 
 function check_currency(){
