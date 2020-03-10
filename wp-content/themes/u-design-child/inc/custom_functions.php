@@ -821,7 +821,7 @@ function shortcode_thanks_block(){
                 $thanks_text = 'Благодарны за ваше пожертвование в размере [сумма] Все отправленные вами средства пойдут на помощь БФ "Запорука".';
             }
             elseif ( ICL_LANGUAGE_CODE == 'en' ) {
-                $thanks_text = 'Thank you for your donation of [сумма] All money you send will go to the assistance of BF "Zaporuka".';
+                $thanks_text = 'We are grateful for your donation with the amount of [сумма]. All funds sent by you will be transfered to help CF(Charity Fund) Zaporuka.';
             }
         }
         $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
