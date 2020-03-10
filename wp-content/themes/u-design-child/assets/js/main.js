@@ -184,15 +184,6 @@ jQuery(document).ready(function($) {
           dots: true
         }
       }
-      // {
-      //   breakpoint: 650,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     slidesToScroll: 1,
-      //     infinite: true,
-      //     dots: true
-      //   }
-      // }
     ]
   });
 
@@ -221,7 +212,6 @@ jQuery(document).ready(function($) {
   });
 
   /*DROPDOWN FOR SHOP PAGE MOBILE*/
-
   // Toggle dropdown
   $(".category-mob-select").on("click", function() {
     $(this)
@@ -242,4 +232,10 @@ jQuery(document).ready(function($) {
       }
     }
   }, 10);
+
+  /*DROPDOWN FOR NEWS PAGE MOBILE*/
+  // console.log("prr");
+  // $(".section-news .vc_grid-filter").prepend(
+  //   "<li class='category-mob-select'>Всi новини111</li>"
+  // );
 });
