@@ -1,9 +1,10 @@
 jQuery(document).ready(function($) {
-
   var callHelpPopup = false;
- 
+
   //call help sms modal from header
-  $("#custom-top-bar .top-bar-help-block a, #header-mob .top-bar-help-block a").click(function(e) {
+  $(
+    "#custom-top-bar .top-bar-help-block a, #header-mob .top-bar-help-block a"
+  ).click(function(e) {
     e.preventDefault();
     $("#sendSmsModalfromHeader").addClass("opened");
     $("body").addClass("noscroll");
@@ -31,7 +32,9 @@ jQuery(document).ready(function($) {
   });
 
   //call help big modal
-  $(".help-header-link a,.mob-menu-right #menu-item-305 a, #menu-Futer-Dopomogti-ukr li:eq(0) a,#menu-Futer-Dopomogti-rus  li:eq(0) a,#menu-Futer-Dopomogti-en li:eq(0) a").click(function(e) {
+  $(
+    ".help-header-link a,.mob-menu-right #menu-item-305 a, #menu-Futer-Dopomogti-ukr li:eq(0) a,#menu-Futer-Dopomogti-rus  li:eq(0) a,#menu-Futer-Dopomogti-en li:eq(0) a"
+  ).click(function(e) {
     e.preventDefault();
     callHelpPopup = true;
     $("#ModalHelpForm").addClass("opened");
@@ -45,8 +48,12 @@ jQuery(document).ready(function($) {
     $("body").removeClass("noscroll");
   });
 
-  $(".home-page-section2 .section2-columns .section2-single-column").click(function() {
-    var text = $(this).find(".vc_cta3-actions").find("a").attr("href");
+  $(".home-page-section2 .section2-columns .section2-single-column").click(
+    function() {
+      var text = $(this)
+        .find(".vc_cta3-actions")
+        .find("a")
+        .attr("href");
       window.location.href = text;
     }
   );
@@ -54,22 +61,28 @@ jQuery(document).ready(function($) {
   $(".help_form .amount-button").click(function(e) {
     e.preventDefault();
     var parent = jQuery(this).parent();
-    parent.find('.amount-button').not(this).removeClass("active");
+    parent
+      .find(".amount-button")
+      .not(this)
+      .removeClass("active");
     $(this).toggleClass("active");
-    $(parent).parent().find('.help-form-amount-left #paid').val($(this).attr("summ"));
+    $(parent)
+      .parent()
+      .find(".help-form-amount-left #paid")
+      .val($(this).attr("summ"));
   });
 
   $(".help_form #paid").on("input", function(e) {
-    var parent = jQuery(this).parents('.help_form');
-    parent.find('.amount-button').removeClass("active");
-  });   
+    var parent = jQuery(this).parents(".help_form");
+    parent.find(".amount-button").removeClass("active");
+  });
 
   $(".help_form .help-form-subscribe .subscribe-link").click(function(e) {
     e.preventDefault();
-    var parent = jQuery(this).parents('.help_form');
+    var parent = jQuery(this).parents(".help_form");
     parent.find(".help-form-subscribe .subscribe-link").removeClass("active");
     $(this).addClass("active");
-    parent.find('input[name="pay_type"]').val($(this).attr("paytype"));      
+    parent.find('input[name="pay_type"]').val($(this).attr("paytype"));
     change_payment_description($(this).attr("paytype"));
   });
 
@@ -204,10 +217,10 @@ jQuery(document).ready(function($) {
     subscribe_fond_lable = "Monthly transfer of funds to the BF Zaporuka";
   }
 
-  var form_popup_parent = $( ".help_form" ).parents('.modal-body');
-  var form_page_parent = $( ".help_form" ).parents('.wpb_wrapper');
+  var form_popup_parent = $(".help_form").parents(".modal-body");
+  var form_page_parent = $(".help_form").parents(".wpb_wrapper");
 
-  form_popup_parent.find('.help_form').validate({
+  form_popup_parent.find(".help_form").validate({
     rules: {
       paid: {
         required: true,
@@ -252,7 +265,7 @@ jQuery(document).ready(function($) {
     }
   });
 
-  form_page_parent.find('.help_form').validate({
+  form_page_parent.find(".help_form").validate({
     rules: {
       paid: {
         required: true,
@@ -298,68 +311,64 @@ jQuery(document).ready(function($) {
   });
 
   //add payment description to Help form
-  function change_payment_description(type_of_help){
-     if(window.location.href.indexOf("/projects/") > -1) {
-        var project_name = $('#page-title .single-pagetitle').text();
-        var project_id_full =  $('.single-projects article.projects ').attr('id');
-        var project_id_full_arr = project_id_full.split('-');
-         var project_id = project_id_full_arr[1];
-        if(type_of_help == 'pay'){
-          $('.help_form #plata').val(onetime_project_label + project_name);
-        }
-        else{
-          $('.help_form #plata').val(subscribe_project_label + project_name);
-        }
-        $('.help_form #liqpay_post_id').val(project_id);
+  function change_payment_description(type_of_help) {
+    if (window.location.href.indexOf("/projects/") > -1) {
+      var project_name = $("#page-title .single-pagetitle").text();
+      var project_id_full = $(".single-projects article.projects ").attr("id");
+      var project_id_full_arr = project_id_full.split("-");
+      var project_id = project_id_full_arr[1];
+      if (type_of_help == "pay") {
+        $(".help_form #plata").val(onetime_project_label + project_name);
+      } else {
+        $(".help_form #plata").val(subscribe_project_label + project_name);
       }
-      else{
-        if(type_of_help == 'pay'){
-          $('.help_form #plata').val(onetime_fond_lable);
-        }
-        else{
-          $('.help_form #plata').val(subscribe_fond_lable);
-        }
-        $('.help_form #liqpay_post_id').val('823'); //823 = project id of "Запорука" private project
+      $(".help_form #liqpay_post_id").val(project_id);
+    } else {
+      if (type_of_help == "pay") {
+        $(".help_form #plata").val(onetime_fond_lable);
+      } else {
+        $(".help_form #plata").val(subscribe_fond_lable);
       }
+      $(".help_form #liqpay_post_id").val("823"); //823 = project id of "Запорука" private project
+    }
   }
 
-  change_payment_description('pay');
+  change_payment_description("pay");
 
-
-  $('.cancel_subscription_form').submit(function(e){
-    e.preventDefault(); 
-    var client_mail = $(this).find('input[name="mail"]').val();
-    var client_tel = $(this).find('input[name="phone"]').val();
-    if($(this).valid()){
+  $(".cancel_subscription_form").submit(function(e) {
+    e.preventDefault();
+    var client_mail = $(this)
+      .find('input[name="mail"]')
+      .val();
+    var client_tel = $(this)
+      .find('input[name="phone"]')
+      .val();
+    if ($(this).valid()) {
       $.ajax({
-            type: 'POST',
-            dataType: 'json',
-            url: MyAjax.ajaxurl,
-            data: {
-                'client_mail':client_mail,
-                'client_tel':client_tel,
-                'action': 'send_cancel_subscription_email'
-            },
-            success: function(data){
-               console.log(data.result );
-              if( data.result ) {
-                $('.cancel_subscription_form_inner_wrapper').hide();
-                $('.cancel_subscription_form_success_block').show();
-                $('.help-form-inner-title').hide();
-              }
-              else{
-                $('.cansel-message.error-message').show();
-                $('.cancel_subscription_form_success_block').hide();
-                $('.cancel_subscription_form_inner_wrapper').show();
-                $('.help-form-inner-title').show();           
-              }
-            }
-        });
-      }
-      else{
-          return false; 
-      }
+        type: "POST",
+        dataType: "json",
+        url: MyAjax.ajaxurl,
+        data: {
+          client_mail: client_mail,
+          client_tel: client_tel,
+          action: "send_cancel_subscription_email"
+        },
+        success: function(data) {
+          console.log(data.result);
+          if (data.result) {
+            $(".cancel_subscription_form_inner_wrapper").hide();
+            $(".cancel_subscription_form_success_block").show();
+            $(".help-form-inner-title").hide();
+          } else {
+            $(".cansel-message.error-message").show();
+            $(".cancel_subscription_form_success_block").hide();
+            $(".cancel_subscription_form_inner_wrapper").show();
+            $(".help-form-inner-title").show();
+          }
+        }
+      });
+    } else {
+      return false;
+    }
   });
-
-
 });
