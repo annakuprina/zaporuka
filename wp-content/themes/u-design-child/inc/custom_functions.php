@@ -817,6 +817,7 @@ function shortcode_thanks_block(){
         $thanks_text = get_field('thanks_text', $post_id);
         $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
     }
+
     ob_start();
     ?>
     <div class="thanks-text-wrapper">
