@@ -327,10 +327,10 @@ function page_load_money_to_project_function(){
 
         update_field('total-collected', $new_value , $_POST['project_list_for_load_money']);
         $date_operation = date('Y-m-d H:i:s');
-//        insert_history($post_id, $post_id, $date_operation, 'admin', '', '', $_POST['amount_for_project'], $type_operation);
+        $admin_email = wp_get_current_user()->user_email;
         global $wpdb, $table_prefix;
         $table_liqpay_project_history = $table_prefix . 'liqpay_project_history';
-        $sql = "insert into {$table_liqpay_project_history} (`project_id`,`transaction_id`,`order_date`,`users_name`,`users_phone`,`users_email`,`summa`,`type_operation`) values ('" . $post_id . "','" . $post_id . "','" . $date_operation . "','admin','','','" . $_POST['amount_for_project'] . "','" . $type_operation . "')
+        $sql = "insert into {$table_liqpay_project_history} (`project_id`,`transaction_id`,`order_date`,`users_name`,`users_phone`,`users_email`,`summa`,`type_operation`) values ('" . $post_id . "','" . $post_id . "','" . $date_operation . "','admin','','" . $admin_email . "','" . $_POST['amount_for_project'] . "','" . $type_operation . "')
          on duplicate key update project_id=VALUES(project_id),transaction_id=VALUES(transaction_id),order_date=VALUES(order_date),users_name=VALUES(users_name),users_phone=VALUES(users_phone),users_email=VALUES(users_email),summa=VALUES(summa),type_operation=VALUES(type_operation);";
         $wpdb->query($sql);
 
