@@ -871,13 +871,10 @@ function history_meta_box_callback( $post, $meta ){
                 <th>Примечание</th>
             </tr>
             <?php
-            foreach ($result as $value) { ?>
-                <tr>
-                    <td><?php echo $value->order_date; ?></td>
-                    <td><?php echo $value->users_name; ?> (<?php echo $value->users_email . ' ' . $value->users_phone; ?>)</td>
-                    <td><?php echo $value->summa; ?></td>
-                    <td><?php echo $value->type_operation; ?></td>
-                </tr>
+            foreach ($result as $value) {
+                var_dump($value);
+                ?>
+
             <?php } ?>
         </table>
     <?php } else {
