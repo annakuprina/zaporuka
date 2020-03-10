@@ -2398,7 +2398,7 @@ h3 {
 
 .bottom-content-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .footer-mob {
@@ -2473,9 +2473,13 @@ footer .footer-mob a.designer-link {
   margin-bottom: 15px;
 }
 
+.footer-mob-right {
+  padding-top: 2px;
+}
+
 .footer-mob-left {
-  margin-right: 40px;
-  margin-bottom: 32px;
+  margin-right: 56px;
+  margin-bottom: 34px;
 }
 
 .footer-mob-politics {
@@ -2509,6 +2513,53 @@ footer .footer-mob a.designer-link {
   display: none;
 }
 
+/*top part of footer*/
+.bottom-content-wrapper .one_fifth {
+  width: unset;
+}
+
+.bottom-content-wrapper .one_fifth:nth-child(1) {
+  margin-right: 121px;
+}
+
+.bottom-content-wrapper .one_fifth:nth-child(2) {
+  margin-right: 126px;
+}
+
+.bottom-content-wrapper .one_fifth:nth-child(3) {
+  margin-right: 120px;
+}
+
+.bottom-content-wrapper .one_fifth:nth-child(4) {
+  margin-right: 131px;
+}
+
+/*bottom part of footer*/
+#wrapper-1 #footer_bottom {
+  justify-content: flex-start;
+}
+
+#footer_bottom .one_fifth {
+  width: unset;
+}
+
+#footer_bottom .one_fifth:nth-child(1) {
+  margin-right: 98px;
+}
+
+#footer_bottom .one_fifth:nth-child(2) {
+  margin-right: 37px;
+}
+
+#footer_bottom .one_fifth:nth-child(3) {
+  margin-right: 104px;
+}
+
+#footer_bottom .one_fifth:nth-child(5) {
+  position: relative;
+  left: 115px;
+}
+
 @media screen and (max-width: 1200px) {
   footer #bottom .widget_nav_menu li a,
   footer #bottom .footer-adress,
@@ -2518,10 +2569,43 @@ footer .footer-mob a.designer-link {
 
   #bottom-bg #bottom .footer-social-link .fa,
   #bottom-bg #bottom .footer-email-tel .fa {
-    min-width: 27px;
+    min-width: 16px;
   }
+
   .one_fifth {
     line-height: 20px;
+  }
+
+  .bottom-content-wrapper .one_fifth {
+    width: 18%;
+    margin-right: 10px !important;
+  }
+
+  .bottom-content-wrapper {
+    justify-content: space-between;
+  }
+
+  .footer-email-tel .tel-block-a i,
+  .footer-email-tel .email-block-a i {
+    padding-right: 0px;
+    font-size: 10px;
+  }
+
+  .footer-logo img {
+    width: 120px;
+  }
+
+  #footer_bottom .one_fifth {
+    width: unset;
+    margin-right: 10px !important;
+  }
+
+  #footer_bottom .one_fifth:nth-child(5) {
+    position: static;
+  }
+
+  #wrapper-1 #footer_bottom {
+    justify-content: space-between;
   }
 }
 
@@ -2545,7 +2629,7 @@ footer .footer-mob a.designer-link {
   .footer-mob {
     display: flex;
     border-top: 2px solid #e78b48;
-    padding-top: 40px;
+    padding-top: 49px;
   }
 
   #bottom-bg {
@@ -2554,6 +2638,21 @@ footer .footer-mob a.designer-link {
 
   #footer {
     display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer-mob-left {
+    margin-right: 40px;
+  }
+
+  .footer-mob {
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  #wrapper-1 #footer-bg {
+    padding: 0px 15px;
   }
 }
 
@@ -4810,6 +4909,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-top: 0;
 }
 
+.wpb-js-composer .vc_tta.vc_general.bank-details-block .vc_tta-tab.vc_active {
+  background-color: #fff;
+}
+
 .wpb-js-composer
   .vc_tta.vc_general.bank-details-block
   .vc_tta-tab.vc_active
@@ -4818,9 +4921,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 .wpb-js-composer .vc_tta.vc_general.bank-details-block .vc_tta-tab > a {
+  width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 .contact-info-item {
@@ -4832,8 +4934,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 #main-content .contact-second-block {
-  padding-top: 109px;
-  padding-bottom: 74px;
+  padding-top: 86px;
+  padding-bottom: 49px;
 }
 
 .contact-mobile .vc_custom_1583831821813 {
@@ -4858,10 +4960,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding: 35px 0;
 }
 
-.contact-second-block + .vc_row .h2-header-line {
-  margin-bottom: 30px;
-}
-
 .bank-details-block .vc_tta-panel-heading {
   display: none;
 }
@@ -4872,9 +4970,15 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .vc_tta-tabs-list {
   display: flex;
 }
+
 @media screen and (max-width: 1400px) {
   .contact-second-text-block .h2-title-without-line :last-child h2 {
     font-size: 42px;
+  }
+
+  .wpb-js-composer .vc_tta.vc_general.bank-details-block .vc_tta-tab {
+    display: flex;
+    justify-content: flex-start;
   }
 
   .contact-second-block .vc_column-inner {
@@ -4934,6 +5038,19 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .contact-second-block .wpb_column {
     width: 100%;
   }
+
+  .contact-second-block + .vc_row .h2-header-line {
+    margin-bottom: 30px;
+  }
+
+  .wpb-js-composer
+    #main-content
+    .vc_tta.vc_general.bank-details-block
+    .vc_tta-tab
+    > a {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -4992,4 +5109,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     font-size: 24px;
     line-height: 34px;
   }
+}
+
+/*-------------------------
+  HELP FORM(orange form)
+-------------------------*/
+#wrapper-1 .help-form-inner-wrapper .help-form-oferta label:not(.error) {
+  padding-left: 24px;
+  margin-right: -7px;
 }
