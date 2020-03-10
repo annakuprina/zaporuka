@@ -50,7 +50,6 @@ function insert_history($project_id2, $transaction_id2, $date2, $users_name2, $u
          on duplicate key update project_id=VALUES(project_id),transaction_id=VALUES(transaction_id),order_date=VALUES(order_date),users_name=VALUES(users_name),users_phone=VALUES(users_phone),users_email=VALUES(users_email),summa=VALUES(summa),type_operation=VALUES(type_operation);";
     $wpdb->query($sql1);
 
-
 }
 
 if (isset($_POST['data'])) {
