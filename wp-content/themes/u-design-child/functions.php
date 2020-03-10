@@ -346,3 +346,11 @@ function check_currency(){
     }
     return $symbol;
 }
+
+add_action('init', 'create_rewrite_rules');
+function create_rewrite_rules() {
+    add_rewrite_rule(
+        '/storinka-podyaky/new-order',
+        '/storinka-podyaky/'
+    );
+}
