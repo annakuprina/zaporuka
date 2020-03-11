@@ -48,12 +48,9 @@ else {
 	exit();
 }
 
-
 $merchant_id = get_option('liqpay_merchant_id');
 $signature = get_option('liqpay_signature_id');
 $url = "https://liqpay.ua/?do=clickNbuy&button=" . $signature;
-
-
 
 $merchant_id = get_option('liqpay_merchant_id');
 $url = @(strtolower($_SERVER["HTTPS"]) != 'on') ? 'http://' . $_SERVER["SERVER_NAME"] : 'https://' . $_SERVER["SERVER_NAME"];
@@ -92,7 +89,6 @@ if($pay_type == 'subscribe') {
     $subscribe_type = '';
 }
 $liq_order_id = false;
-
 
 if(isset($_POST['order_id'])) {
     $liq_order_id = $_POST['order_id'];

@@ -514,6 +514,7 @@ function list_of_reports() {
     ?>
     <div class="list_reports_wrapper">
         <ul >
+            <li class="reports-list-title">Выберите год</li>
             <?php for($i=0;$i<sizeof($new_query->posts);++$i){
                 if ( $i == 0 ) {$active_report = 'tab-active'; }else{$active_report = '';}
                 ?>
