@@ -141,7 +141,7 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 			$message =  "You have canceled a recurring payment - ";
 		}
 
-		echo "<h2>" . $message . $sql_res["comments"] .  "</h2>";
+		echo "<h2>" . $message . $sql_res->comments .  "</h2>";
 
 	}
 	else{
