@@ -860,7 +860,7 @@ function history_meta_box_callback( $post, $meta ){
     $table_liqpay_project_history = $table_prefix . 'liqpay_project_history';
     $sql = "SELECT * FROM {$table_liqpay_project_history} WHERE project_id = {$post->ID}";
     $result = $wpdb->get_results($sql);
-//    var_dump($result);
+    var_dump($post);
     ob_start();
     if(!empty($result)) { ?>
         <style>
