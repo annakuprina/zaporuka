@@ -126,7 +126,7 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 			'order_id'      => $_GET['order_id']
 		));
 
-		var_dump($res);
+		var_dump($liqpay);
 
 
 		if(ICL_LANGUAGE_CODE=='uk'){
@@ -139,7 +139,7 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 			$message =  "You have canceled a recurring payment - ";
 		}
 
-		echo "<h2>" . $message .  "</h2>";
+		echo "<h2>" . $message . $sql_res["comments"] .  "</h2>";
 
 	}
 	else{
