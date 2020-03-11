@@ -98,6 +98,24 @@ $phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $opti
 $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options['404_back_main_' . ICL_LANGUAGE_CODE] : 'На головну';
 
 	ob_start();
+	if( $_GET['cansel_subscription']==1 && isset($_GET['order_id']) ){
+
+		require_once WP_PLUGIN_DIR . '/liqpay_wordpress/api.php';
+      	$liqpay = new LiqPay($merchant_id, $signature);
+
+		$merchant_id = get_option('liqpay_merchant_id');
+		$signature = get_option('liqpay_signature_id');
+
+		$res = $liqpay->api("request", array(
+			'action'        => 'unsubscribe',
+			'version'       => '3',
+			'order_id'      => $_GET['order_id']
+		));
+
+		var_dump($res);
+
+	}
+	else{
 	?>
 	  <div class="help_form_wrapper">
 	  	<div class="help-form-inner-wrapper">
@@ -153,6 +171,7 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 	      </div>
 	  </div>
 	<?php
+	}
 	$html = ob_get_clean();
 	return $html;
 
@@ -465,31 +484,11 @@ function send_cancel_subscription_email_function() {
 		}
     	$mail_body = $start_message;
 
-    	$link = $redirect_page_link . '?cansel_subscription' . '&order_id=';
-
-    	$merchant_id = get_option('liqpay_merchant_id');
-		$signature = get_option('liqpay_signature_id');
-
-		//var_dump(THEME_DIR);
-		//var_dump(WP_PLUGIN_DIR . '/liqpay_wordpress/api.php');
-		//include_once "api.php";
-
-		//require_once WP_PLUGIN_DIR . '/liqpay_wordpress/api.php';
-    	//$liqpay = new LiqPay($merchant_id, $signature);
-		
+    	$link = site_url() . $redirect_page_link . '?cansel_subscription=1' . '&order_id=';		
 
     	foreach ($liqpay_order_id as $order ) {
-			$mail_body .= $order['comments'] . "\r\n";
-			$mail_body .= site_url() . '<a href="'.$link . $order['order_id'].'">' . $link . $order['order_id'] . '</a>' . "<br>";
-
-			/*$res = $liqpay->api("request", array(
-			'action'        => 'unsubscribe',
-			'version'       => '3',
-			'order_id'      => $order['order_id']
-			));
-
-			var_dump($res);*/
-			//echo "<hr/>" . "\r\n";
+			$mail_body .= $order['comments'] . " - ";
+			$mail_body .= '<a href="'. $link . $order['order_id'].'">' . $link . $order['order_id'] . '</a>' . "<br>";
     	}	   
 		
 
