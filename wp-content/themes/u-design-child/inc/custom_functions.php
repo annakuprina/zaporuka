@@ -856,12 +856,12 @@ function add_custom_history_box(){
 }
 // HTML код блока
 function history_meta_box_callback( $post, $meta ){
-
     global $wpdb, $table_prefix;
     $table_liqpay_project_history = $table_prefix . 'liqpay_project_history';
-    $sql = "SELECT * FROM {$table_liqpay_project_history} WHERE project_id = {$post->ID}";
+    $all_posts = $wpdb->get_var( 'SELECT description FROM ' . $wpdb->term_taxonomy . ' WHERE taxonomy = "post_translations" AND description LIKE "%i:' . $post->ID . ';%"' );
+    $all_ids = unserialize($all_posts);
+    $sql = "SELECT * FROM {$table_liqpay_project_history} WHERE project_id IN ({$all_ids['uk']}, {$all_ids['en']}, {$all_ids['ru']})";
     $result = $wpdb->get_results($sql);
-    var_dump($post);
     ob_start();
     if(!empty($result)) { ?>
         <style>
