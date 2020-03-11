@@ -355,7 +355,7 @@ if (isset($_POST['data'])) {
         }
         exit;
     }
-}
+} else{ update_option('no_payment_info', date('Y-m-d H:i:s')); }
 
 function send($long_url = FALSE, $short_url = FALSE)
 {
