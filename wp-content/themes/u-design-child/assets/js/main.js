@@ -211,9 +211,9 @@ jQuery(document).ready(function($) {
     $(".header-mob-top .close").toggleClass("active");
   });
 
-  /*DROPDOWN FOR SHOP PAGE MOBILE*/
+  /*DROPDOWNS FOR SHOP AND REPORTS PAGES MOBILE*/
   // Toggle dropdown
-  $(".category-mob-select").on("click", function() {
+  $(".category-mob-select,.reports-list-title").on("click", function() {
     $(this)
       .closest("ul")
       .children("li")

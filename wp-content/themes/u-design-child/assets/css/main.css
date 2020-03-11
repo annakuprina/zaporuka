@@ -4474,6 +4474,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding: 115px 0 120px 0;
 }
 
+.reports-list-title {
+  display: none;
+}
+
 .reporting_section_tabs .list_reports_wrapper ul {
   display: flex;
   justify-content: space-between;
@@ -4509,6 +4513,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-left: 4px;
 }
 
+.list_reports_wrapper ul.active {
+  background: #fff;
+  box-shadow: 5px 11px 9px rgba(209, 209, 209, 0.3);
+  user-select: none;
+  z-index: 2;
+}
+
 @media screen and (max-width: 1024px) {
   .reporting_section_tabs .list_reports_wrapper li.tab-active:after {
     display: none;
@@ -4518,14 +4529,28 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     display: none;
   }
 
-  /* .reporting_section_tabs .list_reports_wrapper ul {
-    flex-wrap: wrap;
-    justify-content: right;
+  .reporting_section_tabs .list_reports_wrapper .one-tab-link {
+    padding-bottom: 0px;
   }
 
-  .reporting_section_tabs .list_reports_wrapper .one-tab-link {
-    width: 80px;
-  } */
+  #main-content .list_reports_wrapper li {
+    padding-bottom: 5px;
+  }
+
+  .reports-list-title {
+    display: block;
+  }
+
+  .list_reports_wrapper ul li:not(:first-child) {
+    display: none;
+  }
+
+  #main-content .list_reports_wrapper ul {
+    position: absolute;
+    flex-direction: column;
+    border-bottom: none;
+    padding: 10px;
+  }
 
   .reporting_section_tabs .list_reports_wrapper .one-tab-link {
     padding-bottom: 25px;
@@ -4594,6 +4619,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 }
 
+@media screen and (max-width: 500px) {
+  #main-content .list_reports_wrapper li {
+    padding-bottom: 5px;
+  }
+}
+
 /*------
   SHOP
 -------*/
@@ -4620,7 +4651,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 #main-content .shop-custom-wrapper {
-  padding-top: 116px;
+  padding-top: 110px;
   padding-bottom: 93px;
 }
 
@@ -4649,7 +4680,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .woocommerce-custom-category-filter
   li.category-filter-item::after {
   width: 100%;
-  top: 60px;
+  top: 59px;
 }
 
 #main-content
@@ -4659,8 +4690,17 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   display: flex;
 }
 
-#main-content .woocommerce-custom-product-filter {
-  padding-bottom: 38px;
+#main-content .shop-custom-wrapper .woocommerce-custom-product-filter {
+  padding-bottom: 31px;
+}
+
+#main-content .shop-custom-wrapper .shop-page-price-title {
+  padding: 27px 30px;
+}
+
+.woocommerce .shop-custom-wrapper ul.products li.product,
+.woocommerce-page .shop-custom-wrapper ul.products li.product {
+  margin-bottom: 40px;
 }
 
 #main-content
@@ -4678,8 +4718,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-right: 0;
 }
 
-.woocommerce #main-content ul.products {
-  margin-bottom: 6px;
+.woocommerce #main-content .shop-custom-wrapper ul.products {
+  margin-bottom: 14px;
 }
 
 #main-content .woocommerce-custom-product-filter .filter-cart-price-wrapper {
@@ -4691,20 +4731,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 #wrapper-1
+  .shop-custom-wrapper
   .woocommerce-custom-product-filter
   .woocommerce-custom-category-filter {
-  position: absolute;
+  /* position: absolute; */
   z-index: 11;
-  padding: 10px;
+  padding: 10px 0;
   transition: none;
-}
-
-#wrapper-1
-  .woocommerce-custom-product-filter
-  .woocommerce-custom-category-filter.active {
-  background: #fff;
-  box-shadow: 5px 11px 9px rgba(209, 209, 209, 0.3);
-  user-select: none;
 }
 
 @media screen and (max-width: 1300px) {
@@ -4817,6 +4850,21 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   #main-content .woocommerce-custom-product-filter {
     margin-bottom: 30px;
+  }
+
+  #wrapper-1
+    .shop-custom-wrapper
+    .woocommerce-custom-product-filter
+    .woocommerce-custom-category-filter {
+    position: absolute;
+  }
+
+  #wrapper-1
+    .woocommerce-custom-product-filter
+    .woocommerce-custom-category-filter.active {
+    background: #fff;
+    box-shadow: 5px 11px 9px rgba(209, 209, 209, 0.3);
+    user-select: none;
   }
 }
 /*min-width: 959px - not the same with media max-width: 959px above*/
