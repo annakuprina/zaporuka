@@ -4896,6 +4896,19 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     top: 50%;
     transform: translateY(-50%);
   }
+
+  #ModalHelpForm.opened .modal-dialog::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  #ModalHelpForm.opened .modal-dialog::-webkit-scrollbar-track {
+    background: #ddd;
+    /* opacity: 0.1; */
+  }
+
+  #ModalHelpForm.opened .modal-dialog::-webkit-scrollbar-thumb {
+    background-color: #e78b48;
+  }
 }
 
 /*----------
