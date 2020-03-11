@@ -449,23 +449,23 @@ function send_cancel_subscription_email_function() {
 
     if($liqpay_order_id){
     	if(ICL_LANGUAGE_CODE=='uk'){
-			$start_message =  "Для підтвердження скасування регулярного платежу перейдіть за посиланням нижче\r\n";
+			$start_message =  "Для підтвердження скасування регулярного платежу перейдіть за посиланням нижче<br>";
 			$subject = 'Скасування регулярного платежу';
 			$redirect_page_link = '/vidminiti-reguljarnij-platizh/';
 		}
 		elseif(ICL_LANGUAGE_CODE=='ru'){
-			$start_message =  "Для подтверждения отмены регулярного платежа перейдите по ссылке ниже\r\n";
+			$start_message =  "Для подтверждения отмены регулярного платежа перейдите по ссылке ниже<br>";
 			$subject = 'Отмена регулярного платежа';
 			$redirect_page_link = '/ru/otmenit-reguljarnyj-platezh/';
 		}
 		elseif(ICL_LANGUAGE_CODE=='en'){
-			$start_message =  "To confirm the cancellation of the regular payment, follow the link below\r\n";
+			$start_message =  "To confirm the cancellation of the regular payment, follow the link below<br>";
 			$subject = 'Cancel recurring payment';
 			$redirect_page_link = '/en/cancel-subscription/';
 		}
     	$mail_body = $start_message;
 
-    	$link = $redirect_page_link . '?order_id=' .$order['order_id'];
+    	$link = $redirect_page_link . '?cansel_subscription' . '&order_id=';
 
     	$merchant_id = get_option('liqpay_merchant_id');
 		$signature = get_option('liqpay_signature_id');
@@ -480,7 +480,7 @@ function send_cancel_subscription_email_function() {
 
     	foreach ($liqpay_order_id as $order ) {
 			$mail_body .= $order['comments'] . "\r\n";
-			$mail_body .= site_url() . '<a href="'.$link.'">' . $link . '</a>' . "\r\n";
+			$mail_body .= site_url() . '<a href="'.$link . $order['order_id'].'">' . $link . $order['order_id'] . '</a>' . "<br>";
 
 			/*$res = $liqpay->api("request", array(
 			'action'        => 'unsubscribe',
