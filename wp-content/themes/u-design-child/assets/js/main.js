@@ -213,7 +213,7 @@ jQuery(document).ready(function($) {
 
   /*DROPDOWNS FOR SHOP AND REPORTS PAGES MOBILE*/
   // Toggle dropdown
-  $(".category-mob-select,.reports-list-title").on("click", function() {
+  $(".category-mob-select").on("click", function() {
     $(this)
       .closest("ul")
       .children("li")
@@ -223,9 +223,14 @@ jQuery(document).ready(function($) {
     $(this)
       .parent()
       .toggleClass("active");
+
+    $(this)
+      .not(".one-tab-link,.reports-list-title")
+      .find(".category-expand-button")
+      .toggleClass("active");
   });
 
-  /*Change current category name inside dropdown*/
+  /*Change current category name inside dropdown on Shop page*/
   k = 0;
   setInterval(function() {
     if (k == 0) {
@@ -237,6 +242,25 @@ jQuery(document).ready(function($) {
     }
   }, 10);
 
+  $(".list_reports_wrapper ul li").on("click", function() {
+    $(this)
+      .closest("ul")
+      .children("li")
+      .slice(1)
+      .toggle();
+    $(this)
+      .parent()
+      .toggleClass("active");
+
+    if ($("li").hasClass("tab-active")) {
+      var currentYear = $(".tab-active").text();
+      console.log(currentYear);
+      $(".reports-list-title span:eq(0)").text(currentYear);
+    }
+    // $(this)
+    //   .find(".category-expand-button")
+    //   .toggleClass("active");
+  });
   /*DROPDOWN FOR NEWS PAGE MOBILE*/
   // console.log("prr");
   // $(".section-news .vc_grid-filter").prepend(

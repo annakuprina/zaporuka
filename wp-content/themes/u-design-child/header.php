@@ -82,8 +82,8 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 			<header id="header-mob">
 				<div class="header-mob-top">
 					<div class="header-mob-logo">
-						<img class="active header-mob-logo-black" src="<?php echo $logo_img_url ?>" alt="">
-						<img class="header-mob-logo-white" src="<?php echo $logo_mob_img_url ?>" alt="">
+						<a href="/"><img class="active header-mob-logo-black" src="<?php echo $logo_img_url ?>" alt=""></a>
+						<a href="/"><img class="header-mob-logo-white" src="<?php echo $logo_mob_img_url ?>" alt=""></a>
 					</div>
 					<div class="header-mob-nav">
 						<div class="hamburger active">
