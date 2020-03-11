@@ -115,18 +115,17 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 		$merchant_id = get_option('liqpay_merchant_id');
 		$signature = get_option('liqpay_signature_id');
 
-		require_once WP_PLUGIN_DIR . '/liqpay_wordpress/api.php';
-      	$liqpay = new LiqPay($merchant_id, $signature);
+      	$liqpay = new MyLiqPay($merchant_id, $signature);
 
 
 
-	/*	$res = $liqpay->api_2("request", array(
+		$res = $liqpay->api("request", array(
 			'action'        => 'unsubscribe',
 			'version'       => '3',
 			'order_id'      => $_GET['order_id']
 		));
 
-		var_dump($res);*/
+		var_dump($res);
 
 
 //менять статус подписки в нашей БД с subscribed на unsubscribed
