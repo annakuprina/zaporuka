@@ -108,10 +108,6 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 	    $sql = "Select comments from {$table_liqpay} where order_id = {$_GET['order_id']}";
 	    $sql_res = $wpdb->get_row($sql);
 
-
-	    //var_dump($sql_res);
-
-
 		$merchant_id = get_option('liqpay_merchant_id');
 		$signature = get_option('liqpay_signature_id');
 
@@ -126,7 +122,11 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 		));
 
 		var_dump($res);
+		update_option('cancel_subscription', $res);
+		if( $res->result == 'ok' ) {
 
+            wpdb_update( $table_liqpay, [ 'status'=>'unsubscribe' ], [ 'unsubscribe'=>$_GET['order_id'] ] );
+        }
 
 //менять статус подписки в нашей БД с subscribed на unsubscribed
 
