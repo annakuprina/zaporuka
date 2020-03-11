@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Thanks Donation
+* Template Name: Cansel Subscription Liqpay
 */
 
 
@@ -20,15 +20,29 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 <div id="content-container" class="container_24 error_page thank-donation-page">
 	<main id="main-content" role="main" class="grid_24">
 		<div class="main-content-padding error_page_padding">
+
 			<?php
-			udesign_main_content_top( is_front_page() );
+				var_dump(THEME_DIR);
+				var_dump(WP_PLUGIN_DIR . '/liqpay_wordpress/api.php');
+				//include_once "api.php";
+
+				//require_once WP_PLUGIN_DIR . '/liqpay_wordpress/api.php';
+				//$liqpay = new LiqPay($merchant_id, $signature);
+
+
+				/*$res = $liqpay->api("request", array(
+			'action'        => 'unsubscribe',
+			'version'       => '3',
+			'order_id'      => $order['order_id']
+			));
+
+			var_dump($res);*/
+			//echo "<hr/>" . "\r\n";
+
 			
-			if ( have_posts() ) :
-				while ( have_posts() ) : the_post();
-					the_content();
-				endwhile;
-			endif;
 			?>
+
+
 			<p class="to-home"><a href="<?php echo home_url(); ?>"><?php echo $back_button; ?></a></p>
 		</div><!-- end main-content-padding -->
 	</main><!-- end main-content -->
