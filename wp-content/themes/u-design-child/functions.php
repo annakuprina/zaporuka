@@ -69,6 +69,7 @@ add_action( 'init', 'voras_category_for_page' );
 require_once THEME_INCLUDES . '/shortcodes.php';
 require_once THEME_INCLUDES . '/custom_functions.php';
 require_once THEME_INCLUDES . '/custom_ajax.php';
+require_once THEME_INCLUDES . '/api.php';
 
 // Secondary navigation bar.
 
