@@ -104,7 +104,6 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 		if (!isset($wpdb))
 	        require_once('../../../wp-config.php');
 
-
 	    $sql = "Select comments from {$table_liqpay} where order_id = {$_GET['order_id']}";
 	    $sql_res = $wpdb->get_row($sql);
 
@@ -113,18 +112,13 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 
       	$liqpay = new MyLiqPay($merchant_id, $signature);
 
-
-
 		$res = $liqpay->api("request", array(
 			'action'        => 'unsubscribe',
 			'version'       => '3',
 			'order_id'      => $_GET['order_id']
 		));
 
-		var_dump($res);
-		update_option('cancel_subscription', $res);
 		if( $res->result == 'ok' ) {
-
             wpdb_update( $table_liqpay, [ 'status'=>'unsubscribe' ], [ 'unsubscribe'=>$_GET['order_id'] ] );
         }
 
