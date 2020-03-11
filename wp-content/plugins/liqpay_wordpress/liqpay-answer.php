@@ -52,10 +52,10 @@ function insert_history($project_id2, $transaction_id2, $date2, $users_name2, $u
 
 }
 
+update_option('payment_info', $_POST);
 if (isset($_POST['data'])) {
     $json = base64_decode($_POST['data']);
     $obj = json_decode($json);
-    update_option('payment_info', $obj);
     $message = $obj->{'amount'};
     $summa = $obj->{'amount'};
     $valuta = $obj->{'currency'};
