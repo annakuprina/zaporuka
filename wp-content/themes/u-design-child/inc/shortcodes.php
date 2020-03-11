@@ -109,7 +109,7 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 	    $sql_res = $wpdb->get_row($sql);
 
 
-	    var_dump($sql_res);
+	    //var_dump($sql_res);
 
 
 		$merchant_id = get_option('liqpay_merchant_id');
@@ -128,6 +128,8 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 
 		var_dump($res);*/
 
+
+//менять статус подписки в нашей БД с subscribed на unsubscribed
 
 		if(ICL_LANGUAGE_CODE=='uk'){
 			$message =  "Ви здійснили скасування регулярного платежу - ";
