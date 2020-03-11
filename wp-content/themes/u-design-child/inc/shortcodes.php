@@ -433,8 +433,10 @@ function send_cancel_subscription_email_function() {
 
     $user_mail = sanitize_text_field( $_POST['client_mail'] );
     $user_phone = sanitize_text_field( $_POST['client_tel'] );
+
     $sql = "Select order_id, comments from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
     $sql_res = $wpdb->get_results($sql);
+
 
     if($sql_res){
     	foreach ($sql_res as $value) {
@@ -463,11 +465,13 @@ function send_cancel_subscription_email_function() {
 		}
     	$mail_body = $start_message;
 
+    	$link = $redirect_page_link . '?order_id=' .$order['order_id'];
+
     	$merchant_id = get_option('liqpay_merchant_id');
 		$signature = get_option('liqpay_signature_id');
 
-		var_dump(THEME_DIR);
-		var_dump(WP_PLUGIN_DIR . '/liqpay_wordpress/api.php');
+		//var_dump(THEME_DIR);
+		//var_dump(WP_PLUGIN_DIR . '/liqpay_wordpress/api.php');
 		//include_once "api.php";
 
 		//require_once WP_PLUGIN_DIR . '/liqpay_wordpress/api.php';
@@ -476,7 +480,7 @@ function send_cancel_subscription_email_function() {
 
     	foreach ($liqpay_order_id as $order ) {
 			$mail_body .= $order['comments'] . "\r\n";
-			$mail_body .= site_url() . $redirect_page_link . '&order_id=' .$order['order_id'] . "\r\n";
+			$mail_body .= site_url() . '<a href="'.$link.'">' . $link . '</a>' . "\r\n";
 
 			/*$res = $liqpay->api("request", array(
 			'action'        => 'unsubscribe',
@@ -486,23 +490,11 @@ function send_cancel_subscription_email_function() {
 
 			var_dump($res);*/
 			//echo "<hr/>" . "\r\n";
-    	}
-
-    	var_dump($mail_body);
-	   
-
-		//При нескольких подписках отправлять пользователю в писме несколько ссылок
-
-		
-
-		die();
+    	}	   
 		
 
     	$result = send_notification($user_mail,$subject, $mail_body);
-    }
-
-    
-
+    }   
 
     exit( json_encode( array( 'result' => $result ) ) );   
 }
