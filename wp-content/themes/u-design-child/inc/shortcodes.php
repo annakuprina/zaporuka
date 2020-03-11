@@ -115,7 +115,6 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 		$merchant_id = get_option('liqpay_merchant_id');
 		$signature = get_option('liqpay_signature_id');
 
-		require_once WP_PLUGIN_DIR . '/liqpay_wordpress/api.php';
       	$liqpay = new MyLiqPay($merchant_id, $signature);
 
 
