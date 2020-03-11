@@ -120,13 +120,13 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 
 
 
-		$res = $liqpay->api("request", array(
+		$res = $liqpay->api_2("request", array(
 			'action'        => 'unsubscribe',
 			'version'       => '3',
 			'order_id'      => $_GET['order_id']
 		));
 
-		var_dump($liqpay);
+		var_dump($res);
 
 
 		if(ICL_LANGUAGE_CODE=='uk'){

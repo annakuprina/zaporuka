@@ -168,6 +168,38 @@ class LiqPay
 
     }
 
+
+
+    public function api_2($path, $params = array(), $timeout = 5)
+    {
+        if (!isset($params['version'])) {
+            throw new InvalidArgumentException('version is null');
+        }
+        $url         = $this->_api_url . $path;
+        $public_key  = $this->_public_key;
+        $private_key = $this->_private_key;
+        $data        = $this->encode_params(array_merge(compact('public_key'), $params));
+        $signature   = $this->str_to_sign($private_key.$data.$private_key);
+        $postfields  = http_build_query(array(
+           'data'  => $data,
+           'signature' => $signature
+        ));
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true); // Avoid MITM vulnerability http://phpsecurity.readthedocs.io/en/latest/Input-Validation.html#validation-of-input-sources
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);    // Check the existence of a common name and also verify that it matches the hostname provided
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,$timeout);   // The number of seconds to wait while trying to connect
+        curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);          // The maximum number of seconds to allow cURL functions to execute
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $server_output = curl_exec($ch);
+        $this->_server_response_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        return json_decode($server_output);
+    }
+
     /**
 
      * cnb_form
