@@ -52,7 +52,7 @@
 
  */
 
-class LiqPay
+class LiqPay2
 
 {
 
