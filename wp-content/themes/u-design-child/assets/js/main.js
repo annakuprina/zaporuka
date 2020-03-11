@@ -218,7 +218,11 @@ jQuery(document).ready(function($) {
       .closest("ul")
       .children("li")
       .slice(1)
-      .slideToggle();
+      .toggle();
+
+    $(this)
+      .parent()
+      .toggleClass("active");
   });
 
   /*Change current category name inside dropdown*/

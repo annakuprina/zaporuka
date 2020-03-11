@@ -2388,8 +2388,16 @@ h3 {
   height: unset;
 }
 
+#wrapper-1 #bottom-bg .footer-logo {
+  height: 59px;
+}
+
 #bottom-bg .bottom-content-wrapper .one_fifth:last-child .bottom-col-title {
   padding-bottom: 32px;
+}
+
+#wrapper-1 #bottom-bg {
+  padding: 50px 20px 25px 20px;
 }
 
 #footer {
@@ -3758,7 +3766,11 @@ footer .footer-mob a.designer-link {
 }
 
 .wpb-js-composer #main-content .directions_section2_tabs .vc_tta-tab {
-  margin-right: 100px;
+  margin-right: 97px;
+}
+
+.wpb-js-composer #main-content .directions_section2_tabs ul.vc_tta-tabs-list {
+  margin-bottom: 22px !important;
 }
 
 .directions_section1_wrapper .vc_col-has-fill > .vc_column-inner {
@@ -3819,11 +3831,26 @@ footer .footer-mob a.designer-link {
 }
 
 #main-content .directions_section2_row_title3 .h2-header-line {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .wpb-js-composer .vc_tta.vc_tta-tabs .vc_tta-tabs-container {
   display: block !important;
+}
+
+.wpb_wrapper .before_rectangle_block:nth-child(1) + .wpb_text_column {
+  margin-bottom: 39px;
+}
+
+#main-content
+  .directions_section2_row_title2
+  + .vc_row
+  .vc_custom_1581511005446 {
+  margin-left: 6px;
+}
+
+#main-content .directions_section_help {
+  padding-top: 35px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -4447,6 +4474,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding: 115px 0 120px 0;
 }
 
+.reporting_section_tabs .list_reports_wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
 .list_reports_wrapper .one-tab-link span {
   font-family: "Proxima-Nova-Regular";
   font-weight: 700;
@@ -4472,6 +4505,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-bottom: 33px;
 }
 
+#main-content .zvit_children_count {
+  margin-left: 4px;
+}
+
 @media screen and (max-width: 1024px) {
   .reporting_section_tabs .list_reports_wrapper li.tab-active:after {
     display: none;
@@ -4481,14 +4518,14 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     display: none;
   }
 
-  .reporting_section_tabs .list_reports_wrapper ul {
+  /* .reporting_section_tabs .list_reports_wrapper ul {
     flex-wrap: wrap;
     justify-content: right;
   }
 
   .reporting_section_tabs .list_reports_wrapper .one-tab-link {
     width: 80px;
-  }
+  } */
 
   .reporting_section_tabs .list_reports_wrapper .one-tab-link {
     padding-bottom: 25px;
@@ -4499,10 +4536,20 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 }
 
-@media screen and (max-width: 700px) {
-  .reporting_section_tabs .list_reports_wrapper .one-tab-link {
-    width: 65px;
+/* @media screen and (max-width: 768px) {
+  .reporting_section_tabs .list_reports_wrapper ul {
+    justify-content: flex-start;
   }
+
+  .reporting_section_tabs .list_reports_wrapper .one-tab-link {
+    min-width: 60px;
+  }
+} */
+
+@media screen and (max-width: 700px) {
+  /* .reporting_section_tabs .list_reports_wrapper .one-tab-link {
+    width: 65px;
+  } */
 
   .reporting_section_tabs .tabs_content .reports_section > div {
     width: 100%;
@@ -4580,16 +4627,16 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 .shop-custom-wrapper
   .woocommerce-custom-product-filter
   .woocommerce-custom-category-filter
-  li.category-filter-item
-  a {
-  padding: 0 0 40px 0 !important;
+  li.category-filter-item {
+  margin-right: 100px;
 }
 
 .shop-custom-wrapper
   .woocommerce-custom-product-filter
   .woocommerce-custom-category-filter
-  li.category-filter-item {
-  margin-right: 100px;
+  li.category-filter-item
+  a {
+  padding: 0 0 40px 0 !important;
 }
 
 .woocommerce ul.products li.product a {
@@ -4631,13 +4678,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-right: 0;
 }
 
-.shop-custom-wrapper
-  .woocommerce-custom-product-filter
-  .woocommerce-custom-category-filter
-  li.category-filter-item {
-  margin-right: 100px;
-}
-
 .woocommerce #main-content ul.products {
   margin-bottom: 6px;
 }
@@ -4648,6 +4688,23 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #wrapper-1 #main-content .shop-custom-wrapper .woocommerce-loop-product__title {
   padding-right: 10px !important;
+}
+
+#wrapper-1
+  .woocommerce-custom-product-filter
+  .woocommerce-custom-category-filter {
+  position: absolute;
+  z-index: 11;
+  padding: 10px;
+  transition: none;
+}
+
+#wrapper-1
+  .woocommerce-custom-product-filter
+  .woocommerce-custom-category-filter.active {
+  background: #fff;
+  box-shadow: 5px 11px 9px rgba(209, 209, 209, 0.3);
+  user-select: none;
 }
 
 @media screen and (max-width: 1300px) {
@@ -4738,7 +4795,15 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     .woocommerce-custom-product-filter
     .woocommerce-custom-category-filter
     li.category-filter-item {
-    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  #main-content
+    .shop-custom-wrapper
+    .woocommerce-custom-product-filter
+    .woocommerce-custom-category-filter
+    li.category-filter-item:nth-child(1) {
+    margin-top: 0;
   }
 
   #main-content .woocommerce-custom-product-filter {
@@ -5109,6 +5174,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     font-size: 24px;
     line-height: 34px;
   }
+}
+
+/*-------------
+  ABOUT PAGE
+--------------*/
+#main-content .aboutus_section1 {
+  padding: 131px 130px;
 }
 
 /*-------------------------
