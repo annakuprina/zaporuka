@@ -1105,27 +1105,21 @@ footer a.designer-link {
 .cancel_subscription_form_success_block{display: none;}
 
 .help-form-inner-wrapper .cancel_subscription_form .help-form-submit-oferta{padding-bottom: 0;}
-.modal-body input[type="checkbox"]:checked,
-.modal-body input[type="checkbox"]:not(:checked),
-.wpb_wrapper input[type="checkbox"]:checked,
-.wpb_wrapper input[type="checkbox"]:not(:checked){
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
-.modal-body input[type="checkbox"]:checked + label,
-.modal-body input[type="checkbox"]:not(:checked) + label,
-.wpb_wrapper input[type="checkbox"]:checked + label,
-.wpb_wrapper input[type="checkbox"]:not(:checked) + label {
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
   display: inline-block !important;
   position: relative;
   padding-left: 28px;
   line-height: 20px;
   cursor: pointer;
 }
-.modal-body input[type="checkbox"]:checked + label:before,
-.modal-body input[type="checkbox"]:not(:checked) + label:before,
-.wpb_wrapper input[type="checkbox"]:checked + label:before,
-.wpb_wrapper input[type="checkbox"]:not(:checked) + label:before {
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
   content: "";
   position: absolute;
   left: 0px;
@@ -1136,16 +1130,12 @@ footer a.designer-link {
   background-color: #ffffff;
 }
 
-.modal-body input[type="checkbox"]:checked + label:before,
-.modal-body input[type="checkbox"]:not(:checked) + label:before,
-.wpb_wrapper input[type="checkbox"]:checked + label:before,
-.wpb_wrapper input[type="checkbox"]:not(:checked) + label:before {
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
   border-radius: 1px;
 }
-.modal-body input[type="checkbox"]:checked + label:after,
-.modal-body input[type="checkbox"]:not(:checked) + label:after,
-.wpb_wrapper input[type="checkbox"]:checked + label:after,
-.wpb_wrapper input[type="checkbox"]:not(:checked) + label:after {
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
   content: "";
   position: absolute;
   -webkit-transition: all 0.2s ease;
@@ -1154,10 +1144,8 @@ footer a.designer-link {
   transition: all 0.2s ease;
 }
 
-.modal-body input[type="checkbox"]:checked + label:after,
-.modal-body input[type="checkbox"]:not(:checked) + label:after,
-.wpb_wrapper input[type="checkbox"]:checked + label:after,
-.wpb_wrapper input[type="checkbox"]:not(:checked) + label:after {
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
   left: 2px;
   top: 3px;
   width: 10px;
@@ -1171,27 +1159,21 @@ footer a.designer-link {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.modal-body input[type="checkbox"]:not(:checked) + label:after,
-.wpb_wrapper input[type="checkbox"]:not(:checked) + label:after {
+input[type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
 }
-.modal-body input[type="checkbox"] + label.error,
-.wpb_wrapper input[type="checkbox"] + label.error {
+input[type="checkbox"] + label.error {
   position: absolute;
   left: -28px;
   top: 23px;
   line-height: 1em;
 }
-.modal-body input[type="checkbox"]:checked + label.error:before,
-.modal-body input[type="checkbox"]:not(:checked) + label.error:before,
-.wpb_wrapper input[type="checkbox"]:checked + label.error:before,
-.wpb_wrapper input[type="checkbox"]:not(:checked) + label.error:before{
+input[type="checkbox"]:checked + label.error:before,
+input[type="checkbox"]:not(:checked) + label.error:before {
   top: -20px;
 }
-.modal-body input[type="checkbox"]:checked + label.error:after,
-.modal-body input[type="checkbox"]:not(:checked) + label.error:after,
-.wpb_wrapper input[type="checkbox"]:checked + label.error:after,
-.wpb_wrapper input[type="checkbox"]:not(:checked) + label.error:after{
+input[type="checkbox"]:checked + label.error:after,
+input[type="checkbox"]:not(:checked) + label.error:after {
   top: -17px;
 }
 

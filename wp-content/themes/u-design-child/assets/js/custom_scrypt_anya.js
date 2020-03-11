@@ -59,6 +59,13 @@ jQuery(document).ready(function($) {
     $(parent).parent().find('.help-form-amount-left #paid').val($(this).attr("summ"));
   });
 
+  jQuery(".help_form label[for='oferta']").click(function(e) {
+    e.preventDefault();
+    var parent = jQuery(this).parent();
+    var checkBoxes = parent.find('#oferta');
+    checkBoxes.prop("checked", !checkBoxes.prop("checked"));
+  });
+
   $(".help_form #paid").on("input", function(e) {
     var parent = jQuery(this).parents('.help_form');
     parent.find('.amount-button').removeClass("active");
