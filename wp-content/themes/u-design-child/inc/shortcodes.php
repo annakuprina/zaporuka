@@ -98,6 +98,53 @@ $phone_label = !empty($options['phone_help_block_' . ICL_LANGUAGE_CODE]) ? $opti
 $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options['404_back_main_' . ICL_LANGUAGE_CODE] : 'На головну';
 
 	ob_start();
+	if( $_GET['cansel_subscription']==1 && isset($_GET['order_id']) ){
+		global $wpdb, $table_prefix;
+		$table_liqpay = $table_prefix . 'liqpay';
+		if (!isset($wpdb))
+	        require_once('../../../wp-config.php');
+
+
+	    $sql = "Select comments from {$table_liqpay} where order_id = {$_GET['order_id']}";
+	    $sql_res = $wpdb->get_row($sql);
+
+
+	    //var_dump($sql_res);
+
+
+		$merchant_id = get_option('liqpay_merchant_id');
+		$signature = get_option('liqpay_signature_id');
+
+		require_once WP_PLUGIN_DIR . '/liqpay_wordpress/api.php';
+      	$liqpay = new LiqPay($merchant_id, $signature);
+
+
+
+	/*	$res = $liqpay->api_2("request", array(
+			'action'        => 'unsubscribe',
+			'version'       => '3',
+			'order_id'      => $_GET['order_id']
+		));
+
+		var_dump($res);*/
+
+
+//менять статус подписки в нашей БД с subscribed на unsubscribed
+
+		if(ICL_LANGUAGE_CODE=='uk'){
+			$message =  "Ви здійснили скасування регулярного платежу - ";
+		}
+		elseif(ICL_LANGUAGE_CODE=='ru'){
+			$message =  "Вы осуществили отмену регулярного платежа - ";
+		}
+		elseif(ICL_LANGUAGE_CODE=='en'){
+			$message =  "You have canceled a recurring payment - ";
+		}
+
+		echo "<h2>" . $message . $sql_res->comments .  "</h2>";
+
+	}
+	else{
 	?>
 	  <div class="help_form_wrapper">
 	  	<div class="help-form-inner-wrapper">
@@ -153,6 +200,7 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 	      </div>
 	  </div>
 	<?php
+	}
 	$html = ob_get_clean();
 	return $html;
 
@@ -433,8 +481,10 @@ function send_cancel_subscription_email_function() {
 
     $user_mail = sanitize_text_field( $_POST['client_mail'] );
     $user_phone = sanitize_text_field( $_POST['client_tel'] );
+
     $sql = "Select order_id, comments from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
     $sql_res = $wpdb->get_results($sql);
+
 
     if($sql_res){
     	foreach ($sql_res as $value) {
@@ -447,58 +497,32 @@ function send_cancel_subscription_email_function() {
 
     if($liqpay_order_id){
     	if(ICL_LANGUAGE_CODE=='uk'){
-			$start_message =  "Для підтвердження скасування регулярного платежу перейдіть за посиланням нижче\r\n";
+			$start_message =  "Для підтвердження скасування регулярного платежу перейдіть за посиланням нижче<br>";
 			$subject = 'Скасування регулярного платежу';
+			$redirect_page_link = '/vidminiti-reguljarnij-platizh/';
 		}
 		elseif(ICL_LANGUAGE_CODE=='ru'){
-			$start_message =  "Для подтверждения отмены регулярного платежа перейдите по ссылке ниже\r\n";
+			$start_message =  "Для подтверждения отмены регулярного платежа перейдите по ссылке ниже<br>";
 			$subject = 'Отмена регулярного платежа';
+			$redirect_page_link = '/ru/otmenit-reguljarnyj-platezh/';
 		}
 		elseif(ICL_LANGUAGE_CODE=='en'){
-			$start_message =  "To confirm the cancellation of the regular payment, follow the link below\r\n";
+			$start_message =  "To confirm the cancellation of the regular payment, follow the link below<br>";
 			$subject = 'Cancel recurring payment';
+			$redirect_page_link = '/en/cancel-subscription/';
 		}
     	$mail_body = $start_message;
 
-    	$merchant_id = get_option('liqpay_merchant_id');
-		$signature = get_option('liqpay_signature_id');
-
-		var_dump(THEME_DIR);
-		var_dump(WP_PLUGIN_DIR . '/liqpay_wordpress/api.php');
-		//include_once "api.php";
-
-		//require_once WP_PLUGIN_DIR . '/liqpay_wordpress/api.php';
-    	//$liqpay = new LiqPay($merchant_id, $signature);
-		
+    	$link = site_url() . $redirect_page_link . '?cansel_subscription=1' . '&order_id=';		
 
     	foreach ($liqpay_order_id as $order ) {
-			$mail_body .= $order['comments'] . "\r\n";
-
-			/*$res = $liqpay->api("request", array(
-			'action'        => 'unsubscribe',
-			'version'       => '3',
-			'order_id'      => $order['order_id']
-			));
-
-			var_dump($res);*/
-			//echo "<hr/>" . "\r\n";
-    	}
-
-    	var_dump($mail_body);
-	   
-
-		//При нескольких подписках отправлять пользователю в писме несколько ссылок
-
-		
-
-		die();
+			$mail_body .= $order['comments'] . " - ";
+			$mail_body .= '<a href="'. $link . $order['order_id'].'">' . $link . $order['order_id'] . '</a>' . "<br>";
+    	}	   
 		
 
     	$result = send_notification($user_mail,$subject, $mail_body);
-    }
-
-    
-
+    }   
 
     exit( json_encode( array( 'result' => $result ) ) );   
 }

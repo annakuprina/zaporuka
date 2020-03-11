@@ -514,6 +514,7 @@ function list_of_reports() {
     ?>
     <div class="list_reports_wrapper">
         <ul >
+            <li class="reports-list-title">Выберите год</li>
             <?php for($i=0;$i<sizeof($new_query->posts);++$i){
                 if ( $i == 0 ) {$active_report = 'tab-active'; }else{$active_report = '';}
                 ?>
@@ -847,4 +848,56 @@ function shortcode_thanks_block(){
     <?php
     $html = ob_get_clean();
     return $html;
+}
+add_action('add_meta_boxes', 'add_custom_history_box');
+function add_custom_history_box(){
+    $screens = array( 'post_type', 'projects' );
+    add_meta_box( 'post_payment_history', 'История зачислений/списаний', 'history_meta_box_callback', $screens );
+}
+// HTML код блока
+function history_meta_box_callback( $post, $meta ){
+    global $wpdb, $table_prefix;
+    $table_liqpay_project_history = $table_prefix . 'liqpay_project_history';
+    $all_posts = $wpdb->get_var( 'SELECT description FROM ' . $wpdb->term_taxonomy . ' WHERE taxonomy = "post_translations" AND description LIKE "%i:' . $post->ID . ';%"' );
+    $all_ids = unserialize($all_posts);
+    $sql = "SELECT * FROM {$table_liqpay_project_history} WHERE project_id IN ({$all_ids['uk']}, {$all_ids['en']}, {$all_ids['ru']})";
+    $result = $wpdb->get_results($sql);
+    ob_start();
+    if(!empty($result)) { ?>
+        <style>
+            .payment-history{
+                border-collapse: collapse!important;
+            }
+            .payment-history tr{
+                border-bottom: 1px solid #ccd0d4;
+                text-align: left;
+            }
+
+        </style>
+        <table class="payment-history" id="history_payments">
+            <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Плательщик</th>
+                <th>Сумма</th>
+                <th>Примечание</th>
+            </tr>
+            </thead>
+           <tbody>
+                <?php foreach ($result as $value) { ?>
+                    <tr>
+                        <td><?php echo $value->order_date; ?></td>
+                        <td><?php echo $value->users_name; ?> (<?php echo $value->users_email . ' ' . $value->users_phone; ?>)</td>
+                        <td><?php echo $value->summa; ?></td>
+                        <td><?php echo $value->type_operation; ?></td>
+                    </tr>
+                <?php } ?>
+           </tbody>
+        </table>
+    <?php } else {
+        echo 'Нет операций';
+    }
+    $html = ob_get_clean();
+    echo $html;
+
 }

@@ -55,7 +55,6 @@ function insert_history($project_id2, $transaction_id2, $date2, $users_name2, $u
 if (isset($_POST['data'])) {
     $json = base64_decode($_POST['data']);
     $obj = json_decode($json);
-
     $message = $obj->{'amount'};
     $summa = $obj->{'amount'};
     $valuta = $obj->{'currency'};
@@ -175,7 +174,7 @@ if (isset($_POST['data'])) {
             }
         }
         exit;
-    } elseif ($status == "success" || $status == "sandbox") {
+    } elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
         $flag = 1;
         if ($hidden_content == '1')
             $status = "платеж совершен";
@@ -205,7 +204,6 @@ if (isset($_POST['data'])) {
             $new_value = $current_value + $summa;
             update_field('total-collected', $new_value , $liqpay_post_id);
         }
-
 
 /////////////////////////////////////////////////////////////////////////////
         global $code, $product_id;
