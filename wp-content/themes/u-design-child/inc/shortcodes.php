@@ -99,12 +99,26 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 
 	ob_start();
 	if( $_GET['cansel_subscription']==1 && isset($_GET['order_id']) ){
+		global $wpdb, $table_prefix;
+		$table_liqpay = $table_prefix . 'liqpay';
+		if (!isset($wpdb))
+	        require_once('../../../wp-config.php');
+
+
+	    $sql = "Select comments from {$table_liqpay} where order_id = {$_GET['order_id']}";
+	    $sql_res = $wpdb->get_row($sql);
+
+
+	    var_dump($sql_res);
+
+
+		$merchant_id = get_option('liqpay_merchant_id');
+		$signature = get_option('liqpay_signature_id');
 
 		require_once WP_PLUGIN_DIR . '/liqpay_wordpress/api.php';
       	$liqpay = new LiqPay($merchant_id, $signature);
 
-		$merchant_id = get_option('liqpay_merchant_id');
-		$signature = get_option('liqpay_signature_id');
+
 
 		$res = $liqpay->api("request", array(
 			'action'        => 'unsubscribe',
@@ -113,6 +127,19 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 		));
 
 		var_dump($res);
+
+
+		if(ICL_LANGUAGE_CODE=='uk'){
+			$message =  "Ви здійснили скасування регулярного платежу - ";
+		}
+		elseif(ICL_LANGUAGE_CODE=='ru'){
+			$message =  "Вы осуществили отмену регулярного платежа - ";
+		}
+		elseif(ICL_LANGUAGE_CODE=='en'){
+			$message =  "You have canceled a recurring payment - ";
+		}
+
+		echo "<h2>" . $message .  "</h2>";
 
 	}
 	else{

@@ -1105,21 +1105,27 @@ footer a.designer-link {
 .cancel_subscription_form_success_block{display: none;}
 
 .help-form-inner-wrapper .cancel_subscription_form .help-form-submit-oferta{padding-bottom: 0;}
-input[type="checkbox"]:checked,
-input[type="checkbox"]:not(:checked) {
+.modal-body input[type="checkbox"]:checked,
+.modal-body input[type="checkbox"]:not(:checked),
+.wpb_wrapper input[type="checkbox"]:checked,
+.wpb_wrapper input[type="checkbox"]:not(:checked){
   position: absolute;
   left: -9999px;
 }
-input[type="checkbox"]:checked + label,
-input[type="checkbox"]:not(:checked) + label {
+.modal-body input[type="checkbox"]:checked + label,
+.modal-body input[type="checkbox"]:not(:checked) + label,
+.wpb_wrapper input[type="checkbox"]:checked + label,
+.wpb_wrapper input[type="checkbox"]:not(:checked) + label {
   display: inline-block !important;
   position: relative;
   padding-left: 28px;
   line-height: 20px;
   cursor: pointer;
 }
-input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:not(:checked) + label:before {
+.modal-body input[type="checkbox"]:checked + label:before,
+.modal-body input[type="checkbox"]:not(:checked) + label:before,
+.wpb_wrapper input[type="checkbox"]:checked + label:before,
+.wpb_wrapper input[type="checkbox"]:not(:checked) + label:before {
   content: "";
   position: absolute;
   left: 0px;
@@ -1130,12 +1136,16 @@ input[type="checkbox"]:not(:checked) + label:before {
   background-color: #ffffff;
 }
 
-input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:not(:checked) + label:before {
+.modal-body input[type="checkbox"]:checked + label:before,
+.modal-body input[type="checkbox"]:not(:checked) + label:before,
+.wpb_wrapper input[type="checkbox"]:checked + label:before,
+.wpb_wrapper input[type="checkbox"]:not(:checked) + label:before {
   border-radius: 1px;
 }
-input[type="checkbox"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:after {
+.modal-body input[type="checkbox"]:checked + label:after,
+.modal-body input[type="checkbox"]:not(:checked) + label:after,
+.wpb_wrapper input[type="checkbox"]:checked + label:after,
+.wpb_wrapper input[type="checkbox"]:not(:checked) + label:after {
   content: "";
   position: absolute;
   -webkit-transition: all 0.2s ease;
@@ -1144,8 +1154,10 @@ input[type="checkbox"]:not(:checked) + label:after {
   transition: all 0.2s ease;
 }
 
-input[type="checkbox"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:after {
+.modal-body input[type="checkbox"]:checked + label:after,
+.modal-body input[type="checkbox"]:not(:checked) + label:after,
+.wpb_wrapper input[type="checkbox"]:checked + label:after,
+.wpb_wrapper input[type="checkbox"]:not(:checked) + label:after {
   left: 2px;
   top: 3px;
   width: 10px;
@@ -1159,21 +1171,27 @@ input[type="checkbox"]:not(:checked) + label:after {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-input[type="checkbox"]:not(:checked) + label:after {
+.modal-body input[type="checkbox"]:not(:checked) + label:after,
+.wpb_wrapper input[type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
 }
-input[type="checkbox"] + label.error {
+.modal-body input[type="checkbox"] + label.error,
+.wpb_wrapper input[type="checkbox"] + label.error {
   position: absolute;
   left: -28px;
   top: 23px;
   line-height: 1em;
 }
-input[type="checkbox"]:checked + label.error:before,
-input[type="checkbox"]:not(:checked) + label.error:before {
+.modal-body input[type="checkbox"]:checked + label.error:before,
+.modal-body input[type="checkbox"]:not(:checked) + label.error:before,
+.wpb_wrapper input[type="checkbox"]:checked + label.error:before,
+.wpb_wrapper input[type="checkbox"]:not(:checked) + label.error:before{
   top: -20px;
 }
-input[type="checkbox"]:checked + label.error:after,
-input[type="checkbox"]:not(:checked) + label.error:after {
+.modal-body input[type="checkbox"]:checked + label.error:after,
+.modal-body input[type="checkbox"]:not(:checked) + label.error:after,
+.wpb_wrapper input[type="checkbox"]:checked + label.error:after,
+.wpb_wrapper input[type="checkbox"]:not(:checked) + label.error:after{
   top: -17px;
 }
 
