@@ -5,8 +5,8 @@
 
 $public_key = get_option('liqpay_merchant_id');
 $private_key = get_option('liqpay_signature_id');
-$date_from = date('Y:m:d H:i:s', strtotime('-1 day'));
-$date_to = date('Y:m:d H:i:s');
+$date_from = date(strtotime('-1 day'));
+$date_to = time();
 $liqpay = new LiqPay($public_key, $private_key);
 $res = $liqpay->api("request", array(
     'action'    => 'reports',
