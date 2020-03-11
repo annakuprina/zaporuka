@@ -14,4 +14,4 @@ $res = $liqpay->api("request", array(
     'date_from' => '1583854660000',
     'date_to'   => '1583941072000'
 ));
-var_dump($date_to);
+var_dump($res);
