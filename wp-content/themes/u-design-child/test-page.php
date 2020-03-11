@@ -11,7 +11,7 @@ $liqpay = new LiqPay($public_key, $private_key);
 $res = $liqpay->api("request", array(
     'action'    => 'reports',
     'version'   => '3',
-    'date_from' => $date_from,
-    'date_to'   => $date_to
+    'date_from' => '1583845934',
+    'date_to'   => '1583932334'
 ));
 var_dump($res);
