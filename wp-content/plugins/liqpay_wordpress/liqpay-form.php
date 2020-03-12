@@ -220,7 +220,7 @@ $json_string = array('version' => '3','public_key' => $merchant_id,'amount' => $
 $data = base64_encode(json_encode($json_string));
 $liqpay = new LiqPay($merchant_id,$signature);
 $html = $liqpay->cnb_form(
-	array('version' => '3','amount' => $amount,'currency' => $valuta,'info' =>$additional_info,'description' => $description,'order_id' => $liq_order_id,'server_url' => $server_url,'result_url' => $result_url,'action' => $pay_type, 'public_phone'=> $liqpay_phone, 'subscribe_periodicity'=> $subscribe_type, 'subscribe_date_start'=> date("Y-m-d H:i:s"), 'pay_way' => 'card,liqpay,delayed,invoice,privat24','language' => $lang,'sender_first_name'=>$sender_first_name,'sandbox' => $testmode//,
+	array('version' => '3','amount' => $amount,'currency' => $valuta,'info' =>serialize($additional_info),'description' => $description,'order_id' => $liq_order_id,'server_url' => $server_url,'result_url' => $result_url,'action' => $pay_type, 'public_phone'=> $liqpay_phone, 'subscribe_periodicity'=> $subscribe_type, 'subscribe_date_start'=> date("Y-m-d H:i:s"), 'pay_way' => 'card,liqpay,delayed,invoice,privat24','language' => $lang,'sender_first_name'=>$sender_first_name,'sandbox' => $testmode//,
 		// 'split_rules' => json_encode($split_rules)
 	));
 echo $html;
