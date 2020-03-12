@@ -628,6 +628,103 @@ h3 {
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
 
+/*---------------
+  PROJECTS PAGE
+---------------*/
+.project_banner_wrapper_section1 .project_banner_section1 {
+  padding-top: 57px;
+  padding-bottom: 26px;
+}
+
+.project_banner_section1 .vc_custom_1581425275566 {
+  max-width: 1180px;
+}
+
+.project_banner_section1_left .vc_column-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.project_banner_section1_left h2 {
+  margin-bottom: 29px;
+  font-family: "Raleway-Bold" !important;
+  margin-left: 13px;
+}
+
+.project_banner_section1_item {
+  width: 200px;
+  height: 130px;
+  margin-right: 11px;
+  margin-bottom: 9px;
+  background: #fff;
+  padding: 25px 30px 22px 30px;
+}
+
+.project_banner_section1_item h5 {
+  font-family: "Proxima-Nova-Bold";
+  font-size: 32px;
+}
+
+.project_banner_section1_item .column_text {
+  line-height: normal;
+  padding-top: 5px;
+  opacity: 0.3;
+  font-weight: 700;
+}
+
+.project_banner_section1_item .wpb_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.project_banner_section1_right .wpb_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#main-content .project_banner_section1_right .vc_column-inner {
+  padding-left: 154px;
+}
+
+.project_banner_section1_help {
+  width: 200px;
+  height: 130px;
+}
+
+.project_banner_section1_help a:link {
+  color: #fff;
+}
+
+.project_banner_section1_help a:visited {
+  color: #fff;
+}
+
+.project_banner_section1_help a:hover {
+  color: #fff;
+}
+
+.project_banner_section1_help a:active {
+  background-color: #fff;
+}
+
+.project_banner_section1_help > .wpb_wrapper {
+  background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
+  padding: 52.5px 45px;
+}
+
+.project_banner_section1_help > .wpb_wrapper p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 1;
+  font-family: "Raleway-Bold";
+}
+
+.project_banner_section1_help > .wpb_wrapper p::after {
+  content: url(../../img/arrow-home.svg);
+  padding-left: 10px;
+}
+
 /* ONE PROJECT */
 .one-project-title {
   color: #a5a5a5ab;
@@ -3909,6 +4006,10 @@ footer .footer-mob a.designer-link {
     flex-direction: column;
   }
 
+  .directions_section2_tab_body .vc_tta-panel-body {
+    padding: 0 20px !important;
+  }
+
   .directions_section2_tabs
     .section-tabs
     .vc_tta-tabs-list
@@ -4605,6 +4706,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .reporting_section_tabs .list_reports_wrapper {
     padding: 40px 0 50px 0;
+    margin-bottom: 30px;
   }
 
   .list_reports_wrapper ul.active {
@@ -4710,6 +4812,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 .category-expand-button.active {
   transform: rotate(225deg);
   -webkit-transform: rotate(225deg);
+  right: -18px;
+  top: 12px;
 }
 
 #main-content .shop-custom-wrapper {
@@ -5306,10 +5410,80 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding: 131px 130px;
 }
 
+/*----------------------
+  PRIVACY POLICY PAGE
+----------------------*/
+.privacy-section1 h2 {
+  max-width: 430px;
+  margin-bottom: 40px;
+}
+
+.privacy-section1 .vc_custom_1581002097646 {
+  padding-left: 36px !important;
+}
+
+#main-content .privacy-section2 {
+  padding-top: 24px;
+}
+
+#main-content .privacy-section2 h2 {
+  margin-bottom: 39px;
+}
+
+.privacy-section2 .block_excerpt_container {
+  margin-top: 8px;
+  padding: 0px 0 0 68px;
+}
+
+#main-content .privacy-help-section {
+  padding-top: 71px;
+}
+
+@media screen and (max-width: 1024px) {
+  .privacy-section2 .block_excerpt_container {
+    padding: 0px 0 0 20px;
+  }
+
+  #main-content .privacy-section1 {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .privacy-section1 .vc_custom_1581002097646 {
+    padding-left: 15px !important;
+  }
+
+  .privacy-section2 .block_excerpt_container {
+    padding: 0;
+  }
+
+  #main-content .privacy-help-section {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  #main-content .privacy-section1 {
+    padding-top: 0px;
+  }
+
+  .privacy-section2 .before_rectangle_block p::before {
+    padding-right: 10px;
+  }
+}
+
 /*-------------------------
   HELP FORM(orange form)
 -------------------------*/
 #wrapper-1 .help-form-inner-wrapper .help-form-oferta label:not(.error) {
   padding-left: 24px;
   margin-right: -7px;
+}
+
+input[type="checkbox"] + label#oferta-error {
+  left: 0;
+}
+
+#wrapper-1 .help_form_wrapper label.error {
+  top: 34px;
 }

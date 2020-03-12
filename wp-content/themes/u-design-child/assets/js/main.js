@@ -252,14 +252,10 @@ jQuery(document).ready(function($) {
       .parent()
       .toggleClass("active");
 
-    if ($("li").hasClass("tab-active")) {
-      var currentYear = $(".tab-active").text();
-      console.log(currentYear);
-      $(".reports-list-title span:eq(0)").text(currentYear);
-    }
-    // $(this)
-    //   .find(".category-expand-button")
-    //   .toggleClass("active");
+    var currentYear = $(this).text();
+    console.log(currentYear);
+    $(".reports-list-title span:eq(0)").text(currentYear);
+    $(".list_reports_wrapper .category-expand-button").toggleClass("active");
   });
   /*DROPDOWN FOR NEWS PAGE MOBILE*/
   // console.log("prr");

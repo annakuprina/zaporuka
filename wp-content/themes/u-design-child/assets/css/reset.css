@@ -77,10 +77,23 @@ a:focus,
 a:active {
   text-decoration: none;
 }
-#logo{padding-left: 0;}
-#slogan{display: none;}
-#bottom-bg,#footer-bg{background-color: #fbfbfb;}
-.no-breadcrumbs-padding{padding: 0;}
+#logo {
+  padding-left: 0;
+}
+#slogan {
+  display: none;
+}
+#bottom-bg,
+#footer-bg {
+  background-color: #fbfbfb;
+}
+.no-breadcrumbs-padding {
+  padding: 0;
+}
 .entry {
-    padding: 0 0 20px;
-  }
+  padding: 0 0 20px;
+}
+
+p {
+  word-break: break-word;
+}
