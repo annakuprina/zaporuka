@@ -357,7 +357,7 @@ function check_currency(){
         $symbol =  'грн.';
     }
     elseif(ICL_LANGUAGE_CODE=='en'){
-        $symbol =  'UAN';
+        $symbol =  '₴';
     }
     return $symbol;
 }
