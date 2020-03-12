@@ -260,7 +260,7 @@ function shortcode_project_for_home(  ){
                             <span class="project-money-quantity"><?php echo $total_collected; ?></span>
                             <span class="project-money-involved"><?php pll_e( 'залучено');?></span>
                         </p>
-                        <p class="project-money-collected"><?php echo $total_amount; ?></p>
+                        <p class="project-money-collected"><span class="project-money-collected-inner"><?php echo $total_amount; ?></span><span> <?php echo check_currency(); ?></span></p>
                     </div>
                     <div class="one-project-progress-bottom">
                         <div class="progress-bar">
