@@ -366,3 +366,60 @@ if ( $_SERVER ["REQUEST_URI"] == '/storinka-podyaky/new-order' ){
     wp_safe_redirect(home_url() . '/storinka-podyaky/');
     exit;
 }
+
+if ( ! wp_next_scheduled( 'check_liqpay_archive' ) ) {
+    wp_schedule_event( strtotime('03:00:00'), 'daily', 'check_liqpay_archive' );
+}
+// добавляем крон хук
+add_action( 'check_liqpay_archive', 'check_liqpay_archive_function' );
+function check_liqpay_archive_function() {
+    $public_key = get_option('liqpay_merchant_id');
+    $private_key = get_option('liqpay_signature_id');
+    $date_from = date(strtotime('-1 day') )* 1000;
+    $date_to = time() * 1000;
+    $liqpay = new MyLiqPay($public_key, $private_key);
+    $res = $liqpay->api("request", array(
+        'action'    => 'reports',
+        'version'   => '3',
+        'date_from' => $date_from,
+        'date_to'   => $date_to
+    ));
+    if ( ! empty( $res ) ) {
+        global $wpdb, $table_prefix;
+        $table_liqpay = $table_prefix . 'liqpay';
+        $table_liqpay_history = $table_prefix . 'liqpay_project_history';
+        if (!isset($wpdb))
+            require_once('../../../wp-config.php');
+        for ($i=0; $i<count($res->data); ++$i) {
+            $sql = "Select * from {$table_liqpay} where transaction_id = {$res->data[$i]->transaction_id}";
+            $sql_res = $wpdb->get_results($sql);
+            if( empty($sql_res) ) {
+                $additional_info = (isset($res->data[$i]->info)) ? unserialize($res->data[$i]->info) : '';
+                $order_id = $res->data[$i]->order_id;
+                $project_id = (!empty($additional_info)) ? $additional_info['post_id'] : 823;
+                $transaction_id = $res->data[$i]->transaction_id;
+                $date = date('Y-m-d H:i:s', ($res->data[$i]->create_date / 1000));
+                $users_name = $res->data[$i]->sender_first_name;
+                $users_email = (!empty($additional_info)) ? $additional_info['user_email'] : '';
+                $users_phone = (!empty($additional_info)) ? $additional_info['user_phone'] : '';
+                $type_operation = 'зачислено';
+                $status = 'success';
+                $code = 0;
+                $summa = $res->data[$i]->amount;
+                $valuta = $res->data[$i]->currency;
+                $ip = $res->data[$i]->ip;
+                $datas = $res->data[$i]->description;
+                $sql = "insert into {$table_liqpay} (`order_id`,`xdate`,`transaction_id`,`status`,`err_code`,`summa`,`valuta`,`sender_phone`,`comments`,`email`,`ip`)
+             values ('" . $order_id . "','" . $date . "'," . $transaction_id . ",'" . $status . "','" . $code . "','" . $summa . "','" . $valuta . "','" . $users_phone . "','" . $datas . "','" . $users_email . "','" . $ip . "')
+             on duplicate key update order_id=VALUES(order_id),xdate=VALUES(xdate),transaction_id=VALUES(transaction_id),status=VALUES(status),err_code=VALUES(err_code),summa=VALUES(summa),valuta=VALUES(valuta),sender_phone=VALUES(sender_phone),comments=VALUES(comments),email=VALUES(email),ip=VALUES(ip);";
+                $wpdb->query($sql);
+                $sql1 = "insert into {$table_liqpay_history} (`project_id`,`transaction_id`,`order_date`,`users_name`,`users_phone`,`users_email`,`summa`,`type_operation`) values ('" . $project_id . "','" . $transaction_id . "','" . $date . "','" . $users_name . "','" . $users_phone . "','" . $users_email . "','" . $summa . "','" . $type_operation . "')
+             on duplicate key update project_id=VALUES(project_id),transaction_id=VALUES(transaction_id),order_date=VALUES(order_date),users_name=VALUES(users_name),users_phone=VALUES(users_phone),users_email=VALUES(users_email),summa=VALUES(summa),type_operation=VALUES(type_operation);";
+                $wpdb->query($sql1);
+                $current_value = get_field( "total-collected", $project_id );
+                $new_value = $current_value + $summa;
+                update_field('total-collected', $new_value , $project_id);
+            }
+        }
+    }
+}
