@@ -52,7 +52,7 @@ function insert_history($project_id2, $transaction_id2, $date2, $users_name2, $u
 
 }
 
-update_option('payment_answer_from_liqpay', $_POST);
+update_option('payment_answer_from_liqpay', $_POST['data']);
 if (isset($_POST['data'])) {
     $json = base64_decode($_POST['data']);
     $obj = json_decode($json);
