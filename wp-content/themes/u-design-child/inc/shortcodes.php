@@ -87,7 +87,6 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
 }
 add_shortcode('help_form', 'shortcode_help_form');
 
-
 function shortcode_cancel_subscription_form(){
 $options = get_option('ThemeOptions');
 $cancel_subscription_form_title = !empty($options['cancel_subscription_form_title_block_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_form_title_block_' . ICL_LANGUAGE_CODE] : 'Відмінити регулярний платіж';

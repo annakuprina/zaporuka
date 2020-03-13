@@ -333,7 +333,7 @@ function zaporuka_photo_video_doc(){
     ob_start();
     ?>
     <!----------------------------------
-	PHOTO, VIDEO, DOCUMENTS SLIDERS
+    PHOTO, VIDEO, DOCUMENTS SLIDERS
 ----------------------------------->
     <!-- TABS -->
 
@@ -678,8 +678,8 @@ class section_post_info_class extends WPBakeryShortCode {
                 <div>
                     <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
                     <span class="one-project-socials">
-					    <i class="fa fa-facebook" aria-hidden="true"></i>
-				    </span>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </span>
                     </a>
                 </div>
             </div>
@@ -806,19 +806,24 @@ function shortcode_awards_slider(){
 
 add_shortcode( 'shortcode_thanks_block_pro', 'shortcode_thanks_block' );
 function shortcode_thanks_block(){
-    var_dump($_SERVER['HTTP_REFERER']);
-    global $wpdb, $table_prefix;
-    $table_liqpay = $table_prefix . 'liqpay';
-    $res = $wpdb->get_results("SELECT order_id, summa FROM {$table_liqpay} ORDER BY id DESC LIMIT 0,1");
-    if (isset($res)) {
-        $order_id = $res[0]->order_id;
-        $order_sum = '<span class="order-sum">' . $res[0]->summa . ' '  . check_currency() . '</span>';
-        $post_id =  get_option($order_id . '-liqpay_post_id');
-        $thanks_text = get_field('thanks_text', $post_id);
+    $order_id_answer = $_GET['answer_order_id'];
+    $liqpay_answer_status =  get_option($order_id_answer . '-liqpay_answer_status');
+    $liqpay_answer_transaction_id =  get_option($order_id_answer.'-liqpay_answer_transaction_id');
+    $liqpay_answer_summa =  get_option($order_id_answer.'-liqpay_answer_summa');
+    $liqpay_post_id =  get_option($order_id_answer . '-liqpay_post_id');
+    $thanks_text = get_field('thanks_text', $liqpay_post_id);
+    //var_dump($_SERVER['HTTP_REFERER']);
+    ob_start();
+    if($liqpay_answer_transaction_id){
+      /*  global $wpdb, $table_prefix;
+        $table_liqpay = $table_prefix . 'liqpay';
+        $res = $wpdb->get_results("SELECT summa FROM {$table_liqpay} WHERE order_id = {$order_id_answer}");*/
+
+        $order_sum = '<span class="order-sum">' .  $liqpay_answer_summa. ' '  . check_currency() . '</span>';
         if ( !isset($thanks_text) ) {
             if( ICL_LANGUAGE_CODE == 'uk' ) {
                 $thanks_text = 'Вдячні за вашу пожертву у розмірі [сумма] Всі відправлені вами кошти підуть на допомогу БФ "Запорука".';
-	        }
+            }
             elseif ( ICL_LANGUAGE_CODE == 'ru' ) {
                 $thanks_text = 'Благодарны за ваше пожертвование в размере [сумма] Все отправленные вами средства пойдут на помощь БФ "Запорука".';
             }
@@ -827,26 +832,36 @@ function shortcode_thanks_block(){
             }
         }
         $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
-    }
-
-    ob_start();
-    ?>
-    <div class="thanks-text-wrapper">
-        <div>
-            <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Дякуємо за підтримку!');?></h2></div>
-            <div class="thanks-text-block">
-                <?php echo $thanks_text; ?>
-            </div>
-            <div class="thanks-share-link">
-                <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
-                    <span class="one-project-socials"><?php pll_e( 'Подiлитися');?>
-					    <i class="fa fa-facebook" aria-hidden="true"></i>
-				    </span>
-                </a>
+       
+        
+        ?>
+        <div class="thanks-text-wrapper">
+            <div>
+                <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Дякуємо за підтримку!');?></h2></div>
+                <div class="thanks-text-block">
+                    <?php echo $thanks_text; ?>
+                </div>
+                <div class="thanks-share-link">
+                    <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
+                        <span class="one-project-socials"><?php pll_e( 'Подiлитися');?>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    <?php
+        <?php
+    }
+    else{
+        ?>
+        <div class="thanks-text-wrapper">
+            <div>
+                <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Ви скасували оплату!');?></h2></div>
+            </div>
+        </div>
+        <?php
+    }
+
     $html = ob_get_clean();
     return $html;
 }
