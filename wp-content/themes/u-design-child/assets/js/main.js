@@ -211,17 +211,26 @@ jQuery(document).ready(function($) {
     $(".header-mob-top .close").toggleClass("active");
   });
 
-  /*DROPDOWN FOR SHOP PAGE MOBILE*/
+  /*DROPDOWNS FOR SHOP AND REPORTS PAGES MOBILE*/
   // Toggle dropdown
   $(".category-mob-select").on("click", function() {
     $(this)
       .closest("ul")
       .children("li")
       .slice(1)
-      .slideToggle();
+      .toggle();
+
+    $(this)
+      .parent()
+      .toggleClass("active");
+
+    $(this)
+      .not(".one-tab-link,.reports-list-title")
+      .find(".category-expand-button")
+      .toggleClass("active");
   });
 
-  /*Change current category name inside dropdown*/
+  /*Change current category name inside dropdown on Shop page*/
   k = 0;
   setInterval(function() {
     if (k == 0) {
@@ -233,9 +242,65 @@ jQuery(document).ready(function($) {
     }
   }, 10);
 
+  $(".list_reports_wrapper ul li").on("click", function() {
+    $(this)
+      .closest("ul")
+      .children("li")
+      .slice(1)
+      .toggle();
+    $(this)
+      .parent()
+      .toggleClass("active");
+
+    var currentYear = $(this).text();
+    console.log(currentYear);
+    $(".reports-list-title span:eq(0)").text(currentYear);
+    $(".list_reports_wrapper .category-expand-button").toggleClass("active");
+  });
   /*DROPDOWN FOR NEWS PAGE MOBILE*/
   // console.log("prr");
   // $(".section-news .vc_grid-filter").prepend(
   //   "<li class='category-mob-select'>Всi новини111</li>"
   // );
+
+  /*Янин скрипт для ширины прогрессбара , но с setIntervalом. Если сработает, то удалить из Яниного файла вариант с settimeout*/
+  var countProgress = function() {
+    jQuery(".other-projects-row .vc_grid-item").each(function() {
+      var moneyTotalAmount = jQuery(this)
+        .find(".project-money-collected-inner")
+        .text();
+      var moneyCurrentCollected = jQuery(this)
+        .find(".project-money-quantity-inner")
+        .text();
+      var progressBarTimeline =
+        (moneyCurrentCollected * 100) / moneyTotalAmount;
+      jQuery(this)
+        .find(".progress-done")
+        .width(progressBarTimeline + "%");
+    });
+    console.log("width is counting");
+  };
+  countProgress();
+  setInterval(countProgress, 1000);
+
+  /*Анин скрипт для оранж фона , но с setIntervalом. Если сработает, то удалить из Аниного файла вариант с settimeout*/
+  setInterval(function() {
+    $(".section-news-hover-wrapper").each(function(index) {
+      if (
+        $(this)
+          .find(".vc_gitem-zone-img")
+          .attr("src")
+          .indexOf("vc_gitem_image.png") >= 0
+      ) {
+        $(this).addClass("no-background-image");
+        $(this).attr(
+          "style",
+          "background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%)!important"
+        );
+      } else {
+        $(this).addClass("is-background-image");
+      }
+    });
+    console.log("orange bg is making");
+  }, 1000);
 });
