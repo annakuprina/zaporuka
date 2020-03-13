@@ -101,7 +101,7 @@ if (isset($_POST['hidden_content'])) $hidden_content = $_POST['hidden_content'];
 
 if ($hidden_content)
 {
-    $result_url = $_POST['url_page'];
+    $result_url = $_POST['url_page'] ."?answer_order_id=" . $liq_order_id;
 }
 elseif (!get_option('liqpay_result_url') && isset($_POST['order_id']) && ($_POST['order_id'])){
 	if ( isset($_POST['result_url']) ) {
@@ -142,6 +142,8 @@ if(!isset($_POST['liqpay_post_id'])){
 else{
     update_option($liq_order_id.'-liqpay_post_id',$_POST['liqpay_post_id']);
 }
+
+
 
 $liq_key = false;
 if(isset($_POST['key']))
@@ -204,6 +206,9 @@ $description = $plata;
 
 $sender_first_name = $_POST['fio']; 
 
+
+
+
 //echo vivod_skidki2(); exit; 
 $lqsignature = base64_encode(sha1($signature . $amount . $valuta . $merchant_id . $liq_order_id . 'buy' . $description . $result_url . $server_url,1));
 $testmode = get_option('liqpay_check_testmode');
@@ -213,6 +218,9 @@ $additional_info = array(
 	'user_email' => $_POST['mail'],
 	'post_id' => $_POST['liqpay_post_id'],
 );
+
+update_option($liq_order_id.'-liqpay_answer',serialize($additional_info));
+
 /////////////////****************************************************************** API 3.0
 $json_string = array('version' => '3','public_key' => $merchant_id,'amount' => $amount,'currency' => $valuta,'description' => $description,'order_id' => $liq_order_id,'action' => $pay_type, 'subscribe_periodicity'=> $subscribe_type, 'public_phone'=> $liqpay_phone,'user_phone'=> $user_phone,'subscribe_date_start'=> date("Y-m-d H:i:s"), 'server_url' => $server_url,'result_url' => $result_url,'liqpay_post_id' => $_POST['liqpay_post_id'],'pay_way' => 'card,liqpay,delayed,invoice,privat24','language' => $lang,'sender_first_name'=>$sender_first_name,'sandbox' => $testmode);
 
