@@ -5782,6 +5782,135 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding: 131px 130px;
 }
 
+@media screen and (max-width: 1200px) {
+  /*vc_gitem-row-position-bottom
+    vc_gitem-row-position-middle
+    vc_gitem-row-position-top */
+
+  /*УДАЛИТЬ!*/
+  #wrapper-1 .vc_gitem-animate-none .vc_gitem-zone-b {
+    opacity: 1 !important;
+  }
+
+  #wrapper-1 .vc_gitem-row-position-bottom .vc_custom_1581522444930 {
+    border-top-width: 0 !important;
+  }
+
+  #wrapper-1 .our-team-middle-block {
+    opacity: 0.8;
+    border-bottom: 1px solid #fff;
+  }
+
+  .vc_gitem-row-position-middle {
+    font-family: "Raleway-Light";
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .vc_gitem-row-position-bottom {
+    font-family: "Raleway-Regular";
+    font-size: 14px;
+  }
+
+  #our_team .team-member-info-hover .vc_gitem-acf-label {
+    font-family: "Raleway-Regular";
+  }
+
+  #our_team .team-member-info-hover .field_5e1d98b8bab85_labeled {
+    font-family: "Proxima-Nova-Light";
+  }
+
+  #our_team .team-member-info-hover .field_5e1d98f72a0e1_labeled {
+    font-family: "Raleway-Light";
+  }
+
+  #our_team .vc_grid.vc_row.vc_grid-gutter-30px .vc_grid-item {
+    padding-right: 0;
+  }
+
+  #our_team .our-team-hover-wrapper {
+    padding: 15px 20px 43px 20px;
+    padding-bottom: 10px;
+  }
+
+  #our_team .team-member-title-hover {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Raleway-Regular";
+  }
+
+  #our_team .vc_grid-item {
+    min-width: 291px;
+  }
+
+  #our_team .vc_pageable-slide-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  #our_team
+    .our-team-hover-wrapper
+    .vc_gitem-row-position-bottom
+    .team-member-info-hover {
+    line-height: 20px;
+  }
+
+  #our_team .team-member-title-hover {
+    margin-bottom: 0;
+    padding-top: 5px;
+  }
+
+  #our_team .team-member-title-hover .vc_gitem-row-position-top {
+    padding: 0 20px;
+  }
+
+  #our_team .team-member-title-hover .vc_gitem-row-position-top .vc_gitem_row {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wpb-js-composer #wrapper-1 .home-page-section4-tabs .vc_tta-tabs-container {
+    display: none !important;
+  }
+
+  /* #our_team .vc_grid-item {
+    width: calc((100% - 20px) / 2);
+    min-width: unset;
+    padding-right: 0;
+  } */
+
+  #our_team .vc_pageable-slide-wrapper::before,
+  #our_team .vc_pageable-slide-wrapper::after {
+    display: none;
+  }
+
+  /* #our_team .vc_pageable-slide-wrapper {
+    justify-content: space-between;
+  } */
+
+  .aboutus_section2 .before_rectangle_block p::before {
+    padding-right: 10px;
+  }
+
+  #wrapper-1 .aboutus_section2 .block_excerpt_container {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #our_team .vc_pageable-slide-wrapper {
+    justify-content: center;
+  }
+
+  #our_team .vc_grid-item {
+    width: 291px;
+    min-width: unset;
+  }
+}
+
 /*----------------------
   PRIVACY POLICY PAGE
 ----------------------*/
