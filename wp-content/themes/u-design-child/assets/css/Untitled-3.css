@@ -5941,15 +5941,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #wrapper-1 .aboutus_section2 .block_excerpt_container {
     padding: 25px 0 0 20px;
   }
-
-  /*our mission*/
-  #main-content .aboutus_section2 {
-    padding-top: 59px;
-  }
-
-  #main-content .aboutus_section2 .vc_column-inner {
-    padding-top: 0;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -5964,124 +5955,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   .aboutus_section1_wrapper .wpb_column:nth-child(1) {
-    margin-bottom: 47px;
-  }
-
-  .about-us-testimonials .count_pages {
-    position: static;
+    margin-bottom: 30px;
   }
 }
 
-@media screen and (max-width: 560px) {
-  #our_team .vc_pageable-slide-wrapper {
-    justify-content: center;
-  }
-
-  #our_team .vc_grid-item {
-    width: 291px;
-    min-width: unset;
-  }
-
-  #wrapper-1 .aboutus_section1_wrapper h2 {
-    font-family: "Raleway-Regular" !important;
-    font-size: 24px !important;
-  }
-
-  #main-content .aboutus_section1 .video_button a:before {
-    width: 46px;
-    height: 46px;
-    background-size: 46px 46px;
-    position: relative;
-    bottom: 8px;
-    padding-right: 6px;
-  }
-
-  .vc_row.vc_row-o-equal-height > .vc_column_container {
-    overflow: visible;
-  }
-
-  #main-content .aboutus_section1 {
-    padding: 119px 35px 107px 35px;
-  }
-
-  .aboutus_section1_wrapper
-    .vc_row.vc_row-o-equal-height
-    > .vc_column_container {
-    overflow: visible;
-  }
-
-  #main-content .aboutus_section2 {
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  /* 
-  .aboutus_section2 .before_rectangle_block p::before {
-    padding-right: 11px;
-  }
-
-  .before_rectangle_block .wpb_wrapper p {
-    padding-left: 24px;
-  }
-
-  .wpb_content_element p {
-    padding-left: 24px;
-  } */
-}
-
-@media screen and (max-width: 400px) {
-  #main-content .aboutus_section2 .h2-about-first-title {
-    margin-bottom: 20px;
-    padding-top: 2px !important;
-  }
-
-  #main-content .aboutus_section2 .h2-about-second-title {
-    margin-bottom: 39px;
-  }
-
-  .aboutus_section2 .about-us-text1 {
-    padding-left: 20px;
-    margin-bottom: 27px;
-  }
-
-  .aboutus_section2 .about-us-text2 {
-    padding-left: 40px;
-    margin-bottom: 0px;
-  }
-
-  .aboutus_section2 .about-us-text3 {
-    padding-left: 40px;
-    margin-bottom: 40px;
-  }
-
-  .aboutus_section2 .about-us-text4 {
-    padding-left: 40px;
-    margin-bottom: 0;
-  }
-
-  .aboutus_section2 .about-us-text5 {
-    padding-left: 40px;
-  }
-
-  .aboutus_section2 .before_rectangle_block p::before {
-    position: absolute;
-    left: 35px;
-  }
-
-  #wrapper-1 .aboutus_section2 .block_excerpt_container .block_excerpt {
-    padding-top: 20px;
-    margin-bottom: 61px;
-  }
-
-  .aboutus_section2 .block_excerpt_container p {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  #wrapper-1 .aboutus_section2 .block_excerpt_container {
-    padding: 26px 20px 0 20px;
-  }
-}
 /*----------------------
   PRIVACY POLICY PAGE
 ----------------------*/
@@ -6142,12 +6019,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .privacy-section2 .before_rectangle_block p::before {
     padding-right: 10px;
   }
-
-  .wpb-js-composer #wrapper-1 .home-page-section4-tabs .vc_tta-tabs-container {
-    display: none !important;
-  }
 }
-
 /*---------------------
   SINGLE PRODUCT PAGE
 ----------------------*/
