@@ -44,56 +44,56 @@ function shortcode_milestones(){
                 </div><!-- end proj-timeline-info-right -->
             </div><!-- end proj-timeline-info -->
         </div><!-- end proj-timeline-top -->
-
-        <div class="proj-timeline-steps">
-            <?php foreach ($value as $item) {
-                $i++;
-                $progress_bar = '100';
-                $inprogress = ( $total_collected  < (int) $item["milestone-amount"] ) ? 'in-progress' : '';
-                $finished = ( $total_collected  >= (int) $item["milestone-amount"] ) ? 'finished' : '';
-                $milestone_tasks_done = $item["milestone_tasks_done"];
-                $milestone_tasks_undone = $item["milestone_tasks_undone"];
-                if ( !empty($finished) ){
-                    $class = $finished;
-                } else{
-                    $class = $inprogress;
-                }
-                if ( $item["milestone-name"] != $milestone_name_active && $class==$inprogress ){
-                    $class='';
-                }
-                if ( $item["milestone-name"] == $milestone_name_active){
-                    $active_tab = 'active';
-                    $progress_bar = (int) $total_collected * 100 / (int) $item["milestone-amount"];
-                } else{
-                    $active_tab = '';
-                }
-                ?>
-                <!-- ONE STEP -->
-                <div class="proj-timeline-one-step <?php echo $class; ?> one-tab-link" data-id="<?php echo $i; ?>">
-                    <!-- Hidden  timeline for mob version-->
-                    <div class="one-step-timeline-mob">
-                        <p class="one-step-timeline-inner"></p>
-                    </div>
-                    <div class="one-step-timeline-wrapper tabs_caption <?php echo $active_tab; ?>">
-                        <div class="one-step-title"><?php echo $item["milestone-name"]; ?></div>
-                        <!-- Timeline for desktop vesrion -->
-                        <div class="one-step-timeline">
-                            <p class="one-step-timeline-inner " style="width: <?php echo $progress_bar; ?>%"></p>
+        <?php if( isset($value) ) { ?>
+            <div class="proj-timeline-steps">
+                <?php foreach ($value as $item) {
+                    $i++;
+                    $progress_bar = '100';
+                    $inprogress = ( $total_collected  < (int) $item["milestone-amount"] ) ? 'in-progress' : '';
+                    $finished = ( $total_collected  >= (int) $item["milestone-amount"] ) ? 'finished' : '';
+                    $milestone_tasks_done = $item["milestone_tasks_done"];
+                    $milestone_tasks_undone = $item["milestone_tasks_undone"];
+                    if ( !empty($finished) ){
+                        $class = $finished;
+                    } else{
+                        $class = $inprogress;
+                    }
+                    if ( $item["milestone-name"] != $milestone_name_active && $class==$inprogress ){
+                        $class='';
+                    }
+                    if ( $item["milestone-name"] == $milestone_name_active){
+                        $active_tab = 'active';
+                        $progress_bar = (int) $total_collected * 100 / (int) $item["milestone-amount"];
+                    } else{
+                        $active_tab = '';
+                    }
+                    ?>
+                    <!-- ONE STEP -->
+                    <div class="proj-timeline-one-step <?php echo $class; ?> one-tab-link" data-id="<?php echo $i; ?>">
+                        <!-- Hidden  timeline for mob version-->
+                        <div class="one-step-timeline-mob">
+                            <p class="one-step-timeline-inner"></p>
                         </div>
-                        <div class="one-step-money">
-                            <?php if ( $class == 'in-progress' ) { ?>
-                                <span class="one-step-money-text"><?php pll_e( 'Залишилось');?></span>
-                                <span class="money-left-to-collect"> <?php echo $total_collected; ?></span>
-                                <span class="one-step-money-text"><?php pll_e( 'з');?></span>
-                            <?php } ?>
-                            <span class="project-total-cost"><?php echo $item["milestone-amount"]; ?></span>
-                            <span><?php echo $symbol; ?></span>
-                        </div><!-- end one-step-money -->
-                    </div><!-- end one-step-timeline-wrapper -->
-                </div><!-- end proj-timeline-one-step -->
-            <?php } ?>
-        </div><!-- end proj-timeline-steps -->
-        <div class="proj-milestone-desc-block">
+                        <div class="one-step-timeline-wrapper tabs_caption <?php echo $active_tab; ?>">
+                            <div class="one-step-title"><?php echo $item["milestone-name"]; ?></div>
+                            <!-- Timeline for desktop vesrion -->
+                            <div class="one-step-timeline">
+                                <p class="one-step-timeline-inner " style="width: <?php echo $progress_bar; ?>%"></p>
+                            </div>
+                            <div class="one-step-money">
+                                <?php if ( $class == 'in-progress' ) { ?>
+                                    <span class="one-step-money-text"><?php pll_e( 'Залишилось');?></span>
+                                    <span class="money-left-to-collect"> <?php echo $total_collected; ?></span>
+                                    <span class="one-step-money-text"><?php pll_e( 'з');?></span>
+                                <?php } ?>
+                                <span class="project-total-cost"><?php echo $item["milestone-amount"]; ?></span>
+                                <span><?php echo $symbol; ?></span>
+                            </div><!-- end one-step-money -->
+                        </div><!-- end one-step-timeline-wrapper -->
+                    </div><!-- end proj-timeline-one-step -->
+                <?php } ?>
+            </div><!-- end proj-timeline-steps -->
+            <div class="proj-milestone-desc-block">
             <?php $i = 0; ?>
             <?php foreach ($value as $item) {
                 $i++;
@@ -131,6 +131,7 @@ function shortcode_milestones(){
                 </div>
             <?php } ?>
         </div>
+        <?php } ?>
     </div>
     <?php
     $html = ob_get_clean();
@@ -151,7 +152,11 @@ function shortcode_project_banner(){
     <!-- ONE PROJECT BANNER -->
     <div class="one-project-banner">
         <div class="one-project-banner-image">
-            <img src="<?php echo $general_image; ?>">
+            <?php if(!empty($general_image)) { ?>
+                <img src="<?php echo $general_image; ?>">
+             <?php } else{ ?>
+                <div class="project-banner-without-image"></div>
+            <?php } ?>
         </div>
         <div class="container_24 container_24-project-page" id="content-container">
             <div class="one-project-banner-inner">
@@ -166,18 +171,24 @@ function shortcode_project_banner(){
                 </div>
                 <div class="one-project-progress">
                     <div class="one-project-progress-top">
-                        <p class="project-money">
-                            <span class="project-money-quantity"><span class="project-money-quantity-inner"><?php echo $total_collected; ?></span><span> <?php echo $symbol; ?></span></span>
-                            <span class="project-money-involved"><?php pll_e( 'залучено');?></span>
-                        </p>
-                        <p class="project-money-collected"><span class="project-money-collected-inner"><?php echo $total_amount; ?></span><span> <?php echo $symbol; ?></span></p>
+                        <?php if ($total_collected != 0) { ?>
+                            <p class="project-money">
+                                <span class="project-money-quantity"><span class="project-money-quantity-inner"><?php echo $total_collected; ?></span><span> <?php echo $symbol; ?></span></span>
+                                <span class="project-money-involved"><?php pll_e( 'залучено');?></span>
+                            </p>
+                        <?php } ?>
+                        <?php if ($total_amount  != 0) { ?>
+                            <p class="project-money-collected"><span class="project-money-collected-inner"><?php echo $total_amount; ?></span><span> <?php echo $symbol; ?></span></p>
+                        <?php } ?>
                     </div>
-                    <div class="one-project-progress-bottom">
-                        <div class="progress-bar">
-                            <span class="progress-done" style="width: <?php echo $progress_bar; ?>%;"></span>
-                            <span class="progress-dot"></span>
+                    <?php if ($total_amount  != 0) { ?>
+                        <div class="one-project-progress-bottom">
+                            <div class="progress-bar">
+                                <span class="progress-done" style="width: <?php echo $progress_bar; ?>%;"></span>
+                                <span class="progress-dot"></span>
+                            </div>
                         </div>
-                    </div>
+                    <?php } ?>
                 </div>
                 <div class="help-and-share">
                     <p class="help-link">
@@ -329,7 +340,7 @@ function zaporuka_photo_video_doc(){
     $project_photos = get_field( "project-photos", $post_id );
     $project_videos = get_field( "project-videos", $post_id );
     $project_docs = get_field( "project-documents", $post_id );
-
+    $active_tab = '';
     ob_start();
     ?>
     <!----------------------------------
@@ -339,15 +350,21 @@ function zaporuka_photo_video_doc(){
 
     <div class="sliders-tabs">
         <div class="sliders-tabs-wrapper">
-            <div class="one-tab-link tab-active" data-id="1">
-                <?php pll_e( 'Фотографiї');?>
-            </div>
-            <div class="one-tab-link" data-id="2">
-                <?php pll_e( 'Вiдео');?>
-            </div>
-            <div class="one-tab-link" data-id="3">
-                <?php pll_e( 'Супутнi документи');?>
-            </div>
+            <?php if(isset($project_photos)) { ?>
+                <div class="one-tab-link tab-active" data-id="1">
+                    <?php pll_e( 'Фотографiї');?>
+                </div>
+            <?php } ?>
+            <?php if(isset($project_videos)) { ?>
+                <div class="one-tab-link <?php (!isset($project_photos)) ? 'tab-active' : ''?>" data-id="2">
+                    <?php pll_e( 'Вiдео');?>
+                </div>
+            <?php } ?>
+            <?php if(isset($project_docs)) { ?>
+                <div class="one-tab-link <?php (!isset($project_photos) && !isset($project_videos)) ? 'tab-active' : ''?>" data-id="3">
+                    <?php pll_e( 'Супутнi документи');?>
+                </div>
+            <?php } ?>
         </div>
         <div class="proj-milestone-desc-block">
             <div class="slider_tabs_content photo_tab_content active" data-id="1">
