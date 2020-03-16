@@ -44,7 +44,7 @@ function shortcode_milestones(){
                 </div><!-- end proj-timeline-info-right -->
             </div><!-- end proj-timeline-info -->
         </div><!-- end proj-timeline-top -->
-        <?php if( isset($value) ) { ?>
+        <?php if( !empty($value) ) { ?>
             <div class="proj-timeline-steps">
                 <?php foreach ($value as $item) {
                     $i++;
@@ -374,18 +374,18 @@ function zaporuka_photo_video_doc(){
 
     <div class="sliders-tabs">
         <div class="sliders-tabs-wrapper">
-            <?php if(isset($project_photos)) { ?>
+            <?php if(!empty($project_photos)) { ?>
                 <div class="one-tab-link tab-active" data-id="1">
                     <?php pll_e( 'Фотографiї');?>
                 </div>
             <?php } ?>
-            <?php if(isset($project_videos)) { ?>
-                <div class="one-tab-link <?php (!isset($project_photos)) ? 'tab-active' : ''?>" data-id="2">
+            <?php if(!empty($project_videos)) { ?>
+                <div class="one-tab-link <?php (empty($project_photos)) ? 'tab-active' : ''?>" data-id="2">
                     <?php pll_e( 'Вiдео');?>
                 </div>
             <?php } ?>
-            <?php if(isset($project_docs)) { ?>
-                <div class="one-tab-link <?php (!isset($project_photos) && !isset($project_videos)) ? 'tab-active' : ''?>" data-id="3">
+            <?php if(!empty($project_docs)) { ?>
+                <div class="one-tab-link <?php (empty($project_photos) && empty($project_videos)) ? 'tab-active' : ''?>" data-id="3">
                     <?php pll_e( 'Супутнi документи');?>
                 </div>
             <?php } ?>
