@@ -15,12 +15,12 @@ jQuery(document).ready(function($) {
     });
   });
 
-  // $(".carousel-news-posts .vc_pageable-slide-wrapper").slick({
-  //   dots: true,
-  //   arrows: false,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 3
-  // });
+  $(".carousel-news-posts .vc_pageable-slide-wrapper").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
   $(".project-partners-carousel .vc_pageable-slide-wrapper").slick({
     dots: true,
     arrows: false,
