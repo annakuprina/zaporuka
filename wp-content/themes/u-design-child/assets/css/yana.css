@@ -1085,8 +1085,11 @@ li.one-tab-link:hover {
 .home-first-thanks-block{
   background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
   color: #fff;
-  width: 90%;
+  width: 100%;
+  min-width: 503px;
+  max-width: 503px;
   padding: 45px 80px;
+  float: right;
 }
 .thanks-text-wrapper .h2-header-without-line-white{
   color: #ffffff;
