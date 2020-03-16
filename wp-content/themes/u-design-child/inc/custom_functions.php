@@ -835,21 +835,24 @@ function shortcode_thanks_block(){
        
         
         ?>
-        <div class="thanks-text-wrapper">
-            <div>
-                <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Дякуємо за підтримку!');?></h2></div>
-                <div class="thanks-text-block">
-                    <?php echo $thanks_text; ?>
-                </div>
-                <div class="thanks-share-link">
-                    <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
+        <div class="home-first-thanks-block">
+            <div class="thanks-text-wrapper">
+                <div>
+                    <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Дякуємо за підтримку!');?></h2></div>
+                    <div class="thanks-text-block">
+                        <?php echo $thanks_text; ?>
+                    </div>
+                    <div class="thanks-share-link">
+                        <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
                         <span class="one-project-socials"><?php pll_e( 'Подiлитися');?>
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </span>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+
         <?php
     }
     else{
