@@ -211,6 +211,30 @@ function shortcode_project_banner(){
     return $html;
 }
 
+add_shortcode('project_partners_mob', 'shortcode_project_partners_mob');
+function shortcode_project_partners_mob(){
+    $partners_array = get_posts( array(
+        'numberposts' => -1,
+        'post_type'   => 'partners'
+    ));
+    $partners_array_by_2 = array_chunk($partners_array, 3, true);
+    ob_start(); ?>
+    <!-- One Project page. Partners slider. Mobile  -->
+    <div class="project-partners-slick-mob">
+    <?php foreach( $partners_array_by_2 as $post_wrapper ){ ?>
+        <!-- One slide -->
+        <div class="project-partners-slide">
+            <?php foreach( $post_wrapper as $post ){ ?>
+                <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="">
+            <?php } ?>
+        </div><!--end project-partners-slide -->
+    <?php } ?>
+    </div><!--end project-partners-slick-mob -->
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
+
 add_shortcode('zaporuka_help_form', 'shortcode_orange_help_form');
 function shortcode_orange_help_form(){
     $options = get_option('ThemeOptions');
