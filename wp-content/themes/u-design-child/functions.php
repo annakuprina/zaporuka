@@ -366,7 +366,7 @@ function check_currency(){
 
 if (false !== strpos($_SERVER['REQUEST_URI'], '/storinka-podyaky/new-order' )) {
     $answer_order_id = $_GET['answer_order_id'];
-    wp_safe_redirect(home_url() . '/storinka-podyaky/?answer_order_id='. $answer_order_id );
+    wp_safe_redirect(home_url() . '/?answer_order_id='. $answer_order_id );
     exit;
 }
 

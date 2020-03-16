@@ -917,3 +917,12 @@ function history_meta_box_callback( $post, $meta ){
     echo $html;
 
 }
+
+add_shortcode( 'shortcode_banner_help_form_home', 'banner_help_form_home' );
+function banner_help_form_home() {
+    if( isset($_GET) ){
+        echo do_shortcode('[shortcode_help_form]');
+    } else{
+        echo do_shortcode('[shortcode_thanks_block_pro]');
+    }
+}
