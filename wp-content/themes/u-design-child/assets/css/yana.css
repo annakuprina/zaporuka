@@ -362,6 +362,12 @@ h6,
 }
 
 /*********************** Single project page ***************************/
+.project-banner-without-image{
+  background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .proj-milestone-desc-block {
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
@@ -1085,8 +1091,11 @@ li.one-tab-link:hover {
 .home-first-thanks-block{
   background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
   color: #fff;
-  width: 90%;
+  width: 100%;
+  min-width: 503px;
+  max-width: 503px;
   padding: 45px 80px;
+  float: right;
 }
 .thanks-text-wrapper .h2-header-without-line-white{
   color: #ffffff;
@@ -1108,4 +1117,7 @@ li.one-tab-link:hover {
   font-size: 14px;
   font-family: Raleway-Bold;
   padding-top: 25px;
+}
+.thanks-text-wrapper a{
+  color: #fff;
 }

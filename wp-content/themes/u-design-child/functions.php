@@ -18,10 +18,10 @@ define("THEME_INCLUDES", THEME_DIR . "/inc");
  * 
  */
 function udesign_child_theme_styles() {
-	// Load the rtl.css stylesheet.
-	if ( is_rtl() ) {
-		wp_enqueue_style( 'u-design-rtl', trailingslashit( get_template_directory_uri() ) . 'rtl.css' );
-	}    
+    // Load the rtl.css stylesheet.
+    if ( is_rtl() ) {
+        wp_enqueue_style( 'u-design-rtl', trailingslashit( get_template_directory_uri() ) . 'rtl.css' );
+    }    
     wp_enqueue_style( 'slick', CHILD_DIR . '/assets/slick/slick.css' );
     wp_enqueue_style( 'slick-lightbox-css', CHILD_DIR . '/assets/slick/slick-lightbox.css' );
     wp_enqueue_style( 'slick-theme', CHILD_DIR . '/assets/slick/slick-theme.css' );
@@ -143,6 +143,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Друзi');
   pll_register_string('u-design-child', 'Волонтери');
   pll_register_string('u-design-child', 'Дякуємо за підтримку!');
+  pll_register_string('u-design-child', 'Ви скасували оплату!');
 });
 
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
@@ -357,13 +358,24 @@ function check_currency(){
         $symbol =  'грн.';
     }
     elseif(ICL_LANGUAGE_CODE=='en'){
-        $symbol =  'UAN';
+        $symbol =  '₴';
     }
     return $symbol;
 }
 
-if ( $_SERVER ["REQUEST_URI"] == '/storinka-podyaky/new-order' ){
-    wp_safe_redirect(home_url() . '/storinka-podyaky/');
+
+if (false !== strpos($_SERVER['REQUEST_URI'], '/new-order' )) {
+    if(ICL_LANGUAGE_CODE=='uk'){
+        $home_url =  '';
+    }
+    elseif(ICL_LANGUAGE_CODE=='ru'){
+        $home_url =  '/ru';
+    }
+    elseif(ICL_LANGUAGE_CODE=='en'){
+        $home_url =  '/en';
+    }
+    $answer_order_id = $_GET['answer_order_id'];
+    wp_safe_redirect($home_url . '/?answer_order_id='. $answer_order_id );
     exit;
 }
 

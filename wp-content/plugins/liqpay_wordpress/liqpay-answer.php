@@ -52,6 +52,8 @@ function insert_history($project_id2, $transaction_id2, $date2, $users_name2, $u
 
 }
 
+
+update_option('payment_answer_from_liqpay', $_POST['data']);
 if (isset($_POST['data'])) {
     $json = base64_decode($_POST['data']);
     $obj = json_decode($json);
@@ -72,6 +74,10 @@ if (isset($_POST['data'])) {
     $ip_adress = $obj->{'ip'};
     $xdate = date("Y.m.d H:i:s");
     $sender_first_name = $obj->{'sender_first_name'};
+
+    update_option($order_id.'-liqpay_answer_status',$status);
+    update_option($order_id.'-liqpay_answer_transaction_id',$transaction_id);
+    update_option($order_id.'-liqpay_answer_summa',$summa);
 
     global $wpdb, $table_prefix;
 
