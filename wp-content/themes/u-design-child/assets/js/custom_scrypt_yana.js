@@ -70,7 +70,7 @@ jQuery(document).ready(function($) {
     });
   };
   countProgress();
-  setTimeout(countProgress, 3000);
+  // setTimeout(countProgress, 3000);
   $(".other-projects-single-project .vc_pageable-slide-wrapper").slick({
     dots: true,
     arrows: false,
@@ -125,5 +125,19 @@ jQuery(document).ready(function($) {
     slidesToShow: 1,
     slidesToScroll: 1
   });
-
+  $(window).bind( 'grid:items:added', function(){
+    $(".other-projects-row .vc_grid-item").each(function() {
+      var moneyTotalAmount = $(this)
+          .find(".project-money-collected-inner")
+          .text();
+      var moneyCurrentCollected = $(this)
+          .find(".project-money-quantity-inner")
+          .text();
+      var progressBarTimeline =
+          (moneyCurrentCollected * 100) / moneyTotalAmount;
+      $(this)
+          .find(".progress-done")
+          .width(progressBarTimeline + "%");
+    });
+  });
 });
