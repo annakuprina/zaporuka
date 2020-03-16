@@ -14,7 +14,15 @@ $agree_link_label = !empty($options['agree_link_text_block_' . ICL_LANGUAGE_CODE
 $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $options['agree_link_block_' . ICL_LANGUAGE_CODE] : '#';
 $cancel_subscription_text_block = !empty($options['cancel_subscription_text_block_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_text_block_' . ICL_LANGUAGE_CODE] : 'Відмінити регулярний платіж';
 $cancel_subscription_link_block = !empty($options['cancel_subscription_link_block_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_link_block_' . ICL_LANGUAGE_CODE] : '#';
-
+    if(ICL_LANGUAGE_CODE=='uk'){
+        $home_url =  '/new-order';
+    }
+    elseif(ICL_LANGUAGE_CODE=='ru'){
+        $home_url =  '/ru/new-order';
+    }
+    elseif(ICL_LANGUAGE_CODE=='en'){
+        $home_url =  '/en/new-order';
+    }
 	ob_start();
 	?>
     <div class="home-first-post-form-help">
@@ -25,9 +33,8 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
                 </div>
                 <form action="/wp-content/plugins/liqpay_wordpress/liqpay-form.php" method="POST" class="help_form">
                     <input type="hidden" name="date" value="'.date('d.m.Y H:i:s' ).'" required/><input type="hidden" name="liqpay_product_id"  value=""/>
-                    <input type="hidden" name="hidden_content"  value="<?php echo site_url('/new-order');?>"/>
-                    <input type="hidden" name="url_page"  value="<?php echo site_url('/new-order');?>"/>
-                    <input type="hidden" name="result_url"  value="<?php echo site_url();?>"/>
+                    <input type="hidden" name="hidden_content"  value="<?php echo site_url($home_url);?>"/>
+                    <input type="hidden" name="url_page"  value="<?php echo site_url($home_url);?>"/>
                     <input type="hidden" name="ip"  value=[ip]/>
                     <input type="hidden" name="pay_type"  value="pay"/>
                     <input type="hidden" name="subscribe_type"  value="month"/>

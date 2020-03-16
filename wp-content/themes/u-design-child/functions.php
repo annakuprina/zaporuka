@@ -365,8 +365,17 @@ function check_currency(){
 
 
 if (false !== strpos($_SERVER['REQUEST_URI'], '/new-order' )) {
+    if(ICL_LANGUAGE_CODE=='uk'){
+        $home_url =  '';
+    }
+    elseif(ICL_LANGUAGE_CODE=='ru'){
+        $home_url =  '/ru';
+    }
+    elseif(ICL_LANGUAGE_CODE=='en'){
+        $home_url =  '/en';
+    }
     $answer_order_id = $_GET['answer_order_id'];
-    wp_safe_redirect(home_url() . '/?answer_order_id='. $answer_order_id );
+    wp_safe_redirect($home_url . '/?answer_order_id='. $answer_order_id );
     exit;
 }
 
