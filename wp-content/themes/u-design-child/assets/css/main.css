@@ -629,6 +629,34 @@ h3 {
 }
 
 /* ONE PROJECT */
+.project-partners-carousel-wrapper .vc_column_container > .vc_column-inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.block-project-partners .slick-dots {
+  bottom: -21px;
+}
+
+.project-partners-carousel-wrapper .help_button_single_block {
+  text-align: left;
+}
+
+.block-project-partners .h2-header-line {
+  margin-bottom: 54px;
+}
+.project-partners-carousel-wrapper
+  .help_button_single_block
+  .vc_btn3.vc_btn3-size-md {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
+}
+
+.project-partners-carousel .vc_column_container > .vc_column-inner {
+  padding-left: 0;
+}
+
 .one-project-title {
   color: #a5a5a5ab;
   font-size: 12px;
@@ -771,6 +799,7 @@ h3 {
   color: #333333;
   max-width: 435px;
 }
+
 /* Media for one Project block(home page) */
 @media screen and (max-width: 1200px) {
   .one-project-right {
@@ -784,6 +813,29 @@ h3 {
 
   .one-project-progress {
     margin-bottom: 20px;
+  }
+
+  .single-projects .milestone-desc-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .single-projects .milestone-desc-wrapper .left_columns_description,
+  .single-projects .milestone-desc-wrapper .right_columns_description {
+    width: 100%;
+    padding: 0;
+  }
+
+  .single-projects .milestone-desc-wrapper .left_columns_description {
+    margin-bottom: 30px;
+  }
+
+  .milestone-desc-wrapper .milestone_task_list ul:first-child {
+    padding-right: 20px;
+  }
+
+  .milestone-desc-wrapper .milestone_task_list li {
+    line-height: 22px;
+    margin-bottom: 15px;
   }
 }
 
@@ -804,6 +856,44 @@ h3 {
   .one-project-left {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .single-projects .vc_custom_1580999967196 {
+    padding-left: 15px !important;
+  }
+
+  .single-proj-help-partners-section .help-partners-block .wpb_column {
+    width: 50%;
+  }
+
+  .single-proj-help-partners-section .help-partners-block .wpb_single_image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .single-proj-help-partners-section
+    .help-partners-block
+    .help-partner-patronat {
+    padding-left: 0;
+  }
+
+  .about-project-2 .block_excerpt_container {
+    padding: 0px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .single-projects .milestone-desc-wrapper .milestone_task_list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .single-projects .milestone-desc-wrapper .milestone_task_list ul {
+    padding-top: 0;
+    margin-bottom: 0;
+    width: 100%;
   }
 }
 
@@ -897,6 +987,17 @@ h3 {
 
   .project-money-collected {
     position: static;
+  }
+
+  .single-projects .milestone-desc-wrapper .help-partners-block {
+    flex-direction: column;
+  }
+
+  .single-projects
+    .single-proj-help-partners-section
+    .help-partners-block
+    .wpb_column {
+    width: 100%;
   }
 }
 
@@ -1777,10 +1878,11 @@ h3 {
     align-items: flex-start;
   }
 
-  .proj-timeline-info {
+  .proj-timeline-top .proj-timeline-info {
     width: initial;
     height: initial;
-    width: 290px;
+    max-width: 600px;
+    width: 100%;
     flex-direction: column;
     margin: auto;
     min-width: initial;
@@ -3540,6 +3642,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   padding: 65px 20px;
 }
 
+.wpb-js-composer #main-content .section-projects li.vc_tta-tab.vc_active span {
+  border-bottom: 2px solid #e78b48 !important;
+}
+
 .wpb-js-composer #main-content .section-projects .vc_tta-tab {
   margin-right: 97px;
 }
@@ -3936,13 +4042,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     width: 100%;
   }
 } */
-
-/*------------------
-  ONE PRODUCT PAGE
-------------------*/
-.jssort03 div {
-  margin-right: 20px;
-}
 
 /*---------------------------
   ONE PROJECT PAGE. SLIDERS
@@ -4434,9 +4533,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     padding: 30px 20px !important;
   }
 }
-/*-------
-  NEWS
--------*/
+/*-----------
+  NEWS PAGE
+-----------*/
 #main-content .section-news.tab-wrapper {
   padding-top: 121px;
   margin-bottom: 43px;
@@ -4446,18 +4545,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   padding-bottom: 40px !important;
   display: flex !important;
 }
-
-/* #main-content .section-news.tab-wrapper li.vc_grid-filter-item:nth-child(1) {
-  order: 1;
-}
-
-#main-content .section-news.tab-wrapper li.vc_grid-filter-item:nth-child(2) {
-  order: 3;
-}
-
-#main-content .section-news.tab-wrapper li.vc_grid-filter-item:nth-child(3) {
-  order: 2;
-} */
 
 #main-content
   .section-news.tab-wrapper
@@ -4590,7 +4677,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 #main-content
-  .section-news
+  .section-news--news-page
   .vc_grid.vc_row.vc_grid-gutter-35px
   .vc_pageable-slide-wrapper {
   display: flex;
@@ -6151,6 +6238,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*---------------------
   SINGLE PRODUCT PAGE
 ----------------------*/
+.jssort03 div {
+  margin-right: 20px;
+}
+
 .single-product #wrapper-1 .single-product-cart-link {
   text-align: right;
   padding-top: 48px;
@@ -6250,6 +6341,7 @@ div.product form.cart {
   top: 7px;
   left: 2px;
 }
+
 @media screen and (max-width: 1200px) {
   .woocommerce.single-product #wrapper-1 div.product div.summary {
     max-width: 471px;

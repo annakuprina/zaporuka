@@ -25,7 +25,27 @@ jQuery(document).ready(function($) {
     dots: true,
     arrows: false,
     slidesToShow: 4,
-    slidesToScroll: 4
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
   });
   $(".write_about_us_carousel .vc_pageable-slide-wrapper").slick({
     dots: true,
