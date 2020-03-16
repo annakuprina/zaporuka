@@ -93,26 +93,6 @@ jQuery(document).ready(function($) {
     change_payment_description($(this).attr("paytype"));
   });
 
-  //news orange gradient for items without photo
-  setTimeout(function() {
-    $(".section-news-hover-wrapper").each(function(index) {
-      if (
-        $(this)
-          .find(".vc_gitem-zone-img")
-          .attr("src")
-          .indexOf("vc_gitem_image.png") >= 0
-      ) {
-        $(this).addClass("no-background-image");
-        $(this).attr(
-          "style",
-          "background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%)!important"
-        );
-      } else {
-        $(this).addClass("is-background-image");
-      }
-    });
-  }, 2500);
-
   //active tab for shop filter
   var path = window.location.pathname;
   $(
