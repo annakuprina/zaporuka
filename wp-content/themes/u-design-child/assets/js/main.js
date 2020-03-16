@@ -263,7 +263,7 @@ jQuery(document).ready(function($) {
   //   "<li class='category-mob-select'>Всi новини111</li>"
   // );
 
-  /*Янин скрипт для ширины прогрессбара , но с setIntervalом. Если сработает, то удалить из Яниного файла вариант с settimeout*/
+  /*Count progressbar width*/
   var countProgress = function() {
     jQuery(".other-projects-row .vc_grid-item").each(function() {
       var moneyTotalAmount = jQuery(this)
@@ -278,12 +278,11 @@ jQuery(document).ready(function($) {
         .find(".progress-done")
         .width(progressBarTimeline + "%");
     });
-    console.log("width is counting");
   };
   countProgress();
   setInterval(countProgress, 1000);
 
-  /*Анин скрипт для оранж фона , но с setIntervalом. Если сработает, то удалить из Аниного файла вариант с settimeout*/
+  /*Set orange background for news without pictures*/
   setInterval(function() {
     $(".section-news-hover-wrapper").each(function(index) {
       if (
@@ -301,6 +300,5 @@ jQuery(document).ready(function($) {
         $(this).addClass("is-background-image");
       }
     });
-    console.log("orange bg is making");
   }, 1000);
 });

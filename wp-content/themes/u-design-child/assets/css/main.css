@@ -710,6 +710,7 @@ h3 {
   background-color: #e78b48;
   bottom: -1px;
   left: 0;
+  max-width: 100%;
 }
 
 .progress-dot {
@@ -815,7 +816,7 @@ h3 {
   .one-project-progress {
     top: 63px;
     position: absolute;
-    width: calc(100% - 40px);
+    /* width: calc(100% - 40px); */
   }
 
   .project-money {
@@ -831,6 +832,7 @@ h3 {
   .one-project-left {
     position: relative;
     max-height: 168px;
+    overflow: hidden;
   }
 
   .one-project-left:before {
@@ -2584,6 +2586,31 @@ footer .footer-mob a.designer-link {
   margin-right: 122px;
 }
 
+html[lang="ru-RU"] .bottom-content-wrapper .one_fifth:nth-child(4) {
+  margin-right: 97px;
+}
+
+html[lang="en-US"] .bottom-content-wrapper .one_fifth:nth-child(4) {
+  margin-right: 97px;
+}
+
+html[lang="en-US"] #footer_bottom .one_fifth:nth-child(1) {
+  margin-right: 148px;
+}
+
+html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
+  margin-right: 130px;
+}
+
+html[lang="en-US"] #footer_bottom .one_fifth:nth-child(3) {
+  margin-right: 163px;
+}
+
+html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
+  position: relative;
+  left: 79px;
+}
+
 #bottom .bottom-content-wrapper .footer-tel .fa {
   font-size: 12px;
   position: relative;
@@ -2634,7 +2661,7 @@ footer .footer-mob a.designer-link {
 
   #bottom-bg #bottom .footer-social-link .fa,
   #bottom-bg #bottom .footer-email-tel .fa {
-    min-width: 16px;
+    min-width: 20px;
   }
 
   .one_fifth {
@@ -2643,7 +2670,7 @@ footer .footer-mob a.designer-link {
 
   .bottom-content-wrapper .one_fifth {
     width: 18%;
-    margin-right: 10px !important;
+    margin-right: 6px !important;
   }
 
   .bottom-content-wrapper {
@@ -2665,7 +2692,8 @@ footer .footer-mob a.designer-link {
     margin-right: 10px !important;
   }
 
-  #footer_bottom .one_fifth:nth-child(5) {
+  #footer_bottom .one_fifth:nth-child(5),
+  html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     position: static;
   }
 
@@ -2683,6 +2711,11 @@ footer .footer-mob a.designer-link {
   }
   .one_fifth:nth-child(5) {
     width: 25%;
+  }
+  #wrapper-1 #bottom .widget_nav_menu li a,
+  #wrapper-1 #bottom .footer-adress,
+  #wrapper-1 #bottom .footer-email-tel a {
+    font-size: 15px;
   }
 }
 
@@ -3466,6 +3499,7 @@ footer .footer-mob a.designer-link {
   }
   .home-page-section6 .vc_gitem_row .vc_gitem-col {
     padding: 10px 20px;
+    width: 100%;
   }
   .home-page-section6 .other-projects-row .singl-project-bottom-part {
     padding: 20px;
@@ -3507,7 +3541,7 @@ footer .footer-mob a.designer-link {
 }
 
 .wpb-js-composer #main-content .section-projects .vc_tta-tab {
-  margin-right: 96px;
+  margin-right: 97px;
 }
 
 .project_banner_section1 .custom-container .left_margin_column {
@@ -3639,6 +3673,7 @@ footer .footer-mob a.designer-link {
 
 #main-content .projects-section .singl-project-timeline-custom {
   padding: 0;
+  width: 100%;
 }
 
 #main-content
@@ -3649,18 +3684,36 @@ footer .footer-mob a.designer-link {
   margin-bottom: 31px;
 }
 
-#main-content .projects-section .project-money-involved {
+#main-content .projects-section .vc_grid-item .project-money-involved {
   position: relative;
   top: 5px;
 }
 
 .projects-section .other-projects-row .singl-project-bottom-part {
-  padding: 11px 31px 0 31px;
+  padding: 11px 28px 0 28px;
   min-height: 324px;
+  height: calc(100% - 256px);
+}
+
+.projects-section
+  .other-projects-row
+  .singl-project-bottom-part
+  .vc_gitem-zone-mini {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-section
+  .other-projects-row
+  .singl-project-bottom-part
+  .vc_gitem-row-position-top:last-child {
+  margin-top: auto;
 }
 
 .projects-section .vc_custom_1580906592602 {
   padding-top: 19px;
+  padding-bottom: 40px;
 }
 
 .projects-section .vc_grid-item .vc_gitem-post-data {
@@ -3674,10 +3727,46 @@ footer .footer-mob a.designer-link {
 .projects-section .other-projects-row .singl-project-link-wrapper {
   padding: 0px 0px 10px 2px;
   bottom: 24px;
+  left: 38px;
 }
 
-.wpb-js-composer .projects-section .vc_tta.vc_general .vc_tta-panel {
+.projects-section .vc_tta-panel .vc_tta-panel-heading {
   display: none;
+}
+
+.projects-section .section-tabs .vc_tta-tabs-list li.vc_tta-tab::after {
+  display: none;
+}
+
+.projects-section .section-tabs .vc_tta-tabs-list li.vc_tta-tab:hover::after {
+  display: none;
+}
+
+.wpb-js-composer
+  #main-content
+  .vc_tta-color-grey.vc_tta-style-classic
+  .vc_tta-panel
+  .vc_tta-panel-body {
+  padding-top: 0;
+}
+
+.vc_pageable-slide-wrapper .vc_grid-item .one-project-progress {
+  position: static;
+}
+
+.singl-project-excerpt p {
+  padding-bottom: 30px;
+}
+
+.projects-section
+  .vc_grid.vc_row.vc_grid-gutter-30px
+  .vc_pageable-slide-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects-section .other-projects-row .vc_grid-item-mini {
+  height: 100%;
 }
 
 @media screen and (max-width: 1400px) {
@@ -3693,6 +3782,36 @@ footer .footer-mob a.designer-link {
     display: flex;
     justify-content: center;
   }
+
+  .section-projects .vc_tta-panel-body .wpb_content_element {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .projects-section
+    .vc_grid.vc_row.vc_grid-gutter-30px
+    .vc_pageable-slide-wrapper {
+    margin-right: 0;
+  }
+
+  #main-content .projects-section .vc_grid-item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 0;
+  }
+
+  .projects-section .vc_pageable-slide-wrapper.vc_clearfix:before,
+  .projects-section .vc_pageable-slide-wrapper.vc_clearfix:after {
+    display: none;
+  }
+
+  .projects-section .other-projects-row .vc_grid-item-mini {
+    height: 100%;
+  }
+
+  .projects-section .section-tabs {
+    padding-top: 0;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -3707,6 +3826,7 @@ footer .footer-mob a.designer-link {
   .project_banner_section1_left h2 {
     text-align: center;
     margin-left: 0;
+    line-height: 45px;
   }
 
   .project_banner_section1_left .wpb_wrapper {
@@ -3718,9 +3838,71 @@ footer .footer-mob a.designer-link {
     margin: auto;
     width: 500px;
   }
+
+  #main-content
+    .projects-section
+    .other-projects-row
+    .one-project-progress-wrapper {
+    padding: 0px 15px;
+  }
+
+  .projects-section .other-projects-row .singl-project-bottom-part {
+    padding: 0px 15px;
+  }
+
+  .projects-section .vc_gitem_row .vc_gitem-col {
+    padding: 15px 0 10px 0;
+  }
+
+  .projects-section .other-projects-row .singl-project-link-wrapper {
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .projects-section .other-projects-row .singl-project-bottom-part {
+    min-height: unset;
+  }
+
+  .projects-section .one-project {
+    max-height: unset;
+  }
+
+  .projects-section .other-projects-row .singl-project-link-wrapper {
+    bottom: 4px;
+  }
+
+  #main-content .projects-section .vc_grid-item {
+    width: calc((100% - 30px) / 2);
+  }
+
+  .wpb-js-composer
+    #main-content
+    .projects-section
+    .vc_tta-tabs.vc_tta-tabs-position-top
+    .vc_tta-tabs-list {
+    flex-direction: column;
+  }
+
+  #main-content
+    .projects-section
+    .section-projects
+    .vc_tta.vc_general
+    .vc_tta-tab
+    > a {
+    padding: 5px 0;
+  }
 }
 
 @media screen and (max-width: 550px) {
+  #main-content .projects-section .vc_grid-item {
+    width: 100%;
+  }
+
+  #main-content .singl-project-timeline-custom {
+    width: 100%;
+  }
+
   .project_banner_section1_right {
     margin: auto;
     width: 100%;
@@ -3747,14 +3929,13 @@ footer .footer-mob a.designer-link {
     > .vc_column_container.project_banner_section1_right {
     padding: 0;
   }
-
-  .wpb-js-composer
-    #main-content
-    .vc_tta-tabs.vc_tta-tabs-position-top
-    .vc_tta-tabs-list {
-    flex-direction: column;
-  }
 }
+/* 
+@media screen and (max-width: 500px) {
+  .one-project-progress {
+    width: 100%;
+  }
+} */
 
 /*------------------
   ONE PRODUCT PAGE
@@ -5445,8 +5626,16 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .vc_tta-tabs.vc_tta-tabs-position-top
   .vc_tta-tabs-list {
   display: flex;
+  margin-bottom: 59px !important;
 }
 
+.wpb-js-composer
+  #main-content
+  .vc_tta-color-grey.vc_tta-style-classic.bank-details-block
+  .vc_tta-panel
+  .vc_tta-panel-body {
+  padding-top: 45px;
+}
 @media screen and (max-width: 1400px) {
   .contact-second-text-block .h2-title-without-line :last-child h2 {
     font-size: 42px;
@@ -5554,10 +5743,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .wpb-js-composer
     #main-content
-    .vc_tta-color-grey.vc_tta-style-classic
-    .vc_tta-panel
+    .vc_tta.vc_general.bank-details-block
     .vc_tta-panel-body {
-    background-color: #fff;
+    background: #fff;
   }
 
   #main-content .contact_help_form {
@@ -5590,10 +5778,310 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*-------------
   ABOUT PAGE
 --------------*/
+/*УДАЛИТЬ!*/
+#main-content .aboutus_section1 {
+  background: #ddd;
+}
+/*********************/
+/*УДАЛИТЬ!*/
+#wrapper-1 .vc_gitem-animate-none .vc_gitem-zone-b {
+  opacity: 1 !important;
+}
+
 #main-content .aboutus_section1 {
   padding: 131px 130px;
 }
 
+#main-content .aboutus_section1 .video_button a:before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  padding-right: 10px;
+  background: url(../../img/play_video_big.svg);
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+}
+
+#main-content .our_team_section .vc_grid-item {
+  width: 353px;
+  padding-right: 0;
+  margin-right: 40px;
+}
+
+.our-team-front-wrapper .team-member-title {
+  padding-left: 29px;
+}
+
+#main-content .our_team_section .vc_grid-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.vc_gitem-row-position-bottom {
+  font-family: "Raleway-Regular";
+  /* font-size: 14px; */
+}
+
+#our_team .team-member-info-hover .field_5e1d98b8bab85_labeled {
+  font-family: "Proxima-Nova-Light";
+}
+
+#our_team .team-member-info-hover .field_5e1d98f72a0e1_labeled {
+  font-family: "Raleway-Light";
+}
+
+#wrapper-1 .our-team-middle-block {
+  opacity: 0.8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  line-height: 23px;
+  font-family: "Raleway-Light";
+}
+
+.team-member-excerpt-hover {
+  margin-bottom: 30px;
+}
+
+#wrapper-1 .vc_gitem-row-position-bottom .vc_custom_1581522444930 {
+  border-top-width: 0 !important;
+}
+
+.our_team_section .our-team-hover-wrapper {
+  padding: 42px 31px;
+}
+
+.our_team_section
+  .our-team-hover-wrapper.vc_gitem-zone-b
+  .vc_gitem-row-position-middle {
+  top: 45%;
+}
+
+.our_team_section
+  .our-team-hover-wrapper.vc_gitem-zone-b
+  .vc_gitem-row-position-bottom {
+  bottom: -13px;
+}
+
+#our_team .team-member-info-hover .vc_gitem-acf-label {
+  font-family: "Raleway-Regular";
+}
+
+.aboutus_section3
+  .vc_grid.vc_row.vc_grid-gutter-30px
+  .vc_pageable-slide-wrapper {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  #main-content .our_team_section .vc_grid-item {
+    width: 291px;
+    margin-right: 20px;
+  }
+
+  #main-content .our_team_section .vc_grid-item:nth-child(3n) {
+    margin-right: 20px;
+  }
+
+  .aboutus_section3
+    .vc_grid.vc_row.vc_grid-gutter-30px
+    .vc_pageable-slide-wrapper {
+    margin-right: -20px;
+  }
+
+  .our_team_section .our-team-hover-wrapper {
+    padding: 19px 11px 42px 11px;
+  }
+
+  /*top part*/
+  .our_team_section .team-member-title-hover {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  /*middle part*/
+  #wrapper-1 .our-team-middle-block {
+    font-size: 14px;
+  }
+
+  .our_team_section
+    .our-team-hover-wrapper.vc_gitem-zone-b
+    .vc_gitem-row-position-middle {
+    top: 47%;
+  }
+
+  /*bottom part*/
+  .our_team_section .our-team-hover-wrapper .team-member-info-hover {
+    padding-top: 37px;
+    font-size: 14px;
+  }
+  /*---*/
+
+  .team-member-excerpt-hover {
+    margin-bottom: 17px;
+  }
+
+  .aboutus_section3
+    .vc_grid.vc_row.vc_grid-gutter-30px
+    .vc_pageable-slide-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .aboutus_section3
+    .vc_grid.vc_row.vc_grid-gutter-30px
+    .vc_pageable-slide-wrapper:before,
+  .aboutus_section3
+    .vc_grid.vc_row.vc_grid-gutter-30px
+    .vc_pageable-slide-wrapper:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #wrapper-1 .aboutus_section2 .block_excerpt_container {
+    padding: 25px 0 0 20px;
+  }
+
+  /*our mission*/
+  #main-content .aboutus_section2 {
+    padding-top: 59px;
+  }
+
+  #main-content .aboutus_section2 .vc_column-inner {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*right sidebar*/
+  #wrapper-1 .aboutus_section2 .block_excerpt_container {
+    padding: 25px 0 0 0;
+  }
+
+  /*first block*/
+  #wrapper-1 .aboutus_section1 .video_button {
+    text-align: left;
+  }
+
+  .aboutus_section1_wrapper .wpb_column:nth-child(1) {
+    margin-bottom: 47px;
+  }
+
+  .about-us-testimonials .count_pages {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #our_team .vc_pageable-slide-wrapper {
+    justify-content: center;
+  }
+
+  #our_team .vc_grid-item {
+    width: 291px;
+    min-width: unset;
+  }
+
+  #wrapper-1 .aboutus_section1_wrapper h2 {
+    font-family: "Raleway-Regular" !important;
+    font-size: 24px !important;
+  }
+
+  #main-content .aboutus_section1 .video_button a:before {
+    width: 46px;
+    height: 46px;
+    background-size: 46px 46px;
+    position: relative;
+    bottom: 8px;
+    padding-right: 6px;
+  }
+
+  .vc_row.vc_row-o-equal-height > .vc_column_container {
+    overflow: visible;
+  }
+
+  #main-content .aboutus_section1 {
+    padding: 119px 35px 107px 35px;
+  }
+
+  .aboutus_section1_wrapper
+    .vc_row.vc_row-o-equal-height
+    > .vc_column_container {
+    overflow: visible;
+  }
+
+  #main-content .aboutus_section2 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  /* 
+  .aboutus_section2 .before_rectangle_block p::before {
+    padding-right: 11px;
+  }
+
+  .before_rectangle_block .wpb_wrapper p {
+    padding-left: 24px;
+  }
+
+  .wpb_content_element p {
+    padding-left: 24px;
+  } */
+}
+
+@media screen and (max-width: 400px) {
+  #main-content .aboutus_section2 .h2-about-first-title {
+    margin-bottom: 20px;
+    padding-top: 2px !important;
+  }
+
+  #main-content .aboutus_section2 .h2-about-second-title {
+    margin-bottom: 39px;
+  }
+
+  .aboutus_section2 .about-us-text1 {
+    padding-left: 20px;
+    margin-bottom: 27px;
+  }
+
+  .aboutus_section2 .about-us-text2 {
+    padding-left: 40px;
+    margin-bottom: 0px;
+  }
+
+  .aboutus_section2 .about-us-text3 {
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
+
+  .aboutus_section2 .about-us-text4 {
+    padding-left: 40px;
+    margin-bottom: 0;
+  }
+
+  .aboutus_section2 .about-us-text5 {
+    padding-left: 40px;
+  }
+
+  .aboutus_section2 .before_rectangle_block p::before {
+    position: absolute;
+    left: 35px;
+  }
+
+  #wrapper-1 .aboutus_section2 .block_excerpt_container .block_excerpt {
+    padding-top: 20px;
+    margin-bottom: 61px;
+  }
+
+  .aboutus_section2 .block_excerpt_container p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  #wrapper-1 .aboutus_section2 .block_excerpt_container {
+    padding: 26px 20px 0 20px;
+  }
+}
 /*----------------------
   PRIVACY POLICY PAGE
 ----------------------*/
@@ -5654,8 +6142,55 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .privacy-section2 .before_rectangle_block p::before {
     padding-right: 10px;
   }
+
+  .wpb-js-composer #wrapper-1 .home-page-section4-tabs .vc_tta-tabs-container {
+    display: none !important;
+  }
 }
 
+/*---------------------
+  SINGLE PRODUCT PAGE
+----------------------*/
+.single-product .single-product-cart-link {
+  text-align: right;
+  padding-top: 48px;
+}
+
+.woocommerce.single-product div.product div.summary {
+  margin-top: 4px;
+}
+
+.woocommerce.single-product div.product p.price {
+  padding-top: 36px;
+  padding-bottom: 16px;
+}
+
+.woocommerce.single-product .fake-count {
+  margin-bottom: 15px;
+}
+
+.woocommerce.single-product .fake-count .quantity-text {
+  margin-right: 21px;
+}
+
+.woocommerce.single-product
+  .fake-count
+  .quantity.quantity-numers
+  .quantity-button.quantity-down {
+  top: 0px;
+  left: -2px;
+}
+
+.woocommerce.single-product
+  .fake-count
+  .quantity.quantity-numers
+  .quantity-button.quantity-up {
+  top: 1px;
+}
+
+div.product form.cart {
+  margin-top: 42px;
+}
 /*-------------------------
   HELP FORM(orange form)
 -------------------------*/
@@ -5670,4 +6205,38 @@ input[type="checkbox"] + label#oferta-error {
 
 #wrapper-1 .help_form_wrapper label.error {
   top: 34px;
+}
+
+/*-----------
+  CART PAGE
+------------*/
+.woocommerce .woocommerce-cart-form {
+  padding-top: 40px;
+}
+
+.woocommerce-cart-form .product-name::before {
+  margin-right: 10px;
+}
+
+.woocommerce a.remove:hover {
+  color: red !important;
+  background: initial;
+}
+
+@media screen and (max-width: 500px) {
+  .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+    font-size: 16px;
+  }
+
+  .cart-subtotal td {
+    font-size: 14px;
+  }
+
+  .order-total td {
+    font-size: 14px;
+  }
+
+  .woocommerce .woocommerce-cart-form {
+    padding-top: 20px;
+  }
 }
