@@ -215,7 +215,7 @@ add_shortcode('project_partners_mob', 'shortcode_project_partners_mob');
 function shortcode_project_partners_mob(){
     $partners_array = get_posts( array(
         'numberposts' => -1,
-        'post_type'   => 'partners'
+        'post_type'   => 'project_partner'
     ));
     $partners_array_by_2 = array_chunk($partners_array, 3, true);
     ob_start(); ?>
@@ -923,6 +923,7 @@ function shortcode_thanks_block(){
     $html = ob_get_clean();
     return $html;
 }
+
 add_action('add_meta_boxes', 'add_custom_history_box');
 function add_custom_history_box(){
     $screens = array( 'post_type', 'projects' );
