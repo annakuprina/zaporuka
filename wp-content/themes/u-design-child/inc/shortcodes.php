@@ -17,70 +17,73 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
 
 	ob_start();
 	?>
-  <div class="help_form_wrapper">
-  	<div class="help-form-inner-wrapper">
-  	   <div class="help-form-inner-title">
-			<?php echo $help_label; ?>
-  	   </div>
-	   <form action="/wp-content/plugins/liqpay_wordpress/liqpay-form.php" method="POST" class="help_form">
-		   	<input type="hidden" name="date" value="'.date('d.m.Y H:i:s' ).'" required/><input type="hidden" name="liqpay_product_id"  value=""/>
-		   	<input type="hidden" name="hidden_content"  value="<?php echo site_url('/new-order');?>"/>
-		   	<input type="hidden" name="url_page"  value="<?php echo site_url('/new-order');?>"/>
-		   	<input type="hidden" name="result_url"  value="<?php echo site_url();?>"/>
-		   	<input type="hidden" name="ip"  value=[ip]/>
-		   	<input type="hidden" name="pay_type"  value="pay"/>
-		    <input type="hidden" name="subscribe_type"  value="month"/>
-		    <input type="hidden" id="plata" name="plata" value="">
-		    <input type="hidden" id="liqpay_post_id" name="liqpay_post_id"  value=""/>
-		    <div class="help-form-amount">
-		    	<div class="help-form-amount-left">
-		    		<input class="textarea-small val" type="text" id="paid" name="paid"  value="" placeholder="<?php echo $amount_label; ?>" required/> 
-		    		<input   style="display: none;" type="text" readonly name="menu"   value="UAH" required/>
-		    	</div>
-		    	<div class="help-form-amount-right">
-		    		<a href="#" summ="100" class="amount-button">100</a>
-		    		<a href="#" summ="250" class="amount-button">250</a>
-		    		<a href="#" summ="1000" class="amount-button">1000</a>
-		    	</div>
-		    </div>
-		    <div class="help-form-PIB">
-	    		<input  class="textarea-full" type="text" name="fio" value=""  placeholder="<?php echo $FIO_label; ?>" required/>
-	    	</div>
-		    <div class="help-form-email-tel">
-		    	<div class="help-form-amount-email">
-		    		<input  class="textarea-small" type="email" name="mail" value=""  placeholder="Email" required/>
-		    	</div>
-		    	<div class="help-form-amount-tel">
-		    		<input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
-		    	</div>
-		    </div>
-		     <div class="help-form-subscribe">
-		    	<div class="help-form-subscribe-left">
-		    		<a href="#" paytype="pay" class="subscribe-link onetime active"><?php echo $payonce_label; ?></a>
-		    	</div>
-		    	<div class="help-form-subscribe-right">
-		    		<a href="#" paytype="subscribe" class="subscribe-link month"><?php echo $monthly_label; ?></a>
-		    	</div>
-		    </div>
-		     <p class="help-form-text">
-	    		<?php echo $text_help_label; ?> 
-	    	</p>
-	    	<div class="help-form-submit-oferta">
-	    	 	<div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $help_label; ?>" /></div>
-	    	 	<div class="help-form-oferta">
-	    	 		<input type="checkbox" id="oferta" name="oferta" required>
-	  				<label for="oferta"><?php echo $agree_help_label; ?> <a href="<?php echo $agree_link; ?>" target="_blank" ><?php echo $agree_link_label; ?></a>*</label>
-	    	 	</div>
-	    	</div>
-	    	<div class="help-form-cancel-subscription">
-	    		<p class="help-form-cancel-subscription-text">
-	    			<a href="<?php echo $cancel_subscription_link_block; ?>" target="_blank" ><?php echo $cancel_subscription_text_block; ?></a>
-	    		</p>
-	    	</div>
+    <div class="home-first-post-form-help">
+        <div class="help_form_wrapper">
+            <div class="help-form-inner-wrapper">
+                <div class="help-form-inner-title">
+                    <?php echo $help_label; ?>
+                </div>
+                <form action="/wp-content/plugins/liqpay_wordpress/liqpay-form.php" method="POST" class="help_form">
+                    <input type="hidden" name="date" value="'.date('d.m.Y H:i:s' ).'" required/><input type="hidden" name="liqpay_product_id"  value=""/>
+                    <input type="hidden" name="hidden_content"  value="<?php echo site_url('/new-order');?>"/>
+                    <input type="hidden" name="url_page"  value="<?php echo site_url('/new-order');?>"/>
+                    <input type="hidden" name="result_url"  value="<?php echo site_url();?>"/>
+                    <input type="hidden" name="ip"  value=[ip]/>
+                    <input type="hidden" name="pay_type"  value="pay"/>
+                    <input type="hidden" name="subscribe_type"  value="month"/>
+                    <input type="hidden" id="plata" name="plata" value="">
+                    <input type="hidden" id="liqpay_post_id" name="liqpay_post_id"  value=""/>
+                    <div class="help-form-amount">
+                        <div class="help-form-amount-left">
+                            <input class="textarea-small val" type="text" id="paid" name="paid"  value="" placeholder="<?php echo $amount_label; ?>" required/>
+                            <input   style="display: none;" type="text" readonly name="menu"   value="UAH" required/>
+                        </div>
+                        <div class="help-form-amount-right">
+                            <a href="#" summ="100" class="amount-button">100</a>
+                            <a href="#" summ="250" class="amount-button">250</a>
+                            <a href="#" summ="1000" class="amount-button">1000</a>
+                        </div>
+                    </div>
+                    <div class="help-form-PIB">
+                        <input  class="textarea-full" type="text" name="fio" value=""  placeholder="<?php echo $FIO_label; ?>" required/>
+                    </div>
+                    <div class="help-form-email-tel">
+                        <div class="help-form-amount-email">
+                            <input  class="textarea-small" type="email" name="mail" value=""  placeholder="Email" required/>
+                        </div>
+                        <div class="help-form-amount-tel">
+                            <input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
+                        </div>
+                    </div>
+                    <div class="help-form-subscribe">
+                        <div class="help-form-subscribe-left">
+                            <a href="#" paytype="pay" class="subscribe-link onetime active"><?php echo $payonce_label; ?></a>
+                        </div>
+                        <div class="help-form-subscribe-right">
+                            <a href="#" paytype="subscribe" class="subscribe-link month"><?php echo $monthly_label; ?></a>
+                        </div>
+                    </div>
+                    <p class="help-form-text">
+                        <?php echo $text_help_label; ?>
+                    </p>
+                    <div class="help-form-submit-oferta">
+                        <div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $help_label; ?>" /></div>
+                        <div class="help-form-oferta">
+                            <input type="checkbox" id="oferta" name="oferta" required>
+                            <label for="oferta"><?php echo $agree_help_label; ?> <a href="<?php echo $agree_link; ?>" target="_blank" ><?php echo $agree_link_label; ?></a>*</label>
+                        </div>
+                    </div>
+                    <div class="help-form-cancel-subscription">
+                        <p class="help-form-cancel-subscription-text">
+                            <a href="<?php echo $cancel_subscription_link_block; ?>" target="_blank" ><?php echo $cancel_subscription_text_block; ?></a>
+                        </p>
+                    </div>
 
-		</form>
-      </div>
-  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 	<?php
 	$html = ob_get_clean();
 	return $html;
