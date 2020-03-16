@@ -167,6 +167,15 @@ jQuery(document).ready(function($) {
     });
   });
 
+  /*ONE PROJECT PAGE. PARTNERS SLIDER MOBILE*/
+  $(".project-partners-slick-mob").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    verticalSwiping: true
+  });
+
   //REWARDS SLIDER DESKTOP(index page)
   $(".rewards-desktop").slick({
     dots: true,

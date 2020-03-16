@@ -639,7 +639,10 @@ h3 {
 }
 
 .project-partners-carousel-wrapper .help_button_single_block {
-  text-align: left;
+  /* text-align: left; */
+  text-align: right;
+  padding-top: 15px;
+  margin-left: -4px !important;
 }
 
 .block-project-partners .h2-header-line {
@@ -881,6 +884,9 @@ h3 {
 
   .about-project-2 .block_excerpt_container {
     padding: 0px 0 0 0;
+  }
+
+  .project-partners-carousel-wrapper {
   }
 }
 
