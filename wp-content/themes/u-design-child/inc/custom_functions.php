@@ -364,72 +364,80 @@ function zaporuka_photo_video_doc(){
     $project_photos = get_field( "project-photos", $post_id );
     $project_videos = get_field( "project-videos", $post_id );
     $project_docs = get_field( "project-documents", $post_id );
-    $active_tab = '';
     ob_start();
     ?>
     <!----------------------------------
     PHOTO, VIDEO, DOCUMENTS SLIDERS
 ----------------------------------->
     <!-- TABS -->
+    <?php if(!empty($project_photos) || !empty($project_videos) || !empty($project_docs)) { ?>
+        <div class="sliders-tabs">
+            <div class="sliders-tabs-wrapper">
+                <?php if (!empty($project_photos)) { ?>
+                    <div class="one-tab-link tab-active" data-id="1">
+                        <?php pll_e('Фотографiї'); ?>
+                    </div>
+                <?php } ?>
+                <?php if (!empty($project_videos)) { ?>
+                    <div class="one-tab-link <?php (empty($project_photos)) ? 'tab-active' : '' ?>" data-id="2">
+                        <?php pll_e('Вiдео'); ?>
+                    </div>
+                <?php } ?>
+                <?php if (!empty($project_docs)) { ?>
+                    <div class="one-tab-link <?php (empty($project_photos) && empty($project_videos)) ? 'tab-active' : '' ?>"
+                         data-id="3">
+                        <?php pll_e('Супутнi документи'); ?>
+                    </div>
+                <?php } ?>
+            </div>
 
-    <div class="sliders-tabs">
-        <div class="sliders-tabs-wrapper">
-            <?php if(!empty($project_photos)) { ?>
-                <div class="one-tab-link tab-active" data-id="1">
-                    <?php pll_e( 'Фотографiї');?>
+            <div class="proj-milestone-desc-block">
+                <?php if (!empty($project_photos)) { ?>
+                    <div class="slider_tabs_content photo_tab_content active" data-id="1">
+                        <!-- PHOTO SLIDER -->
+                        <div class="photo-slider slick-media-slider">
+                            <?php foreach ($project_photos as $item) { ?>
+                                <div class="photo-slide">
+                                    <img src="<?php echo $item["photo"]["url"]; ?>"/>
+                                </div>
+                            <?php } ?>
+                        </div><!--end photo-slider-->
+                    </div>
+                <?php } ?>
+                <?php if (!empty($project_videos)) { ?>
+                    <div class="slider_tabs_content video_tab_content <?php (empty($project_photos)) ? 'active' : '' ?>" data-id="2">
+                    <!-- VIDEO SLIDER -->
+                    <div class="video-slider slick-media-slider">
+                        <?php foreach ($project_videos as $item) { ?>
+                            <div>
+                                <a href="<?php echo $item["video-link"]; ?>" target="_blank" class="thumbnail">
+                                    <p class="video-slider-img-wrapper">
+                                        <img src="<?php echo $item["image-for-video"]["url"]; ?>"/>
+                                        <span class="play-video-icon"></span>
+                                    </p>
+                                </a>
+                                <p class="video-slider-text"><?php echo $item["description"]; ?></p>
+                            </div>
+                        <?php } ?>
+                    </div><!--end video-slider-->
                 </div>
-            <?php } ?>
-            <?php if(!empty($project_videos)) { ?>
-                <div class="one-tab-link <?php (empty($project_photos)) ? 'tab-active' : ''?>" data-id="2">
-                    <?php pll_e( 'Вiдео');?>
+                <?php } ?>
+                <?php if (!empty($project_docs)) { ?>
+                    <div class="slider_tabs_content document_tab_content <?php (empty($project_photos) && empty($project_videos)) ? 'active' : '' ?>" data-id="3">
+                    <!-- DOCUMENTS SLIDER -->
+                    <div class="documents-slider slick-media-slider">
+                        <?php foreach ($project_docs as $item) { ?>
+                            <div class="documents-slide">
+                                <img src="<?php echo $item["document"]["url"]; ?>">
+                            </div>
+                        <?php } ?>
+                    </div><!--end documents-slider-->
                 </div>
-            <?php } ?>
-            <?php if(!empty($project_docs)) { ?>
-                <div class="one-tab-link <?php (empty($project_photos) && empty($project_videos)) ? 'tab-active' : ''?>" data-id="3">
-                    <?php pll_e( 'Супутнi документи');?>
-                </div>
-            <?php } ?>
-        </div>
-        <div class="proj-milestone-desc-block">
-            <div class="slider_tabs_content photo_tab_content active" data-id="1">
-                <!-- PHOTO SLIDER -->
-                <div class="photo-slider slick-media-slider" >
-                    <?php foreach ($project_photos as $item) { ?>
-                        <div class="photo-slide">
-                            <img src="<?php echo $item["photo"]["url"]; ?>" />
-                        </div>
-                    <?php } ?>
-                </div><!--end photo-slider-->
+                <?php } ?>
             </div>
-            <div class="slider_tabs_content video_tab_content" data-id="2">
-                <!-- VIDEO SLIDER -->
-                <div class="video-slider slick-media-slider">
-                    <?php foreach ($project_videos as $item) { ?>
-                        <div>
-                            <a href="<?php echo $item["video-link"];?>" target="_blank" class="thumbnail">
-                                <p class="video-slider-img-wrapper">
-                                    <img src="<?php echo $item["image-for-video"]["url"]; ?>" />
-                                    <span class="play-video-icon"></span>
-                                </p>
-                            </a>
-                            <p class="video-slider-text"><?php echo $item["description"];?></p>
-                        </div>
-                    <?php } ?>
-                </div><!--end video-slider-->
-            </div>
-            <div class="slider_tabs_content document_tab_content" data-id="3">
-                <!-- DOCUMENTS SLIDER -->
-                <div class="documents-slider slick-media-slider">
-                    <?php foreach ($project_docs as $item) { ?>
-                        <div class="documents-slide">
-                            <img src="<?php echo $item["document"]["url"];?>">
-                        </div>
-                    <?php } ?>
-                </div><!--end documents-slider-->
-            </div>
-        </div>
-    </div><!-- end sliders-tabs -->
-    <?php
+        </div><!-- end sliders-tabs -->
+
+    <?php }
     $html = ob_get_clean();
     return $html;
 }
