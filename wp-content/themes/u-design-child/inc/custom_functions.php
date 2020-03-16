@@ -857,11 +857,13 @@ function shortcode_thanks_block(){
     }
     else{
         ?>
-        <div class="thanks-text-wrapper">
-            <div>
-                <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Ви скасували оплату!');?></h2></div>
+         <div class="home-first-thanks-block">
+            <div class="thanks-text-wrapper">
+                <div>
+                    <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Ви скасували оплату!');?></h2></div>
+                </div>
             </div>
-        </div>
+         </div>
         <?php
     }
 
