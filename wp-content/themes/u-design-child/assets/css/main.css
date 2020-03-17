@@ -816,6 +816,7 @@ h3 {
 .block-project-partners .project-partners-slick-mob .slick-dots {
   left: 0;
 }
+
 /* Media for one Project block(home page) */
 @media screen and (max-width: 1200px) {
   .one-project-right {
@@ -855,6 +856,16 @@ h3 {
   }
 }
 
+/* .project-partners-carousel .vc_grid-container-wrapper {
+  display: none;
+}
+.project-partners-carousel .vc_col-sm-1/5 {
+  display: none;
+}
+
+.project-partners-carousel {
+  width: 100%;
+} */
 @media screen and (max-width: 800px) {
   .one-project {
     flex-direction: column;
@@ -2916,6 +2927,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 }
 
 @media screen and (max-width: 1024px) {
+  .home-first-post-form-help {
+    float: none !important;
+  }
+
   .vc_custom_1579507340150 .home-first-post-form-help {
     width: 100%;
   }
