@@ -262,7 +262,6 @@ jQuery(document).ready(function($) {
       .toggleClass("active");
 
     var currentYear = $(this).text();
-    console.log(currentYear);
     $(".reports-list-title span:eq(0)").text(currentYear);
     $(".list_reports_wrapper .category-expand-button").toggleClass("active");
   });
@@ -289,10 +288,10 @@ jQuery(document).ready(function($) {
     });
   };
   countProgress();
-  setInterval(countProgress, 1000);
+  //setInterval(countProgress, 1000);
 
   /*Set orange background for news without pictures*/
-  setInterval(function() {
+  $(window).bind( 'grid:items:added', function(){
     $(".section-news-hover-wrapper").each(function(index) {
       if (
         $(this)
@@ -309,5 +308,6 @@ jQuery(document).ready(function($) {
         $(this).addClass("is-background-image");
       }
     });
-  }, 1000);
+  });
+
 });
