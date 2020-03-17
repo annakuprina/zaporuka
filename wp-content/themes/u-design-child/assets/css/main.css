@@ -1368,7 +1368,7 @@ h3 {
 @media screen and (max-width: 650px) {
   .volunteers {
     width: 290px;
-    padding: 40px 20px 47px 20px;
+    padding: 40px 20px 34px 20px;
   }
 
   .friends-and-volunteers {
@@ -1381,6 +1381,7 @@ h3 {
     border-bottom: 1px solid rgba(165, 165, 165, 0.25);
     display: flex;
     justify-content: center;
+    padding-bottom: 56px;
   }
 
   .friends {
@@ -1389,7 +1390,7 @@ h3 {
   }
 
   .friends-and-volunteers {
-    margin-bottom: 70px;
+    margin-bottom: 35px;
     flex-direction: column;
     align-items: center;
   }
@@ -1403,12 +1404,32 @@ h3 {
     margin-bottom: 18px;
   }
 
+  .volunteers-title {
+    margin-bottom: 23px;
+  }
+
   .friends-slider.slick-slider {
     margin-bottom: 22px;
   }
 
   .volunteers-slider-mob .slick-slide {
     margin-bottom: 5px;
+  }
+
+  .volunteers-slider-mob .slick-dots {
+    bottom: -41px;
+  }
+
+  .home-page-section8-inner.vc_custom_1579510775987 {
+    margin-bottom: 58px;
+  }
+
+  #main-content .vc_custom_1579168278861 .vc_column_container:nth-child(1) {
+    max-width: 100% !important;
+  }
+
+  #main-content .vc_custom_1579507340150 {
+    margin-bottom: 38px;
   }
 }
 
@@ -1626,6 +1647,10 @@ h3 {
 
   .donors-mobile-slider {
     display: block;
+  }
+
+  .donors-mobile-slider .slick-dots {
+    bottom: -30px;
   }
 }
 
@@ -2878,7 +2903,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
   .footer-mob {
     padding: 0;
-    padding-top: 40px;
+    padding-top: 50px;
   }
 
   #wrapper-1 #footer-bg {
@@ -3008,7 +3033,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   }
 
   #home-page-content .home-first-post-image {
-    max-height: 660px;
+    max-height: 720px;
   }
 
   .home-first-post-image .vc_gitem-row-position-middle {
@@ -3154,7 +3179,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   }
 
   .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-inner-title {
-    padding-bottom: 23px;
+    padding-bottom: 35px;
   }
 
   .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-amount {
@@ -3162,7 +3187,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   }
 
   .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-subscribe {
-    padding-bottom: 21px;
+    padding-bottom: 18px;
   }
 
   .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-email-tel {
@@ -3170,7 +3195,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   }
 
   .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-text {
-    padding-bottom: 39px;
+    padding-bottom: 37px;
+    line-height: 18px;
   }
 
   .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-submit-oferta {
@@ -3260,7 +3286,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     line-height: 30px;
   }
 
-  #main-content .home-page-section2 .section2-columns .section2-single-column {
+  #main-content .home-page-section2 .section2-columns .section2-single-column,
+  #main-content
+    .home-page-section2
+    .section2-columns
+    .section2-single-column:hover {
     padding: 20px 30px;
     height: 190px;
   }
@@ -3292,15 +3322,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     font-size: 16px;
   }
 
-  .section2-image img {
-    max-width: 301px;
-  }
-
-  .vc_custom_1579168278861 .vc_column_container:nth-child(1) {
+  #main-content .vc_custom_1579168278861 .vc_column_container:nth-child(1) {
     width: 300px;
   }
 
-  .vc_custom_1579168278861 .section2-text-wrapper {
+  #main-content .vc_custom_1579168278861 .section2-text-wrapper {
     width: calc(100% - 301px);
   }
 }
@@ -3366,7 +3392,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     flex-direction: column;
   }
 
-  .vc_custom_1579168278861 .section2-text-wrapper {
+  #main-content .vc_custom_1579168278861 .section2-text-wrapper {
     width: 100%;
   }
 
@@ -3697,6 +3723,13 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     padding-top: 20px;
     display: block;
   }
+
+  #main-content
+    .vc_custom_1579184546633
+    .vc_tta-panels
+    .vc_tta-panel:last-child {
+    display: none;
+  }
 }
 
 /*end home page section4*/
@@ -3802,13 +3835,23 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .vc_custom_1579173195839 .one-project {
+    max-height: unset;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .home-page-section6 .vc_pageable-slide-wrapper .vc_grid-item {
     width: 100%;
   }
 }
-/*end home page section6*/
 
+@media screen and (max-width: 500px) {
+  .vc_custom_1579173195839 .one-project-progress {
+    width: calc(100% - 40px);
+  }
+}
 /*---------------------
   HOME PAGE SECTION 7
 ----------------------*/
