@@ -3727,6 +3727,26 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   #main-content .home-page-section7 .news-link-hover a {
     font-family: "Raleway-Regular";
   }
+
+  #main-content .home-page-section7 .section-news-hover-wrapper.no-background-image .vc_gitem-row-position-top {
+    margin: 18px 22px;
+  }
+
+  #main-content .home-page-section7.section-news .section-news-hover-wrapper.no-background-image .vc_gitem-row-position-middle {
+    padding-top: 78px !important
+  }
+
+  .home-page-section7 .section-news-hover-wrapper.no-background-image .vc_gitem-row-position-bottom {
+    padding: 0px 0 29px 10px;
+  }
+
+  #main-content .home-page-section7 .vc_gitem-row-position-middle .vc_gitem-col {
+    padding: 0;
+  }
+
+  #main-content  .home-page-section7.section-news .section-news-hover-wrapper.no-background-image .vc_gitem-row-position-middle .news-title-hover {
+    margin-bottom: 19px;
+  }
   
 }
 /*end home page section7*/
@@ -5962,14 +5982,14 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   ABOUT PAGE
 --------------*/
 /*УДАЛИТЬ!*/
-#main-content .aboutus_section1 {
+/* #main-content .aboutus_section1 {
   background: #ddd;
-}
+} */
 /*********************/
 /*УДАЛИТЬ!*/
-#wrapper-1 .vc_gitem-animate-none .vc_gitem-zone-b {
+/* #wrapper-1 .vc_gitem-animate-none .vc_gitem-zone-b {
   opacity: 1 !important;
-}
+} */
 
 #main-content .aboutus_section1 {
   padding: 131px 130px;
