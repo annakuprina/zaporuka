@@ -1,8 +1,7 @@
 <?php
-if($_POST['custom_action'] == 'true'){
+if(!empty($_POST['custom_action']) && $_POST['custom_action'] == 'true'){
     include __DIR__ . '/../../../../wp-load.php';
     $cptaNumber = $paged = absint($_POST['number']);
-    $prev_click = $_POST['prev'];
     $cptaLimit  = $_POST['limit'];
     $cptaType = $_POST['post_type'];
     if( $cptaNumber == "1" ){
@@ -51,7 +50,7 @@ if($_POST['custom_action'] == 'true'){
                 if( $cpta_Paginationlist > 0 ){ ?>
                     <ul class='list-cptapagination'>
                         <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
+                        <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta="<?php echo $prev; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
                         <?php
                         $t = ceil($paged/6 )-1;
                         $t2 = $t*6;
@@ -80,10 +79,9 @@ if($_POST['custom_action'] == 'true'){
         die();
     }
 }
-if($_POST['show_children'] == 'true'){
+if(!empty($_POST['show_children']) && $_POST['show_children'] == 'true'){
     include __DIR__ . '/../../../../wp-load.php';
     $cptaNumber = $paged = absint($_POST['number']);
-    $prev_click = $_POST['prev'];
     $cptaLimit  = $_POST['limit'];
     $cptaType = $_POST['post_type'];
     if( $cptaNumber == "1" ){
@@ -144,7 +142,7 @@ if($_POST['show_children'] == 'true'){
             if( $cpta_Paginationlist > 0 ){ ?>
                 <ul class='list-cptapagination'>
                     <li class='pagitext'><a href='' class='step-backward step-arrow' data-cpta='1' data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></a></li>
-                    <li class='pagitext'><a href='' class='step-prev step-arrow' data-prev="prev" data-cpta="<?php echo $prev; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
+                    <li class='pagitext'><a href='' class='step-prev step-arrow' data-cpta="<?php echo $prev; ?>" data-limit="<?php echo $cptaLimit; ?>" data-type="<?php echo $cptaType; ?>"></i></a></li>
                     <?php
                     $t = ceil($paged/6 )-1;
                     $t2 = $t*6;
