@@ -64,7 +64,6 @@ jQuery(document).ready(function($) {
     e.preventDefault();
     var nth = $(this).attr("data-cpta");
     var ajax_url = "/wp-content/themes/u-design-child/inc/custom_ajax.php";
-    var prev = $(this).attr("data-prev");
     var post_type = $(this).attr("data-type");
     var limit = $(this).attr("data-limit");
     jQuery.ajax({
@@ -73,7 +72,6 @@ jQuery(document).ready(function($) {
       data: {
         custom_action: "true",
         number: nth,
-        prev: prev,
         post_type: post_type,
         limit: limit
       },
@@ -90,7 +88,6 @@ jQuery(document).ready(function($) {
     e.preventDefault();
     var nth = $(this).attr("data-cpta");
     var ajax_url = "/wp-content/themes/u-design-child/inc/custom_ajax.php";
-    var prev = $(this).attr("data-prev");
     var post_type = $(this).attr("data-type");
     var limit = $(this).attr("data-limit");
     jQuery.ajax({
@@ -99,7 +96,6 @@ jQuery(document).ready(function($) {
       data: {
         show_children: "true",
         number: nth,
-        prev: prev,
         post_type: post_type,
         limit: limit
       },
