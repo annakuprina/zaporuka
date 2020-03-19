@@ -4782,6 +4782,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   DIRECTIONS PAGE
 -----------------*/
 
+
+#main-content .directions_section1_right_block_wrapper {
+  background-image: none;
+}
+
 #main-content .directions_section2_tabs .section-tabs .vc_tta-tab > a {
   padding-right: 0;
 }
@@ -4895,6 +4900,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   padding-top: 35px;
 }
 
+#main-content .vc_custom_1584630082542 {
+  height: 400px;
+}
+
 @media screen and (max-width: 1400px) {
   .directions_section2_tabs .section-tabs {
     padding-top: 20px;
@@ -4982,6 +4991,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   .directions_section2_tabs .section-tabs ul.vc_tta-tabs-list {
     margin-bottom: 25px !important;
   }
+
+  #main-content .directions_section2_tabs {
+    padding-top: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -4993,11 +5006,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     padding: 0;
   }
 
-  .directions_section2_tab_body
+  #main-content .directions_section2_tab_body
     .vc_inner
     .wpb_column:nth-child(2)
     .vc_column-inner {
     margin-left: 0;
+    padding-left: 15px !important;
   }
 
   #main-content .directions_section1_right_inner_wrapper h2,
@@ -5008,11 +5022,32 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   #main-content .vc_custom_1581436138324 {
     padding: 30px 20px !important;
   }
+
 }
 
 @media screen and (max-width: 500px) {
   #main-content .vc_custom_1579168278861 .section2-text-wrapper {
     height: unset;
+  }
+
+  #main-content .vc_custom_1584630082542 {
+    height: 250px;
+  }
+
+  #main-content .directions_section_left_inner_wrapper .vc_column_container .vc_column-inner {
+    padding-top: 60px;
+  }
+
+  #main-content .directions_section2_row_title1 .h2-header-line,
+  #main-content .directions_section2_row_title2 .h2-header-line,
+  #main-content .directions_section2_row_title3 .h2-header-line {
+    padding-left: 0;
+  }
+
+  #main-content .directions_section2_row_title1 h2.h2-header-line::before,
+  #main-content .directions_section2_row_title2 h2.h2-header-line::before,
+  #main-content .directions_section2_row_title3 h2.h2-header-line::before {
+    left: -34px;
   }
 }
 
