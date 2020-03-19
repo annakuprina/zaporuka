@@ -985,3 +985,27 @@ function banner_help_form_home() {
         echo do_shortcode('[help_form]');
     }
 }
+
+add_shortcode('write_about_us_mob', 'shortcode_write_about_us_mob');
+function shortcode_write_about_us_mob(){
+    $writers_array = get_posts( array(
+        'numberposts' => -1,
+        'post_type'   => 'write_about_us'
+    ));
+    $writers_array_by_2 = array_chunk($writers_array, 3, true);
+    ob_start(); ?>
+    <!-- One Project page. Partners slider. Mobile  -->
+    <div class="write-about-us-slick-mob">
+        <?php foreach( $writers_array_by_2 as $post_wrapper ){ ?>
+            <!-- One slide -->
+            <div class="write-about-us-slide">
+                <?php foreach( $post_wrapper as $post ){ ?>
+                    <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="">
+                <?php } ?>
+            </div><!--end project-partners-slide -->
+        <?php } ?>
+    </div><!--end project-partners-slick-mob -->
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
