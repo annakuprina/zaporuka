@@ -5,7 +5,17 @@ jQuery(document).ready(function($) {
     slidesToScroll: 3,
     arrows: false,
     // autoplay: true
-    autoplaySpeed: 10000
+    autoplaySpeed: 10000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+        }
+      }
+    ]
   });
 
   // PARTNERS SLIDER MOBILE
@@ -13,7 +23,6 @@ jQuery(document).ready(function($) {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    dots: true
   });
 
   // FRIENDS SLIDER (DESKTOP AND MOBILE)
