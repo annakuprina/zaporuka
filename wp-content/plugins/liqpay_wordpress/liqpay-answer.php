@@ -215,7 +215,11 @@ if (isset($_POST['data'])) {
                 wp_set_post_categories($all_ids['uk'], array( $category->term_id ));
                 $liqpay_post_id = 823;
                 $current_value = get_field( "total-collected", $liqpay_post_id );
-                $datas = 'Щомісячне перерахування коштів в БФ Запорука';
+                if( $status == "subscribed" ) {
+                    $datas = 'Щомісячне перерахування коштів в БФ Запорука';
+                } else{
+                    $datas = 'Одноразове пожертвування в БФ Запорука';
+                }
             }
             $new_value = $current_value + $summa;
             update_field('total-collected', $new_value , $liqpay_post_id);
