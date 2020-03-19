@@ -323,6 +323,7 @@ function page_load_money_to_project_function(){
     if (isset($_POST['send_load_money_form'])){
         $post_id = $_POST['project_list_for_load_money'];
         $current_value = get_field( "total-collected", $post_id );
+        $total_amount = get_field( "total-amount", $post_id );
         $new_value=0;
         if( $_POST['type_operation'] == 'zachislit'){
             $new_value = $current_value + $_POST['amount_for_project'];
@@ -333,9 +334,15 @@ function page_load_money_to_project_function(){
             $type_operation = 'списано';
         }
         update_field('total-collected', $new_value , $_POST['project_list_for_load_money']);
+        global $wpdb, $table_prefix;
+        if($new_value >= $total_amount){
+            $all_posts = $wpdb->get_var( 'SELECT description FROM ' . $wpdb->term_taxonomy . ' WHERE taxonomy = "post_translations" AND description LIKE "%i:' . $post_id . ';%"' );
+            $all_ids = unserialize($all_posts);
+            $category = get_category_by_slug( 'zaversheni' );
+            wp_set_post_categories($all_ids['uk'], array( $category->term_id ));
+        }
         $date_operation = date('Y-m-d H:i:s');
         $admin_email = wp_get_current_user()->user_email;
-        global $wpdb, $table_prefix;
         $table_liqpay_project_history = $table_prefix . 'liqpay_project_history';
         $sql = "insert into {$table_liqpay_project_history} (`project_id`,`transaction_id`,`order_date`,`users_name`,`users_phone`,`users_email`,`summa`,`type_operation`) values ('" . $post_id . "','" . $post_id . "','" . $date_operation . "','admin','','" . $admin_email . "','" . $_POST['amount_for_project'] . "','" . $type_operation . "')
          on duplicate key update project_id=VALUES(project_id),transaction_id=VALUES(transaction_id),order_date=VALUES(order_date),users_name=VALUES(users_name),users_phone=VALUES(users_phone),users_email=VALUES(users_email),summa=VALUES(summa),type_operation=VALUES(type_operation);";
