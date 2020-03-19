@@ -206,9 +206,8 @@ if (isset($_POST['data'])) {
 
         if( $liqpay_post_id != 1){
             $current_value = get_field( "total-collected", $liqpay_post_id );
-            $new_value = $current_value + $summa;
             $total_amount = get_field('total-amount', $liqpay_post_id);
-            if ( $new_value >= $total_amount ) {
+            if ( $current_value >= $total_amount ) {
                 global $wpdb;
                 $all_posts = $wpdb->get_var( 'SELECT description FROM ' . $wpdb->term_taxonomy . ' WHERE taxonomy = "post_translations" AND description LIKE "%i:' . $liqpay_post_id . ';%"' );
                 $all_ids = unserialize($all_posts);
@@ -216,9 +215,9 @@ if (isset($_POST['data'])) {
                 wp_set_post_categories($all_ids['uk'], array( $category->term_id ));
                 $liqpay_post_id = 823;
                 $current_value = get_field( "total-collected", $liqpay_post_id );
-                $new_value = $current_value + $summa;
                 $datas = 'Щомісячне перерахування коштів в БФ Запорука';
             }
+            $new_value = $current_value + $summa;
             update_field('total-collected', $new_value , $liqpay_post_id);
             insert_history($liqpay_post_id, $transaction_id, $xdate, $sender_first_name, $user_phone, $to, $summa, 'зачислено');
         }

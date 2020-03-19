@@ -414,16 +414,14 @@ function check_liqpay_archive_function() {
                 $users_phone = (!empty($additional_info)) ? $additional_info['user_phone'] : '';
                 $datas = $res->data[$i]->description;
                 $current_value = get_field( "total-collected", $project_id );
-                $new_value = $current_value + $summa;
                 $total_amount = get_field('total-amount', $project_id);
-                if ( $new_value >= $total_amount ) {
+                if ( $current_value >= $total_amount ) {
                     $all_posts = $wpdb->get_var( 'SELECT description FROM ' . $wpdb->term_taxonomy . ' WHERE taxonomy = "post_translations" AND description LIKE "%i:' . $project_id . ';%"' );
                     $all_ids = unserialize($all_posts);
                     $category = get_category_by_slug( 'zaversheni' );
                     wp_set_post_categories($all_ids['uk'], array( $category->term_id ));
                     $project_id = 823;
                     $current_value = get_field( "total-collected", $project_id );
-                    $new_value = $current_value + $summa;
                     $datas = 'Щомісячне перерахування коштів в БФ Запорука';
                     $additional_info = array(
                         'user_phone' => $users_phone,
@@ -450,6 +448,7 @@ function check_liqpay_archive_function() {
              values ('" . $order_id . "','" . $date . "'," . $transaction_id . ",'" . $status . "','" . $code . "','" . $summa . "','" . $valuta . "','" . $users_phone . "','" . $datas . "','" . $users_email . "','" . $ip . "')
              on duplicate key update order_id=VALUES(order_id),xdate=VALUES(xdate),transaction_id=VALUES(transaction_id),status=VALUES(status),err_code=VALUES(err_code),summa=VALUES(summa),valuta=VALUES(valuta),sender_phone=VALUES(sender_phone),comments=VALUES(comments),email=VALUES(email),ip=VALUES(ip);";
                 $wpdb->query($sql);
+                $new_value = $current_value + $summa;
                 update_field('total-collected', $new_value , $project_id);
                 $sql1 = "insert into {$table_liqpay_history} (`project_id`,`transaction_id`,`order_date`,`users_name`,`users_phone`,`users_email`,`summa`,`type_operation`) values ('" . $project_id . "','" . $transaction_id . "','" . $date . "','" . $users_name . "','" . $users_phone . "','" . $users_email . "','" . $summa . "','" . $type_operation . "')
              on duplicate key update project_id=VALUES(project_id),transaction_id=VALUES(transaction_id),order_date=VALUES(order_date),users_name=VALUES(users_name),users_phone=VALUES(users_phone),users_email=VALUES(users_email),summa=VALUES(summa),type_operation=VALUES(type_operation);";
