@@ -120,8 +120,6 @@ if (isset($_POST['data'])) {
 
     $user_phone_fio = $user_phone . ' ' . $fio;
     $new_code = 1;
-    
-    insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $user_phone_fio, 0, $valuta, $to, $ip_adress);
 
     if ($testmode)
         $subject = "Отчет по оплате (TEST) ";
@@ -192,6 +190,8 @@ if (isset($_POST['data'])) {
         $text .= "\n Телефон оплативший заказ  = " . $sender_phone;
         $text .= "\n Комментарий " . $datas;
         if ($hidden_content == '1') {
+            $user_pass = (!empty($user_pass)) ? $user_pass : '';
+            $user_url = (!empty($user_url)) ? $user_url : '';
             $text .= "\n -------Данные для входа------- ";
             /*$text .=  "\n Логин: " . $user_login;*/
             $text .= "\n Пароль:  " . $user_pass;
@@ -205,12 +205,24 @@ if (isset($_POST['data'])) {
         $mail = get_option('liqpay_mail');
 
         if( $liqpay_post_id != 1){
-            insert_history($liqpay_post_id, $transaction_id, $xdate, $sender_first_name, $user_phone, $to, $summa, 'зачислено');
             $current_value = get_field( "total-collected", $liqpay_post_id );
             $new_value = $current_value + $summa;
+            $total_amount = get_field('total-amount', $liqpay_post_id);
+            if ( $new_value >= $total_amount ) {
+                global $wpdb;
+                $all_posts = $wpdb->get_var( 'SELECT description FROM ' . $wpdb->term_taxonomy . ' WHERE taxonomy = "post_translations" AND description LIKE "%i:' . $liqpay_post_id . ';%"' );
+                $all_ids = unserialize($all_posts);
+                $category = get_category_by_slug( 'zaversheni' );
+                wp_set_post_categories($all_ids['uk'], array( $category->term_id ));
+                $liqpay_post_id = 823;
+                $current_value = get_field( "total-collected", $liqpay_post_id );
+                $new_value = $current_value + $summa;
+                $datas = 'Щомісячне перерахування коштів в БФ Запорука';
+            }
             update_field('total-collected', $new_value , $liqpay_post_id);
+            insert_history($liqpay_post_id, $transaction_id, $xdate, $sender_first_name, $user_phone, $to, $summa, 'зачислено');
         }
-
+        insertdb($order_id, $xdate, $transaction_id, $status, $summa, $datas, $user_phone_fio, 0, $valuta, $to, $ip_adress);
 /////////////////////////////////////////////////////////////////////////////
         global $code, $product_id;
         $code = liqpay_random_string(10);
@@ -320,6 +332,7 @@ if (isset($_POST['data'])) {
                 $message = $text_head . $message;
             }
             if (!$order) {
+                $attachments = (!empty($attachments)) ? $attachments : '';
                 wp_mail($to, $subject . "(" . $status . ")", $message, $headers, $attachments);
                 wp_mail($mail, $subject . "(" . $status . ")", $message . "   Email покупателя - " . $to, $headers, $attachments);
             }
@@ -354,6 +367,7 @@ if (isset($_POST['data'])) {
                 }
             }
             if (!$order) {
+                $attachments = (!empty($attachments)) ? $attachments : '';
                 wp_mail($to, $subject . "(" . $status . ")", $message, $headers, $attachments);
                 wp_mail($mail, $subject . "(" . $status . ")", $message, $headers, $attachments);
             }
