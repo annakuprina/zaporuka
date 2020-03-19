@@ -325,22 +325,32 @@ function page_load_money_to_project_function(){
         $current_value = get_field( "total-collected", $post_id );
         $total_amount = get_field( "total-amount", $post_id );
         $new_value=0;
+        global $wpdb, $table_prefix;
         if( $_POST['type_operation'] == 'zachislit'){
             $new_value = $current_value + $_POST['amount_for_project'];
             $type_operation = 'зачислено';
+            if($new_value >= $total_amount){
+                $all_posts = $wpdb->get_var( 'SELECT description FROM ' . $wpdb->term_taxonomy . ' WHERE taxonomy = "post_translations" AND description LIKE "%i:' . $post_id . ';%"' );
+                $all_ids = unserialize($all_posts);
+                $category = get_category_by_slug( 'zaversheni' );
+                wp_set_post_categories($all_ids['uk'], array( $category->term_id ));
+            }
         }
         else{
             $new_value = $current_value - $_POST['amount_for_project'];
             $type_operation = 'списано';
+            if($new_value < $total_amount){
+                if(has_category(array('zaversheni', 'zaversheni-ru', 'zaversheni-en'), $post_id)){
+                    $all_posts = $wpdb->get_var( 'SELECT description FROM ' . $wpdb->term_taxonomy . ' WHERE taxonomy = "post_translations" AND description LIKE "%i:' . $post_id . ';%"' );
+                    $all_ids = unserialize($all_posts);
+                    $category = get_category_by_slug( 'dijuchi' );
+                    wp_set_post_categories($all_ids['uk'], array( $category->term_id ));
+                }
+            }
         }
         update_field('total-collected', $new_value , $_POST['project_list_for_load_money']);
-        global $wpdb, $table_prefix;
-        if($new_value >= $total_amount){
-            $all_posts = $wpdb->get_var( 'SELECT description FROM ' . $wpdb->term_taxonomy . ' WHERE taxonomy = "post_translations" AND description LIKE "%i:' . $post_id . ';%"' );
-            $all_ids = unserialize($all_posts);
-            $category = get_category_by_slug( 'zaversheni' );
-            wp_set_post_categories($all_ids['uk'], array( $category->term_id ));
-        }
+
+
         $date_operation = date('Y-m-d H:i:s');
         $admin_email = wp_get_current_user()->user_email;
         $table_liqpay_project_history = $table_prefix . 'liqpay_project_history';
