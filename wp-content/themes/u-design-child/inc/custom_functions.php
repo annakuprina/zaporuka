@@ -192,7 +192,7 @@ function shortcode_project_banner(){
                 </div>
                 <div class="help-and-share">
                     <p class="help-link">
-                        <a href="/#help_section_anchore" class="one-project-help">
+                        <a href="#help_section_anchore" class="one-project-help">
                             <span><?php pll_e( 'Допомогти');?></span>
                         </a>
                     </p>
