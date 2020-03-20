@@ -2,8 +2,10 @@
 if(!empty($_POST['custom_action']) && $_POST['custom_action'] == 'true'){
     include __DIR__ . '/../../../../wp-load.php';
     $cptaNumber = $paged = absint($_POST['number']);
-    $cptaLimit  = $_POST['limit'];
+    $cptaLimit = $adjacents = $_POST['limit'];
     $cptaType = $_POST['post_type'];
+    $pag_check = $_POST['pag_check'];
+    $pag_class= ($pag_check == 'mob') ? 'reviews-wrapper-mob' : 'reviews-wrapper' ;
     if( $cptaNumber == "1" ){
         $cptaOffsetValue = "0";
         $args = array('posts_per_page' => $cptaLimit,'post_type' => $cptaType,'post_status' => 'publish');
@@ -15,7 +17,7 @@ if(!empty($_POST['custom_action']) && $_POST['custom_action'] == 'true'){
     $html = "";
     if( isset($cptaQuery->posts) ){ ?>
         <div class='reviews-block'>
-            <div class='reviews-wrapper'>
+            <div class="<?php echo $pag_class; ?>">
                 <div class="preloader"></div>
                 <?php for($i=0;$i<sizeof($cptaQuery->posts);++$i){
                     $post_id = $cptaQuery->posts[$i]->ID;
@@ -36,15 +38,13 @@ if(!empty($_POST['custom_action']) && $_POST['custom_action'] == 'true'){
             </div>
             <?php wp_reset_postdata(); ?>
             <div class="pagination-block">
+                <input type="hidden" class="pagination-check" data-type="<?php echo $pag_check; ?>">
                 <?php
                 $cpta_args = array('posts_per_page' => -1,'post_type' => 'reviews','post_status' => 'publish');
-                $cptaLimit = $cptaLimit;
                 $cpta_Query = new WP_Query( $cpta_args );
                 $cpta_Count = count($cpta_Query->posts);
                 $cpta_Paginationlist = ceil($cpta_Count/$cptaLimit);
                 $last = ceil( $cpta_Paginationlist );
-                $adjacents = "2";
-                $cptaType = $cptaType;
                 if ( $paged == 1 ) {$prev = 1;} else{$prev = $paged - 1;}
                 if ( $paged == $last ) {$next = $last;} else{$next = $paged + 1;}
                 if( $cpta_Paginationlist > 0 ){ ?>
