@@ -6383,15 +6383,17 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*-------------
   ABOUT PAGE
 --------------*/
-/*УДАЛИТЬ!*/
-/* #main-content .aboutus_section1 {
-  background: #ddd;
-} */
-/*********************/
-/*УДАЛИТЬ!*/
-/* #wrapper-1 .vc_gitem-animate-none .vc_gitem-zone-b {
-  opacity: 1 !important;
-} */
+
+#main-content .write-about-us-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-content .write-about-us-slide img:not(:last-child) {
+  margin-bottom: 40px;
+}
 
 #main-content .aboutus_section1 {
   padding: 131px 130px;

@@ -25,6 +25,16 @@ jQuery(document).ready(function($) {
     arrows: false,
   });
 
+
+  // About us page. Write about us slider. Mobile  
+  $(".write-about-us-slick-mob").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true
+
+  });
+
   // FRIENDS SLIDER (DESKTOP AND MOBILE)
   $(".friends-slider").slick({
     slidesToShow: 1,
