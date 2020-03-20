@@ -4033,12 +4033,13 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   margin-right: 11px;
   margin-bottom: 9px;
   background: #fff;
-  padding: 26px 30px 22px 30px;
+  padding: 15px 15px;
+  line-height: 23px;
 }
 
 .project_banner_section1_item h5 {
   font-family: "Proxima-Nova-Bold";
-  font-size: 32px;
+  font-size: 27px;
 }
 
 .project_banner_section1_item .column_text {
@@ -4062,6 +4063,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   display: flex;
   flex-wrap: wrap;
 }
+
+
 
 #main-content .project_banner_section1_right .vc_column-inner {
   padding-left: 154px;
@@ -4241,9 +4244,17 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   .section-projects .vc_tta-panel-body .wpb_content_element {
     margin-bottom: 0;
   }
+
+  .projects-section .section-projects .vc_tta-panel-body .wpb_content_element {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 1300px) {
+  .projects-section .vc_grid.vc_row.vc_grid-gutter-30px .vc_pageable-slide-wrapper {
+    justify-content: space-between;
+  }
+
   .projects-section
     .vc_grid.vc_row.vc_grid-gutter-30px
     .vc_pageable-slide-wrapper {
@@ -4346,6 +4357,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     .vc_tta-tab
     > a {
     padding: 5px 0;
+  }
+
+  .wpb-js-composer #main-content .section-projects li.vc_tta-tab.vc_active span {
+    border-bottom: none !important;
   }
 }
 
@@ -6273,6 +6288,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*-------------
   ABOUT PAGE
 --------------*/
+.our_team_mob {
+  display: none;
+}
+
+.about-us-testimonials-mob {
+  display: none;
+}
 
 #main-content .write-about-us-slide {
   display: flex;
@@ -6290,7 +6312,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 #main-content .aboutus_section2 .vc_custom_1584622588928 {
-  padding-top: 24px !important;
+  padding-top: 0 !important;
 }
 
 #main-content .aboutus_section3 .vc_grid_filter-item {
@@ -6325,6 +6347,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   background: url(../../img/play_video_big.svg);
   background-size: 60px 60px;
   background-repeat: no-repeat;
+}
+
+.aboutus_section2 .about-us-text1 {
+  margin-bottom: 60px;
 }
 
 #main-content .our_team_section .vc_grid-item {
@@ -6496,7 +6522,24 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content .write_about_us_carousel .slick-dots {
     left: 0;
   }
+
+  .our_team_desk {
+    display: none;  
+  }
+
+  .our_team_mob {
+    display: block;
+  }
+
+  .about-us-testimonials-desk {
+    display: none;  
+  }
+
+  .about-us-testimonials-mob {
+    display: block;
+  }
 }
+
 
 @media screen and (max-width: 560px) {
 
@@ -6638,7 +6681,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .aboutus_section2 .about-us-text1 {
     padding-left: 20px;
-    margin-bottom: 16px;
+    margin-bottom: 39px;
   }
 
   .aboutus_section2 .about-us-text2 {
