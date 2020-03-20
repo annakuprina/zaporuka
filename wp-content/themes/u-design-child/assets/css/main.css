@@ -2133,9 +2133,9 @@ h3 {
   }
 }
 
-/*---------
-  REVIEWS
-----------*/
+/*---------------------------
+  REVIEWS(for About us page)
+----------------------------*/
 .reviews-wrapper {
   display: flex;
   justify-content: space-between;
@@ -2177,6 +2177,37 @@ h3 {
     line-height: 24px;
   }
 }
+@media screen and (max-width: 500px) {
+  .reviews-item:last-child {
+    margin-bottom: 10px !important;
+  }
+
+  .reviews-block .list-cptapagination {
+    margin-bottom: 26px;
+  }
+
+  .about-us-testimonials {
+    margin-bottom: 1px;
+  }
+
+  .about_block6 .help .help-form-inner-wrapper .help-form-inner-title {
+    font-size: 18px;
+    padding-bottom: 29px;
+  }
+
+  .about_block6 .help .help-form-email-tel {
+    padding-bottom: 19px;
+  }
+
+  .about_block6 .help .help-form-inner-wrapper .help-form-text {
+    padding-bottom: 33px;
+  }
+
+  .about_block6 .help .help-form-inner-wrapper {
+    padding: 42px 20px;
+  }
+}
+
 
 /*-----------------------------------------------------------------------------
   HELP(orange blocks and contact form) for one projects page and modal window
@@ -2444,147 +2475,6 @@ h3 {
   }
 }
 /*
-@media screen and (max-width: 1024px) {
-  .help {
-    flex-direction: column;
-    align-items: center;
-    box-shadow: none;
-  }
-
-  .help-right {
-    min-width: 503px;
-    max-width: 503px;
-    box-shadow: 4px 4px 30px rgba(128, 128, 128, 0.2);
-  }
-
-  .help-left {
-    box-shadow: 4px 4px 30px rgba(128, 128, 128, 0.2);
-  }
-
-  .help-form-inner-wrapper .help-form-submit-oferta {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .help-form-inner-wrapper .help-form-email-tel {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email,
-  .help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel {
-    width: 100%;
-  }
-
-  .help-form-inner-wrapper .help-form-amount .help-form-amount-left {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email {
-    padding-bottom: 14px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .help-form-inner-wrapper .help-form-amount {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .home-first-post-image .home-first-post-post-title h4 {
-    padding-top: 0;
-  }
-
-  .help-form-inner-wrapper .help-form-amount-right {
-    width: 100%;
-  }
-
-  .help-form-inner-wrapper
-    .help-form-amount
-    .help-form-amount-right
-    .amount-button {
-    width: 33.3%;
-  }
-
-  .help-form-submit {
-    order: 3;
-  }
-
-  .help-form-inner-wrapper .help-form-oferta label:not(.error) {
-    margin-bottom: 32px;
-  }
-
-  .help-form-inner-wrapper .help-form-inner-title {
-    padding-bottom: 33px;
-    font-size: 18px;
-  }
-
-  .help-form-inner-wrapper .help-form-amount {
-    padding-bottom: 14px;
-  }
-
-  .help-form-inner-wrapper .help-form-email-tel {
-    padding-bottom: 20px;
-  }
-
-  .help-form-inner-wrapper .help-form-subscribe {
-    padding-bottom: 20px;
-  }
-
-  .help-form-inner-wrapper .help-form-text {
-    line-height: 15px;
-  }
-
-  .help-form-inner-wrapper .help-form-text {
-    padding-bottom: 40px;
-  }
-
-  .help_form_wrapper {
-    min-width: initial;
-    max-width: initial;
-  }
-
-  .help-right {
-    min-width: initial;
-    max-width: initial;
-    flex-direction: column;
-  }
-
-  .help-item {
-    width: 100%;
-    font-family: "Proxima-Nova-Regular";
-    font-weight: 700;
-    line-height: 26px;
-    height: initial;
-    padding: 39px 20px;
-    justify-content: flex-start;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  }
-
-  .help-item:nth-child(1) {
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-  }
-
-  .help-item-title {
-    font-size: 18px;
-  }
-
-  .help-right {
-    width: 503px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .help .help-left {
-    min-width: 100%;
-  }
-  .help .help-right {
-    width: 100%;
-  }
-} */
 
 /*FOOTER*/
 
@@ -6391,12 +6281,39 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   align-items: center;
 }
 
-#main-content .write-about-us-slide img:not(:last-child) {
+#main-content .write-about-us-slick-mob .write-about-us-slide img {
   margin-bottom: 40px;
 }
 
 #main-content .aboutus_section1 {
-  padding: 131px 130px;
+  padding: 136px 130px;
+}
+
+#main-content .aboutus_section2 .vc_custom_1584622588928 {
+  padding-top: 24px !important;
+}
+
+#main-content .aboutus_section3 .vc_grid_filter-item {
+  padding-bottom: 40px;
+}
+
+#main-content  .write_about_us_button_wrapper .help_button_single_block .vc_btn3 {
+  padding-top: 25px !important;
+  padding-right: 0;
+  padding-left: 4px;
+}
+
+.write_about_us_button_wrapper .help_button_single_block .vc_btn3::after {
+    padding-left: 8px;
+}
+
+
+#main-content .write-aboutus-carousel-wrapper {
+  padding-top: 22px;
+}
+
+#main-content .write_about_us_carousel .slick-dots {
+  left: 10.8%;
 }
 
 #main-content .aboutus_section1 .video_button a:before {
@@ -6413,7 +6330,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 #main-content .our_team_section .vc_grid-item {
   width: 353px;
   padding-right: 0;
-  margin-right: 40px;
 }
 
 .our-team-front-wrapper .team-member-title {
@@ -6476,22 +6392,127 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .vc_grid.vc_row.vc_grid-gutter-30px
   .vc_pageable-slide-wrapper {
   margin-right: 0;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.aboutus_section3
+  .vc_grid.vc_row.vc_grid-gutter-30px
+  .vc_pageable-slide-wrapper::before, 
+.aboutus_section3
+  .vc_grid.vc_row.vc_grid-gutter-30px
+  .vc_pageable-slide-wrapper::after {
+    display: none;
+}
+
+#wrapper-1 .write-aboutus-carousel-mob-wrapper {
+  display: none;
+}
+
+.about_section4 .wpb_wrapper p {
+  line-height: 26px;
+}
+
+.write-aboutus-wrapper + .testimonials_section .pagination-block {
+  margin-top: 12px;
+}
+
+#wrapper-1 .write-aboutus-wrapper {
+  padding-top: 120px;
 }
 
 @media screen and (max-width: 1200px) {
-  #main-content .our_team_section .vc_grid-item {
-    width: 291px;
-    margin-right: 20px;
-  }
-
-  #main-content .our_team_section .vc_grid-item:nth-child(3n) {
-    margin-right: 20px;
+  .aboutus_section3 .vc_grid.vc_row.vc_grid-gutter-30px .vc_pageable-slide-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -30px;
   }
 
   .aboutus_section3
     .vc_grid.vc_row.vc_grid-gutter-30px
-    .vc_pageable-slide-wrapper {
-    margin-right: -20px;
+    .vc_pageable-slide-wrapper:before,
+  .aboutus_section3
+    .vc_grid.vc_row.vc_grid-gutter-30px
+    .vc_pageable-slide-wrapper:after {
+    display: none;
+  }
+
+  #main-content .our_team_section .vc_grid-item {
+    padding-right: 30px;
+  }
+
+ 
+
+}
+
+@media screen and (max-width: 1024px) {
+  #wrapper-1 .aboutus_section2 .block_excerpt_container {
+    padding: 25px 0 0 20px;
+  }
+
+  /*our mission*/
+  #main-content .aboutus_section2 {
+    padding-top: 59px;
+  }
+
+  #main-content .aboutus_section2 .vc_column-inner {
+    padding-top: 0;
+  }
+
+  #main-content .write_about_us_button_wrapper .vc_column-inner {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*right sidebar*/
+  #wrapper-1 .aboutus_section2 .block_excerpt_container {
+    padding: 25px 0 0 0;
+  }
+
+  /*first block*/
+  #wrapper-1 .aboutus_section1 .video_button {
+    text-align: left;
+  }
+
+  .aboutus_section1_wrapper .wpb_column:nth-child(1) {
+    margin-bottom: 47px;
+  }
+
+  .about-us-testimonials .count_pages {
+    position: static;
+  }
+
+  #wrapper-1 .write-aboutus-carousel-wrapper {
+    display: none;
+  }
+
+  #wrapper-1 .write-aboutus-carousel-mob-wrapper {
+    display: block;
+  }
+
+  #main-content .write_about_us_carousel .slick-dots {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+
+  #main-content .write-about-us-slick-mob .write-about-us-slide img {
+    max-height: 50px;
+  }
+
+  #our_team .vc_pageable-slide-wrapper {
+    justify-content: center;
+  }
+
+  #main-content .aboutus_section3  .vc_grid-item{
+    width: 291px;
+    min-width: unset;
+    padding-bottom: 20px;
+
   }
 
   .our_team_section .our-team-hover-wrapper {
@@ -6526,69 +6547,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     margin-bottom: 17px;
   }
 
-  .aboutus_section3
-    .vc_grid.vc_row.vc_grid-gutter-30px
-    .vc_pageable-slide-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .aboutus_section3
-    .vc_grid.vc_row.vc_grid-gutter-30px
-    .vc_pageable-slide-wrapper:before,
-  .aboutus_section3
-    .vc_grid.vc_row.vc_grid-gutter-30px
-    .vc_pageable-slide-wrapper:after {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #wrapper-1 .aboutus_section2 .block_excerpt_container {
-    padding: 25px 0 0 20px;
-  }
-
-  /*our mission*/
-  #main-content .aboutus_section2 {
-    padding-top: 59px;
-  }
-
-  #main-content .aboutus_section2 .vc_column-inner {
-    padding-top: 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /*right sidebar*/
-  #wrapper-1 .aboutus_section2 .block_excerpt_container {
-    padding: 25px 0 0 0;
-  }
-
-  /*first block*/
-  #wrapper-1 .aboutus_section1 .video_button {
-    text-align: left;
-  }
-
-  .aboutus_section1_wrapper .wpb_column:nth-child(1) {
-    margin-bottom: 47px;
-  }
-
-  .about-us-testimonials .count_pages {
-    position: static;
-  }
-}
-
-@media screen and (max-width: 560px) {
-  #our_team .vc_pageable-slide-wrapper {
-    justify-content: center;
-  }
-
-  #our_team .vc_grid-item {
-    width: 291px;
-    min-width: unset;
-  }
-
   #wrapper-1 .aboutus_section1_wrapper h2 {
     font-family: "Raleway-Regular" !important;
     font-size: 24px !important;
@@ -6621,19 +6579,51 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     font-size: 14px;
     line-height: 24px;
   }
+}
 
-  /* 
-  .aboutus_section2 .before_rectangle_block p::before {
-    padding-right: 11px;
+@media screen and (max-width: 500px) {
+  .write-aboutus-wrapper .vc_custom_heading h2-header-line::before {
+    left: -14px;
   }
 
-  .before_rectangle_block .wpb_wrapper p {
-    padding-left: 24px;
+  #main-content .aboutus_section2 .h2-about-first-title::before,
+  #main-content .aboutus_section2 .h2-about-second-title::before {
+    left: -14px;
   }
 
-  .wpb_content_element p {
-    padding-left: 24px;
-  } */
+  #main-content .aboutus_section3 .h2-header-line::before{
+    left: -14px;
+  }
+
+  .write-aboutus-wrapper .h2-header-line::before {
+    left: -14px;
+  }
+
+  .testimonials_section .h2-header-line::before {
+    left: -14px;
+  }
+
+
+  #main-content  .aboutus_section3 {
+    padding-top: 1px;
+  }
+  
+  .testimonials_section .h2-header-line {
+    margin-bottom: 18px;
+  }
+
+  #main-content .aboutus_section3 .about_team_text {
+    font-family: "Proxima-Nova-Regular";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 21px;
+    margin-bottom: 14px;
+  }
+
+  #main-content  .aboutus_section3 .h2-header-line {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -6648,7 +6638,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .aboutus_section2 .about-us-text1 {
     padding-left: 20px;
-    margin-bottom: 27px;
+    margin-bottom: 16px;
   }
 
   .aboutus_section2 .about-us-text2 {
@@ -6686,7 +6676,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   #wrapper-1 .aboutus_section2 .block_excerpt_container {
-    padding: 26px 20px 0 20px;
+    padding: 20px 20px 0 20px;
+  }
+
+  .about_section4 .wpb_wrapper p {
+    line-height: 24px;
   }
 }
 /*----------------------
