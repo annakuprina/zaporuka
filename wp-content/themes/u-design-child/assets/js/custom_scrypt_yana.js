@@ -78,6 +78,7 @@ jQuery(document).ready(function($) {
     var ajax_url = "/wp-content/themes/u-design-child/inc/custom_ajax.php";
     var post_type = $(this).attr("data-type");
     var limit = $(this).attr("data-limit");
+    var pag_check = $('.pagination-check').attr('data-type');
     jQuery.ajax({
       url: ajax_url,
       type: "post",
@@ -85,7 +86,8 @@ jQuery(document).ready(function($) {
         custom_action: "true",
         number: nth,
         post_type: post_type,
-        limit: limit
+        limit: limit,
+        pag_check: pag_check
       },
       beforeSend: function() {
         $(".preloader").css("display", "block");
