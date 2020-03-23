@@ -2179,7 +2179,7 @@ h3 {
 }
 @media screen and (max-width: 500px) {
   .reviews-item:last-child {
-    margin-bottom: 10px !important;
+    margin-bottom: 21px !important;
   }
 
   .reviews-block .list-cptapagination {
@@ -2205,6 +2205,18 @@ h3 {
 
   .about_block6 .help .help-form-inner-wrapper {
     padding: 42px 20px;
+  }
+
+  #main-content .aboutus_section3 .vc_pageable-load-more-btn {
+    margin-top: 19px;
+  }
+
+  #main-content .about_block6 {
+    padding-bottom: 0;
+  }
+
+  #main-content .about_block6 .entry {
+    padding: 0 0 5px;
   }
 }
 
@@ -6296,6 +6308,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   display: none;
 }
 
+
+
 #main-content .write-about-us-slide {
   display: flex;
   flex-direction: column;
@@ -6538,6 +6552,29 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .about-us-testimonials-mob {
     display: block;
   }
+
+  .wpb-js-composer #page-content #main-content .about-us-page--tabs .vc_general .vc_tta-panel-body {
+    position: static;
+    padding: 20px 20px 36px 20px;
+    background:#fff;
+  }
+
+  .wpb-js-composer #page-content #main-content .about-us-page--tabs  .vc_tta-container h2 {
+    padding: 41px 20px; 
+  }
+
+  .wpb-js-composer .about-us-page--tabs .vc_general .vc_tta-panel .vc_tta-panel-title>a {
+    padding: 37px 20px;
+  }
+
+  .wpb-js-composer .about-us-page--tabs .vc_general .vc_active .vc_tta-panel-title>a {
+    padding: 0px 20px 0 20px;
+    margin: 38px 0 -1px 0px;
+  }
+
+  .write-aboutus-wrapper .h2-header-line {
+    margin-bottom: 86px;
+  }
 }
 
 
@@ -6625,6 +6662,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 @media screen and (max-width: 500px) {
+
+
   .write-aboutus-wrapper .vc_custom_heading h2-header-line::before {
     left: -14px;
   }
@@ -6643,7 +6682,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   .testimonials_section .h2-header-line::before {
-    left: -14px;
+    left: 1px;
   }
 
 
@@ -6653,6 +6692,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   
   .testimonials_section .h2-header-line {
     margin-bottom: 18px;
+    padding-left: 36px;
   }
 
   #main-content .aboutus_section3 .about_team_text {
@@ -6681,7 +6721,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .aboutus_section2 .about-us-text1 {
     padding-left: 20px;
-    margin-bottom: 39px;
+    margin-bottom: 41px;
   }
 
   .aboutus_section2 .about-us-text2 {
@@ -6690,7 +6730,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   .aboutus_section2 .about-us-text3 {
-    padding-left: 40px;
+    padding-left: 21px;
     margin-bottom: 40px;
   }
 
