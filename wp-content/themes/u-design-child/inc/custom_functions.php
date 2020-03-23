@@ -73,7 +73,7 @@ function shortcode_milestones(){
                         <!-- Timeline for mob version-->
                         <div class="one-step-timeline-mob-wrapper">
                             <div class="one-step-timeline-mob">
-                                <p class="one-step-timeline-inner"></p>
+                                <p class="one-step-timeline-inner" style="width: <?php echo $progress_bar; ?>%"></p>
                             </div>
                         </div>
                         <div class="one-step-timeline-wrapper tabs_caption <?php echo $active_tab; ?>">
