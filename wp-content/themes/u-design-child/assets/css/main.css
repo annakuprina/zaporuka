@@ -5817,7 +5817,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   color: rgba(51, 51, 51, 0.29);
   font-family: "Raleway-Bold";
   font-size: 16px;
-  width: 90px;
+  width: 100px;
 }
 
 .category-expand-button {
@@ -5881,24 +5881,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #main-content .shop-custom-wrapper .woocommerce-custom-product-filter {
   padding-bottom: 31px;
-}
-
-#main-content .product .shop-page-price-title {
-  padding: 27px 30px;
-  background:rgba(255,255,255,0.8);
-  width: 100%;
-}
-
-#main-content .product .woocommerce-Price-amount {
-  color: #de7b33;
-}
-
-#main-content .product:hover .shop-page-price-title{
-  background:transparent;
-}
-
-#main-content .product:hover .woocommerce-Price-amount {
-  color: #fff;
 }
 
 
@@ -5967,7 +5949,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 #main-content .shop-custom-wrapper .woocommerce-LoopProduct-link img {
   width: 100%;
   height: 100%; 
-  
+
 }
 
 @media screen and (max-width: 1300px) {
@@ -7026,6 +7008,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-top: 48px;
 }
 
+/*cart*/
+.single-product #page-content .single-product-cart-link .cart-count {
+  top: 3px;
+  left: 0px;
+} 
+
 .woocommerce.single-product #wrapper-1 div.product div.summary {
   margin-top: 4px;
 }
@@ -7078,6 +7066,23 @@ div.product form.cart {
 }
 
 
+#main-content li.product .shop-page-price-title {
+  padding: 27px 30px;
+  background:rgba(255,255,255,0.8);
+  width: 100%;
+}
+
+#main-content li.product .woocommerce-Price-amount {
+  color: #de7b33;
+}
+
+#main-content li.product:hover .shop-page-price-title{
+  background:transparent;
+}
+
+#main-content li.product:hover .woocommerce-Price-amount {
+  color: #fff;
+}
 
 .single-product #wrapper-1 .single-product-cart-link {
   padding-top: 47px;
@@ -7109,10 +7114,6 @@ div.product form.cart {
   margin-right: 40px;
 }
 
-/* .woocommerce-page ul.products {
-  margin-right: -40px;
-} */
-
 .woocommerce.single-product #wrapper-1 .related .shop-page-price-title {
   width: 100%;
   padding: 35px 32px;
@@ -7124,11 +7125,22 @@ div.product form.cart {
   left: 2px;
 }
 
+body.product ul.products {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -40px;
+}
+
+.woocommerce.single-product #main-content .related .product{
+  margin-right: 40px;
+  max-width: 353px;
+  min-width: 260px;
+  width: calc((100% - 120px)/3);
+}
+
 @media screen and (max-width: 1200px) {
   .woocommerce.single-product #wrapper-1 div.product div.summary {
-    max-width: 471px;
     margin-bottom: 0;
-    width: calc(100% - 640px);
   }
 
   .woocommerce.single-product #wrapper-1 div.product p.price {
@@ -7157,23 +7169,11 @@ div.product form.cart {
     .price {
     padding-bottom: 20px;
   }
-
-  /* .woocommerce ul.products.columns-3 li.product,
-  .woocommerce-page ul.products.columns-3 li.product {
-    width: calc((100% - 120px) / 3);
-    margin-right: 40px;
-    min-width: 300px;
-  }
-
-  .woocommerce ul.products {
-    margin-right: -40px;
-  } */
 }
 
 @media screen and (max-width: 950px) {
   .woocommerce.single-product #wrapper-1 .single-product-cart-link {
     text-align: right;
-    padding-top: 0;
   }
 
   .woocommerce.single-product #wrapper-1 div.product {
@@ -7198,22 +7198,14 @@ div.product form.cart {
 
   .woocommerce .related ul.products li.product,
   .woocommerce .related ul li.product {
-    min-width: 250px;
-    width: calc(50% - 20px);
+    margin-right: 0;
   }
 
   .woocommerce ul.products {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* margin-right: -20px; */
   }
-/* 
-  .woocommerce .related ul.products li.product,
-  .woocommerce .related ul li.product {
-    width: 250px;
-    margin-right: 20px;
-  } */
 
   .woocommerce.single-product
     #wrapper-1
@@ -7231,7 +7223,15 @@ div.product form.cart {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+  .single-product h2.h2-header-line::before {
+    width: 20px;
+    left: -15px;
+  }
+
+  .single-product .woocommerce-Tabs-panel p {
+    padding-left: 21px;
+  }
 }
 
 /*-------------------------
