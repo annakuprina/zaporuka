@@ -70,9 +70,11 @@ function shortcode_milestones(){
                     ?>
                     <!-- ONE STEP -->
                     <div class="proj-timeline-one-step <?php echo $class; ?> one-tab-link" data-id="<?php echo $i; ?>">
-                        <!-- Hidden  timeline for mob version-->
-                        <div class="one-step-timeline-mob">
-                            <p class="one-step-timeline-inner"></p>
+                        <!-- Timeline for mob version-->
+                        <div class="one-step-timeline-mob-wrapper">
+                            <div class="one-step-timeline-mob">
+                                <p class="one-step-timeline-inner"></p>
+                            </div>
                         </div>
                         <div class="one-step-timeline-wrapper tabs_caption <?php echo $active_tab; ?>">
                             <div class="one-step-title"><?php echo $item["milestone-name"]; ?></div>
