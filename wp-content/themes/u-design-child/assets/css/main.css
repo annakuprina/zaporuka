@@ -671,6 +671,10 @@ h3 {
   margin-bottom: 24px;
 }
 
+.one-project-left {
+  width: 50%;
+}
+
 .one-project-right {
   width: 50%;
 }
@@ -809,12 +813,17 @@ h3 {
   align-items: center;
 }
 
-.project-partners-slick-mob .project-partners-slide img:not(:last-child) {
+.project-partners-slick-mob .project-partners-slide img {
   margin-bottom: 40px;
 }
 
 .block-project-partners .project-partners-slick-mob .slick-dots {
   left: 0;
+  bottom: 0;
+}
+
+.project-partners-slick-mob {
+  display: none;  
 }
 
 /* Media for one Project block(home page) */
@@ -910,7 +919,7 @@ h3 {
     padding: 0px 0 0 0;
   }
 
-  .project-partners-carousel-wrapper {
+  .wpb_wrapper .project-partners-carousel-wrapper {
     display: none;
   }
 }
@@ -1928,14 +1937,23 @@ h3 {
   position: relative;
 }
 
-.one-step-timeline-inner {
-  height: 50px;
+.one-step-timeline-mob:after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  bottom: 0;
+  left: -4px;
+  background: #e78b48;
+  height: 1px;
+}
+
+.one-step-timeline-inner-mob {
   background-color: transparent;
   position: absolute;
   top: 0;
   left: -1px;
-  width: 3px;
-  background: orange;
+  width: 2px;
+  background: #ee8b43;
 }
 
 .proj-timeline-one-step:not(:last-child) .one-step-timeline:after {
@@ -1955,16 +1973,25 @@ h3 {
   left: 0;
   width: 200px;
 }
-/*Удалить*/
-.one-step-timeline-mob {  
-  display: none;
-}
 
 /*Media for project timeline*/
 @media screen and (max-width: 1024px) {
   .one-step-timeline-mob-wrapper {
     display: flex;
   }
+
+  .one-step-timeline-wrapper {
+    width: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  .proj-timeline-one-step:not(:first-child) .one-step-timeline-wrapper {
+    justify-content: center;
+  }
+
 
   .proj-timeline-top {
     flex-direction: column;
@@ -2036,12 +2063,19 @@ h3 {
   .proj-timeline-steps .one-step-title {
     font-size: 18px;
     margin-bottom: -5px;
+    padding: 0;
   }
 
   .proj-timeline-steps .one-step-money {
     width: 144px;
     line-height: 14px;
-    margin: auto;
+    text-align: left;
+    padding: 0;
+  }
+
+  .proj-timeline-one-step {
+    height: 100px;
+    display: flex;
   }
 }
 
@@ -4554,14 +4588,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   max-width: 700px;
   max-height: 90%;
 }
-
-/* .media-sliders-wrapper {
-  display: none;
-  
-  margin-bottom: 70px;
-  position: relative;
-  height: 400px;
-} */
 
 .media-slider {
   position: relative;
