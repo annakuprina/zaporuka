@@ -1912,13 +1912,30 @@ h3 {
   margin-bottom: 18px;
 }
 
-.one-step-timeline-mob {
+
+/* Mobile timeline. Hidden on desktop */
+.one-step-timeline-mob-wrapper {
   display: none;
-  height: 1px;
-  background-color: rgba(165, 165, 165, 0.35);
-  width: 100%;
+  justify-content: center;
+  height: 100%;
+  width: 50px;
+}
+
+.one-step-timeline-mob {
+  width: 1px;
+  height: 100%;
+  background: #d4d4d4;
   position: relative;
-  margin-bottom: 18px;
+}
+
+.one-step-timeline-inner {
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 3px;
+  background: orange;
 }
 
 .proj-timeline-one-step:not(:last-child) .one-step-timeline:after {
@@ -1938,9 +1955,17 @@ h3 {
   left: 0;
   width: 200px;
 }
+/*Удалить*/
+.one-step-timeline-mob {  
+  display: none;
+}
 
 /*Media for project timeline*/
 @media screen and (max-width: 1024px) {
+  .one-step-timeline-mob-wrapper {
+    display: flex;
+  }
+
   .proj-timeline-top {
     flex-direction: column;
     align-items: flex-start;
@@ -2008,10 +2033,6 @@ h3 {
     display: none;
   }
 
-  .one-step-timeline-mob {
-    display: block;
-  }
-
   .proj-timeline-steps .one-step-title {
     font-size: 18px;
     margin-bottom: -5px;
@@ -2023,6 +2044,7 @@ h3 {
     margin: auto;
   }
 }
+
 
 /*------
   KIDS
