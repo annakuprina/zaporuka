@@ -475,9 +475,4 @@ function check_liqpay_archive_function() {
     }
 }
 
-//add_action('init', 'create_post_type_separate_categories');
-//function create_post_type_separate_categories(){
-//    register_taxonomy( 'dijuchi', 'projects', array( 'hierarchical' => true, 'label' => 'Категорії', 'query_var' => true, 'rewrite' => true ) );
-//
-//}
 
