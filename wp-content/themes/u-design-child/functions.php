@@ -216,7 +216,7 @@ function set_custom_projects_columns_data( $column ) {
 //        $project_category = wp_get_post_categories( $post->ID, array('fields' => 'all') );
         $taxonomies=get_taxonomies('','projects_category');
         $project_category = wp_get_post_terms($post->ID, $taxonomies,  array("fields" => "names"));
-        echo $project_category;
+        var_dump($project_category);
 //        for ($i=1; $i>count($project_category), ++$i;){
 //            if ( $i != count($project_category)){
 //
