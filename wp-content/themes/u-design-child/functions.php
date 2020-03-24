@@ -194,7 +194,7 @@ function remove_image_zoom_support() {
 add_filter( 'manage_projects_posts_columns', 'set_custom_projects_columns' );
 function set_custom_projects_columns( $columns ) {
   $columns['displayOnHome'] = __( 'На главной' );
-  $columns['projects_category'] = __( 'Категорії' );
+  $columns['projects_category'] = __( 'Категорія' );
   return $columns;
 }
 
