@@ -614,3 +614,11 @@ function create_post_type_separate_categories(){
 
 }
 
+$my_posts = new WP_Query;
+$myposts = $my_posts->query( array( //Получаем записи
+    'post_type' => 'post', // Указываем исходный тип записи
+
+) );
+foreach( $myposts as $pst ){ //Цикл для изменения типа постов
+    set_post_type( $pst->ID, 'novini'  ); // Указываем нужный тип поста вместо "page"
+}
