@@ -310,20 +310,20 @@ function get_liqpay_list_page()
 
     // SQL order
 
-    $sOrder = '';
-    if (isset($_POST['iSortCol_0'])) {
-        $sOrder = 'ORDER BY  ';
-        for ($i = 0; $i < (int)$_POST['iSortingCols']; $i++) {
-            if ($_POST['bSortable_' . (int)$_POST['iSortCol_' . $i]] == 'true') {
-                $sOrder .= '`' . $aColumns[(int)$_POST['iSortCol_' . $i]] . '` ' .
-                    ($_POST['sSortDir_' . $i] === 'asc' ? 'asc' : 'desc') . ', ';
-            }
-        }
-        $sOrder = substr_replace($sOrder, '', -2);
-        if ($sOrder == 'ORDER BY') {
-            $sOrder = '';
-        }
-    }
+    $sOrder = 'ORDER BY xdate DESC';
+//    if (isset($_POST['iSortCol_0'])) {
+//        $sOrder = 'ORDER BY  ';
+//        for ($i = 0; $i < (int)$_POST['iSortingCols']; $i++) {
+//            if ($_POST['bSortable_' . (int)$_POST['iSortCol_' . $i]] == 'true') {
+//                $sOrder .= '`' . $aColumns[(int)$_POST['iSortCol_' . $i]] . '` ' .
+//                    ($_POST['sSortDir_' . $i] === 'asc' ? 'asc' : 'desc') . ', ';
+//            }
+//        }
+//        $sOrder = substr_replace($sOrder, '', -2);
+//        if ($sOrder == 'ORDER BY') {
+//            $sOrder = '';
+//        }
+//    }
 
     // SQL where
     $sWhere = '';

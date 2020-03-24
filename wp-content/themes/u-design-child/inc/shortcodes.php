@@ -135,15 +135,14 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
                         wpdb_update( $table_liqpay, [ 'status'=>'unsubscribe' ], [ 'unsubscribe'=>$_GET['order_id'] ] );
                     }
                     if(ICL_LANGUAGE_CODE=='uk'){
-                        $message =  "Ви здійснили скасування регулярного платежу - ";
+                        $message =  "Ви здійснили скасування регулярного платежу.";
                     }
                     elseif(ICL_LANGUAGE_CODE=='ru'){
-                        $message =  "Вы осуществили отмену регулярного платежа - ";
+                        $message =  "Вы осуществили отмену регулярного платежа.";
                     }
                     elseif(ICL_LANGUAGE_CODE=='en'){
-                        $message =  "You have canceled a recurring payment - ";
+                        $message =  "You have canceled a recurring payment.";
                     }
-                    echo "<h2>" . $message . $sql_res->comments .  "</h2>";
                 } else{
                     if(ICL_LANGUAGE_CODE=='uk'){
                         $message =  "Ви вже здійснили скасування регулярного платежу.";
@@ -154,8 +153,10 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
                     elseif(ICL_LANGUAGE_CODE=='en'){
                         $message =  "You have already canceled a recurring payment.";
                     }
-                    echo "<h2>" . $message . "</h2>";
-                }?>
+
+                }
+                echo "<h2>" . $message . "</h2>";
+	            ?>
            </div>
             <div class="help-form-submit-oferta">
                 <div class="help-form-submit-oferta">
