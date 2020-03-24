@@ -310,7 +310,7 @@ function get_liqpay_list_page()
 
     // SQL order
 
-    $sOrder = 'ORDER BY id DESC';
+    $sOrder = 'ORDER BY xdate DESC';
 //    if (isset($_POST['iSortCol_0'])) {
 //        $sOrder = 'ORDER BY  ';
 //        for ($i = 0; $i < (int)$_POST['iSortingCols']; $i++) {
