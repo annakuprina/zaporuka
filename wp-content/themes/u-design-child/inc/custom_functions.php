@@ -328,10 +328,10 @@ function my_module_add_grid_shortcodes( $shortcodes ) {
 add_shortcode( 'vc_custom_post_meta', 'vc_custom_post_meta_render' );
 function vc_custom_post_meta_render() {
 
-    $total_collected_timeline = "{{ post_meta_value:total-collected }}";
+    $total_collected_timeline = (!empty("{{ post_meta_value:total-collected }}")) ? "{{ post_meta_value:total-collected }}" : 0;
     $total_amount_timeline = '{{ post_data:total-amount }}';
     $symbol = check_currency();
-    //
+
     ob_start();
     ?>
 
