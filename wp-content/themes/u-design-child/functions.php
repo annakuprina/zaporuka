@@ -480,7 +480,7 @@ function create_post_type_separate_categories(){
     register_taxonomy( 'write_about_category', 'write_about_us', array( 'hierarchical' => true, 'label' => 'Категорії', 'query_var' => true, 'rewrite' => true ) );
     register_taxonomy( 'partners_category', 'partners', array( 'hierarchical' => true, 'label' => 'Категорії партнерiв', 'query_var' => true, 'rewrite' => true ) );
     register_taxonomy( 'project_partner_category', 'project_partner', array( 'hierarchical' => true, 'label' => 'Категорії партнерiв проекту', 'query_var' => true, 'rewrite' => true ) );
-    register_taxonomy( 'news_category', 'news', array( 'hierarchical' => true, 'label' => 'Категорії новин', 'query_var' => true, 'rewrite' => true ) );
+    register_taxonomy( 'news_category', 'novini', array( 'hierarchical' => true, 'label' => 'Категорії новин', 'query_var' => true, 'rewrite' => true ) );
 
 }
 
