@@ -192,7 +192,6 @@ jQuery(document).ready(function($) {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    verticalSwiping: true
   });
 
   //REWARDS SLIDER DESKTOP(index page)
@@ -201,7 +200,6 @@ jQuery(document).ready(function($) {
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
-    verticalSwiping: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -221,7 +219,7 @@ jQuery(document).ready(function($) {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    verticalSwiping: true
+   
   });
 
   $(".header-mob-lang-switcher").click(function() {

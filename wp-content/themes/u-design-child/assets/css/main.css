@@ -896,6 +896,7 @@ h3 {
   .one-project-left {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 }
 
@@ -3920,6 +3921,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 .home-page-section5 .one-project-left {
   width: 50%;
 }
+
+
 /*---------------------
   HOME PAGE SECTION 6
 ----------------------*/
@@ -7281,5 +7284,11 @@ input[type="checkbox"] + label#oferta-error {
 
   .woocommerce .woocommerce-cart-form {
     padding-top: 20px;
+  }
+}
+/*ALL SlICK CAROUSELS*/
+@media screen and (max-width: 768px) {
+  .slick-slide.vc_visible-item {
+    display: inline-block !important;
   }
 }
