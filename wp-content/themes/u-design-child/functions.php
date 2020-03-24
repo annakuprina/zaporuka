@@ -144,6 +144,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Волонтери');
   pll_register_string('u-design-child', 'Дякуємо за підтримку!');
   pll_register_string('u-design-child', 'Ви скасували оплату!');
+  pll_register_string('u-design-child', 'Выберите год');
 });
 
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
@@ -194,6 +195,7 @@ function remove_image_zoom_support() {
 add_filter( 'manage_projects_posts_columns', 'set_custom_projects_columns' );
 function set_custom_projects_columns( $columns ) {
   $columns['displayOnHome'] = __( 'На главной' );
+  $columns['projects_category'] = __( 'Категорія' );
   return $columns;
 }
 
@@ -209,6 +211,22 @@ function set_custom_projects_columns_data( $column ) {
         else{
             echo "-";
         }      
+    }
+    if ( 'projects_category' === $column ) {
+//        $project_category = wp_get_post_categories( $post->ID, array('fields' => 'all') );
+        $taxonomies=get_taxonomies('','projects_category');
+        $project_category = wp_get_post_terms($post->ID, $taxonomies,  array("fields" => "names"));
+        echo $project_category;
+//        for ($i=1; $i>count($project_category), ++$i;){
+//            if ( $i != count($project_category)){
+//
+//                echo $project_category[$i]->name . ',';
+//            } else{
+//                echo $project_category[$i]->name;
+//            }
+//        }
+
+
     }
 }
 
