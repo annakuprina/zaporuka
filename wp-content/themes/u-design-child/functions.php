@@ -198,6 +198,29 @@ function set_custom_projects_columns( $columns ) {
   $columns['projects_category'] = __( 'Категорія' );
   return $columns;
 }
+add_filter( 'manage_novini_posts_columns', 'set_custom_novini_columns' );
+function set_custom_novini_columns( $columns ) {
+    $columns['news_category'] = __( 'Категорія' );
+    return $columns;
+}
+
+add_filter( 'manage_write_about_us_posts_columns', 'set_custom_write_about_us_columns' );
+function set_custom_write_about_us_columns( $columns ) {
+    $columns['write_about_category'] = __( 'Категорія' );
+    return $columns;
+}
+
+add_filter( 'manage_partners_posts_columns', 'set_custom_partners_columns' );
+function set_custom_partners_columns( $columns ) {
+    $columns['partners_category'] = __( 'Категорія' );
+    return $columns;
+}
+
+add_filter( 'manage_project_partner_posts_columns', 'set_custom_project_partner_columns' );
+function set_custom_project_partner_columns( $columns ) {
+    $columns['project_partner_category'] = __( 'Категорія' );
+    return $columns;
+}
 
 /* Add the data to the custom columns for the book post type:*/
 add_action( 'manage_projects_posts_custom_column' , 'set_custom_projects_columns_data', 10, 2 );
@@ -215,17 +238,107 @@ function set_custom_projects_columns_data( $column ) {
     if ( 'projects_category' === $column ) {
         $project_category = wp_get_post_terms($post->ID, 'projects_category',  array("fields" => "names"));
         $count_categories = count($project_category);
-        echo $project_category[0];
-//        var_dump($count_categories);
-//        for ($i=1; $i>$count_categories, ++$i;){
-//            if ( $i != $count_categories){
-//                echo $project_category[$i] . ',';
-//            } else{
-//                echo $project_category[$i];
-//            }
-//        }
+        $last_arr_key = array_keys($project_category)[count($project_category)-1];
 
+        if ( $count_categories > 1 ){
+            for ($i=0; $i < $count_categories; ++$i){
+                if ( $i != $last_arr_key){
+                    echo $project_category[$i] . ', ';
+                } else{
+                    echo $project_category[$i];
+                }
+            }
+        } else{
+            echo $project_category[0];
+        }
+    }
+}
 
+add_action( 'manage_novini_posts_custom_column' , 'set_custom_novini_columns_data', 10, 2 );
+function set_custom_novini_columns_data( $column ) {
+    global $post;
+    if ( 'news_category' === $column ) {
+        $project_category = wp_get_post_terms($post->ID, 'news_category',  array("fields" => "names"));
+        $count_categories = count($project_category);
+        $last_arr_key = array_keys($project_category)[count($project_category)-1];
+
+        if ( $count_categories > 1 ){
+            for ($i=0; $i < $count_categories; ++$i){
+                if ( $i != $last_arr_key){
+                    echo $project_category[$i] . ', ';
+                } else{
+                    echo $project_category[$i];
+                }
+            }
+        } else{
+            echo $project_category[0];
+        }
+    }
+}
+
+add_action( 'manage_write_about_us_posts_custom_column' , 'set_custom_write_about_us_columns_data', 10, 2 );
+function set_custom_write_about_us_columns_data( $column ) {
+    global $post;
+    if ( 'write_about_category' === $column ) {
+        $project_category = wp_get_post_terms($post->ID, 'write_about_category',  array("fields" => "names"));
+        $count_categories = count($project_category);
+        $last_arr_key = array_keys($project_category)[count($project_category)-1];
+
+        if ( $count_categories > 1 ){
+            for ($i=0; $i < $count_categories; ++$i){
+                if ( $i != $last_arr_key){
+                    echo $project_category[$i] . ', ';
+                } else{
+                    echo $project_category[$i];
+                }
+            }
+        } else{
+            echo $project_category[0];
+        }
+    }
+}
+
+add_action( 'manage_partners_posts_custom_column' , 'set_custom_partners_columns_data', 10, 2 );
+function set_custom_partners_columns_data( $column ) {
+    global $post;
+    if ( 'partners_category' === $column ) {
+        $project_category = wp_get_post_terms($post->ID, 'partners_category',  array("fields" => "names"));
+        $count_categories = count($project_category);
+        $last_arr_key = array_keys($project_category)[count($project_category)-1];
+
+        if ( $count_categories > 1 ){
+            for ($i=0; $i < $count_categories; ++$i){
+                if ( $i != $last_arr_key){
+                    echo $project_category[$i] . ', ';
+                } else{
+                    echo $project_category[$i];
+                }
+            }
+        } else{
+            echo $project_category[0];
+        }
+    }
+}
+
+add_action( 'manage_project_partner_posts_custom_column' , 'set_custom_project_partner_columns_data', 10, 2 );
+function set_custom_project_partner_columns_data( $column ) {
+    global $post;
+    if ( 'project_partner_category' === $column ) {
+        $project_category = wp_get_post_terms($post->ID, 'project_partner_category',  array("fields" => "names"));
+        $count_categories = count($project_category);
+        $last_arr_key = array_keys($project_category)[count($project_category)-1];
+
+        if ( $count_categories > 1 ){
+            for ($i=0; $i < $count_categories; ++$i){
+                if ( $i != $last_arr_key){
+                    echo $project_category[$i] . ', ';
+                } else{
+                    echo $project_category[$i];
+                }
+            }
+        } else{
+            echo $project_category[0];
+        }
     }
 }
 
