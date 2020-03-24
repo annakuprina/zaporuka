@@ -970,13 +970,13 @@ function shortcode_thanks_block(){
                             <?php echo $thanks_text; ?>
                         </div>
                     </a>
-                    <div class="thanks-share-link">
-                        <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'>
-                        <span class="one-project-socials"><?php pll_e( 'Подiлитися');?>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </span>
-                        </a>
-                    </div>
+<!--                    <div class="thanks-share-link">-->
+<!--                        <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=--><?php //echo urlencode(get_permalink() ); ?><!--", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'> -->
+<!--                        <span class="one-project-socials">--><?php //pll_e( 'Подiлитися');?>
+<!--                            <i class="fa fa-facebook" aria-hidden="true"></i>-->
+<!--                        </span>-->
+<!--                        </a>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
