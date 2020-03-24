@@ -1,0 +1,12 @@
+2020-03-24T23:08:01+02:00 CRITICAL Uncaught Error: Call to undefined function pll_register_string() in C:\OSPanel\domains\zaporuka\wp-content\themes\u-design-child\functions.php:125
+Stack trace:
+#0 C:\OSPanel\domains\zaporuka\wp-includes\class-wp-hook.php(288): {closure}('')
+#1 C:\OSPanel\domains\zaporuka\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 C:\OSPanel\domains\zaporuka\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\zaporuka\wp-settings.php(523): do_action('init')
+#4 C:\OSPanel\domains\zaporuka\wp-config.php(96): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\zaporuka\wp-load.php(37): require_once('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\zaporuka\wp-login.php(12): require('C:\\OSPanel\\doma...')
+#7 {main}
+  thrown у C:\OSPanel\domains\zaporuka\wp-content\themes\u-design-child\functions.php доступно 125
+
