@@ -213,19 +213,17 @@ function set_custom_projects_columns_data( $column ) {
         }      
     }
     if ( 'projects_category' === $column ) {
-//        $project_category = wp_get_post_categories( $post->ID, array('fields' => 'all') );
-        $taxonomies = get_taxonomy('projects_category');
         $project_category = wp_get_post_terms($post->ID, 'projects_category',  array("fields" => "names"));
         $count_categories = count($project_category);
+        echo $project_category[0];
 //        var_dump($count_categories);
-        for ($i=1; $i>$count_categories, ++$i;){
-            if ( $i != $count_categories){
-
-                echo $project_category[$i]->name . ',';
-            } else{
-                echo $project_category[$i]->name;
-            }
-        }
+//        for ($i=1; $i>$count_categories, ++$i;){
+//            if ( $i != $count_categories){
+//                echo $project_category[$i] . ',';
+//            } else{
+//                echo $project_category[$i];
+//            }
+//        }
 
 
     }
