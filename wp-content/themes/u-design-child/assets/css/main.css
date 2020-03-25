@@ -133,9 +133,16 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   margin-left: 0;
 }
 
+/*count of cart products(+3 for example) inside header navigation item "shop"*/
+#wrapper-1 #navigation-menu .cart-customlocation.cart-count {
+  color: #e78b48;
+}
+
 #top-elements {
   height: 77px;
 }
+
+
 #navigation-menu ul.sf-menu > li > a {
   display: block;
   padding: 0 26px 0 0;
@@ -541,6 +548,15 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 
   .mean-bar {
     display: none;
+  }
+
+  #wrapper-1 #navigation-menu .cart-customlocation.cart-count {
+    color: #ffffff;
+  }
+
+  #wrapper-1 #navigation-menu .cart-count-in-main-header {
+    right: 67px;
+    top: 9px;
   }
 }
 
