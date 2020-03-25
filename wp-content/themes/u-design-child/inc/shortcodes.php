@@ -134,26 +134,9 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
                     if( $res->result == 'ok' ) {
                         wpdb_update( $table_liqpay, [ 'status'=>'unsubscribe' ], [ 'unsubscribe'=>$_GET['order_id'] ] );
                     }
-                    if(ICL_LANGUAGE_CODE=='uk'){
-                        $message =  "Ви здійснили скасування регулярного платежу.";
-                    }
-                    elseif(ICL_LANGUAGE_CODE=='ru'){
-                        $message =  "Вы осуществили отмену регулярного платежа.";
-                    }
-                    elseif(ICL_LANGUAGE_CODE=='en'){
-                        $message =  "You have canceled a recurring payment.";
-                    }
+                    $message = !empty($options['cancel_subscription_text_after_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_text_after_' . ICL_LANGUAGE_CODE] : false;
                 } else{
-                    if(ICL_LANGUAGE_CODE=='uk'){
-                        $message =  "Ви вже здійснили скасування регулярного платежу.";
-                    }
-                    elseif(ICL_LANGUAGE_CODE=='ru'){
-                        $message =  "Вы уже осуществили отмену регулярного платежа.";
-                    }
-                    elseif(ICL_LANGUAGE_CODE=='en'){
-                        $message =  "You have already canceled a recurring payment.";
-                    }
-
+                    $message = !empty($options['cancel_subscription_text_after_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_text_after_' . ICL_LANGUAGE_CODE] : false;
                 }
                 echo "<h2>" . $message . "</h2>";
 	            ?>
