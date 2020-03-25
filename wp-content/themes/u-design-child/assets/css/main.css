@@ -2292,6 +2292,13 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 /*---------------------------
   REVIEWS(for About us page)
 ----------------------------*/
+
+/*this style shows hidden button in Write About us block,
+and shows hidden orange lines near titles on About us page*/
+#main-content .write-aboutus-wrapper .vc_row.vc_row-o-equal-height > .vc_column_container {
+  overflow: visible;
+}
+
 .reviews-wrapper {
   display: flex;
   justify-content: space-between;
@@ -6605,6 +6612,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-top: 25px !important;
   padding-right: 0;
   padding-left: 4px;
+  width: 160px;
 }
 
 .write_about_us_button_wrapper .help_button_single_block .vc_btn3::after {
