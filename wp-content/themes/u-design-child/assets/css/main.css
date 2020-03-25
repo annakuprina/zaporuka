@@ -7450,7 +7450,6 @@ input[type="checkbox"] + label#oferta-error {
   width: calc(100% - 50px);
   max-width: 700px;
   max-height: calc(100% - 160px);
-  overflow-x: hidden;
 }
 
 @media screen and (max-width: 1024px) {
