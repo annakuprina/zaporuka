@@ -145,7 +145,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Дякуємо за підтримку!');
   pll_register_string('u-design-child', 'Ви скасували оплату!');
   pll_register_string('u-design-child', 'Выберите год');
-  pll_register_string('advanced-custom-fields', 'mob');
+  pll_register_string('advanced-custom-fields', 'моб');
 });
 
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
