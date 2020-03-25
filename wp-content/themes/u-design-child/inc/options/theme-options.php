@@ -209,13 +209,13 @@ function setup_framework_options(){
             array(
                 'id' => 'become_volunteer_ru', //19
                 'type' => 'text',
-                'title' => __('Секция 2', 'nhp-opts'),
+                'title' => __('Секция 2 ru', 'nhp-opts'),
                 'std' => __('', 'nhp-opts'),
             ),
             array(
                 'id' => 'become_volunteer_hover_ru',
                 'type' => 'text',
-                'title' => __('Секция 2 (ховер)', 'nhp-opts'),
+                'title' => __('Секция 2 (ховер) ru', 'nhp-opts'),
                 'std' => __('', 'nhp-opts'),
             ),
             array(
@@ -281,7 +281,7 @@ function setup_framework_options(){
             array(
                 'id' => 'help_by_sms_ru', //22
                 'type' => 'text',
-                'title' => __('Секция 3', 'nhp-opts'),
+                'title' => __('Секция 3 ru', 'nhp-opts'),
                 'std' => __('', 'nhp-opts'),
             ),
             array(
@@ -294,6 +294,12 @@ function setup_framework_options(){
                 'id' => 'help_by_sms_hover_text_link_ru',
                 'type' => 'text',
                 'title' => __('Секция 3 текст ссылки (ховер) (ru)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'help_by_sms_hover_link_ru',
+                'type' => 'text',
+                'title' => __('Секция 3 ссылкa (ховер) (ru)', 'nhp-opts'),
                 'std' => __('', 'nhp-opts'),
             ),
             array(
@@ -315,6 +321,12 @@ function setup_framework_options(){
                 'std' => __('', 'nhp-opts'),
             ),
             array(
+                'id' => 'help_by_sms_hover_link_ua',
+                'type' => 'text',
+                'title' => __('Секция 3 ссылкa (ховер) (ua)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
                 'id' => 'help_by_sms_en', //24
                 'type' => 'text',
                 'title' => __('Секция 3 (en)', 'nhp-opts'),
@@ -330,6 +342,12 @@ function setup_framework_options(){
                 'id' => 'help_by_sms_hover_text_link_en',
                 'type' => 'text',
                 'title' => __('Секция 3 текст ссылки (ховер) (en)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'help_by_sms_hover_link_en',
+                'type' => 'text',
+                'title' => __('Секция 3 ссылкa (ховер) (en)', 'nhp-opts'),
                 'std' => __('', 'nhp-opts'),
             ),
             array(
