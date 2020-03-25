@@ -830,7 +830,7 @@ h6,
 }
 .fund-documents-wrapper .fund-document{
   /*display: flex;*/
-  /*width: 33%;*/
+  width: 33%;
   /*justify-content: center;*/
   /*align-items: center;*/
   padding: 0 20px;
