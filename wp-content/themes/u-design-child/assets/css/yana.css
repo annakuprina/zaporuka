@@ -831,6 +831,9 @@ h6,
 .fund-documents-wrapper .fund-document{
   width: 30%;
 }
+.fund-documents-wrapper .document-title {
+  min-height: 70px;
+}
 @media screen and (max-width: 768px) {
   .fund-documents-wrapper .fund-document{
     width: 100%;
