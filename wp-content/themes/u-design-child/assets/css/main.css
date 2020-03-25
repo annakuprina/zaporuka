@@ -1135,8 +1135,7 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 }
 
 .partners-slider-mob .partners-slider-mob-img {
-  width: 76px;
-  min-width: 76px;
+  min-width: 120px;
   margin-right: 17px;
 }
 
@@ -4227,6 +4226,15 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 }
 
 /*end home page section8*/
+
+/*---------------------------
+  HOME PAGE SECTION 8-inner
+----------------------------*/
+.home-page-section8-inner .slick-track {
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+}
 
 /*-----------------
   PROJECTS PAGE
