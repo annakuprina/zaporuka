@@ -626,7 +626,7 @@ add_action('init', function () {
 
 add_filter('acf/prepare_field', function ($field) {
     if (!is_admin()) {
-        $field['label'] = pll__($field['label']);
+        $field['label'] = pll_e($field['label']);
     }
     return $field;
 }, 10, 1);
