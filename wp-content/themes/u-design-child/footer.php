@@ -129,6 +129,17 @@ $logo_img_url = ( $udesign_options['custom_logo_img'] ) ? esc_url($udesign_optio
 </div>
 <!-- /Modal -->
 
+<!-- Ask for help Modal-->
+<div id="askForHelpModal"  class="modale" aria-hidden="true">
+	<a href="#" class="btn-close closemodale" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><g><path fill="#fff" d="M13.629 11.829l9.6-9.643c.514-.515.514-1.329 0-1.8-.515-.515-1.329-.515-1.8 0l-9.6 9.643L2.186.386C1.67-.13.857-.13.386.386c-.515.514-.515 1.328 0 1.8l9.6 9.643-9.6 9.642c-.515.515-.515 1.329 0 1.8.257.258.6.386.9.386.3 0 .643-.128.9-.386l9.643-9.642 9.642 9.642c.258.258.6.386.9.386.3 0 .643-.128.9-.386.515-.514.515-1.328 0-1.8z"/></g></g></svg></a>
+	<div class="modal-dialog">
+		<div class="modal-body">
+			best modal ever
+		</div>
+	</div>	
+</div>
+<!-- /Modal -->
+
 <?php
 udesign_footer_before();
 
