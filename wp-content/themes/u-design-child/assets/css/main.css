@@ -7227,8 +7227,10 @@ div.product form.cart {
 
 /* the slides */
 .single-product ul.products li.product{
-  margin: 0 20px;
+  margin: 0 20px !important;
+  max-width: 290px;
 }
+
 /* the parent */
 .single-product ul.products {
   margin: 0 -20px;
