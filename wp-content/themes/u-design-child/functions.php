@@ -145,6 +145,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Дякуємо за підтримку!');
   pll_register_string('u-design-child', 'Ви скасували оплату!');
   pll_register_string('u-design-child', 'Выберите год');
+  pll_register_string('advanced-custom-fields', 'mob');
 });
 
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
@@ -626,7 +627,7 @@ add_action('init', function () {
 
 add_filter('acf/prepare_field', function ($field) {
     if (!is_admin()) {
-        $field['label'] = pll_e($field['label']);
+        $field['label'] = pll__($field['label']);
     }
     return $field;
 }, 10, 1);
