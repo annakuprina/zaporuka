@@ -1,6 +1,20 @@
 jQuery(document).ready(function($) {
   var callHelpPopup = false;
 
+  //call Ask for help Modal
+  $( ".contact_need_help button" ).click(function(e) {
+    e.preventDefault();
+    $("#askForHelpModal").addClass("opened");
+    $("body").addClass("noscroll");
+  });
+
+  //close Ask for help Modal
+  $("#askForHelpModal .closemodale").click(function(e) {
+    e.preventDefault();
+    $("#askForHelpModal").removeClass("opened");
+    $("body").removeClass("noscroll");
+  });
+
   //call help sms modal from header
   $(
     "#custom-top-bar .top-bar-help-block a, #header-mob .top-bar-help-block a"
@@ -9,6 +23,7 @@ jQuery(document).ready(function($) {
     $("#sendSmsModalfromHeader").addClass("opened");
     $("body").addClass("noscroll");
   });
+
   //close help sms modal from header
   $("#sendSmsModalfromHeader .closemodale").click(function(e) {
     e.preventDefault();
