@@ -7407,3 +7407,32 @@ input[type="checkbox"] + label#oferta-error {
     clear: none !important;
   }
 }
+
+/* ASK FOR HELP MODAL*/
+#askForHelpModal .modal-dialog {
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% - 50px);
+  max-width: 700px;
+  max-height: calc(100% - 160px);
+}
+
+@media screen and (max-width: 1024px) {
+  #askForHelpModal .modal-dialog {
+    overflow-y: scroll;
+  }
+  
+  #askForHelpModal.opened .modal-dialog::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  #askForHelpModal.opened .modal-dialog::-webkit-scrollbar-track {
+    background: #ddd;
+    /* opacity: 0.1; */
+  }
+
+  #askForHelpModal.opened .modal-dialog::-webkit-scrollbar-thumb {
+    background-color: #e78b48;
+  }
+}
+
