@@ -725,6 +725,66 @@ function setup_framework_options(){
                 'title' => __('текст кнопки "Отменить" (en)', 'nhp-opts'),
                 'std' => __('', 'nhp-opts'),
             ),
+
+            array(
+                'id' => 'cancel_subscription_text_after_uk',
+                'type' => 'text',
+                'title' => __('текст после отмены подписки (ua)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'cancel_subscription_text_after_ru',
+                'type' => 'text',
+                'title' => __('текст после отмены подписки (ru)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'cancel_subscription_text_after_en',
+                'type' => 'text',
+                'title' => __('текст после отмены подписки (en)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'cancel_subscription_text_after_again_uk',
+                'type' => 'text',
+                'title' => __('текст после повторной отмены подписки (ua)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'cancel_subscription_text_after_again_ru',
+                'type' => 'text',
+                'title' => __('текст после повторной отмены подписки (ru)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'cancel_subscription_text_after_again_en',
+                'type' => 'text',
+                'title' => __('текст после повторной отмены подписки (en)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'help_text_contact_page',
+                'type' => 'info',
+                'desc' => __('Текст допомоги на сторiнцi контактiв', 'nhp-opts')
+            ),
+            array(
+                'id' => 'help_text_contact_page_uk',
+                'type' => 'textarea',
+                'title' => __('текст допомоги на сторiнцi контактiв (ua)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'help_text_contact_page_ru',
+                'type' => 'textarea',
+                'title' => __('текст допомоги на сторiнцi контактiв (ru)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
+            array(
+                'id' => 'help_text_contact_page_en',
+                'type' => 'textarea',
+                'title' => __('текст допомоги на сторiнцi контактiв (en)', 'nhp-opts'),
+                'std' => __('', 'nhp-opts'),
+            ),
         )
     );
     //copyrights
