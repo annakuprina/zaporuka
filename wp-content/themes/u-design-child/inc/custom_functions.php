@@ -1133,7 +1133,7 @@ function shortcode_fund_documents(){
             $fund_document = $item["fund_document"];
             $document_image = $item["document_image"]; ?>
             <div class="fund-document">
-                <div><h3><?php echo $document_name; ?></h3></div>
+                <div class="document-title"><h3><?php echo $document_name; ?></h3></div>
                 <div><a href="<?php echo $fund_document; ?>" target="_blank"><img src="<?php echo $document_image; ?>" alt=""></a></div>
             </div>
         <?php }
