@@ -1108,7 +1108,7 @@ function shortcode_write_about_us_desk(){
             ?>
             <!-- One slide -->
             <div class="write-about-us-slide-desk">
-                <a href="<?php echo $link_article; ?>">
+                <a href="<?php echo $link_article; ?>" target="_blank">
                     <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
                 </a>
             </div><!-- end one slide-->
