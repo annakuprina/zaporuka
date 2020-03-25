@@ -6304,6 +6304,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*----------------
   CONTACTS PAGE
 ----------------*/
+.wpb-js-composer #main-content .bank-details-block.vc_tta-tabs.vc_tta-tabs-position-top .vc_tta-tabs-list {
+  margin-bottom: 0 !important;
+}
+
+
+
 #main-content .contact-desktop > .vc_column_container > .vc_column-inner {
   padding-top: 61px;
 }
@@ -6329,16 +6335,19 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   word-break: break-word;
 }
 
-.bank-details-block {
+.bank-details-block .vc_tta-panel {
+  background: #fff;
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
 
-.bank-details-block .vc_tta-panel {
-  background: #fff;
+
+.wpb-js-composer #main-content .vc_tta-color-grey.vc_tta-style-classic.bank-details-block .vc_tta-panel .vc_tta-panel-body {
+  border: none;
 }
 
 #main-content .bank-details-block .vc_tta-tab {
   box-shadow: 4px 4px 24px rgba(209, 209, 209, 0.15);
+  background: #fff;
 }
 
 #main-content .contact_help_form {
@@ -6433,6 +6442,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .vc_tta-panel-body {
   padding-top: 45px;
 }
+
+
+
 @media screen and (max-width: 1400px) {
   .contact-second-text-block .h2-title-without-line :last-child h2 {
     font-size: 42px;
@@ -6515,6 +6527,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .wpb-js-composer #main-content .vc_tta-color-grey.vc_tta-style-classic.bank-details-block .vc_tta-panel .vc_tta-panel-body {
+    padding-top: 90px !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .contact-desktop {
     display: none;
@@ -6548,6 +6566,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content .contact_help_form {
     margin-bottom: 30px;
   }
+
+  .wpb-js-composer #main-content .vc_tta-color-grey.vc_tta-style-classic.bank-details-block .vc_tta-panel .vc_tta-panel-body {
+    padding-top: 30px !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -6558,6 +6580,19 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 @media screen and (max-width: 500px) {
+
+  .contact-mobile h2.h2-header-line::before {
+    left: -15px;
+  }
+  
+  .contact-second-block h2.h2-header-line::before {
+    left: -15px;
+  }
+
+  .contact-second-block + .vc_row h2.h2-header-line::before {
+    left: -15px;
+  }
+
   .wpb-js-composer
     #main-content
     .vc_tta.vc_general.bank-details-block
@@ -7415,6 +7450,7 @@ input[type="checkbox"] + label#oferta-error {
   width: calc(100% - 50px);
   max-width: 700px;
   max-height: calc(100% - 160px);
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 1024px) {
@@ -7423,7 +7459,7 @@ input[type="checkbox"] + label#oferta-error {
   }
   
   #askForHelpModal.opened .modal-dialog::-webkit-scrollbar {
-    width: 4px;
+    width: 5px;
   }
 
   #askForHelpModal.opened .modal-dialog::-webkit-scrollbar-track {
@@ -7432,7 +7468,7 @@ input[type="checkbox"] + label#oferta-error {
   }
 
   #askForHelpModal.opened .modal-dialog::-webkit-scrollbar-thumb {
-    background-color: #e78b48;
+    background-color: #989898;
   }
 }
 
