@@ -168,7 +168,9 @@ jQuery(document).ready(function($) {
   var phone_label;
   if (lang === "en-US") {
     phone_label = 'phone';
-    $('.field_5e1d98b8bab85_labeled span').text(phone_label);
+    $(".field_5e1d98b8bab85_labeled span").each(function() {
+      $(this).text(phone_label);
+    });
   }
 
 });
