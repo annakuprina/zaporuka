@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
     ]
   });
 
-  $(".write_about_us_carousel .vc_pageable-slide-wrapper").slick({
+  $(".write_about_us_carousel .write-about-us-slick-desk").slick({
     dots: true,
     arrows: false,
     slidesToShow: 3,
