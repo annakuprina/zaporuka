@@ -84,6 +84,12 @@ jQuery(document).ready(function($) {
     slidesToShow: 3,
     slidesToScroll: 3
   });
+  $(".about-us-project-section .vc_pageable-slide-wrapper").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
   $(document).on("click", ".pagination-block a", function(e) {
     e.preventDefault();
     var nth = $(this).attr("data-cpta");
@@ -158,5 +164,11 @@ jQuery(document).ready(function($) {
           .width(progressBarTimeline + "%");
     });
   });
+  var lang = jQuery(".lang-item.current-lang a")[0].getAttribute("lang");
+  var phone_label;
+  if (lang === "en-US") {
+    phone_label = 'phone';
+    $('.field_5e1d98b8bab85_labeled span').text(phone_label);
+  }
 
 });
