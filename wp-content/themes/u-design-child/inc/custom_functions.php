@@ -1120,3 +1120,26 @@ function shortcode_write_about_us_desk(){
     $html = ob_get_clean();
     return $html;
 }
+add_shortcode('shortcode_fund_documents', 'shortcode_fund_documents');
+function shortcode_fund_documents(){
+    $post = get_post();
+    $post_id = $post->ID;
+    $fund_documents = get_field( "fund_documents", $post_id );
+    ob_start(); ?>
+    <div class="fund-documents-wrapper">
+        <?php
+        foreach ($fund_documents as $item) {
+            $document_name = $item["document_name"];
+            $fund_document = $item["fund_document"];
+            $document_image = $item["document_image"]; ?>
+            <div class="fund-document">
+                <h5><?php echo $document_name; ?></h5>
+                <a href="<?php echo $fund_document; ?>"><img src="<?php echo $document_image; ?>" alt=""></a>
+            </div>
+        <?php }
+        ?>
+    </div>
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
