@@ -7471,3 +7471,9 @@ input[type="checkbox"] + label#oferta-error {
   }
 }
 
+@media screen and (max-width: 500px) {
+  #askForHelpModal.opened  .modal-dialog {
+    padding: 30px;
+  }
+}
+
