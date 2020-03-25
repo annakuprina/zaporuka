@@ -7404,4 +7404,8 @@ input[type="checkbox"] + label#oferta-error {
   .slick-slide.vc_visible-item {
     display: inline-block !important;
   }
+
+  .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+    clear: none !important;
+  }
 }
