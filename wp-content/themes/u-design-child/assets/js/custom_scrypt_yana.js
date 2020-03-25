@@ -60,25 +60,31 @@ jQuery(document).ready(function($) {
     ]
   });
 
-  // $(".write_about_us_carousel .vc_pageable-slide-wrapper").slick({
-  //   dots: true,
-  //   arrows: false,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 3,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //         infinite: true,
-  //         dots: true
-  //       }
-  //     }
-  //   ]
-  // });
+  $(".write_about_us_carousel .write-about-us-slick-desk").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
+  });
 
   $(".other-projects-single-project .vc_pageable-slide-wrapper").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
+  $(".about-us-project-section .vc_pageable-slide-wrapper").slick({
     dots: true,
     arrows: false,
     slidesToShow: 3,
@@ -158,5 +164,11 @@ jQuery(document).ready(function($) {
           .width(progressBarTimeline + "%");
     });
   });
+  var lang = jQuery(".lang-item.current-lang a")[0].getAttribute("lang");
+  var phone_label;
+  if (lang === "en-US") {
+    phone_label = 'phone';
+    $('.field_5e1d98b8bab85_labeled span').text(phone_label);
+  }
 
 });

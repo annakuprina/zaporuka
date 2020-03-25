@@ -1086,3 +1086,37 @@ function shortcode_write_about_us_mob(){
     $html = ob_get_clean();
     return $html;
 }
+add_shortcode('write_about_us_desk', 'shortcode_write_about_us_desk');
+function shortcode_write_about_us_desk(){
+    $writers_array = get_posts( array(
+        'numberposts' => -1,
+        'post_type'   => 'write_about_us'
+    ));
+
+    ob_start(); ?>
+
+    <!----------
+				Write about us
+			----------->
+    <div class="write-about-us-wrapper">
+
+    <!-- PARTNERS SLIDER DESKTOP-->
+    <div class="write-about-us-slick-desk">
+        <?php
+        foreach( $writers_array as $post ){
+            $link_article = get_post_meta($post->ID, 'link_article', true);
+            ?>
+            <!-- One slide -->
+            <div class="write-about-us-slide-desk">
+                <a href="<?php echo $link_article; ?>" target="_blank">
+                    <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">
+                </a>
+            </div><!-- end one slide-->
+            <?php
+        }
+        ?>
+    </div><!-- end write-about-us slider-->
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}

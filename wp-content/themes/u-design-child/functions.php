@@ -145,6 +145,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Дякуємо за підтримку!');
   pll_register_string('u-design-child', 'Ви скасували оплату!');
   pll_register_string('u-design-child', 'Выберите год');
+  pll_register_string('advanced-custom-fields', 'моб');
 });
 
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
@@ -613,4 +614,20 @@ function create_post_type_separate_categories(){
     register_taxonomy( 'news_category', 'novini', array( 'hierarchical' => true, 'label' => 'Категорії новин', 'query_var' => true, 'rewrite' => true ) );
 
 }
+add_action('init', function () {
+    foreach (acf_get_field_groups() as $group) {
+        $fields = acf_get_fields($group['ID']);
+        if (is_array($fields) && count($fields)) {
+            foreach ($fields as &$field) {
+                pll_register_string('form_field_group'.$group['ID'].'_label_'.$field['name'], $field['label'], 'acf_form_fields');
+            }
+        }
+    }
+});
 
+add_filter('acf/prepare_field', function ($field) {
+    if (!is_admin()) {
+        $field['label'] = pll__($field['label']);
+    }
+    return $field;
+}, 10, 1);
