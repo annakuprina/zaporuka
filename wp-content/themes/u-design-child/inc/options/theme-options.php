@@ -769,19 +769,19 @@ function setup_framework_options(){
             ),
             array(
                 'id' => 'help_text_contact_page_uk',
-                'type' => 'textarea',
+                'type' => 'editor',
                 'title' => __('текст допомоги на сторiнцi контактiв (ua)', 'nhp-opts'),
                 'std' => __('', 'nhp-opts'),
             ),
             array(
                 'id' => 'help_text_contact_page_ru',
-                'type' => 'textarea',
+                'type' => 'editor',
                 'title' => __('текст допомоги на сторiнцi контактiв (ru)', 'nhp-opts'),
                 'std' => __('', 'nhp-opts'),
             ),
             array(
                 'id' => 'help_text_contact_page_en',
-                'type' => 'textarea',
+                'type' => 'editor',
                 'title' => __('текст допомоги на сторiнцi контактiв (en)', 'nhp-opts'),
                 'std' => __('', 'nhp-opts'),
             ),
