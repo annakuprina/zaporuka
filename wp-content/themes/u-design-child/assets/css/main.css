@@ -1220,7 +1220,7 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 }
 
 .friends {
-  padding: 41px 40px 32px 40px;
+  padding: 41px 40px 87px 40px;
 }
 
 .friends-title {
@@ -1245,7 +1245,7 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 
 .friends-slider .slick-dots {
   position: absolute;
-  bottom: -19px;
+  bottom: -74px;
 }
 
 .friends-slider,
