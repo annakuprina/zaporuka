@@ -7409,7 +7409,7 @@ input[type="checkbox"] + label#oferta-error {
 }
 
 /* ASK FOR HELP MODAL*/
-#askForHelpModal .modal-dialog {
+#askForHelpModal.opened .modal-dialog {
   top: 50%;
   transform: translateY(-50%);
   width: calc(100% - 50px);
@@ -7418,7 +7418,7 @@ input[type="checkbox"] + label#oferta-error {
 }
 
 @media screen and (max-width: 1024px) {
-  #askForHelpModal .modal-dialog {
+  #askForHelpModal.opened .modal-dialog {
     overflow-y: scroll;
   }
   
