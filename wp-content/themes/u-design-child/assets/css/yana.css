@@ -826,15 +826,10 @@ h6,
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 .fund-documents-wrapper .fund-document{
-  /*display: flex;*/
-  width: 33%;
-  /*justify-content: center;*/
-  /*align-items: center;*/
-  padding: 0 20px;
-  margin-bottom: 35px;
+  width: 30%;
 }
 @media screen and (max-width: 768px) {
   .fund-documents-wrapper .fund-document{
