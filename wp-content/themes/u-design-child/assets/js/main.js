@@ -159,13 +159,14 @@ jQuery(document).ready(function($) {
     itemSelector: ".documents-slide > img"
   });
 
-  // $(".slide").slick({
-  //   dots: false,
-  //   infinite: true,
-  //   speed: 300,
-  //   slidesToShow: 1
-  //   //adaptiveHeight: true
-  // });
+
+  // make link inside Label tag clickable (contact form, "oferta" link)
+  $(document).on("tap click", 'label a', function( event, data ){
+    event.stopPropagation();
+    event.preventDefault();
+    window.open($(this).attr('href'), $(this).attr('target'));
+    return false;
+  });
 
   /*TABS WITH SLIDERS. one project page*/
   $(".sliders-tabs-wrapper .one-tab-link").on("click", function() {
@@ -192,7 +193,6 @@ jQuery(document).ready(function($) {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    verticalSwiping: true
   });
 
   //REWARDS SLIDER DESKTOP(index page)
@@ -201,7 +201,6 @@ jQuery(document).ready(function($) {
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
-    verticalSwiping: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -221,7 +220,7 @@ jQuery(document).ready(function($) {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    verticalSwiping: true
+   
   });
 
   $(".header-mob-lang-switcher").click(function() {

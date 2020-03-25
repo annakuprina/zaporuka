@@ -1,7 +1,7 @@
 # BEGIN WordPress
-# Строки между `BEGIN WordPress` и `END WordPress` были созданы автоматически.
-# Они могут быть изменены только фильтрами WordPress.
-# Все изменения между этими отметками будут перезаписаны.
+# Рядки між `BEGIN WordPress` і `END WordPress` були створені автоматично.
+# Вони можуть бути змінені тільки фільтрами WordPress.
+# Всі зміни між цими позначками будуть перезаписані.
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
@@ -10,5 +10,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
+
 # END WordPress
 # php_value allow_url_fopen On

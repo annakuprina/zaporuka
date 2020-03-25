@@ -129,6 +129,9 @@ h3 {
 /*-------
   HEADER
 ---------*/
+body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
+  margin-left: 0;
+}
 
 #top-elements {
   height: 77px;
@@ -469,6 +472,19 @@ h3 {
 }
 
 @media screen and (max-width: 1200px) {
+  body:not(.home) #main-menu #navigation-menu .help-header-link {
+    padding-left: 0;
+    margin-left: 10px;
+  }
+
+  body:not(.home) #main-menu #navigation-menu ul.sf-menu > li > a {
+    padding: 0 15px 0 0;
+  }
+
+  body:not(.home) #navigation-menu ul.sf-menu > li > a > span {
+    font-size: 13px;
+  }
+
   #menu-item-305 span {
     padding: 10px 0 10px 0px;
   }
@@ -636,6 +652,10 @@ h3 {
 
 .block-project-partners .slick-dots {
   bottom: -21px;
+}
+
+.photo_video_block5 .proj-milestone-desc-block {
+  box-shadow: none;
 }
 
 .project-partners-carousel-wrapper .help_button_single_block {
@@ -892,6 +912,7 @@ h3 {
   .one-project-left {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 }
 
@@ -921,6 +942,10 @@ h3 {
 
   .wpb_wrapper .project-partners-carousel-wrapper {
     display: none;
+  }
+
+  .wpb_wrapper  .project-partners-slick-mob {
+    display: block;  
   }
 }
 
@@ -1040,6 +1065,7 @@ h3 {
     width: 100%;
   }
 }
+
 
 /*SLICK DOTS STYLING(grey and orange rectanges)*/
 .slick-dots li button {
@@ -1838,7 +1864,7 @@ h3 {
   color: #fff;
 }
 
-.proj-timeline-help {
+.proj-timeline-info-right .proj-timeline-help {
   padding: 19px 41px;
   letter-spacing: 1px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -1873,6 +1899,7 @@ h3 {
   background: #fff;
   padding: 40px 0;
   display: flex;
+  box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
 
 .proj-timeline-steps .one-step-title {
@@ -1953,7 +1980,11 @@ h3 {
   top: 0;
   left: -1px;
   width: 2px;
-  background: #ee8b43;
+  background: transparent;
+}
+
+.proj-timeline-one-step.in-progress .one-step-timeline-inner-mob, .proj-timeline-one-step.finished .one-step-timeline-inner-mob {
+  background: #e78b48;
 }
 
 .proj-timeline-one-step:not(:last-child) .one-step-timeline:after {
@@ -1965,6 +1996,7 @@ h3 {
   right: 0;
   bottom: -3px;
 }
+
 .one-step-timeline-inner {
   height: 3px;
   background-color: transparent;
@@ -1976,6 +2008,59 @@ h3 {
 
 /*Media for project timeline*/
 @media screen and (max-width: 1024px) {
+  .projects.type-projects .proj-timeline-steps .one-step-title {
+    font-size: 18px;
+  }
+
+  .projects.type-projects .proj-timeline-info .left-to-collect-wrapper {
+    font-size: 18px;
+  }
+
+  .projects.type-projects .proj-timeline-info-left {
+    width: 50%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .projects.type-projects .proj-timeline-info-right {
+    width: 50%;
+  }
+  .projects.type-projects .proj-timeline-info {
+    min-width: 370px;
+  }
+
+  .projects.type-projects .proj-timeline-info-right .proj-timeline-help {
+    padding: 19px 20px;
+  }
+
+  .projects.type-projects .proj-timeline-info-right .proj-timeline-share {
+    padding: 16px 20px;
+  }
+
+  .projects.type-projects .proj-timeline-info .left-to-collect-text {
+    line-height: 18px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .proj-timeline-steps .one-step-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .projects.type-projects .proj-timeline-info-left {
+    width: 100%;
+  }
+
+  .projects.type-projects .proj-timeline-info-right {
+    width: 100%;
+  }
+
   .one-step-timeline-mob-wrapper {
     display: flex;
   }
@@ -1985,7 +2070,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 20px;
+    padding: 0 20px;
   }
 
   .proj-timeline-one-step:not(:first-child) .one-step-timeline-wrapper {
@@ -2924,10 +3009,13 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
 /* Media for first block on index page */
 @media screen and (max-width: 1300px) {
-  .vc_grid-item .home-first-post-post-title h4 {
-    font-size: 39px;
-    line-height: 49px;
+  #main-content .vc_grid-item .home-first-post-post-title h4 {
+    font-size: 30px;
+    line-height: 46px;
+    max-width: unset;
+    padding-top: 15px;
   }
+
   .vc_custom_1579507340150 {
     margin-bottom: 60px;
   }
@@ -3217,7 +3305,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 }
 
 #content-container .home-page-section2 .section2-text p {
-  padding-top: 60px;
+  padding-top: 25px;
 }
 
 #main-content .section2-image-wrapper {
@@ -3240,6 +3328,15 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
 #main-content .home-page-section2 .section2-columns .section2-single-column {
   padding: 135px 53px 79px 76px;
+  height: 100%;
+}
+
+#main-content .home-page-section2 .section2-columns .vc_cta3-container {
+  height: 100%;
+}
+
+#main-content .home-page-section2 .section2-columns .wpb_wrapper {
+  height: 100%;
 }
 
 #main-content .home-page-section2 .section2-columns .section2-single-column a {
@@ -3382,6 +3479,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
   .section2-image-wrapper {
     overflow: hidden;
+  }
+
+  .home-page-section2 .vc_custom_1579168278861 {
+    box-shadow: none;
   }
 }
 
@@ -3665,7 +3766,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     .home-page-section4-tabs
     .vc_tta.vc_general
     .vc_tta-panel-body {
-    padding: 20px;
+    padding: 0 20px;
   }
 }
 
@@ -3797,8 +3898,17 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     width: 20px;
     left: -31px;
   }
-
 }
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .wpb-js-composer #main-content .vc_tta-panels {
+    position: relative;
+    top: -82px;
+  }
+}
+
 /*end home page section4*/
 
 /*-----------------------------------------------------
@@ -3829,12 +3939,17 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   HOME PAGE SECTION 5
 ----------------------*/
 #main-content .home-page-section5 {
-  margin-top: 29px;
+  margin-top: 120px;
 }
 
 #main-content .vc_custom_1579173195839 .one-project-progress {
   width: calc(100% - 40px);
 }
+
+.home-page-section5 .one-project-left {
+  width: 50%;
+}
+
 
 /*---------------------
   HOME PAGE SECTION 6
@@ -3844,12 +3959,20 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   padding-right: 0;
 }
 
+.home-page-section6 .other-projects-mob {
+  display:none;
+}
+
 .home-page-section6 .other-projects-row .one-project-progress-wrapper {
   padding: 0px 30px;
 }
 
 .home-page-section6 .other-projects-row .singl-project-top-part {
   height: 255px !important;
+}
+
+.singl-project-top-part  .vc_gitem-row-position-top {
+  background: rgba(0,0,0,.45);
 }
 
 .home-page-section6 .one-project-progress-wrapper .project-money-involved {
@@ -3932,9 +4055,32 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   }
 }
 
+@media screen and (max-width: 768px) {
+  /* hide desktop version: 3 blocks */
+  .home-page-section6 .other-projects-desk {
+    display: none;
+  }
+
+  /* show mobile version: 1 block */
+  .home-page-section6 .other-projects-mob {
+    display: block;
+  }
+  
+  #home-page-content .home-page-section6 .other-projects-mob .vc_pageable-slide-wrapper {
+    justify-content: space-between;
+  }
+
+  #home-page-content .home-page-section6 .other-projects-mob .vc_grid-item {
+    padding-right: 0;
+  }
+
+}
 @media screen and (max-width: 600px) {
-  .home-page-section6 .vc_pageable-slide-wrapper .vc_grid-item {
+  #home-page-content .home-page-section6 .other-projects-mob .vc_grid-item {
     width: 100%;
+  }
+  #home-page-content .home-page-section6 .vc_pageable-slide-wrapper {
+    margin-right: 0;
   }
 }
 
@@ -3954,6 +4100,20 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 .home-page-section7 .vc_pageable-slide-wrapper {
   display: flex;
   flex-wrap: wrap;
+}
+
+#main-content .section-news .section-news-mob {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #main-content .section-news .section-news-desk {
+    display: none;
+  }
+
+  #main-content .section-news .section-news-mob {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -5729,7 +5889,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   color: rgba(51, 51, 51, 0.29);
   font-family: "Raleway-Bold";
   font-size: 16px;
-  width: 90px;
+  width: 100px;
 }
 
 .category-expand-button {
@@ -5744,11 +5904,18 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   top: 6px;
 }
 
-.category-expand-button.active {
+.reports-list-title .category-expand-button.active {
   transform: rotate(225deg);
   -webkit-transform: rotate(225deg);
   right: -18px;
   top: 12px;
+}
+
+.category-expand-button.active {
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  right: -18px;
+  top: 7px;
 }
 
 #main-content .shop-custom-wrapper {
@@ -5781,7 +5948,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .woocommerce-custom-category-filter
   li.category-filter-item::after {
   width: 100%;
-  top: 59px;
+  top: 53px;
 }
 
 #main-content
@@ -5795,9 +5962,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-bottom: 31px;
 }
 
-#main-content .shop-custom-wrapper .shop-page-price-title {
-  padding: 27px 30px;
-}
 
 .woocommerce .shop-custom-wrapper ul.products li.product,
 .woocommerce-page .shop-custom-wrapper ul.products li.product {
@@ -5841,6 +6005,33 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   transition: none;
 }
 
+/*shop page*/
+.woocommerce #main-content .shop-custom-wrapper ul.products {
+  margin-right: -40px;
+}
+
+.shop-custom-wrapper ul.products.columns-3 li.product {
+  max-width: 353px;
+  min-width: 260px;
+  width: calc((100% - 120px)/3);
+  margin-right: 40px;
+}
+
+#main-content .shop-custom-wrapper .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#main-content .shop-custom-wrapper .woocommerce-LoopProduct-link {
+  height: 100%;
+}
+
+#main-content .shop-custom-wrapper .woocommerce-LoopProduct-link img {
+  width: 100%;
+  height: 100%; 
+
+}
+
 @media screen and (max-width: 1300px) {
   #main-content
     .shop-custom-wrapper
@@ -5851,13 +6042,16 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   #main-content .shop-custom-wrapper .shop-page-price-title {
-    padding: 30px 20px;
+    padding: 15px 20px;
   }
+  
 
   #main-content .shop-custom-wrapper {
     padding-top: 70px;
     padding-bottom: 40px;
   }
+
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -5897,6 +6091,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content .shop-custom-wrapper {
     padding-top: 50px;
   }
+
+
 }
 
 @media screen and (max-width: 959px) {
@@ -5958,6 +6154,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     .woocommerce-custom-product-filter
     .woocommerce-custom-category-filter {
     position: absolute;
+    z-index: 3;
   }
 
   #wrapper-1
@@ -5966,6 +6163,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     background: #fff;
     box-shadow: 5px 11px 9px rgba(209, 209, 209, 0.3);
     user-select: none;
+    padding: 10px;
   }
 }
 /*min-width: 959px - not the same with media max-width: 959px above*/
@@ -5985,7 +6183,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     li.category-mob-select {
     display: none !important;
   }
+
 }
+
 @media screen and (max-width: 700px) {
   #main-content .shop-custom-wrapper .shop-page-price-title {
     padding: 20px;
@@ -6009,17 +6209,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   #main-content
     .woocommerce-custom-product-filter
-    .woocommerce-cart-page-link
-    svg {
-    left: 2px;
-    padding-right: 15px;
-  }
-
-  #main-content
-    .woocommerce-custom-product-filter
     .filter-cart-price-wrapper
     .woocommerce-custom-price-filter {
     padding-right: 0;
+  }
+
+  .shop-custom-wrapper ul.products.columns-3 li.product {
+    width: 100%;
   }
 }
 /*---------
@@ -6531,7 +6727,14 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     padding-right: 30px;
   }
 
- 
+  .wpb-js-composer
+    #main-content
+    .about-us-page--tabs
+    .vc_tta.vc_general
+    .vc_tta-panel-body {
+    padding: 0 20px;
+  }
+  
 
 }
 
@@ -6551,6 +6754,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   #main-content .write_about_us_button_wrapper .vc_column-inner {
     padding-left: 0;
+  }
+
+  .wpb-js-composer #main-content .about-us-page--tabs  .vc_tta.vc_general .vc_tta-panel-body {
+    position: static;
+    margin-top: 30px;
   }
 }
 
@@ -6892,6 +7100,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-top: 48px;
 }
 
+/*cart*/
+.single-product #page-content .single-product-cart-link .cart-count {
+  top: 3px;
+  left: 0px;
+} 
+
 .woocommerce.single-product #wrapper-1 div.product div.summary {
   margin-top: 4px;
 }
@@ -6934,10 +7148,31 @@ div.product form.cart {
 }
 
 #wrapper-1 .cart-customlocation.cart-count {
+  top: 7px;
   left: -1px;
   width: 14px;
   display: flex;
   justify-content: center;
+  color: #fff;
+  font-size: 10px;
+}
+
+
+#main-content li.product .shop-page-price-title {
+  padding: 27px 30px;
+  background:rgba(255,255,255,0.8);
+  width: 100%;
+}
+
+#main-content li.product .woocommerce-Price-amount {
+  color: #de7b33;
+}
+
+#main-content li.product:hover .shop-page-price-title{
+  background:transparent;
+}
+
+#main-content li.product:hover .woocommerce-Price-amount {
   color: #fff;
 }
 
@@ -6968,12 +7203,7 @@ div.product form.cart {
 
 .woocommerce ul.products.columns-3 li.product,
 .woocommerce-page ul.products.columns-3 li.product {
-  width: 353px;
   margin-right: 40px;
-}
-
-.woocommerce-page ul.products {
-  margin-right: -40px;
 }
 
 .woocommerce.single-product #wrapper-1 .related .shop-page-price-title {
@@ -6987,11 +7217,22 @@ div.product form.cart {
   left: 2px;
 }
 
+body.product ul.products {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -40px;
+}
+
+.woocommerce.single-product #main-content .related .product{
+  margin-right: 40px;
+  max-width: 353px;
+  min-width: 260px;
+  width: calc((100% - 120px)/3);
+}
+
 @media screen and (max-width: 1200px) {
   .woocommerce.single-product #wrapper-1 div.product div.summary {
-    max-width: 471px;
     margin-bottom: 0;
-    width: calc(100% - 640px);
   }
 
   .woocommerce.single-product #wrapper-1 div.product p.price {
@@ -7020,18 +7261,11 @@ div.product form.cart {
     .price {
     padding-bottom: 20px;
   }
-
-  .woocommerce ul.products.columns-3 li.product,
-  .woocommerce-page ul.products.columns-3 li.product {
-    width: calc((100% - 120px) / 3);
-    margin-right: 40px;
-  }
 }
 
 @media screen and (max-width: 950px) {
   .woocommerce.single-product #wrapper-1 .single-product-cart-link {
     text-align: right;
-    padding-top: 0;
   }
 
   .woocommerce.single-product #wrapper-1 div.product {
@@ -7056,21 +7290,13 @@ div.product form.cart {
 
   .woocommerce .related ul.products li.product,
   .woocommerce .related ul li.product {
-    min-width: 250px;
-    width: calc(50% - 20px);
+    margin-right: 0;
   }
 
   .woocommerce ul.products {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-right: -20px;
-  }
-
-  .woocommerce .related ul.products li.product,
-  .woocommerce .related ul li.product {
-    width: 250px;
-    margin-right: 20px;
   }
 
   .woocommerce.single-product
@@ -7089,7 +7315,15 @@ div.product form.cart {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+  .single-product h2.h2-header-line::before {
+    width: 20px;
+    left: -15px;
+  }
+
+  .single-product .woocommerce-Tabs-panel p {
+    padding-left: 21px;
+  }
 }
 
 /*-------------------------
@@ -7139,5 +7373,11 @@ input[type="checkbox"] + label#oferta-error {
 
   .woocommerce .woocommerce-cart-form {
     padding-top: 20px;
+  }
+}
+/*ALL SlICK CAROUSELS*/
+@media screen and (max-width: 768px) {
+  .slick-slide.vc_visible-item {
+    display: inline-block !important;
   }
 }

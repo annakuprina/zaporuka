@@ -56,10 +56,10 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
                     </div>
                     <div class="help-form-email-tel">
                         <div class="help-form-amount-email">
-                            <input  class="textarea-small" type="email" name="mail" value=""  placeholder="Email" required/>
+                            <input  class="textarea-small" type="email" name="mail" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  placeholder="Email" required/>
                         </div>
                         <div class="help-form-amount-tel">
-                            <input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
+                            <input  class="textarea-small" type="text" name="phone" value=""  pattern="[0-9]{15}"  placeholder="<?php echo $phone_label; ?>" required/>
                         </div>
                     </div>
                     <div class="help-form-subscribe">
@@ -176,10 +176,10 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 		   		<div class="cancel_subscription_form_inner_wrapper">
 				    <div class="help-form-email-tel">
 				    	<div class="help-form-amount-email">
-				    		<input  class="textarea-small" type="email" name="mail" value=""  placeholder="Email" required/>
+				    		<input  class="textarea-small" type="email" name="mail" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" required/>
 				    	</div>
 				    	<div class="help-form-amount-tel">
-				    		<input  class="textarea-small" type="text" name="phone" value=""  placeholder="<?php echo $phone_label; ?>" required/>
+				    		<input  class="textarea-small" type="text" name="phone" value="" pattern="[0-9]{15}" placeholder="<?php echo $phone_label; ?>" required/>
 				    	</div>
 				    	<div class="cansel-message error-message">
 						  	<?php
