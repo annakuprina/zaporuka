@@ -214,6 +214,14 @@ jQuery(document).ready(function($) {
     ]
   });
 
+  //RELATED PRODUCTS SLIDER (single product page)
+  $(".single-product ul.products").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+  });
+
   //REWARDS SLIDER MOBILE(index page)
   $(".rewards-slider-mob").slick({
     dots: true,
