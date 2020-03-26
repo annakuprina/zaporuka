@@ -321,7 +321,7 @@ function setup_framework_options(){
                 'std' => __('', 'nhp-opts'),
             ),
             array(
-                'id' => 'help_by_sms_hover_link_ua',
+                'id' => 'help_by_sms_hover_link_uk',
                 'type' => 'text',
                 'title' => __('Секция 3 ссылкa (ховер) (ua)', 'nhp-opts'),
                 'std' => __('', 'nhp-opts'),
