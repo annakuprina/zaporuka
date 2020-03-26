@@ -253,6 +253,7 @@ function shortcode_orange_help_form(){
     $help_by_sms = !empty($options['help_by_sms_' . ICL_LANGUAGE_CODE]) ? $options['help_by_sms_' . ICL_LANGUAGE_CODE] : false;
     $help_by_sms_hover = !empty($options['help_by_sms_hover_' . ICL_LANGUAGE_CODE]) ? $options['help_by_sms_hover_' . ICL_LANGUAGE_CODE] : false;
     $help_by_sms_hover_text_link = !empty($options['help_by_sms_hover_text_link_' . ICL_LANGUAGE_CODE]) ? $options['help_by_sms_hover_text_link_' . ICL_LANGUAGE_CODE] : false;
+    $help_by_sms_hover_link = !empty($options['help_by_sms_hover_link_' . ICL_LANGUAGE_CODE]) ? $options['help_by_sms_hover_link_' . ICL_LANGUAGE_CODE] : false;
 
     $charity_shop = !empty($options['charity_shop_' . ICL_LANGUAGE_CODE]) ? $options['charity_shop_' . ICL_LANGUAGE_CODE] : false;
     $charity_shop_hover = !empty($options['charity_shop_hover_' . ICL_LANGUAGE_CODE]) ? $options['charity_shop_hover_' . ICL_LANGUAGE_CODE] : false;
@@ -291,7 +292,7 @@ function shortcode_orange_help_form(){
                 <div class="help-item-title"><?php echo $help_by_sms; ?></div>
                 <div class="help-item-info">
                     <div class="help-item-deskr"><?php echo $help_by_sms_hover; ?></div>
-                    <a href="#" class="help-item-link sms-popup-show"><?php echo $help_by_sms_hover_text_link; ?></a>
+                    <a href="<?php echo $help_by_sms_hover_link; ?>" class="help-item-link"><?php echo $help_by_sms_hover_text_link; ?></a>
                 </div>
             </div><!-- end help-item -->
 
