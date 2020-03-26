@@ -163,12 +163,14 @@ jQuery(document).ready(function($) {
           .find(".progress-done")
           .width(progressBarTimeline + "%");
     });
+    var lang = jQuery(".lang-item.current-lang a")[0].getAttribute("lang");
+    var phone_label;
+    if (lang === "en-US") {
+      $(".field_5e1d98b8bab85_labeled span").each(function() {
+        $(this).text('phone: ');
+      });
+    }
   });
-  var lang = jQuery(".lang-item.current-lang a")[0].getAttribute("lang");
-  var phone_label;
-  if (lang === "en-US") {
-    phone_label = 'phone';
-    $('.field_5e1d98b8bab85_labeled span').text(phone_label);
-  }
+
 
 });

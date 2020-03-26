@@ -253,6 +253,7 @@ function shortcode_orange_help_form(){
     $help_by_sms = !empty($options['help_by_sms_' . ICL_LANGUAGE_CODE]) ? $options['help_by_sms_' . ICL_LANGUAGE_CODE] : false;
     $help_by_sms_hover = !empty($options['help_by_sms_hover_' . ICL_LANGUAGE_CODE]) ? $options['help_by_sms_hover_' . ICL_LANGUAGE_CODE] : false;
     $help_by_sms_hover_text_link = !empty($options['help_by_sms_hover_text_link_' . ICL_LANGUAGE_CODE]) ? $options['help_by_sms_hover_text_link_' . ICL_LANGUAGE_CODE] : false;
+    $help_by_sms_hover_link = !empty($options['help_by_sms_hover_link_' . ICL_LANGUAGE_CODE]) ? $options['help_by_sms_hover_link_' . ICL_LANGUAGE_CODE] : false;
 
     $charity_shop = !empty($options['charity_shop_' . ICL_LANGUAGE_CODE]) ? $options['charity_shop_' . ICL_LANGUAGE_CODE] : false;
     $charity_shop_hover = !empty($options['charity_shop_hover_' . ICL_LANGUAGE_CODE]) ? $options['charity_shop_hover_' . ICL_LANGUAGE_CODE] : false;
@@ -291,7 +292,7 @@ function shortcode_orange_help_form(){
                 <div class="help-item-title"><?php echo $help_by_sms; ?></div>
                 <div class="help-item-info">
                     <div class="help-item-deskr"><?php echo $help_by_sms_hover; ?></div>
-                    <a href="#" class="help-item-link sms-popup-show"><?php echo $help_by_sms_hover_text_link; ?></a>
+                    <a href="<?php echo $help_by_sms_hover_link; ?>" class="help-item-link"><?php echo $help_by_sms_hover_text_link; ?></a>
                 </div>
             </div><!-- end help-item -->
 
@@ -1116,6 +1117,29 @@ function shortcode_write_about_us_desk(){
         }
         ?>
     </div><!-- end write-about-us slider-->
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
+add_shortcode('shortcode_fund_documents', 'shortcode_fund_documents');
+function shortcode_fund_documents(){
+    $post = get_post();
+    $post_id = $post->ID;
+    $fund_documents = get_field( "fund_documents", $post_id );
+    ob_start(); ?>
+    <div class="fund-documents-wrapper">
+        <?php
+        foreach ($fund_documents as $item) {
+            $document_name = $item["document_name"];
+            $fund_document = $item["fund_document"];
+            $document_image = $item["document_image"]; ?>
+            <div class="fund-document">
+                <div class="document-title"><h3><?php echo $document_name; ?></h3></div>
+                <div><a href="<?php echo $fund_document; ?>" target="_blank"><img src="<?php echo $document_image; ?>" alt=""></a></div>
+            </div>
+        <?php }
+        ?>
+    </div>
     <?php
     $html = ob_get_clean();
     return $html;
