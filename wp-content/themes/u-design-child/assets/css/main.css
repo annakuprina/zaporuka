@@ -6780,6 +6780,16 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-top: 120px;
 }
 
+/*documents block*/
+#page-content .fund-documents-wrapper .document-title {
+  margin-bottom: 20px;
+}
+
+.shortcode-fund-documents-mob {
+  display: none;
+}
+
+
 @media screen and (max-width: 1200px) {
   .aboutus_section3 .vc_grid.vc_row.vc_grid-gutter-30px .vc_pageable-slide-wrapper {
     display: flex;
@@ -6833,6 +6843,14 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .wpb-js-composer #main-content .about-us-page--tabs  .vc_tta.vc_general .vc_tta-panel-body {
     position: static;
     margin-top: 30px;
+  }
+
+  .shortcode-fund-documents-mob {
+    display: block;
+  }
+  
+  .shortcode-fund-documents-desk {
+    display: none;
   }
 }
 
