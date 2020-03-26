@@ -65,9 +65,11 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
                     <div class="help-form-subscribe">
                         <div class="help-form-subscribe-left">
                             <a href="#" paytype="pay" class="subscribe-link onetime active"><?php echo $payonce_label; ?></a>
+<!--                            <input type="radio" name="pay_type" value="pay">-->
                         </div>
                         <div class="help-form-subscribe-right">
                             <a href="#" paytype="subscribe" class="subscribe-link month"><?php echo $monthly_label; ?></a>
+<!--                            <input type="radio" name="pay_type" value="subscribe">-->
                         </div>
                     </div>
                     <p class="help-form-text">
