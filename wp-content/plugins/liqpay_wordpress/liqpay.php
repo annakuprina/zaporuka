@@ -594,15 +594,15 @@ function liqpay_options_page()
     if (function_exists('wp_nonce_field')) {
         wp_nonce_field('liqpay_base_setup_form_#@r@@t');
     }
-    $dey_left = get_option('days_left');
-    if ($dey_left < 0) {
-        $dey_left = 0;
-        $color = 'red';
-    } elseif ($dey_left > 0) {
-        $color = 'green';
-    }
+//    $dey_left = get_option('days_left');
+//    if ($dey_left < 0) {
+//        $dey_left = 0;
+//        $color = 'red';
+//    } elseif ($dey_left > 0) {
+//        $color = 'green';
+//    }
 
-    echo "<div style='color:" . $color . "; font-size:25px; position: absolute;'>" . __('Days left', 'liqpay') . " - " . $dey_left . "</div>";
+//    echo "<div style='color:" . $color . "; font-size:25px; position: absolute;'>" . __('Days left', 'liqpay') . " - " . $dey_left . "</div>";
     echo "
         <table width=auto>
             <tr>
