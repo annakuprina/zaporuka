@@ -388,8 +388,6 @@ footer a.designer-link {
   color: #ffffff !important;
   font-size: 14px !important;
   font-weight: 500;
-  border: none!important;
-  background-image: unset!important;
 }
 .home-first-post-post-link a::after {
   content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
