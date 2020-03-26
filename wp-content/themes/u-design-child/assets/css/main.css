@@ -2319,6 +2319,7 @@ and shows hidden orange lines near titles on About us page*/
   line-height: 30px;
 }
 
+
 @media screen and (max-width: 800px) {
   .reviews-item {
     width: 100%;
@@ -6764,6 +6765,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     display: none;
 }
 
+.about_section4 + .write-aboutus-wrapper .vc_row:nth-child(3)  {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
 #wrapper-1 .write-aboutus-carousel-mob-wrapper {
   display: none;
 }
@@ -6789,8 +6797,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   display: none;
 }
 
+.shortcode-fund-documents-mob a {
+  justify-content: flex-start; 
+}
 
 .shortcode-fund-documents-mob img {
+  width: 100%;
   max-width: 300px;
 }
 
@@ -6833,6 +6845,18 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /* the parent */
 .shortcode-fund-documents-mob .fund-documents-wrapper {
   margin: 0 -27px;
+}
+
+
+
+.about_section4 + .write-aboutus-wrapper .testimonials_section.reviews > .vc_column_container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.about_section4 + .write-aboutus-wrapper .about_block6 > .vc_column_container {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 
