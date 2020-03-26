@@ -6790,6 +6790,36 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 
+.shortcode-fund-documents-mob img {
+  max-width: 300px;
+}
+
+  /* the slides */
+.shortcode-fund-documents-mob .slick-slide {
+  margin: 0 27px;
+
+}
+/* the parent */
+.shortcode-fund-documents-mob .slick-list {
+  margin: 0 -27px;
+}
+
+.about-us-project-section .vc_pageable-slide-wrapper .slick-slide {
+  width: 200px;
+}
+
+.about-us-project-section  .vc_pageable-slide-wrapper .slick-dots {
+  bottom: -35px;
+}
+
+.about-us-project-section .slick-slide .singl-project-excerpt p {
+  padding-bottom: 30px;
+}
+
+.about-us-project-section .vc_pageable-slide-wrapper .slick-dots li {
+  height: 10px;
+}
+
 @media screen and (max-width: 1200px) {
   .aboutus_section3 .vc_grid.vc_row.vc_grid-gutter-30px .vc_pageable-slide-wrapper {
     display: flex;
@@ -6818,8 +6848,18 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     .vc_tta-panel-body {
     padding: 0 20px;
   }
-  
 
+  .about_section4 .other-projects-row .one-project-progress-wrapper {
+    padding: 0 15px;
+  }
+  
+  .about_section4 .other-projects-row .singl-project-bottom-part {
+    padding: 10px 15px 0 15px;
+  }
+  
+  .about_section4 .other-projects-row .singl-project-link-wrapper {
+    left: 15px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -6925,6 +6965,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 }
 
+@media screen and (max-width: 600px) {
+  .about-us-project-section .vc_pageable-slide-wrapper .slick-dots li {
+    left: -20px;
+  }
+}
 
 @media screen and (max-width: 560px) {
 
