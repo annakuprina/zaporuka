@@ -3024,12 +3024,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   font-size: 48px;
   line-height: 58px;
   max-width: 555px;
-  padding-top: 72px;
-  margin-bottom: 30px;
 }
 
 #main-content .home-first-post-post-title h4 {
   padding-top: 72px;
+  margin-bottom: 25px;
 }
 
 #main-content .home-first-post-post-link a {
@@ -3048,7 +3047,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 }
 /* Media for first block on index page */
 @media screen and (max-width: 1300px) {
-  #main-content .vc_grid-item .home-first-post-post-title h4 {
+  #main-content .home-first-post-post-title h4 {
     font-size: 30px;
     line-height: 46px;
     max-width: unset;
@@ -3112,15 +3111,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     margin-bottom: 20px;
   }
 
-  #home-page-content .home-first-post-image {
-    max-height: 720px;
+  #home-page-content .vc_custom_1585211715542 .vc_column-inner {
+    padding-bottom: 35px;
   }
 
-  .home-first-post-image .vc_gitem-row-position-middle {
-    justify-content: space-between;
-  }
-
-  .home-first-post-image .vc_custom_1580744267781 {
+  .home-first-post-image .wpb_column:nth-child(1) {
     padding-right: 30px !important;
   }
 
@@ -3160,9 +3155,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     display: none;
   }
 
-  .home-first-post-image {
-    background-size: auto 420px;
-    background-position: top;
+  #home-page-content .vc_custom_1585211715542 {
+    background-size: auto 420px !important ;
+    background-position: top !important;
   }
 
   .home-first-post-image .vc_gitem-row-position-middle {
@@ -3180,6 +3175,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     position: absolute;
     top: 236px;
     left: calc((100% - 400px) / 2);
+    min-width: 400px;
+    max-width: 400px;
   }
 
   .home-first-post-image .home-first-post-post-link a {
@@ -3194,12 +3191,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     position: static;
   }
 
-  .vc_custom_1579507340150 .home-first-post-form-help .help_form_wrapper {
-    min-width: 400px;
-    max-width: 400px;
-  }
-
-  .vc_grid-item .home-first-post-post-title h4 {
+  #home-page-content .home-first-post-post-title h4 {
     font-size: 31px;
   }
 
@@ -3213,62 +3205,50 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 }
 
 @media screen and (max-width: 500px) {
-  .vc_custom_1579507340150 .home-first-post-image .vc_custom_1580744275019 {
+  .home-first-post-image .wpb_column:nth-child(2) { 
     left: calc((100% - 290px) / 2);
-  }
-
-  .vc_custom_1579507340150 .home-first-post-form-help .help_form_wrapper {
     min-width: 290px;
     max-width: 290px;
+    top: 340px;
   }
 
-  .vc_custom_1579507340150 .help_form_wrapper .help-form-inner-wrapper {
-    padding: 38px 22px 35px 22px;
-  }
-
-  .vc_custom_1579507340150
-    .home-first-post-image
-    .vc_gitem-row-position-middle {
-    margin-top: 168px;
-  }
-
-  .vc_custom_1579507340150 .home-first-post-post-link {
+  .vc_custom_1585211715542 .home-first-post-post-link {
     padding-top: 16px;
   }
 
-  .vc_custom_1579507340150 .home-first-post-image .vc_custom_1580744275019 {
-    top: 325px;
-  }
-
-  #main-content .vc_grid-item .home-first-post-post-title h4 {
+  #main-content .home-first-post-post-title h4 {
     padding-top: 66px;
     font-size: 24px;
     line-height: 33px;
   }
 
-  .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-inner-title {
+  .vc_custom_1585211715542 .help-form-inner-title {
     padding-bottom: 36px;
   }
 
-  .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-amount {
+  .vc_custom_1585211715542 .help-form-amount {
     padding-bottom: 13px;
   }
 
-  .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-subscribe {
+  .vc_custom_1585211715542 .help-form-subscribe {
     padding-bottom: 17px;
   }
 
-  .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-email-tel {
+  .vc_custom_1585211715542 .help-form-email-tel {
     padding-bottom: 20px;
   }
 
-  .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-text {
+  .vc_custom_1585211715542 .help-form-text {
     padding-bottom: 37px;
     line-height: 18px;
   }
 
-  .vc_custom_1579507340150 .help-form-inner-wrapper .help-form-submit-oferta {
+  .vc_custom_1585211715542 .help-form-submit-oferta {
     align-items: flex-start;
+  }
+
+  .vc_custom_1585211715542 .help_form_wrapper .help-form-inner-wrapper {
+    padding: 38px 22px 35px 22px;
   }
 
   .home-page-section2  .h2-header-line {
