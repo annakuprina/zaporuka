@@ -134,7 +134,7 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
                     ));
 
                     if( $res->result == 'ok' ) {
-                        wpdb_update( $table_liqpay, [ 'status'=>'unsubscribe' ], [ 'unsubscribe'=>$_GET['order_id'] ] );
+                        wpdb_update( $table_liqpay, [ 'status'=>'unsubscribe' ], [ 'order_id'=>$_GET['order_id'] ] );
                     }
                     $message = !empty($options['cancel_subscription_text_after_' . ICL_LANGUAGE_CODE]) ? $options['cancel_subscription_text_after_' . ICL_LANGUAGE_CODE] : false;
                 } else{
