@@ -382,7 +382,7 @@ footer a.designer-link {
   float: right;
 }
 .home-first-post-post-link a {
-  background-color: unset !important;
+  background-color: transparent !important;
   padding-left: 0 !important;
   margin-top: 20px;
   color: #ffffff !important;
