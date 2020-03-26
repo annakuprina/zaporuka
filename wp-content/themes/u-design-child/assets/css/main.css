@@ -2998,6 +2998,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   max-height: unset;
 }
 
+.vc_custom_1585211715542 {
+  margin-bottom: 85px;
+}
+
 .vc_custom_1585211715542  > .wpb_column > .vc_column-inner {
   padding-top: 47px;
   padding-bottom: 47px;
@@ -3218,7 +3222,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   }
 
   #home-page-content .vc_custom_1585211715542 {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 }
 
