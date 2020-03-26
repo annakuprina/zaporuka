@@ -84,12 +84,32 @@ jQuery(document).ready(function($) {
     slidesToShow: 3,
     slidesToScroll: 3
   });
+
+  /*About us page / Block "what we do" With projects*/
   $(".about-us-project-section .vc_pageable-slide-wrapper").slick({
     dots: true,
     arrows: false,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
+
   $(document).on("click", ".pagination-block a", function(e) {
     e.preventDefault();
     var nth = $(this).attr("data-cpta");
