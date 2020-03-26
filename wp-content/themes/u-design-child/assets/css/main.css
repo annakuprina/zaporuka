@@ -6656,6 +6656,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-right: 0;
   padding-left: 4px;
   width: 160px;
+  position: relative;
+  left: 56px;
+  top: 16px;
 }
 
 .write_about_us_button_wrapper .help_button_single_block .vc_btn3::after {
@@ -6669,6 +6672,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #main-content .write_about_us_carousel .slick-dots {
   left: 10.8%;
+  top: 139px;
 }
 
 #main-content .aboutus_section1 .video_button a:before {
@@ -7420,6 +7424,13 @@ body.product ul.products {
   flex-wrap: wrap;
 }
 
+.write-aboutus-wrapper .h2-header-line {
+  margin-bottom: 31px;
+}
+
+.write_about_us_carousel {
+  margin-bottom: 50px;
+}
 
 @media screen and (max-width: 1200px) {
   .woocommerce.single-product #wrapper-1 div.product div.summary {
