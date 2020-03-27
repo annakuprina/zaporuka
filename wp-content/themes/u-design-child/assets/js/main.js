@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
     slidesToShow: 3,
     slidesToScroll: 3,
     arrows: false,
-    // autoplay: true
+    autoplay: true,
     autoplaySpeed: 10000,
     responsive: [
       {
