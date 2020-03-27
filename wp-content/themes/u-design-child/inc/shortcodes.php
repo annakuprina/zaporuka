@@ -115,7 +115,7 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 		if (!isset($wpdb))
 	        require_once('../../../wp-config.php');
 
-	    $sql = "Select comments from {$table_liqpay} where order_id = {$_GET['order_id']} AND status = 'subscribe'";
+	    $sql = "Select comments from {$table_liqpay} where order_id = {$_GET['order_id']} AND status = 'subscribed'";
 	    $sql_res = $wpdb->get_row($sql);
 	    ?>
         <div class="help-form-inner-wrapper">
