@@ -661,6 +661,10 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 }
 
 /* ONE PROJECT PAGE*/
+.single-proj-other-posts-section .other-projects-mob {
+  display: none;
+}
+
 .project-partners-carousel-wrapper .vc_column_container > .vc_column-inner {
   padding-left: 0;
   padding-right: 0;
@@ -862,6 +866,22 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   display: none;  
 }
 
+.single-proj-other-posts-section .other-projects-single-project .vc_btn3 {	
+  background: unset !important;	
+  color: #e78b48 !important;	
+  font-family: "Raleway-Bold";	
+  font-size: 14px;	
+  padding-top: 0;	
+}
+
+.other-projects-single-project .singl-project-timeline-custom {
+  width: 100%;
+}
+
+.single-proj-other-posts-section .vc_grid-item {
+  padding-bottom: 30px !important;
+}
+
 /* Media for one Project block(home page) */
 @media screen and (max-width: 1200px) {
   .one-project-right {
@@ -899,18 +919,20 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
     line-height: 22px;
     margin-bottom: 15px;
   }
+
+  .single-proj-other-posts-section .other-projects-row .one-project-progress-wrapper {	
+    padding: 0 10px;	
+  }	
+
+  .single-proj-other-posts-section .other-projects-row .singl-project-bottom-part {	
+    padding: 10px 10px 0 10px;	
+  }	
+
+  .single-proj-other-posts-section .other-projects-row .singl-project-link-wrapper {	
+    left: 10px;	
+  }
 }
 
-/* .project-partners-carousel .vc_grid-container-wrapper {
-  display: none;
-}
-.project-partners-carousel .vc_col-sm-1/5 {
-  display: none;
-}
-
-.project-partners-carousel {
-  width: 100%;
-} */
 @media screen and (max-width: 800px) {
   .one-project {
     flex-direction: column;
@@ -975,6 +997,14 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
     padding-top: 0;
     margin-bottom: 0;
     width: 100%;
+  }
+
+  .single-proj-other-posts-section .other-projects-mob {
+    display: block;
+  }
+  
+  .single-proj-other-posts-section .other-projects-desk {
+    display: none;
   }
 }
 

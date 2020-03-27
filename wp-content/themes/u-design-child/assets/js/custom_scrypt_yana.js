@@ -78,12 +78,24 @@ jQuery(document).ready(function($) {
     ]
   });
 
-  // $(".other-projects-single-project .vc_pageable-slide-wrapper").slick({
-  //   dots: true,
-  //   arrows: false,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 3
-  // });
+  $(".other-projects-single-project .vc_pageable-slide-wrapper").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
+  });
+
 
   /*About us page / Block "what we do" With projects*/
   $(".about-us-project-section .vc_pageable-slide-wrapper").slick({
