@@ -6679,6 +6679,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   left: unset;
 }
 
+
+
 #main-content .aboutus_section1 .video_button a:before {
   content: "";
   width: 60px;
@@ -6879,6 +6881,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   align-items: center;
 }
 
+.write-about-us-mob-wrapper {
+  display: none;
+}
+
 @media screen and (max-width: 1300px) {
   #main-content .write_about_us_button_wrapper .help_button_single_block .vc_btn3 {
     left: 0;
@@ -6983,9 +6989,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     position: static;
   }
 
-  /* #wrapper-1 .write-aboutus-carousel-wrapper {
+  .write-about-us-mob-wrapper {
+    display: block;
+  }
+  
+  .write-aboutus-carousel-wrapper .write_about_us_carousel{
     display: none;
-  } */
+  }
 
   #wrapper-1 .write-aboutus-carousel-mob-wrapper {
     display: block;
