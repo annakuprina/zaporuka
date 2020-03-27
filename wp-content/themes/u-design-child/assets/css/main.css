@@ -862,20 +862,6 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   display: none;  
 }
 
-#main-content .single-proj-other-posts-section .other-projects-single-project .vc_grid-item {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-}
-
-
-.single-proj-other-posts-section .other-projects-single-project .vc_btn3 {
-  background: unset !important;
-  color: #e78b48 !important;
-  font-family: "Raleway-Bold";
-  font-size: 14px;
-  padding-top: 0;
-}
 
 /* Media for one Project block(home page) */
 @media screen and (max-width: 1200px) {
@@ -913,18 +899,6 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   .milestone-desc-wrapper .milestone_task_list li {
     line-height: 22px;
     margin-bottom: 15px;
-  }
-
-  .single-proj-other-posts-section .other-projects-row .one-project-progress-wrapper {
-    padding: 0 10px;
-  }
-
-  .single-proj-other-posts-section .other-projects-row .singl-project-bottom-part {
-    padding: 10px 10px 0 10px;
-  }
-
-  .single-proj-other-posts-section .other-projects-row .singl-project-link-wrapper {
-    left: 10px;
   }
 }
 
