@@ -6670,9 +6670,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-top: 22px;
 }
 
-#main-content .write_about_us_carousel .slick-dots {
+#main-content .write-about-us-slick-desk .slick-dots {
   left: 10.8%;
   top: 139px;
+}
+
+#main-content  .write-about-us-slick-mob .slick-dots {
+  left: unset;
 }
 
 #main-content .aboutus_section1 .video_button a:before {
@@ -6955,7 +6959,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   #main-content .write_about_us_button_wrapper .help_button_single_block .vc_btn3 {
-    left: -30px;
+    left: -10px;
   }
 
 }
