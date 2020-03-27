@@ -6658,7 +6658,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   width: 160px;
   position: relative;
   left: 56px;
-  top: 16px;
+  top: 29px;
 }
 
 .write_about_us_button_wrapper .help_button_single_block .vc_btn3::after {
@@ -6776,9 +6776,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin: auto;
 }
 
-#wrapper-1 .write-aboutus-carousel-mob-wrapper {
+/* #wrapper-1 .write-aboutus-carousel-mob-wrapper {
   display: none;
-}
+} */
 
 .about_section4 .wpb_wrapper p {
   line-height: 26px;
