@@ -78,12 +78,12 @@ jQuery(document).ready(function($) {
     ]
   });
 
-  $(".other-projects-single-project .vc_pageable-slide-wrapper").slick({
-    dots: true,
-    arrows: false,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  });
+  // $(".other-projects-single-project .vc_pageable-slide-wrapper").slick({
+  //   dots: true,
+  //   arrows: false,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 3
+  // });
 
   /*About us page / Block "what we do" With projects*/
   $(".about-us-project-section .vc_pageable-slide-wrapper").slick({
