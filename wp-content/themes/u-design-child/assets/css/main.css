@@ -2390,6 +2390,20 @@ and shows hidden orange lines near titles on About us page*/
 /*-----------------------------------------------------------------------------
   HELP(orange blocks and contact form) for one projects page and modal window
 ------------------------------------------------------------------------------*/
+
+#wrapper-1 .help-form-inner-wrapper .help-form-oferta label:not(.error) {
+  padding-left: 24px;
+  margin-right: -7px;
+}
+
+input[type="checkbox"] + label#oferta-error {
+  left: 0;
+}
+
+#wrapper-1 .help_form_wrapper label.error {
+  top: 34px;
+}
+
 .help-item-info {
   display: none;
   color: #333333;
@@ -2504,6 +2518,14 @@ and shows hidden orange lines near titles on About us page*/
 }
 
 @media screen and (max-width: 1024px) {
+  .help .help-form-inner-wrapper .help-form-oferta label:not(.error) {
+    font-size: 12px;
+  }
+
+  .help .help-form-submit {
+    padding: 10px 12px;
+  }
+
   .help .help_form_wrapper {
     min-width: unset;
   }
@@ -2578,6 +2600,13 @@ and shows hidden orange lines near titles on About us page*/
     line-height: 20px;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .help .help-form-inner-wrapper {
+    padding: 20px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .help {
     flex-direction: column;
@@ -2646,11 +2675,28 @@ and shows hidden orange lines near titles on About us page*/
   .help .help-form-email-tel .help-form-amount-email {
     padding-bottom: 14px;
   }
-}
-@media screen and (max-width: 900px) {
-  .help .help-form-inner-wrapper {
-    padding: 20px;
+
+  .help  .help-form-submit {
+    width: 100%;
+    text-align: center;
   }
+}
+
+@media screen and (max-width: 500px) {
+  .help .help-form-inner-wrapper .help-form-subscribe {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .help  .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .help  .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-right {
+    width: 100%;
+  }
+
 }
 /*
 
@@ -3930,6 +3976,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     width: 20px;
     left: -31px;
   }
+
 }
 
 
@@ -7070,9 +7117,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 @media screen and (max-width: 560px) {
-
   #main-content .write-about-us-slick-mob .write-about-us-slide img {
     max-height: 50px;
+    max-width: 230px;
   }
 
   #our_team .vc_pageable-slide-wrapper {
@@ -7154,26 +7201,16 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 @media screen and (max-width: 500px) {
 
-
-  .write-aboutus-wrapper .vc_custom_heading h2-header-line::before {
-    left: -14px;
-  }
-
   #main-content .aboutus_section2 .h2-about-first-title::before,
-  #main-content .aboutus_section2 .h2-about-second-title::before {
-    left: -14px;
-  }
-
-  #main-content .aboutus_section3 .h2-header-line::before{
-    left: -14px;
-  }
-
+  #main-content .aboutus_section2 .h2-about-second-title::before,
+  #main-content .aboutus_section3 .h2-header-line::before,
+  
   .write-aboutus-wrapper .h2-header-line::before {
     left: -14px;
   }
 
-  .testimonials_section .h2-header-line::before {
-    left: 1px;
+  #main-content .about_section4 .h2-header-line::before {
+    left: -31px;
   }
 
   #main-content  .aboutus_section3 {
@@ -7240,11 +7277,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .aboutus_section2 .about-us-text5 {
     padding-left: 40px;
-  }
-
-  .aboutus_section2 .before_rectangle_block p::before {
-    position: absolute;
-    left: 35px;
   }
 
   #wrapper-1 .aboutus_section2 .block_excerpt_container .block_excerpt {
@@ -7566,21 +7598,7 @@ body.product ul.products {
   }
 }
 
-/*-------------------------
-  HELP FORM(orange form)
--------------------------*/
-#wrapper-1 .help-form-inner-wrapper .help-form-oferta label:not(.error) {
-  padding-left: 24px;
-  margin-right: -7px;
-}
 
-input[type="checkbox"] + label#oferta-error {
-  left: 0;
-}
-
-#wrapper-1 .help_form_wrapper label.error {
-  top: 34px;
-}
 
 /*-----------
   CART PAGE
