@@ -6993,7 +6993,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     display: block;
   }
   
-  .write-aboutus-carousel-wrapper .write_about_us_carousel{
+  .write-aboutus-carousel-wrapper > .write_about_us_carousel {
     display: none;
   }
 
