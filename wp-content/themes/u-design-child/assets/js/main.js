@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
 
 
   // About us page. Write about us slider. Mobile  
-  $(".write-about-us-slick-mob").slick({
+  $(".write-aboutus-carousel-mob-wrapper .write-about-us-slick-mob").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
