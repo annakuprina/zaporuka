@@ -1161,6 +1161,7 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 .partners-slide img {
   margin-right: 20px;
   max-height: 90px;
+  max-width: 150px;
 }
 
 .partner-link,
@@ -6656,7 +6657,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   width: 160px;
   position: relative;
   left: 56px;
-  top: 29px;
+  top: 26px;
 }
 
 .write_about_us_button_wrapper .help_button_single_block .vc_btn3::after {
@@ -6669,7 +6670,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 #main-content .write-about-us-slick-desk .slick-dots {
-  left: 10.8%;
+  left: 12.8%;
   top: 139px;
 }
 
@@ -6857,18 +6858,18 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 
 
-.about_section4 + .write-aboutus-wrapper .testimonials_section.reviews > .vc_column_container {
+.write-aboutus-wrapper .testimonials_section.reviews > .vc_column_container {
   padding-left: 15px;
   padding-right: 15px;
 }
 
 
-.about_section4 + .write-aboutus-wrapper .about_block6 {
+.write-aboutus-wrapper .about_block6 {
   width: 100%;
   margin: auto;
 }
 
-.about_section4 + .write-aboutus-wrapper .about_block6 > .vc_column_container {
+.write-aboutus-wrapper .about_block6 > .vc_column_container {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -6887,6 +6888,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 .write-about-us-mob-wrapper {
   display: none;
+}
+
+.write-aboutus-wrapper .testimonials_section {
+  padding-top: 24px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -7048,6 +7053,14 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content .write_about_us_carousel-desk {
     display: none;
   }
+
+  .write-aboutus-wrapper .write_about_us_carousel {
+    margin-bottom: 0;
+  }
+
+  .write-aboutus-wrapper .testimonials_section {
+    padding-top: 40px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -7188,6 +7201,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .write-aboutus-wrapper .about_block6 .vc_column_container>.vc_column-inner {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .write-aboutus-wrapper .testimonials_section {
+    padding-top: 33px;
   }
 }
 
