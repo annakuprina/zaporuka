@@ -490,6 +490,7 @@ function send_cancel_subscription_email_function() {
     $sql = "Select order_id, comments from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
     $sql_res = $wpdb->get_results($sql);
 
+
     if($sql_res){
     	foreach ($sql_res as $value) {
     		$liqpay_order_id[]=array('order_id'=>$value->order_id,'comments'=>$value->comments);
