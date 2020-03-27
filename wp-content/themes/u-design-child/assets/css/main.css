@@ -6968,9 +6968,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     position: static;
   }
 
-  #wrapper-1 .write-aboutus-carousel-wrapper {
+  /* #wrapper-1 .write-aboutus-carousel-wrapper {
     display: none;
-  }
+  } */
 
   #wrapper-1 .write-aboutus-carousel-mob-wrapper {
     display: block;
