@@ -6627,14 +6627,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 
-
-#main-content .write-aboutus-carousel-mob-wrapper .write-about-us-slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 #main-content .write-about-us-slick-mob .write-about-us-slide img {
   margin-bottom: 40px;
 }
@@ -6993,7 +6985,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     display: block;
   }
   
-  .write-aboutus-carousel-wrapper .write_about_us_carousel{
+  .write-aboutus-carousel-wrapper > .write_about_us_carousel {
     display: none;
   }
 
@@ -7042,6 +7034,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .write-aboutus-wrapper .h2-header-line {
     margin-bottom: 86px;
+  }
+
+  .write_about_us_carousel-desk {
+    display: none;
   }
 }
 
