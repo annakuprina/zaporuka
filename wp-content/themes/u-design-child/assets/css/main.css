@@ -2377,6 +2377,7 @@ and shows hidden orange lines near titles on About us page*/
 
   #main-content .about_block6 {
     padding-bottom: 0;
+
   }
 
   #main-content .about_block6 .entry {
@@ -6626,6 +6627,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   display: none;
 }
 
+#main-content .write-about-us-slick-mob .write-about-us-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 #main-content .write-about-us-slick-mob .write-about-us-slide img {
   margin-bottom: 40px;
@@ -6856,6 +6862,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-right: 15px;
 }
 
+
+.about_section4 + .write-aboutus-wrapper .about_block6 {
+  width: 100%;
+  margin: auto;
+}
+
 .about_section4 + .write-aboutus-wrapper .about_block6 > .vc_column_container {
   padding-left: 15px;
   padding-right: 15px;
@@ -6985,9 +6997,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     display: block;
   }
   
-  .write-aboutus-carousel-wrapper > .write_about_us_carousel {
-    display: none;
-  }
 
   #wrapper-1 .write-aboutus-carousel-mob-wrapper {
     display: block;
@@ -7036,7 +7045,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     margin-bottom: 86px;
   }
 
-  .write_about_us_carousel-desk {
+  #main-content .write_about_us_carousel-desk {
     display: none;
   }
 }
