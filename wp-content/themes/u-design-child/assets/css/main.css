@@ -6628,7 +6628,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 
 
-#main-content .write-about-us-slide {
+#main-content .write-aboutus-carousel-mob-wrapper .write-about-us-slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
