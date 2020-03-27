@@ -862,7 +862,6 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   display: none;  
 }
 
-
 /* Media for one Project block(home page) */
 @media screen and (max-width: 1200px) {
   .one-project-right {
