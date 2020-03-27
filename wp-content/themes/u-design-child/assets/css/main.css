@@ -6901,6 +6901,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /* the parent */
 .shortcode-fund-documents-mob .fund-documents-wrapper {
   margin: 0 -27px;
+  display: flex;	 
+  width: 100%;
+  justify-content: center;
 }
 
 
@@ -7200,6 +7203,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 @media screen and (max-width: 500px) {
+
+  .about_section4 .other-projects-row .one-project-progress-wrapper {
+    padding: 0 5px;
+  }
 
   #main-content .aboutus_section2 .h2-about-first-title::before,
   #main-content .aboutus_section2 .h2-about-second-title::before,
