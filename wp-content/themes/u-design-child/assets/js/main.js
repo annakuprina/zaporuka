@@ -266,16 +266,16 @@ jQuery(document).ready(function($) {
     arrows: false,
     slidesToShow: 2,
     slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      }
-    ]
+    // responsive: [
+    //   {
+    //     breakpoint: 600,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //       infinite: true,
+    //     }
+    //   }
+    // ]
 
   });
 
