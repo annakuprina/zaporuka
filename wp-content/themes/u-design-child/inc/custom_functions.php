@@ -949,13 +949,13 @@ function shortcode_thanks_block(){
         $order_sum = '<span class="order-sum">' .  $liqpay_answer_summa. ' '  . check_currency() . '</span>';
         if ( !isset($thanks_text) ) {
             if( ICL_LANGUAGE_CODE == 'uk' ) {
-                $thanks_text = 'Вдячні за вашу пожертву у розмірі [сумма] Всі відправлені вами кошти підуть на допомогу БФ "Запорука".';
+                $thanks_text = 'Ваша пожертва у розмірі [сумма] буде використана на допомогу підопічним фонду "Запорука". Разом змінюємо світ на краще!';
             }
             elseif ( ICL_LANGUAGE_CODE == 'ru' ) {
-                $thanks_text = 'Благодарны за ваше пожертвование в размере [сумма] Все отправленные вами средства пойдут на помощь БФ "Запорука".';
+                $thanks_text = 'Ваше пожертвование в размере [сумма] будет использовано для помощи нашим подопечным фонда "Запорука". Вместе меняем мир к лучшему!';
             }
             elseif ( ICL_LANGUAGE_CODE == 'en' ) {
-                $thanks_text = 'We are grateful for your donation with the amount of [сумма]. All funds sent by you will be transfered to help CF(Charity Fund) Zaporuka.';
+                $thanks_text = 'Your donation of [сумма] will be used to help our wards from the Zaporuka foundation. Together we are changing the world for the better!';
             }
         }
         $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
@@ -966,7 +966,7 @@ function shortcode_thanks_block(){
             <div class="thanks-text-wrapper">
                 <div>
                     <a href="<?php echo home_url(); ?>">
-                        <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Дякуємо за підтримку!');?></h2></div>
+                        <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Дякуємо за ваше добро!');?></h2></div>
                         <div class="thanks-text-block">
                             <?php echo $thanks_text; ?>
                         </div>

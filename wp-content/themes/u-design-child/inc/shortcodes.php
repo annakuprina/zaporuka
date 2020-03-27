@@ -487,7 +487,7 @@ function send_cancel_subscription_email_function() {
     $user_mail = sanitize_text_field( $_POST['client_mail'] );
     $user_phone = sanitize_text_field( $_POST['client_tel'] );
 
-    $sql = "Select order_id, comments from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
+    $sql = "Select order_id, summa, comments from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
     $sql_res = $wpdb->get_results($sql);
 
 
@@ -516,9 +516,16 @@ function send_cancel_subscription_email_function() {
     	$mail_body = $start_message;
 
     	$link = site_url() . $redirect_page_link . '?cancel_subscription=1' . '&order_id=';
+        foreach ($liqpay_order_id as $order ) {
+            $project_id =  get_option($order['order_id'] . '-liqpay_post_id');
+            if( $project_id != 823 ) {
+                $the_post = get_post( $project_id );
+                $project_name = "на проект " .$the_post->post_title;
+            } else{
+                $project_name = '';
+            }
 
-    	foreach ($liqpay_order_id as $order ) {
-			$mail_body .= $order['comments'] . " - ";
+            $mail_body .= $order['comments'] . " в розмiрi ". $order['summa'] . "грн " . $project_name . " - ";
 			$mail_body .= '<a href="'. $link . $order['order_id'].'">' . $link . $order['order_id'] . '</a>' . "<br>";
     	}	   
 
