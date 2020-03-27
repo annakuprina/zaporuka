@@ -1022,7 +1022,7 @@ footer a.designer-link {
   .help-form-submit-oferta
   .help-form-submit
   .submit-btn {
-  color: #e78b48;
+  color: #ffffff;
   font-weight: 600;
   font-size: 14px;
   background: transparent;
@@ -1031,7 +1031,7 @@ footer a.designer-link {
   cursor: pointer;
 }
 .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
-  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
   padding-left: 10px;
 }
 .help-form-inner-wrapper .help-form-oferta label:not(.error) {

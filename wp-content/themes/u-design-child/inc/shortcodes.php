@@ -64,12 +64,14 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
                     </div>
                     <div class="help-form-subscribe">
                         <div class="help-form-subscribe-left">
-                            <a href="#" paytype="pay" class="subscribe-link onetime active"><?php echo $payonce_label; ?></a>
-<!--                            <input type="radio" name="pay_type" value="pay">-->
+<!--                            <a href="#" paytype="pay" class="subscribe-link onetime active">--><?php //echo $payonce_label; ?><!--</a>-->
+                            <input type="radio" class="pay_label" id="pay_once" name="pay_type" value="pay" checked>
+                            <label for="pay_once" class="pay_label"><?php echo $payonce_label; ?></label>
                         </div>
                         <div class="help-form-subscribe-right">
-                            <a href="#" paytype="subscribe" class="subscribe-link month"><?php echo $monthly_label; ?></a>
-<!--                            <input type="radio" name="pay_type" value="subscribe">-->
+<!--                            <a href="#" paytype="subscribe" class="subscribe-link month">--><?php //echo $monthly_label; ?><!--</a>-->
+                            <input type="radio" class="pay_label" id="pay_monthly" name="pay_type" value="subscribe">
+                            <label for="pay_monthly" class="pay_label"><?php echo $monthly_label; ?></label>
                         </div>
                     </div>
                     <p class="help-form-text">
@@ -498,6 +500,7 @@ function send_cancel_subscription_email_function() {
     }
 
     if($liqpay_order_id){
+        $symbol = 'грн';
     	if(ICL_LANGUAGE_CODE=='uk'){
 			$start_message =  "Для підтвердження скасування регулярного платежу перейдіть за посиланням нижче<br>";
 			$subject = 'Скасування регулярного платежу';
@@ -512,6 +515,7 @@ function send_cancel_subscription_email_function() {
 			$start_message =  "To confirm the cancellation of the regular payment, follow the link below<br>";
 			$subject = 'Cancel recurring payment';
 			$redirect_page_link = '/en/cancel_subscription/';
+            $symbol = 'UAH';
 		}
     	$mail_body = $start_message;
 
@@ -525,7 +529,7 @@ function send_cancel_subscription_email_function() {
                 $project_name = '';
             }
 
-            $mail_body .= $order['comments'] . " в розмiрi ". $order['summa'] . "грн " . $project_name . " - ";
+            $mail_body .= $order['comments'] . " в розмiрi ". $order['summa'] . $symbol . " " . $project_name . " - ";
 			$mail_body .= '<a href="'. $link . $order['order_id'].'">' . $link . $order['order_id'] . '</a>' . "<br>";
     	}	   
 
