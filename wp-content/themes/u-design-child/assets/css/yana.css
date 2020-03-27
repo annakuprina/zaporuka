@@ -1142,3 +1142,11 @@ li.one-tab-link:hover {
   max-width: 1140px;
   margin: 0 auto !important;
 }
+
+.help-form-subscribe .pay_label{
+  color: rgba(165, 165, 165, 0.8);
+}
+.help-form-submit{
+  background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
+  padding: 10px 30px;
+}
