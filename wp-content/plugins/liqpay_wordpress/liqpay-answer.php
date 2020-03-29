@@ -147,17 +147,17 @@ if (isset($_POST['data'])) {
     if ($status == "failure") {
 
         $status = pll__("платіж відхилено");
-        $text = pll__("Вибачте але Ваш платіж відхилено") . "...\n";
-        $text .= pll__("Дата/час") . ": " . $xdate . "\n ";
-        $text .= pll__("Номер заказу") . ": " . $order_id . "\n ";
-        $text .= pll__("Номер транзакції в системі LiqPay") . ": " . $transaction_id . "\n ";
-        $text .= pll__("Статус транзакції") . ": " . $status . "\n ";
-        $text .= pll__("Вартiсть") . ": " . $summa . " " . $valuta . "\n ";
+        $text = "<p style='color: #888;'> " . pll__("Вибачте але Ваш платіж відхилено") . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Дата/час") . ": " . $xdate . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Номер заказу") .  ": " . $order_id . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $status . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Вартiсть") . ": " . $summa . " " . $valuta . "</p>";
         if ($fio){
-            $text .= pll__("Им'я") . ": " . $fio . "\n ";
+            $text .= "<p style='color: #888;'> " . pll__("Им'я") .  ": " . $fio . "</p>";
         }
-        $text .= pll__("Телефон") . ": " . $user_phone . "\n ";
-        $text .= pll__("Коментар") . ": " . $datas . "\n ";
+        $text .= "<p style='color: #888;'> " . pll__("Телефон") .  ": " . $user_phone . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Коментар") .  ": " . $datas . "</p>";
         $message = $text;
         $mail = get_option('liqpay_mail');
         $order = '';
@@ -180,16 +180,16 @@ if (isset($_POST['data'])) {
         $flag = 1;
         if ($hidden_content == '1')
             $status = pll__("платіж здійснено");
-        $text .= "<p> " . pll__("Дата/час") . ": " . $xdate . "</p>";
-        $text .= "<p> " . pll__("Номер заказу") .  ": " . $order_id . "</p>";
-        $text .= "<p> " . pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "</p>";
-        $text .= "<p> " . pll__("Статус транзакції") .  ": " . $status . "</p>";
-        $text .= "<p> " . pll__("Вартiсть") . ": " . $summa . " " . $valuta . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Дата/час") . ": " . $xdate . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Номер заказу") .  ": " . $order_id . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $status . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Вартiсть") . ": " . $summa . " " . $valuta . "</p>";
         if ($fio){
-            $text .= "<p> " . pll__("Им'я") .  ": " . $fio . "</p>";
+            $text .= "<p style='color: #888;'> " . pll__("Им'я") .  ": " . $fio . "</p>";
         }
-        $text .= "<p> " . pll__("Телефон") .  ": " . $user_phone . "</p>";
-        $text .= "<p> " . pll__("Коментар") .  ": " . $datas . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Телефон") .  ": " . $user_phone . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Коментар") .  ": " . $datas . "</p>";
         if ($hidden_content == '1') {
             $user_pass = (!empty($user_pass)) ? $user_pass : '';
             $user_url = (!empty($user_url)) ? $user_url : '';
@@ -313,7 +313,7 @@ if (isset($_POST['data'])) {
                 if ($file_url) {
                     $attachments = array($file_url);
                 }
-                $text_head = pll__("Вітаємо! Ваш платіж пройшов успішно") . "...\n";
+                $text_head = "<p style='color: #888;'> " . pll__("Вітаємо! Ваш платіж пройшов успішно") . "...</p>";
 
                 $message = $text_head . $message;
                 $attachments = '';
@@ -328,7 +328,7 @@ if (isset($_POST['data'])) {
                 }
             } else {//
                 $attachments = '';
-                $text_head = pll__("Вітаємо! Ваш платіж пройшов успішно") . "...\n";
+                $text_head = "<p style='color: #888;'> " . pll__("Вітаємо! Ваш платіж пройшов успішно") . "...</p>";
                 $text_head .= $cost_cult . $valuta_cult . " Вы оплатили. " . $summa . $valuta . ", сумма не соответствует стоимости товара, за разъяснением вопроса, обратитесь к администратору " . get_option('liqpay_mail');
                 $message = $text_head . $message;
             }
@@ -342,17 +342,17 @@ if (isset($_POST['data'])) {
         exit;
     } elseif (($status == "wait_secure") || ($status == "wait_accept")) {
         $status = pll__("платіж знаходиться на перевірці");
-        $text = pll__("Ваш платіж очікує на перевірку") . "...\n";
-        $text .= pll__("Дата/час") . ": " . $xdate . "\n ";
-        $text .= pll__("Номер заказу") . ": " . $order_id . "\n ";
-        $text .= pll__("Номер транзакції в системі LiqPay") . ": " . $transaction_id . "\n ";
-        $text .= pll__("Статус транзакції") . ": " . $status . "\n ";
-        $text .= pll__("Вартiсть") . ": " . $summa . " " . $valuta . "\n ";
+        $text = "<p style='color: #888;'> " . pll__("Ваш платіж очікує на перевірку") . "...</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Дата/час") . ": " . $xdate . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Номер заказу") .  ": " . $order_id . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $status . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Вартiсть") . ": " . $summa . " " . $valuta . "</p>";
         if ($fio){
-            $text .= pll__("Им'я") . ": " . $fio . "\n ";
+            $text .= "<p style='color: #888;'> " . pll__("Им'я") .  ": " . $fio . "</p>";
         }
-        $text .= pll__("Телефон") . ": " . $user_phone . "\n ";
-        $text .= pll__("Коментар") . ": " . $datas . "\n ";
+        $text .= "<p style='color: #888;'> " . pll__("Телефон") .  ": " . $user_phone . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Коментар") .  ": " . $datas . "</p>";
         $text .= pll__("Если долгое время платеж не проходит, Вам следует обратится в онлайн чат службы поддержки Liqpay, по адресу") . " <a href='https://liqpay.ua/' title='Liqpay'>Liqpay</a> \n";
         $message = $text;
         $mail = get_option('liqpay_mail');
