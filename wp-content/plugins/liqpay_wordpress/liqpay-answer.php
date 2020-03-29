@@ -150,13 +150,13 @@ if (isset($_POST['data'])) {
 
         $status = "платеж отклонен";
         $text = "Извините но Ваш платеж не прошел...\n";
-        $text .= "\n Дата/время  " . $xdate;
-        $text .= "\n id заказа = " . $order_id;
-        $text .= "\n id транзакции в системе LiqPay  = " . $transaction_id;
-        $text .= "\n Статус транзакции = " . $status;
-        $text .= "\n Стоимость = " . $summa . " " . $valuta;
-        $text .= "\n Телефон оплативший заказ  = " . $sender_phone;
-        $text .= "\n Комментарий = " . $datas;
+        $text .= "\n Дата/время:  " . $xdate;
+        $text .= "\n id заказа: " . $order_id;
+        $text .= "\n id транзакции в системе LiqPay: " . $transaction_id;
+        $text .= "\n Статус транзакции: " . $status;
+        $text .= "\n Стоимость: " . $summa . " " . $valuta;
+        $text .= "\n Телефон: " . $user_phone;
+        $text .= "\n Комментарий: " . $datas;
         if ($fio)
             $message = $text . " \r\n  Имя - " . $fio;
         else
@@ -182,13 +182,13 @@ if (isset($_POST['data'])) {
         $flag = 1;
         if ($hidden_content == '1')
             $status = "платеж совершен";
-        $text = "\n Дата/время  " . $xdate;
-        $text .= "\n id заказа = " . $order_id;
-        $text .= "\n id транзакции в системе LiqPay  = " . $transaction_id;
-        $text .= "\n Статус транзакции = " . $status;
-        $text .= "\n Стоимость = " . $summa . " " . $valuta;
-        $text .= "\n Телефон оплативший заказ  = " . $sender_phone;
-        $text .= "\n Комментарий " . $datas;
+        $text = "\n Дата/время:  " . $xdate;
+        $text .= "\n id заказа: " . $order_id;
+        $text .= "\n id транзакции в системе LiqPay: " . $transaction_id;
+        $text .= "\n Статус транзакции: " . $status;
+        $text .= "\n Стоимость: " . $summa . " " . $valuta;
+        $text .= "\n Телефон: " . $user_phone;
+        $text .= "\n Комментарий: " . $datas;
         if ($hidden_content == '1') {
             $user_pass = (!empty($user_pass)) ? $user_pass : '';
             $user_url = (!empty($user_url)) ? $user_url : '';
@@ -345,13 +345,13 @@ if (isset($_POST['data'])) {
     } elseif (($status == "wait_secure") || ($status == "wait_accept")) {
         $status = "платеж находится на проверке";
         $text = "Ваш платеж ожидает проверки...\n";
-        $text .= "\n Дата/время  " . $xdate;
-        $text .= "\n id заказа = " . $order_id;
-        $text .= "\n id транзакции в системе LiqPay  = " . $transaction_id;
-        $text .= "\n Статус транзакции = " . $status;
-        $text .= "\n Стоимость = " . $summa . " " . $valuta;
-        $text .= "\n Телефон оплативший заказ  = " . $sender_phone;
-        $text .= "\n Комментарий " . $datas;
+        $text .= "\n Дата/время:  " . $xdate;
+        $text .= "\n id заказа: " . $order_id;
+        $text .= "\n id транзакции в системе LiqPay: " . $transaction_id;
+        $text .= "\n Статус транзакции: " . $status;
+        $text .= "\n Стоимость: " . $summa . " " . $valuta;
+        $text .= "\n Телефон: " . $user_phone;
+        $text .= "\n Комментарий: " . $datas;
         $text .= "\n Если долгое время платеж не проходит, Вам следует обратится в онлайн чат службы поддержки Liqpay, по адресу <a href='https://liqpay.ua/' title='Liqpay'>Liqpay</a>";
         if ($fio)
             $message = $text . " Имя - " . $fio;
