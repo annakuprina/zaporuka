@@ -158,6 +158,7 @@ if (isset($_POST['data'])) {
         }
         $text .= pll__("Телефон") . ": " . $user_phone . "\n ";
         $text .= pll__("Коментар") . ": " . $datas . "\n ";
+        $message = $text;
         $mail = get_option('liqpay_mail');
         $order = '';
         if ($new_code) {
@@ -353,6 +354,7 @@ if (isset($_POST['data'])) {
         $text .= pll__("Телефон") . ": " . $user_phone . "\n ";
         $text .= pll__("Коментар") . ": " . $datas . "\n ";
         $text .= pll__("Если долгое время платеж не проходит, Вам следует обратится в онлайн чат службы поддержки Liqpay, по адресу") . " <a href='https://liqpay.ua/' title='Liqpay'>Liqpay</a> \n";
+        $message = $text;
         $mail = get_option('liqpay_mail');
         $order = '';
         if ($new_code) {
