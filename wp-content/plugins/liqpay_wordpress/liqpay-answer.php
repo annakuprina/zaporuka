@@ -180,16 +180,16 @@ if (isset($_POST['data'])) {
         $flag = 1;
         if ($hidden_content == '1')
             $status = pll__("платіж здійснено");
-        $text .= pll__("Дата/час") . ": " . $xdate . "\n ";
-        $text .= pll__("Номер заказу") .  ": " . $order_id . "\n ";
-        $text .= pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "\n ";
-        $text .= pll__("Статус транзакції") .  ": " . $status . "\n ";
-        $text .= pll__("Вартiсть") . ": " . $summa . " " . $valuta . "\n ";
+        $text .= "\n " . pll__("Дата/час") . ": " . $xdate . "\n ";
+        $text .= "\n " . pll__("Номер заказу") .  ": " . $order_id . "\n ";
+        $text .= "\n " . pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "\n ";
+        $text .= "\n " . pll__("Статус транзакції") .  ": " . $status . "\n ";
+        $text .= "\n " . pll__("Вартiсть") . ": " . $summa . " " . $valuta . "\n ";
         if ($fio){
-            $text .= pll__("Им'я") .  ": " . $fio . "\n ";
+            $text .= "\n " . pll__("Им'я") .  ": " . $fio . "\n ";
         }
-        $text .= pll__("Телефон") .  ": " . $user_phone . "\n ";
-        $text .= pll__("Коментар") .  ": " . $datas . "\n ";
+        $text .= "\n " . pll__("Телефон") .  ": " . $user_phone . "\n ";
+        $text .= "\n " . pll__("Коментар") .  ": " . $datas . "\n ";
         if ($hidden_content == '1') {
             $user_pass = (!empty($user_pass)) ? $user_pass : '';
             $user_url = (!empty($user_url)) ? $user_url : '';
