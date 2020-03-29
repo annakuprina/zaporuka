@@ -145,7 +145,20 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Дякуємо за ваше добро!');
   pll_register_string('u-design-child', 'Ви скасували оплату!');
   pll_register_string('u-design-child', 'Выберите год');
-  pll_register_string('advanced-custom-fields', 'моб');
+  pll_register_string('liqpay_wordpress', 'платеж отклонен');
+  pll_register_string('liqpay_wordpress', 'Извините но Ваш платеж не прошел');
+  pll_register_string('liqpay_wordpress', 'Дата/время');
+  pll_register_string('liqpay_wordpress', 'id заказа');
+  pll_register_string('liqpay_wordpress', 'id транзакции в системе LiqPay');
+  pll_register_string('liqpay_wordpress', 'Статус транзакции');
+  pll_register_string('liqpay_wordpress', 'Стоимость');
+  pll_register_string('liqpay_wordpress', 'Имя');
+  pll_register_string('liqpay_wordpress', 'Телефон');
+  pll_register_string('liqpay_wordpress', 'Комментарий');
+  pll_register_string('liqpay_wordpress', 'платеж совершен');
+  pll_register_string('liqpay_wordpress', 'платеж находится на проверке');
+  pll_register_string('liqpay_wordpress', 'Ваш платеж ожидает проверки');
+  pll_register_string('liqpay_wordpress', 'Если долгое время платеж не проходит, Вам следует обратится в онлайн чат службы поддержки Liqpay, по адресу');
 });
 
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
