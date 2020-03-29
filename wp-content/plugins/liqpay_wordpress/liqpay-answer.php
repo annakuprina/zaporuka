@@ -148,18 +148,18 @@ if (isset($_POST['data'])) {
 ////////////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     if ($status == "failure") {
 
-        $status = pll_e("платеж отклонен");
-        $text = pll_e("Извините но Ваш платеж не прошел") . "...\n";
-        $text .= "\n " . pll_e("Дата/время") . ': ' . $xdate;
-        $text .= "\n " . pll_e("id заказа") . ': ' . $order_id;
-        $text .= "\n " . pll_e("id транзакции в системе LiqPay") . ': ' . $transaction_id;
-        $text .= "\n " . pll_e("Статус транзакции") . ': ' . $status;
-        $text .= "\n " . pll_e("Стоимость") . ': ' . $summa . " " . $valuta;
+        $status = pll__("платеж отклонен");
+        $text = pll__("Извините но Ваш платеж не прошел") . "...\n";
+        $text .= "\n " . pll__("Дата/время") . ': ' . $xdate;
+        $text .= "\n " . pll__("id заказа") . ': ' . $order_id;
+        $text .= "\n " . pll__("id транзакции в системе LiqPay") . ': ' . $transaction_id;
+        $text .= "\n " . pll__("Статус транзакции") . ': ' . $status;
+        $text .= "\n " . pll__("Стоимость") . ': ' . $summa . " " . $valuta;
         if ($fio){
-            $text .= "\n " . pll_e("Имя") . ': ' . $fio;
+            $text .= "\n " . pll__("Имя") . ': ' . $fio;
         }
-        $text .= "\n " . pll_e("Телефон") . ': ' . $user_phone;
-        $text .= "\n " . pll_e("Комментарий") . ': ' . $datas;
+        $text .= "\n " . pll__("Телефон") . ': ' . $user_phone;
+        $text .= "\n " . pll__("Комментарий") . ': ' . $datas;
         $mail = get_option('liqpay_mail');
         $order = '';
         if ($new_code) {
@@ -180,17 +180,17 @@ if (isset($_POST['data'])) {
     } elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
         $flag = 1;
         if ($hidden_content == '1')
-            $status = pll_e("платеж совершен");
-        $text .= "\n " . pll_e("Дата/время") . ': ' . $xdate;
-        $text .= "\n " . pll_e("id заказа") . ': ' . $order_id;
-        $text .= "\n " . pll_e("id транзакции в системе LiqPay") . ': ' . $transaction_id;
-        $text .= "\n " . pll_e("Статус транзакции") . ': ' . $status;
-        $text .= "\n " . pll_e("Стоимость") . ': ' . $summa . " " . $valuta;
+            $status = pll__("платеж совершен");
+        $text .= "\n " . pll__("Дата/время") . ': ' . $xdate;
+        $text .= "\n " . pll__("id заказа") . ': ' . $order_id;
+        $text .= "\n " . pll__("id транзакции в системе LiqPay") . ': ' . $transaction_id;
+        $text .= "\n " . pll__("Статус транзакции") . ': ' . $status;
+        $text .= "\n " . pll__("Стоимость") . ': ' . $summa . " " . $valuta;
         if ($fio){
-            $text .= "\n " . pll_e("Имя") . ': ' . $fio;
+            $text .= "\n " . pll__("Имя") . ': ' . $fio;
         }
-        $text .= "\n " . pll_e("Телефон") . ': ' . $user_phone;
-        $text .= "\n " . pll_e("Комментарий") . ': ' . $datas;
+        $text .= "\n " . pll__("Телефон") . ': ' . $user_phone;
+        $text .= "\n " . pll__("Комментарий") . ': ' . $datas;
         if ($hidden_content == '1') {
             $user_pass = (!empty($user_pass)) ? $user_pass : '';
             $user_url = (!empty($user_url)) ? $user_url : '';
@@ -314,7 +314,7 @@ if (isset($_POST['data'])) {
                 if ($file_url) {
                     $attachments = array($file_url);
                 }
-                $text_head = "Поздравляем! Ваш платеж прошел успешно...\n";
+                $text_head = pll__("Поздравляем! Ваш платеж прошел успешно") . "...\n";
 
                 $message = $text_head . $message;
                 $attachments = '';
@@ -329,7 +329,7 @@ if (isset($_POST['data'])) {
                 }
             } else {//
                 $attachments = '';
-                $text_head = "Поздравляем! Ваш платеж прошел успешно... \n";
+                $text_head = pll__("Поздравляем! Ваш платеж прошел успешно") . "...\n";
                 $text_head .= $cost_cult . $valuta_cult . " Вы оплатили. " . $summa . $valuta . ", сумма не соответствует стоимости товара, за разъяснением вопроса, обратитесь к администратору " . get_option('liqpay_mail');
                 $message = $text_head . $message;
             }
@@ -342,19 +342,19 @@ if (isset($_POST['data'])) {
 
         exit;
     } elseif (($status == "wait_secure") || ($status == "wait_accept")) {
-        $status = pll_e("платеж находится на проверке");
-        $text = pll_e("Ваш платеж ожидает проверки") . "...\n";
-        $text .= "\n " . pll_e("Дата/время") . ': ' . $xdate;
-        $text .= "\n " . pll_e("id заказа") . ': ' . $order_id;
-        $text .= "\n " . pll_e("id транзакции в системе LiqPay") . ': ' . $transaction_id;
-        $text .= "\n " . pll_e("Статус транзакции") . ': ' . $status;
-        $text .= "\n " . pll_e("Стоимость") . ': ' . $summa . " " . $valuta;
+        $status = pll__("платеж находится на проверке");
+        $text = pll__("Ваш платеж ожидает проверки") . "...\n";
+        $text .= "\n " . pll__("Дата/время") . ': ' . $xdate;
+        $text .= "\n " . pll__("id заказа") . ': ' . $order_id;
+        $text .= "\n " . pll__("id транзакции в системе LiqPay") . ': ' . $transaction_id;
+        $text .= "\n " . pll__("Статус транзакции") . ': ' . $status;
+        $text .= "\n " . pll__("Стоимость") . ': ' . $summa . " " . $valuta;
         if ($fio){
-            $text .= "\n " . pll_e("Имя") . ': ' . $fio;
+            $text .= "\n " . pll__("Имя") . ': ' . $fio;
         }
-        $text .= "\n " . pll_e("Телефон") . ': ' . $user_phone;
-        $text .= "\n " . pll_e("Комментарий") . ': ' . $datas;
-        $text .= "\n " . pll_e("Если долгое время платеж не проходит, Вам следует обратится в онлайн чат службы поддержки Liqpay, по адресу") . " <a href='https://liqpay.ua/' title='Liqpay'>Liqpay</a>";
+        $text .= "\n " . pll__("Телефон") . ': ' . $user_phone;
+        $text .= "\n " . pll__("Комментарий") . ': ' . $datas;
+        $text .= "\n " . pll__("Если долгое время платеж не проходит, Вам следует обратится в онлайн чат службы поддержки Liqpay, по адресу") . " <a href='https://liqpay.ua/' title='Liqpay'>Liqpay</a>";
         $mail = get_option('liqpay_mail');
         $order = '';
         if ($new_code) {

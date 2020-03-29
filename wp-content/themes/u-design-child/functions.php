@@ -145,6 +145,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Дякуємо за ваше добро!');
   pll_register_string('u-design-child', 'Ви скасували оплату!');
   pll_register_string('u-design-child', 'Выберите год');
+  pll_register_string('liqpay_wordpress', 'Поздравляем! Ваш платеж прошел успешно');
   pll_register_string('liqpay_wordpress', 'платеж отклонен');
   pll_register_string('liqpay_wordpress', 'Извините но Ваш платеж не прошел');
   pll_register_string('liqpay_wordpress', 'Дата/время');
