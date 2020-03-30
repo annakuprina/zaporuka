@@ -909,6 +909,13 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   padding-top: 0;
 }
 
+.single-projects .single-proj-help-partners-section {
+  padding-top: 86px;
+}
+
+.single-projects .other-projects-desk .slick-dots {
+  bottom: -27px;
+}
 /* Media for one Project block(home page) */
 @media screen and (max-width: 1200px) {
   .one-project-right {
@@ -2148,6 +2155,21 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 .single-projects .single-proj-help-partners-section {
   padding-top: 88px;
 }
+
+.single-projects .single_proj_block4 {
+  padding-top: 60px;
+}
+
+.single-projects .single-proj-help-section {
+  padding-top: 90px;
+}
+
+.single-projects .carousel-news-posts .slick-dots {
+  bottom: -14px;
+}
+
+
+
 /*Media for project timeline*/
 @media screen and (max-width: 1024px) {
   .projects.type-projects .proj-timeline-steps .one-step-title {
