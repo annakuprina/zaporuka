@@ -947,9 +947,10 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 
 @media screen and (max-width: 900px) {
   .single-projects #main-content .block-project-partners .help_button_single_block .vc_btn3 {
-    padding-right: 15px;
+    padding-right: 12px;
+    padding-left: 5px;
     padding-top: 20px !important;
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
