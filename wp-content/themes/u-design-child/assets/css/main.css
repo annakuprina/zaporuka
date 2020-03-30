@@ -2758,10 +2758,7 @@ input[type="checkbox"] + label#oferta-error {
   padding-bottom: 22px;
 }
 
-.homepage-banner .vc_column-inner {
-  padding-top: 47px;
-  padding-bottom: 47px;
-}
+
 
 @media screen and (max-width: 1200px) {
   .help .help-item {
@@ -3338,6 +3335,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   padding-bottom: 47px;
 }
 
+.homepage-banner > .wpb_column > .vc_column-inner {
+  padding-top: 47px;
+  padding-bottom: 47px;
+}
 
 #main-content .home-first-post-image {
   max-width: 1140px;
