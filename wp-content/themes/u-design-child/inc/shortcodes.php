@@ -78,11 +78,17 @@ $cancel_subscription_link_block = !empty($options['cancel_subscription_link_bloc
                         <?php echo $text_help_label; ?>
                     </p>
                     <div class="help-form-submit-oferta">
-                        <div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $help_label; ?>" /></div>
-                        <div class="help-form-oferta">
-                            <input type="checkbox" id="oferta" name="oferta" required>
-                            <label for="oferta"><?php echo $agree_help_label; ?> <a href="<?php echo $agree_link; ?>" target="_blank" ><?php echo $agree_link_label; ?></a>*</label>
+                        <div class="help-form-submit-wrapper">
+                            <div class="help-form-submit"><input class="submit-btn" type="submit" value="<?php echo $help_label; ?>" /></div>
                         </div>
+
+                        <div class="help-form-oferta-wrapper">
+                            <div class="help-form-oferta">
+                                <input type="checkbox" id="oferta" name="oferta" required>
+                                <label for="oferta"><?php echo $agree_help_label; ?> <a href="<?php echo $agree_link; ?>" target="_blank" ><?php echo $agree_link_label; ?></a>*</label>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="help-form-cancel-subscription">
                         <p class="help-form-cancel-subscription-text">

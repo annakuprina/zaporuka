@@ -2529,12 +2529,13 @@ and shows hidden orange lines near titles on About us page*/
 
 
 /*-----------------------------------------------------------------------------
-  HELP(orange blocks and contact form) for one projects page and modal window
+  HELP(orange blocks and contact form) for one project page and modal window
 ------------------------------------------------------------------------------*/
 
 #wrapper-1 .help-form-inner-wrapper .help-form-oferta label:not(.error) {
   padding-left: 24px;
   margin-right: -7px;
+  
 }
 
 input[type="checkbox"] + label#oferta-error {
@@ -2632,6 +2633,26 @@ input[type="checkbox"] + label#oferta-error {
   content: url(/wp-content/themes/u-design-child//img/arrow-black.svg);
   position: absolute;
   padding-left: 14px;
+}
+
+.help .help-form-submit-oferta {
+  display: flex;
+}
+
+.help-form-submit-wrapper {
+  width: 50%;
+}
+
+.help-form-oferta-wrapper {
+  width: 50%;
+  padding-left: 22px;
+}
+
+.help  .help-form-submit {
+  min-width: 120px;
+  width: calc(100% - 30px);
+  display: flex;
+  justify-content: center;
 }
 
 .help
@@ -2822,11 +2843,11 @@ input[type="checkbox"] + label#oferta-error {
   .help .help-form-inner-wrapper .help-form-submit-oferta {
     flex-direction: column;
     align-items: flex-start;
+
   }
 
   .help .help-form-oferta {
     order: -1;
-    margin-bottom: 32px;
   }
 
   .help .help-form-email-tel {
@@ -2851,6 +2872,16 @@ input[type="checkbox"] + label#oferta-error {
   .help  .help-form-submit {
     width: 100%;
     text-align: center;
+  }
+
+  .help-form-submit-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .help-form-oferta-wrapper {
+    width: 100%;
+    padding-left: 0;
   }
 }
 
