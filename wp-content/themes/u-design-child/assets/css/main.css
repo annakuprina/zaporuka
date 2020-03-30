@@ -1677,6 +1677,7 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   font-family: "Raleway-Bold";
   letter-spacing: 0;
   font-size: 14px;
+  position: relative;
   transform: none;
 }
 
@@ -3164,6 +3165,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   padding-bottom: 47px;
 }
 
+
 #main-content .home-first-post-image {
   max-width: 1140px;
   margin: auto;
@@ -3318,6 +3320,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   }
 }
 
+@media screen and (max-width: 959px) {
+
+  #home-page-content .vc_custom_1585211715542 {
+    padding-top: 60px;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .vc_gitem-animated-block .vc_gitem-zone-img {
@@ -3393,6 +3401,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
   #home-page-content .vc_custom_1585211715542 {
     background-size: auto 320px !important ;
+    padding-top: 0;
   }
 
   .home-first-post-post-excerpt {
