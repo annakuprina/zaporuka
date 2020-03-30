@@ -7115,6 +7115,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 @media screen and (max-width: 1024px) {
+  .shortcode-fund-documents-mob .fund-documents-wrapper {
+    margin: auto;
+  }
+  
   #wrapper-1 .aboutus_section2 .block_excerpt_container {
     padding: 25px 0 0 20px;
   }
@@ -7667,6 +7671,18 @@ body.product ul.products {
 }
 
 @media screen and (max-width: 1200px) {
+  .single-product #main-content .product .woocommerce-images {
+    float: none;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  .single-product #main-content .woocommerce-images + .summary.entry-summary {
+    float: none;
+    width: 100%;
+    max-width: unset;
+  }
+
   .woocommerce.single-product #wrapper-1 div.product div.summary {
     margin-bottom: 0;
   }
