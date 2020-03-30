@@ -218,12 +218,12 @@ function shortcode_project_partners_mob(){
     global $post;
     $partners_array = get_posts( array(
         'numberposts' => -1,
-        'post_type'   => 'partner',
+        'post_type'   => 'partners',
         'tax_query' => array(
             array(
               'taxonomy' => 'partners_category',
-              'field' => 'name',
-              'terms' => $post->post_title,
+              'field' => 'slug',
+              'terms' => $post->post_name,
               'include_children' => false
             )
         )
