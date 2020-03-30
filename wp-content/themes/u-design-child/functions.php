@@ -29,6 +29,7 @@ function udesign_child_theme_styles() {
     wp_enqueue_style( 'reset-child', CHILD_DIR . '/assets/css/reset.css' );
     wp_enqueue_style( 'anna-child', CHILD_DIR . '/assets/css/anna.css' );
     wp_enqueue_style( 'yana-child', CHILD_DIR . '/assets/css/yana.css' );    
+    wp_enqueue_style( 'animate-child', CHILD_DIR . '/assets/css/animate.min.css' );
     wp_enqueue_script( 'validate-js', CHILD_DIR . '/assets/js/jquery.validate.min.js' );
     wp_enqueue_script( 'slick-js', CHILD_DIR . '/assets/slick/slick.min.js' );
     wp_enqueue_script( 'slick-lightbox-js', CHILD_DIR . '/assets/slick/slick-lightbox.min.js' );
@@ -232,12 +233,6 @@ function set_custom_partners_columns( $columns ) {
     return $columns;
 }
 
-add_filter( 'manage_project_partner_posts_columns', 'set_custom_project_partner_columns' );
-function set_custom_project_partner_columns( $columns ) {
-    $columns['project_partner_category'] = __( 'Категорія' );
-    return $columns;
-}
-
 /* Add the data to the custom columns for the book post type:*/
 add_action( 'manage_projects_posts_custom_column' , 'set_custom_projects_columns_data', 10, 2 );
 function set_custom_projects_columns_data( $column ) {
@@ -319,28 +314,6 @@ function set_custom_partners_columns_data( $column ) {
     global $post;
     if ( 'partners_category' === $column ) {
         $project_category = wp_get_post_terms($post->ID, 'partners_category',  array("fields" => "names"));
-        $count_categories = count($project_category);
-        $last_arr_key = array_keys($project_category)[count($project_category)-1];
-
-        if ( $count_categories > 1 ){
-            for ($i=0; $i < $count_categories; ++$i){
-                if ( $i != $last_arr_key){
-                    echo $project_category[$i] . ', ';
-                } else{
-                    echo $project_category[$i];
-                }
-            }
-        } else{
-            echo $project_category[0];
-        }
-    }
-}
-
-add_action( 'manage_project_partner_posts_custom_column' , 'set_custom_project_partner_columns_data', 10, 2 );
-function set_custom_project_partner_columns_data( $column ) {
-    global $post;
-    if ( 'project_partner_category' === $column ) {
-        $project_category = wp_get_post_terms($post->ID, 'project_partner_category',  array("fields" => "names"));
         $count_categories = count($project_category);
         $last_arr_key = array_keys($project_category)[count($project_category)-1];
 
@@ -625,7 +598,6 @@ function create_post_type_separate_categories(){
     register_taxonomy( 'projects_category', 'projects', array( 'hierarchical' => true, 'label' => 'Категорії проекту', 'query_var' => true, 'rewrite' => true ) );
     register_taxonomy( 'write_about_category', 'write_about_us', array( 'hierarchical' => true, 'label' => 'Категорії', 'query_var' => true, 'rewrite' => true ) );
     register_taxonomy( 'partners_category', 'partners', array( 'hierarchical' => true, 'label' => 'Категорії партнерiв', 'query_var' => true, 'rewrite' => true ) );
-    register_taxonomy( 'project_partner_category', 'project_partner', array( 'hierarchical' => true, 'label' => 'Категорії партнерiв проекту', 'query_var' => true, 'rewrite' => true ) );
     register_taxonomy( 'news_category', 'novini', array( 'hierarchical' => true, 'label' => 'Категорії новин', 'query_var' => true, 'rewrite' => true ) );
 
 }
