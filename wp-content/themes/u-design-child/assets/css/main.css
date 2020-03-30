@@ -700,6 +700,10 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   padding-left: 0;
 }
 
+.project-partners-carousel .slick-slide img {
+  max-width: 200px;
+}
+
 .one-project-title {
   color: #a5a5a5ab;
   font-size: 12px;
@@ -938,6 +942,14 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 
   .single-proj-other-posts-section .other-projects-row .singl-project-link-wrapper {	
     left: 10px;	
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .single-projects #main-content .block-project-partners .help_button_single_block .vc_btn3 {
+    padding-right: 15px;
+    padding-top: 20px !important;
+    font-size: 13px;
   }
 }
 
@@ -7170,7 +7182,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     margin-bottom: 35px;
   }
   
-  .shortcode-fund-documents-desk .slick-dots {
+  .shortcode-fund-documents-mob .slick-dots {
     bottom: -60px;
   }
 }
