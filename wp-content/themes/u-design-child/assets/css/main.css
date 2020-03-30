@@ -2744,17 +2744,17 @@ input[type="checkbox"] + label#oferta-error {
   border-right: 1px solid #e8e8e8;
 }
 
-.help .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email,
-.help .help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel {
+.help-form-inner-wrapper .help-form-email-tel .help-form-amount-email,
+.help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel {
   width: calc((100% - 40px)/2);
 }
 
-.help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left,
-.help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-right {
+.help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left,
+.help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-right {
   width: calc((100% - 33px)/2);
 }
 
-.help .help-form-inner-wrapper .help-form-text {
+.help-form-inner-wrapper .help-form-text {
   padding-bottom: 22px;
 }
 
@@ -3324,11 +3324,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   max-height: unset;
 }
 
-.homepage-banner {
+.vc_custom_1585211715542 {
   margin-bottom: 85px;
 }
 
-.homepage-banner  > .wpb_column > .vc_column-inner {
+.vc_custom_1585211715542  > .wpb_column > .vc_column-inner {
   padding-top: 47px;
   padding-bottom: 47px;
 }
@@ -3390,11 +3390,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     padding-top: 15px;
   }
 
-  .homepage-banner {
+  .vc_custom_1585211715542 {
     margin-bottom: 60px;
   }
 
-  .homepage-banner .help-form-inner-wrapper {
+  .vc_custom_1585211715542 .help-form-inner-wrapper {
     padding: 20px 30px;
   }
 }
@@ -3404,21 +3404,21 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     float: none !important;
   }
 
-  .homepage-banner .home-first-post-form-help {
+  .vc_custom_1585211715542 .home-first-post-form-help {
     width: 100%;
   }
 
-  .homepage-banner .help_form_wrapper {
+  .vc_custom_1585211715542 .help_form_wrapper {
     min-width: 100%;
     max-width: 100%;
   }
 
-  .homepage-banner .home-first-post-form-help .help_form_wrapper {
+  .vc_custom_1585211715542 .home-first-post-form-help .help_form_wrapper {
     min-width: 100%;
     max-width: 100%;
   }
 
-  #home-page-content .homepage-banner .help-form-amount {
+  #home-page-content .vc_custom_1585211715542 .help-form-amount {
     align-items: flex-start;
     flex-direction: column;
 
@@ -3451,7 +3451,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     margin-bottom: 20px;
   }
 
-  #home-page-content .homepage-banner > .vc_column-inner {
+  #home-page-content .vc_custom_1585211715542 > .vc_column-inner {
     padding-bottom: 35px;
   }
 
@@ -3459,39 +3459,39 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     padding-right: 30px !important;
   }
 
-  .homepage-banner .help_form_wrapper .help-form-submit-oferta {
+  .vc_custom_1585211715542 .help_form_wrapper .help-form-submit-oferta {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .homepage-banner .help_form_wrapper .help-form-oferta {
+  .vc_custom_1585211715542 .help_form_wrapper .help-form-oferta {
     order: -1;
     margin-bottom: 32px;
   }
 
-  .homepage-banner .help-form-inner-wrapper .help-form-email-tel {
+  .vc_custom_1585211715542 .help-form-inner-wrapper .help-form-email-tel {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .homepage-banner .help-form-amount-email,
-  .homepage-banner .help-form-amount-tel {
+  .vc_custom_1585211715542 .help-form-amount-email,
+  .vc_custom_1585211715542 .help-form-amount-tel {
     width: 100%;
   }
 
-  .homepage-banner .help-form-amount-left {
+  .vc_custom_1585211715542 .help-form-amount-left {
     width: 100%;
     margin-bottom: 20px;
   }
 
-  .homepage-banner .help-form-amount-email {
+  .vc_custom_1585211715542 .help-form-amount-email {
     padding-bottom: 14px;
   }
 }
 
 @media screen and (max-width: 959px) {
 
-  #home-page-content .homepage-banner {
+  #home-page-content .vc_custom_1585211715542 {
     padding-top: 60px;
   }
 }
@@ -3505,7 +3505,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     padding-top: 18px;
   }
 
-  #home-page-content .homepage-banner {
+  #home-page-content .vc_custom_1585211715542 {
     background-size: auto 420px !important ;
     background-position: top !important;
   }
@@ -3547,15 +3547,15 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     margin-bottom: 0;
   }
 
-  .homepage-banner > .wpb_column > .vc_column-inner {
+  .vc_custom_1585211715542 > .wpb_column > .vc_column-inner {
     padding-top: 25px;
   }
 
-  .homepage-banner > .wpb_column > .vc_column-inner {
+  .vc_custom_1585211715542 > .wpb_column > .vc_column-inner {
     padding-bottom: 0;
   }
 
-  #home-page-content .homepage-banner {
+  #home-page-content .vc_custom_1585211715542 {
     margin-bottom: 0px;
   }
 }
@@ -3568,7 +3568,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     top: 260px;
   }
 
-  #home-page-content .homepage-banner {
+  #home-page-content .vc_custom_1585211715542 {
     background-size: auto 320px !important ;
     padding-top: 0;
   }
@@ -3577,7 +3577,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     display: none;
   }
 
-  .homepage-banner .home-first-post-post-link {
+  .vc_custom_1585211715542 .home-first-post-post-link {
     padding-top: 16px;
   }
 
@@ -3587,32 +3587,32 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     line-height: 33px;
   }
 
-  .homepage-banner .help-form-inner-title {
+  .vc_custom_1585211715542 .help-form-inner-title {
     padding-bottom: 36px;
   }
 
-  .homepage-banner .help-form-amount {
+  .vc_custom_1585211715542 .help-form-amount {
     padding-bottom: 13px;
   }
 
-  .homepage-banner .help-form-subscribe {
+  .vc_custom_1585211715542 .help-form-subscribe {
     padding-bottom: 17px;
   }
 
-  .homepage-banner .help-form-email-tel {
+  .vc_custom_1585211715542 .help-form-email-tel {
     padding-bottom: 20px;
   }
 
-  .homepage-banner .help-form-text {
+  .vc_custom_1585211715542 .help-form-text {
     padding-bottom: 37px;
     line-height: 18px;
   }
 
-  .homepage-banner .help-form-submit-oferta {
+  .vc_custom_1585211715542 .help-form-submit-oferta {
     align-items: flex-start;
   }
 
-  .homepage-banner .help_form_wrapper .help-form-inner-wrapper {
+  .vc_custom_1585211715542 .help_form_wrapper .help-form-inner-wrapper {
     padding: 38px 22px 35px 22px;
   }
 
