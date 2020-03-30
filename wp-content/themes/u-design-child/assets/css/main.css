@@ -555,7 +555,7 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   }
 
   #wrapper-1 #navigation-menu .cart-count-in-main-header {
-    right: 67px;
+    right: 8px;
     top: 9px;
   }
 }
@@ -882,6 +882,10 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   padding-bottom: 30px !important;
 }
 
+.single-proj-news-section .carousel-news-posts .slick-dots li {
+  height: 10px;
+}
+
 /* Media for one Project block(home page) */
 @media screen and (max-width: 1200px) {
   .one-project-right {
@@ -1005,6 +1009,10 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   
   .single-proj-other-posts-section .other-projects-desk {
     display: none;
+  }
+
+  .single-proj-news-section .carousel-news-posts .slick-dots {
+    left: -22px;
   }
 }
 
@@ -2106,10 +2114,29 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 @media screen and (max-width: 700px) {
   .projects.type-projects .proj-timeline-info-left {
     width: 100%;
+    padding: 22px 11px 9px 11px;
   }
 
   .projects.type-projects .proj-timeline-info-right {
     width: 100%;
+  }
+
+  .projects.type-projects .proj-timeline-info .left-to-collect-text {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .projects.type-projects .proj-timeline-info .left-to-collect-wrapper {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .projects.type-projects .proj-timeline-info-right .proj-timeline-help {
+    padding: 17px 20px;
+  }
+
+  .projects.type-projects .proj-timeline-info {
+    min-width: unset;
   }
 
   .one-step-timeline-mob-wrapper {
@@ -2127,7 +2154,6 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   .proj-timeline-one-step:not(:first-child) .one-step-timeline-wrapper {
     justify-content: center;
   }
-
 
   .proj-timeline-top {
     flex-direction: column;
@@ -2184,10 +2210,6 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
     justify-content: center;
   }
 
-  .proj-timeline-info-right {
-    width: 100%;
-  }
-
   .proj-timeline-steps {
     flex-direction: column;
   }
@@ -2228,30 +2250,15 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   }
 
   .single_proj_block4 .vc_column-inner .vc_column-inner {
-    padding-left: 35px;
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+
   }
 
   .projects .single-proj-other-posts-section {
     margin-bottom: 40px;
   }
 
-  .projects.type-projects .proj-timeline-info .left-to-collect-text {
-    font-size: 14px;
-    line-height: 26px;
-  }
-
-  .projects.type-projects .proj-timeline-info .left-to-collect-wrapper {
-    font-size: 24px;
-    line-height: 26px;
-  }
-
-  .projects.type-projects .proj-timeline-info-left {
-    padding: 22px 11px 9px 11px;
-  }
-
-  .projects.type-projects .proj-timeline-info-right .proj-timeline-help {
-    padding: 17px 20px;
-  }
 
   .single-proj-other-posts-section .other-projects-row .singl-project-bottom-part {
     padding: 6px 10px 0 10px;
@@ -2275,6 +2282,10 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 
   .projects .other-projects-row .singl-project-bottom-part {
     min-height: 338px;
+  }
+  
+  .projects .single-proj-other-posts-section .vc_grid-item {
+    padding-bottom: 14px !important;
   }
 }
 
@@ -4078,12 +4089,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
 
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+/* @media screen and (min-width: 768px) and (max-width: 1024px) {
   .wpb-js-composer #main-content .vc_tta-panels {
     position: relative;
     top: -82px;
   }
-}
+} */
 
 /*end home page section4*/
 
@@ -4694,6 +4705,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 }
 
 @media screen and (max-width: 1024px) {
+
   .project_banner_section1 .vc_custom_1581425275566 {
     display: flex;
     flex-direction: column;
@@ -6402,6 +6414,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .shop-custom-wrapper ul.products.columns-3 li.product {
     width: 100%;
   }
+
+  .woocommerce-cart-page-link svg {
+    width: 19px;
+  }
 }
 /*---------
   POPUPS
@@ -7479,6 +7495,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-top: 48px;
 }
 
+.single-product .related.products {
+  margin-bottom: 162px;
+}
+
 /*cart*/
 .single-product #page-content .single-product-cart-link .cart-count {
   top: 3px;
@@ -7581,14 +7601,19 @@ div.product form.cart {
 }
 
 /* the slides */
-.single-product ul.products li.product{
+.single-product ul.products li.product {
   margin: 0 20px !important;
-  max-width: 290px;
+  max-width: 353px;
 }
+
 
 /* the parent */
 .single-product ul.products {
   margin: 0 -20px;
+}
+
+.single-product ul.products .slick-dots {
+  bottom: -95px;
 }
 
 .woocommerce.single-product #wrapper-1 .related .shop-page-price-title {
@@ -7613,6 +7638,23 @@ body.product ul.products {
 
 .write_about_us_carousel {
   margin-bottom: 50px;
+}
+
+.single-product .woocommerce-images {
+  margin-bottom: 40px;
+}
+
+.single-product .woocommerce-Tabs-panel .wpb_column:nth-child(2) .vc_column-inner {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.products .slick-track {
+  margin-left: unset;
+}
+.single-product .related .slick-track,
+.single-product .related .slick-list .product  {
+  min-width: 260px !important;  
 }
 
 @media screen and (max-width: 1200px) {
@@ -7648,17 +7690,25 @@ body.product ul.products {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .woocommerce.single-product #wrapper-1 .related .shop-page-price-title {
+    padding: 15px 15px;
+  }
+}
+
 @media screen and (max-width: 950px) {
   .woocommerce.single-product #wrapper-1 .single-product-cart-link {
     text-align: right;
   }
 
-
+  .single-product ul.products li.product {
+    max-width: unset; 
+  }
 
   #slider2_container.woocommerce-images {
     margin-right: 0;
   }
-
+/* 
   .woocommerce.single-product #wrapper-1 div.product div.summary {
     max-width: 600px;
     width: unset;
@@ -7667,7 +7717,7 @@ body.product ul.products {
 
   .woocommerce.single-product #wrapper-1 .woocommerce-tabs {
     width: 100%;
-  }
+  } */
 
   .woocommerce ul.products {
     display: flex;
@@ -7689,6 +7739,25 @@ body.product ul.products {
   .woocommerce.single-product #wrapper-1 .related.products {
     margin-top: 30px;
   }
+
+  .single-product .related.products {
+    margin-bottom: 100px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .single-product #main-content div.images.woocommerce-product-gallery {
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .single-product .related .slick-list,
+  .single-product .related .slick-list .product  {
+    max-width: 450px !important;  
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -7697,8 +7766,8 @@ body.product ul.products {
     left: -15px;
   }
 
-  .single-product .woocommerce-Tabs-panel p {
-    padding-left: 21px;
+  #wrapper-1 .single-product .woocommerce-cart-page-link .cart-customlocation.cart-count {
+    width: 20px;
   }
 }
 
