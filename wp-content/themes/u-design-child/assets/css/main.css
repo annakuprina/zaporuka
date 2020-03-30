@@ -704,6 +704,10 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   max-width: 200px;
 }
 
+.project-partners-carousel .slick-track { 
+  width: 100% !important;
+}
+
 .one-project-title {
   color: #a5a5a5ab;
   font-size: 12px;
@@ -2648,6 +2652,17 @@ input[type="checkbox"] + label#oferta-error {
   border-right: 1px solid #e8e8e8;
 }
 
+.help .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email,
+.help .help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel {
+  width: calc((100% - 40px)/2);
+}
+
+.help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left,
+.help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-right {
+  width: calc((100% - 33px)/2);
+}
+
+
 @media screen and (max-width: 1200px) {
   .help .help-item {
     padding: 33px 20px;
@@ -2745,6 +2760,26 @@ input[type="checkbox"] + label#oferta-error {
 }
 
 @media screen and (max-width: 767px) {
+
+  .help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left,
+  .help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-right {
+    width: unset;
+  }
+  
+
+  .help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left {
+    margin-right: 30px;
+  }
+
+  .help .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email,
+  .help .help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel {
+    width: 100%;
+  }
+
+  .help .help-form-inner-wrapper .help-form-subscribe {
+    justify-content: flex-start;
+  }
+
   .help {
     flex-direction: column;
     max-width: 570px;
@@ -7921,3 +7956,27 @@ body.product ul.products {
   }
 }
 
+/*DONATE PAGE*/
+.donate-wrapper .wpb_column {
+  padding: 45px 0 40px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .donate-wrapper .wpb_column {
+    padding: 45px 0 20px 0;
+  }
+
+  .donate-wrapper + #fund_bank_details h2.h2-header-line {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .donate-wrapper + #fund_bank_details h2.h2-header-line::before{
+    left: -15px;
+  }
+
+  .donate-wrapper + #fund_bank_details h2.h2-header-line {
+    margin-bottom: 30px;
+  }
+}
