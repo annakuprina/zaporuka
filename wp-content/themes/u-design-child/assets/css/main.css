@@ -890,10 +890,21 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 .single-proj-news-section .carousel-news-posts .slick-dots li {
   height: 10px;
 }
+
 .single-proj-news-section .carousel-news-posts .slick-track {
   display: flex;
   flex-wrap: wrap;
 }
+
+
+.single-proj-news-section .slick-slide {
+  height: inherit !important;
+}
+
+.single-projects .photo_video_block5 {
+  padding-top: 0;
+}
+
 /* Media for one Project block(home page) */
 @media screen and (max-width: 1200px) {
   .one-project-right {
