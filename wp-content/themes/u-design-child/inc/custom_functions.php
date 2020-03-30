@@ -223,8 +223,7 @@ function shortcode_project_partners_mob(){
             array(
               'taxonomy' => 'partners_category',
               'field' => 'name',
-              'terms' => $post->post_title,
-              'include_children' => false
+              'terms' => $post->post_title
             )
         )
     ));
