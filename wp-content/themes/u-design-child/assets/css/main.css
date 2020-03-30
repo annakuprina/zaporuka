@@ -2746,16 +2746,21 @@ input[type="checkbox"] + label#oferta-error {
 
 .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email,
 .help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel {
-  width: calc((100% - 40px)/2);
+  width: calc((100% - 40px)/2) !important;
 }
 
 .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left,
 .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-right {
-  width: calc((100% - 33px)/2);
+  width: calc((100% - 33px)/2) !important;
 }
 
 .help-form-inner-wrapper .help-form-text {
   padding-bottom: 22px;
+}
+
+.homepage-banner .vc_column-inner {
+  padding-top: 47px;
+  padding-bottom: 47px;
 }
 
 @media screen and (max-width: 1200px) {
