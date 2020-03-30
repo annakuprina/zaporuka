@@ -222,8 +222,8 @@ function shortcode_project_partners_mob(){
         'tax_query' => array(
             array(
               'taxonomy' => 'partners_category',
-              'field' => 'slug',
-              'terms' => $post->post_name,
+              'field' => 'name',
+              'terms' => $post->post_title,
               'include_children' => false
             )
         )
