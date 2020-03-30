@@ -2098,6 +2098,15 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   width: 200px;
 }
 
+.single-projects .single_proj_block4 .h2-header-line {
+  margin-bottom: 40px;
+}
+
+
+.single-projects  .single-proj-news-section .h2-header-line {
+  margin-bottom: 51px;
+}
+
 /*Media for project timeline*/
 @media screen and (max-width: 1024px) {
   .projects.type-projects .proj-timeline-steps .one-step-title {
