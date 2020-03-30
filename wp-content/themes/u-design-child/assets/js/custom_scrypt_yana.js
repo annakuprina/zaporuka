@@ -15,19 +15,26 @@ jQuery(document).ready(function($) {
     });
   });
 
+  // One Project page. Project news carousel
   $(".carousel-news-posts .vc_pageable-slide-wrapper").slick({
     dots: true,
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
+    infinite: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          infinite: true,
-          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         }
       }
     ]
