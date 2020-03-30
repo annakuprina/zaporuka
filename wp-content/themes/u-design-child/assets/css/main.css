@@ -2103,10 +2103,51 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 }
 
 
-.single-projects  .single-proj-news-section .h2-header-line {
+.single-projects .single-proj-news-section .h2-header-line {
   margin-bottom: 51px;
 }
 
+.single-projects .other-projects-single-project .slick-slide {
+  padding-right: 37px;
+}
+
+.single-projects .other-projects-single-project .slick-slide .singl-project-bottom-part {
+  padding: 10px 32px 0 32px;
+  min-height: 322px;
+}
+
+.single-projects .other-projects-single-project .vc_gitem-animated-block .vc_gitem-zone {
+  height: 256px !important;
+}
+
+.single-projects .other-projects-single-project .singl-project-bottom-part .vc_gitem-row-position-top:nth-child(2) .vc_gitem-col {
+  padding-top: 20px;
+}
+
+.single-projects .other-projects-single-project .singl-project-title {
+  margin-bottom: 21px;
+}
+
+.single-projects .other-projects-single-project .singl-project-link-wrapper {
+  left: 33px;
+  bottom: 24px;
+}
+
+.single-projects .block-project-partners {
+  padding-top: 50px;
+}
+
+.single-projects .single-proj-news-section {
+  padding-top: 57px
+}
+
+.single-projects .single-proj-news-section .slick-dots {
+  bottom: -12px;
+}
+
+.single-projects .single-proj-help-partners-section {
+  padding-top: 88px;
+}
 /*Media for project timeline*/
 @media screen and (max-width: 1024px) {
   .projects.type-projects .proj-timeline-steps .one-step-title {
