@@ -6972,7 +6972,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 .shortcode-fund-documents-mob {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  margin: 0;
 }
 
 .shortcode-fund-documents-mob a {
@@ -7117,6 +7120,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 @media screen and (max-width: 1024px) {
   .shortcode-fund-documents-mob .fund-documents-wrapper {
     margin: auto;
+    justify-content: center;
   }
   
   #wrapper-1 .aboutus_section2 .block_excerpt_container {
@@ -7142,7 +7146,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   .shortcode-fund-documents-mob {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    height: initial;
+    margin-bottom: 35px;
   }
   
   .shortcode-fund-documents-desk {
