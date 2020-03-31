@@ -143,22 +143,27 @@ if (isset($_POST['data'])) {
         $post = array("action" => "thank_you_page_state", "order_id" => $server_order_id, "status" => $status);
         curlSendRequest($thank_you_page_url, $post);
     }
+    $valuta = (pll_current_language() === 'en') ? $valuta : 'грн.';
 ////////////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     if ($status == "failure") {
 
-        $status = pll__("платіж відхилено");
+        $status = pll__("відхилено");
+        if ($fio){
+            $text_head = "<p style='color: #888;'> " . $fio . ", вітаємо!</p>";
+        } else{
+            $text_head = "<p style='color: #888;'> " . pll__("Вітаємо!") . "</p>";
+        }
         $text = "<p style='color: #888;'> " . pll__("Вибачте але Ваш платіж відхилено") . "</p>";
-        $text .= "<p style='color: #888;'> " . pll__("Дата/час") . ": " . $xdate . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Дата") . ": " . $xdate . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Сума") . ": " . $summa . " " . $valuta . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер заказу") .  ": " . $order_id . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $status . "</p>";
-        $text .= "<p style='color: #888;'> " . pll__("Вартiсть") . ": " . $summa . " " . $valuta . "</p>";
-        if ($fio){
-            $text .= "<p style='color: #888;'> " . pll__("Им'я") .  ": " . $fio . "</p>";
-        }
         $text .= "<p style='color: #888;'> " . pll__("Телефон") .  ": " . $user_phone . "</p>";
-        $text .= "<p style='color: #888;'> " . pll__("Коментар") .  ": " . $datas . "</p>";
-        $message = $text;
+        $text .= "<p style='color: #888;'> " . pll__("Разом змінюємо світ на краще!") . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("З вдячністю,") . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Благодійний Фонд 'Запорука'") . "</p>";
+        $message = $text_head . $text;
         $mail = get_option('liqpay_mail');
         $order = '';
         if ($new_code) {
@@ -178,27 +183,24 @@ if (isset($_POST['data'])) {
         exit;
     } elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
         $flag = 1;
-        if ($hidden_content == '1')
-            $status = pll__("платіж здійснено");
-        $text .= "<p style='color: #888;'> " . pll__("Дата/час") . ": " . $xdate . "</p>";
+        if ($fio){
+            $text_head = "<p style='color: #888;'> " . $fio . ", вітаємо!</p>";
+        } else{
+            $text_head = "<p style='color: #888;'> " . pll__("Вітаємо!") . "</p>";
+        }
+        $status = pll__("успішна");
+        $text .= "<p style='color: #888;'> " . pll__("Дякуємо за ваше добре серце! Завдяки вам підопічні фонду 'Запорука' зможуть вчасно отримати необхідну допомогу.") . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Деталі платежу") . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Сума") . ": " . $summa . " " . $valuta . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Дата") . ": " . $xdate . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер заказу") .  ": " . $order_id . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $status . "</p>";
-        $text .= "<p style='color: #888;'> " . pll__("Вартiсть") . ": " . $summa . " " . $valuta . "</p>";
-        if ($fio){
-            $text .= "<p style='color: #888;'> " . pll__("Им'я") .  ": " . $fio . "</p>";
-        }
         $text .= "<p style='color: #888;'> " . pll__("Телефон") .  ": " . $user_phone . "</p>";
-        $text .= "<p style='color: #888;'> " . pll__("Коментар") .  ": " . $datas . "</p>";
-        if ($hidden_content == '1') {
-            $user_pass = (!empty($user_pass)) ? $user_pass : '';
-            $user_url = (!empty($user_url)) ? $user_url : '';
-            $text .= "\n -------Данные для входа------- ";
-            /*$text .=  "\n Логин: " . $user_login;*/
-            $text .= "\n Пароль:  " . $user_pass;
-            $text .= "\n Аренда контента на :  " . $secure_day . get_name($secure_day, ' День', ' Дня', ' Дней') . " (Время аренды начинает действовать после первого ввода пароля!)";
-            $text .= "\n Ссылка на страницу:  " . $user_url . "\n";
-        }
+        $text .= "<p style='color: #888;'> " . pll__("Разом змінюємо світ на краще!") . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("З вдячністю,") . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Благодійний Фонд 'Запорука'") . "</p>";
+
         $message = $text;
         $mail = get_option('liqpay_mail');
 
@@ -313,23 +315,7 @@ if (isset($_POST['data'])) {
                 if ($file_url) {
                     $attachments = array($file_url);
                 }
-                $text_head = "<p style='color: #888;'> " . pll__("Вітаємо! Ваш платіж пройшов успішно") . "...</p>";
-//                %%Ім'я%%, вітаємо! (Або просто "Вітаємо!", якщо ім'я порожнє)
 
-//Дякуємо за ваше добре серце! Завдяки вам підопічні фонду "Запорука" зможуть вчасно отримати необхідну допомогу.
-//
-//                Деталі платежу
-//Сума: ... грн (не UAH)
-//Дата:
-//Номер заказу:
-//Номер транзакції в системі LiqPay:
-//Статус транзакції: успішна (не success)
-//Телефон:
-//
-//Разом змінюємо світ на краще!
-//
-//                З вдячністю,
-//Благодійний Фонд "Запорука"
                 $message = $text_head . $message;
                 $attachments = '';
 
@@ -343,7 +329,6 @@ if (isset($_POST['data'])) {
                 }
             } else {//
                 $attachments = '';
-                $text_head = "<p style='color: #888;'> " . pll__("Вітаємо! Ваш платіж пройшов успішно") . "...</p>";
                 $text_head .= $cost_cult . $valuta_cult . " Вы оплатили. " . $summa . $valuta . ", сумма не соответствует стоимости товара, за разъяснением вопроса, обратитесь к администратору " . get_option('liqpay_mail');
                 $message = $text_head . $message;
             }
@@ -358,17 +343,22 @@ if (isset($_POST['data'])) {
     } elseif (($status == "wait_secure") || ($status == "wait_accept")) {
         $status = pll__("платіж знаходиться на перевірці");
         $text = "<p style='color: #888;'> " . pll__("Ваш платіж очікує на перевірку") . "...</p>";
-        $text .= "<p style='color: #888;'> " . pll__("Дата/час") . ": " . $xdate . "</p>";
+        if ($fio){
+            $text = "<p style='color: #888;'> " . $fio . ", вітаємо!" . pll__("Ваш платіж очікує на перевірку") ."</p>";
+        } else{
+            $text = "<p style='color: #888;'> " . pll__("Вітаємо!") . pll__("Ваш платіж очікує на перевірку") . "</p>";
+        }
+        $text .= "<p style='color: #888;'> " . pll__("Деталі платежу") . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Сума") . ": " . $summa . " " . $valuta . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Дата") . ": " . $xdate . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер заказу") .  ": " . $order_id . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $status . "</p>";
-        $text .= "<p style='color: #888;'> " . pll__("Вартiсть") . ": " . $summa . " " . $valuta . "</p>";
-        if ($fio){
-            $text .= "<p style='color: #888;'> " . pll__("Им'я") .  ": " . $fio . "</p>";
-        }
         $text .= "<p style='color: #888;'> " . pll__("Телефон") .  ": " . $user_phone . "</p>";
-        $text .= "<p style='color: #888;'> " . pll__("Коментар") .  ": " . $datas . "</p>";
         $text .= pll__("Если долгое время платеж не проходит, Вам следует обратится в онлайн чат службы поддержки Liqpay, по адресу") . " <a href='https://liqpay.ua/' title='Liqpay'>Liqpay</a> \n";
+        $text .= "<p style='color: #888;'> " . pll__("Разом змінюємо світ на краще!") . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("З вдячністю,") . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Благодійний Фонд 'Запорука'") . "</p>";
         $message = $text;
         $mail = get_option('liqpay_mail');
         $order = '';
