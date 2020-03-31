@@ -8160,9 +8160,10 @@ body.product ul.products {
 --------------------*/
 
 #lightboxOverlay  {
-  opacity: 0.6;
+  opacity: 1;
   max-width: 100%;
   overflow: hidden;
+  background-color: rgba(51, 51, 51, 0.3);
 }
 
 /* #lightbox .lb-outerContainer {
@@ -8212,4 +8213,8 @@ body.product ul.products {
 
 .woocommerce.single-product #lightbox .lb-details {
   display: none;
+}
+
+.woocommerce.single-product #lightbox .lb-dataContainer {
+  width: 100%;
 }
