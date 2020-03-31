@@ -704,9 +704,9 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   max-width: 200px;
 }
 
-.project-partners-carousel .slick-track { 
+/* .project-partners-carousel .slick-track { 
   width: 100% !important;
-}
+} */
 
 .one-project-title {
   color: #a5a5a5ab;
