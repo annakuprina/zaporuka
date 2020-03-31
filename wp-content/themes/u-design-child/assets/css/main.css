@@ -6035,7 +6035,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,.4);
+  background: rgba(0,0,0,.3);
 }
 
 .single_article_section1_wrapper > .vc_column_container {
