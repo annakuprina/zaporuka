@@ -6648,6 +6648,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*----------
   404 PAGE
 -----------*/
+
+.error404.vc_responsive {
+  overflow-y: hidden;
+}
+
 @media screen and (max-width: 1024px) {
   #main-content .error_page_padding h4 {
     font-size: 40px;
@@ -6656,6 +6661,17 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .error_page #main-content p {
     text-align: center;
     padding-top: 50px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .error404 .error_page_padding {
+    margin-top: 0;
+  }
+  .error404.vc_responsive #content-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 }
 
