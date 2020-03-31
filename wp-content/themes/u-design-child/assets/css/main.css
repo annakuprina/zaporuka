@@ -917,10 +917,6 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   bottom: -27px;
 }
 
-.single-projects .help-partners-block .wpb_single_image img {
-  max-width: 350px;
-}
-
 /* Media for one Project block(home page) */
 @media screen and (max-width: 1200px) {
   .one-project-right {
@@ -4611,6 +4607,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   display: flex;
   margin-right: auto;
   align-items: center;
+}
+
+.home-page-section8 {
+  margin-top: 108px;
 }
 
 /*-----------------
