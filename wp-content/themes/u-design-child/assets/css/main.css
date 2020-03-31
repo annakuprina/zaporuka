@@ -5956,9 +5956,18 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 .single_section2 .text_under_post_info {
   padding-top: 42px;
+  margin-bottom: 64px;
 }
 
-.single_section2 .single_news_two_posts {
+.single-novini .post_photo_gallery .slick-dots {
+  bottom: -78px;
+}
+
+.single-novini .single_section2 {
+  margin-bottom: 30px;
+}
+
+.single-novini .single_section2 .single_news_two_posts {
   padding-top: 2px;
 }
 
@@ -6025,6 +6034,14 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #main-content .single_section1_text {
   padding: 81px 0;
+}
+
+.single-novini .single_article_section1 {
+  height: 400px;
+}
+
+.single-novini .single_section2 {
+  padding-top: 22px;
 }
 
 .vc_row.wpb_row.vc_row-fluid.single_article_section1.vc_row-has-fill.vc_row-no-padding:before{
