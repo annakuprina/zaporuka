@@ -478,6 +478,10 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   padding: 0 15px;
 }
 
+header#top-wrapper {
+  z-index: 1111111;
+}
+
 @media screen and (max-width: 1200px) {
   body:not(.home) #main-menu #navigation-menu .help-header-link {
     padding-left: 0;
@@ -6023,7 +6027,22 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding: 81px 0;
 }
 
-.single-novini .single_article_section1:after{
+.vc_row.wpb_row.vc_row-fluid.single_article_section1.vc_row-has-fill.vc_row-no-padding:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.4);
+}
+
+.single_article_section1_wrapper > .vc_column_container {
+  z-index: 23232323;
+}
+
+.single-novini .vc_gitem-zone.vc_gitem-zone-a.vc_gitem-is-link:before {
   content: "";
   display: block;
   position: absolute;
@@ -6032,10 +6051,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   left: 0;
   right: 0;
   background: rgba(0,0,0,.3);
-}
-
-.single-novini .single_article_section1 > .vc_column-inner > .vc_column-inner {
-  z-index: 23232323;
 }
 
 @media screen and (max-width: 1200px) {
