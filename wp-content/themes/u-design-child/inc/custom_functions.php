@@ -853,19 +853,20 @@ function shortcode_post_photo_gallery(){
     $post = get_post();
     $post_id = $post->ID;
     $post_photos = get_field( "post_photos", $post_id );
-
-    ob_start();
-    ?>
-    <div class="post_photo_gallery">
-        <?php foreach ($post_photos as $item) { ?>
-            <div>
-                <img src="<?php echo $item["post_photo"]; ?>" alt="">
-            </div>
-        <?php } ?>
-    </div>
-    <?php
-    $html = ob_get_clean();
-    return $html;
+    if ( !empty($post_photos) ) {
+        ob_start();
+        ?>
+        <div class="post_photo_gallery">
+            <?php foreach ($post_photos as $item) { ?>
+                <div>
+                    <img src="<?php echo $item["post_photo"]; ?>" alt="">
+                </div>
+            <?php } ?>
+        </div>
+        <?php
+        $html = ob_get_clean();
+        return $html;
+    }
 }
 
 add_shortcode( 'shortcode_donors_gallery', 'shortcode_donory_gallery' );
