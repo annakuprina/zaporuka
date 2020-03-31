@@ -383,4 +383,16 @@ jQuery(document).ready(function($) {
     });
   });
 
+
+  function updateheight() {
+    $('.post_photo_gallery').find('.slick-list').height($('.post_photo_gallery').find('.slick-slide.slick-active').height());
+  }
+
+  $(".post_photo_gallery .slick-dots li").each(function(index) {
+    $(this).click(function() {
+      $('.post_photo_gallery') = $(this);
+        setTimeout(updateheight, 500);
+    });
+  });
+
 });
