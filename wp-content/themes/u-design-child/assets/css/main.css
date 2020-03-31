@@ -8196,7 +8196,8 @@ body.product ul.products {
 }
 
 .woocommerce.single-product #lightbox .lb-container {
-  max-height: 100%;
+  overflow: hidden;
+  max-height: 99.5%;
 }
 
 .woocommerce.single-product #lightbox {
