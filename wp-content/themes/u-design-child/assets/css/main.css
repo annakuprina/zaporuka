@@ -6694,7 +6694,15 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-bottom: 0 !important;
 }
 
+#wrapper-1 .bank-details-block .vc_tta-tabs-list .vc_tta-tab:nth-child(1) a {
+  padding-left: 86px;
+  text-align: left;
+}
 
+#wrapper-1 .bank-details-block .vc_tta-tabs-list .vc_tta-tab:nth-child(2) a {
+  padding-left: 74px;
+  text-align: left;
+}
 
 #main-content .contact-desktop > .vc_column_container > .vc_column-inner {
   padding-top: 61px;
@@ -6739,6 +6747,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 #main-content .bank-details-block .vc_tta-tab {
   box-shadow: 4px 4px 24px rgba(209, 209, 209, 0.15);
   background: #fff;
+}
+
+#main-content .bank-details-block .vc_tta-tab:not(.vc_active) {
+  background: #f7f7f7;
 }
 
 #main-content .contact_help_form {
@@ -8166,17 +8178,6 @@ body.product ul.products {
   background-color: rgba(51, 51, 51, 0.3);
 }
 
-/* #lightbox .lb-outerContainer {
-  max-height: 415px;
-  width: auto !important;
-  margin: auto;
-}
-
-#lightbox .lb-outerContainer img {
-  max-height: 400px;
-  width: auto !important;
-  margin: auto;
-} */
 .single-product .lightbox {
   height: 100vh;
   justify-content: center;
@@ -8217,4 +8218,10 @@ body.product ul.products {
 
 .woocommerce.single-product #lightbox .lb-dataContainer {
   width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .single-product .lightbox {
+    justify-content: flex-start;
+  }
 }
