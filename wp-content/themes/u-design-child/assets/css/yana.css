@@ -134,6 +134,10 @@ h6,
 .contact-info-block p a {
   color: #333333;
 }
+.contact-info-block p a:hover {
+  color: #e78b48 !important;
+  font-weight: bold !important;
+}
 .contact_social_icon ul {
   display: flex;
 }
