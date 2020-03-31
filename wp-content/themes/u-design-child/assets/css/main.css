@@ -4627,9 +4627,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   margin-left: 0;
 }
 
-.vc_row.vc_row-o-equal-height > .vc_column_container {
+/* .vc_row.vc_row-o-equal-height > .vc_column_container {
   overflow: hidden;
-}
+} */
 
 .project_banner_wrapper_section1 .project_banner_section1 {
   padding-top: 57px;
