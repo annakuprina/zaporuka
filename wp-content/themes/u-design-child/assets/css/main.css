@@ -8176,31 +8176,31 @@ body.product ul.products {
   width: auto !important;
   margin: auto;
 } */
-.woocommerce.single-product .lightbox {
+.single-product .lightbox {
   height: 100vh;
   justify-content: center;
   align-items: center;
 }
 
-.woocommerce.single-product .lightbox .lb-image {
+.single-product .lightbox .lb-image {
   width: 100% !important;
   height: auto !important;
   max-height: 100%;
 }
 
-.woocommerce.single-product #lightbox .lb-outerContainer {
+.single-product .lightbox .lb-outerContainer {
   width: calc(100% - 50px) !important;
   max-width: 800px;
   max-height: calc(100% - 150px);
   height: auto !important;
 }
 
-.woocommerce.single-product #lightbox .lb-container {
+.single-product .lightbox .lb-container {
   overflow: hidden;
   max-height: 99.5%;
 }
 
-.woocommerce.single-product #lightbox {
+.single-product .lightbox {
   display: flex;
   flex-direction: column;
 }
