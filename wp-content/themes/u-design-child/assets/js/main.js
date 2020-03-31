@@ -383,16 +383,19 @@ jQuery(document).ready(function($) {
     });
   });
 
-
+  /*1 Article page. Post photo gallery. Contains photo with different height.
+  Make slick slider change it's height that equals current active slide height.*/
   function updateheight() {
-    $('.post_photo_gallery').find('.slick-list').height($('.post_photo_gallery').find('.slick-slide.slick-active').height());
+    $('.post_photo_gallery').find('.slick-list').height($('.post_photo_gallery').find('.slick-slide.slick-active').height()); //count current active slide height.
   }
 
   $(".post_photo_gallery .slick-dots li").each(function(index) {
-    $(this).click(function() {
+    $(this).click(function() {//by click on navigation dots
       $('.post_photo_gallery') = $(this);
-        setTimeout(updateheight, 500);
+        setTimeout(updateheight, 500);//change slider's height.
     });
   });
 
+  /*initialize wow animations*/ 
+  new WOW().init();
 });
