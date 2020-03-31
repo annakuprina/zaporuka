@@ -5582,22 +5582,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   NEWS PAGE
 -----------*/
 
-/*dark backrgound for 1 news item block on hover(to make image more dark)*/
-.section-news--news-page .section-news-hover-wrapper {
-  position: relative;
-}
 
-.section-news--news-page .section-news-hover-wrapper:after {
-  content:"";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,.5);
-  position: absolute;
-}
 
 #main-content .section-news.tab-wrapper {
   padding-top: 121px;
