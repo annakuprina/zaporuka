@@ -2610,6 +2610,19 @@ and shows hidden orange lines near titles on About us page*/
   
 }
 
+.help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+  position: absolute;
+  right: 55px;
+  top: 8px;
+}
+
+.help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
+  background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
+  padding: 14px 30px;
+  min-width: 120px;
+  width: calc(100% - 30px);
+}
+
 input[type="checkbox"] + label#oferta-error {
   left: 0;
 }
@@ -2719,11 +2732,10 @@ input[type="checkbox"] + label#oferta-error {
   width: 50%;
 }
 
-.help-form-submit {
-  min-width: 120px;
-  width: calc(100% - 30px);
-  display: flex;
-  justify-content: center;
+.help-form-submit-wrapper .help-form-submit {
+  position: relative;
+  background-image: none;
+  padding: 0;
 }
 
 .help
@@ -7828,19 +7840,7 @@ div.product form.cart {
   top: 37% !important;
 }
 
-.woocommerce.single-product #lightbox {
-  display: flex;
-  flex-direction: column;
-}
 
-.woocommerce.single-product #lightbox .lb-dataContainer {
-  order: -2;
-  margin-bottom: 20px;
-}
-
-.woocommerce.single-product #lightbox .lb-details {
-  display: none;
-}
 
 /* the slides */
 .single-product ul.products li.product {
@@ -8034,6 +8034,13 @@ body.product ul.products {
   padding-top: 40px;
 }
 
+.woocommerce .woocommerce-cart-form a:link,
+.woocommerce .woocommerce-cart-form a:visited,
+.woocommerce .woocommerce-cart-form a:hover,
+.woocommerce .woocommerce-cart-form a:active {
+  color: #e78b48;
+}
+
 .woocommerce-cart-form .product-name::before {
   margin-right: 10px;
 }
@@ -8123,4 +8130,85 @@ body.product ul.products {
   .donate-wrapper + #fund_bank_details h2.h2-header-line {
     margin-bottom: 30px;
   }
+}
+/*---------------------
+  BECOME PARTNER PAGE
+----------------------*/
+.become-partner-section {
+  padding-top: 50px;
+}
+
+.become-partner-section .h2-header-line {
+  margin-bottom: 40px;
+}
+
+.become-partner-section a:link,
+.become-partner-section a:visited,
+.become-partner-section a:hover,
+.become-partner-section a:active {
+  color: #e78b48 !important;
+}
+
+@media screen and (max-width: 500px) {
+  .become-partner-section h2.h2-header-line::before {
+    width: 20px;
+    left: -15px;
+  }
+}
+  /*--------------------
+  1 Product lightbox
+--------------------*/
+
+#lightboxOverlay  {
+  opacity: 0.6;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* #lightbox .lb-outerContainer {
+  max-height: 415px;
+  width: auto !important;
+  margin: auto;
+}
+
+#lightbox .lb-outerContainer img {
+  max-height: 400px;
+  width: auto !important;
+  margin: auto;
+} */
+.woocommerce.single-product .lightbox {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.woocommerce.single-product .lightbox .lb-image {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 100%;
+}
+
+.woocommerce.single-product #lightbox .lb-outerContainer {
+  width: calc(100% - 50px) !important;
+  max-width: 800px;
+  max-height: calc(100% - 150px);
+  height: auto !important;
+}
+
+.woocommerce.single-product #lightbox .lb-container {
+  max-height: 100%;
+}
+
+.woocommerce.single-product #lightbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.woocommerce.single-product #lightbox .lb-dataContainer {
+  order: -2;
+  margin-bottom: 20px;
+}
+
+.woocommerce.single-product #lightbox .lb-details {
+  display: none;
 }
