@@ -33,6 +33,8 @@ function udesign_child_theme_styles() {
     wp_enqueue_script( 'validate-js', CHILD_DIR . '/assets/js/jquery.validate.min.js' );
     wp_enqueue_script( 'slick-js', CHILD_DIR . '/assets/slick/slick.min.js' );
     wp_enqueue_script( 'slick-lightbox-js', CHILD_DIR . '/assets/slick/slick-lightbox.min.js' );
+    wp_enqueue_script( 'wow-js', CHILD_DIR . '/assets/js/wow.min.js' );
+
     wp_enqueue_script( 'main-js', CHILD_DIR . '/assets/js/main.js' );
     wp_register_script( 'yana-js', CHILD_DIR . '/assets/js/custom_scrypt_yana.js' );
     wp_localize_script( 'yana-js', 'ajax_params', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
