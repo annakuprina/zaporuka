@@ -5581,8 +5581,16 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 /*-----------
   NEWS PAGE
 -----------*/
-
-
+.section-news--news-page .vc_gitem-zone.vc_gitem-zone-b.section-news-hover-wrapper.vc-gitem-zone-height-mode-auto.vc_gitem-is-link.is-background-image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.3);
+}
 
 #main-content .section-news.tab-wrapper {
   padding-top: 121px;
@@ -5911,7 +5919,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 /*end of news*/
 
-/*ONE ARTICLE(linked from News page)*/
+/*-------------------------------------
+  ONE ARTICLE(linked from News page)
+-------------------------------------*/
 .single_section2 .custom_post_info .post_category_class {
   font-size: 14px;
   letter-spacing: 0.7px;
@@ -6012,6 +6022,22 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 #main-content .single_section1_text {
   padding: 81px 0;
 }
+
+.single-novini .single_article_section1:after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.3);
+}
+
+.single-novini .single_article_section1 > .vc_column-inner > .vc_column-inner {
+  z-index: 23232323;
+}
+
 @media screen and (max-width: 1200px) {
   .single_section2 .vc_row {
     display: flex;
