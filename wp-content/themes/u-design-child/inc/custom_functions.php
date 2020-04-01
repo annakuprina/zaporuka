@@ -799,20 +799,17 @@ class section_post_info_class extends WPBakeryShortCode {
     public function section_post_info_html( $atts ) {
         WPBMap::addAllMappedShortcodes();
         global $post;
+
         $post_category = wp_get_post_terms($post->ID, 'news_category',  array("fields" => "names"));
+
         $post_date = time($post->post_date);
         ob_start();
         ?>
         <div class="custom_post_info">
             <div class="right_info_block">
-                <?php
-                if( $post_category ){
-                    foreach( $post_category as $term ){
-                        if( $term->parent == 0 ){ ?>
-                            <div class="post_category_class"><?php echo $term->name; ?></div>
-                        <?php  }
-                    }
-                } ?>
+
+                <div class="post_category_class"><?php echo $post_category[0]; ?></div>
+
                 <div class="post_date_class"><?php echo date_i18n('d F Y', $post_date ); ?></div>
             </div>
             <div>
