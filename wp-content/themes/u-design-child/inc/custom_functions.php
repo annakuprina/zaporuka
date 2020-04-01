@@ -799,17 +799,22 @@ class section_post_info_class extends WPBakeryShortCode {
     public function section_post_info_html( $atts ) {
         WPBMap::addAllMappedShortcodes();
         global $post;
-
         $post_category = wp_get_post_terms($post->ID, 'news_category',  array("fields" => "names"));
-
+        if(ICL_LANGUAGE_CODE=='uk'){
+            if(in_array("Проекти", $post_category)){
+                $post_category[0] = "Проекти";
+            }
+        }elseif(ICL_LANGUAGE_CODE=='en'){
+            if(in_array("Projects", $post_category)){
+                $post_category[0] = "Projects";
+            }
+        }
         $post_date = time($post->post_date);
         ob_start();
         ?>
         <div class="custom_post_info">
             <div class="right_info_block">
-
                 <div class="post_category_class"><?php echo $post_category[0]; ?></div>
-
                 <div class="post_date_class"><?php echo date_i18n('d F Y', $post_date ); ?></div>
             </div>
             <div>
