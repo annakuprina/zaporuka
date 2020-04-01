@@ -291,7 +291,7 @@ function shortcode_orange_help_form(){
                 <div class="help-item-title"><?php echo $become_volunteer; ?></div>
                 <div class="help-item-info">
                     <div class="help-item-deskr"><?php echo $become_volunteer_hover; ?></div>
-                    <a href="<?php echo $become_volunteer_hover_link; ?>" class="help-item-link"><?php echo $become_volunteer_hover_link_text; ?></a>
+                    <a href="<?php echo $become_volunteer_hover_link; ?>" class="help-item-link" target="_blank"><?php echo $become_volunteer_hover_link_text; ?></a>
                 </div>
             </div><!-- end help-item -->
 
