@@ -705,7 +705,7 @@ function list_of_children() {
             <div class="preloader"></div>
             <?php for($i=0;$i<sizeof($new_query->posts);++$i){
                 $post_id = $new_query->posts[$i]->ID;
-                $thumbnail = wp_get_attachment_url($post_id, 'medium' );
+                $thumbnail = wp_get_attachment_image_src($post_id, 'medium' );
                 $child_age = get_post_meta($post_id, 'child_age', true);
                 $help_amount = get_post_meta($post_id, 'help_amount', true);
                 $kind_of_help = get_post_meta($post_id, 'kind_of_help', true);
