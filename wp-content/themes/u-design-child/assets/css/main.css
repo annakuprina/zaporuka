@@ -7217,31 +7217,54 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 /*Our team section*/
 
-/*wrapper for desktop and mob*/
-.aboutus_section3 .vc_gitem-row-position-top {
-  
-}
+/*restyle builder Our team item block. Making inner blocks static not absolute.*/
 
-.aboutus_section3 .vc_gitem-row-position-middle {
+.aboutus_section3 .our_team_section .our-team-hover-wrapper {
+  padding: 58px 30px 30px 30px;
 
 }
-.aboutus_section3 .vc_gitem-row-position-bottom {
 
-}
-.our_team_section .our-team-hover-wrapper {
-  padding: 42px 31px;
+.aboutus_section3 .our-team-hover-wrapper .vc_gitem-zone-mini {
+  padding: 0;
 }
 
-.our_team_section
-  .our-team-hover-wrapper.vc_gitem-zone-b
-  .vc_gitem-row-position-middle {
-  top: 45%;
+.aboutus_section3 .our-team-hover-wrapper .vc_gitem-row-position-top {
+  position: static;
+  padding: 0;
+  transform: none;
 }
 
-.our_team_section
-  .our-team-hover-wrapper.vc_gitem-zone-b
-  .vc_gitem-row-position-bottom {
-  bottom: -13px;
+.aboutus_section3 .our-team-hover-wrapper .vc_gitem-row-position-middle {
+  position: static;
+  padding: 0;
+  transform: none;
+}
+
+.aboutus_section3 .our-team-hover-wrapper .vc_gitem-row-position-bottom {
+  position: static;
+  padding: 0;
+  transform: none;
+}
+
+.aboutus_section3 .our-team-hover-wrapper.vc-gitem-zone-height-mode-auto:before {
+  padding-top: 0;
+}
+
+.aboutus_section3 .our-team-hover-wrapper .vc_gitem-row-position-bottom .team-member-info-hover {
+  width: 100%;
+}
+
+.aboutus_section3 .our-team-hover-wrapper .vc_gitem-row-position-top > .vc_gitem-col {
+  padding-top: 0;
+}
+
+.aboutus_section3 .our-team-hover-wrapper .vc_gitem-row-position-top .team-member-title-hover {
+  padding-top: 0;
+  margin-bottom: 4px;
+}
+
+.aboutus_section3 .our-team-hover-wrapper .team-member-info-hover {
+  padding-top: 40px;
 }
 
 #our_team .team-member-info-hover .vc_gitem-acf-label {
