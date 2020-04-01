@@ -398,17 +398,4 @@ jQuery(document).ready(function($) {
 
   /*initialize wow animations*/ 
   new WOW().init();
-  
-  
-  // $(".homepage-banner").addClass('wow fadeIn');
-  // $(".home-first-post-post-title").addClass('wow fadeInUp').attr("data-wow-delay","1s");
-  // $(".home-first-post-post-excerpt ").addClass('wow fadeInUp').attr("data-wow-delay","2s");
-
-  
-  $(window).bind( 'grid:items:added', function() {
-  setTimeout(function(){  $("#main-content .home-first-post-post-link a").addClass('wow fadeInUp').attr("data-wow-delay","3s"); }, 5000);
-
-   
-  });
-
 });
