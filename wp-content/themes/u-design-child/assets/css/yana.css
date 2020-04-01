@@ -1154,6 +1154,10 @@ li.one-tab-link:hover {
   background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
   padding: 10px 30px;
 }
-.im{
-  color: #888!important;
+
+.one-project-info-title a{
+  color: #333333;
+}
+.one-project-info-title a:hover{
+  color: #FE5E08;
 }
