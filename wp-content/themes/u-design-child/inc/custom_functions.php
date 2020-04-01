@@ -800,10 +800,9 @@ class section_post_info_class extends WPBakeryShortCode {
         WPBMap::addAllMappedShortcodes();
         global $post;
 
-        $post_category = wp_get_post_terms($post->ID, 'news_category',  array("fields" => "names"));
+        $post_category = wp_get_post_terms($post->ID, 'news_category',  array("fields" => "names",'parent' => 0));
         $post_date = time($post->post_date);
         ob_start();
-
         ?>
         <div class="custom_post_info">
             <div class="right_info_block">
