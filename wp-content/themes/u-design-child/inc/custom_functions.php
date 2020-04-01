@@ -800,9 +800,10 @@ class section_post_info_class extends WPBakeryShortCode {
         WPBMap::addAllMappedShortcodes();
         global $post;
 
-        $post_category = wp_get_post_categories( $post->ID, array('fields' => 'names') );
+        $post_category = wp_get_post_terms($post->ID, 'news_category',  array("fields" => "names"));
         $post_date = time($post->post_date);
         ob_start();
+
         ?>
         <div class="custom_post_info">
             <div class="right_info_block">
@@ -936,77 +937,6 @@ function shortcode_awards_slider(){
         </div><!--end rewards_slider_mob-->
     </div>
     <?php
-    $html = ob_get_clean();
-    return $html;
-}
-
-add_shortcode( 'shortcode_thanks_block_pro', 'shortcode_thanks_block' );
-function shortcode_thanks_block(){
-    $order_id_answer = $_GET['answer_order_id'];
-    $liqpay_answer_status =  get_option($order_id_answer . '-liqpay_answer_status');
-    $liqpay_answer_transaction_id =  get_option($order_id_answer.'-liqpay_answer_transaction_id');
-    $liqpay_answer_summa =  get_option($order_id_answer.'-liqpay_answer_summa');
-    $liqpay_post_id =  get_option($order_id_answer . '-liqpay_post_id');
-    $thanks_text = get_field('thanks_text', $liqpay_post_id);
-    //var_dump($_SERVER['HTTP_REFERER']);
-    ob_start();
-    if($liqpay_answer_transaction_id){
-      /*  global $wpdb, $table_prefix;
-        $table_liqpay = $table_prefix . 'liqpay';
-        $res = $wpdb->get_results("SELECT summa FROM {$table_liqpay} WHERE order_id = {$order_id_answer}");*/
-
-        $order_sum = '<span class="order-sum">' .  $liqpay_answer_summa. ' '  . check_currency() . '</span>';
-        if ( !isset($thanks_text) ) {
-            if( ICL_LANGUAGE_CODE == 'uk' ) {
-                $thanks_text = 'Ваша пожертва у розмірі [сумма] буде використана на допомогу підопічним фонду "Запорука". Разом змінюємо світ на краще!';
-            }
-            elseif ( ICL_LANGUAGE_CODE == 'ru' ) {
-                $thanks_text = 'Ваше пожертвование в размере [сумма] будет использовано для помощи нашим подопечным фонда "Запорука". Вместе меняем мир к лучшему!';
-            }
-            elseif ( ICL_LANGUAGE_CODE == 'en' ) {
-                $thanks_text = 'Your donation of [сумма] will be used to help our wards from the Zaporuka foundation. Together we are changing the world for the better!';
-            }
-        }
-        $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
-       
-        
-        ?>
-        <div class="home-first-thanks-block">
-            <div class="thanks-text-wrapper">
-                <div>
-                    <a href="<?php echo home_url(); ?>">
-                        <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Дякуємо за ваше добро!');?></h2></div>
-                        <div class="thanks-text-block">
-                            <?php echo $thanks_text; ?>
-                        </div>
-                    </a>
-<!--                    <div class="thanks-share-link">-->
-<!--                        <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=--><?php //echo urlencode(get_permalink() ); ?><!--", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )'> -->
-<!--                        <span class="one-project-socials">--><?php //pll_e( 'Подiлитися');?>
-<!--                            <i class="fa fa-facebook" aria-hidden="true"></i>-->
-<!--                        </span>-->
-<!--                        </a>-->
-<!--                    </div>-->
-                </div>
-            </div>
-        </div>
-
-        <?php
-    }
-    else{
-        ?>
-         <div class="home-first-thanks-block">
-            <div class="thanks-text-wrapper">
-                <div>
-                    <a href="<?php echo home_url(); ?>">
-                        <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Ви скасували оплату!');?></h2></div>
-                    </a>
-                </div>
-            </div>
-         </div>
-        <?php
-    }
-
     $html = ob_get_clean();
     return $html;
 }
