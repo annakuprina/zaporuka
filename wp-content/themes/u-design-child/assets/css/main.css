@@ -4498,6 +4498,32 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   display: none;
 }
 
+.vc_row.wpb_row.vc_row-fluid.single_article_section1.vc_row-has-fill.vc_row-no-padding:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.3);
+}
+
+.single_article_section1_wrapper > .vc_column_container {
+  z-index: 23232323;
+}
+
+.home-page-section7 .vc_gitem-zone.vc_gitem-zone-b.section-news-hover-wrapper.vc-gitem-zone-height-mode-auto.vc_gitem-is-link.is-background-image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.3);
+}
+
 @media screen and (max-width: 768px) {
   #main-content .section-news .section-news-desk {
     display: none;

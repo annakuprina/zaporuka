@@ -390,12 +390,25 @@ jQuery(document).ready(function($) {
   }
 
   $(".post_photo_gallery .slick-dots li").each(function(index) {
-    $(this).click(function() {//by click on navigation dots
+    $(this).click(function() { //by click on navigation dots
       $('.post_photo_gallery') = $(this);
-        setTimeout(updateheight, 500);//change slider's height.
+        setTimeout(updateheight, 500); //change slider's height.
     });
   });
 
   /*initialize wow animations*/ 
   new WOW().init();
+  
+  
+  // $(".homepage-banner").addClass('wow fadeIn');
+  // $(".home-first-post-post-title").addClass('wow fadeInUp').attr("data-wow-delay","1s");
+  // $(".home-first-post-post-excerpt ").addClass('wow fadeInUp').attr("data-wow-delay","2s");
+
+  
+  $(window).bind( 'grid:items:added', function() {
+  setTimeout(function(){  $("#main-content .home-first-post-post-link a").addClass('wow fadeInUp').attr("data-wow-delay","3s"); }, 5000);
+
+   
+  });
+
 });
