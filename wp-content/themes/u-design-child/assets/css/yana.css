@@ -1159,5 +1159,5 @@ li.one-tab-link:hover {
   color: #333333;
 }
 .one-project-info-title a:hover{
-  color: #FE5E08;
+  opacity: .85;
 }
