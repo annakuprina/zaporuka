@@ -4503,6 +4503,17 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 /*---------------------
   HOME PAGE SECTION 7
 ----------------------*/
+
+.home .home-page-section6,
+.home .home-page-section7 {
+  margin-top: 0;
+}
+
+.home .home-page-section6-title,
+.home .home-page-section7-title {
+  margin-top: 85px;
+}
+
 .home-page-section7 .vc_pageable-slide-wrapper {
   display: flex;
   flex-wrap: wrap;
