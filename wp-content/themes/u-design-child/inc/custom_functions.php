@@ -811,16 +811,7 @@ class section_post_info_class extends WPBakeryShortCode {
     public function section_post_info_html( $atts ) {
         WPBMap::addAllMappedShortcodes();
         global $post;
-        $post_category = wp_get_post_terms($post->ID, 'news_category',  array("fields" => "names"));
-        if(ICL_LANGUAGE_CODE=='uk'){
-            if(in_array("Проекти", $post_category)){
-                $post_category[0] = "Проекти";
-            }
-        }elseif(ICL_LANGUAGE_CODE=='en'){
-            if(in_array("Projects", $post_category)){
-                $post_category[0] = "Projects";
-            }
-        }
+        $post_category = wp_get_post_categories( $post->ID, array('fields' => 'names') );
         $post_date = time($post->post_date);
         ob_start();
         ?>

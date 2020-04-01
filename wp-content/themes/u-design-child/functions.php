@@ -219,7 +219,7 @@ function set_custom_projects_columns( $columns ) {
 }
 add_filter( 'manage_novini_posts_columns', 'set_custom_novini_columns' );
 function set_custom_novini_columns( $columns ) {
-    $columns['news_category'] = __( 'Категорія' );
+    $columns['news_category'] = __( 'Проект' );
     return $columns;
 }
 
