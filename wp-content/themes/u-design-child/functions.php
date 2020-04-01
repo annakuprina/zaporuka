@@ -141,7 +141,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Дивитись вiдео');
   pll_register_string('u-design-child', 'Долучайтесь до БФ Запорука у соцмережах');
   pll_register_string('u-design-child', 'Партнери');
-  pll_register_string('u-design-child', 'Друзi');
+  pll_register_string('u-design-child', 'Партнери та друзі фонду');
   pll_register_string('u-design-child', 'Волонтери');
   pll_register_string('u-design-child', 'Дякуємо за ваше добро!');
   pll_register_string('u-design-child', 'Ви скасували оплату!');
