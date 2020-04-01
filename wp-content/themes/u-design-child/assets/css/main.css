@@ -478,8 +478,8 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   padding: 0 15px;
 }
 
-.u-design-fixed-menu-on.fixed-menu header#top-wrapper {
-  z-index: 1111111;
+header#top-wrapper {
+  z-index: 111111111 !important;
 }
 
 @media screen and (max-width: 1200px) {
@@ -7225,7 +7225,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 .aboutus_section3 .vc_gitem-row-position-middle {
 
 }
-
 .aboutus_section3 .vc_gitem-row-position-bottom {
 
 }
