@@ -722,16 +722,28 @@ function list_of_children() {
                             <p class="child-name-and-age">
                                 <span class="child-name"><?php echo $review_title;?></span>
                                 <span>,</span>
-                                <span class="child-age"><?php echo $child_age; ?></span>
+                                <?php if (!empty($child_age)){ ?>
+                                    <span class="child-age"><?php echo $child_age; ?></span>
+                                <?php } ?>
                                 <span>,</span>
                             </p>
-                            <p class="child-region">
-                                <?php echo $region; ?>
-                            </p>
+                            <?php if (!empty($region)){ ?>
+                                <p class="child-region">
+                                    <?php echo $region; ?>
+                                </p>
+                            <?php } ?>
                         </div><!-- end child-info -->
                     </div><!-- end child-top -->
                     <div class="child-bottom">
-                        <?php echo $review_content; ?> <?php pll_e( 'Сума допомоги');?> – <span class="help-amount"><?php echo $help_amount; ?></span><span class="kind-of-help"> <?php echo $kind_of_help; ?></span> .
+                        <?php if (!empty($help_amount)){ ?>
+                            <?php echo $review_content; ?>
+                        <?php } ?>
+                        <?php if (!empty($help_amount)){ ?>
+                            <?php pll_e( 'Сума допомоги');?> – <span class="help-amount"><?php echo $help_amount; ?></span>
+                        <?php } ?>
+                        <?php if (!empty($kind_of_help)){ ?>
+                            <span class="kind-of-help"> <?php echo $kind_of_help; ?></span> .
+                        <?php } ?>
                     </div>
                 </div><!-- end one-child  -->
             <?php } ?>
