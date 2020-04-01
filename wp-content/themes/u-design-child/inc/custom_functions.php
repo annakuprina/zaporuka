@@ -705,7 +705,7 @@ function list_of_children() {
             <div class="preloader"></div>
             <?php for($i=0;$i<sizeof($new_query->posts);++$i){
                 $post_id = $new_query->posts[$i]->ID;
-                $thumbnail = wp_get_attachment_url($post_id, array(90,90) );
+                $thumbnail = get_the_post_thumbnail_url($post_id);
                 $child_age = get_post_meta($post_id, 'child_age', true);
                 $help_amount = get_post_meta($post_id, 'help_amount', true);
                 $kind_of_help = get_post_meta($post_id, 'kind_of_help', true);
@@ -727,7 +727,7 @@ function list_of_children() {
                                 <?php } ?>
                                 <span>,</span>
                             </p>
-                            <?php if (!empty($region)){ ?>
+                            <?php if (!empty($child_age)){ ?>
                                 <p class="child-region">
                                     <?php echo $region; ?>
                                 </p>
