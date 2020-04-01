@@ -478,7 +478,7 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   padding: 0 15px;
 }
 
-header#top-wrapper {
+.u-design-fixed-menu-on.fixed-menu header#top-wrapper {
   z-index: 1111111;
 }
 
@@ -7214,6 +7214,21 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   border-top-width: 0 !important;
 }
 
+
+/*Our team section*/
+
+/*wrapper for desktop and mob*/
+.aboutus_section3 .vc_gitem-row-position-top {
+  
+}
+
+.aboutus_section3 .vc_gitem-row-position-middle {
+
+}
+
+.aboutus_section3 .vc_gitem-row-position-bottom {
+
+}
 .our_team_section .our-team-hover-wrapper {
   padding: 42px 31px;
 }
