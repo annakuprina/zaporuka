@@ -250,7 +250,7 @@ function shortcode_project_for_home(  ){
                 <div class="one-project-title"><?php pll_e( 'Проекти');?></div>
                 <div class="one-project-info">
                     <p class="one-project-info-title">
-                        <?php echo get_the_title($featured_post_id);?>
+                        <a href="<?php echo get_permalink( $featured_post_id ); ?>"><?php echo get_the_title($featured_post_id);?></a>
                     </p>
                     <p class="one-project-info-text">
                         <?php echo get_the_excerpt($featured_post_id);?>
