@@ -50,7 +50,7 @@ $bottom_5_is_active = sidebar_exist_and_active( 'bottom-widget-area-5' );
 $logo_img_url = ( $udesign_options['custom_logo_img'] ) ? esc_url($udesign_options['custom_logo_img']) : '../../../images/logo.png';
 ?>
 
-<section id="bottom-bg">
+<section id="bottom-bg" class="animated fadeInUp">
 		<div id="bottom" class="container_24">
 				<div class="bottom-content-wrapper">
 					<div class="one_fifth">
@@ -148,7 +148,7 @@ udesign_footer_before();
 
 if( ! udesign_check_page_layout_option( 'no_footer' ) ) :
 	?>
-	<footer id="footer-bg">
+	<footer id="footer-bg" class="animated fadeInUp delay-1s">
 		<!-- DESKTOP VERSION OF FOOTER -->
 		<div id="footer" class="container_24 footer-top">
 			<?php //udesign_footer_inside(); ?>
