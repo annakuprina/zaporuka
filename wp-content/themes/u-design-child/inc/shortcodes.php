@@ -416,7 +416,7 @@ function shortcode_friends_volunteers(  ){
                         $partner_link = get_post_meta($post->ID, 'partner_site_link', true);
                         $thumbnail = get_the_post_thumbnail_url($post->ID, 'thumbnail');?>
                         <div class="home-parnters-img-wrapper">
-                            <a href="<?php echo $partner_link; ?>"><img src="<?php echo $thumbnail; ?>"></a>
+                            <a href="<?php echo $partner_link; ?>"><?php echo get_the_post_thumbnail($post->ID, 'thumbnail'); ?></a>
                         </div>
                         <?php
                     }
