@@ -3354,7 +3354,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
 .home-page-section2-title {
   margin-top: 85px;
-  margin-bottom: unset;
 
 }
 
@@ -3401,6 +3400,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   background: none;
   font-weight: 700;
   margin-top: 46px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+#main-content .home-first-post-post-link a:hover {
+  padding-left: 10px !important;
 }
 
 #main-content .home-first-post-post-excerpt {
@@ -4419,7 +4424,13 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   margin-bottom: 15px;
 }
 
+.home-page-section6 .vc_pageable-load-more-btn a {
+  transition: .4s ease;
+}
 
+.home-page-section6 .vc_pageable-load-more-btn a:hover {
+  padding-left: 40px;
+}
 
 @media screen and (max-width: 1200px) {
   .home-page-section6 .other-projects-row .one-project-progress-wrapper {
@@ -4526,6 +4537,14 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
 #main-content .section-news .section-news-mob {
   display: none;
+}
+
+.home-page-section7 .vc_pageable-load-more-btn a {
+  transition: .4s ease;
+}
+
+.home-page-section7 .vc_pageable-load-more-btn a:hover {
+  padding-left: 40px;
 }
 
 .home-page-section7 .vc_gitem-zone.vc_gitem-zone-b.section-news-hover-wrapper.vc-gitem-zone-height-mode-auto.vc_gitem-is-link.is-background-image:before {
