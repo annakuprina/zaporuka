@@ -19,11 +19,11 @@ jQuery(document).ready(function($) {
   });
 
   // PARTNERS SLIDER MOBILE
-  $(".partners-slider-mob").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-  });
+  // $(".partners-slider-mob").slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  // });
 
 
 
@@ -163,12 +163,12 @@ jQuery(document).ready(function($) {
   });
 
   /*DONORS SLIDER*/
-  $(".donors-mobile-slider").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true
-  });
+  // $(".donors-mobile-slider").slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   dots: true
+  // });
 
   // lightbox for documents slider
   $(".documents-slider").slickLightbox({
