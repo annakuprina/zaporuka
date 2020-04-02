@@ -1404,7 +1404,7 @@ header#top-wrapper {
 }
 
 .volunteers-title {
-  margin-bottom: 39px;
+  margin-bottom: -29px;
 }
 
 .volunteers-slider-mob {
@@ -4722,6 +4722,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 .home-parnters-slider .home-parnters-one-slide {
   display: flex;
   flex-wrap: wrap;
+}
+
+/*Partners slider homepage mob*/
+.home-parnters-slider-mob {
+  display: none;
 }
 
 @media screen and (max-width: 500px) {
