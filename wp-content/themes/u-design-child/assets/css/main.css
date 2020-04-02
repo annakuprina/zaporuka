@@ -3354,6 +3354,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
 .home-page-section2-title {
   margin-top: 85px;
+  margin-bottom: unset;
+
 }
 
 .homepage-banner > .wpb_column > .vc_column-inner {
