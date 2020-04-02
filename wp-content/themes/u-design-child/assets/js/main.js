@@ -26,6 +26,23 @@ jQuery(document).ready(function($) {
   });
 
 
+
+  // Homepage. Parnters slider. Desktop
+  $(".home-parnters-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true
+  });
+
+  // Homepage. Parnters slider. Mobile
+  $(".home-parnters-slider-mob").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true
+  });
+
   // About us page. Write about us slider. Mobile  
   $(".write-aboutus-carousel-mob-wrapper .write-about-us-slick-mob").slick({
     slidesToShow: 1,
@@ -43,21 +60,21 @@ jQuery(document).ready(function($) {
     dots: true
   });
 
-  // VOLUNTEERS SLIDER DESKTOP
-  $(".volunteers-slider").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true
-  });
+  // // VOLUNTEERS SLIDER DESKTOP
+  // $(".volunteers-slider").slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   dots: true
+  // });
 
-  // VOLUNTEERS SLIDER MOB
-  $(".volunteers-slider-mob").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true
-  });
+  // // VOLUNTEERS SLIDER MOB
+  // $(".volunteers-slider-mob").slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   dots: true
+  // });
 
   // PHOTO SLIDER
   $(".photo-slider").slick({
@@ -260,43 +277,6 @@ jQuery(document).ready(function($) {
     ]
   });
 
-  //REWARDS SLIDER MOBILE(index page)
-  $(".rewards-slider-mob").slick({
-    dots: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      }
-    ]
-  });
-  
-
-  // Home page . Partners slider
- 
-  // $(".home-parnters-slider").slick({
-  //   dots: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   infinite: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //         infinite: true,
-  //       }
-  //     }
-  //   ]
-  // });
   //ABOUT US PAGE.DOCUMENTS BLOCK. Mobile
   $(".shortcode-fund-documents-mob .fund-documents-wrapper").slick({
     dots: true,
