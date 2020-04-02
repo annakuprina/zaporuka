@@ -1094,4 +1094,31 @@ function shortcode_fund_documents(){
     return $html;
 }
 
-
+add_shortcode('shortcode_home_page_partners_slider', 'home_page_partners_slider');
+function home_page_partners_slider(){
+    $partners_array = get_posts( array(
+        'numberposts' => -1,
+        'post_type'   => 'partners'
+    ));
+    $partners_array_six = array_chunk($partners_array, 6, true);;
+    ob_start(); ?>
+    ?>
+    <!-- Home page Partners slider -->
+    <div class="home-parnters-slider">
+        <!--  One Slide (home page slider) -->
+        <?php foreach( $partners_array_six as $post_wrapper ){ ?>
+            <div class="home-parnters-one-slide">
+                <?php foreach( $post_wrapper as $post ){
+                    $partner_link = get_post_meta($post->ID, 'partner_site_link', true);
+                    $thumbnail = get_the_post_thumbnail_url($post->ID, 'thumbnail');?>
+                    <div class="home-parnters-img-wrapper">
+                        <a href="<?php echo $partner_link; ?>"><img src="<?php echo $thumbnail; ?>"></a>
+                    </div>
+                <?php } ?>
+            </div><!--end one slide (home page partners)-->
+        <?php } ?>
+    </div><!--end home-parnters-slider-->
+    <?php
+    $html = ob_get_clean();
+    return $html;
+}
