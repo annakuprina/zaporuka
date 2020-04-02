@@ -281,22 +281,22 @@ jQuery(document).ready(function($) {
 
   // Home page . Partners slider
  
-  $(".home-parnters-slider").slick({
-    dots: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //       infinite: true,
-    //     }
-    //   }
-    // ]
-  });
+  // $(".home-parnters-slider").slick({
+  //   dots: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   infinite: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         infinite: true,
+  //       }
+  //     }
+  //   ]
+  // });
   //ABOUT US PAGE.DOCUMENTS BLOCK. Mobile
   $(".shortcode-fund-documents-mob .fund-documents-wrapper").slick({
     dots: true,
