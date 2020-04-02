@@ -3352,12 +3352,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   padding-bottom: 47px;
 }
 
-.home-page-section2 {
+.home-page-section2-title {
   margin-top: 85px;
 }
-
-
-
 
 .homepage-banner > .wpb_column > .vc_column-inner {
   padding-top: 47px;
@@ -4631,6 +4628,30 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   HOME PAGE SECTION 8
 ----------------------*/
 
+
+/*Partners slider homepage*/
+.home-parnters-slider {
+  width: 500px;
+}
+
+.home-parnters-img-wrapper {
+  display: flex;
+  width: 50%;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  max-height: 250px;
+}
+
+.home-parnters-img-wrapper img {
+  min-width: 100px;
+  max-width: 150px;
+}
+
+.home-parnters-one-slide {
+  display: flex;
+  flex-wrap: wrap;
+}
 @media screen and (max-width: 500px) {
   .home-page-section8 h2.h2-header-line::before {
     left: -15px;
