@@ -1231,6 +1231,27 @@ get_header();
 			<a href="#"><img src="http://zaporuka/wp-content/themes/u-design-child/img/test-logo1.png"></a>
 		</div>
 	</div><!--end one slide (home page partners)-->
+
+	<div class="home-parnters-one-slide">
+		<div class="home-parnters-img-wrapper">
+			<a href="#"><img src="http://zaporuka/wp-content/uploads/2020/01/2009907.jpg"></a>
+		</div>
+		<div class="home-parnters-img-wrapper">
+			<a href="#"><img src="http://zaporuka/wp-content/themes/u-design-child/img/soleterre.jpg"></a>
+		</div>
+		<div class="home-parnters-img-wrapper">
+			<a href="#"><img src="http://zaporuka/wp-content/themes/u-design-child/img/styler.jpg"></a>
+		</div>
+		<div class="home-parnters-img-wrapper">
+			<a href="#"><img src="http://zaporuka/wp-content/themes/u-design-child/img/test-logo2.png"></a>
+		</div>
+		<div class="home-parnters-img-wrapper">
+			<a href="#"><img src="http://zaporuka/wp-content/themes/u-design-child/img/golos-stolitsy.jpg"></a>
+		</div>
+		<div class="home-parnters-img-wrapper">
+			<a href="#"><img src="http://zaporuka/wp-content/themes/u-design-child/img/test-logo1.png"></a>
+		</div>
+	</div><!--end one slide (home page partners)-->
 </div><!--end home-parnters-slider-->
 
 

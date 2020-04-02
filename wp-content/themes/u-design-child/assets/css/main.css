@@ -4701,7 +4701,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
 
 /*Partners slider homepage*/
-/* .home-parnters-slider {
+.home-parnters-slider {
   width: 500px;
 }
 
@@ -4719,10 +4719,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   max-width: 150px;
 }
 
-.home-parnters-one-slide {
+.home-parnters-slider .home-parnters-one-slide {
   display: flex;
   flex-wrap: wrap;
-} */
+}
+
 @media screen and (max-width: 500px) {
   .home-page-section8 h2.h2-header-line::before {
     left: -15px;
