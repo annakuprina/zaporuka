@@ -50,7 +50,7 @@ $bottom_5_is_active = sidebar_exist_and_active( 'bottom-widget-area-5' );
 $logo_img_url = ( $udesign_options['custom_logo_img'] ) ? esc_url($udesign_options['custom_logo_img']) : '../../../images/logo.png';
 ?>
 
-<section id="bottom-bg">
+<section id="bottom-bg" class="animated fadeInUp">
 		<div id="bottom" class="container_24">
 				<div class="bottom-content-wrapper">
 					<div class="one_fifth">
