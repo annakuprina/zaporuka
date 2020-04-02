@@ -19,11 +19,11 @@ jQuery(document).ready(function($) {
   });
 
   // PARTNERS SLIDER MOBILE
-  // $(".partners-slider-mob").slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  // });
+  $(".partners-slider-mob").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  });
 
 
 
