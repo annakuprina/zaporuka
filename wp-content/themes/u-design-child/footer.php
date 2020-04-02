@@ -148,7 +148,7 @@ udesign_footer_before();
 
 if( ! udesign_check_page_layout_option( 'no_footer' ) ) :
 	?>
-	<footer id="footer-bg">
+	<footer id="footer-bg" class="animated fadeInUp delay-1s">
 		<!-- DESKTOP VERSION OF FOOTER -->
 		<div id="footer" class="container_24 footer-top">
 			<?php //udesign_footer_inside(); ?>
