@@ -362,12 +362,12 @@ function shortcode_friends_volunteers(  ){
 		'post_type'   => 'friends'
 	));	
 	$friends_array_by_7 = array_chunk($friends_array, 7, true);
-	$volunteers_array = get_posts( array(
-		'numberposts' => -1,
-		'post_type'   => 'volunteers'
-	));	
-	$volunteers_array_by_6 = array_chunk($volunteers_array, 6, true);
-	$volunteers_array_by_3 = array_chunk($volunteers_array, 3, true);
+    $partners_array = get_posts( array(
+        'numberposts' => -1,
+        'post_type'   => 'partners'
+    ));
+    $partners_array_by_6 = array_chunk($partners_array, 6, true);
+    $partners_array_by_3 = array_chunk($partners_array, 3, true);
 
 	?>
     <!-------------------------
@@ -402,25 +402,22 @@ function shortcode_friends_volunteers(  ){
 			VOLUNTEERS
 		-------------->
         <div class="volunteers">
-            <h3 class="volunteers-title"><?php pll_e( 'Волонтери');?></h3>
+            <h3 class="volunteers-title"><?php pll_e( 'Партнери');?></h3>
 
             <!---------------------------
 				VOLUNTEERS SLIDER DESKTOP
 			---------------------------->
-            <div class="volunteers-slider">
+            <div class="home-parnters-slider">
                 <!-- ONE SLIDE -->
                 <?php
-                foreach( $volunteers_array_by_6 as $post_wrapper ){
-                    echo '<div class="volunteers-slide">';
-                    foreach( $post_wrapper as $post ){ ?>
-                        <!-- One volunteer -->
-                        <div class="one-volunteer">
-                            <div class="one-volunteer-photo"><img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>"></div>
-                            <div class="one-volunteer-info">
-                                <div class="one-volunteer-name"><?php echo $post->post_title;?></div>
-                                <div class="one-volunteer-position"><?php echo $post->post_content;?></div>
-                            </div>
-                        </div><!-- end one volunteer -->
+                foreach( $partners_array_by_6 as $post_wrapper ){
+                    echo '<div class="home-parnters-one-slide">';
+                    foreach( $post_wrapper as $post ){
+                        $partner_link = get_post_meta($post->ID, 'partner_site_link', true);
+                        $thumbnail = get_the_post_thumbnail_url($post->ID, 'thumbnail');?>
+                        <div class="home-parnters-img-wrapper">
+                            <a href="<?php echo $partner_link; ?>"><img src="<?php echo $thumbnail; ?>"></a>
+                        </div>
                         <?php
                     }
                     echo '</div>';
@@ -430,20 +427,17 @@ function shortcode_friends_volunteers(  ){
             <!---------------------------
 				VOLUNTEERS SLIDER MOBILE
 			---------------------------->
-            <div class="volunteers-slider-mob">
+            <div class="home-parnters-slider-mob">
                 <!-- ONE SLIDE -->
                 <?php
-                foreach( $volunteers_array_by_3 as $post_wrapper ){
-                    echo '<div class="volunteers-slide">';
-                    foreach( $post_wrapper as $post ){ ?>
-                        <!-- One volunteer -->
-                        <div class="one-volunteer">
-                            <div class="one-volunteer-photo"><img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>"></div>
-                            <div class="one-volunteer-info">
-                                <div class="one-volunteer-name"><?php echo $post->post_title;?></div>
-                                <div class="one-volunteer-position"><?php echo $post->post_content;?></div>
-                            </div>
-                        </div><!-- end one volunteer -->
+                foreach( $partners_array_by_3 as $post_wrapper ){
+                    echo '<div class="home-parnters-one-slide">';
+                    foreach( $post_wrapper as $post ){
+                        $partner_link = get_post_meta($post->ID, 'partner_site_link', true);
+                        $thumbnail = get_the_post_thumbnail_url($post->ID, 'thumbnail');?>
+                        <div class="home-parnters-img-wrapper">
+                            <a href="<?php echo $partner_link; ?>"><img src="<?php echo $thumbnail; ?>"></a>
+                        </div>
                         <?php
                     }
                     echo '</div>';
