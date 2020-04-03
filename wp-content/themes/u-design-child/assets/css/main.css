@@ -4577,7 +4577,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 /*Partners slider homepage*/
 .home-parnters-slider {
   width: 500px;
-  margin: auto;
+  margin-left: -33px;
 }
 
 .home-parnters-title {
