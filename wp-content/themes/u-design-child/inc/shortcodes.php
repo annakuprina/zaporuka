@@ -413,8 +413,7 @@ function shortcode_friends_volunteers(  ){
                 foreach( $partners_array_by_6 as $post_wrapper ){
                     echo '<div class="home-parnters-one-slide">';
                     foreach( $post_wrapper as $post ){
-                        $partner_link = get_post_meta($post->ID, 'partner_site_link', true);
-                        $thumbnail = get_the_post_thumbnail_url($post->ID, 'thumbnail');?>
+                        $partner_link = get_post_meta($post->ID, 'partner_site_link', true); ?>
                         <div class="home-parnters-img-wrapper">
                             <a href="<?php echo $partner_link; ?>"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></a>
                         </div>
@@ -433,10 +432,9 @@ function shortcode_friends_volunteers(  ){
                 foreach( $partners_array_by_3 as $post_wrapper ){
                     echo '<div class="home-parnters-one-slide">';
                     foreach( $post_wrapper as $post ){
-                        $partner_link = get_post_meta($post->ID, 'partner_site_link', true);
-                        $thumbnail = get_the_post_thumbnail_url($post->ID, 'thumbnail');?>
+                        $partner_link = get_post_meta($post->ID, 'partner_site_link', true); ?>
                         <div class="home-parnters-img-wrapper">
-                            <a href="<?php echo $partner_link; ?>"><img src="<?php echo $thumbnail; ?>"></a>
+                            <a href="<?php echo $partner_link; ?>"><img src="<?php echo get_the_post_thumbnail($post->ID, 'full'); ?>"></a>
                         </div>
                         <?php
                     }
