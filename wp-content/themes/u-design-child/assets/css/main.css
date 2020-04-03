@@ -4557,7 +4557,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 /*---------------------
   HOME PAGE SECTION 8
 ----------------------*/
-
+.home-parnters {
+  padding: 40px;
+}
 
 /*Partners slider homepage*/
 .home-parnters-slider {
