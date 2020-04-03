@@ -4552,12 +4552,16 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
 .home-parnters {
   padding: 40px;
+  position: relative;
+
 }
 
 /*Partners slider homepage*/
 .home-parnters-slider {
   width: 500px;
   margin: auto;
+  position: absolute;
+  z-index: 2;
 }
 
 .home-parnters-slider .slick-dots {
@@ -4585,7 +4589,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
 /*Partners slider homepage mob*/
 .home-parnters-slider-mob {
-  display: none;
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .home-parnters-slider-mob .home-parnters-img-wrapper {
@@ -4594,11 +4601,17 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
 @media screen and (max-width: 1024px) {
   .home-parnters-slider {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+
   }
 
   .home-parnters-slider-mob {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+
   }
 }
 
