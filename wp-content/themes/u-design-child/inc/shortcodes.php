@@ -374,9 +374,9 @@ function shortcode_friends_volunteers(  ){
 		FRIENDS AND VOLUNTEERS
 	-------------------------->
     <div class="friends-and-volunteers">
-        <!---------
+        <!------------
 			FRIENDS
-		----------->
+		-------------->
         <div class="friends-wrapper">
             <div class="friends">
                 <h3 class="friends-title"><?php pll_e( 'Партнери та друзі фонду');?></h3>
@@ -398,15 +398,15 @@ function shortcode_friends_volunteers(  ){
                 </div><!-- end friends slider -->
             </div><!-- end friends -->
         </div><!-- end friends-wrapper-->
-        <!-------------
-			VOLUNTEERS
-		-------------->
-        <div class="volunteers">
-            <h3 class="volunteers-title"><?php pll_e( 'Партнери');?></h3>
+        <!-------------------------------
+			HOMEPAGE PARTNERS BLOCK
+		--------------------------------->
+        <div class="home-parnters">
+            <h3 class="home-parnters-title"><?php pll_e( 'Партнери');?></h3>
 
-            <!---------------------------
-				VOLUNTEERS SLIDER DESKTOP
-			---------------------------->
+            <!-------------------------------------
+				HOMEPAGE PARTNERS SLIDER DESKTOP
+			-------------------------------------->
             <div class="home-parnters-slider">
                 <!-- ONE SLIDE -->
                 <?php
@@ -423,9 +423,9 @@ function shortcode_friends_volunteers(  ){
                 }
                 ?>
             </div>
-            <!---------------------------
-				VOLUNTEERS SLIDER MOBILE
-			---------------------------->
+            <!-------------------------------------
+				HOMEPAGE PARTNERS SLIDER MOBILE
+			-------------------------------------->
             <div class="home-parnters-slider-mob">
                 <!-- ONE SLIDE -->
                 <?php
@@ -441,8 +441,8 @@ function shortcode_friends_volunteers(  ){
                     echo '</div>';
                 }
                 ?>
-            </div><!-- end volunteers-slider -->
-        </div><!-- end volunteers -->
+            </div><!-- end home-parnters-slider-mob -->
+        </div><!-- end home-parnters -->
     </div><!-- end friends-and-volunteers -->
 
 	<?php
