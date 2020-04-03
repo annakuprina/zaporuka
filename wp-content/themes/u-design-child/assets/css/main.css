@@ -4525,6 +4525,24 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   .home-page-section7-title h2 {
     margin-bottom: 16px;
   }
+
+  .home-page-section7-title h2.h2-header-line {
+    padding-left: 0;
+  }
+
+  .home-page-section7-title h2.h2-header-line::before {
+    left: -30px;
+  }
+
+  #main-content .section-news .section-news-hover-wrapper {
+    padding: 9px 20px 20px 20px !important;
+  }
+
+  .home-page-section7  .section-news-hover-wrapper .vc_gitem-row-position-bottom .vc_gitem-col {
+    padding: 10px 0;
+  }
+
+ 
 }
 /*end home page section7*/
 
@@ -4564,9 +4582,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 }
 
 @media screen and (max-width: 960px) {
-  .home-parnters-slider,
-  .home-parnters-slider .slick-track {
-    width: 400px;
+  .home-parnters-slider {
+    display: none;
+  }
+
+  .home-parnters-slider-mob {
+    display: block;
   }
 }
 
@@ -4581,6 +4602,16 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
   .vc_custom_1582013182108 {
     margin-bottom: 19px !important;
+  }
+
+  .home-page-section8-inner .strategic-partner-title {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  .home-page-section8-inner .strategic-partner-text {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
   }
 }
 
