@@ -4581,6 +4581,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   display: none;
 }
 
+.home-parnters-slider-mob .home-parnters-img-wrapper {
+  width: 100%;
+}
+
 @media screen and (max-width: 960px) {
   .home-parnters-slider {
     display: none;
