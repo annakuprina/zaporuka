@@ -434,7 +434,7 @@ function shortcode_friends_volunteers(  ){
                     foreach( $post_wrapper as $post ){
                         $partner_link = get_post_meta($post->ID, 'partner_site_link', true); ?>
                         <div class="home-parnters-img-wrapper">
-                            <a href="<?php echo $partner_link; ?>"><img src="<?php echo get_the_post_thumbnail($post->ID, 'full'); ?>"></a>
+                            <a href="<?php echo $partner_link; ?>"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></a>
                         </div>
                         <?php
                     }
