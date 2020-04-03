@@ -1385,115 +1385,10 @@ header#top-wrapper {
   }
 }
 
-/*VOLUNTEERS*/
-.volunteers {
-  padding: 41px 40px 50px 40px;
-}
-
-/*---------------------------
-  VOLUNTEERS SLIDER DESKTOP
-----------------------------*/
-.volunteers-slider {
-  width: 575px;
-  min-height: 250px;
-}
-
-.volunteers-slider .draggable {
-  width: 575px;
-  min-height: 250px;
-}
-
-.volunteers-title {
-  margin-bottom: -29px;
-}
-
-.volunteers-slider-mob {
-  display: none;
-}
-
-.volunteers-slider .volunteers-slide {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: inherit;
-}
-
-.volunteers-slider .slick-dots {
-  bottom: -49px;
-  left: 6px;
-}
-
-.one-volunteer {
-  display: flex;
-  width: 262px;
-}
-
-.one-volunteer:not(:last-child) {
-  margin-bottom: 21px;
-}
-
-.one-volunteer-photo {
-  margin-right: 20px;
-  min-width: 70px;
-  max-width: 69px;
-  height: 70px;
-  overflow: hidden;
-}
-
-.one-volunteer-info {
-  max-width: 170px;
-}
-
-.one-volunteer-name {
-  font-family: "Raleway-Bold";
-  color: #333;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 26px;
-  margin-bottom: 5px;
-}
-
-.one-volunteer-position {
-  color: #333;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-}
-
-/*--------------------------
-  VOLUNTEERS SLIDER MOBILE
----------------------------*/
-.volunteers-slider-mob {
-  width: 290px;
-  min-height: 250px;
-}
-
-.volunteers-slider-mob .draggable {
-  width: 290px;
-  min-height: 250px;
-}
-
-.volunteers-slider-mob .slick-dots {
-  bottom: -59px;
-  left: -22px;
-}
-
 @media screen and (max-width: 1300px) {
-  .volunteers-slider {
-    display: none;
-  }
-
-  .volunteers-slider-mob {
-    display: block;
-  }
   .friends-wrapper {
     width: 50%;
     padding-bottom: 50px;
-  }
-
-  /* Change position of Volunteers slider dots */
-  .volunteers-slider-mob .slick-dots {
-    bottom: -55px;
   }
 
   .friends {
@@ -1502,20 +1397,12 @@ header#top-wrapper {
 }
 
 @media screen and (max-width: 750px) {
-  .volunteers {
-    padding: 20px 20px 50px 20px;
-  }
   .friends {
     padding: 20px 20px 0 20px;
   }
 }
 
 @media screen and (max-width: 650px) {
-  .volunteers {
-    width: 290px;
-    padding: 40px 20px 34px 20px;
-  }
-
   .friends-and-volunteers {
     border-bottom: 1px solid rgba(165, 165, 165, 0.25);
   }
@@ -1540,8 +1427,7 @@ header#top-wrapper {
     align-items: center;
   }
 
-  .friends-title,
-  .volunteers-title {
+  .friends-title{
     font-size: 18px;
   }
 
@@ -1549,21 +1435,10 @@ header#top-wrapper {
     margin-bottom: 18px;
   }
 
-  .volunteers-title {
-    margin-bottom: 23px;
-  }
-
   .friends-slider.slick-slider {
     margin-bottom: 22px;
   }
 
-  .volunteers-slider-mob .slick-slide {
-    margin-bottom: 5px;
-  }
-
-  .volunteers-slider-mob .slick-dots {
-    bottom: -41px;
-  }
 
   .home-page-section8-inner.vc_custom_1579510775987 {
     margin-bottom: 58px;
@@ -1576,34 +1451,6 @@ header#top-wrapper {
   #main-content .vc_custom_1579507340150 {
     margin-bottom: 38px;
   }
-}
-
-
-/*DONORS*/
-.donors-desktop {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-}
-
-.donors-desktop .donors-img-wrapper {
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 70px;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.donors-one-slide {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-}
-
-.donors-one-slide img:not(:last-child) {
-  margin-bottom: 45px;
 }
 
 /*BANNER FOR ONE PROJECT PAGE*/
@@ -1729,15 +1576,6 @@ header#top-wrapper {
   padding-left: 12px;
 }
 
-.donors-mobile-slider {
-  display: none;
-}
-
-.donors-mobile-slider .slick-dots {
-  bottom: -29px;
-}
-
-
 @media screen and (max-width: 1024px) {
   .one-project-banner {
     justify-content: center;
@@ -1749,10 +1587,6 @@ header#top-wrapper {
     margin: auto;
   }
 
-  .donors-desktop .donors-img-wrapper {
-    width: 33%;
-    margin-bottom: 50px;
-  }
 }
 
 @media screen and (max-width: 700px) {
@@ -1792,19 +1626,6 @@ header#top-wrapper {
   }
 }
 
-@media screen and (max-width: 650px) {
-  .donors-desktop {
-    display: none;
-  }
-
-  .donors-mobile-slider {
-    display: block;
-  }
-
-  .donors-mobile-slider .slick-dots {
-    bottom: -30px;
-  }
-}
 
 @media screen and (max-width: 600px) {
   .one-project-banner .project-money {
@@ -4708,7 +4529,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 .home-parnters-img-wrapper {
   display: flex;
   width: 50%;
-  padding: 20px;
+  padding: 30px 20px;
   justify-content: center;
   align-items: center;
   max-height: 250px;
@@ -4716,7 +4537,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
 .home-parnters-img-wrapper img {
   min-width: 100px;
-  max-width: 150px;
+  max-width: 180px;
 }
 
 .home-parnters-slider .home-parnters-one-slide {

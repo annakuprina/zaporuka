@@ -60,22 +60,6 @@ jQuery(document).ready(function($) {
     dots: true
   });
 
-  // // VOLUNTEERS SLIDER DESKTOP
-  // $(".volunteers-slider").slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  //   dots: true
-  // });
-
-  // // VOLUNTEERS SLIDER MOB
-  // $(".volunteers-slider-mob").slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  //   dots: true
-  // });
-
   // PHOTO SLIDER
   $(".photo-slider").slick({
     slidesToShow: 3,
@@ -162,13 +146,6 @@ jQuery(document).ready(function($) {
     ]
   });
 
-  /*DONORS SLIDER*/
-  // $(".donors-mobile-slider").slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  //   dots: true
-  // });
 
   // lightbox for documents slider
   $(".documents-slider").slickLightbox({
