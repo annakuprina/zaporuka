@@ -392,4 +392,12 @@ jQuery(document).ready(function($) {
 
   /*initialize wow animations*/ 
   new WOW().init();
+
+
+  $(window).on("resize", function() {
+    if ($('.home-parnters-slider-mob').css('display')=='block') {
+      console.log('mob version is visible');
+      $('.home-parnters-slider-mob').slick('reinit');
+    }
+  }).resize();
 });
