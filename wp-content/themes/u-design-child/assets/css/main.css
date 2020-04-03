@@ -4550,11 +4550,18 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   HOME PAGE SECTION 8
 ----------------------*/
 
+.home-parnters {
+  padding: 40px;
+}
 
 /*Partners slider homepage*/
 .home-parnters-slider {
   width: 500px;
   margin: auto;
+}
+
+.home-parnters-slider .slick-dots {
+  bottom: -50px;
 }
 
 .home-parnters-img-wrapper {
@@ -4585,7 +4592,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   width: 100%;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .home-parnters-slider {
     display: none;
   }
