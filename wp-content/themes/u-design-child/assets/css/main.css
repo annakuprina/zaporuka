@@ -4591,6 +4591,13 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   display: none;
 }
 
+.home-parnters-slider-mob,
+.home-parnters-slider-mob .slick-track,
+.home-parnters-slider-mob .home-parnters-one-slide {
+  width: calc(100% - 40px);
+  max-width: 400px;
+}
+
 @media screen and (max-width: 960px) {
   .home-parnters-slider,
   .home-parnters-slider .slick-track {
