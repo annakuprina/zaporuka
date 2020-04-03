@@ -4542,7 +4542,15 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
     padding: 10px 0;
   }
 
- 
+  .home-page-section8-inner .strategic-partner-title {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  .home-page-section8-inner .strategic-partner-text {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
 }
 /*end home page section7*/
 
@@ -4550,18 +4558,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   HOME PAGE SECTION 8
 ----------------------*/
 
-.home-parnters {
-  padding: 40px;
-}
 
 /*Partners slider homepage*/
 .home-parnters-slider {
   width: 500px;
   margin: auto;
-}
-
-.home-parnters-slider .slick-dots {
-  bottom: -50px;
 }
 
 .home-parnters-img-wrapper {
@@ -4588,17 +4589,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   display: none;
 }
 
-.home-parnters-slider-mob .home-parnters-img-wrapper {
-  width: 100%;
-}
-
-@media screen and (max-width: 1024px) {
-  .home-parnters-slider {
-    display: none;
-  }
-
-  .home-parnters-slider-mob {
-    display: block;
+@media screen and (max-width: 960px) {
+  .home-parnters-slider,
+  .home-parnters-slider .slick-track {
+    width: 400px;
   }
 }
 
@@ -4613,16 +4607,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 
   .vc_custom_1582013182108 {
     margin-bottom: 19px !important;
-  }
-
-  .home-page-section8-inner .strategic-partner-title {
-    padding-right: 20px !important;
-    padding-left: 20px !important;
-  }
-
-  .home-page-section8-inner .strategic-partner-text {
-    padding-right: 20px !important;
-    padding-left: 20px !important;
   }
 }
 

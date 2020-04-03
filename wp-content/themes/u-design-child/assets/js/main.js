@@ -394,10 +394,10 @@ jQuery(document).ready(function($) {
   new WOW().init();
 
 
-  $(window).on("resize", function() {
-    if ($('.home-parnters-slider-mob').css('display')=='block') {
-      console.log('mob version is visible');
-      $('.home-parnters-slider-mob').slick('reinit');
-    }
-  }).resize();
+  // $(window).on("resize", function() {
+  //   if ($('.home-parnters-slider-mob').css('display')=='block') {
+  //     console.log('mob version is visible');
+  //     $('.home-parnters-slider-mob').slick('reinit');
+  //   }
+  // }).resize();
 });
