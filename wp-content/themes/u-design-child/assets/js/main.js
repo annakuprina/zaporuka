@@ -390,6 +390,22 @@ jQuery(document).ready(function($) {
     });
   });
 
+
+  
+  /*Homepage. Our partners and friends gallery(with links). Contains photo with different height.
+  Make slick slider change it's height that equals current active slide height.*/
+  function updateheight() {
+    $('.friends-slider').find('.slick-list').height($('.friends-slider').find('.slick-slide.slick-active').height()); //count current active slide height.
+  }
+
+  $(".friends-slider .slick-dots li").each(function(index) {
+    $(this).click(function() { //by click on navigation dots
+      $('.friends-slider') = $(this);
+        setTimeout(updateheight, 500); //change slider's height.
+    });
+  });
+
+
   /*initialize wow animations*/ 
   new WOW().init();
 
