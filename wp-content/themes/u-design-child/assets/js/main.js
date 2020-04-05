@@ -379,14 +379,14 @@ jQuery(document).ready(function($) {
 
   /*1 Article page. Post photo gallery. Contains photo with different height.
   Make slick slider change it's height that equals current active slide height.*/
-  function updateheight() {
+  function updateHeightPhotoGallery() {
     $('.post_photo_gallery').find('.slick-list').height($('.post_photo_gallery').find('.slick-slide.slick-active').height()); //count current active slide height.
   }
 
   $(".post_photo_gallery .slick-dots li").each(function(index) {
     $(this).click(function() { //by click on navigation dots
       $('.post_photo_gallery') = $(this);
-        setTimeout(updateheight, 500); //change slider's height.
+        setTimeout(updateHeightPhotoGallery, 500); //change slider's height.
     });
   });
 
@@ -394,14 +394,14 @@ jQuery(document).ready(function($) {
   
   /*Homepage. Our partners and friends gallery(with links). Contains photo with different height.
   Make slick slider change it's height that equals current active slide height.*/
-  function updateheight() {
+  function updatehHeightFriendsSlider() {
     $('.friends-slider').find('.slick-list').height($('.friends-slider').find('.slick-slide.slick-active').height()); //count current active slide height.
   }
 
   $(".friends-slider .slick-dots li").each(function(index) {
     $(this).click(function() { //by click on navigation dots
       $('.friends-slider') = $(this);
-        setTimeout(updateheight, 500); //change slider's height.
+        setTimeout(updatehHeightFriendsSlider, 500); //change slider's height.
     });
   });
 
