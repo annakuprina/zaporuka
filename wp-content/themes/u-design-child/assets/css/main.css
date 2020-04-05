@@ -4593,6 +4593,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   width: 50%;
   padding: 0;
   justify-content: center;
+  align-items: center;
 }
 
 .home-parnters-img-wrapper img {
@@ -4606,23 +4607,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   height: 423px;
   justify-content: space-between;
 }
-
-.home-parnters-slider .home-parnters-one-slide .home-parnters-img-wrapper:nth-child(1),
-.home-parnters-slider .home-parnters-one-slide .home-parnters-img-wrapper:nth-child(2) {
-  align-items: flex-start;
-}
-
-.home-parnters-slider .home-parnters-one-slide .home-parnters-img-wrapper:nth-child(3),
-.home-parnters-slider .home-parnters-one-slide .home-parnters-img-wrapper:nth-child(4) {
-  align-items: center;
-}
-
-.home-parnters-slider .home-parnters-one-slide .home-parnters-img-wrapper:nth-child(5),
-.home-parnters-slider .home-parnters-one-slide .home-parnters-img-wrapper:nth-child(6) {
-  align-items: flex-end;
-}
-
-
 
 /*Partners slider homepage mob*/
 .home-parnters-slider-mob {
