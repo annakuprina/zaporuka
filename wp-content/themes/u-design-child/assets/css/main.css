@@ -7238,14 +7238,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #main-content .write-about-us-slick-desk .slick-dots {
   left: 12.8%;
-  /* top: 139px; */
+  bottom: -50px;
 }
 
 #main-content  .write-about-us-slick-mob .slick-dots {
   left: unset;
 }
-
-
 
 #main-content .aboutus_section1 .video_button a:before {
   content: "";
