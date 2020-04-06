@@ -143,7 +143,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Дивитись вiдео');
   pll_register_string('u-design-child', 'Долучайтесь до БФ Запорука у соцмережах');
   pll_register_string('u-design-child', 'Партнери');
-  pll_register_string('u-design-child', 'Партнери та друзі фонду');
+  pll_register_string('u-design-child', 'Друзі та волонтери фонду ');
   pll_register_string('u-design-child', 'Волонтери');
   pll_register_string('u-design-child', 'Дякуємо за ваше добро!');
   pll_register_string('u-design-child', 'Ви скасували оплату!');
@@ -167,7 +167,8 @@ add_action('init', function() {
   pll_register_string('liqpay_wordpress', 'З вдячністю,');
   pll_register_string('liqpay_wordpress', "Благодійний Фонд 'Запорука'");
 });
-
+remove_filter('the_content','wptexturize');
+remove_filter('the_content', 'wpautop');
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
 function change_existing_currency_symbol( $currency_symbol, $currency ) {
     if(ICL_LANGUAGE_CODE=='uk'){
