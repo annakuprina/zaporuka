@@ -101,6 +101,11 @@ h3 {
   font-size: 20px;
   font-weight: 700;
 }
+
+h2.h2-header-line::before {
+  top: 28px;
+}
+
 /*media for h2 title(with left orange line)*/
 @media screen and (max-width: 1360px) {
   h2.h2-header-line::before {
