@@ -7238,7 +7238,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #main-content .write-about-us-slick-desk .slick-dots {
   left: 12.8%;
-  top: 139px;
+  /* top: 139px; */
 }
 
 #main-content  .write-about-us-slick-mob .slick-dots {
@@ -7486,7 +7486,16 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 /* Write about us sider */
 .write-about-us-slick-desk .slick-track {
-  height: 110px;
+
+  display: flex;
+  align-items: center;
+}
+
+.write-about-us-slick-desk .slick-slide img {
+  max-width: 85%;
+  max-height: 150px;
+  display: block;
+  margin: auto;
 }
 
 .write-about-us-slick-desk .slick-slide {
