@@ -165,7 +165,8 @@ add_action('init', function() {
   pll_register_string('liqpay_wordpress', 'З вдячністю,');
   pll_register_string('liqpay_wordpress', "Благодійний Фонд 'Запорука'");
 });
-
+remove_filter('the_content','wptexturize');
+remove_filter('the_content', 'wpautop');
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
 function change_existing_currency_symbol( $currency_symbol, $currency ) {
     if(ICL_LANGUAGE_CODE=='uk'){
