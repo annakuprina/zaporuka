@@ -4301,14 +4301,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   min-height: 324px;
 }
 
-.home-page-section6 .singl-project-top-part .vc_gitem-row-position-top:nth-child(1) .vc_gitem-col {
-  padding: 10px 10px 12px 11px;
+.home-page-section6 .vc_gitem-row-position-top:nth-child(1) .vc_gitem-col {
+  padding: 10px 10px 12px 10px;
 }
-
-.home-page-section6 .singl-project-bottom-part .vc_gitem-row-position-top:nth-child(1) .vc_gitem-col {
-  padding: 10px 10px 12px 13px;
-}
-
 
 .home-page-section6 .vc_gitem-row-position-top:nth-child(2) .vc_gitem-col {
   padding: 20px 10px 12px 10px;
@@ -4342,18 +4337,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
 .home-page-section6 .vc_pageable-load-more-btn a:hover {
   padding-left: 40px;
 }
-
-.home .home-page-section6.vc_grid.vc_row.vc_grid-gutter-35px .vc_pageable-slide-wrapper {
-  margin-right: -44px;
-}
-
-.home .home-page-section6 .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item {
-  padding-right: 41px;
-  max-width: 353px;
-}
-
-
-
 
 @media screen and (max-width: 1200px) {
   .home-page-section6 .other-projects-row .one-project-progress-wrapper {
@@ -4446,11 +4429,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   margin-top: 85px;
 
 }
-
-.home .home-page-section6-title .vc_column-inner {
-  padding-left: 0;
-}
-
 .home .home-page-section7-title {
   padding-top: 85px;
 }
@@ -7733,6 +7711,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .write-aboutus-wrapper .testimonials_section {
     padding-top: 40px;
   }
+  
 }
 
 @media screen and (max-width: 600px) {
