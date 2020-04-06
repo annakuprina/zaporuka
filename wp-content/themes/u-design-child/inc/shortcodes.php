@@ -379,7 +379,7 @@ function shortcode_friends_volunteers(  ){
 		-------------->
         <div class="friends-wrapper">
             <div class="friends">
-                <h3 class="friends-title"><?php pll_e( 'Партнери та друзі фонду');?></h3>
+                <h3 class="friends-title"><?php pll_e( 'Друзі та волонтери фонду ');?></h3>
                 <!-- FRIENDS SLIDER -->
                 <div class="friends-slider">
                     <?php
