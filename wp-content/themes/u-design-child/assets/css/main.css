@@ -7218,6 +7218,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #main-content .write-about-us-slick-mob .write-about-us-slide img {
   margin-bottom: 40px;
+  max-width: 230px;
 }
 
 #main-content .aboutus_section1 {
@@ -7727,7 +7728,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 @media screen and (max-width: 560px) {
   #main-content .write-about-us-slick-mob .write-about-us-slide img {
     max-height: 50px;
-    max-width: 230px;
   }
 
   #our_team .vc_pageable-slide-wrapper {
