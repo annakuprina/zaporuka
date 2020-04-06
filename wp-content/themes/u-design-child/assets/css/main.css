@@ -1366,6 +1366,9 @@ header#top-wrapper {
   position: absolute;
   bottom: -74px;
 }
+.friends-slider .slick-dots {
+
+} 
 
 .friends-slider,
 .friends-slider .slick-track {
@@ -6447,6 +6450,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   font-family: "Raleway-Bold";
   font-size: 16px;
   width: 100px;
+}
+
+.shop-custom-wrapper .berocket_filter_slider.ui-widget-content .ui-slider-range, .berocket_filter_price_slider.ui-widget-content .ui-slider-range {
+  background: none repeat scroll 0 0 #8c8c8c;
 }
 
 .category-expand-button {
