@@ -6556,10 +6556,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-right: 0;
 }
 
-.woocommerce #main-content .shop-custom-wrapper ul.products {
-  margin-bottom: 14px;
-}
-
 #main-content .woocommerce-custom-product-filter .filter-cart-price-wrapper {
   margin-right: 3px;
 }
@@ -6580,7 +6576,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 /*shop page*/
 .woocommerce #main-content .shop-custom-wrapper ul.products {
-  margin-right: -40px;
+  width: 100%;
+  position: relative;
+  right: -20px;
+  margin-bottom: 14px;
 }
 
 .shop-custom-wrapper ul.products.columns-3 li.product {
@@ -6665,7 +6664,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     padding-top: 50px;
   }
 
-
+  .shop-custom-wrapper .lmp_load_more_button {
+    margin-bottom: 35px;
+  }
 }
 
 @media screen and (max-width: 959px) {
