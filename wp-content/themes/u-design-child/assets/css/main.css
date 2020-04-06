@@ -8329,6 +8329,13 @@ body.product ul.products {
   /* opacity: 0.1; */
 }
 
+#askForHelpModal a:link,
+#askForHelpModal a:visited,
+#askForHelpModal a:hover,
+#askForHelpModal a:active {
+  color: #e78b48 !important;
+}
+
 #askForHelpModal.opened .modal-dialog::-webkit-scrollbar-thumb {
   background-color: #989898;
 }
