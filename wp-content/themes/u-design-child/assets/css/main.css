@@ -491,7 +491,7 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 }
 
 header#top-wrapper {
-  z-index: 111111111 !important;
+  z-index: 11 !important;
 }
 
 @media screen and (max-width: 1200px) {
@@ -6143,6 +6143,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 .single-novini .single_article_section1 {
   height: 400px;
+  z-index: 1;
 }
 
 .single-novini .single_section2 {
