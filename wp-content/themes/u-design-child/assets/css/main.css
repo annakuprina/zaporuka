@@ -107,7 +107,7 @@ h2.h2-header-line::before {
 }
 
 /*media for h2 title(with left orange line)*/
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1250px) {
   h2.h2-header-line::before {
     width: 39px;
     left: 0;
@@ -3646,7 +3646,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 /*media for home-page-section2*/
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1250px) {
   .vc_custom_1579168014403.section2-text {
     margin-bottom: 0;
   }
@@ -6336,7 +6336,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 .reports-children-title .wpb_wrapper {
   display: flex;
   justify-content: space-between;
-  padding-right: 15px;
+  padding-right: 9px;
   flex-direction: row;
 }
 
