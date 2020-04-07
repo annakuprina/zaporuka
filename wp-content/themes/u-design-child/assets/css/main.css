@@ -3004,11 +3004,11 @@ footer .footer-mob a.designer-link {
 }
 
 .bottom-content-wrapper .one_fifth:nth-child(1) {
-  margin-right: 117px;
+  margin-right: 115px;
 }
 
 .bottom-content-wrapper .one_fifth:nth-child(2) {
-  margin-right: 117px;
+  margin-right: 115px;
 }
 
 .bottom-content-wrapper .one_fifth:nth-child(3) {
@@ -3027,22 +3027,7 @@ html[lang="en-US"] .bottom-content-wrapper .one_fifth:nth-child(4) {
   margin-right: 97px;
 }
 
-html[lang="en-US"] #footer_bottom .one_fifth:nth-child(1) {
-  margin-right: 148px;
-}
 
-html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
-  margin-right: 130px;
-}
-
-html[lang="en-US"] #footer_bottom .one_fifth:nth-child(3) {
-  margin-right: 163px;
-}
-
-html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
-  position: relative;
-  left: 79px;
-}
 
 #bottom .bottom-content-wrapper .footer-tel .fa {
   font-size: 12px;
@@ -3075,13 +3060,16 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   margin-right: 58px;
 }
 
-#footer_bottom .one_fifth:nth-child(3) {
-  margin-right: 104px;
+html[lang="ru-RU"] #footer_bottom .one_fifth:nth-child(2) {
+  margin-right: 71px;
 }
 
-#footer_bottom .one_fifth:nth-child(5) {
-  position: relative;
-  left: 115px;
+html[lang="en-US"] #footer_bottom .one_fifth:nth-child(1) {
+  margin-right: 151px;
+}
+
+html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
+  margin-right: 130px;
 }
 /*end bottom part of footer*/
 
