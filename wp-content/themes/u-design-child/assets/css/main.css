@@ -3004,11 +3004,11 @@ footer .footer-mob a.designer-link {
 }
 
 .bottom-content-wrapper .one_fifth:nth-child(1) {
-  margin-right: 120px;
+  margin-right: 117px;
 }
 
 .bottom-content-wrapper .one_fifth:nth-child(2) {
-  margin-right: 121px;
+  margin-right: 117px;
 }
 
 .bottom-content-wrapper .one_fifth:nth-child(3) {
@@ -4465,6 +4465,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(5) {
   background: rgba(0,0,0,.3);
 }
 
+.home .home-page-section7 .vc_grid-item {
+  width: 33.3%;
+}
 
 @media screen and (max-width: 768px) {
   #main-content .section-news .section-news-desk {
