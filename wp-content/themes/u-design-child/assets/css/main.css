@@ -4771,13 +4771,19 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   margin-right: 11px;
   margin-bottom: 9px;
   background: #fff;
-  padding: 15px 15px;
+  padding: 11px 26px;
   line-height: 23px;
+  display: flex;
 }
 
 .project_banner_section1_item h5 {
-  font-family: "Proxima-Nova-Bold";
+  font-family: "Proxima-Nova-Regular";
   font-size: 27px;
+}
+
+.project_banner_section1_item p {
+  font-family: "Proxima-Nova-Regular";
+  font-size: #d8d8d8;
 }
 
 .project_banner_section1_item .column_text {
