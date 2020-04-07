@@ -3053,23 +3053,27 @@ html[lang="en-US"] .bottom-content-wrapper .one_fifth:nth-child(4) {
 }
 
 #footer_bottom .one_fifth:nth-child(1) {
-  margin-right: 151px;
+  margin-right: 148px;
 }
 
 #footer_bottom .one_fifth:nth-child(2) {
-  margin-right: 58px;
+  margin-right: 55px;
+}
+
+html[lang="ru-RU"] #footer_bottom .one_fifth:nth-child(1) {
+  margin-right: 148px;
 }
 
 html[lang="ru-RU"] #footer_bottom .one_fifth:nth-child(2) {
-  margin-right: 71px;
+  margin-right: 65px;
 }
 
 html[lang="en-US"] #footer_bottom .one_fifth:nth-child(1) {
-  margin-right: 151px;
+  margin-right: 149px;
 }
 
 html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
-  margin-right: 67px;
+  margin-right: 66px;
 }
 /*end bottom part of footer*/
 
