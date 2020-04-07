@@ -1341,6 +1341,7 @@ header#top-wrapper {
 ----------------------------------------------------------*/
 .friends-wrapper {
   border-right: 1px solid rgba(165, 165, 165, 0.25);
+  width: 45%;
 }
 
 .friends {
@@ -1377,7 +1378,7 @@ header#top-wrapper {
 
 .friends-slider,
 .friends-slider .slick-track {
-  width: 385px;
+  width: 420px;
 }
 /*Transform FRIENDS SLIDER to mobile version(information transforms into two rows)*/
 @media screen and (max-width: 1300px) {
@@ -4279,9 +4280,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   height: 255px !important;
 }
 
-.singl-project-top-part  .vc_gitem-row-position-top {
+/* .singl-project-top-part  .vc_gitem-row-position-top {
   background: rgba(0,0,0,.45);
-}
+} */
 
 .home-page-section6 .one-project-progress-wrapper .project-money-involved {
   position: relative;
@@ -4783,8 +4784,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 .project_banner_section1_item p {
-  font-family: "Proxima-Nova-Regular";
-  color: #d2d2d2;
+  font-family: "Proxima-Nova-Semibold";
+color: #d2d2d2;
   line-height: 20px;
 }
 
@@ -6584,17 +6585,22 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 /*shop page*/
 .woocommerce #main-content .shop-custom-wrapper ul.products {
-  width: 100%;
-  position: relative;
-  right: -20px;
+  position: static;
+  margin-right: -40px;
   margin-bottom: 14px;
+  width: auto;
+  justify-content: space-between;
+}
+
+.woocommerce #main-content .shop-custom-wrapper ul.products::before {
+  display: none;
 }
 
 .shop-custom-wrapper ul.products.columns-3 li.product {
-  max-width: 353px;
-  min-width: 260px;
+  min-width: 260px;x;
   width: calc((100% - 120px)/3);
   margin-right: 40px;
+  flex-grow: 1;
 }
 
 #main-content .shop-custom-wrapper .products {
@@ -6771,6 +6777,18 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 @media screen and (max-width: 700px) {
   #main-content .shop-custom-wrapper .shop-page-price-title {
     padding: 20px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .woocommerce #main-content .shop-custom-wrapper ul.products {
+    justify-content: center;
+  }
+
+  .shop-custom-wrapper ul.products.columns-3 li.product {
+    max-width: 353px;
+    width: 100%;
   }
 }
 
@@ -8055,7 +8073,7 @@ div.product form.cart {
 
 #main-content li.product .shop-page-price-title {
   padding: 27px 30px;
-  background:rgba(255,255,255,0.8);
+  /* background:rgba(255,255,255,0.8); */
   width: 100%;
 }
 
