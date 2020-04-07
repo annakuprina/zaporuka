@@ -69,7 +69,7 @@ select:-webkit-autofill:focus {
 #navigation-menu ul.sf-menu > li.current-menu-item > a > span,
 #navigation-menu ul.sf-menu > li.current_page_item > a > span {
   color: #e78b48 !important;
-  font-weight: 700 !important;
+  /* font-weight: 700 !important; */
 }
 #main-menu ul.sf-menu .pll-parent-menu-item > a > span {
   margin-left: 80px;
@@ -185,7 +185,7 @@ select:-webkit-autofill:focus {
 }
 #bottom a:hover {
   color: #e78b48 !important;
-  font-weight: bold !important;
+  /* font-weight: bold !important; */
 }
 #bottom .footer-social-link a:hover .fa,
 #bottom .footer-email-tel a:hover .fa {
