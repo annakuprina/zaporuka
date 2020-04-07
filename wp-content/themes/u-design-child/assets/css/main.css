@@ -3283,7 +3283,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   padding-bottom: 22px;
 }
 
-.home .help-form-inner-wrapper .help-form-email-tel,
+.home .help-form-inner-wrapper .help-form-email-tel {
+  padding-bottom: 25px;
+}
+
 .home .help-form-inner-wrapper .help-form-submit-oferta {
   padding-bottom: 15px;
 }
@@ -6330,10 +6333,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   display: none;
 }
 
-.reports-children-title > .wpb_wrapper {
+.reports-children-title .wpb_wrapper {
   display: flex;
   justify-content: space-between;
   padding-right: 15px;
+  flex-direction: row;
 }
 
 .reporting_section_tabs .list_reports_wrapper ul {
@@ -8533,3 +8537,5 @@ body.product ul.products {
     justify-content: flex-start;
   }
 }
+
+

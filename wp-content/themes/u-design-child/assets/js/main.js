@@ -416,4 +416,32 @@ jQuery(document).ready(function($) {
   //     $('.home-parnters-slider-mob').slick('reinit');
   //   }
   // }).resize();
+
+
+  var sliderNav = $('.water-slider');
+  itemsCount = sliderNav.children('div').length;//count the number of items
+  console.log(`${itemsCount}`)
+  if(itemsCount < 4) {//if number of items is less then 4, then make carousel with items in 1 slide
+    slidesToShow = itemsCount;
+    sliderNav.slick({
+      slidesToShow: slidesToShow,
+      slidesToScroll: 1,
+      swipeToSlide: true,
+      asNavFor: '.slider-for',
+      dots: true,
+      centerMode: false,
+      focusOnSelect: true
+    });
+  }
+  else {
+    sliderNav.slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        dots: true,
+        centerMode: false,
+        focusOnSelect: true
+    });
+  }
+
 });
