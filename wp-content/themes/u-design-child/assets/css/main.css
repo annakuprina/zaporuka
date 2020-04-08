@@ -154,7 +154,7 @@ body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
 }
 
 #main-menu #navigation-menu .pll-parent-menu-item > a > span {
-  margin-left: 67px;
+  margin-left: 102px;
 }
 
 #main-menu #navigation-menu .help-header-link {
@@ -505,14 +505,6 @@ header#top-wrapper {
     margin-left: 10px;
   }
 
-  body:not(.home) #main-menu #navigation-menu ul.sf-menu > li > a {
-    padding: 0 15px 0 0;
-  }
-
-  body:not(.home) #navigation-menu ul.sf-menu > li > a > span {
-    font-size: 13px;
-  }
-
   #menu-item-305 span {
     padding: 10px 0 10px 0px;
   }
@@ -535,9 +527,6 @@ header#top-wrapper {
     max-width: unset;
   }
 
-  #top-elements #main-menu ul.sf-menu .pll-parent-menu-item > a > span {
-    margin-left: 10px;
-  }
 
   #top-elements #navigation-menu #menu-item-305 {
     padding-left: 8px;
@@ -546,7 +535,7 @@ header#top-wrapper {
 
 @media screen and (max-width: 1024px) {
   #top-elements #main-menu ul.sf-menu .pll-parent-menu-item > a > span {
-    margin-left: 0;
+    margin-left: 40px;
   }
 }
 
