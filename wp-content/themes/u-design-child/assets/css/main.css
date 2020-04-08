@@ -3976,7 +3976,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   width: 58px;
   height: 3px;
   background-color: #e78b48;
-  left: -110px;
   position: absolute;
   top: 29px;
 }
@@ -4457,6 +4456,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   margin-top: 85px;
 
 }
+
+.home .home-page-section6-title .vc_column-inner {
+  padding-left: 0;
+}
+
 .home .home-page-section7-title {
   padding-top: 85px;
 }
