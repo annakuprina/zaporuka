@@ -709,6 +709,7 @@ header#top-wrapper {
 
 .project-partners-carousel .slick-slide img {
   max-width: 200px;
+  width: 100%
 }
 
 /* .project-partners-carousel .slick-track { 
@@ -2282,6 +2283,7 @@ header#top-wrapper {
   font-size: 20px;
   color: #333;
   line-height: 30px;
+  font-family: Raleway-Bold;
 }
 
 .child-name-and-age {
@@ -6308,10 +6310,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   REPORTS
 ----------*/
 .download_report_wrapper .report_download,
-.download_report_wrapper .report_download:hover,
 .download_report_wrapper .report_download:active,
 .download_report_wrapper .report_download:focus {
   color: #e78b48;
+}
+
+.download_report_wrapper .report_download:hover {
+  color: #fff;
 }
 
 .reporting_section_tabs .list_reports_wrapper {
