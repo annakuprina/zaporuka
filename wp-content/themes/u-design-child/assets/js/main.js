@@ -417,31 +417,30 @@ jQuery(document).ready(function($) {
   //   }
   // }).resize();
 
-
-  var sliderNav = $('.water-slider');
-  itemsCount = sliderNav.children('div').length;//count the number of items
-  console.log(`${itemsCount}`)
-  if(itemsCount < 4) {//if number of items is less then 4, then make carousel with items in 1 slide
-    slidesToShow = itemsCount;
-    sliderNav.slick({
-      slidesToShow: slidesToShow,
-      slidesToScroll: 1,
-      swipeToSlide: true,
-      asNavFor: '.slider-for',
-      dots: true,
-      centerMode: false,
-      focusOnSelect: true
-    });
-  }
-  else {
-    sliderNav.slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        swipeToSlide: true,
-        dots: true,
-        centerMode: false,
-        focusOnSelect: true
-    });
-  }
-
+var  maxItems = $(".partners-slider2").children('div').length;;
+if (maxItems > 4) {
+  maxItems = 4;
+}
+  $(".partners-slider2").slick({
+    slidesToShow: maxItems,
+    slidesToScroll: maxItems,
+    arrows: false,
+    dots: true,
+  });
 });
+
+
+// var sliderNav = $('.partners-slider2');
+// var maxItems = Math.round(sliderNav.parent('div').width() / 201);
+// if(sliderNav.children('div').length < maxItems) {
+//     maxItems = sliderNav.children('div').length;
+// }
+// sliderNav.slick({
+//     slidesToShow: maxItems,
+//     slidesToScroll: 1,
+//     swipeToSlide: true,
+//     asNavFor: '.slider-for',
+//     dots: true,
+//     centerMode: false,
+//     focusOnSelect: true
+// });`

@@ -1210,14 +1210,40 @@ get_header();
 
 
 
-<div class="water-slider">
-	<div class="water-slide">water-slide1</div>
-	<div class="water-slide">water-slide2</div>
-	<div class="water-slide">water-slide3</div>
+<div class="partners-slider2">
+	<!-- One slide -->
+	<div class="partners-slide">
+		slide 1
+	</div><!-- end one slide-->
 
-	<div class="water-slide">water-slide4</div>
-	<div class="water-slide">water-slide5</div>
-</div>
+	<!-- One slide -->
+	<div class="partners-slide">
+		slide 2
+	</div><!-- end one slide-->
+
+	<!-- One slide -->
+	<div class="partners-slide">
+		slide 3
+	</div><!-- end one slide-->
+
+	<!-- One slide -->
+	<div class="partners-slide">
+		slide 4
+	</div><!-- end one slide-->
+
+	<!-- One slide -->
+	<div class="partners-slide">
+		slide 5
+	</div><!-- end one slide-->
+
+	<!-- One slide -->
+	<div class="partners-slide">
+		slide 6
+	</div><!-- end one slide-->
+
+	
+	
+</div><!-- end partners slider-->
 <?php
 
 get_footer();
