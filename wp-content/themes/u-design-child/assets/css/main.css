@@ -701,8 +701,6 @@ header#top-wrapper {
   padding-left: 0;
   padding-right: 0;
   text-align: left;
-  display: block;
-  width: 200px;
 }
 
 .project-partners-carousel .vc_column_container > .vc_column-inner {
@@ -1980,10 +1978,6 @@ header#top-wrapper {
 
 .single-projects .block-project-partners {
   padding-top: 50px;
-}
-
-.single-projects .project-partners-carousel .wpb_wrapper {
-  display: flex;
 }
 
 .single-projects .project-partners-carousel .slick-slide .block-project-partners {
