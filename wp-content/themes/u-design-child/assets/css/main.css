@@ -1956,10 +1956,17 @@ header#top-wrapper {
   width: 200px;
 }
 
+.single-projects .project-partners-carousel .slick-track {
+  display: flex;
+}
+
+.single-projects .project-partners-carousel .slick-slide {
+  flex-grow: 1;
+}
+
 .single-projects .single_proj_block4 .h2-header-line {
   margin-bottom: 40px;
 }
-
 
 .single-projects .single-proj-news-section .h2-header-line {
   margin-bottom: 51px;
