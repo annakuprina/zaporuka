@@ -134,9 +134,6 @@ h2.h2-header-line::before {
 /*-------
   HEADER
 ---------*/
-body:not(.home) #main-menu #navigation-menu .pll-parent-menu-item > a > span {
-  margin-left: 0;
-}
 
 /*count of cart products(+3 for example) inside header navigation item "shop"*/
 #wrapper-1 #navigation-menu .cart-customlocation.cart-count {
