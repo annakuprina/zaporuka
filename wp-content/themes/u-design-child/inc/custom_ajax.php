@@ -112,10 +112,8 @@ if(!empty($_POST['show_children']) && $_POST['show_children'] == 'true'){
                         <div class="child-photo"><img src="<?php echo $thumbnail; ?>"></div>
                         <div class="child-info">
                             <p class="child-name-and-age">
-                                <span class="child-name"><?php echo $review_title; ?></span>
-                                <span>,</span>
-                                <span class="child-age"><?php echo $child_age; ?></span>
-                                <span>,</span>
+                                <span class="child-name"><?php echo $review_title; ?>, </span>
+                                <span class="child-age"><?php echo $child_age; ?>, </span>
                             </p>
                             <p class="child-region">
                                 <?php echo $region; ?>
