@@ -669,8 +669,8 @@ header#top-wrapper {
 
 /* ONE PROJECT PAGE*/
 
-/*Ome project page. Partners block.
-If number of partners is less them 5 - slick is not initialized("project-partners-carousel-not-initialized" class)*/
+/*One project page. Partners block.
+If number of partners is less then 5 - slick is not initialized("project-partners-carousel-not-initialized" class)*/
 .single-projects .project-partners-carousel-not-initialized .wpb_wrapper {
   display: flex;
   justify-content: flex-start;
@@ -726,6 +726,13 @@ If number of partners is less them 5 - slick is not initialized("project-partner
   margin-bottom: 0;
 }
 
+.single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .vc_grid-item:first-child {
+  padding-left: 0 !important;
+}
+/*end not initialized carousel styles(if number of parnters is less then 5.Check of partners number is inside main.js file)*/
+
+/*One project page. Partners block.
+If number of partners is more then 5 - slick is initialized("project-partners-carousel-initialized" class)*/
 .single-projects .project-partners-carousel-initialized .wpb_wrapper {
   display: flex;
   justify-content: space-between;
@@ -740,9 +747,21 @@ If number of partners is less them 5 - slick is not initialized("project-partner
   width: 900px;
 }
 
-.single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .vc_grid-item:first-child {
-  padding-left: 0 !important;
+.single-projects .project-partners-carousel-initialized .help_button_single_block {
+  padding-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
 }
+
+.single-projects .project-partners-carousel-initialized .vc_grid-item {
+  padding: 0 !important;
+}
+
+/*end initialized carousel styles(if number of parnters is more then 5).*/
+
+
+
 
 .single-proj-other-posts-section .other-projects-mob {
   display: none;
@@ -758,8 +777,8 @@ If number of partners is less them 5 - slick is not initialized("project-partner
   padding-right: 0;
 }
 
-.block-project-partners .slick-dots {
-  bottom: -21px;
+.single-projects .block-project-partners .slick-dots {
+  bottom: -50px;
 }
 
 .photo_video_block5 .proj-milestone-desc-block {
