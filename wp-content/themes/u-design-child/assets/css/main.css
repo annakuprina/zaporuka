@@ -770,6 +770,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 .single-projects .project-partners-carousel-wrapper {
   width: 100%;
   margin: 0;
+  padding-top: 20px;
 }
 
 .single-projects .project-partners-carousel-wrapper .vc_column_container > .vc_column-inner {
