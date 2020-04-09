@@ -729,7 +729,12 @@ If number of partners is less them 5 - slick is not initialized("project-partner
   display: none;
 }
 
-.project-partners-carousel-wrapper .vc_column_container > .vc_column-inner {
+.single-projects .project-partners-carousel-wrapper {
+  width: 100%;
+  margin: 0;
+}
+
+.single-projects .project-partners-carousel-wrapper .vc_column_container > .vc_column-inner {
   padding-left: 0;
   padding-right: 0;
 }
@@ -746,7 +751,6 @@ If number of partners is less them 5 - slick is not initialized("project-partner
   /* text-align: left; */
   text-align: right;
   padding-top: 15px;
-  margin-left: -4px !important;
 }
 
 .block-project-partners .h2-header-line {
