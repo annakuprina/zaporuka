@@ -8473,12 +8473,17 @@ body.product ul.products {
   background: transparent;
   border: 0;
   font-family: "Raleway-Regular";
+  margin-bottom: 60px;
 }
 
 .help-page-cancel-btn .vc_btn3:after {
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
   position: absolute;
   padding-left: 10px;
+}
+
+.help-page-cancel-title {
+  margin-bottom: 50px;
 }
 
 /*---------------------
