@@ -715,6 +715,7 @@ If number of partners is less them 5 - slick is not initialized("project-partner
 
 .single-projects .project-partners-carousel-not-initialized .wpb_single_image img {
   max-width: 270px;
+  min-width: 100px;
 }
 
 .single-projects .project-partners-carousel-not-initialized .vc_grid .vc_pageable-slide-wrapper {
@@ -725,6 +726,15 @@ If number of partners is less them 5 - slick is not initialized("project-partner
   margin-bottom: 0;
 }
 
+.single-projects .project-partners-carousel-initialized .wpb_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-projects .project-partners-carousel-initialized .slick-list,
+.single-projects .project-partners-carousel-initialized .slick-slider {
+  width: 1200px;
+}
 .single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .vc_grid-item:first-child {
   padding-left: 0 !important;
 }
