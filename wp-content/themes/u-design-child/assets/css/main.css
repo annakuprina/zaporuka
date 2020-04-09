@@ -716,6 +716,9 @@ If number of partners is less then 5 - slick is not initialized("project-partner
 .single-projects .project-partners-carousel-not-initialized .wpb_single_image img {
   max-width: 270px;
   min-width: 100px;
+  max-height: 180px;
+  height: auto;
+  width: auto;
 }
 
 .single-projects .project-partners-carousel-not-initialized .vc_grid .vc_pageable-slide-wrapper {
