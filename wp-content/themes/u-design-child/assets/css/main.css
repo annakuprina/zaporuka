@@ -720,6 +720,13 @@ If number of partners is less then 5 - slick is not initialized("project-partner
 
 .single-projects .project-partners-carousel-not-initialized .vc_grid .vc_pageable-slide-wrapper {
   margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-projects .project-partners-carousel-not-initialized .vc_grid .vc_pageable-slide-wrapper {
+  margin-right: 50px;
 }
 
 .single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .wpb_single_image {
