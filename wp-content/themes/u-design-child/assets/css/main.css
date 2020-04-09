@@ -668,6 +668,12 @@ header#top-wrapper {
 }
 
 /* ONE PROJECT PAGE*/
+
+.single-projects .project-partners-carousel-not-initialized .wpb_wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .single-proj-other-posts-section .other-projects-mob {
   display: none;
 }
