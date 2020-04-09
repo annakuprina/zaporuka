@@ -2159,7 +2159,7 @@ header#top-wrapper {
 
 .child-info {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
   color: #333;
   line-height: 30px;
   font-family: Raleway-Bold;
@@ -6197,6 +6197,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 .download_report_wrapper .report_download:hover {
+  color: #fff;
+}
+
+.download_report_wrapper > div:hover p.report_download {
   color: #fff;
 }
 
