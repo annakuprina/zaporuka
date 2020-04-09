@@ -667,42 +667,6 @@ function setup_framework_options(){
                 'std' => __('', 'nhp-opts'),
             ),
             array(
-                'id' => 'cancel_subscription_text_block_uk',
-                'type' => 'text',
-                'title' => __('текст ссылки "Отменить подписку" (ua)', 'nhp-opts'),
-                'std' => __('', 'nhp-opts'),
-            ),
-            array(
-                'id' => 'cancel_subscription_text_block_ru',
-                'type' => 'text',
-                'title' => __('текст ссылки "Отменить подписку" (ru)', 'nhp-opts'),
-                'std' => __('', 'nhp-opts'),
-            ),
-            array(
-                'id' => 'cancel_subscription_text_block_en',
-                'type' => 'text',
-                'title' => __('текст ссылки "Отменить подписку" (en)', 'nhp-opts'),
-                'std' => __('', 'nhp-opts'),
-            ),
-            array(
-                'id' => 'cancel_subscription_link_block_uk',
-                'type' => 'text',
-                'title' => __('ссылка "Отменить подписку" (ua)', 'nhp-opts'),
-                'std' => __('', 'nhp-opts'),
-            ),
-            array(
-                'id' => 'cancel_subscription_link_block_ru',
-                'type' => 'text',
-                'title' => __('ссылка "Отменить подписку" (ru)', 'nhp-opts'),
-                'std' => __('', 'nhp-opts'),
-            ),
-            array(
-                'id' => 'cancel_subscription_link_block_en',
-                'type' => 'text',
-                'title' => __('ссылка "Отменить подписку" (en)', 'nhp-opts'),
-                'std' => __('', 'nhp-opts'),
-            ),
-            array(
                 'id' => 'cancel_subscription_form',
                 'type' => 'info',
                 'desc' => __('Форма отмены подписки', 'nhp-opts')
