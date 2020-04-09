@@ -385,10 +385,13 @@ function shortcode_friends_volunteers(  ){
                     <?php
                     foreach( $friends_array_by_7 as $post_wrapper ){
                         echo '<div class="friends-slide">';
-                        foreach( $post_wrapper as $post ){ ?>
+                        foreach( $post_wrapper as $post ){
+                            $friends_link_title = get_post_meta($post->ID, 'title', true);
+                            $friends_link = get_post_meta($post->ID, 'link', true);
+                            ?>
                             <div class="friends-slide-row">
                                 <p class="friends-name"><?php echo $post->post_title;?></p>
-                                <a class="friends-link" href="<?php echo $post->post_content;?>"><?php echo $post->post_content;?></a>
+                                <a class="friends-link" href="<?php echo $friends_link;?>"><?php echo $friends_link_title;?></a>
                             </div>
                             <?php
                         }
