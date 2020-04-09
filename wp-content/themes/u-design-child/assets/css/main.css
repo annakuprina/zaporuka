@@ -1319,7 +1319,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 }
 
 .friends {
-  padding: 41px 40px 87px 40px;
+  padding: 40px 40px 87px 40px;
 }
 
 .friends-title {
@@ -1344,11 +1344,8 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 
 .friends-slider .slick-dots {
   position: absolute;
-  bottom: -74px;
+  bottom: -173px;
 }
-.friends-slider .slick-dots {
-
-} 
 
 .friends-slider,
 .friends-slider .slick-track {
@@ -4610,7 +4607,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 .home-parnters-slider .slick-dots { 
-  bottom: -82px;
+  bottom: -25px;
 }
 
 .home-parnters-img-wrapper {
@@ -4628,7 +4625,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 10px 20px;
+  padding: 10px 30px;
 }
 
 .home-parnters-img-wrapper img {
@@ -4636,7 +4633,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   width: auto;
   max-width: 100%;
   height: auto;
-
+  min-width: 100px;
 }
 
 .home-parnters-slider .home-parnters-one-slide {
