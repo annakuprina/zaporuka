@@ -731,10 +731,15 @@ If number of partners is less them 5 - slick is not initialized("project-partner
   justify-content: space-between;
 }
 
+.single-projects .project-partners-carousel-initialized .wpb_single_image .vc_figure {
+  justify-content: center;
+}
+
 .single-projects .project-partners-carousel-initialized .slick-list,
 .single-projects .project-partners-carousel-initialized .slick-slider {
   width: 900px;
 }
+
 .single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .vc_grid-item:first-child {
   padding-left: 0 !important;
 }
