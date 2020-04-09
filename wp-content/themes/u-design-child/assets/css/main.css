@@ -3235,16 +3235,19 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
 /* styles added to desrease the height of payment form on main page */
 .home .help-form-inner-wrapper {
-  padding: 25px 50px 27px 50px;
+  padding: 42px 50px 27px 50px;
 }
 
 .home .help-form-inner-wrapper .help-form-inner-title {
-  padding-bottom: 13px;
+  padding-bottom: 21px;
 }
 
-.home .help-form-inner-wrapper .help-form-amount,
+.home .help-form-inner-wrapper .help-form-amount {
+  padding-bottom: 23px;
+}
+
 .home .help-form-inner-wrapper .help-form-subscribe {
-  padding-bottom: 15px;
+  padding-bottom: 31px;
 }
 
 .home .help-form-inner-wrapper .help-form-text,
@@ -3253,7 +3256,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 .home .help-form-inner-wrapper .help-form-email-tel {
-  padding-bottom: 25px;
+  padding-bottom: 38px;
 }
 
 .home .help-form-inner-wrapper .help-form-submit-oferta {
