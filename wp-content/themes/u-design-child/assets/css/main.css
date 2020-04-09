@@ -1192,130 +1192,9 @@ header#top-wrapper {
   display: none;
 }
 
-/*------------------
-  PARTNERS SLIDER
--------------------*/
-.partners {
-  padding: 40px 40px 60px;
-  background: #fff;
-}
-
-.partners-slider {
-  width: 100%;
-}
-
-.partners-slider-mob {
-  display: none;
-}
-
-.partners-slider-mob .partners-slide {
-  display: flex;
-  flex-direction: column;
-}
-
-.partners-slider-mob .partners-slide-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 250px;
-  margin: auto;
-}
-
-.partners-slider-mob .partners-slide-item:nth-child(1) {
-  padding-bottom: 44px;
-}
-
-.partners-slider-mob .partners-slider-mob-img {
-  min-width: 120px;
-  margin-right: 17px;
-}
-
-.partners-slider-mob .partners-slider-mob-img img {
-  width: 100%;
-}
-
-.partners-slider-mob .partners-slide-text {
-  line-height: 23px;
-  margin-top: -4px;
-}
-
-.partners-slider .partners-slide {
-  display: flex !important;
-  align-items: center;
-}
-
-.styler-slide {
-  width: 110px;
-  height: auto;
-}
-
-.partners-slide img {
-  margin-right: 20px;
-  max-height: 90px;
-  max-width: 150px;
-}
-
-.partner-link,
-.partner-link:hover,
-.partner-link:active,
-.partner-link:focus {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #333;
-  position: relative;
-  /* right: 1px; */
-}
-
-.partners-slide-text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #333;
-  margin-top: -2px;
-}
-
-.dacha {
-  position: relative;
-  left: -1px;
-}
-
-.rbk-ukraine {
-  position: relative;
-  left: 3px;
-}
-
-/* the slides */
-.partners-slider .slick-slide {
-  margin: 0 20px;
-}
-/* the parent */
-.partners-slider .slick-list {
-  margin: 0 -20px;
-}
-
-@media screen and (max-width: 1024px) {
-  .partners {
-    padding: 20px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .partners-slider {
-    display: none;
-  }
-
-  .partners-slider-mob {
-    display: block;
-  }
-}
-
 
 /*FRIENDS AND VOLUNTEERS*/
-.volunteers {
-  padding: 40px;
-  width: 100%;
-}
+
 .friends-and-volunteers {
   display: flex;
   border-top: 1px solid rgba(165, 165, 165, 0.25);
@@ -2251,7 +2130,7 @@ header#top-wrapper {
 
 .child {
   background: #fff;
-  padding: 40px 40px;
+  padding: 25px;
   width: 353px;
   margin-bottom: 40px !important;
   min-height: 303px;
@@ -2270,7 +2149,7 @@ header#top-wrapper {
   height: 90px;
   min-width: 90px;
   min-height: 90px;
-  margin-right: 20px;
+  margin-right: 17px;
 }
 
 .child-photo img {
@@ -2280,7 +2159,7 @@ header#top-wrapper {
 
 .child-info {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   color: #333;
   line-height: 30px;
   font-family: Raleway-Bold;
@@ -2289,6 +2168,8 @@ header#top-wrapper {
 .child-name-and-age {
   color: #333;
   line-height: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .child-bottom {
@@ -4615,7 +4496,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 /*Partners slider homepage*/
 .home-parnters-slider {
   width: 500px;
-  margin-left: -33px;
+  /* margin-left: -33px; */
 }
 
 .home-parnters-title {
