@@ -6917,6 +6917,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 }
 
+/*MODAL "Help from header"*/
+#sendSmsModalfromHeader .opened .modal-dialog{
+  top: 50%;
+  transform: translateY(-50%);
+}
 /*----------
   404 PAGE
 -----------*/
