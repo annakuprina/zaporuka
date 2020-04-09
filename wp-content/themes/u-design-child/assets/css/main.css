@@ -718,6 +718,9 @@ If number of partners is less then 5 - slick is not initialized("project-partner
 .single-projects .project-partners-carousel-not-initialized .wpb_single_image img {
   max-width: 270px;
   min-width: 100px;
+  max-height: 180px;
+  height: auto;
+  width: auto;
 }
 
 .single-projects .project-partners-carousel-not-initialized .vc_grid .vc_pageable-slide-wrapper {
@@ -3251,7 +3254,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
 .home .help-form-inner-wrapper .help-form-text,
 .home .help-form-inner-wrapper .help-form-cancel-subscription-text a {
-  padding-bottom: 27px;
+  padding-bottom: 29px;
 }
 
 .home .help-form-inner-wrapper .help-form-email-tel {
