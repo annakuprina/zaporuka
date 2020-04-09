@@ -1343,7 +1343,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 
 .friends-slider .slick-dots {
   position: absolute;
-  bottom: -173px;
+  bottom: -145px;
 }
 
 .friends-slider,
@@ -4609,7 +4609,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 .home-parnters-slider .slick-dots { 
-  bottom: -40px;
+  bottom: -12px;
 }
 
 .home-parnters-img-wrapper {
