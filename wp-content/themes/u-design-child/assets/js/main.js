@@ -1,30 +1,4 @@
 jQuery(document).ready(function($) {
-  // PARTNERS SLIDER DESKTOP
-  $(".partners-slider").slick({
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 10000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-        }
-      }
-    ]
-  });
-
-  // PARTNERS SLIDER MOBILE
-  $(".partners-slider-mob").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-  });
-
 
 
   // Homepage. Parnters slider. Desktop
@@ -133,7 +107,6 @@ jQuery(document).ready(function($) {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: true
         }
       },
       {
@@ -272,6 +245,7 @@ jQuery(document).ready(function($) {
     ]
   });
 
+  // change arrow near language switcher in header menu
   $(".header-mob-lang-switcher").click(function() {
     $(".header-mob-lang").slideToggle();
     $(this)
@@ -279,6 +253,7 @@ jQuery(document).ready(function($) {
       .toggleClass("expand-button-opened");
   });
 
+  // 
   $(".header-mob-top").click(function() {
     $(".header-mob-bottom").slideToggle();
     $(".header-mob-logo img").toggleClass("active");
@@ -355,7 +330,6 @@ jQuery(document).ready(function($) {
     });
   };
   countProgress();
-  //setInterval(countProgress, 1000);
 
   /*Set orange background for news without pictures*/
   $(window).bind( 'grid:items:added', function(){
@@ -390,57 +364,58 @@ jQuery(document).ready(function($) {
     });
   });
 
-
-  
-  /*Homepage. Our partners and friends gallery(with links). Contains photo with different height.
-  Make slick slider change it's height that equals current active slide height.*/
-  function updatehHeightFriendsSlider() {
-    $('.friends-slider').find('.slick-list').height($('.friends-slider').find('.slick-slide.slick-active').height()); //count current active slide height.
-  }
-
-  $(".friends-slider .slick-dots li").each(function(index) {
-    $(this).click(function() { //by click on navigation dots
-      $('.friends-slider') = $(this);
-        setTimeout(updatehHeightFriendsSlider, 500); //change slider's height.
-    });
-  });
-
-
+ 
   /*initialize wow animations*/ 
   new WOW().init();
 
 
-  // $(window).on("resize", function() {
-  //   if ($('.home-parnters-slider-mob').css('display')=='block') {
-  //     console.log('mob version is visible');
-  //     $('.home-parnters-slider-mob').slick('reinit');
-  //   }
-  // }).resize();
 
-var  maxItems = $(".partners-slider2").children('div').length;;
-if (maxItems > 4) {
-  maxItems = 4;
-}
+
+  var  maxItems = $(".project-partners-carousel .vc_pageable-slide-wrapper").children('div').length;
+  console.log('items number=' + maxItems);
+  if (maxItems > 4) {
+    $('.project-partners-carousel').addClass('project-partners-carousel-initialized');
+
+    maxItems = 4;
+    $(".project-partners-carousel .vc_pageable-slide-wrapper").slick({
+      dots: true,
+      arrows: false,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
+        }
+      ]
+    });
+  }
+  else {
+    $('.project-partners-carousel').addClass('project-partners-carousel-not-initialized');
+
+  }
   $(".partners-slider2").slick({
     slidesToShow: maxItems,
     slidesToScroll: maxItems,
     arrows: false,
     dots: true,
   });
+
+
 });
 
 
-// var sliderNav = $('.partners-slider2');
-// var maxItems = Math.round(sliderNav.parent('div').width() / 201);
-// if(sliderNav.children('div').length < maxItems) {
-//     maxItems = sliderNav.children('div').length;
-// }
-// sliderNav.slick({
-//     slidesToShow: maxItems,
-//     slidesToScroll: 1,
-//     swipeToSlide: true,
-//     asNavFor: '.slider-for',
-//     dots: true,
-//     centerMode: false,
-//     focusOnSelect: true
-// });`
