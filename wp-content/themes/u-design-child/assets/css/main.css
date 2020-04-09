@@ -688,13 +688,13 @@ If number of partners is less them 5 - slick is not initialized("project-partner
 }
 
 .single-projects .project-partners-carousel-not-initialized  .help_button_single_block.vc_btn3-right {
-  padding: 0 0 0 10px;
-  margin: 0;
+  padding: 0;
+  margin-left: 50px !important;
   align-items: center;
 }
 
 .single-projects .project-partners-carousel-not-initialized  .vc_pageable-slide-wrapper {
-    margin-right: -30px; 
+  margin-right: 0; 
 }
 
 .single-projects .project-partners-carousel-not-initialized .help_button_single_block {
@@ -715,7 +715,7 @@ If number of partners is less them 5 - slick is not initialized("project-partner
 }
 
 .single-projects .project-partners-carousel-not-initialized .wpb_single_image img {
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .wpb_single_image {
