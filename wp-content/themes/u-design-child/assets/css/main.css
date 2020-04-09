@@ -669,6 +669,9 @@ header#top-wrapper {
 
 /* ONE PROJECT PAGE*/
 
+
+/*Ome project page. Partners block.
+If number of partners is less them 5 - slick is not initialized("project-partners-carousel-not-initialized" class)*/
 .single-projects .project-partners-carousel-not-initialized .wpb_wrapper {
   display: flex;
   justify-content: flex-start;
@@ -677,6 +680,10 @@ header#top-wrapper {
 .single-projects .project-partners-carousel-not-initialized .project-partners-wrapper {
   display: flex;
   justify-content: center;
+}
+
+.single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .vc_grid-item {
+  padding: 0;
 }
 
 .single-proj-other-posts-section .other-projects-mob {
