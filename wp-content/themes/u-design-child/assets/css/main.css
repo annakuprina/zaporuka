@@ -755,7 +755,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 }
 
 .single-projects .project-partners-carousel-initialized .vc_grid-item {
-  padding: 0 !important;
+  padding: 0 40px 0 0 !important;
 }
 
 /*end initialized carousel styles(if number of parnters is more then 5).*/
@@ -778,7 +778,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 }
 
 .single-projects .block-project-partners .slick-dots {
-  bottom: -50px;
+  bottom: -45px;
 }
 
 .photo_video_block5 .proj-milestone-desc-block {
