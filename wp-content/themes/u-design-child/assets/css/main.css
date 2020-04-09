@@ -725,6 +725,10 @@ If number of partners is less them 5 - slick is not initialized("project-partner
   margin-bottom: 0;
 }
 
+.single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .vc_grid-item:first-child {
+  padding-left: 0 !important;
+}
+
 .single-proj-other-posts-section .other-projects-mob {
   display: none;
 }
@@ -752,6 +756,7 @@ If number of partners is less them 5 - slick is not initialized("project-partner
   text-align: right;
   padding-top: 15px;
 }
+
 
 .block-project-partners .h2-header-line {
   margin-bottom: 54px;
