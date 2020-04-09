@@ -8465,7 +8465,7 @@ body.product ul.products {
 /*-----------
   HELP PAGE
 ------------*/
-.help-page-cancel-btn .vc_btn3 {
+.vc_column-inner .help-page-cancel-btn .vc_btn3 {
   color: #e78b48 !important;
   font-size: 14px;
   font-weight: 700;
@@ -8474,6 +8474,7 @@ body.product ul.products {
   border: 0;
   font-family: "Raleway-Regular";
   margin-bottom: 60px;
+  background-color: transparent !important;
 }
 
 .help-page-cancel-btn .vc_btn3:after {
