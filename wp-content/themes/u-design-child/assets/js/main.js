@@ -371,7 +371,8 @@ jQuery(document).ready(function($) {
 
 
 
-  var  maxItems = $(".partners-slider2").children('div').length;;
+  var  maxItems = $(".project-partners-carousel .vc_pageable-slide-wrapper").children('div').length;
+  console.log('items number=' + maxItems);
   if (maxItems > 4) {
     maxItems = 4;
   }
