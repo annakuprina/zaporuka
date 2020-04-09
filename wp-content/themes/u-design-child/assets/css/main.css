@@ -669,9 +669,8 @@ header#top-wrapper {
 
 /* ONE PROJECT PAGE*/
 
-
-/*Ome project page. Partners block.
-If number of partners is less them 5 - slick is not initialized("project-partners-carousel-not-initialized" class)*/
+/*One project page. Partners block.
+If number of partners is less then 5 - slick is not initialized("project-partners-carousel-not-initialized" class)*/
 .single-projects .project-partners-carousel-not-initialized .wpb_wrapper {
   display: flex;
   justify-content: flex-start;
@@ -683,20 +682,111 @@ If number of partners is less them 5 - slick is not initialized("project-partner
 }
 
 .single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .vc_grid-item {
-  padding: 0;
+  padding: 0 20px !important;
+  display: flex;
+  align-items: center;
 }
+
+.single-projects .project-partners-carousel-not-initialized  .help_button_single_block.vc_btn3-right {
+  padding: 0;
+  align-items: center;
+}
+
+.single-projects .project-partners-carousel-not-initialized  .vc_pageable-slide-wrapper {
+  margin-right: 0; 
+}
+
+.single-projects .project-partners-carousel-not-initialized .help_button_single_block {
+  padding-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.single-projects .project-partners-carousel-not-initialized  .help_button_single_block .vc_btn3 {
+  width: max-content;
+  display: block;
+  min-width: 150px;
+}
+
+.single-projects .project-partners-carousel-not-initialized .vc_col-sm-3 {
+  width: unset;
+}
+
+.single-projects .project-partners-carousel-not-initialized .wpb_single_image img {
+  max-width: 270px;
+  min-width: 100px;
+}
+
+.single-projects .project-partners-carousel-not-initialized .vc_grid .vc_pageable-slide-wrapper {
+  margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-projects .project-partners-carousel-not-initialized .vc_grid .vc_pageable-slide-wrapper {
+  margin-right: 50px;
+}
+
+.single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .wpb_single_image {
+  margin-bottom: 0;
+}
+
+.single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .vc_grid-item:first-child {
+  padding-left: 0 !important;
+}
+/*end not initialized carousel styles(if number of parnters is less then 5.Check of partners number is inside main.js file)*/
+
+/*One project page. Partners block.
+If number of partners is more then 5 - slick is initialized("project-partners-carousel-initialized" class)*/
+.single-projects .project-partners-carousel-initialized .wpb_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-projects .project-partners-carousel-initialized .wpb_single_image .vc_figure {
+  justify-content: center;
+}
+
+.single-projects .project-partners-carousel-initialized .slick-list,
+.single-projects .project-partners-carousel-initialized .slick-slider {
+  width: 900px;
+}
+
+.single-projects .project-partners-carousel-initialized .help_button_single_block {
+  padding-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.single-projects .project-partners-carousel-initialized .vc_grid-item {
+  padding: 0 40px 0 0 !important;
+}
+
+/*end initialized carousel styles(if number of parnters is more then 5).*/
+
+
+
 
 .single-proj-other-posts-section .other-projects-mob {
   display: none;
 }
 
-.project-partners-carousel-wrapper .vc_column_container > .vc_column-inner {
+.single-projects .project-partners-carousel-wrapper {
+  width: 100%;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.single-projects .project-partners-carousel-wrapper .vc_column_container > .vc_column-inner {
   padding-left: 0;
   padding-right: 0;
 }
 
-.block-project-partners .slick-dots {
-  bottom: -21px;
+.single-projects .block-project-partners .slick-dots {
+  bottom: -45px;
 }
 
 .photo_video_block5 .proj-milestone-desc-block {
@@ -707,8 +797,8 @@ If number of partners is less them 5 - slick is not initialized("project-partner
   /* text-align: left; */
   text-align: right;
   padding-top: 15px;
-  margin-left: -4px !important;
 }
+
 
 .block-project-partners .h2-header-line {
   margin-bottom: 54px;
@@ -1880,10 +1970,6 @@ If number of partners is less them 5 - slick is not initialized("project-partner
 
 .single-projects .project-partners-carousel .slick-slide .block-project-partners {
   margin-bottom: 0;
-}
-
-.single-projects .project-partners-carousel-wrapper .help_button_single_block {
-  padding-top: 41px;
 }
 
 .single-projects .single-proj-news-section {
@@ -3851,6 +3937,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
 #main-content .home-page-section3 {
   margin-top: 120px;
+  width: 100%;
 }
 
 .home-page-section3 .h2-header-line {
@@ -4354,6 +4441,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 .home-page-section7 .vc_pageable-slide-wrapper {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .home-page-section7 .section-news-desk {
@@ -4533,9 +4621,22 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   align-items: center;
 }
 
+.home-parnters-img-wrapper a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+}
+
 .home-parnters-img-wrapper img {
-  min-width: 100px;
-  max-width: 180px;
+  display: flex;
+  width: 50%;
+  height: 120px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-parnters-slider .home-parnters-one-slide {
