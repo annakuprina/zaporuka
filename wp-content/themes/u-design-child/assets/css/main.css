@@ -7496,7 +7496,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-top: 12px;
 }
 
+/*remove horizontall scrool on mab and padding*/
 #wrapper-1 .write-aboutus-wrapper {
+  width: 100%;
   padding-top: 74px;
 }
 
