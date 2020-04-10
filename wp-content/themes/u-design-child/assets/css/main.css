@@ -7484,7 +7484,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 
 /*remove horizontall scrool on mab*/
-#our_team .aboutus_section3 {
+#our_team.aboutus_section3 {
   width: 100%;
 }
 
