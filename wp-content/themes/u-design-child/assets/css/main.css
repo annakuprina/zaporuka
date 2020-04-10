@@ -7482,9 +7482,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin: auto;
 }
 
-/* #wrapper-1 .write-aboutus-carousel-mob-wrapper {
-  display: none;
-} */
+
+/*remove horizontall scrool on mab*/
+#our_team .aboutus_section3 {
+  width: 100%;
+}
 
 .about_section4 .wpb_wrapper p {
   line-height: 26px;
@@ -7498,6 +7500,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-top: 74px;
 }
 
+/*remove horizontall scrool on mab*/
+#wrapper-1  .aboutus-page--write-aboutus {
+  width: 100%;
+}
 /*documents block*/
 #page-content .fund-documents-wrapper .document-title {
   margin-bottom: 20px;
