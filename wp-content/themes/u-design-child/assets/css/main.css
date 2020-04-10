@@ -3940,6 +3940,13 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 #main-content .home-page-section3 {
   margin-top: 120px;
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#main-content .home-page-section3 .vc_column-inner {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .home-page-section3 .h2-header-line {
@@ -4438,6 +4445,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
 .home .home-page-section7-title {
   padding-top: 85px;
+}
+
+.home .home-page-section7-title .vc_column-inner {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /*remove horizontall scrool on mab and padding*/
