@@ -7486,6 +7486,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*remove horizontall scrool on mab*/
 #our_team.aboutus_section3 {
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#our_team.aboutus_section3 .vc_column_container>.vc_column-inner {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .about_section4 .wpb_wrapper p {
@@ -7502,11 +7509,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-left: 0;
   margin-right: 0;
   padding-top: 74px;
-}
-
-#wrapper-1 .write-aboutus-wrapper .vc_column_container>.vc_column-inner {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 /*remove horizontall scrool on mab*/
