@@ -21,9 +21,9 @@ select:-webkit-autofill:focus {
 #custom-top-bar div a {
   font-family: "Proxima-Nova-Regular" !important;
 }
-.home .help-header-link {
-  display: none;
-}
+/*.home .help-header-link {*/
+/*  display: none;*/
+/*}*/
 .home #navigation-menu ul.sf-arrows > li > a.sf-with-ul {
   padding: 0 15px 0 0;
 }
