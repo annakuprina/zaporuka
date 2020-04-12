@@ -181,6 +181,9 @@ jQuery(document).ready(function($) {
     ]
   });
 
+  // console.log($('.rewards-desktop .slick-active').eq(0).text());
+  // $('.rewards-desktop .slick-active').eq(0).css('margin-right','4px');
+
   //RELATED PRODUCTS SLIDER (single product page)
   $(".single-product ul.products").slick({
     dots: true,

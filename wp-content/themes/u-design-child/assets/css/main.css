@@ -3581,10 +3581,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   height: 359px;
 }
 
-.home .home-page-section2 .section2-image img {
-  max-width: 380px;
-}
-
 .home-page-section2 .vc_column_container>.vc_column-inner {
   padding-left: 0;
   padding-right: 0;
@@ -3626,14 +3622,14 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 
   .home-page-section2 .vc_custom_1579168278861 {
-    max-width: 900px;
+    padding: 0 20px;
     margin: 0 auto !important;
     display: flex;
     align-items: stretch;
   }
 
   .home-page-section2 .section2-columns {
-    max-width: 900px;
+    padding: 0 20px;
   }
 
   #content-container .home-page-section2 .section2-text p {
@@ -3642,14 +3638,14 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
     line-height: 30px;
   }
 
-  #main-content .home-page-section2 .section2-columns .section2-single-column,
+  /* #main-content .home-page-section2 .section2-columns .section2-single-column,
   #main-content
     .home-page-section2
     .section2-columns
     .section2-single-column:hover {
     padding: 20px 30px;
     height: 190px;
-  }
+  } */
 
   .section2-columns {
     max-width: 900px;
@@ -3683,7 +3679,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 
   #main-content .vc_custom_1579168278861 .section2-text-wrapper {
-    width: calc(100% - 301px);
+    width: 33%;
   }
 }
 
@@ -3911,6 +3907,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   font-family: "Raleway-Medium";
 }
 
+/* .rewards-desktop .slick-active { */
+  /* margin-right: 20px;
+} */
+
 .rewards-desktop .rewards-one-item {
   margin: 0 50px;
 }
@@ -3942,6 +3942,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
+  overflow: hidden;
 }
 
 #main-content .home-page-section3 .vc_column-inner {
@@ -4279,6 +4280,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 /*---------------------
   HOME PAGE SECTION 6
 ----------------------*/
+.home .home-page-section6 {
+  overflow: hidden;
+}
+
 .home-page-section6 .vc_column-inner {
   padding-left: 0;
   padding-right: 0;
