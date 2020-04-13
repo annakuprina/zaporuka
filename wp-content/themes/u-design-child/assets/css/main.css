@@ -1383,7 +1383,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   }
 }
 
-@media screen and (max-width: 1300px) {
+/* @media screen and (max-width: 1300px) {
   .friends-wrapper {
     width: 50%;
     padding-bottom: 50px;
@@ -1392,7 +1392,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   .friends {
     padding: 40px 40px 0 40px;
   }
-}
+} */
 
 @media screen and (max-width: 750px) {
   .friends {
@@ -3829,15 +3829,14 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 }
 
-@media screen and (max-width: 650px) {
+
+@media screen and (max-width: 500px) {
   #content-container .home-page-section2 .section2-text p {
     font-size: 14px;
     line-height: 24px;
     padding-top: 41px;
   }
-}
 
-@media screen and (max-width: 500px) {
   #main-content
   .home-page-section2
   .section2-columns
