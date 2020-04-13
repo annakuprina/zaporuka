@@ -4731,7 +4731,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 ----------------------*/
 .home-parnters {
   padding: 40px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 /*Partners slider homepage*/
@@ -4803,13 +4803,21 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 @media screen and (max-width: 1300px) {
   .home-parnters-title {
     margin-bottom: 4px;
+    padding: 40px 40px 0 40px;
   }
 
-  .home-parnters-slider .slick-dots { 
-    bottom: -120px;
+  .home-parnters-slider {
+    margin: auto;
   }
 }
+@media screen and (max-width: 1100px) {
+  
+  .friends-slider,
+  .friends-slider .slick-track {
+    width: unset;
+  }
 
+}
 @media screen and (max-width: 1024px) {
   .home-parnters-slider-mob {
     display: block;
