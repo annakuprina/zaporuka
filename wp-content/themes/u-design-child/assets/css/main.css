@@ -1355,7 +1355,16 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 }
 /*Transform FRIENDS SLIDER to mobile version(information transforms into two rows)*/
 @media screen and (max-width: 1300px) {
-  .friends-slider,
+
+  .friends-wrapper {
+    width: 45%;
+  }
+
+  .home-parnters {
+    width: 55%;
+  }
+
+  /* .friends-slider,
   .friends-slider .slick-track {
     width: 249px;
   }
@@ -1380,7 +1389,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   .friends-slider .slick-dots {
     position: absolute;
     bottom: -56px;
-  }
+  } */
 }
 
 /* @media screen and (max-width: 1300px) {
