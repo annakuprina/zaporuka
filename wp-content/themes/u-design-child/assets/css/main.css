@@ -1410,54 +1410,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 }
 
 @media screen and (max-width: 650px) {
-  .friends-and-volunteers {
-    border-bottom: 1px solid rgba(165, 165, 165, 0.25);
-  }
-
-  .friends-wrapper {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid rgba(165, 165, 165, 0.25);
-    display: flex;
-    justify-content: center;
-    padding-bottom: 56px;
-  }
-
-  .friends {
-    width: 290px;
-    padding: 40px 20px 0 20px;
-  }
-
-  .friends-and-volunteers {
-    margin-bottom: 36px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .friends-title{
-    font-size: 18px;
-  }
-
-  .friends-title {
-    margin-bottom: 18px;
-  }
-
-  .friends-slider.slick-slider {
-    margin-bottom: 22px;
-  }
-
-
-  .home-page-section8-inner.vc_custom_1579510775987 {
-    margin-bottom: 58px;
-  }
-
-  #main-content .vc_custom_1579168278861 .vc_column_container:nth-child(1) {
-    max-width: 100% !important;
-  }
-
-  #main-content .vc_custom_1579507340150 {
-    margin-bottom: 38px;
-  }
+ 
 }
 
 /*BANNER FOR ONE PROJECT PAGE*/
@@ -2446,7 +2399,35 @@ and shows hidden orange lines near titles on About us page*/
 #wrapper-1 .help-form-inner-wrapper .help-form-oferta label:not(.error) {
   padding-left: 24px;
   margin-right: -7px;
-  
+}
+
+.help .help-form-subscribe .pay_label {
+  color: rgba(86, 86, 86, 0.8);
+}
+
+.help .help-form-inner-wrapper .help-form-text, .help-form-inner-wrapper .help-form-cancel-subscription-text a {
+  color: rgba(86, 86, 86, 0.8);
+}
+
+.help .help-form-inner-wrapper .help-form-oferta label:not(.error) {
+  color: rgba(86, 86, 86, 0.8);
+}
+
+.help .help-form-inner-wrapper .help-form-amount-right .amount-button {
+  color: rgba(86, 86, 86, 0.8);
+}
+
+.help .help-form-inner-wrapper .help-form-oferta label a {
+  color: rgba(86, 86, 86, 0.8);
+}
+
+.help .help-form-inner-wrapper .help-form-amount-right .amount-button {
+  border-right: 1px solid #eaeaea;
+}
+
+.help .help-form-inner-wrapper .textarea-small,
+.help .help-form-inner-wrapper .textarea-full {
+  color: rgba(86, 86, 86, 0.8);
 }
 
 .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
@@ -4809,6 +4790,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   .home-parnters-slider {
     margin: auto;
   }
+
+  .home-parnters {
+    padding: 0;
+  }
+
+
 }
 @media screen and (max-width: 1100px) {
   
@@ -4817,6 +4804,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
     width: unset;
   }
 
+  .friends-slide-row {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .home-parnters-slider-mob {
@@ -4837,6 +4828,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   .home-parnters {
     padding: 20px;
   }
+
+  .home-parnters-title {
+    padding: 40px 40px 0 40px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -4847,6 +4842,59 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   .home-parnters-slider-mob .slick-dots {
     bottom: -40px;
   }
+
+  .friends-and-volunteers {
+    border-bottom: 1px solid rgba(165, 165, 165, 0.25);
+  }
+
+  .friends-wrapper {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(165, 165, 165, 0.25);
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 56px;
+  }
+
+  .friends {
+    width: unset;
+    padding: 40px;
+  }
+
+  .friends-and-volunteers {
+    margin-bottom: 36px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .friends-title{
+    font-size: 18px;
+  }
+
+  .friends-title {
+    margin-bottom: 18px;
+  }
+
+  .friends-slider.slick-slider {
+    margin-bottom: 22px;
+  }
+
+  .home-parnters {
+    width: 100%;
+  }
+
+  .home-page-section8-inner.vc_custom_1579510775987 {
+    margin-bottom: 58px;
+  }
+
+  #main-content .vc_custom_1579168278861 .vc_column_container:nth-child(1) {
+    max-width: 100% !important;
+  }
+
+  #main-content .vc_custom_1579507340150 {
+    margin-bottom: 38px;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
