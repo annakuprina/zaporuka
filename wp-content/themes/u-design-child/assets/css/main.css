@@ -2400,6 +2400,9 @@ and shows hidden orange lines near titles on About us page*/
   padding-left: 24px;
   margin-right: -7px;
 }
+.help_form_wrapper .help-form-inner-wrapper .help-form-amount-right .amount-button:not(:last-child) {
+  border-right: 1px solid #eaeaea;
+}
 
 .help_form_wrapper .help-form-subscribe .pay_label {
   color: rgba(86, 86, 86, 0.8);
@@ -2421,9 +2424,6 @@ and shows hidden orange lines near titles on About us page*/
   color: rgba(86, 86, 86, 0.8);
 }
 
-.help_form_wrapper .help-form-inner-wrapper .help-form-amount-right .amount-button {
-  border-right: 1px solid #eaeaea;
-}
 
 .help_form_wrapper .help-form-inner-wrapper .textarea-small,
 .help_form_wrapper .help-form-inner-wrapper .textarea-full {
@@ -2433,21 +2433,21 @@ and shows hidden orange lines near titles on About us page*/
 .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email input::-webkit-input-placeholder,
 .help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel input::-webkit-input-placeholder,
 .help-form-inner-wrapper .help-form-PIB input::-webkit-input-placeholder,
-.help-form-amount-left input::-webkit-input-placeholder { /* Edge */
+.help-form-inner-wrapper .help-form-amount-left input::-webkit-input-placeholder { /* Edge */
   color: rgba(86, 86, 86, 0.8);
 }
 
 .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email input::-ms-input-placeholder,
 .help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel input::-ms-input-placeholder,
 .help-form-inner-wrapper .help-form-PIB input::-webkit-input-placeholder,
-.help-form-amount-left input::-webkit-input-placeholder { /* Edge */
+.help-form-inner-wrapper .help-form-amount-left input::-webkit-input-placeholder { /* Edge */
   color: rgba(86, 86, 86, 0.8);
 }
 
 .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email input::placeholder,
 .help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel input::placeholder,
 .help-form-inner-wrapper .help-form-PIB input::-webkit-input-placeholder,
-.help-form-amount-left input::-webkit-input-placeholder { /* Edge */
+.help-form-inner-wrapper .help-form-amount-left input::-webkit-input-placeholder { /* Edge */
   color: rgba(86, 86, 86, 0.8);
 }
 
