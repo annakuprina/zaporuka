@@ -3683,12 +3683,15 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 @media screen and (max-width: 1024px) {
+
   #content-container .home-page-section2 .section2-text {
     margin-bottom: 0;
+    overflow-y: scroll;
+    max-height: 315px;
   }
 
   #content-container .home-page-section2 .section2-text p {
-    padding: 20px 20px 20px 30px;
+    padding: 20px 20px 5px 30px;
     font-size: 16px;
     line-height: 26px;
   }
@@ -3720,7 +3723,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
   .home-page-section2 .section2-text-wrapper .vc_btn3 {
     display: block;
-    padding: 15px 30px;
+    padding: 10px 30px;
   }
 
   .section2-columns {
@@ -3769,6 +3772,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 @media screen and (max-width: 800px) {
+  #content-container .home-page-section2 .section2-text {
+    overflow-y: visible;
+    max-height: unset;
+  }
+
   .vc_custom_1579168278861 {
     flex-direction: column;
   }
@@ -3805,11 +3813,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 
   #content-container .home-page-section2 .section2-text p {
-    padding: 20px;
+    padding: 30px;
   }
 
   .home-page-section2 .section2-text-wrapper .vc_btn3 {
-    padding: 20px;
+    padding: 20px 30px;
   }
 }
 
