@@ -161,7 +161,7 @@ jQuery(document).ready(function($) {
   jQuery.validator.addMethod(
     "phonesymbols",
     function(value, element) {
-      return this.optional(element) || /^[+\d{10,15})]+$/i.test(value);
+      return this.optional(element) || /^\+?([0-9]{15})+$/i.test(value);
     },
     'Please type only numbers and "+" symbol'
   );
