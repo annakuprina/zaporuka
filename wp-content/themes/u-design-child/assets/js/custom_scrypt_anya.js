@@ -147,12 +147,23 @@ jQuery(document).ready(function($) {
   });
 
   //help form validation
+
+  //letters validation 
   jQuery.validator.addMethod(
     "lettersonly",
     function(value, element) {
-      return this.optional(element) || /^[a-zA-Z|а-яА-Я|\s]+$/i.test(value);
+      return this.optional(element) || /^[a-zA-Z|а-щА-ЩЬьЮюЯяЇїІіЄєҐґ|а-яА-Я|\s]+$/i.test(value);
     },
     "Letters only please"
+  );
+
+  //phone validation 
+  jQuery.validator.addMethod(
+    "phonesymbols",
+    function(value, element) {
+      return this.optional(element) || /^[+\d{10,15})]+$/i.test(value);
+    },
+    'Please type only numbers and "+" symbol'
   );
 
   var lang = jQuery(".lang-item.current-lang a")[0].getAttribute("lang");
@@ -228,7 +239,7 @@ jQuery(document).ready(function($) {
       },
       phone: {
         required: true,
-        digits: true
+        phonesymbols: true
       },
       oferta: {
         required: true
