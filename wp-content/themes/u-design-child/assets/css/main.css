@@ -142,8 +142,9 @@ h2.h2-header-line::before {
 
 @media screen and (max-width: 500px) {
   h2.h2-header-line::before {
-    width: 20px;
-    left: 0;
+    width: 23px;
+    left: -16px;
+    top: 14px;
   }
   h2.h2-header-line {
     padding-left: 21px;
@@ -3819,11 +3820,16 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 }
 
-
 @media screen and (max-width: 768px) {
   #main-content .home-page-section2 .section2-columns .section2-single-column,
   #main-content .home-page-section2 .section2-columns .section2-single-column:hover {
     height: unset;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home-page-section2-title h2 {
+    width: 375px;
   }
 }
 
