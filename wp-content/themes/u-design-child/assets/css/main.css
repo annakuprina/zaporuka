@@ -106,6 +106,13 @@ h2.h2-header-line::before {
   top: 28px;
 }
 
+@media screen and (max-width: 1400px) {
+  h2.h2-header-line::before {
+    width: 35px;
+    left: -55px;
+  }
+}
+
 /*media for h2 title(with left orange line)*/
 @media screen and (max-width: 1250px) {
   h2.h2-header-line::before {
@@ -3580,11 +3587,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 #main-content .vc_custom_1579168278861 .vc_column_container:nth-child(1) {
-  width: 33%;
+  width: 33.3333%;
 }
 
 #main-content .vc_custom_1579168278861 .section2-text-wrapper {
-  width: 67%;
+  width: 66.66666%;
 }
 
 .home-page-section2 .wpb_column {
