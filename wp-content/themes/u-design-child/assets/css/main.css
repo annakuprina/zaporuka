@@ -2933,9 +2933,13 @@ footer .footer-mob a.designer-link {
   margin-right: 115px;
 }
 
+
+
 .bottom-content-wrapper .one_fifth:nth-child(2) {
   margin-right: 115px;
 }
+
+
 
 .bottom-content-wrapper .one_fifth:nth-child(3) {
   margin-right: 120px;
@@ -2953,7 +2957,13 @@ html[lang="en-US"] .bottom-content-wrapper .one_fifth:nth-child(4) {
   margin-right: 97px;
 }
 
+html[lang="en-US"] .bottom-content-wrapper .one_fifth:nth-child(1) {
+  margin-right: 95px;
+}
 
+html[lang="en-US"] .bottom-content-wrapper .one_fifth:nth-child(2) {
+  margin-right: 99px;
+}
 
 #bottom .bottom-content-wrapper .footer-tel .fa {
   font-size: 12px;
@@ -3040,8 +3050,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 
   #footer_bottom .one_fifth {
-    width: unset;
-    margin-right: 10px !important;
+    width: unset;2952
+    /* margin-right: 10px !important; */
   }
 
   #footer_bottom .one_fifth:nth-child(5),
@@ -3577,6 +3587,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   width: 67%;
 }
 
+.home-page-section2 .wpb_column {
+  overflow: hidden;
+}
+
 /*media for home-page-section2*/
 @media screen and (max-width: 1250px) {
   .vc_custom_1579168014403.section2-text {
@@ -3972,6 +3986,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
+}
+
+#main-content .home-page-section3 .wpb_text_column {
   overflow: hidden;
 }
 
@@ -3986,7 +4003,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
 .home-page-section3 .h2-header-line::before {
   content: "";
-  width: 58px;
   height: 3px;
   background-color: #e78b48;
   position: absolute;
@@ -4840,6 +4856,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
     padding-right: 20px !important;
     padding-left: 20px !important;
   }
+
 }
 
 
