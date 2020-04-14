@@ -1353,65 +1353,8 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 .friends-slider .slick-track {
   width: 420px;
 }
-/*Transform FRIENDS SLIDER to mobile version(information transforms into two rows)*/
-@media screen and (max-width: 1300px) {
 
-  .friends-wrapper {
-    width: 45%;
-  }
 
-  .home-parnters {
-    width: 55%;
-  }
-
-  /* .friends-slider,
-  .friends-slider .slick-track {
-    width: 249px;
-  }
-
-  .friends-slide-row {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 11px;
-  }
-
-  .friends-link {
-    color: #333333;
-    font-size: 13px;
-    letter-spacing: 0.1px;
-  }
-
-  .friends-name {
-    font-size: 14px;
-    margin-bottom: -1px;
-  }
-
-  .friends-slider .slick-dots {
-    position: absolute;
-    bottom: -56px;
-  } */
-}
-
-/* @media screen and (max-width: 1300px) {
-  .friends-wrapper {
-    width: 50%;
-    padding-bottom: 50px;
-  }
-
-  .friends {
-    padding: 40px 40px 0 40px;
-  }
-} */
-
-@media screen and (max-width: 750px) {
-  .friends {
-    padding: 20px 20px 0 20px;
-  }
-}
-
-@media screen and (max-width: 650px) {
- 
-}
 
 /*BANNER FOR ONE PROJECT PAGE*/
 .container_24-project-page {
@@ -4827,8 +4770,13 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
   .home-parnters {
     padding: 0;
+    width: 55%;
   }
 
+  .friends-wrapper {
+    width: 45%;
+    min-width: 460px;
+  }
 
 }
 @media screen and (max-width: 1100px) {
@@ -4841,6 +4789,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   .friends-slide-row {
     margin-bottom: 8px;
     font-size: 15px;
+  }
+
+  .friends-slider .slick-dots {
+    bottom: -169px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -4855,6 +4807,14 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   .home-parnters-slider-mob .slick-dots {
     bottom: -78px;
   }
+
+  .friends-slider .slick-dots {
+    bottom: -123px;
+  }
+  
+  .friends {
+    padding: 40px 40px 145px 40px;
+  }
 }
 
 
@@ -4864,17 +4824,41 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 
   .home-parnters-title {
-    padding: 40px 40px 0 40px;
+    padding: 20px 0 0 0;
+  }
+  .friends {
+    padding: 40px 20px 0 20px;
+  }
+  .home-page-section8-inner .strategic-partner-title,
+  .home-page-section8-inner .wpb_single_image,
+  .home-page-section8-inner .strategic-partner-text {
+    padding-top: 40px !important;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
   }
 }
 
 @media screen and (max-width: 650px) {
   .home-parnters {
-    padding: 20px 20px 21px 20px;
+    padding: 40px 20px 78px 20px;
+  }
+
+  .home-parnters-title {
+    font-size: 18px;
+  }
+
+  .friends-slider .slick-dots {
+    bottom: -52px;
+  }
+
+
+
+  .strategic-partner-title h3 {
+    font-size: 18px;
   }
 
   .home-parnters-slider-mob .slick-dots {
-    bottom: -66px;
+    bottom: -75px;
   }
 
   .friends-and-volunteers {
@@ -4887,12 +4871,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
     border-bottom: 1px solid rgba(165, 165, 165, 0.25);
     display: flex;
     justify-content: flex-start;
-    padding-bottom: 56px;
+    padding-bottom: 24px;
   }
 
   .friends {
     width: 100%;
-    padding: 20px;
+    padding: 40px 20px 20px 20px;
   }
 
   .friends-and-volunteers {
@@ -4927,7 +4911,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
   .home .home-parnters-title {
     padding: 0;
+    font-size: 18px;
   }
+
+
 }
 
 @media screen and (max-width: 500px) {

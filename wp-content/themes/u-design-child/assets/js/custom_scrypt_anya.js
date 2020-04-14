@@ -161,7 +161,8 @@ jQuery(document).ready(function($) {
   jQuery.validator.addMethod(
     "phonesymbols",
     function(value, element) {
-      return this.optional(element) || /^\+?([0-9]{15})+$/i.test(value);
+      // return this.optional(element) || ([\d]{5,10} + $/i.test(value);
+      return this.optional(element) || /^[+]?[0-9\d]+$/i.test(value);
     },
     'Please type only numbers and "+" symbol'
   );
@@ -186,7 +187,7 @@ jQuery(document).ready(function($) {
     message_fio_not_text = "Введіть, будь ласка, тільки текст";
     message_mail_required = "Введіть, будь ласка, emai";
     message_phone_required = "Введіть, будь ласка, номер телефону";
-    message_phone_only_number = "Введіть, будь ласка, тільки цифри";
+    message_phone_only_number = "Перевірте, будь ласка,  корректність номеру";
     message_oferta_required = "Погодьтесь, будь ласка, з офертою";
     onetime_project_label = "Одноразове перерахування коштів на проект ";
     subscribe_project_label = "Щомісячне перерахування коштів на проект ";
@@ -199,7 +200,7 @@ jQuery(document).ready(function($) {
     message_fio_not_text = "Введите, пожалуйста, только текст";
     message_mail_required = "Введите, пожалуйста, email";
     message_phone_required = "Введите, пожалуйста, номер телефона";
-    message_phone_only_number = "Введите, пожалуйста, только цифры";
+    message_phone_only_number = "Проверьте, пожалуйста, корректность номера";
     message_oferta_required = "Согласитесь, пожалуйста, с офертой";
     onetime_project_label = "Единоразовое перечисление средств на проект ";
     subscribe_project_label = "Ежемесячное перечисление средств на проект ";
@@ -212,7 +213,7 @@ jQuery(document).ready(function($) {
     message_fio_not_text = "Please enter only text";
     message_mail_required = "Please enter email";
     message_phone_required = "Please enter your phone number";
-    message_phone_only_number = "Please enter only numbers";
+    message_phone_only_number = "Please check the correctness of the number";
     message_oferta_required = "Please agree with the offer";
     onetime_project_label = "One-time transfer of funds for the project ";
     subscribe_project_label = "Monthly transfer of funds for the project ";
@@ -260,7 +261,7 @@ jQuery(document).ready(function($) {
       },
       phone: {
         required: message_phone_required,
-        digits: message_phone_only_number
+        phonesymbols: message_phone_only_number
       },
       oferta: {
         required: message_oferta_required
@@ -284,7 +285,7 @@ jQuery(document).ready(function($) {
       },
       phone: {
         required: true,
-        digits: true
+        phonesymbols: true
       },
       oferta: {
         required: true
@@ -305,7 +306,7 @@ jQuery(document).ready(function($) {
       },
       phone: {
         required: message_phone_required,
-        digits: message_phone_only_number
+        phonesymbols: message_phone_only_number
       },
       oferta: {
         required: message_oferta_required
