@@ -126,6 +126,20 @@ h2.h2-header-line::before {
   }
 }
 
+@media screen and (max-width: 900px) {
+  h2.h2-header-line::before {
+    width: 27px;
+    left: 0;
+    top: 23px;
+  }
+  h2.h2-header-line {
+    font-size: 34px;
+    line-height: 50px;
+    padding-left: 41px;
+  }
+}
+
+
 @media screen and (max-width: 500px) {
   h2.h2-header-line::before {
     width: 20px;
@@ -4475,13 +4489,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
 @media screen and (max-width: 500px) {
   .home-page-section6-title h2.h2-header-line {
-    padding-left: 0;
     margin-bottom: 40px;
   }
 
-  .home-page-section6-title h2.h2-header-line::before {
-    left: -31px;
-  }
 }
 
 /*---------------------
@@ -4664,6 +4674,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
     padding: 0;
   }
 
+
   #main-content  .home-page-section7.section-news .section-news-hover-wrapper.no-background-image .vc_gitem-row-position-middle .news-title-hover {
     margin-bottom: 19px;
   }
@@ -4682,14 +4693,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
   .home-page-section7-title h2 {
     margin-bottom: 16px;
-  }
-
-  .home-page-section7-title h2.h2-header-line {
-    padding-left: 0;
-  }
-
-  .home-page-section7-title h2.h2-header-line::before {
-    left: -30px;
   }
 
   #main-content .section-news .section-news-hover-wrapper {
