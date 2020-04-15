@@ -128,13 +128,15 @@ if ($_POST['mail'] !== "") update_option($liq_order_id.'-liqpay_mail_buyer',$_PO
 else
 	update_option($liq_order_id.'-liqpay_mail_buyer',$current_user->user_email);
 
-if ($_POST['phone'] !== "") {		
+if ($_POST['phone'] !== "") {
 	update_option($liq_order_id.'-user_phoner',$_POST['phone']);
+	$user_phone = $_POST['phone'];
 }
 else{
 	global $woocommerce;
 	$order = new WC_Order($liq_order_id);
 	update_option($liq_order_id.'-user_phoner',$order->get_billing_phone());
+	$user_phone = '';
 }
 if(!isset($_POST['liqpay_post_id'])){
     update_option($liq_order_id.'-liqpay_post_id',1);
@@ -214,7 +216,7 @@ $lqsignature = base64_encode(sha1($signature . $amount . $valuta . $merchant_id 
 $testmode = get_option('liqpay_check_testmode');
 
 $additional_info = array(
-	'user_phone' => $_POST['phone'],
+	'user_phone' => $user_phone,
 	'user_email' => $_POST['mail'],
 	'post_id' => $_POST['liqpay_post_id'],
 );
