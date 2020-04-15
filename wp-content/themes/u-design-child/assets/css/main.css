@@ -3590,7 +3590,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   height: 100%;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 #main-content .section2-text-wrapper .section2-text {
@@ -3703,8 +3703,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 @media screen and (max-width: 1024px) {
   #main-content .section2-text-wrapper .wpb_wrapper {
     align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
   }
-  
+
   .home-page-section2 .section2-columns {
     height: unset;
   }
@@ -3712,7 +3714,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   #content-container .home-page-section2 .section2-text {
     margin-bottom: 0;
     /* overflow-y: scroll; */
-    max-height: 315px;
+    /* max-height: 315px; */
+    height: unset;
   }
 
   #content-container .home-page-section2 .section2-text p {
