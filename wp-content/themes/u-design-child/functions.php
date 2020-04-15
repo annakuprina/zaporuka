@@ -149,7 +149,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Ви скасували оплату!');
   pll_register_string('u-design-child', 'Выберите год');
   pll_register_string('liqpay_wordpress', 'Звіт по оплаті');
-  pll_register_string('liqpay_wordpress', 'Вітаємо!');
+  pll_register_string('liqpay_wordpress', 'Вітаємо');
   pll_register_string('liqpay_wordpress', 'відхилено');
   pll_register_string('liqpay_wordpress', 'Вибачте але Ваш платіж відхилено');
   pll_register_string('liqpay_wordpress', 'Дата');
