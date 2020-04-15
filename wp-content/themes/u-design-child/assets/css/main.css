@@ -117,7 +117,13 @@ h2.h2-header-line::before {
     left: -73px;
   }
 }
-    
+
+@media screen and (max-width: 1200px) {
+  h2.h2-header-line {
+    margin-bottom: 40px;
+  }
+} 
+
 /*media for h2 title(with left orange line)*/
 @media screen and (max-width: 1250px) {
   h2.h2-header-line::before {
@@ -179,6 +185,12 @@ h2.h2-header-line::before {
 
 #main-menu #navigation-menu .pll-parent-menu-item > a > span {
   margin-left: 102px;
+}
+
+#main-menu .pll-parent-menu-item.menu-item-has-children > a:hover span::after {
+  border: solid #e78b48;
+  transform: rotate(225deg);
+  top: 19px;
 }
 
 #main-menu #navigation-menu .help-header-link {
@@ -3677,8 +3689,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   .section2-columns
   .section2-single-column
   h2 {
-  font-size: 18px;
-}
+    font-size: 18px;
+  }
 
   .section2-columns {
     max-width: 900px;
@@ -3745,9 +3757,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
     margin-top: 25px;
   }
 
-  .home-page-section2-title h2 {
-    margin-bottom: 40px;
-  }
+
 
   .home-page-section2 .section2-text-wrapper .vc_btn3 {
     display: block;
@@ -3864,7 +3874,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
 @media screen and (max-width: 700px) {
   .home-page-section2-title h2 {
-    max-width: 375px;
+    max-width: 425px;
   }
 }
 
@@ -4071,12 +4081,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   top: 29px;
 }
 
-/* @media screen and (max-width: 1400px) {
-  .home-page-section3 .h2-header-line::before {
-    left: 0;
-    width: 40px;
+@media screen and (max-width: 1200px) {
+  #main-content .home-page-section3 {
+    margin-top: 70px;
   }
-} */
+}
 
 @media screen and (max-width: 700px) {
   .rewards-desktop .rewards-one-item {
@@ -4384,6 +4393,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   width: 50%;
 }
 
+@media screen and (max-width: 1200px) {
+  #main-content .home-page-section5 {
+    margin-top: 40px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   #main-content .home-page-section5 {
     margin-top: 0;
@@ -4503,7 +4518,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   .home-page-section6 .singl-project-link-wrapper.vc_col-sm-12 {
     left: 20px;
   }
+
+  .home .home-page-section6-title {
+    margin-top: 65px;
+  }
 }
+
 
 @media screen and (max-width: 900px) {
   .home-page-section6 .vc_pageable-slide-wrapper .vc_grid-item {
@@ -4640,6 +4660,13 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   left: 0;
   right: 0;
   background: rgba(0,0,0,.3);
+}
+
+@media screen and (max-width: 1200px) {
+
+  .home .home-page-section7-title {
+    margin-top: 65px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -4880,6 +4907,17 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 
 }
+
+@media screen and (max-width: 1200px) {
+  .home .home-page-section8 {
+    margin-top: 0;
+  }
+
+  .home-page-section8-inner {
+    margin-bottom: 70px;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   
   .friends-slider,
