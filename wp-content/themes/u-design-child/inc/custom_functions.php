@@ -282,7 +282,7 @@ function shortcode_orange_help_form(){
                 <div class="help-item-title"><?php echo $become_partner; ?></div>
                 <div class="help-item-info">
                     <div class="help-item-deskr"><?php echo $become_partner_hover; ?></div>
-                    <a href="<?php echo $become_partner_hover_link; ?>" class="help-item-link"><?php echo $become_partner_hover_link_text; ?></a>
+                    <a href="<?php echo $become_partner_hover_link; ?>" class="help-item-link" target="_blank"><?php echo $become_partner_hover_link_text; ?></a>
                 </div>
             </div><!-- end help-item -->
 
@@ -300,7 +300,7 @@ function shortcode_orange_help_form(){
                 <div class="help-item-title"><?php echo $help_by_sms; ?></div>
                 <div class="help-item-info">
                     <div class="help-item-deskr"><?php echo $help_by_sms_hover; ?></div>
-                    <a href="<?php echo $help_by_sms_hover_link; ?>" class="help-item-link"><?php echo $help_by_sms_hover_text_link; ?></a>
+                    <a href="<?php echo $help_by_sms_hover_link; ?>" class="help-item-link" target="_blank"><?php echo $help_by_sms_hover_text_link; ?></a>
                 </div>
             </div><!-- end help-item -->
 
@@ -309,7 +309,7 @@ function shortcode_orange_help_form(){
                 <div class="help-item-title"><?php echo $charity_shop; ?></div>
                 <div class="help-item-info">
                     <div class="help-item-deskr"><?php echo $charity_shop_hover; ?></div>
-                    <a href="<?php echo $charity_shop_hover_link; ?>" class="help-item-link"><?php echo $charity_shop_hover_link_text; ?></a>
+                    <a href="<?php echo $charity_shop_hover_link; ?>" class="help-item-link" target="_blank"><?php echo $charity_shop_hover_link_text; ?></a>
                 </div>
             </div><!-- end help-item -->
 
