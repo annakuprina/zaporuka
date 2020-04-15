@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
   });
 
   $(".help_form .help-form-subscribe .subscribe-link").click(function(e) {
-  //   e.preventDefault();
+    e.preventDefault();
   //   var parent = jQuery(this).parents(".help_form");
   //   parent.find(".help-form-subscribe .subscribe-link").removeClass("active");
   //   $(this).addClass("active");
