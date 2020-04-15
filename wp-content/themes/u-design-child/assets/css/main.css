@@ -109,10 +109,16 @@ h2.h2-header-line::before {
 @media screen and (max-width: 1400px) {
   h2.h2-header-line::before {
     width: 35px;
-    left: -55px;
+    left: -80px;
   }
 }
 
+@media screen and (max-width: 1290px) {
+  h2.h2-header-line::before {
+    left: -73px;
+  }
+}
+    
 /*media for h2 title(with left orange line)*/
 @media screen and (max-width: 1250px) {
   h2.h2-header-line::before {
@@ -3558,9 +3564,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   display: none;
 }
 
-#content-container .home-page-section2 .section2-text p {
+/* #content-container .home-page-section2 .section2-text p {
   padding-top: 25px;
-}
+} */
 
 #main-content .section2-image-wrapper {
   width: 380px;
@@ -3574,6 +3580,16 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
 #main-content .section2-text-wrapper {
   height: 359px;
+}
+
+#main-content .section2-text-wrapper > .wpb_wrapper {
+  height: 100%;
+}
+
+#main-content .section2-text-wrapper > .section2-text {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 #main-content
@@ -4338,7 +4354,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   HOME PAGE SECTION 5
 ----------------------*/
 #main-content .home-page-section5 {
-  margin-top: 90px;
+  margin-top: 59px;
 }
 
 #main-content .vc_custom_1579173195839 .one-project-progress {
