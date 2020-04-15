@@ -7909,8 +7909,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*restyle builder Our team item block. Making inner blocks static not absolute.*/
 
 .aboutus_section3 .our_team_section .our-team-hover-wrapper {
-  padding: 30px;
+  padding: 20px;
+}
 
+.aboutus_section3 .our_team_section  .team-member-excerpt-hover {
+  margin-bottom: 20px;
 }
 
 .aboutus_section3 .our-team-hover-wrapper .vc_gitem-zone-mini {
@@ -7953,7 +7956,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 .aboutus_section3 .our-team-hover-wrapper .team-member-info-hover {
-  padding-top: 40px;
+  padding-top: 25px;
 }
 
 #our_team .team-member-info-hover .vc_gitem-acf-label {
@@ -8366,10 +8369,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   }
 
-  .our_team_section .our-team-hover-wrapper {
-    padding: 19px 11px 42px 11px;
-  }
-
+  .aboutus_section3 .our_team_section .our-team-hover-wrapper {
+    padding: 10px 5px;
+}
   /*top part*/
   .our_team_section .team-member-title-hover {
     font-size: 18px;
@@ -8389,13 +8391,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   /*bottom part*/
   .our_team_section .our-team-hover-wrapper .team-member-info-hover {
-    padding-top: 37px;
+    padding-top: 12px;
     font-size: 14px;
   }
   /*---*/
 
   .team-member-excerpt-hover {
-    margin-bottom: 17px;
+    margin-bottom: 5px;
   }
 
   #wrapper-1 .aboutus_section1_wrapper h2 {
