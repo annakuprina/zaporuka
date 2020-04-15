@@ -3976,11 +3976,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
     margin-top: 41px;
   }
 
-  .home-page-section2-title h2 {
-    height: 965px;
-    max-height: 965px
-  }
-
   .home-page-section2-title .vc_column-inner {
     padding-top: 15px;
   }
@@ -4575,7 +4570,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   .home-page-section6 .other-projects-desk.vc_pageable-slide-wrapper {
     margin-right: -25px;
   }
-  
+
   .home-page-section6 .other-projects-desk .vc_grid-item {
     padding-right: 25px;
   }
