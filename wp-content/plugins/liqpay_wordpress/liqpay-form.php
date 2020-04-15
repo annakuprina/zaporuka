@@ -74,7 +74,8 @@ if (wp_get_current_user()->exists()) {
 update_option('liqpay_current_user',$current_user->ID);
 
 $mail = get_option('liqpay_mail_buyer');
-$lang = get_option('liqpay_lang');
+//$lang = get_option('liqpay_lang');
+$lang = ICL_LANGUAGE_CODE;
 $plata = $_POST['plata'];
 
 if(!isset($_POST['pay_type'])){
