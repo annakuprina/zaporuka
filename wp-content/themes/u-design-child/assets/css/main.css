@@ -106,10 +106,9 @@ h2.h2-header-line::before {
   top: 28px;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1370px) {
   h2.h2-header-line::before {
-    width: 35px;
-    left: -80px;
+    left: -73px;
   }
 }
 
@@ -3582,11 +3581,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   height: 359px;
 }
 
-#main-content .section2-text-wrapper > .wpb_wrapper {
+#main-content .section2-text-wrapper .wpb_wrapper {
   height: 100%;
 }
 
-#main-content .section2-text-wrapper > .section2-text {
+#main-content .section2-text-wrapper .section2-text {
   height: 100%;
   display: flex;
   align-items: center;
