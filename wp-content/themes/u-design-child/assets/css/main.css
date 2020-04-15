@@ -4378,6 +4378,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 .home-page-section6 .other-projects-row .singl-project-top-part {
   height: 255px !important;
 }
+
 .home-page-section6 .other-projects-row .singl-project-top-part:after {
   content: "";
   position: absolute;
@@ -4395,7 +4396,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%) no-repeat;
 }
 
-
+.home-page-section6 .other-projects-row .singl-project-top-part .vc_gitem-row-position-top {
+  z-index: 2;
+}
 /* .singl-project-top-part  .vc_gitem-row-position-top {
   background: rgba(0,0,0,.45);
 } */
@@ -7780,6 +7783,27 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #our_team .team-member-info-hover .vc_gitem-acf-label {
   font-family: "Raleway-Regular";
+}
+
+#our_team .our-team-front-wrapper:after  {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))) no-repeat;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%) ;
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%) no-repeat;
+}
+
+#our_team .our-team-front-wrapper .vc_gitem-row-position-bottom {
+  z-index: 232;
 }
 
 .aboutus_section3
