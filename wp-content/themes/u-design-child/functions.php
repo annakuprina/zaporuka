@@ -146,6 +146,7 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Друзі та волонтери фонду ');
   pll_register_string('u-design-child', 'Волонтери');
   pll_register_string('u-design-child', 'Дякуємо за ваше добро!');
+  pll_register_string('u-design-child', 'Деталі платежу');
   pll_register_string('u-design-child', 'Ви скасували оплату!');
   pll_register_string('u-design-child', 'Выберите год');
   pll_register_string('liqpay_wordpress', 'Звіт по оплаті');
@@ -154,7 +155,7 @@ add_action('init', function() {
   pll_register_string('liqpay_wordpress', 'Вибачте але Ваш платіж відхилено');
   pll_register_string('liqpay_wordpress', 'Дата');
   pll_register_string('liqpay_wordpress', 'Номер заказу');
-  pll_register_string('liqpay_wordpress', 'Номер транзакції в системе LiqPay');
+  pll_register_string('liqpay_wordpress', 'Номер транзакції в системі LiqPay');
   pll_register_string('liqpay_wordpress', 'Статус транзакції');
   pll_register_string('liqpay_wordpress', 'Сума');
   pll_register_string('liqpay_wordpress', 'Телефон');
