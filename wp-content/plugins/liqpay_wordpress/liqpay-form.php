@@ -89,7 +89,7 @@ if($pay_type == 'subscribe') {
     $subscribe_type = '';
 }
 $liq_order_id = false;
-
+update_oprion('test_payment', $_POST);
 if(isset($_POST['order_id'])) {
     $liq_order_id = $_POST['order_id'];
 }

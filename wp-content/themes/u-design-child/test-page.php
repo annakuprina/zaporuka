@@ -19,4 +19,4 @@
 //    'version'       => '3',
 //    'order_id'      => 74926
 //));
-//var_dump($res);
+var_dump(get_option('test_payment'));
