@@ -3577,18 +3577,25 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   padding-right: 0;
 }
 
+#main-content .home-page-section2 .section2-text p {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 #main-content .section2-text-wrapper {
   height: 359px;
 }
 
 #main-content .section2-text-wrapper .wpb_wrapper {
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 #main-content .section2-text-wrapper .section2-text {
   height: 100%;
-  display: flex;
-  align-items: center;
+  margin-bottom: 0;
+ 
 }
 
 #main-content
