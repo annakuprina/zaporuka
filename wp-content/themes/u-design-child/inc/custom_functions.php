@@ -952,27 +952,21 @@ function shortcode_awards_slider(){
 add_shortcode( 'shortcode_thanks_block_pro', 'shortcode_thanks_block' );
 function shortcode_thanks_block(){
     $order_id_answer = $_GET['answer_order_id'];
-    $liqpay_answer_status =  get_option($order_id_answer . '-liqpay_answer_status');
     $liqpay_answer_transaction_id =  get_option($order_id_answer.'-liqpay_answer_transaction_id');
     $liqpay_answer_summa =  get_option($order_id_answer.'-liqpay_answer_summa');
-    $liqpay_post_id =  get_option($order_id_answer . '-liqpay_post_id');
-    $thanks_text = get_field('thanks_text', $liqpay_post_id);
     ob_start();
     if($liqpay_answer_transaction_id){
         $order_sum = '<span class="order-sum">' .  $liqpay_answer_summa. ' '  . check_currency() . '</span>';
-        if ( !isset($thanks_text) ) {
-            if( ICL_LANGUAGE_CODE == 'uk' ) {
-                $thanks_text = 'Вдячні за вашу пожертву у розмірі [сумма] Всі відправлені вами кошти підуть на допомогу БФ "Запорука".';
-            }
-            elseif ( ICL_LANGUAGE_CODE == 'ru' ) {
-                $thanks_text = 'Благодарны за ваше пожертвование в размере [сумма] Все отправленные вами средства пойдут на помощь БФ "Запорука".';
-            }
-            elseif ( ICL_LANGUAGE_CODE == 'en' ) {
-                $thanks_text = 'We are grateful for your donation with the amount of [сумма]. All funds sent by you will be transfered to help CF(Charity Fund) Zaporuka.';
-            }
+        if( ICL_LANGUAGE_CODE == 'uk' ) {
+            $thanks_text = 'Ваша пожертва у розмірі [сумма] буде використана на допомогу підопічним фонду "Запорука". Разом змінюємо світ на краще!';
+        }
+        elseif ( ICL_LANGUAGE_CODE == 'ru' ) {
+            $thanks_text = 'Ваше пожертвование в размере [сумма] будет использовано для помощи подопечным фонда "Запорука". Вместе меняем мир к лучшему!';
+        }
+        elseif ( ICL_LANGUAGE_CODE == 'en' ) {
+            $thanks_text = 'Your donation with the amount of [сумма] will be transfered to help to help wards fund Zaporuka. Together we are changing the world for the better! ';
         }
         $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
-
         ?>
         <div class="home-first-thanks-block">
             <div class="thanks-text-wrapper">
