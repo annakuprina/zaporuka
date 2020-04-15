@@ -149,9 +149,9 @@ if (isset($_POST['data'])) {
 
         $payment_status = pll__("відхилено");
         if ($fio){
-            $text_head = "<p style='color: #888;'> " . $fio . ", вітаємо!</p>";
+            $text_head = "<p style='color: #888;'> ". pll__("Вітаємо") . ', ' . $fio . "!</p>";
         } else{
-            $text_head = "<p style='color: #888;'> " . pll__("Вітаємо!") . "</p>";
+            $text_head = "<p style='color: #888;'> " . pll__("Вітаємо") . "!</p>";
         }
         $text = "<p style='color: #888;'> " . pll__("Вибачте але Ваш платіж відхилено") . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Дата") . ": " . $xdate . "</p>";
@@ -184,14 +184,14 @@ if (isset($_POST['data'])) {
     } elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
         $flag = 1;
         if ($fio){
-            $text_head = "<p style='color: #888;'> " . $fio . ", вітаємо!</p>";
+            $text_head = "<p style='color: #888;'> ". pll__("Вітаємо") . ', ' . $fio . "!</p>";
         } else{
-            $text_head = "<p style='color: #888;'> " . pll__("Вітаємо!") . "</p>";
+            $text_head = "<p style='color: #888;'> " . pll__("Вітаємо") . "!</p>";
         }
         if( $status == "subscribed" ) {
-            $datas = pll__('Щомісячне перерахування коштів в БФ Запорука');
+            $datas = !empty($options['monthly_help_block_' . ICL_LANGUAGE_CODE]) ? $options['monthly_help_block_' . ICL_LANGUAGE_CODE] : pll__('Щомісячне перерахування коштів в БФ Запорука');
         } else{
-            $datas = pll__('Одноразове пожертвування в БФ Запорука');
+            $datas =!empty($options['payonce_help_block_' . ICL_LANGUAGE_CODE]) ? $options['payonce_help_block_' . ICL_LANGUAGE_CODE] : pll__('Одноразове пожертвування в БФ Запорука');
         }
         $payment_status = pll__("успішна");
         $text .= "<p style='color: #888;'> " . pll__('Дякуємо за ваше добре серце! Завдяки вам підопічні фонду "Запорука" зможуть вчасно отримати необхідну допомогу.') . "</p>";
