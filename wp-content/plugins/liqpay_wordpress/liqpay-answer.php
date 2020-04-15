@@ -189,9 +189,9 @@ if (isset($_POST['data'])) {
             $text_head = "<p style='color: #888;'> " . pll__("Вітаємо") . "!</p>";
         }
         if( $status == "subscribed" ) {
-            $datas = !empty($options['monthly_help_block_' . ICL_LANGUAGE_CODE]) ? $options['monthly_help_block_' . ICL_LANGUAGE_CODE] : pll__('Щомісячне перерахування коштів в БФ Запорука');
+            $datas = pll__('Щомісячне перерахування коштів в БФ Запорука');
         } else{
-            $datas =!empty($options['payonce_help_block_' . ICL_LANGUAGE_CODE]) ? $options['payonce_help_block_' . ICL_LANGUAGE_CODE] : pll__('Одноразове пожертвування в БФ Запорука');
+            $datas = pll__('Одноразове пожертвування в БФ Запорука');
         }
         $payment_status = pll__("успішна");
         $text .= "<p style='color: #888;'> " . pll__('Дякуємо за ваше добре серце! Завдяки вам підопічні фонду "Запорука" зможуть вчасно отримати необхідну допомогу.') . "</p>";
