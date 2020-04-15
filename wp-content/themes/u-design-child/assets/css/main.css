@@ -1519,6 +1519,12 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   padding-left: 12px;
 }
 
+@media screen and (max-width: 1200px) {
+  #main-content .projects_section3 {
+    padding-top: 7px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .one-project-banner {
     justify-content: center;
@@ -2378,6 +2384,13 @@ and shows hidden orange lines near titles on About us page*/
 /*-----------------------------------------------------------------------------
   HELP(orange blocks and contact form) for one project page and modal window
 ------------------------------------------------------------------------------*/
+.help .home-first-post-form-help {
+  width: 100%;
+}
+
+.help .help-form-inner-wrapper .help-form-text {
+  padding-bottom: 23px;
+}
 
 #wrapper-1 .help-form-inner-wrapper .help-form-oferta label:not(.error) {
   padding-left: 24px;
@@ -2436,7 +2449,7 @@ and shows hidden orange lines near titles on About us page*/
 
 .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
   position: absolute;
-  right: 55px;
+  right: calc(50% - 49px);
   top: 8px;
 }
 
@@ -2600,6 +2613,10 @@ input[type="checkbox"] + label#oferta-error {
   .help .help-item {
     padding: 33px 20px;
   }
+
+  .projects_section3 .wpb_text_column {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -2607,8 +2624,13 @@ input[type="checkbox"] + label#oferta-error {
     font-size: 12px;
   }
 
-  .help .help-form-submit {
+
+
+  /* .help .help-form-submit {
     padding: 10px 12px;
+  } */
+  .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
+    width: calc(100% - 20px);
   }
 
   .help .help_form_wrapper {
@@ -2706,7 +2728,7 @@ input[type="checkbox"] + label#oferta-error {
 
   .help .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email,
   .help .help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel {
-    width: 100%;
+    width: 100% !important;
   }
 
   .help .help-form-inner-wrapper .help-form-subscribe {
@@ -2717,6 +2739,10 @@ input[type="checkbox"] + label#oferta-error {
     flex-direction: column;
     max-width: 570px;
     margin: auto;
+  }
+
+  .home-first-post-form-help {
+    width: 100%;
   }
 
   .help .help-left {
@@ -2795,6 +2821,10 @@ input[type="checkbox"] + label#oferta-error {
     width: 100%;
     padding-left: 7px;
   }
+
+  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 65px);
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -2805,13 +2835,20 @@ input[type="checkbox"] + label#oferta-error {
 
   .help  .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left {
     margin-bottom: 8px;
-    width: 100%;
+    width: 100% !important;
   }
 
   .help  .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-right {
+    width: 100% !important;
+  }
+
+  .help .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
     width: 100%;
   }
 
+  .help .help-form-submit {
+    margin: 10px 0;
+  }
 }
 /*
 
@@ -4600,6 +4637,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   .home-page-section6 .other-projects-mob {
     display: block;
   }
+
+  .home .home-page-section6 .other-projects-row .singl-project-bottom-part {
+    min-height: unset;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -5541,6 +5582,7 @@ color: #d2d2d2;
 
   .projects-section .other-projects-row .singl-project-link-wrapper {
     left: 15px;
+    padding: 15px 0 24px 0;
   }
 }
 
@@ -7730,6 +7772,16 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 --------------*/
 .our_team_mob {
   display: none;
+  overflow: hidden;
+}
+
+.our_team_desk {
+  display: none;  
+  overflow: hidden;
+}
+
+.other-projects-row {
+  overflow: hidden;
 }
 
 .about-us-testimonials-mob {
@@ -7796,6 +7848,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   background: url(../../img/play_video_big.svg);
   background-size: 60px 60px;
   background-repeat: no-repeat;
+}
+
+.aboutus_section2 h2 {
+  padding-top: 0 !important;
+  margin-top: 15px;
 }
 
 .aboutus_section2 .about-us-text1 {
