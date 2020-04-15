@@ -99,14 +99,14 @@ jQuery(document).ready(function($) {
     parent.find(".amount-button").removeClass("active");
   });
 
-  // $(".help_form .help-form-subscribe .subscribe-link").click(function(e) {
+  $(".help_form .help-form-subscribe .subscribe-link").click(function(e) {
   //   e.preventDefault();
   //   var parent = jQuery(this).parents(".help_form");
   //   parent.find(".help-form-subscribe .subscribe-link").removeClass("active");
   //   $(this).addClass("active");
   //   parent.find('input[name="pay_type"]').val($(this).attr("paytype"));
-  //   change_payment_description($(this).attr("paytype"));
-  // });
+    change_payment_description($(this).attr("paytype"));
+  });
 
   //active tab for shop filter
   var path = window.location.pathname;
