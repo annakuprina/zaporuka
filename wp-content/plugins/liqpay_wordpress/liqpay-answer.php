@@ -184,28 +184,28 @@ if (isset($_POST['data'])) {
     } elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
         $flag = 1;
         if ($fio){
-            $text_head = "<p style='color: #888;'> ". pll_e("Вітаємо") . ', ' . $fio . "!</p>";
+            $text_head = "<p style='color: #888;'> ". pll__("Вітаємо") . ', ' . $fio . "!</p>";
         } else{
-            $text_head = "<p style='color: #888;'> " . pll_e("Вітаємо") . "!</p>";
+            $text_head = "<p style='color: #888;'> " . pll__("Вітаємо") . "!</p>";
         }
         if( $status == "subscribed" ) {
-            $datas = pll_e('Щомісячне перерахування коштів в БФ Запорука');
+            $datas = pll__('Щомісячне перерахування коштів в БФ Запорука');
         } else{
-            $datas = pll_e('Одноразове пожертвування в БФ Запорука');
+            $datas = pll__('Одноразове пожертвування в БФ Запорука');
         }
-        $payment_status = pll_e("успішна");
-        $text .= "<p style='color: #888;'> " . pll_e('Дякуємо за ваше добре серце! Завдяки вам підопічні фонду Запорука зможуть вчасно отримати необхідну допомогу.') . "</p>";
-        $text .= "<p style='color: #888;'> " . pll_e('Деталі платежу') . "</p>";
-        $text .= "<p style='color: #888;'> " . pll_e('Сума') . ": " . $summa . " " . $valuta . "</p>";
-        $text .= "<p style='color: #888;'> " . pll_e('Дата') . ": " . $xdate . "</p>";
-        $text .= "<p style='color: #888;'> " . pll_e('Номер заказу') .  ": " . $order_id . "</p>";
-        $text .= "<p style='color: #888;'> " . pll_e('Номер транзакції в системі LiqPay') .  ": " . $transaction_id . "</p>";
-        $text .= "<p style='color: #888;'> " . pll_e('Статус транзакції') .  ": " . $payment_status . "</p>";
-        $text .= "<p style='color: #888;'> " . pll_e('Телефон') .  ": " . $user_phone . "</p>";
-        $text .= "<p style='color: #888;'> " . pll_e('Призначення платежу') .  ": " . $datas . "</p>";
-        $text .= "<p style='color: #888;'> " . pll_e('Разом змінюємо світ на краще!') . "</p>";
-        $text .= "<p style='color: #888;'> " . pll_e('З вдячністю,') . "</p>";
-        $text .= "<p style='color: #888;'> " . pll_e('Благодійний Фонд "Запорука"') . "</p>";
+        $payment_status = pll__("успішна");
+        $text .= "<p style='color: #888;'> " . pll__('Дякуємо за ваше добре серце! Завдяки вам підопічні фонду Запорука зможуть вчасно отримати необхідну допомогу.') . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__('Деталі платежу') . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__('Сума') . ": " . $summa . " " . $valuta . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__('Дата') . ": " . $xdate . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__('Номер заказу') .  ": " . $order_id . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__('Номер транзакції в системі LiqPay') .  ": " . $transaction_id . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__('Статус транзакції') .  ": " . $payment_status . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__('Телефон') .  ": " . $user_phone . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__('Призначення платежу') .  ": " . $datas . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__('Разом змінюємо світ на краще!') . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__('З вдячністю,') . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__('Благодійний Фонд "Запорука"') . "</p>";
 
         $message = $text;
         $mail = get_option('liqpay_mail');
