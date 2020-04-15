@@ -99,12 +99,7 @@ jQuery(document).ready(function($) {
     parent.find(".amount-button").removeClass("active");
   });
 
-  $(".help_form .help-form-subscribe input").click(function(e) {
-    e.preventDefault();
-  //   var parent = jQuery(this).parents(".help_form");
-  //   parent.find(".help-form-subscribe .subscribe-link").removeClass("active");
-  //   $(this).addClass("active");
-  //   parent.find('input[name="pay_type"]').val($(this).attr("paytype"));
+  $(".help_form .help-form-subscribe input").click(function() {
     change_payment_description($(this).val());
   });
 
