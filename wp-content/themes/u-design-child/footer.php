@@ -174,10 +174,6 @@ if( ! udesign_check_page_layout_option( 'no_footer' ) ) :
 			<div class="footer-mob-info">
 				<div class="footer-mob-left"><?php echo get_dynamic_column( 'footer-left-part', '', 'widget-footer-mob-left' );?></div>
 				<div class="footer-mob-right">
-					<div class="footer-mob-politics">
-						<p><a href="<?php echo $privacy_policy_link; ?>" class="privacy-policy"><?php echo $privacy_policy_text; ?></a></p>
-						<p><a  href="<?php echo $disclaimer_link; ?>" class="disclaimer"><?php echo $disclaimer_text; ?></a></p>
-					</div>
 					<div class="footer-developed-and-designed">
 						<div class="footer-developed"> 
 							<span class="developer"><span class="developer-text">

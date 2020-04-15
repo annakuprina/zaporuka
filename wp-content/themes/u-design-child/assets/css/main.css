@@ -189,6 +189,7 @@ h2.h2-header-line::before {
 
 #main-menu .pll-parent-menu-item.menu-item-has-children > a:hover span::after {
   border: solid #e78b48;
+  border-width: 0 1px 1px 0;
   transform: rotate(225deg);
   top: 19px;
 }
