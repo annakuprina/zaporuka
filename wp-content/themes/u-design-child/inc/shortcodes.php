@@ -480,9 +480,8 @@ function send_cancel_subscription_email_function() {
         require_once('../../../wp-config.php');
 
     $user_mail = sanitize_text_field( $_POST['client_mail'] );
-    $user_phone = sanitize_text_field( $_POST['client_tel'] );
 
-    $sql = "Select order_id, summa, comments from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
+    $sql = "Select order_id, summa, comments from {$table_liqpay} where email = '{$user_mail}' and status = 'subscribed'";
     $sql_res = $wpdb->get_results($sql);
 
 
@@ -522,7 +521,7 @@ function send_cancel_subscription_email_function() {
                 $project_name = '';
             }
 
-            $mail_body .= $order['comments'] . " в розмiрi ". $order['summa'] . $symbol . " " . $project_name . " - ";
+            $mail_body .= $order['comments'] . " в розмiрi " . $order['summa'] . $symbol . " " . $project_name . " - ";
 			$mail_body .= '<a href="'. $link . $order['order_id'].'">' . $link . $order['order_id'] . '</a>' . "<br>";
     	}	   
 
