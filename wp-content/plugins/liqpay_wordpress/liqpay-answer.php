@@ -122,7 +122,7 @@ if (isset($_POST['data'])) {
     $new_code = 1;
 
 
-    $subject = pll__("Звіт по оплаті ");
+    $subject = pll__("Звіт по оплаті");
     $liqpay_magazin_tmp = get_option('liqpay_magazin');
     $liqpay_mail_sender_tmp = " <" . get_option('liqpay_mail_sender') . ">";
     $headers = "From: " . $liqpay_magazin_tmp . $liqpay_mail_sender_tmp . "\r\n";
