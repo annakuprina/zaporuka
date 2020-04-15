@@ -34,7 +34,7 @@ $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $optio
                     <input type="hidden" name="hidden_content"  value="<?php echo site_url($home_url);?>"/>
                     <input type="hidden" name="url_page"  value="<?php echo site_url($home_url);?>"/>
                     <input type="hidden" name="ip"  value=[ip]/>
-                    <input type="hidden" name="pay_type"  value="pay"/>
+<!--                    <input type="hidden" name="pay_type"  value="pay"/>-->
                     <input type="hidden" name="subscribe_type"  value="month"/>
                     <input type="hidden" id="plata" name="plata" value="">
                     <input type="hidden" id="liqpay_post_id" name="liqpay_post_id"  value=""/>
