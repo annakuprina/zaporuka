@@ -3799,7 +3799,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   #content-container .home-page-section2 .section2-text p {
     font-size: 16px;
   }
