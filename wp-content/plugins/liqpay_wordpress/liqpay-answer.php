@@ -147,7 +147,7 @@ if (isset($_POST['data'])) {
 ////////////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     if ($status == "failure") {
 
-        $status = pll__("відхилено");
+        $payment_status = pll__("відхилено");
         if ($fio){
             $text_head = "<p style='color: #888;'> " . $fio . ", вітаємо!</p>";
         } else{
@@ -158,7 +158,7 @@ if (isset($_POST['data'])) {
         $text .= "<p style='color: #888;'> " . pll__("Сума") . ": " . $summa . " " . $valuta . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер заказу") .  ": " . $order_id . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "</p>";
-        $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $status . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $payment_status . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Телефон") .  ": " . $user_phone . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Разом змінюємо світ на краще!") . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("З вдячністю,") . "</p>";
@@ -188,15 +188,21 @@ if (isset($_POST['data'])) {
         } else{
             $text_head = "<p style='color: #888;'> " . pll__("Вітаємо!") . "</p>";
         }
-        $status = pll__("успішна");
+        if( $status == "subscribed" ) {
+            $datas = 'Щомісячне перерахування коштів в БФ Запорука';
+        } else{
+            $datas = 'Одноразове пожертвування в БФ Запорука';
+        }
+        $payment_status = pll__("успішна");
         $text .= "<p style='color: #888;'> " . pll__("Дякуємо за ваше добре серце! Завдяки вам підопічні фонду 'Запорука' зможуть вчасно отримати необхідну допомогу.") . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Деталі платежу") . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Сума") . ": " . $summa . " " . $valuta . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Дата") . ": " . $xdate . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер заказу") .  ": " . $order_id . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "</p>";
-        $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $status . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $payment_status . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Телефон") .  ": " . $user_phone . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Призначення платежу") .  ": " . $datas . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Разом змінюємо світ на краще!") . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("З вдячністю,") . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Благодійний Фонд 'Запорука'") . "</p>";
@@ -215,11 +221,7 @@ if (isset($_POST['data'])) {
                 wp_set_post_categories($all_ids['uk'], array( $category->term_id ));
                 $liqpay_post_id = 823;
                 $current_value = get_field( "total-collected", $liqpay_post_id );
-                if( $status == "subscribed" ) {
-                    $datas = 'Щомісячне перерахування коштів в БФ Запорука';
-                } else{
-                    $datas = 'Одноразове пожертвування в БФ Запорука';
-                }
+
             }
             $new_value = $current_value + $summa;
             update_field('total-collected', $new_value , $liqpay_post_id);
@@ -341,7 +343,7 @@ if (isset($_POST['data'])) {
 
         exit;
     } elseif (($status == "wait_secure") || ($status == "wait_accept")) {
-        $status = pll__("платіж знаходиться на перевірці");
+        $payment_status = pll__("платіж знаходиться на перевірці");
         $text = "<p style='color: #888;'> " . pll__("Ваш платіж очікує на перевірку") . "...</p>";
         if ($fio){
             $text = "<p style='color: #888;'> " . $fio . ", вітаємо!" . pll__("Ваш платіж очікує на перевірку") ."</p>";
@@ -353,7 +355,7 @@ if (isset($_POST['data'])) {
         $text .= "<p style='color: #888;'> " . pll__("Дата") . ": " . $xdate . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер заказу") .  ": " . $order_id . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Номер транзакції в системі LiqPay") .  ": " . $transaction_id . "</p>";
-        $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $status . "</p>";
+        $text .= "<p style='color: #888;'> " . pll__("Статус транзакції") .  ": " . $payment_status . "</p>";
         $text .= "<p style='color: #888;'> " . pll__("Телефон") .  ": " . $user_phone . "</p>";
         $text .= pll__("Если долгое время платеж не проходит, Вам следует обратится в онлайн чат службы поддержки Liqpay, по адресу") . " <a href='https://liqpay.ua/' title='Liqpay'>Liqpay</a> \n";
         $text .= "<p style='color: #888;'> " . pll__("Разом змінюємо світ на краще!") . "</p>";
