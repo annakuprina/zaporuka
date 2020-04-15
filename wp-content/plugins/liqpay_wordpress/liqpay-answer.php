@@ -209,13 +209,13 @@ if (isset($_POST['data'])) {
     $user_phone_fio = $user_phone . ' ' . $fio;
     $new_code = 1;
 
-    if( $current_language=='en' ){
+    if( $current_language == 'en' ){
         $subject = 'Payment report';
         $liqpay_magazin_tmp = 'Charitable Foundation Zaporuka';
-    }elseif($current_language=='ru'){
+    }elseif( $current_language == 'ru' ){
         $subject = 'Отчет по оплате';
         $liqpay_magazin_tmp = 'Благотворительный фонд "Запорука"';
-    } else{
+    } elseif( $current_language == 'uk' ) {
         $subject = 'Звіт по оплаті';
         $liqpay_magazin_tmp = get_option('liqpay_magazin');
     }
