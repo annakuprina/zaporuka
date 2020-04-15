@@ -191,7 +191,7 @@ h2.h2-header-line::before {
   border: solid #e78b48;
   border-width: 0 1px 1px 0;
   transform: rotate(225deg);
-  top: 19px;
+  top: 20px;
 }
 
 #main-menu #navigation-menu .help-header-link {
@@ -9010,3 +9010,17 @@ body.product ul.products {
 }
 
 
+/*BECOME A VOLUNTEER PAGE*/
+.become-volunteer-wrapper h2 {
+  padding-top: 0 !important;
+  padding-bottom: 0!important;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.become-volunteer-wrapper a:link,
+.become-volunteer-wrapper a:visited,
+.become-volunteer-wrapper a:hover,
+.become-volunteer-wrapper a:active {
+  color: #e78b48;
+}
