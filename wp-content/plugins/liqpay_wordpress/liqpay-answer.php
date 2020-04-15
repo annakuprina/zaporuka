@@ -121,7 +121,7 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
 
         }elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
             $payment_status = "success";
-            $text .= "<p style='color: #888;'> Thank you for your kind heart! Thanks to you, Zaporuka Foundation’s beneficiaries will be able to get the help they need in time..</p>";
+            $text .= "<p style='color: #888;'> Thank you for your kind heart! Thanks to you, Zaporuka Foundation’s beneficiaries will be able to get the help they need in time.</p>";
         }elseif (($status == "wait_secure") || ($status == "wait_accept")) {
             $payment_status = "wait accept";
             $text .= "<p style='color: #888;'> Your payment is pending accept...</p>";
@@ -132,7 +132,7 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
         $text .= "<p style='color: #888;'> Order Number: " . $order_id . "</p>";
         $text .= "<p style='color: #888;'> LiqPay Transaction Number: " . $transaction_id . "</p>";
         $text .= "<p style='color: #888;'> Transaction Status: " . $payment_status . "</p>";
-        $text .= "<p style='color: #888;'> Phone Number': " . $user_phone . "</p>";
+        $text .= "<p style='color: #888;'> Phone Number: " . $user_phone . "</p>";
         $text .= "<p style='color: #888;'> Purpose of payment: " . $datas . "</p>";
         $text .= "<p style='color: #888;'> Together we are changing the world for the better! </p>";
         $text .= "<p style='color: #888;'> With gratitude,</p>";
@@ -211,13 +211,16 @@ if (isset($_POST['data'])) {
 
     if( $current_language=='en' ){
         $subject = 'Payment report';
+        $liqpay_magazin_tmp = 'Charitable Foundation Zaporuka';
     }elseif($current_language=='ru'){
         $subject = 'Отчет по оплате';
+        $liqpay_magazin_tmp = 'Благотворительный фонд "Запорука"';
     } else{
         $subject = 'Звіт по оплаті';
+        $liqpay_magazin_tmp = get_option('liqpay_magazin');
     }
 
-    $liqpay_magazin_tmp = get_option('liqpay_magazin');
+
     $liqpay_mail_sender_tmp = " <" . get_option('liqpay_mail_sender') . ">";
     $headers = "From: " . $liqpay_magazin_tmp . $liqpay_mail_sender_tmp . "\r\n";
 
@@ -237,7 +240,7 @@ if (isset($_POST['data'])) {
         $post = array("action" => "thank_you_page_state", "order_id" => $server_order_id, "status" => $status);
         curlSendRequest($thank_you_page_url, $post);
     }
-    $valuta = (pll_current_language() === 'en') ? $valuta : 'грн.';
+    $valuta = ($current_language === 'en') ? $valuta : 'грн.';
 ////////////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     if ($status == "failure") {
 
