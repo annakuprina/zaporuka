@@ -166,7 +166,9 @@ add_action('init', function() {
   pll_register_string('liqpay_wordpress', 'Дякуємо за ваше добре серце! Завдяки вам підопічні фонду "Запорука" зможуть вчасно отримати необхідну допомогу.');
   pll_register_string('liqpay_wordpress', 'Разом змінюємо світ на краще!');
   pll_register_string('liqpay_wordpress', 'З вдячністю,');
-  pll_register_string('liqpay_wordpress', "Благодійний Фонд 'Запорука'");
+  pll_register_string('liqpay_wordpress', 'Благодійний Фонд "Запорука"');
+  pll_register_string('liqpay_wordpress', 'Щомісячне перерахування коштів в БФ Запорука');
+  pll_register_string('liqpay_wordpress', 'Одноразове пожертвування в БФ Запорука');
   pll_register_string('woocommerce', "removed");
 });
 remove_filter('the_content','wptexturize');
