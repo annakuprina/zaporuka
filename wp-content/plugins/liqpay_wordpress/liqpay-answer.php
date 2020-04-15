@@ -121,8 +121,12 @@ if (isset($_POST['data'])) {
     $user_phone_fio = $user_phone . ' ' . $fio;
     $new_code = 1;
 
+    if(ICL_LANGUAGE_CODE=='en'){
+        $subject = pll__('Payment report');
+    } else{
+        $subject = pll__('Звіт по оплаті');
+    }
 
-    $subject = pll__("Звіт по оплаті");
     $liqpay_magazin_tmp = get_option('liqpay_magazin');
     $liqpay_mail_sender_tmp = " <" . get_option('liqpay_mail_sender') . ">";
     $headers = "From: " . $liqpay_magazin_tmp . $liqpay_mail_sender_tmp . "\r\n";
