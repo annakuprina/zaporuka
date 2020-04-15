@@ -978,7 +978,7 @@ function shortcode_thanks_block(){
             <div class="thanks-text-wrapper">
                 <div>
                     <a href="<?php echo home_url(); ?>">
-                        <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Дякуємо за підтримку!');?></h2></div>
+                        <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Дякуємо за ваше добро!');?></h2></div>
                         <div class="thanks-text-block">
                             <?php echo $thanks_text; ?>
                         </div>
