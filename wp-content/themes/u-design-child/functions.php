@@ -158,11 +158,12 @@ add_action('init', function() {
   pll_register_string('liqpay_wordpress', 'Статус транзакції');
   pll_register_string('liqpay_wordpress', 'Сума');
   pll_register_string('liqpay_wordpress', 'Телефон');
+  pll_register_string('liqpay_wordpress', 'Призначення платежу');
   pll_register_string('liqpay_wordpress', 'успiшна');
   pll_register_string('liqpay_wordpress', 'платіж знаходиться на перевірці');
   pll_register_string('liqpay_wordpress', 'Ваш платіж очікує на перевірку');
   pll_register_string('liqpay_wordpress', 'Если долгое время платеж не проходит, Вам следует обратится в онлайн чат службы поддержки Liqpay, по адресу');
-  pll_register_string('liqpay_wordpress', 'Дякуємо за ваше добре серце! Завдяки вам підопічні фонду \'Запорука\' зможуть вчасно отримати необхідну допомогу.');
+  pll_register_string('liqpay_wordpress', 'Дякуємо за ваше добре серце! Завдяки вам підопічні фонду "Запорука" зможуть вчасно отримати необхідну допомогу.');
   pll_register_string('liqpay_wordpress', 'Разом змінюємо світ на краще!');
   pll_register_string('liqpay_wordpress', 'З вдячністю,');
   pll_register_string('liqpay_wordpress', "Благодійний Фонд 'Запорука'");
