@@ -7900,6 +7900,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   border-top-width: 0 !important;
 }
 
+.our-team-front-wrapper {
+  z-index: 3;
+}
 
 /*Our team section*/
 
@@ -8529,6 +8532,14 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .about_section4 .wpb_wrapper p {
     line-height: 24px;
+  }
+}
+
+/*Height media*/
+@media screen and (max-height: 400px) {
+  /* video in first block on About us page */
+  iframe.slick-lightbox-slick-iframe {
+    height: 270px;
   }
 }
 /*----------------------
