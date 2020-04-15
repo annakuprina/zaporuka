@@ -239,7 +239,7 @@ jQuery(document).ready(function($) {
         email: true
       },
       phone: {
-        required: true,
+        required: false,
         phonesymbols: true
       },
       oferta: {
@@ -284,7 +284,7 @@ jQuery(document).ready(function($) {
         email: true
       },
       phone: {
-        required: true,
+        required: false,
         phonesymbols: true
       },
       oferta: {
