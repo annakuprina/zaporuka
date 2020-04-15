@@ -3975,6 +3975,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   .home-page-section2 .section2-columns .section2-single-column:hover a {
     margin-top: 41px;
   }
+
+  .home-page-section2-title h2 {
+    max-width: 300px;
+  }
+  
 }
 
 @media screen and (max-width: 350px) {
