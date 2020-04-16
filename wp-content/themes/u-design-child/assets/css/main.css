@@ -2460,6 +2460,11 @@ and shows hidden orange lines near titles on About us page*/
   width: calc(100% - 30px);
 }
 
+
+.help .help-form-amount-left #paid-error {
+  top: 38px;
+}
+
 input[type="checkbox"] + label#oferta-error {
   left: 0;
 }
@@ -7771,13 +7776,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   ABOUT PAGE
 --------------*/
 .our_team_mob {
-  display: none;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .our_team_desk {
   display: none;  
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .other-projects-row {
@@ -7902,6 +7906,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 .our-team-front-wrapper {
   z-index: 3;
+}
+
+.about-us-project-section.about_section4  {
+  padding-top: 30px;
 }
 
 /*Our team section*/
@@ -8165,10 +8173,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 /*remove horizontal scroll*/
-.shortcode-fund-documents-desk,
+/* .shortcode-fund-documents-desk,
 .shortcode-fund-documents-mob {
-  overflow: hidden;
-}
+  overflow-x: hidden;
+} */
 
 @media screen and (max-width: 1300px) {
   #main-content .write_about_us_button_wrapper .help_button_single_block .vc_btn3 {
