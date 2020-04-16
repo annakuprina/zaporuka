@@ -7917,7 +7917,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*restyle builder Our team item block. Making inner blocks static not absolute.*/
 
 .aboutus_section3 .our_team_section .our-team-hover-wrapper {
-  padding: 20px;
+  padding: 20px 15px;
 }
 
 .aboutus_section3 .our_team_section  .team-member-excerpt-hover {
@@ -8172,6 +8172,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-bottom: 0;
 }
 
+.about-us-page-docs {
+  margin-top: 60px;
+}
 /*remove horizontal scroll*/
 /* .shortcode-fund-documents-desk,
 .shortcode-fund-documents-mob {
@@ -8458,6 +8461,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content .aboutus_section2 {
     font-size: 14px;
     line-height: 24px;
+  }
+
+  .about-us-project-section.about_section4  {
+    padding-top: 0;
   }
 }
 
