@@ -2462,7 +2462,7 @@ and shows hidden orange lines near titles on About us page*/
 
 
 .help .help-form-amount-left #paid-error {
-  top: 38px;
+  top: 38px !important;
 }
 
 input[type="checkbox"] + label#oferta-error {
@@ -8473,7 +8473,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   .about-us-project-section.about_section4  {
-    padding-top: 0;
+    padding-top: 20px;
   }
 }
 
