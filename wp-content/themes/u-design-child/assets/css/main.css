@@ -4366,12 +4366,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 }
 
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
   .home-page-section4-top-part {
     padding-left: 15px;
     padding-right: 15px;
   }
-}
+} */
 
 @media screen and (max-width: 500px) {
   .home-page-section4-top-part .h2-header-line {
@@ -8042,6 +8042,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 #wrapper-1  .aboutus-page--write-aboutus {
   width: 100%;
 }
+
+#wrapper-1  .aboutus-page--write-aboutus .vc_column-inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /*documents block*/
 #page-content .fund-documents-wrapper .document-title {
   margin-bottom: 20px;
@@ -8120,10 +8126,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin: auto;
 }
 
-.write-aboutus-wrapper .about_block6 > .vc_column_container {
+/* .write-aboutus-wrapper .about_block6 > .vc_column_container {
   padding-left: 15px;
   padding-right: 15px;
-}
+} */
 
 /* Write about us sider */
 .write-about-us-slick-desk .slick-track {
@@ -8152,6 +8158,16 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 .write-aboutus-wrapper .testimonials_section {
   padding-top: 24px;
+}
+
+.about-us-project-section .vc_grid.vc_row.vc_grid-gutter-30px {
+  margin-bottom: 0;
+}
+
+/*remove horizontal scroll*/
+.shortcode-fund-documents-desk,
+.shortcode-fund-documents-mob {
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1300px) {
@@ -8366,12 +8382,20 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     width: 291px;
     min-width: unset;
     padding-bottom: 20px;
+  }
 
+  #main-content .our_team_section .vc_grid-item {
+    padding-right: 0;
+  }
+
+  .aboutus_section3 .vc_grid.vc_row.vc_grid-gutter-30px .vc_pageable-slide-wrapper {
+    margin-right: 0;
   }
 
   .aboutus_section3 .our_team_section .our-team-hover-wrapper {
-    padding: 10px 5px;
-}
+    padding: 20px 10px;
+  }
+
   /*top part*/
   .our_team_section .team-member-title-hover {
     font-size: 18px;
@@ -8443,13 +8467,20 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content .aboutus_section2 .h2-about-first-title::before,
   #main-content .aboutus_section2 .h2-about-second-title::before,
   #main-content .aboutus_section3 .h2-header-line::before,
-  
   .write-aboutus-wrapper .h2-header-line::before {
     left: -14px;
   }
 
-  #main-content .about_section4 .h2-header-line::before {
-    left: -31px;
+  .write-aboutus-wrapper .testimonials_section .h2-header-line::before {
+    left: 0;
+  }
+
+  #main-content .about_section4.about-us-project-section .h2-header-line {
+    padding-left: 21px;
+  }
+
+  #main-content .about_section4.about-us-project-section .h2-header-line::before {
+    left: -14px;
   }
 
   #main-content  .aboutus_section3 {
