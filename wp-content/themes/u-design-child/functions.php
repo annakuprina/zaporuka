@@ -346,8 +346,8 @@ add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) 
 
     if ($currentLanguage === 'en') {
         return [
-            'method_title' => 'Nova Posta',
-            'block_title' => 'Enter Nova Posta department',
+            'method_title' => 'Nova Poshta',
+            'block_title' => 'Enter Nova Poshtaa department',
             'placeholder_area' => 'Select region',
             'placeholder_city' => 'Select City',
             'placeholder_warehouse' => 'Select department',
