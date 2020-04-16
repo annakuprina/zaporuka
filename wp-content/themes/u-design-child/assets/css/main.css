@@ -2462,7 +2462,7 @@ and shows hidden orange lines near titles on About us page*/
 
 
 .help .help-form-amount-left #paid-error {
-  top: 38px !important;
+  top: 35px !important;
 }
 
 input[type="checkbox"] + label#oferta-error {
@@ -2629,11 +2629,10 @@ input[type="checkbox"] + label#oferta-error {
     font-size: 12px;
   }
 
+  .help .help-form-amount-left #paid-error {
+    top: 39px !important;
+  }
 
-
-  /* .help .help-form-submit {
-    padding: 10px 12px;
-  } */
   .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
     width: calc(100% - 20px);
   }
@@ -7909,7 +7908,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 .about-us-project-section.about_section4  {
-  padding-top: 30px;
+  padding-top: 0px;
 }
 
 /*Our team section*/

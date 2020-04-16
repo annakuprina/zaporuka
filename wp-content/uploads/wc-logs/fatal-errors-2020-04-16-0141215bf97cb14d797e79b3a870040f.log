@@ -1,0 +1,4 @@
+2020-04-16T16:10:06+02:00 CRITICAL Out of memory (allocated 23068672) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 241
+
+2020-04-16T16:16:42+02:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 241
+
