@@ -1072,11 +1072,16 @@ function shortcode_write_about_us_mob(){
     ob_start(); ?>
     <!-- One Project page. Partners slider. Mobile  -->
     <div class="write-about-us-slick-mob">
-        <?php foreach( $writers_array_by_2 as $post_wrapper ){ ?>
+        <?php foreach( $writers_array_by_2 as $post_wrapper ){  ?>
             <!-- One slide -->
+            <a href="">
             <div class="write-about-us-slide">
-                <?php foreach( $post_wrapper as $post ){ ?>
-                    <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="">
+                <?php foreach( $post_wrapper as $post ){
+                    $link_article = get_post_meta($post->ID, 'link_article', true);
+                    ?>
+                    <a href="<?php echo $link_article; ?>" target="_blank">
+                        <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="">
+                    </a>
                 <?php } ?>
             </div><!--end project-partners-slide -->
         <?php } ?>
