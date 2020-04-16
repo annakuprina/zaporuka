@@ -7776,12 +7776,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   ABOUT PAGE
 --------------*/
 .our_team_mob {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .our_team_desk {
   display: none;  
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .other-projects-row {
@@ -8254,8 +8254,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     margin-top: 30px;
   }
 
-
-  
   .shortcode-fund-documents-desk {
     display: none;
   }
@@ -8264,10 +8262,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     left: -10px;
   }
 
-
-}
-
-@media screen and (max-width: 900px) {
   .shortcode-fund-documents-mob {
     opacity: 1;
     visibility: visible;
@@ -8279,6 +8273,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     bottom: -60px;
   }
 }
+
 
 @media screen and (max-width: 768px) {
   /*right sidebar*/
