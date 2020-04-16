@@ -133,6 +133,9 @@ if ($_POST['phone'] !== "") {
 	$user_phone = $_POST['phone'];
 }
 else{
+	global $woocommerce;
+	$order = new WC_Order($liq_order_id);
+	update_option($liq_order_id.'-user_phoner',$order->get_billing_phone());
 	$user_phone = '';
 }
 if(!isset($_POST['liqpay_post_id'])){
