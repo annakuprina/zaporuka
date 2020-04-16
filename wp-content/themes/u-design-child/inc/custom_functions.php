@@ -1074,7 +1074,6 @@ function shortcode_write_about_us_mob(){
     <div class="write-about-us-slick-mob">
         <?php foreach( $writers_array_by_2 as $post_wrapper ){  ?>
             <!-- One slide -->
-            <a href="">
             <div class="write-about-us-slide">
                 <?php foreach( $post_wrapper as $post ){
                     $link_article = get_post_meta($post->ID, 'link_article', true);
