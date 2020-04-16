@@ -34,7 +34,7 @@ $agree_link = !empty($options['agree_link_block_' . ICL_LANGUAGE_CODE]) ? $optio
                     <input type="hidden" name="hidden_content"  value="<?php echo site_url($home_url);?>"/>
                     <input type="hidden" name="url_page"  value="<?php echo site_url($home_url);?>"/>
                     <input type="hidden" name="ip"  value=[ip]/>
-                    <input type="hidden" name="pay_type"  value="pay"/>
+<!--                    <input type="hidden" name="pay_type"  value="pay"/>-->
                     <input type="hidden" name="subscribe_type"  value="month"/>
                     <input type="hidden" id="plata" name="plata" value="">
                     <input type="hidden" id="liqpay_post_id" name="liqpay_post_id"  value=""/>
@@ -383,7 +383,7 @@ function shortcode_friends_volunteers(  ){
                             ?>
                             <div class="friends-slide-row">
                                 <p class="friends-name"><?php echo $post->post_title;?></p>
-                                <a class="friends-link" href="<?php echo $friends_link;?>"><?php echo $friends_link_title;?></a>
+                                <a class="friends-link" href="<?php echo $friends_link;?>" target="_blank"><?php echo $friends_link_title;?></a>
                             </div>
                             <?php
                         }
@@ -410,7 +410,7 @@ function shortcode_friends_volunteers(  ){
                     foreach( $post_wrapper as $post ){
                         $partner_link = get_post_meta($post->ID, 'partner_site_link', true); ?>
                         <div class="home-parnters-img-wrapper">
-                            <a href="<?php echo $partner_link; ?>"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></a>
+                            <a href="<?php echo $partner_link; ?>" target="_blank"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></a>
                         </div>
                         <?php
                     }
@@ -429,7 +429,7 @@ function shortcode_friends_volunteers(  ){
                     foreach( $post_wrapper as $post ){
                         $partner_link = get_post_meta($post->ID, 'partner_site_link', true); ?>
                         <div class="home-parnters-img-wrapper">
-                            <a href="<?php echo $partner_link; ?>"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></a>
+                            <a href="<?php echo $partner_link; ?>" target="_blank"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></a>
                         </div>
                         <?php
                     }
@@ -480,9 +480,8 @@ function send_cancel_subscription_email_function() {
         require_once('../../../wp-config.php');
 
     $user_mail = sanitize_text_field( $_POST['client_mail'] );
-    $user_phone = sanitize_text_field( $_POST['client_tel'] );
 
-    $sql = "Select order_id, summa, comments from {$table_liqpay} where email = '{$user_mail}' and sender_phone like '%{$user_phone}%' and status = 'subscribed'";
+    $sql = "Select order_id, summa, comments from {$table_liqpay} where email = '{$user_mail}' and status = 'subscribed'";
     $sql_res = $wpdb->get_results($sql);
 
 
@@ -522,7 +521,7 @@ function send_cancel_subscription_email_function() {
                 $project_name = '';
             }
 
-            $mail_body .= $order['comments'] . " в розмiрi ". $order['summa'] . $symbol . " " . $project_name . " - ";
+            $mail_body .= $order['comments'] . " в розмiрi " . $order['summa'] . $symbol . " " . $project_name . " - ";
 			$mail_body .= '<a href="'. $link . $order['order_id'].'">' . $link . $order['order_id'] . '</a>' . "<br>";
     	}	   
 
