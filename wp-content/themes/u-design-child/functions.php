@@ -327,8 +327,38 @@ add_filter('wc_ukr_shipping_language', function ($lang) {
     }
     return 'ua';
 });
-add_filter('woocommerce_checkout_get_value','__return_empty_string', 1, 1);
-add_filter('woocommerce_form_field', '__return_empty_string', 1, 1);
+//add_filter('woocommerce_checkout_get_value','__return_empty_string', 1, 1);
+//add_filter('woocommerce_form_field', '__return_empty_string', 1, 1);
+add_filter( 'woocommerce_checkout_get_value', 'reigel_empty_checkout_shipping_fields', 10, 2 );
+function reigel_empty_checkout_shipping_fields( $value, $input ) {
+    /*
+    Method 1
+    you can check the field if it has 'shipping_' on it...
+    if ( strpos( $input, 'shipping_' ) !== FALSE ) {
+        $value = '';
+    }
+
+    Method 2
+    put all the fields you want in an array...
+    */
+    $shipping_fields = array(
+        'billing_first_name',
+        'billing_last_name',
+        'billing_company',
+        'billing_phone',
+        'billing_email',
+        'nova_poshta_shipping_area',
+        'nova_poshta_shipping_city',
+        'nova_poshta_shipping_warehouse',
+        'order_comments'
+    );
+
+    if ( in_array( $input, $shipping_fields ) ) {
+        $value = '';
+    }
+
+    return $value;
+}
 /*  Add translations for  wc ukr shipping*/
 add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) {
     $currentLanguage = wp_doing_ajax() ? $_COOKIE['pll_language'] : pll_current_language();
