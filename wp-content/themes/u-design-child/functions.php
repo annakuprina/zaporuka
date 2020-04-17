@@ -7,6 +7,8 @@
  */
 
 // Exit if accessed directly.
+use kirillbdev\WCUkrShipping\Services\StorageService;
+
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 define( 'CHILD_DIR', get_stylesheet_directory_uri() );
 define("THEME_DIR", get_stylesheet_directory());
@@ -347,6 +349,7 @@ function reigel_empty_checkout_shipping_fields( $value, $input ) {
         'billing_company',
         'billing_phone',
         'billing_email',
+        'shipping_country',
         'nova_poshta_shipping_area',
         'nova_poshta_shipping_city',
         'nova_poshta_shipping_warehouse',
@@ -356,7 +359,12 @@ function reigel_empty_checkout_shipping_fields( $value, $input ) {
     if ( in_array( $input, $shipping_fields ) ) {
         $value = '';
     }
-
+    $StorageService = new StorageService;
+    if ($StorageService::getValue('wc_ukr_shipping_np_selected_area')) {
+        $StorageService::setValue('wc_ukr_shipping_np_selected_area', '');
+        $StorageService::setValue('wc_ukr_shipping_np_selected_warehouse', '');
+        $StorageService::setValue('wc_ukr_shipping_np_selected_city', '');
+    }
     return $value;
 }
 /*  Add translations for  wc ukr shipping*/
