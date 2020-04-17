@@ -329,20 +329,9 @@ add_filter('wc_ukr_shipping_language', function ($lang) {
     }
     return 'ua';
 });
-//add_filter('woocommerce_checkout_get_value','__return_empty_string', 1, 1);
-//add_filter('woocommerce_form_field', '__return_empty_string', 1, 1);
+
 add_filter( 'woocommerce_checkout_get_value', 'reigel_empty_checkout_shipping_fields', 10, 2 );
 function reigel_empty_checkout_shipping_fields( $value, $input ) {
-    /*
-    Method 1
-    you can check the field if it has 'shipping_' on it...
-    if ( strpos( $input, 'shipping_' ) !== FALSE ) {
-        $value = '';
-    }
-
-    Method 2
-    put all the fields you want in an array...
-    */
     $shipping_fields = array(
         'billing_first_name',
         'billing_last_name',
