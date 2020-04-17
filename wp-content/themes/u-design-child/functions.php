@@ -328,6 +328,7 @@ add_filter('wc_ukr_shipping_language', function ($lang) {
     return 'ua';
 });
 add_filter('woocommerce_checkout_get_value','__return_empty_string', 1, 1);
+add_filter('wc_ukr_shipping', '__return_empty_string', 1, 1);
 /*  Add translations for  wc ukr shipping*/
 add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) {
     $currentLanguage = wp_doing_ajax() ? $_COOKIE['pll_language'] : pll_current_language();
