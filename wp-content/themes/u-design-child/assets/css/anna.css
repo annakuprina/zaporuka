@@ -1104,7 +1104,7 @@ footer a.designer-link {
 }
 .cancel_subscription_form_success_block{display: none;}
 
-.help-form-inner-wrapper .cancel_subscription_form .help-form-submit-oferta{padding-bottom: 0;}
+/* .help-form-inner-wrapper .cancel_subscription_form .help-form-submit-oferta{padding-bottom: 0;}
 input[type="checkbox"]:checked,
 input[type="checkbox"]:not(:checked) {
   position: absolute;
@@ -1175,8 +1175,12 @@ input[type="checkbox"]:not(:checked) + label.error:before {
 input[type="checkbox"]:checked + label.error:after,
 input[type="checkbox"]:not(:checked) + label.error:after {
   top: -17px;
-}
+} */
 
+.help-form-oferta-wrapper {
+  position: relative;
+  left: 26px;
+}
 /*        Shop  page     */
 .woocommerce #sidebar {
   display: none;

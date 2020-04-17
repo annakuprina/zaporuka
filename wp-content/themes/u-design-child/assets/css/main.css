@@ -2391,11 +2391,11 @@ and shows hidden orange lines near titles on About us page*/
 .help .help-form-inner-wrapper .help-form-text {
   padding-bottom: 23px;
 }
-
+/* 
 #wrapper-1 .help-form-inner-wrapper .help-form-oferta label:not(.error) {
   padding-left: 24px;
   margin-right: -7px;
-}
+} */
 .help_form_wrapper .help-form-inner-wrapper .help-form-amount-right .amount-button:not(:last-child) {
   border-right: 1px solid #eaeaea;
 }
@@ -2454,6 +2454,7 @@ and shows hidden orange lines near titles on About us page*/
 }
 
 .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
+  position: relative;
   background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
   padding: 14px 30px;
   min-width: 120px;
@@ -2465,13 +2466,13 @@ and shows hidden orange lines near titles on About us page*/
   top: 35px !important;
 }
 
-input[type="checkbox"] + label#oferta-error {
+/* input[type="checkbox"] + label#oferta-error {
   left: 0;
 }
 
 #wrapper-1 .help_form_wrapper label.error {
   top: 34px;
-}
+} */
 
 .help-item-info {
   display: none;
@@ -2556,6 +2557,21 @@ input[type="checkbox"] + label#oferta-error {
   font-family: "Raleway-Bold";
 }
 
+.help #oferta {
+  margin-right: 9px;
+  margin-left: 2px;
+}
+  
+
+#oferta-error {
+  top: 27px;
+  left: 25px;
+}
+
+.help_form_wrapper .help-form-inner-wrapper label.error {
+  top: 36px;
+}
+
 .help .help-item-link:after {
   content: url(/wp-content/themes/u-design-child//img/arrow-black.svg);
   position: absolute;
@@ -2567,11 +2583,11 @@ input[type="checkbox"] + label#oferta-error {
 }
 
 .help-form-submit-wrapper {
-  width: 50%;
+  width: 49%;
 }
 
 .help-form-oferta-wrapper {
-  width: 50%;
+  width: 58%;
 }
 
 .help-form-submit-wrapper .help-form-submit {
@@ -2612,7 +2628,9 @@ input[type="checkbox"] + label#oferta-error {
   padding-bottom: 22px;
 }
 
-
+.help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+  right: calc(50% - 44px);
+}
 
 @media screen and (max-width: 1200px) {
   .help .help-item {
@@ -2633,10 +2651,26 @@ input[type="checkbox"] + label#oferta-error {
     top: 40px !important;
   }
 
+  .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 56px);
+  }
+
+  .help .help-form-submit-wrapper {
+    /* width: 125px;
+    min-width: 125px; */
+    width: 160px;
+    min-width: 160px;
+  }
+
   .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
     width: calc(100% - 20px);
   }
 
+  
+  .help  .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
+    width: 100%;
+  }
+  
   .help .help_form_wrapper {
     min-width: unset;
   }
@@ -2710,11 +2744,30 @@ input[type="checkbox"] + label#oferta-error {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .help .help-form-oferta-wrapper {
+    position: stыatic;
+    margin-left: 10px;
+    width: 48%;
+  }
 }
 
 @media screen and (max-width: 900px) {
   .help .help-form-inner-wrapper {
     padding: 20px;
+  }
+
+  .help .help-form-oferta-wrapper {
+    width: 57%;
+  }
+
+  .help .help-form-submit-wrapper {
+    width: 130px;
+    min-width: 130px;
+  }
+
+  .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 57px);
   }
 }
 
@@ -2728,6 +2781,10 @@ input[type="checkbox"] + label#oferta-error {
 
   .help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left {
     margin-right: 30px;
+  }
+
+  .help .help-form-submit-wrapper {
+    width: 100%;
   }
 
   .help .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email,
@@ -2757,6 +2814,10 @@ input[type="checkbox"] + label#oferta-error {
     width: 100%;
   }
 
+  .help #oferta {
+    margin-left: 0;
+  }
+
   .help .help_form_wrapper {
     max-width: unset;
   }
@@ -2781,6 +2842,11 @@ input[type="checkbox"] + label#oferta-error {
   .help .help-item:nth-child(1) {
     border-top: 1px solid #ffbe8e4f;
   }
+
+  .help .help-item:nth-child(3) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
 
   .help .help-form-inner-wrapper .help-form-submit-oferta {
     flex-direction: column;
@@ -2811,9 +2877,10 @@ input[type="checkbox"] + label#oferta-error {
     padding-bottom: 14px;
   }
 
-  .help  .help-form-submit {
+  .help .help-form-submit {
     width: 100%;
     text-align: center;
+
   }
 
   .help-form-submit-wrapper {
@@ -2821,12 +2888,19 @@ input[type="checkbox"] + label#oferta-error {
     margin-bottom: 20px;
   }
   
+  
   .help-form-oferta-wrapper {
     width: 100%;
     padding-left: 7px;
   }
 
-  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+  .help .help-form-oferta-wrapper {
+    margin-left: 0;
+    width: 100%;
+    padding-left: 0;
+  }
+  
+  .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
     right: calc(50% - 65px);
   }
 }
@@ -3386,7 +3460,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
     padding-bottom: 0;
   }
 
-  .home-first-post-image .help-form-oferta-wrapper {
+  .help-form-oferta-wrapper {
     width: 100%;
   }
 
@@ -4118,6 +4192,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
 #main-content .home-page-section3 .wpb_text_column {
   overflow: hidden;
+  padding-bottom: 59px;
 }
 
 #main-content .home-page-section3 .vc_column-inner {
@@ -4384,19 +4459,25 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 
   .home-page-section4-top-part .wpb_content_element {
-    /* padding-left: 5px; */
+    padding-left: 5px;
     font-size: 14px;
     line-height: 24px;
     font-family: "Proxima-Nova-Regular";
     margin-bottom: 15px;
   }
 
-  .home-page-section4-top-part h2.h2-header-line::before {
-    top: 15px;
-    width: 20px;
-    left: -31px;
+ 
+
+  #main-content .home-page-section4-top-part > .vc_column-inner {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
+  .home-page-section4-top-part h2.h2-header-line::before {
+    top: 15px;
+    width: 23px;
+    left: -31px;
+  }
 }
 
 
@@ -5572,7 +5653,7 @@ color: #d2d2d2;
   }
 
   .projects-section .other-projects-row .singl-project-bottom-part {
-    padding: 0px 15px;
+    padding: 0px 20px;
   }
 
   .projects-section .vc_gitem_row .vc_gitem-col {
@@ -5580,8 +5661,16 @@ color: #d2d2d2;
   }
 
   .projects-section .other-projects-row .singl-project-link-wrapper {
-    left: 15px;
+    left: 20px;
     padding: 15px 0 24px 0;
+  }
+
+  .wpb_text_column.wpb_content_element.project_banner_section1_item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .project_banner_section1_help {
+    margin-right: 0;
   }
 }
 
@@ -5599,7 +5688,7 @@ color: #d2d2d2;
   }
 
   #main-content .projects-section .vc_grid-item {
-    width: calc((100% - 30px) / 2);
+    width: calc((100% - 20px) / 2);
   }
 
   .wpb-js-composer
@@ -5660,12 +5749,16 @@ color: #d2d2d2;
     padding: 0;
   }
 }
-/* 
+
 @media screen and (max-width: 500px) {
   .one-project-progress {
     width: 100%;
   }
-} */
+
+  .projects-section .singl-project-bottom-part .vc_gitem-row-position-top:nth-child(2) .vc_gitem-col {
+    padding: 21px 0 10px 0;
+  }
+} 
 
 /*---------------------------
   ONE PROJECT PAGE. SLIDERS
@@ -7372,6 +7465,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   width: calc(100% - 40px);
 }
 
+#ModalHelpForm .help-form-subscribe-right {
+  padding-left: 0 !important;
+}
+
 @media screen and (max-width: 1200px) {
   #ModalHelpForm .closemodale {
     right: 20px;
@@ -7379,7 +7476,72 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 }
 
+@media screen and (max-width: 1024px) {
+  #ModalHelpForm .help-form-inner-wrapper {
+    padding: 25px;
+  }
+
+  #ModalHelpForm .help-form-submit-wrapper {
+    width: 120px;
+    margin-bottom: 0;
+  }
+
+  #ModalHelpForm .help-form-oferta-wrapper {
+    width: 66%;
+    left: 15px;
+  }
+
+  #ModalHelpForm .help-form-inner-wrapper .help-form-text {
+    line-height: 20px;
+  }
+
+  #ModalHelpForm .submit-btn {
+    padding: 14px 0 14px 15px;
+    min-width: 120px;
+    font-size: 14px;
+    width: 120px;
+    text-align: left;
+  }
+
+  #ModalHelpForm .help-form-subscribe-left,
+  #ModalHelpForm .help-form-subscribe-right {
+    width: 50% !important;
+  }
+
+  #ModalHelpForm .help-form-subscribe-right {
+    padding-left: 16px !important;
+  }
+
+  #ModalHelpForm .help-form-submit::after {
+    right: 9px;
+  }
+}
+
 @media screen and (max-width: 767px) {
+  #ModalHelpForm .help-form-submit-wrapper {
+    width: 100%;
+  }
+
+  #ModalHelpForm .submit-btn {
+    padding: 14px 0 14px 0px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  #ModalHelpForm .help-form-oferta-wrapper {
+    left: 0;
+    width: 100%;
+  }
+
+  #ModalHelpForm  .help-form-oferta-wrapper {
+    padding-left: 0;
+  }
+
+  #ModalHelpForm .help-form-submit::after {
+    right: calc(100%/2 - 65px);
+  }
+
   #ModalHelpForm.opened .modal-dialog {
     height: calc(100% - 110px);
     overflow-y: scroll;
@@ -7397,7 +7559,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   #ModalHelpForm.opened .modal-dialog::-webkit-scrollbar-thumb {
-    background-color: #e78b48;
+    background-color: rgba(0,0,0,.2);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #ModalHelpForm .help-form-subscribe-right {
+    padding-left: 0 !important;
   }
 }
 
@@ -7405,6 +7573,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 #sendSmsModalfromHeader.opened .modal-dialog{
   top: 50%;
   transform: translateY(-50%);
+  max-height: calc(100% - 160px);
+  overflow-y: scroll;
 }
 /*----------
   404 PAGE
@@ -8467,6 +8637,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content .aboutus_section2 {
     font-size: 14px;
     line-height: 24px;
+    padding-top: 46px;
   }
 
   .about-us-project-section.about_section4  {
@@ -8493,12 +8664,22 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 @media screen and (max-width: 500px) {
 
+  .aboutus_section2 > .wpb_column > .vc_column-inner > .wpb_wrapper {
+    padding: 0 20px;
+  }
+
+  .aboutus_section2 h2.h2-header-line {
+    padding-left: 0;
+  }
+
+  #main-content .aboutus_section2 .h2-about-second-title::before {
+    left: -35px;
+  }
   .about_section4 .other-projects-row .one-project-progress-wrapper {
     padding: 0 5px;
   }
 
   #main-content .aboutus_section2 .h2-about-first-title::before,
-  #main-content .aboutus_section2 .h2-about-second-title::before,
   #main-content .aboutus_section3 .h2-header-line::before,
   .write-aboutus-wrapper .h2-header-line::before {
     left: -14px;
@@ -8538,6 +8719,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     margin-bottom: 20px;
   }
 
+  #main-content .aboutus_section2 .h2-about-second-title {
+    margin-bottom: 20px;
+  }
+
   .write-aboutus-wrapper .about_block6 .vc_column_container>.vc_column-inner {
     padding-left: 0;
     padding-right: 0;
@@ -8567,9 +8752,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     padding-top: 2px !important;
   }
 
-  #main-content .aboutus_section2 .h2-about-second-title {
-    margin-bottom: 39px;
-  }
+
 
   .aboutus_section2 .about-us-text1 {
     padding-left: 20px;
