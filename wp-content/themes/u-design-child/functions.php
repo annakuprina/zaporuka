@@ -632,3 +632,43 @@ add_filter('acf/prepare_field', function ($field) {
     }
     return $field;
 }, 10, 1);
+
+add_filter( 'page_rewrite_rules', 'page_rewrite_rules' );
+
+function page_rewrite_rules( $rules ) {
+    unset( $rules['(.?.+?)(/[0-9]+)?/?$'] );     // Before WordPress 4.4
+    unset( $rules['(.?.+?)(?:/([0-9]+))?/?$'] ); // After WordPress 4.4, see https://core.trac.wordpress.org/changeset/34492
+
+    $rules['(.?.+?)?/?$'] = 'index.php?pagename=$matches[1]';
+
+    return $rules;
+}
+add_action( 'init','flush_rewrite_rules' );
+function flush_rewrite_rules() {
+    global $wp_rewrite;
+    $wp_rewrite->flush_rules();
+}
+
+add_filter( 'wp_unique_post_slug', 'wp_unique_post_slug_allow_numeric_page_slugs', 10, 6 );
+function wp_unique_post_slug_allow_numeric_page_slugs( $slug, $post_ID, $post_status, $post_type, $post_parent, $original_slug ) {
+    global $wpdb;
+
+    // We're only interested in pages with attempted numeric slugs that got changed
+    if ( 'page' != $post_type || ! is_numeric( $original_slug ) || $slug === $original_slug ) {
+        return $slug;
+    }
+
+    // Was there actually a conflict or was a suffix just added due to the preg_match() call in wp_unique_post_slug() ?
+    $post_name_check = $wpdb->get_var( $wpdb->prepare(
+        "SELECT post_name FROM $wpdb->posts WHERE post_name = %s AND post_type IN ( %s, 'attachment' ) AND ID != %d AND post_parent = %d LIMIT 1",
+        $original_slug, $post_type, $post_ID, $post_parent
+    ) );
+
+    // There really is a conflict due to an existing page so keep the modified slug
+    if ( $post_name_check ) {
+        return $slug;
+    }
+
+    // Otherwise give us the slug we wanted
+    return $original_slug;
+}
