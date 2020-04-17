@@ -2630,7 +2630,7 @@ input[type="checkbox"] + label#oferta-error {
   }
 
   .help .help-form-amount-left #paid-error {
-    top: 39px !important;
+    top: 40px !important;
   }
 
   .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
@@ -4384,7 +4384,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 
   .home-page-section4-top-part .wpb_content_element {
-    padding-left: 5px;
+    /* padding-left: 5px; */
     font-size: 14px;
     line-height: 24px;
     font-family: "Proxima-Nova-Regular";
@@ -4424,11 +4424,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 @media screen and (max-width: 500px) {
-  .home-page-section4-top-part .h2-header-line {
-    padding-left: 5px;
-    margin-bottom: 20px;
-  }
-
   .home-page-section4-tabs .vc_column_container {
     margin-bottom: 20px;
   }
@@ -7775,11 +7770,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   ABOUT PAGE
 --------------*/
 .our_team_mob {
+  display: none;  
   overflow: hidden;
 }
 
 .our_team_desk {
-  display: none;  
   overflow: hidden;
 }
 
@@ -7825,7 +7820,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 .write_about_us_button_wrapper .help_button_single_block .vc_btn3::after {
-    padding-left: 8px;
+  padding-left: 8px;
 }
 
 
@@ -7890,7 +7885,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #wrapper-1 .our-team-middle-block {
   opacity: 0.8;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.7); */
   line-height: 23px;
   font-family: "Raleway-Light";
 }
@@ -7916,7 +7911,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*restyle builder Our team item block. Making inner blocks static not absolute.*/
 
 .aboutus_section3 .our_team_section .our-team-hover-wrapper {
-  padding: 20px 15px;
+  padding: 63px 30px;
 }
 
 .aboutus_section3 .our_team_section  .team-member-excerpt-hover {
@@ -7940,9 +7935,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 .aboutus_section3 .our-team-hover-wrapper .vc_gitem-row-position-bottom {
-  position: static;
   padding: 0;
   transform: none;
+  position: absolute;
+  margin: 0px 30px 31px 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .aboutus_section3 .our-team-hover-wrapper.vc-gitem-zone-height-mode-auto:before {
@@ -8175,12 +8172,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 .about-us-page-docs {
   margin-top: 60px;
 }
-/*remove horizontal scroll*/
-/* .shortcode-fund-documents-desk,
-.shortcode-fund-documents-mob {
-  overflow-x: hidden;
-} */
 
+/* about page media */
 @media screen and (max-width: 1300px) {
   #main-content .write_about_us_button_wrapper .help_button_single_block .vc_btn3 {
     left: 0;
@@ -8226,6 +8219,14 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   
   .about_section4 .other-projects-row .singl-project-link-wrapper {
     left: 10px;
+  }
+
+  .aboutus_section3 .our_team_section .our-team-hover-wrapper {
+    padding: 30px 16px;
+  }
+
+  .aboutus_section3 .our-team-hover-wrapper .vc_gitem-row-position-bottom {
+    margin: 0px 16px 31px 16px;
   }
 }
 
@@ -8406,10 +8407,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     margin-right: 0;
   }
 
-  .aboutus_section3 .our_team_section .our-team-hover-wrapper {
-    padding: 20px 10px;
-  }
-
+  
   /*top part*/
   .our_team_section .team-member-title-hover {
     font-size: 18px;
@@ -8474,6 +8472,23 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .about-us-project-section.about_section4  {
     padding-top: 20px;
   }
+
+  
+  .aboutus_section3 .our_team_section .our-team-hover-wrapper {
+    padding: 40px 20px 20px 20px;
+  }
+
+  .aboutus_section3 .our_team_section .our-team-hover-wrapper .vc_gitem-zone-mini {
+    padding: 0;
+  }
+
+  .aboutus_section3 .our_team_section .our-team-hover-wrapper .vc_gitem-col {
+    padding: 0;
+  }
+
+  .aboutus_section3 .our_team_section .our-team-hover-wrapper .vc_gitem-row-position-bottom {
+    margin: 0px 20px 40px 20px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -8530,6 +8545,15 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .write-aboutus-wrapper .testimonials_section {
     padding-top: 33px;
+  }
+
+  .about-us-page-docs .h2-header-line {
+    padding-left: 21px;
+  }
+
+  .about-us-page-docs h2.h2-header-line::before {
+    width: 23px;
+    left: -14px;
   }
 }
 
