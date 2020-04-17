@@ -8555,6 +8555,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     width: 23px;
     left: -14px;
   }
+
+  .aboutus_section3 .our_team_section .our-team-hover-wrapper .vc_gitem-row-position-bottom .vc_gitem-col {
+    padding-top: 15px;
+  }
 }
 
 @media screen and (max-width: 400px) {
