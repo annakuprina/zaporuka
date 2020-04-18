@@ -2449,7 +2449,7 @@ and shows hidden orange lines near titles on About us page*/
 
 .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
   position: absolute;
-  right: calc(50% - 49px);
+  right: calc(50% - 47px);
   top: 8px;
 }
 
@@ -2557,15 +2557,15 @@ and shows hidden orange lines near titles on About us page*/
   font-family: "Raleway-Bold";
 }
 
-.help #oferta {
+#oferta {
   margin-right: 9px;
   margin-left: 2px;
 }
   
 
 #oferta-error {
-  top: 27px;
-  left: 25px;
+  top: 25px;
+  left: 26px;
 }
 
 .help_form_wrapper .help-form-inner-wrapper label.error {
@@ -2629,7 +2629,22 @@ and shows hidden orange lines near titles on About us page*/
 }
 
 .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
-  right: calc(50% - 44px);
+  right: calc(50% - 46px);
+}
+
+html[lang="ru-RU"] .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+  right: calc(50% - 38px);
+}
+
+html[lang="en-US"] .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+  right: calc(50% - 38px);
+}
+
+.help #oferta-error {
+  left: 27px;
+  top: 24px;
+  line-height: 13px;
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -2643,34 +2658,10 @@ and shows hidden orange lines near titles on About us page*/
 }
 
 @media screen and (max-width: 1024px) {
-  .help .help-form-inner-wrapper .help-form-oferta label:not(.error) {
-    font-size: 12px;
-  }
-
   .help .help-form-amount-left #paid-error {
     top: 40px !important;
   }
 
-  .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
-    right: calc(50% - 56px);
-  }
-
-  .help .help-form-submit-wrapper {
-    /* width: 125px;
-    min-width: 125px; */
-    width: 160px;
-    min-width: 160px;
-  }
-
-  .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
-    width: calc(100% - 20px);
-  }
-
-  
-  .help  .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
-    width: 100%;
-  }
-  
   .help .help_form_wrapper {
     min-width: unset;
   }
@@ -2746,9 +2737,34 @@ and shows hidden orange lines near titles on About us page*/
   }
 
   .help .help-form-oferta-wrapper {
-    position: stыatic;
+    position: static;
     margin-left: 10px;
     width: 48%;
+    width: unset;
+  }
+
+  .help .help-form-submit-wrapper {
+    width: 160px;
+    min-width: 160px;
+  }
+
+  .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
+    width: calc(100% - 20px);
+  }
+  
+  .help  .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
+    width: 100%;
+  }
+
+  .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 61px);
+  }
+  html[lang="en-US"] .help .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 52px);
+  }
+
+  html[lang="ru-RU"] .help .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 52px);
   }
 }
 
@@ -2757,21 +2773,49 @@ and shows hidden orange lines near titles on About us page*/
     padding: 20px;
   }
 
-  .help .help-form-oferta-wrapper {
-    width: 57%;
-  }
-
   .help .help-form-submit-wrapper {
     width: 130px;
     min-width: 130px;
   }
 
   .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
-    right: calc(50% - 57px);
+    right: calc(50% - 53px);
+  }
+
+  .help .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
+    padding: 14px 0px 14px 19px;
+    text-align: left;
+  }
+
+  html[lang="en-US"] .help .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
+    padding: 14px 0px 14px 34px;
+  }
+
+  html[lang="ru-RU"] .help .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
+    padding: 14px 0px 14px 29px;
+  }
+
+  html[lang="ru-RU"] .help .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 44px);
+  }
+
+  html[lang="en-US"] .help .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 44px);
+  }
+
+  .help .help-form-inner-wrapper .help-form-oferta label:not(.error) {
+    font-size: 12px;
+  }
+
+  .help #oferta-error {
+    left: 27px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  .help #oferta-error {
+    left: 25px;
+  }
 
   .help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left,
   .help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-right {
@@ -2891,7 +2935,6 @@ and shows hidden orange lines near titles on About us page*/
   
   .help-form-oferta-wrapper {
     width: 100%;
-    padding-left: 7px;
   }
 
   .help .help-form-oferta-wrapper {
@@ -2899,9 +2942,30 @@ and shows hidden orange lines near titles on About us page*/
     width: 100%;
     padding-left: 0;
   }
-  
+
+  .help .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn,
+  html[lang="ru-RU"] .help .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn,
+  html[lang="en-US"] .help .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
+    text-align: center;
+    padding: 14px 0px 14px 0;
+  }
+
+
+  /*orange arrow for diffenent lang*/
   .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
     right: calc(50% - 65px);
+  }
+
+  html[lang="ru-RU"] .help .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 56px);
+  }
+
+  html[lang="en-US"] .help .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 56px);
+  }
+
+  .help .help-form-inner-wrapper .help-form-oferta label:not(.error) {
+    font-size: 14px;
   }
 }
 
@@ -3383,6 +3447,14 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 .home .help-form-inner-wrapper .help-form-submit-oferta {
   padding-bottom: 15px;
 }
+
+html[lang="ru-RU"] .home .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+  right: calc(50% - 40px);
+}
+
+html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+  right: calc(50% - 38px);
+}
 /*end desrease the height of payment form on main page*/
 
 
@@ -3411,7 +3483,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 @media screen and (max-width: 1024px) {
-
+  .home .help-form-oferta-wrapper {
+    position: static;
+  }
   
   .home .homepage-banner > .wpb_column > .vc_column-inner {
     padding-top: 107px;
@@ -3480,6 +3554,14 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
   .home .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
     right: calc(100%/2 - 65px);
+  }
+
+  html[lang="ru-RU"] .home .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 55px);
+  }
+
+  html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 55px);
   }
 
   .home-first-post-image .help-form-inner-wrapper .help-form-email-tel {
@@ -5727,17 +5809,13 @@ color: #d2d2d2;
     width: 100%;
   }
 
-  .project_banner_section1_right .wpb_wrapper {
-    justify-content: space-between;
-  }
-
   .project_banner_section1_item,
   .project_banner_section1_help {
     width: calc((100% - 10px) / 2);
     height: unset;
-    margin-right: 0;
     margin-bottom: 9px;
     padding: 20px;
+    max-width: 200px;
   }
 
   .project_banner_section1_help {
@@ -5747,6 +5825,10 @@ color: #d2d2d2;
   .vc_row.vc_column-gap-10
     > .vc_column_container.project_banner_section1_right {
     padding: 0;
+  }
+
+  .wpb_text_column.wpb_content_element.project_banner_section1_item:not(:nth-child(2n)) {
+    margin-right: 10px;
   }
 }
 
@@ -7487,7 +7569,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   #ModalHelpForm .help-form-oferta-wrapper {
-    width: 66%;
     left: 15px;
   }
 
@@ -7495,12 +7576,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     line-height: 20px;
   }
 
-  #ModalHelpForm .submit-btn {
-    padding: 14px 0 14px 15px;
-    min-width: 120px;
-    font-size: 14px;
-    width: 120px;
-    text-align: left;
+  #ModalHelpForm .help .help-form-oferta-wrapper {
+    margin-left: 5px;
   }
 
   #ModalHelpForm .help-form-subscribe-left,
@@ -7512,34 +7589,81 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     padding-left: 16px !important;
   }
 
-  #ModalHelpForm .help-form-submit::after {
-    right: 9px;
+  /* #ModalHelpForm .submit-btn {
+    padding: 14px 0 14px 15px;
+    min-width: 120px;
+    font-size: 14px;
+    width: 120px;
+    text-align: left;
   }
+
+  html[lang="ru-RU"] #ModalHelpForm .submit-btn {
+    padding: 14px 0 14px 25px;
+  }
+
+  html[lang="en-US"] #ModalHelpForm .submit-btn {
+    padding: 14px 0 14px 25px;
+  }
+
+  #ModalHelpForm .help-form-submit::after {
+    right: 50px;
+  }
+
+  html[lang="ru-RU"] #ModalHelpForm .help-form-submit::after {
+    right: 56px;
+  }
+
+  html[lang="en-US"] #ModalHelpForm .help-form-submit::after {
+    right: 61px;
+  } */
+
+  
 }
+
+/* @media screen and (max-width: 900px) {
+  #ModalHelpForm .help-form-submit::after {
+    right: 20px;
+  }
+
+  html[lang="ru-RU"] #ModalHelpForm .help-form-submit::after {
+    right: 28px;
+  }
+  html[lang="en-US"] #ModalHelpForm .help-form-submit::after {
+    right: 32px;
+  }
+} */
+
 
 @media screen and (max-width: 767px) {
   #ModalHelpForm .help-form-submit-wrapper {
     width: 100%;
   }
 
-  #ModalHelpForm .submit-btn {
+  #ModalHelpForm .submit-btn,
+  html[lang="ru-RU"] #ModalHelpForm .submit-btn,
+  html[lang="en-US"] #ModalHelpForm .submit-btn {
     padding: 14px 0 14px 0px;
     text-align: center;
     margin-bottom: 20px;
     width: 100%;
   }
 
+  #ModalHelpForm .help .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 65px);
+  }
+
+  html[lang="ru-RU"] #ModalHelpForm .help .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 56px);
+  }
+
+  html[lang="en-US"] #ModalHelpForm .help .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 56px);
+  }
+
   #ModalHelpForm .help-form-oferta-wrapper {
     left: 0;
     width: 100%;
-  }
-
-  #ModalHelpForm  .help-form-oferta-wrapper {
     padding-left: 0;
-  }
-
-  #ModalHelpForm .help-form-submit::after {
-    right: calc(100%/2 - 65px);
   }
 
   #ModalHelpForm.opened .modal-dialog {
