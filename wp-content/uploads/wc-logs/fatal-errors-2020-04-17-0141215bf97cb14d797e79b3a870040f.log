@@ -1,0 +1,64 @@
+2020-04-17T13:11:58+02:00 CRITICAL Out of memory (allocated 12582912) (tried to allocate 77824 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\classes\shortcodes\vc-custom-heading.php доступно 79
+
+2020-04-17T13:11:58+02:00 CRITICAL Out of memory (allocated 12582912) (tried to allocate 77824 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\classes\shortcodes\vc-custom-heading.php доступно 79
+
+2020-04-17T13:13:12+02:00 CRITICAL Out of memory (allocated 12582912) (tried to allocate 28672 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\params\vc_grid_item\shortcodes.php доступно 134
+
+2020-04-17T13:13:18+02:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 4096 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\params\iconpicker\iconpicker.php доступно 187
+
+2020-04-17T13:13:22+02:00 CRITICAL Out of memory (allocated 10485760) (tried to allocate 77824 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\classes\shortcodes\vc-custom-heading.php доступно 79
+
+2020-04-17T13:15:00+02:00 CRITICAL Out of memory (allocated 12582912) (tried to allocate 77824 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\classes\shortcodes\vc-custom-heading.php доступно 79
+
+2020-04-17T13:15:43+02:00 CRITICAL Out of memory (allocated 12582912) (tried to allocate 77824 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\classes\shortcodes\vc-custom-heading.php доступно 79
+
+2020-04-17T13:17:21+02:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 36864 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 568
+
+2020-04-17T13:17:22+02:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 57344 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\params\load.php доступно 23
+
+2020-04-17T13:17:23+02:00 CRITICAL Out of memory (allocated 10485760) (tried to allocate 77824 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\classes\shortcodes\vc-custom-heading.php доступно 79
+
+2020-04-17T13:17:24+02:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 36864 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 568
+
+2020-04-17T13:18:02+02:00 CRITICAL Out of memory (allocated 10485760) (tried to allocate 118784 bytes) у C:\OSPanel\domains\zaporuka\wp-includes\shortcodes.php доступно 199
+
+2020-04-17T13:18:03+02:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 241
+
+2020-04-17T13:18:47+02:00 CRITICAL Out of memory (allocated 8388608) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\params\vc_grid_item\shortcodes.php доступно 530
+
+2020-04-17T13:19:09+02:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 32768 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\params\vc_grid_item\shortcodes.php доступно 372
+
+2020-04-17T13:19:39+02:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 77824 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\classes\shortcodes\vc-custom-heading.php доступно 79
+
+2020-04-17T13:20:15+02:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\config\grids\class-vc-grids-common.php доступно 642
+
+2020-04-17T13:20:53+02:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 241
+
+2020-04-17T13:29:23+02:00 CRITICAL Out of memory (allocated 14680064) (tried to allocate 4096 bytes) у C:\OSPanel\domains\zaporuka\wp-includes\pomo\mo.php доступно 323
+
+2020-04-17T13:29:30+02:00 CRITICAL Out of memory (allocated 20971520) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 241
+
+2020-04-17T13:29:30+02:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 8192 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\advanced-custom-fields\includes\fields\class-acf-field-relationship.php доступно 172
+
+2020-04-17T13:29:30+02:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 20480 bytes) у C:\OSPanel\domains\zaporuka\wp-content\themes\u-design\udesign_options_page.php доступно 3694
+
+2020-04-17T13:29:36+02:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 8192 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\advanced-custom-fields\includes\fields\class-acf-field-relationship.php доступно 374
+
+2020-04-17T13:31:21+02:00 CRITICAL Out of memory (allocated 44040192) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\params\vc_grid_item\shortcodes.php доступно 530
+
+2020-04-17T13:31:47+02:00 CRITICAL Out of memory (allocated 23068672) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\params\vc_grid_item\shortcodes.php доступно 530
+
+2020-04-17T14:39:37+02:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 241
+
+2020-04-17T14:39:37+02:00 CRITICAL Out of memory (allocated 12582912) (tried to allocate 28672 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\params\vc_grid_item\shortcodes.php доступно 134
+
+2020-04-17T14:39:45+02:00 CRITICAL Out of memory (allocated 8388608) (tried to allocate 77824 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\classes\shortcodes\vc-custom-heading.php доступно 79
+
+2020-04-17T14:39:46+02:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 36864 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 568
+
+2020-04-17T14:39:48+02:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 28672 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\templates\params\vc_grid_item\attributes\vc_btn.php доступно 162
+
+2020-04-17T19:55:07+02:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 53248 bytes) в C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php на строке 847
+
+2020-04-17T19:55:08+02:00 CRITICAL Out of memory (allocated 12582912) (tried to allocate 32768 bytes) в C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\config\grids\class-vc-grids-common.php на строке 777
+
