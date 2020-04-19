@@ -2388,6 +2388,7 @@ and shows hidden orange lines near titles on About us page*/
   width: 100%;
 }
 
+
 .help .help-form-inner-wrapper .help-form-text {
   padding-bottom: 23px;
 }
@@ -2557,8 +2558,10 @@ and shows hidden orange lines near titles on About us page*/
   font-family: "Raleway-Bold";
 }
 
+
+
 #oferta {
-  margin-right: 9px;
+  margin-right: 10px;
   margin-left: 2px;
 }
   
@@ -2567,6 +2570,48 @@ and shows hidden orange lines near titles on About us page*/
   top: 25px;
   left: 26px;
 }
+
+input#oferta:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 1px solid rgba(175, 175, 175, 0.8);
+  border-radius: 2px;
+  left: 1px;
+  top: 4px;
+}
+
+input#oferta:after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 4px;
+  top: 8px;
+  width: 8px;
+  height: 4px;
+  border-radius: 1px;
+  border-left: 2px solid rgba(53, 53, 53, 0.8);
+  border-bottom: 2px solid rgba(53, 53, 53, 0.8);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 23;
+  opacity: 0;
+}
+
+input#oferta:checked:after {
+  opacity: 1;
+}
+
+#oferta.error:after {
+  opacity: 0;
+}
+
 
 .help_form_wrapper .help-form-inner-wrapper label.error {
   top: 36px;
@@ -2641,7 +2686,7 @@ html[lang="en-US"] .help  .help-form-inner-wrapper .help-form-submit-oferta .hel
 }
 
 .help #oferta-error {
-  left: 27px;
+  left: 28px;
   top: 24px;
   line-height: 13px;
 
@@ -2777,8 +2822,8 @@ html[lang="en-US"] .help  .help-form-inner-wrapper .help-form-submit-oferta .hel
     width: 130px;
     min-width: 130px;
   }
-
-  .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+   
+  html[lang="uk"] .help  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
     right: calc(50% - 53px);
   }
 
@@ -2803,18 +2848,44 @@ html[lang="en-US"] .help  .help-form-inner-wrapper .help-form-submit-oferta .hel
     right: calc(50% - 44px);
   }
 
-  .help .help-form-inner-wrapper .help-form-oferta label:not(.error) {
-    font-size: 12px;
-  }
-
   .help #oferta-error {
     left: 27px;
+  }
+
+  .help input#oferta:before {
+    left: 1px;
+    top: 3px;
+  }
+
+  .help  input#oferta:after {
+    left: 4px;
+    top: 7px;
+  }
+
+  .help .help-form-inner-wrapper .help-form-oferta label:not(.error) {
+    font-size: 12px;
+    position: relative;
+    top: 1px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .help #oferta-error {
-    left: 25px;
+    left: 31px;
+  }
+  
+  .help #oferta {
+    margin-right: 15px;
+  }
+
+  .help input#oferta:before {
+    left: 0px;
+    top: 5px;
+  }
+
+  .help input#oferta:after {
+    left: 3px;
+    top: 8px;
   }
 
   .help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left,
@@ -3361,6 +3432,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 .homepage-banner > .wpb_column > .vc_column-inner {
   padding-top: 47px;
   padding-bottom: 47px;
+}
+
+
+.home #oferta-error {
+  left: 28px;
 }
 
 #main-content .home-first-post-image {
@@ -5672,6 +5748,11 @@ color: #d2d2d2;
 }
 
 @media screen and (max-width: 1300px) {
+
+  #wrapper-1 .project_banner_wrapper_section1 {
+    background-position: -300px center !important;
+  }
+
   .projects-section .vc_grid.vc_row.vc_grid-gutter-30px .vc_pageable-slide-wrapper {
     justify-content: space-between;
   }
@@ -5702,6 +5783,10 @@ color: #d2d2d2;
 }
 
 @media screen and (max-width: 1024px) {
+
+  #wrapper-1 .project_banner_wrapper_section1 {
+    background-position: 30% center !important;
+  }
 
   .project_banner_section1 .vc_custom_1581425275566 {
     display: flex;
@@ -5796,6 +5881,12 @@ color: #d2d2d2;
 }
 
 @media screen and (max-width: 550px) {
+
+
+  #wrapper-1 .project_banner_wrapper_section1 {
+    background-position: 32% center !important;
+  }
+
   #main-content .projects-section .vc_grid-item {
     width: 100%;
   }
@@ -5814,7 +5905,7 @@ color: #d2d2d2;
     width: calc((100% - 10px) / 2);
     height: unset;
     margin-bottom: 9px;
-    padding: 20px;
+    padding: 15px;
     max-width: 200px;
   }
 
@@ -5830,6 +5921,26 @@ color: #d2d2d2;
   .wpb_text_column.wpb_content_element.project_banner_section1_item:not(:nth-child(2n)) {
     margin-right: 10px;
   }
+
+  .project_banner_section1_right .wpb_wrapper {
+    align-self: flex-start;
+  }
+
+  .project_banner_section1 {
+    padding: 65px 15px;
+  }
+
+  .project_banner_section1_item .wpb_wrapper {
+    align-self: flex-start;
+  }
+
+  .project_banner_section1_help .wpb_wrapper  {
+    align-self: center;
+  }
+
+  .project_banner_section1_item h5 {
+    font-size: 22px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -5842,6 +5953,11 @@ color: #d2d2d2;
   }
 } 
 
+@media screen and (max-width: 400px) {
+  #wrapper-1 .project_banner_wrapper_section1 {
+    background-position: 34% center !important;
+  }
+}
 /*---------------------------
   ONE PROJECT PAGE. SLIDERS
 ----------------------------*/
@@ -7551,6 +7667,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-left: 0 !important;
 }
 
+
+
 @media screen and (max-width: 1200px) {
   #ModalHelpForm .closemodale {
     right: 20px;
@@ -7589,35 +7707,31 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     padding-left: 16px !important;
   }
 
-  /* #ModalHelpForm .submit-btn {
-    padding: 14px 0 14px 15px;
-    min-width: 120px;
-    font-size: 14px;
-    width: 120px;
-    text-align: left;
+  #ModalHelpForm input#oferta:before {
+    top: 5px;
   }
 
-  html[lang="ru-RU"] #ModalHelpForm .submit-btn {
-    padding: 14px 0 14px 25px;
+  #ModalHelpForm input#oferta:after {
+    top: 9px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #ModalHelpForm #oferta {
+    margin-right: 7px;
   }
 
-  html[lang="en-US"] #ModalHelpForm .submit-btn {
-    padding: 14px 0 14px 25px;
+  #ModalHelpForm #oferta-error {
+    left: 25px;
   }
 
-  #ModalHelpForm .help-form-submit::after {
-    right: 50px;
+  html[lang="ru-RU"] #ModalHelpForm .help .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    right: calc(50% - 44px);
   }
 
-  html[lang="ru-RU"] #ModalHelpForm .help-form-submit::after {
-    right: 56px;
+  #ModalHelpForm .help-form-subscribe-left, #ModalHelpForm .help-form-subscribe-right {
+    width: 100% !important;
   }
-
-  html[lang="en-US"] #ModalHelpForm .help-form-submit::after {
-    right: 61px;
-  } */
-
-  
 }
 
 /* @media screen and (max-width: 900px) {
@@ -7638,6 +7752,15 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #ModalHelpForm .help-form-submit-wrapper {
     width: 100%;
   }
+
+  #ModalHelpForm #oferta {
+    margin-right: 15px;
+  }
+
+  #ModalHelpForm .help #oferta-error {
+    left: 31px;
+  }
+
 
   #ModalHelpForm .submit-btn,
   html[lang="ru-RU"] #ModalHelpForm .submit-btn,
@@ -8582,6 +8705,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 
 @media screen and (max-width: 768px) {
+
+  #main-content .aboutus_section1 {
+    background-position: -320px center !important;
+  }
+
   /*right sidebar*/
   #wrapper-1 .aboutus_section2 .block_excerpt_container {
     padding: 25px 0 0 0;
@@ -8876,7 +9004,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     padding-top: 2px !important;
   }
 
-
+  #main-content .aboutus_section1 {
+    background-position: -390px center !important;
+  }
 
   .aboutus_section2 .about-us-text1 {
     padding-left: 20px;
