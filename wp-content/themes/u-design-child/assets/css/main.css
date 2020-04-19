@@ -7457,6 +7457,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding: 0 0 40px 0 !important;
 }
 
+.woocommerce ul.products  {
+  width: 100%;
+}
+
 .woocommerce ul.products li.product a {
   display: flex;
   align-items: flex-end;
@@ -7537,7 +7541,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   min-width: 260px;
   width: calc((100% - 120px)/3);
   margin-right: 40px;
-  flex-grow: 1;
 }
 
 #main-content .shop-custom-wrapper .products {
@@ -9327,9 +9330,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-bottom: 162px;
 }
 
-.single-product #content-container{
-  overflow: hidden;
-}
+
 /*cart*/
 .single-product #page-content .single-product-cart-link .cart-count {
   top: 3px;
@@ -9476,7 +9477,11 @@ body.product ul.products {
   min-width: 260px !important;  
 }
 
+
 @media screen and (max-width: 1200px) {
+  .woocommerce.single-product .submit-share-wrapper a {
+    margin-right: 10px;
+  }
   .single-product #main-content .product .woocommerce-images {
     float: none;
     margin: auto;
