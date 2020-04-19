@@ -7439,6 +7439,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 #main-content .shop-custom-wrapper {
   padding-top: 110px;
   padding-bottom: 93px;
+  overflow: hidden;
 }
 
 .shop-custom-wrapper
@@ -7519,7 +7520,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   transition: none;
 }
 
-/*shop page*/
+/*SHOP PAGE*/
 .woocommerce #main-content .shop-custom-wrapper ul.products {
   position: static;
   margin-right: -40px;
@@ -7533,7 +7534,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 .shop-custom-wrapper ul.products.columns-3 li.product {
-  min-width: 260px;x;
+  min-width: 260px;
   width: calc((100% - 120px)/3);
   margin-right: 40px;
   flex-grow: 1;
@@ -7620,6 +7621,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 @media screen and (max-width: 959px) {
+
+  .shop-custom-wrapper ul.products.columns-3 li.product {
+    width: calc((100% - 100px)/2);
+  }
+
   .category-mob-select {
     display: block;
   }
@@ -7713,6 +7719,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 @media screen and (max-width: 700px) {
   #main-content .shop-custom-wrapper .shop-page-price-title {
     padding: 20px;
+  }
+
+  .shop-custom-wrapper ul.products.columns-3 li.product {
+    width: calc((100% - 82px)/2);
   }
 }
 
@@ -9317,6 +9327,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-bottom: 162px;
 }
 
+.single-product #content-container{
+  overflow: hidden;
+}
 /*cart*/
 .single-product #page-content .single-product-cart-link .cart-count {
   top: 3px;
