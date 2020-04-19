@@ -7017,8 +7017,22 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     padding-left: 0;
     max-width: 700px;
     margin: auto;
+    margin-top: 90px;
   }
 
+  .single_news_two_posts > .vc_column-inner {
+    overflow: hidden;
+  }
+
+  #main-content .single_section1_text {
+    padding: 81px 20px;
+  }
+  
+  /* #main-content .single_news_two_posts .vc_column-inner {
+    padding-left: 0;
+    padding-right: 0;
+  } */
+  
   .single_news_two_posts .vc_grid.vc_row.vc_grid-gutter-30px .vc_grid-item {
     width: 50%;
   }
@@ -9317,6 +9331,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*---------------------
   SINGLE PRODUCT PAGE
 ----------------------*/
+
+.woocommerce.single-product #wrapper-1 .woocommerce-tabs.wc-tabs-wrapper .woocommerce-Tabs-panel {
+  padding-top: 80px;
+}
+
 .jssort03 div {
   margin-right: 20px;
 }
