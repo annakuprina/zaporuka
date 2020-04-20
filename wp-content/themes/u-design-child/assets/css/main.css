@@ -717,7 +717,10 @@ If number of partners is less then 5 - slick is not initialized("project-partner
   justify-content: flex-start;
   overflow: hidden;
 }
-
+.single-projects .single-proj-news-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 .single-projects .project-partners-carousel-not-initialized .project-partners-wrapper {
   display: flex;
   justify-content: center;
@@ -1256,7 +1259,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   }
 
   .single-projects  .projects .single-proj-other-posts-section {
-    margin-bottom: 0;
+    margin-bottom: 20px;
     padding-bottom: 0 !important;
   }
 
@@ -1287,6 +1290,10 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     flex-direction: column;
   }
 
+  .single-projects  .projects .single-proj-other-posts-section {
+    margin-bottom: 0;
+  }
+  
   .single-projects .milestone-desc-wrapper .milestone_task_list ul {
     padding-top: 0;
     margin-bottom: 0;
@@ -2020,9 +2027,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   margin-bottom: 0;
 }
 
-.single-projects .single-proj-news-section {
-  padding-top: 57px
-}
 
 .single-projects .single-proj-news-section .slick-dots {
   bottom: -12px;
@@ -2037,7 +2041,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 }
 
 .single-projects .single-proj-help-section {
-  padding-top: 90px;
+  padding-top: 0;
 }
 
 .single-projects .carousel-news-posts .slick-dots {
@@ -6881,6 +6885,17 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   li.vc_grid-filter-item:hover::after {
   top: 59px;
 }
+
+@media screen and (max-width: 1200px) {
+  #main-content .section-news.tab-wrapper.section-news--news-page {
+    margin-bottom: 0;
+  }
+
+  #main-content .section-news.tab-wrapper.section-news--news-page .wpb_content_element {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   #main-content
     .section-news
@@ -6946,6 +6961,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     .vc_grid.vc_row.vc_grid-gutter-35px
     .vc_grid-item {
     width: 100%;
+  }
+
+  #main-content .section-news--news-page .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item:last-child {
+    padding-bottom: 0px;
   }
 }
 /*end of news*/
@@ -8448,6 +8467,22 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .wpb-js-composer #main-content .vc_tta-color-grey.vc_tta-style-classic.bank-details-block .vc_tta-panel .vc_tta-panel-body {
     padding-top: 30px !important;
   }
+
+  #main-content .map-marker-main-block {
+    margin-top: -133px;
+    margin-left: 37px;
+  }
+
+  .contact-mobile .map-marker-main-block:before {
+    top: 132px;
+    left: 150px;
+  }
+
+  .map-marker-main-wrap-mob > .vc_column-inner {
+    background-image: url(http://zaporuka.testit.in.ua/wp-content/uploads/2020/03/map3.jpg?id=2592) !important;
+    background-position: -800px -237px;
+    height: 307px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -8482,6 +8517,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .contact-second-text-block .h2-title-without-line :last-child h2 {
     font-size: 24px;
     line-height: 34px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #main-content .map-marker-main-block {
+    margin-left: -5px;
   }
 }
 
