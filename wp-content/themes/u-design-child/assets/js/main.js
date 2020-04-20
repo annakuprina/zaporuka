@@ -162,6 +162,11 @@ jQuery(document).ready(function($) {
     slidesToScroll: 1,
   });
 
+  $(window).on("resize", function() {
+    $(".project-partners-slick-mob").slick('reinit');
+    $(".project-partners-slick-mob .slick-dots:not(:first-child)").slice(1).remove();
+  }).resize();
+
   //REWARDS SLIDER DESKTOP(index page)
   $(".rewards-desktop").slick({
     dots: true,
