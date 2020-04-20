@@ -1203,8 +1203,8 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     display: block;
   }
 
-  .single-projects .project-partners-slick-mob .slick-list,
-  .single-projects .project-partners-slick-mob .slick-slider {
+  .single-projects .project-partners-carousel-wrapper-mob .project-partners-carousel-initialized .slick-list,
+  .single-projects .project-partners-carousel-wrapper-mob .project-partners-carousel-initialized .slick-slider {
     width: 100%;
   }
 
