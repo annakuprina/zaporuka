@@ -1193,8 +1193,14 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     display: none;
   }
 
-  .wpb_wrapper  .project-partners-slick-mob {
-    display: none;  
+  /*styles for mob Partners carousel on Projects page*/
+  .project-partners-carousel-wrapper-mob .wpb_text_column {
+    width: 100%;
+  }
+
+  .project-partners-slick-mob {
+    width: 100%;
+    display: block;
   }
 }
 
