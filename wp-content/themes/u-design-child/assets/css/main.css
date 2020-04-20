@@ -3536,8 +3536,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 .homepage-banner > .wpb_column > .vc_column-inner {
-  padding-top: 47px;
-  padding-bottom: 47px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 
@@ -3549,6 +3549,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   max-width: 1140px;
   margin: auto;
   width: calc(100% - 40px);
+  display: flex;
+  align-items: flex-end;
 }
 
 .vc_custom_1579507340150 .wpb_content_element {
@@ -3573,8 +3575,10 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 #main-content .home-first-post-post-title h4 {
-  padding-top: 72px;
-  margin-bottom: 25px;
+  margin-bottom: 34px;
+  line-height: 42px;
+  font-size: 42px;
+  max-width: 280px;
 }
 
 #main-content .home-first-post-post-link a {
@@ -3582,7 +3586,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   border: none;
   background: none;
   font-weight: 700;
-  margin-top: 46px;
+  margin-top: 30px;
   position: relative;
   transition: all 0.4s ease;
 }
@@ -3599,6 +3603,9 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   padding-top: 0;
 }
 
+.home-first-post-image .wpb_column:nth-child(1) {
+  padding-right: 30px !important;
+}
 
 /* styles added to desrease the height of payment form on main page */
 .home .help-form-inner-wrapper {
@@ -3643,7 +3650,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 /* Media for first block on index page */
 @media screen and (max-width: 1300px) {
   #main-content .home-first-post-post-title h4 {
-    font-size: 30px;
     line-height: 46px;
     max-width: unset;
     padding-top: 15px;
@@ -3706,9 +3712,7 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     margin-bottom: 20px;
   }
 
-  .home-first-post-image .wpb_column:nth-child(1) {
-    padding-right: 30px !important;
-  }
+
 
   .home-first-post-image .help_form_wrapper .help-form-submit-oferta {
     flex-direction: column;
