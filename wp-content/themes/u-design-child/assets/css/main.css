@@ -1194,7 +1194,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   }
 
   .wpb_wrapper  .project-partners-slick-mob {
-    display: block;  
+    display: none;  
   }
 }
 
