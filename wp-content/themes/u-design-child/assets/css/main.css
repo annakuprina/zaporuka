@@ -781,6 +781,12 @@ If number of partners is less then 5 - slick is not initialized("project-partner
 .single-projects .project-partners-carousel-not-initialized .vc_pageable-slide-wrapper .vc_grid-item:first-child {
   padding-left: 0 !important;
 }
+
+.single-projects .other-projects-row {
+  overflow: hidden;
+  padding-bottom: 35px;
+  margin-bottom: 0;
+}
 /*end not initialized carousel styles(if number of parnters is less then 5.Check of partners number is inside main.js file)*/
 
 /*One project page. Partners block.
@@ -1092,6 +1098,17 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 .project-partners-carousel-wrapper .help_button_single_block .vc_btn3 {
   padding-bottom: 60px;
 }
+
+.single-projects .other-projects-single-project .singl-project-link-wrapper {
+  left: 33px;
+  bottom: 24px;
+}
+
+.single-projects .other-projects-single-project .slick-slide .singl-project-bottom-part {
+  padding: 10px 32px 0 32px;
+  min-height: 322px;
+}
+
 /* Media for one Project block(home page) */
 @media screen and (max-width: 1200px) {
   .one-project-right {
@@ -1140,6 +1157,10 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 
   .single-proj-other-posts-section .other-projects-row .singl-project-link-wrapper {	
     left: 10px;	
+  }
+
+  .single-projects .single-proj-other-posts-section .other-projects-row .singl-project-link-wrapper {	
+    left: 32px;	
   }
 }
 
@@ -1204,6 +1225,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   /*styles for mob Partners carousel on Projects page*/
   .project-partners-carousel-wrapper-mob .wpb_text_column {
     width: 100%;
+    margin-bottom: 0;
   }
 
   .project-partners-slick-mob {
@@ -1222,6 +1244,40 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     height: auto;
     max-height: 120px;
     width: auto;
+  }
+
+  .single-projects .single-proj-news-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .single-projects .single-proj-help-section {
+    padding-top: 0;
+  }
+
+  .single-projects  .projects .single-proj-other-posts-section {
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+  }
+
+  .single-projects #page-content {
+    padding-bottom: 0;
+  }
+
+  .single-projects .other-projects-single-project .slick-slide .singl-project-bottom-part {
+    padding: 10px 15px 0 15px;
+  }
+
+  .single-projects .single-proj-other-posts-section .other-projects-row .singl-project-link-wrapper {
+    left: 15px;
+  }
+
+  .single-projects .singl-project-excerpt p {
+    padding-bottom: 50px;
+  }
+
+  .single-projects .other-projects-single-project .slick-slide .singl-project-bottom-part {
+    height: 350px;
   }
 }
 
@@ -1248,6 +1304,19 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   .single-proj-news-section .carousel-news-posts .slick-dots {
     left: -22px;
   }
+
+  .single-projects .other-projects-single-project .singl-project-link-wrapper {
+    left: 11px;
+  }
+
+  .single-projects .other-projects-row div.singl-project-bottom-part {
+    min-height: unset;
+  }
+
+  .single-projects .single-proj-other-posts-section .other-projects-row .singl-project-link-wrapper {
+    left: 10px;
+  }
+  
 }
 
 @media screen and (max-width: 500px) {
@@ -1928,10 +1997,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   padding-right: 37px;
 }
 
-.single-projects .other-projects-single-project .slick-slide .singl-project-bottom-part {
-  padding: 10px 32px 0 32px;
-  min-height: 322px;
-}
 
 .single-projects .other-projects-single-project .vc_gitem-animated-block .vc_gitem-zone {
   height: 256px !important;
@@ -1945,10 +2010,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   margin-bottom: 21px;
 }
 
-.single-projects .other-projects-single-project .singl-project-link-wrapper {
-  left: 33px;
-  bottom: 24px;
-}
+
 
 .single-projects .block-project-partners {
   padding-top: 50px;
@@ -5879,6 +5941,10 @@ color: #d2d2d2;
   .project_banner_section1_help {
     margin-right: 0;
   }
+
+  .projects-section .other-projects-row .singl-project-link-wrapper {
+    bottom: 0px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -5979,7 +6045,7 @@ color: #d2d2d2;
   }
 
   .project_banner_section1_item h5 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
