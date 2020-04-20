@@ -876,10 +876,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   width: 100%
 }
 
-/* .project-partners-carousel .slick-track { 
-  width: 100% !important;
-} */ 
-
 .one-project-title {
   color: #a5a5a5ab;
   font-size: 12px;
@@ -996,7 +992,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 }
 
 .project-money-collected {
-  /* color: #f6944d; */
   color: #ee8b43;
   font-size: 16px;
   font-weight: 700;
@@ -1081,7 +1076,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   flex-wrap: wrap;
 }
 
-
 .single-proj-news-section .slick-slide {
   height: inherit !important;
 }
@@ -1131,6 +1125,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     display: flex;
     flex-direction: column;
   }
+
   .single-projects .milestone-desc-wrapper .left_columns_description,
   .single-projects .milestone-desc-wrapper .right_columns_description {
     width: 100%;
@@ -1323,20 +1318,17 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   .single-projects .single-proj-other-posts-section .other-projects-row .singl-project-link-wrapper {
     left: 10px;
   }
-  
 }
 
 @media screen and (max-width: 500px) {
 
   .one-project {
     position: relative;
-    /* width: 291px; */
   }
 
   .one-project-progress {
     top: 63px;
     position: absolute;
-    /* width: calc(100% - 40px); */
   }
 
   .project-money {
@@ -1456,7 +1448,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 
 
 /*FRIENDS AND VOLUNTEERS*/
-
 .friends-and-volunteers {
   display: flex;
   border-top: 1px solid rgba(165, 165, 165, 0.25);
@@ -1505,8 +1496,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 .friends-slider .slick-track {
   width: 420px;
 }
-
-
 
 /*BANNER FOR ONE PROJECT PAGE*/
 .container_24-project-page {
@@ -2017,8 +2006,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   margin-bottom: 21px;
 }
 
-
-
 .single-projects .block-project-partners {
   padding-top: 50px;
 }
@@ -2026,7 +2013,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 .single-projects .project-partners-carousel .slick-slide .block-project-partners {
   margin-bottom: 0;
 }
-
 
 .single-projects .single-proj-news-section .slick-dots {
   bottom: -12px;
@@ -2047,8 +2033,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 .single-projects .carousel-news-posts .slick-dots {
   bottom: -14px;
 }
-
-
 
 /*Media for project timeline*/
 @media screen and (max-width: 1024px) {
@@ -2498,11 +2482,7 @@ and shows hidden orange lines near titles on About us page*/
 .help_form_wrapper input.error {
   border-bottom: 1px solid #d0021b;
 }
-/* 
-#wrapper-1 .help-form-inner-wrapper .help-form-oferta label:not(.error) {
-  padding-left: 24px;
-  margin-right: -7px;
-} */
+
 .help_form_wrapper .help-form-inner-wrapper .help-form-amount-right .amount-button:not(:last-child) {
   border-right: 1px solid #eaeaea;
 }
@@ -2572,14 +2552,6 @@ and shows hidden orange lines near titles on About us page*/
 .help .help-form-amount-left #paid-error {
   top: 35px !important;
 }
-
-/* input[type="checkbox"] + label#oferta-error {
-  left: 0;
-}
-
-#wrapper-1 .help_form_wrapper label.error {
-  top: 34px;
-} */
 
 .help-item-info {
   display: none;
@@ -2664,14 +2636,11 @@ and shows hidden orange lines near titles on About us page*/
   font-family: "Raleway-Bold";
 }
 
-
-
 #oferta {
   margin-right: 10px;
   margin-left: 2px;
 }
   
-
 #oferta-error {
   top: 25px;
   left: 26px;
@@ -2717,7 +2686,6 @@ input#oferta:checked:after {
 #oferta.error:after {
   opacity: 0;
 }
-
 
 .help_form_wrapper .help-form-inner-wrapper label.error {
   top: 36px;
@@ -2999,7 +2967,6 @@ html[lang="en-US"] .help  .help-form-inner-wrapper .help-form-submit-oferta .hel
     width: unset;
   }
   
-
   .help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left {
     margin-right: 30px;
   }
@@ -3068,11 +3035,9 @@ html[lang="en-US"] .help  .help-form-inner-wrapper .help-form-submit-oferta .hel
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   }
 
-
   .help .help-form-inner-wrapper .help-form-submit-oferta {
     flex-direction: column;
     align-items: flex-start;
-
   }
 
   .help .help-form-oferta {
@@ -3108,7 +3073,6 @@ html[lang="en-US"] .help  .help-form-inner-wrapper .help-form-submit-oferta .hel
     width: 100%;
     margin-bottom: 20px;
   }
-  
   
   .help-form-oferta-wrapper {
     width: 100%;
@@ -3329,13 +3293,9 @@ footer .footer-mob a.designer-link {
   margin-right: 115px;
 }
 
-
-
 .bottom-content-wrapper .one_fifth:nth-child(2) {
   margin-right: 115px;
 }
-
-
 
 .bottom-content-wrapper .one_fifth:nth-child(3) {
   margin-right: 120px;
@@ -3446,8 +3406,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   }
 
   #footer_bottom .one_fifth {
-    width: unset;2952
-    /* margin-right: 10px !important; */
+    width: unset;
   }
 
   #footer_bottom .one_fifth:nth-child(5),
@@ -3532,14 +3491,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
 .home-page-section2-title {
   margin-top: 85px;
-
 }
 
 .homepage-banner > .wpb_column > .vc_column-inner {
   padding-top: 35px;
   padding-bottom: 35px;
 }
-
 
 .home #oferta-error {
   left: 28px;
@@ -3582,7 +3539,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 #main-content .home-first-post-post-link a {
-  padding-top: 13px;
+  margin-bottom: 0;
+}
+
+#main-content .home-first-post-post-link a {
+  padding-top: 5px;
+  padding-bottom: 1px;
   border: none;
   background: none;
   font-weight: 700;
@@ -3712,8 +3674,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     margin-bottom: 20px;
   }
 
-
-
   .home-first-post-image .help_form_wrapper .help-form-submit-oferta {
     flex-direction: column;
     align-items: flex-start;
@@ -3777,7 +3737,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 }
 
 @media screen and (max-width: 959px) {
-
   #home-page-content .vc_custom_1585211715542 {
     padding-top: 60px;
   }
@@ -3881,8 +3840,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     margin-top: 0;
   }
 
-
-
   .home .homepage-banner .help-form-inner-title {
     padding-bottom: 35px;
   }
@@ -3924,7 +3881,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   .home .homepage-banner > .wpb_column > .vc_column-inner {
     padding-top: 150px;
   }
-
 }
 
 /*---------------------
@@ -3968,10 +3924,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   display: none;
 }
 
-/* #content-container .home-page-section2 .section2-text p {
-  padding-top: 25px;
-} */
-
 #main-content .section2-image-wrapper {
   width: 380px;
   height: 359px;
@@ -3995,13 +3947,11 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   height: 100%;
   display: flex;
   align-items: center;
-  /* flex-direction: column; */
 }
 
 #main-content .section2-text-wrapper .section2-text {
   height: 100%;
   margin-bottom: 0;
- 
 }
 
 #main-content
@@ -4048,7 +3998,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   }
 
   .home-page-section2 .vc_custom_1579168278861 {
-    /* padding: 0 20px; */
     margin: 0 20px !important;
     display: flex;
     align-items: stretch;
@@ -4118,14 +4067,11 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 
   #content-container .home-page-section2 .section2-text {
     margin-bottom: 0;
-    /* overflow-y: scroll; */
-    /* max-height: 315px; */
     height: unset;
   }
 
   #content-container .home-page-section2 .section2-text p {
     padding: 20px 20px 5px 30px;
-    /* font-size: 16px; */
     line-height: 26px;
   }
 
@@ -4134,8 +4080,8 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   .section2-columns
   .section2-single-column
   h2 {
-  font-size: 16px;
-}
+    font-size: 16px;
+  }
 
   #main-content .home-page-section2 .section2-columns .section2-single-column {
     padding: 20px 30px;
@@ -4149,8 +4095,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   .home-page-section2-title {
     margin-top: 25px;
   }
-
-
 
   .home-page-section2 .section2-text-wrapper .vc_btn3 {
     display: block;
@@ -4193,6 +4137,14 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     color: #fff;
   }
 
+  .home .home-page-section2 .section2-columns .section2-single-column a::after {
+    content: url(/wp-content/themes/u-design-child/img/arrow-help.svg)
+  }
+  
+  #main-content .home-page-section2 .section2-columns .section2-single-column:hover {
+    content: url(/wp-content/themes/u-design-child/img/arrow-home.svg)
+  }
+
   #main-content .vc_custom_1579168278861 .vc_column_container:nth-child(1) {
     width: 330px;
   }
@@ -4221,7 +4173,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   #main-content .vc_custom_1579168278861 .section2-text-wrapper {
     width: 100%;
     height: unset;
-
   }
 
   .vc_custom_1579168278861 .vc_column_container:nth-child(1) {
@@ -4366,7 +4317,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 }
 
 @media screen and (max-width: 350px) {
-
   .home-page-section2 .vc_custom_1579168278861 .vc_column_container:nth-child(1) {
     margin-bottom: 0;
   }
@@ -4394,8 +4344,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     font-weight: 400;
     line-height: 24px;
   }
-
-
 }
 /*end home page section2*/
 
@@ -4420,10 +4368,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   line-height: 30px;
   font-family: "Raleway-Medium";
 }
-
-/* .rewards-desktop .slick-active { */
-  /* margin-right: 20px;
-} */
 
 .rewards-desktop .rewards-one-item {
   margin: 0 50px;
@@ -4713,13 +4657,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   }
 }
 
-/* @media screen and (max-width: 700px) {
-  .home-page-section4-top-part {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-} */
-
 @media screen and (max-width: 500px) {
   .home-page-section4-top-part .h2-header-line {
     padding-left: 5px;
@@ -4747,16 +4684,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     left: -31px;
   }
 }
-
-
-
-/* @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .wpb-js-composer #main-content .vc_tta-panels {
-    position: relative;
-    top: -82px;
-  }
-} */
-
 /*end home page section4*/
 
 /*-----------------------------------------------------
@@ -4849,9 +4776,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 .home-page-section6 .other-projects-row .singl-project-top-part .vc_gitem-row-position-top {
   z-index: 2;
 }
-/* .singl-project-top-part  .vc_gitem-row-position-top {
-  background: rgba(0,0,0,.45);
-} */
 
 .home-page-section6 .one-project-progress-wrapper .project-money-involved {
   position: relative;
@@ -4999,7 +4923,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   .home .home-page-section6-title {
     margin-top: 24px;
   }
-
 }
 
 /*---------------------
