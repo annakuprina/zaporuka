@@ -4141,7 +4141,7 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     content: url(/wp-content/themes/u-design-child/img/arrow-help.svg)
   }
   
-  #main-content .home-page-section2 .section2-columns .section2-single-column:hover {
+  #main-content .home-page-section2 .section2-columns .section2-single-column:hover a::after{
     content: url(/wp-content/themes/u-design-child/img/arrow-home.svg)
   }
 
