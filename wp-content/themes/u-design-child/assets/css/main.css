@@ -794,10 +794,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   justify-content: center;
 }
 
-.single-projects .project-partners-carousel-initialized .slick-list,
-.single-projects .project-partners-carousel-initialized .slick-slider {
-  width: 900px;
-}
 
 .single-projects .project-partners-carousel-initialized .help_button_single_block {
   padding-top: 0;
@@ -820,6 +816,15 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   width: 100%;
   margin: 0;
   padding-top: 20px;
+}
+
+.single-projects .project-partners-carousel-wrapper .slick-list,
+.single-projects .project-partners-carousel-wrapper .slick-slider {
+  width: 100%;
+}
+
+.single-projects .project-partners-carousel-wrapper .vc_grid-container-wrapper.vc_clearfix {
+  width: calc(100% - 160px);
 }
 
 .single-projects .project-partners-carousel-wrapper .vc_column_container > .vc_column-inner {
@@ -1084,6 +1089,9 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   bottom: -27px;
 }
 
+.project-partners-carousel-wrapper .help_button_single_block .vc_btn3 {
+  padding-bottom: 60px;
+}
 /* Media for one Project block(home page) */
 @media screen and (max-width: 1200px) {
   .one-project-right {
