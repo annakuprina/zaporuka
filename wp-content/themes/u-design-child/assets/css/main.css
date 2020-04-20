@@ -3991,6 +3991,12 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   overflow: hidden;
 }
 
+.home-page-section2 .section2-text-wrapper .vc_btn3::after {
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  padding-left: 10px;
+}
+
+
 /*media for home-page-section2*/
 @media screen and (max-width: 1250px) {
   .vc_custom_1579168014403.section2-text {
