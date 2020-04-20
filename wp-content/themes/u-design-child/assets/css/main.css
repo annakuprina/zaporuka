@@ -8469,19 +8469,19 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   #main-content .map-marker-main-block {
-    margin-top: -133px;
-    margin-left: 37px;
+    margin-top: -121px;
+    margin-left: 47px;
   }
 
   .contact-mobile .map-marker-main-block:before {
-    top: 132px;
+    top: 151px;
     left: 150px;
   }
 
   .map-marker-main-wrap-mob > .vc_column-inner {
     background-image: url(http://zaporuka.testit.in.ua/wp-content/uploads/2020/03/map3.jpg?id=2592) !important;
-    background-position: -800px -237px;
-    height: 307px;
+    background-position: -800px -218px;
+    height: 315px;
   }
 }
 
