@@ -9573,6 +9573,7 @@ div.product form.cart {
 /* the slides */
 .single-product ul.products li.product {
   max-width: 353px;
+  min-width: 30.8% !important;
   /* width: 351px !important; */
 }
 
