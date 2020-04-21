@@ -346,6 +346,9 @@ h2.h2-header-line::before {
   line-height: 16px;
   width: 160px;
   margin-bottom: 51px;
+  font-family: "Proxima-Nova-Regular";
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 #header-mob .top-bar-help-block a {
@@ -370,9 +373,9 @@ h2.h2-header-line::before {
 }
 
 #header-mob .help-header-link a span {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   padding: 0 0 10px 0px;
   font-family: "Raleway-Regular";
   color: #fff;
@@ -5600,7 +5603,7 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 
 .project_banner_section1_item p {
   font-family: "Proxima-Nova-Semibold";
-color: #d2d2d2;
+  color: #d2d2d2;
   line-height: 20px;
 }
 
