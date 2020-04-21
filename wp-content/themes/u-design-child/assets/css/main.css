@@ -9466,21 +9466,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-bottom: 162px;
 }
 
-.woocommerce-notices-wrapper .woocommerce-message a {
-  padding-top: 5px 1em;
-}
 
-.single-product .woocommerce-message {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-.single-product.woocommerce-page .woocommerce-message .button {
-  float: none;
-  display: block;
-  padding: 5px 0;
-}
 /*cart*/
 .single-product #page-content .single-product-cart-link .cart-count {
   top: 3px;
@@ -9541,11 +9527,8 @@ div.product form.cart {
 
 #main-content li.product .shop-page-price-title {
   padding: 27px 30px;
+  /* background:rgba(255,255,255,0.8); */
   width: 100%;
-}
-
-#main-content li.product:hover .shop-page-price-title {
-  padding: 36px 30px;
 }
 
 #main-content li.product .woocommerce-Price-amount {
@@ -9575,9 +9558,8 @@ div.product form.cart {
 
 /* the slides */
 .single-product ul.products li.product {
+  margin: 0 20px !important;
   max-width: 353px;
-  /* min-width: 30.8% !important; */
-  /* width: 351px !important; */
 }
 
 
@@ -9678,10 +9660,6 @@ body.product ul.products {
     .price {
     padding-bottom: 20px;
   }
-
-  /* .single-product ul.products li.product {
-    width: calc((100% - 87px)/3) !important;
-  } */
 }
 
 @media screen and (max-width: 1024px) {
@@ -9690,30 +9668,24 @@ body.product ul.products {
   }
 }
 
-
-
 @media screen and (max-width: 950px) {
   .woocommerce.single-product #wrapper-1 .single-product-cart-link {
     text-align: right;
   }
 
-  /* .single-product ul.products li.product {
+  .single-product ul.products li.product {
     max-width: unset; 
-    min-width: unset !important;
-  } */
+  }
 
   #slider2_container.woocommerce-images {
     margin-right: 0;
   }
-
-  
 /* 
   .woocommerce.single-product #wrapper-1 div.product div.summary {
     max-width: 600px;
     width: unset;
     margin-top: 30px;
   }
-
   .woocommerce.single-product #wrapper-1 .woocommerce-tabs {
     width: 100%;
   } */
@@ -9768,12 +9740,7 @@ body.product ul.products {
   #wrapper-1 .single-product .woocommerce-cart-page-link .cart-customlocation.cart-count {
     width: 20px;
   }
-
-  #wrapper-1 .cart-customlocation.cart-count {
-    left: 2px;
-  }
 }
-
 
 
 /*-----------
