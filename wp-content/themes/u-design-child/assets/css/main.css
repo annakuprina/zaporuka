@@ -3638,7 +3638,8 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   }
   
   .home .homepage-banner > .wpb_column > .vc_column-inner {
-    padding-top: 107px;
+    padding-top: 59px;
+    /* padding-top: 139px; */
   }
 
   .home .help_form_wrapper {
@@ -3740,6 +3741,16 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   #home-page-content .vc_custom_1585211715542 {
     padding-top: 60px;
   }
+
+  .home .homepage-banner > .wpb_column > .vc_column-inner {
+    padding-top: 119px;
+  }
+}
+
+@media screen and (max-width: 941px) {
+  .home .homepage-banner > .wpb_column > .vc_column-inner {
+    padding-top: 141px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -3756,6 +3767,8 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     background-position: top !important;
   }
 
+
+
   .home-first-post-image .vc_gitem-row-position-middle {
     display: flex;
     flex-direction: column;
@@ -3769,7 +3782,9 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   #home-page-content .home-first-post-image {
     height: 876px;
     max-height: 876px;
+    align-items: flex-start;
   }
+
 
   .home-first-post-image .wpb_column:nth-child(2) {
     position: absolute;
@@ -3780,7 +3795,7 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   }
 
   #main-content .home-first-post-post-link a{
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .home-first-post-image .vc_gitem-row-position-middle {
@@ -3798,10 +3813,27 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 
   .homepage-banner > .wpb_column > .vc_column-inner {
     padding-bottom: 0;
+    padding-top: 166px;
   }
 
+  #main-content .home-first-post-post-title {
+    margin-bottom: 10px;
+  }
+
+  #main-content .home-first-post-post-title h4 {
+    margin-bottom: 0px;
+  }
+
+  #main-content .home-first-post-post-excerpt p {
+    line-height: 25px;
+  }
+  
   #home-page-content .homepage-banner {
     margin-bottom: 0px;
+  }
+
+  .home .homepage-banner > .wpb_column > .vc_column-inner {
+    padding-top: 165px;
   }
 }
 
@@ -3826,12 +3858,8 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     display: none;
   }
 
-  .homepage-banner .home-first-post-post-link {
-    padding-top: 18px;
-  }
-
   #main-content .home-first-post-post-title h4 {
-    padding-top: 10px;
+    padding-top: 110px;
     font-size: 24px;
     line-height: 33px;
   }
@@ -9711,6 +9739,10 @@ body.product ul.products {
 
   #wrapper-1 .single-product .woocommerce-cart-page-link .cart-customlocation.cart-count {
     width: 20px;
+  }
+
+  #wrapper-1 .cart-customlocation.cart-count {
+    left: 2px;
   }
 }
 
