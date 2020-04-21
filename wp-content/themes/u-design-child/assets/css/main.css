@@ -5753,7 +5753,7 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens:none) { 
-  .project_banner_section1_left h2 { {
+  .project_banner_section1_left h2 { 
     font-family: "Raleway-Semibold" !important;
   }
 }
