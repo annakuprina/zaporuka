@@ -1025,6 +1025,14 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   margin-bottom: 14px;
 }
 
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .one-project-info-title {
+    font-family: "Raleway-Semibold";
+  }
+}
+
+
 .one-project-info-text {
   font-size: 16px;
   font-weight: 400;
@@ -1068,6 +1076,13 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   font-family: "Raleway-Bold";	
   font-size: 14px;	
   padding-top: 0;	
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .single-proj-other-posts-section .other-projects-single-project .vc_btn3 {
+    font-family: "Raleway-Semibold";
+  }
 }
 
 .other-projects-single-project .singl-project-timeline-custom {
@@ -1494,6 +1509,15 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   font-family: "Raleway-Bold";
 }
 
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .friends-name{
+    font-family: "Raleway-Semibold";
+  }
+}
+
+
+
 .friends-link {
   color: #333333;
 }
@@ -1548,6 +1572,14 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   margin-right: 5px;
   font-family: "Raleway-Bold";
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .one-project-banner .one-project-share {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 
 .one-project-banner .one-project-socials .fa-facebook {
   color: #a9a9a9;
@@ -1626,6 +1658,14 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   position: relative;
   transform: none;
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .one-project-banner .one-project-help span {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 
 .one-project-banner .one-project-help span:after {
   padding-left: 12px;
@@ -2323,6 +2363,14 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   font-family: Raleway-Bold;
 }
 
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .child-info {
+    font-family: "Raleway-Semibold";
+  }
+}
+
+
 .child-name-and-age {
   color: #333;
   line-height: 30px;
@@ -2704,6 +2752,14 @@ and shows hidden orange lines near titles on About us page*/
   font-weight: 700;
   font-family: "Raleway-Bold";
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .help .help-item-link {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 
 #oferta {
   margin-right: 10px;
@@ -3616,6 +3672,14 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   max-width: 555px;
 }
 
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  #main-content .home-first-post-post-title {
+    font-family: "Raleway-Semibold" !important;
+  }
+}
+
+
 #main-content .home-first-post-post-title h4 {
   margin-bottom: 34px;
   line-height: 42px;
@@ -3842,6 +3906,12 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 @media screen and (max-width: 941px) {
   .home .homepage-banner > .wpb_column > .vc_column-inner {
     padding-top: 141px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #main-content .home-first-post-post-link a:hover {
+    padding-left: 0 !important;
   }
 }
 
@@ -5681,6 +5751,13 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   margin-left: 13px;
 }
 
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .project_banner_section1_left h2 { {
+    font-family: "Raleway-Semibold" !important;
+  }
+}
+
 .project_banner_section1_item {
   width: 200px;
   height: 130px;
@@ -5711,6 +5788,14 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   font-family: "Raleway-Bold" !important;
   margin-top: -2px;
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .project_banner_section1_item .column_text {
+    font-family: "Raleway-Semibold" !important;
+  }
+}
+
 
 .project_banner_section1_item .wpb_wrapper {
   display: flex;
@@ -5770,6 +5855,14 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   opacity: 1;
   font-family: "Raleway-Bold";
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .project_banner_section1_help > .wpb_wrapper p {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 
 .project_banner_section1_help > .wpb_wrapper p::after {
   content: url(../../img/arrow-home.svg);
@@ -6298,6 +6391,14 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   margin-bottom: 56px;
   padding-bottom: 28px;
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .sliders-tabs-wrapper { 
+    font-family: "Raleway-Semibold";
+  }
+}
+
 
 .sliders-tabs-wrapper .one-tab-link {
   position: relative;
@@ -7600,6 +7701,14 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   font-size: 16px;
   width: 100px;
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .category-mob-select {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 
 .shop-custom-wrapper .berocket_filter_slider.ui-widget-content .ui-slider-range, .berocket_filter_price_slider.ui-widget-content .ui-slider-range {
   background: none repeat scroll 0 0 #8c8c8c;
