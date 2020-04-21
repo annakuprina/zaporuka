@@ -3767,8 +3767,6 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     background-position: top !important;
   }
 
-
-
   .home-first-post-image .vc_gitem-row-position-middle {
     display: flex;
     flex-direction: column;
@@ -9958,4 +9956,31 @@ body.product ul.products {
 
 .cancel_subscription_form .submit-btn {
   background-image:none !important;
+}
+
+.cancel_subscription_wrapper .help_form_wrapper {
+  min-width: unset;
+}
+
+@media screen and (max-width: 550px) {
+  .single-product .lightbox {
+    justify-content: flex-start;
+  }
+
+  .help_form_wrapper .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email,
+  .help_form_wrapper .help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel {
+    width: 100% !important;
+  }
+
+  .help_form_wrapper .help-form-inner-wrapper .cancel_subscription_form .help-form-email-tel {
+    flex-direction: column;
+  }
+
+  .help_form_wrapper .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email {
+    margin-bottom: 25px;
+  }
+
+  .cancel_subscription_form .help-form-submit {
+    width: 100%;
+  }
 }
