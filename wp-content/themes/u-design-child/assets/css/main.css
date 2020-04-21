@@ -9623,10 +9623,10 @@ body.product ul.products {
 .products .slick-track {
   margin-left: unset;
 }
-.single-product .related .slick-track,
+/* .single-product .related .slick-track,
 .single-product .related .slick-list .product  {
   min-width: 260px !important;  
-}
+} */
 
 
 @media screen and (max-width: 1200px) {
