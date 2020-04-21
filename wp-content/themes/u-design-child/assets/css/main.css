@@ -9463,7 +9463,21 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-bottom: 162px;
 }
 
+.woocommerce-notices-wrapper .woocommerce-message a {
+  padding-top: 5px 1em;
+}
 
+.single-product .woocommerce-message {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.single-product.woocommerce-page .woocommerce-message .button {
+  float: none;
+  display: block;
+  padding: 5px 0;
+}
 /*cart*/
 .single-product #page-content .single-product-cart-link .cart-count {
   top: 3px;
