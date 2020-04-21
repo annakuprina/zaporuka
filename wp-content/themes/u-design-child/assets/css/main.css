@@ -9866,6 +9866,12 @@ body.product ul.products {
   color: #e78b48 !important;
 }
 
+@media screen and (max-width: 900px) {
+  .become-partner-section {
+    padding-top: 30px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .become-partner-section h2.h2-header-line::before {
     width: 20px;
@@ -9932,7 +9938,9 @@ body.product ul.products {
 }
 
 
-/*BECOME A VOLUNTEER PAGE*/
+/*--------------------------
+  BECOME A VOLUNTEER PAGE
+--------------------------*/
 .become-volunteer-wrapper h2 {
   padding-top: 0 !important;
   padding-bottom: 0!important;
@@ -9945,6 +9953,12 @@ body.product ul.products {
 .become-volunteer-wrapper a:hover,
 .become-volunteer-wrapper a:active {
   color: #e78b48;
+}
+
+@media screen and (max-width: 900px) {
+  .become-volunteer-wrapper h2 {
+    margin-top: 20px;
+  }
 }
 
 /*---------------------------
