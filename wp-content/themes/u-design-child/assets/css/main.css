@@ -3487,6 +3487,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   margin-bottom: 85px;
 }
 
+
+
 .vc_custom_1585211715542  > .wpb_column > .vc_column-inner {
   padding-top: 47px;
   padding-bottom: 47px;
@@ -3611,6 +3613,13 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 }
 /*end desrease the height of payment form on main page*/
 
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .help-form-subscribe label { 
+    position: relative;
+    top: 2px;
+ } 
+}
 
 /* Media for first block on index page */
 @media screen and (max-width: 1300px) {
