@@ -2546,6 +2546,12 @@ and shows hidden orange lines near titles on About us page*/
   color: rgba(86, 86, 86, 0.8);
 }
 
+.help_form_wrapper .help-form-subscribe label {
+  color: rgba(86, 86, 86, 0.8);
+  position: relative;
+  left: 6px;
+}
+
 .help_form_wrapper .help-form-inner-wrapper .help-form-text, .help-form-inner-wrapper .help-form-cancel-subscription-text a {
   color: rgba(86, 86, 86, 0.8);
 }
