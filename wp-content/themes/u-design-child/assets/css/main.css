@@ -2513,7 +2513,7 @@ and shows hidden orange lines near titles on About us page*/
   border-radius: 100%;
   display: block;
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(101, 101, 101, 0.8);
 }
 
 .help-form-subscribe input[type="radio"]:after {
@@ -2526,7 +2526,7 @@ and shows hidden orange lines near titles on About us page*/
   z-index: 2;
   border-radius: 100%;
   display: block;
-  background: #a7a7a7;
+  background: rgba(78, 78, 78, 0.8);
   opacity: 0;
 }
 
@@ -4975,7 +4975,7 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   }
 
   .home-page-section6 .vc_pageable-load-more-btn a:hover {
-    padding-left: 0;
+    padding-left: 20px;
   }
 }
 
