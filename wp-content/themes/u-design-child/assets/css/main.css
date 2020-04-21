@@ -373,12 +373,12 @@ h2.h2-header-line::before {
 }
 
 #header-mob .help-header-link a span {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  padding: 0 0 10px 0px;
-  font-family: "Raleway-Regular";
-  color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 0 10px 0px;
+    font-family: "Raleway-Regular";
+    color: #fff;
 }
 
 #header-mob #navigation-menu ul.sf-menu > li > a:hover {
@@ -9576,15 +9576,15 @@ div.product form.cart {
 /* the slides */
 .single-product ul.products li.product {
   max-width: 353px;
-  min-width: 30.8% !important;
+  /* min-width: 30.8% !important; */
   /* width: 351px !important; */
 }
 
 
 /* the parent */
-/* .single-product ul.products {
+.single-product ul.products {
   margin: 0 -20px;
-} */
+}
 
 .single-product ul.products .slick-dots {
   bottom: -95px;
@@ -9626,10 +9626,10 @@ body.product ul.products {
 .products .slick-track {
   margin-left: unset;
 }
-/* .single-product .related .slick-track,
+.single-product .related .slick-track,
 .single-product .related .slick-list .product  {
   min-width: 260px !important;  
-} */
+}
 
 
 @media screen and (max-width: 1200px) {
@@ -9691,6 +9691,58 @@ body.product ul.products {
 }
 
 
+
+@media screen and (max-width: 950px) {
+  .woocommerce.single-product #wrapper-1 .single-product-cart-link {
+    text-align: right;
+  }
+
+  /* .single-product ul.products li.product {
+    max-width: unset; 
+    min-width: unset !important;
+  } */
+
+  #slider2_container.woocommerce-images {
+    margin-right: 0;
+  }
+
+  
+/* 
+  .woocommerce.single-product #wrapper-1 div.product div.summary {
+    max-width: 600px;
+    width: unset;
+    margin-top: 30px;
+  }
+
+  .woocommerce.single-product #wrapper-1 .woocommerce-tabs {
+    width: 100%;
+  } */
+
+  .woocommerce ul.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .woocommerce.single-product
+    #wrapper-1
+    .woocommerce-tabs.wc-tabs-wrapper
+    .woocommerce-Tabs-panel {
+    padding-top: 60px;
+  }
+
+  .woocommerce.single-product #wrapper-1 .h2-header-line {
+    margin-bottom: 20px;
+  }
+
+  .woocommerce.single-product #wrapper-1 .related.products {
+    margin-top: 30px;
+  }
+
+  .single-product .related.products {
+    margin-bottom: 100px;
+  }
+}
 
 
 @media screen and (max-width: 768px) {
