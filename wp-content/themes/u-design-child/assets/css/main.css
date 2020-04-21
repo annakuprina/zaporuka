@@ -3805,7 +3805,7 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 
   #home-page-content .home-first-post-post-title h4 {
     font-size: 31px;
-    margin-bottom: 15px0;
+    margin-bottom: 0;
   }
 
   .homepage-banner > .wpb_column > .vc_column-inner {
@@ -3818,11 +3818,7 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   }
 
   #main-content .home-first-post-post-title {
-    margin-bottom: 10px;
-  }
-
-  #main-content .home-first-post-post-title h4 {
-    margin-bottom: 0px;
+    margin-bottom: 5px;
   }
 
   #main-content .home-first-post-post-excerpt p {
@@ -3899,8 +3895,8 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   }
 
   #home-page-content .home-first-post-image {
-    height: 949px;
-    max-height: 949px;
+    height: 985px;
+    max-height: 985px
   }
 
   .home .homepage-banner h2 {
@@ -4345,8 +4341,8 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     margin-top: 41px;
   }
 
-  .home-page-section2-title .vc_column-inner {
-    padding-top: 15px;
+  .home #wrapper-1 .home-page-section2-title .vc_column-inner {
+    padding-top: 25px;
   }
   
 }
@@ -9470,7 +9466,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*cart*/
 .single-product #page-content .single-product-cart-link .cart-count {
   top: 3px;
-  left: 0px;
+  left: -1px;
 } 
 
 .woocommerce.single-product #wrapper-1 div.product div.summary {
@@ -9615,9 +9611,15 @@ body.product ul.products {
 
 
 @media screen and (max-width: 1200px) {
+
+  .woocommerce.single-product ul.products {
+    margin: 0;
+  }
+
   .woocommerce.single-product .submit-share-wrapper a {
     margin-right: 10px;
   }
+
   .single-product #main-content .product .woocommerce-images {
     float: none;
     margin: auto;
