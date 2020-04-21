@@ -9572,15 +9572,15 @@ div.product form.cart {
 
 /* the slides */
 .single-product ul.products li.product {
-  margin: 0 20px !important;
   max-width: 353px;
+  /* width: 351px !important; */
 }
 
 
 /* the parent */
-.single-product ul.products {
+/* .single-product ul.products {
   margin: 0 -20px;
-}
+} */
 
 .single-product ul.products .slick-dots {
   bottom: -95px;
@@ -9674,6 +9674,10 @@ body.product ul.products {
     .price {
     padding-bottom: 20px;
   }
+
+  /* .single-product ul.products li.product {
+    width: calc((100% - 87px)/3) !important;
+  } */
 }
 
 @media screen and (max-width: 1024px) {
