@@ -720,6 +720,14 @@ If number of partners is less then 5 - slick is not initialized("project-partner
   justify-content: flex-start;
   overflow: hidden;
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .proj-timeline-share {
+    align-items: baseline;
+  }
+}
+
 .single-projects .single-proj-news-section {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -2488,7 +2496,44 @@ and shows hidden orange lines near titles on About us page*/
 .help .help-form-inner-wrapper .help-form-text {
   padding-bottom: 23px;
 }
- 
+
+/*radio buttons*/
+.help-form-subscribe input[type="radio"] {
+  position: relative;
+}
+
+.help-form-subscribe input[type="radio"]:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: -2px;
+  top: -1px;
+  z-index: 2;
+  border-radius: 100%;
+  display: block;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.help-form-subscribe input[type="radio"]:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: 3px;
+  top: 4px;
+  z-index: 2;
+  border-radius: 100%;
+  display: block;
+  background: #a7a7a7;
+  opacity: 0;
+}
+
+.help-form-subscribe input[type="radio"]:checked:after {
+  opacity: 1;
+}
+
 .help_form_wrapper input.error {
   border-bottom: 1px solid #d0021b;
 }
@@ -3333,7 +3378,7 @@ html[lang="en-US"] .bottom-content-wrapper .one_fifth:nth-child(4) {
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens:none) { 
   html[lang="en-US"] .bottom-content-wrapper .one_fifth:nth-child(4) {
-    margin-right: 92px;
+    margin-right: 90px;
   }
 }
 
