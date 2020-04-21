@@ -2500,6 +2500,7 @@ and shows hidden orange lines near titles on About us page*/
 /*radio buttons*/
 .help-form-subscribe input[type="radio"] {
   position: relative;
+  cursor: pointer;
 }
 
 .help-form-subscribe input[type="radio"]:before {
@@ -3233,6 +3234,13 @@ html[lang="en-US"] .help  .help-form-inner-wrapper .help-form-submit-oferta .hel
 
 #footer {
   margin-bottom: 20px;
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  section#bottom-bg .bottom-col-title {
+    font-family: "Raleway-Regular";
+  }
 }
 
 .bottom-content-wrapper {
@@ -4983,6 +4991,8 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   .home-page-section6 .vc_pageable-load-more-btn a:hover {
     padding-left: 20px;
   }
+
+
 }
 
 @media screen and (max-width: 800px) {
@@ -5147,6 +5157,12 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
 
   #main-content .home-page-section7.section-news .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item:nth-child(2n) {
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home-page-section7 .vc_pageable-load-more-btn a:hover {
+    padding-left: 20px;
   }
 }
 
