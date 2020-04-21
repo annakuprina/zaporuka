@@ -1867,6 +1867,13 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   letter-spacing: 1px;
 }
 
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .proj-timeline-share {
+    padding: 16px 37px;
+  }
+}
+
 .proj-timeline-share-text {
   margin-right: 6px;
   font-size: 13px;
@@ -2541,6 +2548,13 @@ and shows hidden orange lines near titles on About us page*/
   position: absolute;
   right: calc(50% - 47px);
   top: 8px;
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    top: 10px;
+  }
 }
 
 .help_form_wrapper .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit .submit-btn {
@@ -3314,6 +3328,13 @@ html[lang="ru-RU"] .bottom-content-wrapper .one_fifth:nth-child(4) {
 
 html[lang="en-US"] .bottom-content-wrapper .one_fifth:nth-child(4) {
   margin-right: 97px;
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  html[lang="en-US"] .bottom-content-wrapper .one_fifth:nth-child(4) {
+    margin-right: 92px;
+  }
 }
 
 html[lang="en-US"] .bottom-content-wrapper .one_fifth:nth-child(1) {
@@ -4906,6 +4927,10 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     .vc_pageable-slide-wrapper {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .home-page-section6 .vc_pageable-load-more-btn a:hover {
+    padding-left: 0;
   }
 }
 
