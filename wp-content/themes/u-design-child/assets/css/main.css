@@ -9696,7 +9696,7 @@ body.product ul.products {
 
   .single-product ul.products li.product {
     max-width: unset; 
-    min-width: unset;
+    min-width: unset !important;
   }
 
   #slider2_container.woocommerce-images {
