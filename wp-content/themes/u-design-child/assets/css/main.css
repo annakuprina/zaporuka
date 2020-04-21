@@ -9731,6 +9731,10 @@ body.product ul.products {
   .single-product .related .slick-list .product  {
     max-width: 450px !important;  
   }
+
+  .single-product .related .slick-track, .single-product .related .slick-list .product {
+    min-width: unset !important;
+  }
 }
 
 @media screen and (max-width: 500px) {
