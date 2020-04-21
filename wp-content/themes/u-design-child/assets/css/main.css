@@ -9687,6 +9687,8 @@ body.product ul.products {
   }
 }
 
+
+
 @media screen and (max-width: 950px) {
   .woocommerce.single-product #wrapper-1 .single-product-cart-link {
     text-align: right;
@@ -9694,11 +9696,14 @@ body.product ul.products {
 
   .single-product ul.products li.product {
     max-width: unset; 
+    min-width: unset;
   }
 
   #slider2_container.woocommerce-images {
     margin-right: 0;
   }
+
+  
 /* 
   .woocommerce.single-product #wrapper-1 div.product div.summary {
     max-width: 600px;
