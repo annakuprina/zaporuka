@@ -9981,9 +9981,6 @@ body.product ul.products {
 }
 
 @media screen and (max-width: 550px) {
-  .single-product .lightbox {
-    justify-content: flex-start;
-  }
 
   .help_form_wrapper .help-form-inner-wrapper .help-form-email-tel .help-form-amount-email,
   .help_form_wrapper .help-form-inner-wrapper .help-form-email-tel .help-form-amount-tel {
