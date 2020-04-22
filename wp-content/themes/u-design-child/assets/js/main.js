@@ -429,7 +429,7 @@ jQuery(document).ready(function($) {
   This fix removes click(tap) effect from swipe event*/
   $(".woocommerce.single-product .related ul.products li.product").on('hover', function(event) {
     console.log(event.type); 
-    $(".woocommerce.single-product .related ul.products li.product").toggleClass("related-product-active");
+    $(this).toggleClass("related-product-active");
   });
 });
 
