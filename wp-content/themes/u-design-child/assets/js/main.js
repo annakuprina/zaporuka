@@ -426,6 +426,11 @@ jQuery(document).ready(function($) {
   $(".woocommerce.single-product .related ul.products li.product").on('hover', function(event) {
     $(this).toggleClass("related-product-active");
   });
+
+  /*Check if homepage contains Thanks block. Then add class "homepage-banner-with-thanks-block" to banner block*/
+  if($('div').hasClass("home-first-thanks-block")) {
+    $('.homepage-banner').addClass('homepage-banner-with-thanks-block');
+  }
 });
 
 
