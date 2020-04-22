@@ -186,9 +186,6 @@ jQuery(document).ready(function($) {
     ]
   });
 
-  // console.log($('.rewards-desktop .slick-active').eq(0).text());
-  // $('.rewards-desktop .slick-active').eq(0).css('margin-right','4px');
-
   //RELATED PRODUCTS SLIDER (single product page)
   $(".single-product ul.products").slick({
     dots: true,
@@ -381,7 +378,6 @@ jQuery(document).ready(function($) {
 
 
   var  maxItems = $(".project-partners-carousel .vc_pageable-slide-wrapper").children('div').length;
-  console.log('items number=' + maxItems);
   if (maxItems > 4) {
     $('.project-partners-carousel').addClass('project-partners-carousel-initialized');
 

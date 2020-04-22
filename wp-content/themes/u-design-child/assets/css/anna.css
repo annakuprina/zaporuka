@@ -1364,7 +1364,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce.single-product .related ul.products li.product a.added_to_cart {
   display: none !important;
 }
-.woocommerce
+/* .woocommerce
   .shop-custom-wrapper
   ul.products
   li.product
@@ -1377,7 +1377,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   top: 0;
   right: 0;
   padding: 0;
-}
+} */
 .shop-custom-wrapper .product:hover .shop-page-price-title {
   bottom: unset;
   top: 0;
