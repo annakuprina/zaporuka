@@ -9770,9 +9770,6 @@ div.product form.cart {
   background:transparent;
 }
 
-#main-content li.product:hover .woocommerce-Price-amount {
-  color: #fff;
-}
 
 .single-product #wrapper-1 .single-product-cart-link {
   padding-top: 47px;

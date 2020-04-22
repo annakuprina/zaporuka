@@ -424,7 +424,13 @@ jQuery(document).ready(function($) {
     dots: true,
   });
 
-
+  /*fix for IOS mobile. Single product page.Ralated products block.
+  When user swipes slider with related product click(tap) effect appears.
+  This fix removes click(tap) effect from swipe event*/
+  $(".woocommerce.single-product .related ul.products li.product").on('hover', function(event) {
+    console.log(event.type); 
+    $(".woocommerce.single-product .related ul.products li.product").toggleClass("related-product-active");
+  });
 });
 
 
