@@ -5776,6 +5776,24 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   color: #333 !important;
 
 }
+.project_banner_section1_item a {
+  color: #333 !important;
+  pointer-events: none !important;
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens:none) { 
+  .project_banner_section1_item a {
+    color: #333 !important;
+    pointer-events: none !important;
+  }
+
+  .project_banner_section1_item h5 {
+    color: #333 !important;
+    pointer-events: none !important;
+  }
+}
+
 
 .project_banner_section1_item p {
   font-family: "Proxima-Nova-Semibold";
