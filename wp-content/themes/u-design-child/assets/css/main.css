@@ -6594,6 +6594,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 #main-content .section-news.tab-wrapper .vc_grid-filter li.vc_grid-filter-item:hover::after {
     top: 59px;
 }
+
+#main-content .section-news .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item {
+  width: calc((100% - 1px)/3);
+}
+
 @media screen and (max-width: 1200px) {
     #main-content .section-news.tab-wrapper.section-news--news-page {
         margin-bottom: 0;
