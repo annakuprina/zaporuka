@@ -5345,6 +5345,14 @@ html[lang="en-US"]
   right: 0;
   background: rgba(0, 0, 0, 0.3);
 }
+
+#main-content
+  .home-page-section7.section-news
+  .vc_grid.vc_row.vc_grid-gutter-35px
+  .vc_grid-item {
+  width: calc((100% - 82px) / 3);
+}
+
 @media screen and (max-width: 1200px) {
   .home .home-page-section7-title {
     margin-top: 0;
@@ -7198,16 +7206,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   top: 59px;
 }
 
-#main-content .section-news .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item {
+/* #main-content .section-news .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item {
   width: calc((100% - 1px) / 3);
-}
-
-/*All Microsoft Edge (Includes Chrome 28+)*/
-@supports (not (-webkit-hyphens: none)) and (not (-moz-appearance: none)) {
-    #main-content .section-news .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item {
-        width: calc((100% - 82px)/3);
-    }
-}
+} */
 
 @media screen and (max-width: 1200px) {
   #main-content .section-news.tab-wrapper.section-news--news-page {

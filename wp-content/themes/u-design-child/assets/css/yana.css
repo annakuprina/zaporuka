@@ -307,7 +307,7 @@ h6,
 .section-tabs .vc_tta-tab.vc_active > a,
 .section-tabs .vc_tta-tab > a:hover {
   border-color: transparent !important;
-  background-color: unset !important;
+  background-color: transparent !important;
 }
 .section-tabs .vc_tta-tabs-list li.vc_tta-tab {
   padding: 0;
@@ -366,7 +366,7 @@ h6,
 }
 
 /*********************** Single project page ***************************/
-.project-banner-without-image{
+.project-banner-without-image {
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
   display: block;
   width: 100%;
@@ -826,20 +826,20 @@ h6,
   padding-bottom: 45px;
 }
 
-.fund-documents-wrapper{
+.fund-documents-wrapper {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.fund-documents-wrapper .fund-document{
+.fund-documents-wrapper .fund-document {
   width: 30%;
 }
 .fund-documents-wrapper .document-title {
   min-height: 70px;
 }
 @media screen and (max-width: 768px) {
-  .fund-documents-wrapper .fund-document{
+  .fund-documents-wrapper .fund-document {
     width: 100%;
   }
 }
@@ -1106,7 +1106,7 @@ li.one-tab-link:hover {
 }
 
 /********************* Thanks block *********************/
-.home-first-thanks-block{
+.home-first-thanks-block {
   background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
   color: #fff;
   width: 100%;
@@ -1115,18 +1115,18 @@ li.one-tab-link:hover {
   padding: 45px 80px;
   float: right;
 }
-.thanks-text-wrapper .h2-header-without-line-white{
+.thanks-text-wrapper .h2-header-without-line-white {
   color: #ffffff;
   font-family: Raleway-Bold;
   font-size: 48px;
   line-height: 58px;
   padding-bottom: 20px;
 }
-.thanks-text-wrapper .thanks-text-block{
+.thanks-text-wrapper .thanks-text-block {
   line-height: 28px;
   font-family: Proxima-Nova-Regular;
 }
-.thanks-text-wrapper  .order-sum{
+.thanks-text-wrapper .order-sum {
   font-weight: 700;
 }
 .thanks-share-link,
@@ -1136,28 +1136,28 @@ li.one-tab-link:hover {
   font-family: Raleway-Bold;
   padding-top: 25px;
 }
-.thanks-text-wrapper a{
+.thanks-text-wrapper a {
   color: #fff;
 }
-.vc_custom_1585211434500{
+.vc_custom_1585211434500 {
   background-position: unset !important;
 }
-.home-first-post-image{
+.home-first-post-image {
   max-width: 1140px;
   margin: 0 auto !important;
 }
 
-.help-form-subscribe .pay_label{
+.help-form-subscribe .pay_label {
   color: rgba(165, 165, 165, 0.8);
 }
-.help-form-submit{
+.help-form-submit {
   background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
   padding: 10px 30px;
 }
 
-.one-project-info-title a{
+.one-project-info-title a {
   color: #333333;
 }
-.one-project-info-title a:hover{
-  opacity: .85;
+.one-project-info-title a:hover {
+  opacity: 0.85;
 }
