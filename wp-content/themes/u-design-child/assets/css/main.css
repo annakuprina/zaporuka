@@ -9726,8 +9726,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .fake-count
   .quantity.quantity-numers
   .quantity-button.quantity-down {
-  top: 0px;
-  left: -2px;
+    top: -2px;
+    left: 0px;
+    font-size: 18px;
 }
 
 .woocommerce.single-product
@@ -9979,7 +9980,7 @@ body.product ul.products {
     width: 20px;
   }
 
-  .shop-custom-wrapper .cart-customlocation.cart-count {
+  #wrapper-1 .shop-custom-wrapper .cart-customlocation.cart-count {
     left: 2px;
   }
 
