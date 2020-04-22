@@ -1248,8 +1248,8 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 }
 .shop-custom-wrapper .add_to_cart_button::after,
 .woocommerce.single-product .related .add_to_cart_button::after {
-  content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
-  padding-left: 10px;
+  padding-left: 10px !important;
+  margin: unset !important;
   position: static !important;
   animation: none !important;
   vertical-align: unset !important;
