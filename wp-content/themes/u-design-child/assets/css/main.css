@@ -5350,9 +5350,8 @@ html[lang="en-US"]
   .home-page-section7.section-news
   .vc_grid.vc_row.vc_grid-gutter-35px
   .vc_grid-item {
-  width: calc((100% - 82px) / 3);
+  width: calc((100% - 80px) / 3);
 }
-
 @media screen and (max-width: 1200px) {
   .home .home-page-section7-title {
     margin-top: 0;
@@ -5372,14 +5371,14 @@ html[lang="en-US"]
     .home-page-section7.section-news
     .vc_grid.vc_row.vc_grid-gutter-35px
     .vc_grid-item {
-    width: calc((100% - 20px) / 2);
-    margin-right: 20px;
+    width: calc((100% - 40px) / 2);
+    margin-right: 40px;
   }
   #main-content
     .home-page-section7.section-news
     .vc_grid.vc_row.vc_grid-gutter-35px
     .vc_grid-item:nth-child(3n) {
-    margin-right: 20px;
+    margin-right: 40px;
   }
   #main-content
     .home-page-section7.section-news
@@ -7209,7 +7208,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /* #main-content .section-news .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item {
   width: calc((100% - 1px) / 3);
 } */
-
 @media screen and (max-width: 1200px) {
   #main-content .section-news.tab-wrapper.section-news--news-page {
     margin-bottom: 0;
