@@ -1467,7 +1467,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   top: 2px;
 }
 .woocommerce-hidden-price-filter {
-  margin-bottom: 60px;
+  margin: 0 10px 60px 10px;
   display: none;
 }
 .woocommerce-hidden-price-filter.show-me {
