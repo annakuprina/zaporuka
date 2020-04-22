@@ -9841,7 +9841,14 @@ body.product ul.products {
 .single-product .related .slick-list .product  {
   min-width: 260px !important;  
 }
-
+.woocommerce.single-product
+#wrapper-1
+.related
+ul.products
+li.product:hover
+.add_to_cart_button {
+  z-index: 50;
+}
 
 @media screen and (max-width: 1200px) {
 
