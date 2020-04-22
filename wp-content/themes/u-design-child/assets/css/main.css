@@ -2780,7 +2780,7 @@ input#oferta:before {
   background: #fff;
   border: 1px solid rgba(175, 175, 175, 0.8);
   border-radius: 2px;
-  left: 1px;
+  left: 2px;
   top: 4px;
 }
 
@@ -2788,7 +2788,7 @@ input#oferta:after {
   position: absolute;
   content: "";
   display: block;
-  left: 4px;
+  left: 5px;
   top: 8px;
   width: 8px;
   height: 4px;

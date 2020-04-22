@@ -1321,11 +1321,6 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 }
 /*end single product page.hover on product*/
 
-
-.shop-custom-wrapper #main-content .product:hover .woocommerce-Price-amount {
-  color: #fff;
-}
-
 .shop-custom-wrapper .product:hover .attachment-woocommerce_thumbnail {
   visibility: hidden;
 }
@@ -1343,7 +1338,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   padding-top: 5px;
   padding-bottom: 40px;
 }
-.shop-custom-wrapper .product:hover .woocommerce-Price-amount {
+#main-content .shop-custom-wrapper .product:hover .woocommerce-Price-amount {
   color: #ffffff;
   font-size: 32px;
   font-family: "Proxima-Nova-Semibold";
