@@ -6221,6 +6221,11 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   #wrapper-1 .project_banner_wrapper_section1 {
     background-position: 34% center !important;
   }
+
+  .project_banner_section1_item,
+  .project_banner_section1_help {
+    padding: 15px 12px;
+  }
 }
 /*---------------------------
   ONE PROJECT PAGE. SLIDERS
