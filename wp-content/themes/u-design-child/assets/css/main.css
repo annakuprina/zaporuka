@@ -2554,10 +2554,10 @@ and shows hidden orange lines near titles on About us page*/
 .help-form-subscribe input[type="radio"]:before {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 14px;
-  left: 0px;
-  top: -1px;
+  width: 15px;
+  height: 15px;
+  left: -2px;
+  top: -2px;
   z-index: 2;
   border-radius: 100%;
   display: block;
@@ -2568,10 +2568,10 @@ and shows hidden orange lines near titles on About us page*/
 .help-form-subscribe input[type="radio"]:after {
   content: "";
   position: absolute;
-  width: 6px;
-  height: 6px;
-  left: 5px;
-  top: 4px;
+  width: 7px;
+  height: 7px;
+  left: 3px;
+  top: 3px;
   z-index: 2;
   border-radius: 100%;
   display: block;
@@ -2775,22 +2775,22 @@ input#oferta:before {
   position: absolute;
   content: "";
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   background: #fff;
   border: 1px solid rgba(175, 175, 175, 0.8);
   border-radius: 2px;
-  left: 2px;
-  top: 4px;
+  left: 0px;
+  top: 3px;
 }
 
 input#oferta:after {
   position: absolute;
   content: "";
   display: block;
-  left: 5px;
+  left: 3px;
   top: 8px;
-  width: 8px;
+  width: 10px;
   height: 4px;
   border-radius: 1px;
   border-left: 2px solid rgba(53, 53, 53, 0.8);
@@ -2801,7 +2801,7 @@ input#oferta:after {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   z-index: 23;
-  opacity: 0;
+  opacity: 0
 }
 
 input#oferta:checked:after {
@@ -3643,6 +3643,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   left: 28px;
 }
 
+
+
 #main-content .home-first-post-image {
   max-width: 1140px;
   margin: auto;
@@ -3891,6 +3893,18 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   .home .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-right {
     width: 100% !important;
   }
+
+  /*Homepage Thanks block after payment*/
+  .home-first-thanks-block {
+    min-width: unset;
+    padding: 35px 40px;
+  }
+
+  .thanks-text-wrapper .h2-header-without-line-white {
+    font-size: 42px;
+    line-height: 46px;
+  }
+  /*end of Homepage Thanks block after payment*/
 }
 
 @media screen and (max-width: 959px) {
