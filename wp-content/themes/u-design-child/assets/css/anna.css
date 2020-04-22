@@ -1263,10 +1263,15 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce.single-product .related .product {
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
-.shop-custom-wrapper .product:hover,
-.woocommerce.single-product .related ul.products li.product:hover {
+
+.shop-custom-wrapper .product:hover{
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
 }
+
+/* .woocommerce.single-product .related ul.products li.product:hover {
+  background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
+} */
+
 .shop-custom-wrapper .product:hover .attachment-woocommerce_thumbnail,
 .woocommerce.single-product
   .related
