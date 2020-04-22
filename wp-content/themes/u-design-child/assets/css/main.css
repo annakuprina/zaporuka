@@ -9978,6 +9978,14 @@ body.product ul.products {
   #wrapper-1 .single-product .woocommerce-cart-page-link .cart-customlocation.cart-count {
     width: 20px;
   }
+
+  .shop-custom-wrapper .cart-customlocation.cart-count {
+    left: 2px;
+  }
+
+  .single-product #page-content .single-product-cart-link .cart-count {
+    left: 0px;
+  }
 }
 
 

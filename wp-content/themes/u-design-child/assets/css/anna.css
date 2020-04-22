@@ -1251,6 +1251,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
   padding-left: 10px;
   position: static !important;
+  animation: none !important;
 }
 .shop-custom-wrapper .woocommerce-loop-product__link,
 .woocommerce.single-product .related .woocommerce-loop-product__link {
