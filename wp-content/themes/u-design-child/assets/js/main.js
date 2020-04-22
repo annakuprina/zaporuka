@@ -428,7 +428,6 @@ jQuery(document).ready(function($) {
   When user swipes slider with related product click(tap) effect appears.
   This fix removes click(tap) effect from swipe event*/
   $(".woocommerce.single-product .related ul.products li.product").on('hover', function(event) {
-    console.log(event.type); 
     $(this).toggleClass("related-product-active");
   });
 });
