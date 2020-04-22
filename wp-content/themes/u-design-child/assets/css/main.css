@@ -9893,6 +9893,8 @@ ul.products
 li.product:hover
 .add_to_cart_button {
   z-index: 50;
+  top: 0 !important;
+  margin-top: 15px !important;
 }
 
 .woocommerce.single-product
