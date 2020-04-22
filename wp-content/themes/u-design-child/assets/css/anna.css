@@ -1252,6 +1252,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   padding-left: 10px;
   position: static !important;
   animation: none !important;
+  vertical-align: unset !important;
 }
 .shop-custom-wrapper .woocommerce-loop-product__link,
 .woocommerce.single-product .related .woocommerce-loop-product__link {
