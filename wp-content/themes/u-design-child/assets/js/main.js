@@ -195,6 +195,7 @@ jQuery(document).ready(function($) {
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
+    mobileFirst: true,
     responsive: [
       {
         breakpoint: 950,
@@ -211,7 +212,8 @@ jQuery(document).ready(function($) {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: true,
+
         }
       }
     ]
