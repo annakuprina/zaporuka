@@ -1249,10 +1249,10 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .shop-custom-wrapper .add_to_cart_button::after,
 .woocommerce.single-product .related .add_to_cart_button::after {
   padding-left: 10px !important;
-  margin: unset !important;
+  /* margin: unset !important; */
   position: static !important;
   animation: none !important;
-  vertical-align: unset !important;
+  /* vertical-align: unset !important; */
 }
 .shop-custom-wrapper .woocommerce-loop-product__link,
 .woocommerce.single-product .related .woocommerce-loop-product__link {
