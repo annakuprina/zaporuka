@@ -1315,14 +1315,14 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   .woocommerce-loop-product__link {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
-.woocommerce.single-product .related .product.related-product-active
+.woocommerce.single-product #main-content .related .product.related-product-active
   .woocommerce-Price-amount {
   color: #fff;
 }
 /*end single product page.hover on product*/
 
 
-.shop-custom-wrapper .product:hover .woocommerce-Price-amount {
+.shop-custom-wrapper #main-content .product:hover .woocommerce-Price-amount {
   color: #fff;
 }
 
