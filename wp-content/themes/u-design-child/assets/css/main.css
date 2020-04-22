@@ -9895,6 +9895,16 @@ li.product:hover
   z-index: 50;
 }
 
+.woocommerce.single-product
+#wrapper-1
+.related
+ul.products
+li.product:hover
+.add_to_cart_button:after {
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  padding-left: 10px;
+}
+
 @media screen and (max-width: 1200px) {
 
   .woocommerce.single-product ul.products {
