@@ -9901,7 +9901,7 @@ li.product:hover
 ul.products
 li.product:hover
 .add_to_cart_button:after {
-  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
   padding-left: 10px;
 }
 
