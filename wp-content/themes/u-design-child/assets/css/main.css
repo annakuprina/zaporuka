@@ -3895,12 +3895,12 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
   }
 
   /*Homepage Thanks block after payment*/
-  .home-first-thanks-block {
+  .homepage-banner .home-first-thanks-block {
     min-width: unset;
     padding: 35px 40px;
   }
 
-  .thanks-text-wrapper .h2-header-without-line-white {
+  .homepage-banner .thanks-text-wrapper .h2-header-without-line-white {
     font-size: 42px;
     line-height: 46px;
   }
@@ -3959,6 +3959,10 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     align-items: flex-start;
   }
 
+  #home-page-content .homepage-banner-with-thanks-block .home-first-post-image {
+    height: 480px;
+    max-height: 480px;
+  }
 
   .home-first-post-image .wpb_column:nth-child(2) {
     position: absolute;
@@ -4014,6 +4018,33 @@ html[lang="en-US"] .home .help-form-inner-wrapper .help-form-submit-oferta .help
     max-width: 290px;
     top: 420px;
   }
+
+  .homepage-banner-with-thanks-block .home-first-thanks-block {
+    padding: 35px 30px;
+  }
+
+  .homepage-banner-with-thanks-block .thanks-text-wrapper .h2-header-without-line-white {
+    font-size: 33px;
+    line-height: 40px;
+  }
+  /* .homepage-banner-with-thanks-block .home-first-post-image .wpb_column:nth-child(2) {
+    top: 340px;
+    left: calc((100% - 400px) / 2);
+    min-width: 400px;
+    max-width: 400px;
+  }*/
+
+  .homepage-banner-with-thanks-block .home-first-post-image .wpb_column:nth-child(2) {
+    left: calc((100% - 270px) / 2);
+    min-width: 270px;
+    max-width: 270px;
+  }
+
+
+  #home-page-content .homepage-banner-with-thanks-block .home-first-post-image {
+    height: 620px;
+    max-height: 620px;
+  } 
 
   .home .homepage-banner > .wpb_column > .vc_column-inner {
     padding-top: 150px;
