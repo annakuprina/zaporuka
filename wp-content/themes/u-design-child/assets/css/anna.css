@@ -935,7 +935,7 @@ footer a.designer-link {
   padding-bottom: 24px;
 }
 .help-form-inner-wrapper .help-form-email-tel,
-.help-form-inner-wrapper .help-form-submit-oferta{
+.help-form-inner-wrapper .help-form-submit-oferta {
   padding-bottom: 30px;
 }
 .help-form-inner-wrapper .help-form-PIB {
@@ -972,14 +972,14 @@ footer a.designer-link {
   color: #fff;
 }
 .help-form-inner-wrapper .help-form-text,
-.help-form-inner-wrapper .help-form-cancel-subscription-text a{
+.help-form-inner-wrapper .help-form-cancel-subscription-text a {
   color: rgba(165, 165, 165, 0.8);
   font-size: 12px;
   font-weight: 400;
   padding-bottom: 29px;
   letter-spacing: 0.3px;
 }
-.help-form-inner-wrapper .help-form-cancel-subscription-text a:hover{
+.help-form-inner-wrapper .help-form-cancel-subscription-text a:hover {
   color: #e78b48;
 }
 .help-form-inner-wrapper .textarea-small,
@@ -1085,11 +1085,11 @@ footer a.designer-link {
   color: rgba(165, 165, 165, 0.8);
   font-size: 14px;
 }
-.help-form-inner-wrapper .cancel_subscription_form .help-form-email-tel{
+.help-form-inner-wrapper .cancel_subscription_form .help-form-email-tel {
   position: relative;
-  padding-bottom:45px;
+  padding-bottom: 45px;
 }
-.wpb_wrapper .cansel-message.error-message{
+.wpb_wrapper .cansel-message.error-message {
   display: none;
   color: #d0021b;
   font-size: 12px;
@@ -1097,12 +1097,14 @@ footer a.designer-link {
   line-height: 1em;
   position: absolute;
 }
-.wpb_wrapper .cansel-message.success-message{
-    font-size: 18px;  
-    font-weight: 700;
-    margin-bottom: 30px;
+.wpb_wrapper .cansel-message.success-message {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
-.cancel_subscription_form_success_block{display: none;}
+.cancel_subscription_form_success_block {
+  display: none;
+}
 
 /* .help-form-inner-wrapper .cancel_subscription_form .help-form-submit-oferta{padding-bottom: 0;}
 input[type="checkbox"]:checked,
@@ -1195,7 +1197,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 }
 .section-projects .vc_grid-btn-load_more a,
 .shop-custom-wrapper a.lmp_button {
-  background: unset !important;
+  background: none !important;
   color: #e78b48 !important;
   font-family: "Raleway-Bold";
   font-size: 14px;
@@ -1266,20 +1268,29 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce.single-product .related .product {
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
-.shop-custom-wrapper .product:hover{
+.shop-custom-wrapper .product:hover {
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
 }
 
 /*SINGLE PRODUCT PAGE. RELATED PRODUCTS BLOCK. HOVER ON PRODUCT*/
-.woocommerce.single-product .related ul.products li.product.related-product-active {
+.woocommerce.single-product
+  .related
+  ul.products
+  li.product.related-product-active {
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
 }
-.woocommerce.single-product .related ul.products li.product.related-product-active
-.attachment-woocommerce_thumbnail {
+.woocommerce.single-product
+  .related
+  ul.products
+  li.product.related-product-active
+  .attachment-woocommerce_thumbnail {
   visibility: hidden;
 }
-.woocommerce.single-product .related  ul.products  li.product.related-product-active
-.woocommerce-loop-product__title {
+.woocommerce.single-product
+  .related
+  ul.products
+  li.product.related-product-active
+  .woocommerce-loop-product__title {
   color: #ffffff;
   font-family: "Raleway-Medium";
   font-size: 16px;
@@ -1287,38 +1298,53 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   letter-spacing: 0.5px;
   width: 100%;
 }
-.woocommerce.single-product .related ul.products li.product.related-product-active
-.price {
+.woocommerce.single-product
+  .related
+  ul.products
+  li.product.related-product-active
+  .price {
   width: 100%;
   text-align: left;
   padding-top: 5px;
   padding-bottom: 40px;
 }
-.woocommerce.single-product .related .product.related-product-active
-.woocommerce-Price-amount {
+.woocommerce.single-product
+  .related
+  .product.related-product-active
+  .woocommerce-Price-amount {
   color: #ffffff;
   font-size: 32px;
   font-family: "Proxima-Nova-Semibold";
   padding-bottom: 45px;
 }
-.woocommerce.single-product .related ul.products li.product.related-product-active
-.add_to_cart_button {
+.woocommerce.single-product
+  .related
+  ul.products
+  li.product.related-product-active
+  .add_to_cart_button {
   display: block !important;
   text-align: left;
   margin-top: 47px;
   opacity: 0.9;
 }
-.woocommerce.single-product .related .product.related-product-active
-.shop-page-price-title {
+.woocommerce.single-product
+  .related
+  .product.related-product-active
+  .shop-page-price-title {
   bottom: unset;
   top: 0;
 }
-.woocommerce.single-product .related .product.related-product-active
+.woocommerce.single-product
+  .related
+  .product.related-product-active
   .shop-page-price-title
   .woocommerce-loop-product__link {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
-.woocommerce.single-product #main-content .related .product.related-product-active
+.woocommerce.single-product
+  #main-content
+  .related
+  .product.related-product-active
   .woocommerce-Price-amount {
   color: #fff;
 }
@@ -1356,10 +1382,10 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   ul.products
   li.product:hover
   .add_to_cart_button {
-    display: block !important;
-    text-align: left;
-    margin-top: 47px;
-    opacity: 0.9;   
+  display: block !important;
+  text-align: left;
+  margin-top: 47px;
+  opacity: 0.9;
 }
 .woocommerce .shop-custom-wrapper ul.products li.product a.added_to_cart,
 .woocommerce.single-product .related ul.products li.product a.added_to_cart {
@@ -1387,8 +1413,8 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   .product:hover
   .shop-page-price-title
   .woocommerce-loop-product__link {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
 .woocommerce-custom-product-filter {
   display: -webkit-flex;
   display: flex;
