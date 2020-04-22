@@ -2630,7 +2630,7 @@ and shows hidden orange lines near titles on About us page*/
 }
 
 #oferta {
-    margin-right: 10px;
+    margin-right: 12px;
     margin-left: 2px;
 }
 
@@ -2647,17 +2647,17 @@ input#oferta:before {
     background: #fff;
     border: 1px solid rgba(175, 175, 175, 0.8);
     border-radius: 2px;
-    left: 0;
+    left: 1;
     top: 3px;
 }
 input#oferta:after {
     position: absolute;
     content: "";
     display: block;
-    left: 3px;
-    top: 8px;
+    left: 4px;
+    top: 7px;
     width: 10px;
-    height: 4px;
+    height: 5px;
     border-radius: 1px;
     border-left: 2px solid rgba(53, 53, 53, 0.8);
     border-bottom: 2px solid rgba(53, 53, 53, 0.8);
@@ -8019,12 +8019,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     }
     .contact-mobile .map-marker-main-block:before {
         top: 151px;
-        left: 150px;
+        left: 141px;
     }
 
     .map-marker-main-wrap-mob > .vc_column-inner {
         background-image: url("http://zaporuka.testit.in.ua/wp-content/uploads/2020/03/map-mobile.png") !important;
-        background-position: center center;
+        background-position: 0 center;
         height: 315px;
     }
 }
@@ -9250,6 +9250,16 @@ body.product ul.products {
 /*-----------
   CART PAGE
 ------------*/
+.woocommerce-cart .woocommerce table.shop_table_responsive tr td::before, .woocommerce-page table.shop_table_responsive tr td::before {
+  margin-right: 20px;
+}
+.woocommerce-cart .woocommerce .product-remove {
+  display: flex;
+  justify-content: flex-end;
+}
+.woocommerce-cart .woocommerce .product-quantity .quantity {
+  margin: 0;
+}
 .woocommerce .woocommerce-cart-form {
     padding-top: 40px;
 }
