@@ -8326,9 +8326,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #askForHelpModal.opened .modal-dialog::-webkit-scrollbar-track {
   background: #ddd;
-  /* opacity: 0.1; */
 }
 
+#askForHelpModal.opened .modal-dialog::-webkit-scrollbar-thumb {
+  background-color: #989898;
+}
 #askForHelpModal a:link,
 #askForHelpModal a:visited,
 #askForHelpModal a:hover,
@@ -8336,9 +8338,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   color: #e78b48 !important;
 }
 
-#askForHelpModal.opened .modal-dialog::-webkit-scrollbar-thumb {
-  background-color: #989898;
-}
+
 
 @media screen and (max-width: 500px) {
   #askForHelpModal.opened .modal-dialog {
@@ -8352,6 +8352,18 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   transform: translateY(-50%);
   max-height: calc(100% - 140px);
   overflow-y: scroll;
+}
+
+#sendSmsModalfromHeader.opened .modal-dialog::-webkit-scrollbar {
+  width: 5px;
+}
+
+#sendSmsModalfromHeader.opened .modal-dialog::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+#sendSmsModalfromHeader.opened .modal-dialog::-webkit-scrollbar-thumb {
+  background-color: #989898;
 }
 
 /* width  media for sendSmsModalfromHeader modal*/
