@@ -1245,16 +1245,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     left: 32px;
   }
 }
-@media screen and (max-width: 900px) {
-  .single-projects
-    #main-content
-    .block-project-partners
-    .help_button_single_block
-    .vc_btn3 {
-    padding-left: 5px;
-    font-size: 12px;
-  }
-}
+
 @media screen and (max-width: 800px) {
   .one-project {
     flex-direction: column;
