@@ -1763,7 +1763,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   top: 2px;
 }
 .woocommerce-hidden-price-filter {
-  margin: 0 10px 60px 10px;
+  margin: 0 13px 60px 13px;
   display: none;
 }
 .woocommerce-hidden-price-filter.show-me {
@@ -1791,7 +1791,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   input {
   background: transparent;
   border: unset;
-  padding: 4px 0;
+  padding: 4px 2px;
 }
 .woocommerce-hidden-price-filter
   .berocket_aapf_widget
