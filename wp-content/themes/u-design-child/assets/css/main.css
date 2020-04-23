@@ -2916,7 +2916,7 @@ html[lang="en-US"]
 }
 
 .help #oferta-error {
-  left: 28px;
+  left: 30px;
   top: 24px;
   line-height: 13px;
 }
@@ -3122,7 +3122,7 @@ html[lang="en-US"]
   }
 
   .help #oferta-error {
-    left: 27px;
+    left: 29px;
   }
   .help input#oferta:before {
     left: 1px;
@@ -3135,12 +3135,13 @@ html[lang="en-US"]
   .help .help-form-inner-wrapper .help-form-oferta label:not(.error) {
     font-size: 12px;
     position: relative;
-    top: 1px;
+    top: 4px;
   }
 }
 @media screen and (max-width: 767px) {
   .help #oferta-error {
     left: 31px;
+    top: 27px;
   }
 
   .help #oferta {
@@ -3722,7 +3723,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 .home #oferta-error {
-  left: 28px;
+  left: 29px;
 }
 
 #main-content .home-first-post-image {
@@ -8214,6 +8215,16 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 #ModalHelpForm .help-form-subscribe-right {
   padding-left: 0 !important;
 }
+
+#ModalHelpForm .oferta-label {
+  position: relative;
+  top: -3px;
+}
+#ModalHelpForm #oferta-error {
+  left: 30px;
+  top: 22px;
+}
+
 @media screen and (max-width: 1200px) {
   #ModalHelpForm .closemodale {
     right: 20px;
@@ -8256,6 +8267,17 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #ModalHelpForm input#oferta:after {
     top: 9px;
   }
+
+  #ModalHelpForm .oferta-label {
+    position: relative;
+    top: 2px;
+    left: -1px;
+  }
+
+  #ModalHelpForm #oferta-error {
+    left: 30px;
+    top: 24px;
+  }
 }
 @media screen and (max-width: 900px) {
   #ModalHelpForm #oferta {
@@ -8263,7 +8285,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   #ModalHelpForm #oferta-error {
-    left: 25px;
+    left: 29px;
+  }
+
+  #ModalHelpForm .oferta-label {
+    position: relative;
+    left: 5px;
   }
 
   html[lang="ru-RU"]
@@ -8303,7 +8330,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 
   #ModalHelpForm .help #oferta-error {
-    left: 31px;
+    left: 36px;
   }
 
   #ModalHelpForm .submit-btn,
@@ -8755,8 +8782,19 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     width: 100%;
   }
   .contact-mobile .vc_column_container {
-
+    width: 100%;
   }
+
+  .contact-info-block-mob {
+    width: 100%;
+  }
+  .contact-info-block-mob .vc_column-inner {
+    width: 100%;
+  }
+  .map-marker-main-wrap-mob {
+    width: 100%;
+  }
+
   .contact-mobile .h2-header-line {
     margin-bottom: 30px;
   }
@@ -8803,6 +8841,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     background-image: url("http://zaporuka.testit.in.ua/wp-content/uploads/2020/03/map-mobile.png") !important;
     background-position: 0 center;
     height: 315px;
+    width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
