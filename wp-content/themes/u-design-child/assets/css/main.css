@@ -3456,13 +3456,13 @@ html[lang="en-US"]
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
   section#bottom-bg .bottom-col-title {
-    font-family: "Raleway-Regular";
+    font-family: "Raleway-Semibold";
   }
 }
 /*media only for Mozilla */
 @-moz-document url-prefix() {
   section#bottom-bg .bottom-col-title {
-    font-family: "Raleway-Regular";
+    font-family: "Raleway-Semibold";
   }
 }
 
