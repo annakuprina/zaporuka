@@ -383,7 +383,6 @@ h2.h2-header-line::before {
 
 .header-mob-nav {
   margin-right: 10px;
-  width: calc(100% - 140px);
   height: 100%;
   display: flex;
   align-items: center;
@@ -696,6 +695,12 @@ If number of partners is less then 5 - slick is not initialized("project-partner
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .proj-timeline-share {
+    align-items: baseline;
+  }
+}
+
+@-moz-document url-prefix() {
   .proj-timeline-share {
     align-items: baseline;
   }
