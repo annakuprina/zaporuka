@@ -3302,7 +3302,8 @@ html[lang="en-US"]
   }
 
   /*orange arrow for diffenent lang*/
-  html[lang="uk"] .help
+  html[lang="uk"]
+    .help
     .help-form-inner-wrapper
     .help-form-submit-oferta
     .help-form-submit::after {
@@ -7206,9 +7207,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   top: 59px;
 }
 
-/* #main-content .section-news .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item {
+#main-content .section-news .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item {
   width: calc((100% - 1px) / 3);
-} */
+}
 @media screen and (max-width: 1200px) {
   #main-content .section-news.tab-wrapper.section-news--news-page {
     margin-bottom: 0;
