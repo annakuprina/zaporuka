@@ -432,6 +432,12 @@ h2.h2-header-line::before {
   padding: 0 15px;
 }
 
+#header-mob .header-mob-logo {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
 #header-mob .header-mob-logo img {
   cursor: pointer;
 }
