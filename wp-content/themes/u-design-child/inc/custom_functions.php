@@ -228,6 +228,7 @@ function shortcode_project_partners_mob(){
             )
         )
     ));
+
     $partners_array_by_2 = array_chunk($partners_array, 3, true);
     ob_start(); ?>
     <!-- One Project page. Partners slider. Mobile  -->
