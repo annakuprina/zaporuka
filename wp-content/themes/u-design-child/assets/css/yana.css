@@ -20,7 +20,18 @@ h6,
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  #slogan {
+    font-family: "Raleway-Semibold";
+  }
+}
 #custom-top-bar {
   height: 45px;
   background-color: #f3f3f3;
@@ -99,6 +110,12 @@ h6,
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .error_page a {
+    font-family: "Raleway-Semibold";
+  }
+}
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .error_page a {
     font-family: "Raleway-Semibold";
   }
@@ -235,6 +252,12 @@ h6,
     font-family: "Raleway-Semibold";
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .wpb-js-composer .vc_tta.vc_general.bank-details-block .vc_tta-tab > a {
+    font-family: "Raleway-Semibold";
+  }
+}
 
 .wpb-js-composer
   .vc_tta.vc_general.bank-details-block
@@ -326,6 +349,12 @@ h6,
     font-family: "Raleway-Semibold";
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .custom-container .content_column.help_column p {
+    font-family: "Raleway-Semibold";
+  }
+}
 .custom-container .content_column.help_column p::after {
   content: url(../../img/arrow-home.svg);
   padding-left: 10px;
@@ -363,6 +392,12 @@ h6,
 }
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .section-tabs .vc_tta-tabs-list li.vc_tta-tab span {
+    font-family: "Raleway-Semibold";
+  }
+}
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .section-tabs .vc_tta-tabs-list li.vc_tta-tab span {
     font-family: "Raleway-Semibold";
   }
@@ -495,6 +530,12 @@ h6,
     font-family: "Raleway-Semibold";
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .help_button_single_block .vc_btn3 {
+    font-family: "Raleway-Semibold";
+  }
+}
 .help_button_single_block .vc_btn3::after {
   content: url("../../img/arrow-help.svg");
   padding-left: 10px;
@@ -622,7 +663,12 @@ h6,
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .block_excerpt_container .block_excerpt {
+    font-family: "Raleway-Semibold";
+  }
+}
 /************************* Privacy Policy Page **************************/
 .privacy-section1,
 .privacy-section2 {
@@ -699,6 +745,13 @@ h6,
     font-family: "Raleway-Semibold" !important;
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .aboutus_section1 h2,
+  .aboutus_section1 .video_button a {
+    font-family: "Raleway-Semibold" !important;
+  }
+}
 .aboutus_section1 .video_button {
   text-align: right;
 }
@@ -734,12 +787,25 @@ h6,
     font-family: "Raleway-Semibold";
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .team-member-title,
+  .team-member-title-hover {
+    font-family: "Raleway-Semibold";
+  }
+}
 .team-member-info-hover .vc_gitem-acf-label {
   font-family: "Raleway-Bold";
 }
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .team-member-info-hover .vc_gitem-acf-label {
+    font-family: "Raleway-Semibold";
+  }
+}
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .team-member-info-hover .vc_gitem-acf-label {
     font-family: "Raleway-Semibold";
   }
@@ -767,6 +833,12 @@ h6,
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .our_team_section .vc_grid-btn-load_more a {
+    font-family: "Raleway-Semibold";
+  }
+}
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .our_team_section .vc_grid-btn-load_more a {
     font-family: "Raleway-Semibold";
   }
@@ -963,7 +1035,12 @@ h6,
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .list_reports_wrapper li {
+    font-family: "Raleway-Semibold";
+  }
+}
 .list_reports_wrapper li.tab-active {
   color: #e78b48 !important;
 }
@@ -1020,6 +1097,12 @@ li.one-tab-link:hover {
     font-family: "Raleway-Semibold";
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .h2-header-without-line {
+    font-family: "Raleway-Semibold";
+  }
+}
 .report_title {
   color: #333333;
   font-family: "Raleway-Bold";
@@ -1034,7 +1117,12 @@ li.one-tab-link:hover {
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .report_title {
+    font-family: "Raleway-Semibold";
+  }
+}
 .report_download:after {
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
   position: absolute;
@@ -1057,6 +1145,12 @@ li.one-tab-link:hover {
     font-family: "Raleway-Semibold";
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .report_download {
+    font-family: "Raleway-Semibold";
+  }
+}
 .reports_section .h2-header-line::before {
   top: calc((100% - 45px) / 2);
 }
@@ -1074,7 +1168,12 @@ li.one-tab-link:hover {
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .zvit_children_count {
+    font-family: "Raleway-Semibold";
+  }
+}
 .pagination-children {
   padding-top: 15px;
 }
@@ -1112,7 +1211,12 @@ li.one-tab-link:hover {
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .single_section1_text {
+    font-family: "Raleway-Semibold";
+  }
+}
 .single_section2 {
   padding-top: 20px;
 }
@@ -1159,7 +1263,12 @@ li.one-tab-link:hover {
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .single_news_two_posts a {
+    font-family: "Raleway-Semibold";
+  }
+}
 .single_news_two_posts .vc_gitem-post-data-source-post_title a {
   font-size: 16px;
 }
@@ -1184,7 +1293,12 @@ li.one-tab-link:hover {
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .news_social_info .left-to-collect-text {
+    font-family: "Raleway-Semibold";
+  }
+}
 .news_social_info .proj-timeline-info-right {
   width: calc(100% - 185px);
   text-align: center;
@@ -1273,7 +1387,12 @@ li.one-tab-link:hover {
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .thanks-text-wrapper .h2-header-without-line-white {
+    font-family: "Raleway-Semibold";
+  }
+}
 .thanks-text-wrapper .thanks-text-block {
   line-height: 28px;
   font-family: Proxima-Nova-Regular;
@@ -1296,7 +1415,13 @@ li.one-tab-link:hover {
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .thanks-share-link,
+  .thanks-share-link a {
+    font-family: "Raleway-Semibold";
+  }
+}
 .thanks-text-wrapper a {
   color: #fff;
 }
