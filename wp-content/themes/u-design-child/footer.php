@@ -155,7 +155,7 @@ if( ! udesign_check_page_layout_option( 'no_footer' ) ) :
 			<div id="footer_bottom">
 				<div class="one_fifth"><span class="copyright"><?php echo $copyright_text; ?></span></div>
 				<div class="one_fifth">
-					<span class="developer"><span class="developer-text"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6"><g><g><path fill="#aaa" d="M0 .078h6v5.838H0z"/></g></g></svg>Develop by</span><a href="<?php echo $developer_link;?>" target="_blank" class="developer-link"><?php echo $developer_text;?></a></span>
+					<span class="developer"><span class="developer-text"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6"><g><g><path fill="#aaa" d="M0 .078h6v5.838H0z"/></g></g></svg>Developed by</span><a href="<?php echo $developer_link;?>" target="_blank" class="developer-link"><?php echo $developer_text;?></a></span>
 				</div>
 				<div class="one_fifth last_column">
 					<span class="designer"><span class="designer-text"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6"><g><g><path fill="#aaa" d="M0 .078h6v5.838H0z"/></g></g></svg>Designed by</span><a href="<?php echo $designer_link;?>" target="_blank" class="designer-link"><?php echo $designer_text;?></a></span>
