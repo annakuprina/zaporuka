@@ -629,7 +629,7 @@ header#top-wrapper {
 
   #header-mob.active {
     max-height: 100%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
 }
 /*-----end header-------*/
