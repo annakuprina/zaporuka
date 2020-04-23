@@ -7,6 +7,20 @@ h6,
 #slogan {
   font-family: "Raleway-Bold";
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  #slogan {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 #custom-top-bar {
   height: 45px;
   background-color: #f3f3f3;
@@ -81,6 +95,13 @@ h6,
   font-weight: 700;
   max-width: 168px;
   font-family: "Raleway-Bold";
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .error_page a {
+    font-family: "Raleway-Semibold";
+  }
 }
 .error_page a:after {
   content: url("../../img/arrow-home.svg");
@@ -207,6 +228,14 @@ h6,
   border: none;
   border-radius: 0;
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .wpb-js-composer .vc_tta.vc_general.bank-details-block .vc_tta-tab > a {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 .wpb-js-composer
   .vc_tta.vc_general.bank-details-block
   .vc_tta-tab.vc_active
@@ -291,6 +320,12 @@ h6,
   opacity: 1;
   font-family: "Raleway-Bold";
 }
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .custom-container .content_column.help_column p {
+    font-family: "Raleway-Semibold";
+  }
+}
 .custom-container .content_column.help_column p::after {
   content: url(../../img/arrow-home.svg);
   padding-left: 10px;
@@ -325,6 +360,12 @@ h6,
   color: rgba(51, 51, 51, 0.29) !important;
   font-family: "Raleway-Bold";
   font-size: 16px;
+}
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .section-tabs .vc_tta-tabs-list li.vc_tta-tab span {
+    font-family: "Raleway-Semibold";
+  }
 }
 #main-content .section-projects .vc_tta.vc_general .vc_tta-tab > a {
   padding: 14px 0;
@@ -448,6 +489,12 @@ h6,
   padding-top: 10px !important;
   font-family: "Raleway-Bold";
 }
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .help_button_single_block .vc_btn3 {
+    font-family: "Raleway-Semibold";
+  }
+}
 .help_button_single_block .vc_btn3::after {
   content: url("../../img/arrow-help.svg");
   padding-left: 10px;
@@ -569,6 +616,12 @@ h6,
   font-family: "Raleway-Bold";
   letter-spacing: 0.2px;
 }
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .block_excerpt_container .block_excerpt {
+    font-family: "Raleway-Semibold";
+  }
+}
 
 /************************* Privacy Policy Page **************************/
 .privacy-section1,
@@ -638,6 +691,14 @@ h6,
 .aboutus_section1 .video_button a {
   font-family: Raleway-Bold !important;
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .aboutus_section1 h2,
+  .aboutus_section1 .video_button a {
+    font-family: "Raleway-Semibold" !important;
+  }
+}
 .aboutus_section1 .video_button {
   text-align: right;
 }
@@ -666,8 +727,22 @@ h6,
   font-size: 20px;
   font-weight: 700;
 }
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .team-member-title,
+  .team-member-title-hover {
+    font-family: "Raleway-Semibold";
+  }
+}
 .team-member-info-hover .vc_gitem-acf-label {
   font-family: "Raleway-Bold";
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .team-member-info-hover .vc_gitem-acf-label {
+    font-family: "Raleway-Semibold";
+  }
 }
 .team-member-title {
   padding-left: 40px;
@@ -688,6 +763,13 @@ h6,
   font-family: "Raleway-Bold";
   font-size: 14px;
   padding-top: 0;
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .our_team_section .vc_grid-btn-load_more a {
+    font-family: "Raleway-Semibold";
+  }
 }
 .write-aboutus-wrapper {
   padding-top: 130px;
@@ -874,6 +956,14 @@ h6,
   font-size: 16px;
   position: relative;
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .list_reports_wrapper li {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 .list_reports_wrapper li.tab-active {
   color: #e78b48 !important;
 }

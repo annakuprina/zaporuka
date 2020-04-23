@@ -2790,7 +2790,9 @@ and shows hidden orange lines near titles on About us page*/
   margin-right: 12px;
   margin-left: 2px;
 }
-
+#oferta:not(:after) {
+  opacity: 0;
+}
 #oferta-error {
   top: 25px;
   left: 26px;
@@ -2799,22 +2801,22 @@ input#oferta:before {
   position: absolute;
   content: "";
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 19px;
+  height: 19px;
   background: #fff;
   border: 1px solid rgba(175, 175, 175, 0.8);
   border-radius: 2px;
-  left: 1;
-  top: 3px;
+  left: -1px;
+  top: 1px;
 }
 input#oferta:after {
   position: absolute;
   content: "";
   display: block;
-  left: 5px;
-  top: 7px;
-  width: 10px;
-  height: 5px;
+  left: 3px;
+  top: 5px;
+  width: 11px;
+  height: 7px;
   border-radius: 1px;
   border-left: 2px solid rgba(53, 53, 53, 0.8);
   border-bottom: 2px solid rgba(53, 53, 53, 0.8);
@@ -10017,9 +10019,7 @@ body.product ul.products {
   margin-top: 15px !important;
 }
 
-  ul.products
-  li.product:hover
-  .add_to_cart_button:after {
+ul.products li.product:hover .add_to_cart_button:after {
   content: url("/wp-content/themes/u-design-child/img/arrow-home.svg") !important;
   padding-left: 10px !important;
 }
