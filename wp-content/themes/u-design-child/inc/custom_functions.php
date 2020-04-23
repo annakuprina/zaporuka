@@ -219,6 +219,7 @@ function shortcode_project_partners_mob(){
     $partners_array = get_posts( array(
         'numberposts' => -1,
         'post_type'   => 'partners',
+        'lang'        => pll_current_language(),
         'tax_query' => array(
             array(
               'taxonomy' => 'partners_category',
@@ -227,6 +228,7 @@ function shortcode_project_partners_mob(){
             )
         )
     ));
+
     $partners_array_by_2 = array_chunk($partners_array, 3, true);
     ob_start(); ?>
     <!-- One Project page. Partners slider. Mobile  -->
