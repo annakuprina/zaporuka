@@ -219,10 +219,12 @@ function shortcode_project_partners_mob(){
     $partners_array = get_posts( array(
         'numberposts' => -1,
         'post_type'   => 'partners',
-        'tax_query' => array(
+        'lang'        => pll_current_language(),
+        'tax_query'   => array(
             array(
               'taxonomy' => 'partners_category',
               'field' => 'name',
+
               'terms' => $post->post_title
             )
         )
