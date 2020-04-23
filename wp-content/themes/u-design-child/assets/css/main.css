@@ -8752,6 +8752,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .contact-mobile {
     display: block;
+    width: 100%;
   }
 
   .contact-mobile .h2-header-line {
