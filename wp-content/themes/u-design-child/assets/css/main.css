@@ -308,6 +308,7 @@ h2.h2-header-line::before {
 
 #header-mob .expand-button.expand-button-opened {
   transform: rotate(225deg);
+  top: 13px;
 }
 
 #header-mob #navigation-menu ul.sf-menu > li {
@@ -1000,6 +1001,20 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   font-size: 16px;
   font-weight: 700;
   margin-right: 7px;
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .project-money-quantity {
+    font-family: "Proxima-Nova-Semibold";
+  }
+}
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .project-money-quantity {
+    font-family: "Proxima-Nova-Semibold";
+  }
 }
 
 .project-money-involved {
@@ -2651,6 +2666,17 @@ and shows hidden orange lines near titles on About us page*/
   color: rgba(86, 86, 86, 0.8);
 }
 
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .help_form_wrapper
+    .help-form-inner-wrapper
+    .help-form-oferta
+    label:not(.error) {
+    position: relative;
+    top: -1px;
+  }
+}
+
 .help_form_wrapper
   .help-form-inner-wrapper
   .help-form-amount-right
@@ -2728,12 +2754,6 @@ and shows hidden orange lines near titles on About us page*/
   }
 }
 
-/*media only for Mozilla */
-@-moz-document url-prefix() {
-  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
-    top: 10px;
-  }
-}
 .help_form_wrapper
   .help-form-inner-wrapper
   .help-form-submit-oferta
@@ -3384,6 +3404,17 @@ html[lang="en-US"]
   }
   .help .help-form-inner-wrapper .help-form-oferta label:not(.error) {
     font-size: 14px;
+  }
+
+  /*media only for Mozilla */
+  @-moz-document url-prefix() {
+    .help_form_wrapper
+      .help-form-inner-wrapper
+      .help-form-oferta
+      label:not(.error) {
+      position: relative;
+      top: 1px;
+    }
   }
 }
 @media screen and (max-width: 500px) {
@@ -8314,6 +8345,14 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 #ModalHelpForm .oferta-label {
   position: relative;
   top: -3px;
+}
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  #ModalHelpForm .oferta-label {
+    position: relative;
+    top: -1px;
+  }
 }
 #ModalHelpForm #oferta-error {
   left: 30px;
