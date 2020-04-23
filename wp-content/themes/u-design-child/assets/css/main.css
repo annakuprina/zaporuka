@@ -383,6 +383,10 @@ h2.h2-header-line::before {
 
 .header-mob-nav {
   margin-right: 10px;
+  width: calc(100% - 140px);
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .hamburger {

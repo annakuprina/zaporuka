@@ -252,7 +252,7 @@ jQuery(document).ready(function ($) {
   });
 
   //
-  $(".header-mob-top:not(.header-mob-logo)").click(function () {
+  $(".header-mob-nav").click(function () {
     $(".header-mob-bottom").slideToggle();
     $(".header-mob-logo img").toggleClass("active");
     $("#header-mob").toggleClass("active");
