@@ -10016,14 +10016,12 @@ body.product ul.products {
   top: 0 !important;
   margin-top: 15px !important;
 }
-.woocommerce.single-product
-  #wrapper-1
-  .related
+
   ul.products
   li.product:hover
   .add_to_cart_button:after {
-  content: url("/wp-content/themes/u-design-child/img/arrow-home.svg");
-  padding-left: 10px;
+  content: url("/wp-content/themes/u-design-child/img/arrow-home.svg") !important;
+  padding-left: 10px !important;
 }
 @media screen and (max-width: 1200px) {
   .woocommerce.single-product ul.products {
