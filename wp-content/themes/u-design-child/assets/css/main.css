@@ -3302,7 +3302,7 @@ html[lang="en-US"]
   }
 
   /*orange arrow for diffenent lang*/
-  .help
+  html[lang="uk"] .help
     .help-form-inner-wrapper
     .help-form-submit-oferta
     .help-form-submit::after {
@@ -5352,6 +5352,7 @@ html[lang="en-US"]
   .vc_grid-item {
   width: calc((100% - 80px) / 3);
 }
+
 @media screen and (max-width: 1200px) {
   .home .home-page-section7-title {
     margin-top: 0;
@@ -9807,15 +9808,17 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 #main-content .privacy-help-section {
   padding-top: 71px;
 }
+
 @media screen and (max-width: 1024px) {
   .privacy-section2 .block_excerpt_container {
     padding: 0 0 0 20px;
   }
 
   #main-content .privacy-section1 {
-    padding-top: 10px;
+    padding-top: 40px;
   }
 }
+
 @media screen and (max-width: 768px) {
   .privacy-section1 .vc_custom_1581002097646 {
     padding-left: 15px !important;
@@ -9828,10 +9831,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content .privacy-help-section {
     padding-top: 30px;
     padding-bottom: 0;
-  }
-
-  #main-content .privacy-section1 {
-    padding-top: 0;
   }
 
   .privacy-section2 .before_rectangle_block p::before {
@@ -10393,11 +10392,11 @@ body.product ul.products {
 }
 @media screen and (max-width: 550px) {
   .help_form_wrapper
-    .help-form-inner-wrapper
+    .cancel_subscription_form
     .help-form-email-tel
     .help-form-amount-email,
   .help_form_wrapper
-    .help-form-inner-wrapper
+    .cancel_subscription_form
     .help-form-email-tel
     .help-form-amount-tel {
     width: 100% !important;
@@ -10411,7 +10410,7 @@ body.product ul.products {
   }
 
   .help_form_wrapper
-    .help-form-inner-wrapper
+    .cancel_subscription_form
     .help-form-email-tel
     .help-form-amount-email {
     margin-bottom: 25px;
