@@ -2807,14 +2807,14 @@ input#oferta:before {
   border: 1px solid rgba(175, 175, 175, 0.8);
   border-radius: 2px;
   left: -1px;
-  top: 1px;
+  top: 0px;
 }
 input#oferta:after {
   position: absolute;
   content: "";
   display: block;
   left: 3px;
-  top: 5px;
+  top: 4px;
   width: 11px;
   height: 7px;
   border-radius: 1px;
@@ -8754,7 +8754,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     display: block;
     width: 100%;
   }
+  .contact-mobile .vc_column_container {
 
+  }
   .contact-mobile .h2-header-line {
     margin-bottom: 30px;
   }
