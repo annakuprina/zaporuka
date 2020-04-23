@@ -1171,7 +1171,13 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     .project-partners-carousel-not-initialized
     .wpb_single_image
     img {
-    min-width: 100px;
+    max-width: inherit;
+  }
+
+  .project-partners-carousel-not-initialized
+    .help_button_single_block
+    .vc_btn3 {
+    padding: 0 !important;
   }
 }
 /* Media for one Project block(home page) */
