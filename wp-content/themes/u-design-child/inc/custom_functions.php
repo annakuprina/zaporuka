@@ -739,7 +739,7 @@ function list_of_children() {
                             <?php echo $review_content; ?>
                         <?php } ?>
                         <?php if (!empty($help_amount)){ ?>
-                            <?php pll_e( 'Сума допомоги');?> – <span class="help-amount"><?php echo $help_amount; ?></span>
+                            <br/><?php pll_e( 'Сума допомоги');?> – <span class="help-amount"><?php echo $help_amount; ?></span>
                         <?php } ?>
                         <?php if (!empty($kind_of_help)){ ?>
                             <span class="kind-of-help"> <?php echo $kind_of_help; ?></span> .

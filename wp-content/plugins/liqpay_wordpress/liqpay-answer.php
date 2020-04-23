@@ -65,7 +65,7 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
 
         }elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
             $payment_status = "успішна";
-            $text .= "<p style='color: #888;'> Дякуємо за ваше добре серце! Завдяки вам підопічні фонду Запорука зможуть вчасно отримати необхідну допомогу.</p>";
+            $text .= '<p style="color: #888;"> Дякуємо за ваше добре серце! Завдяки вам підопічні фонду "Запорука" зможуть вчасно отримати необхідну допомогу.</p>';
         }elseif (($status == "wait_secure") || ($status == "wait_accept")) {
             $payment_status = "платіж знаходиться на перевірці";
             $text .= "<p style='color: #888;'> Ваш платіж очікує на перевірку...</p>";
@@ -95,7 +95,7 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
 
         }elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
             $payment_status = "успешная";
-            $text .= "<p style='color: #888;'> Спасибо за ваше доброе сердце! Благодаря вам подопечные фонда 'Запорука' смогут вовремя получить необходимую помощь.</p>";
+            $text .= '<p style="color: #888;"> Спасибо за ваше доброе сердце! Благодаря вам подопечные фонда "Запорука" смогут вовремя получить необходимую помощь.</p>';
         }elseif (($status == "wait_secure") || ($status == "wait_accept")) {
             $payment_status = "платеж находится на проверке";
             $text .= "<p style='color: #888;'> Ваш платеж ожидает проверку...</p>";
@@ -107,7 +107,7 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
         $text .= "<p style='color: #888;'> Номер транзакции в системе LiqPay: " . $transaction_id . "</p>";
         $text .= "<p style='color: #888;'> Статус транзакции: " . $payment_status . "</p>";
         if(!empty($user_phone)) {
-            $text .= "<p style='color: #888;'> Телефон': " . $user_phone . "</p>";
+            $text .= "<p style='color: #888;'> Телефон: " . $user_phone . "</p>";
         }
         $text .= "<p style='color: #888;'> Назначения платежа: " . $datas . "</p>";
         $text .= "<p style='color: #888;'> Вместе меняем мир к лучшему!</p>";
