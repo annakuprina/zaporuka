@@ -150,6 +150,12 @@ select:-webkit-autofill:focus {
     font-family: "Raleway-Semibold";
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  #bottom-bg .bottom-col-title {
+    font-family: "Raleway-Semibold";
+  }
+}
 #bottom-bg .footer-logo {
   padding-bottom: 13px;
   height: 57px;
@@ -241,6 +247,13 @@ footer a.designer-link {
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  footer a.developer-link,
+  footer a.designer-link {
+    font-family: "Raleway-Semibold";
+  }
+}
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   footer a.developer-link,
   footer a.designer-link {
     font-family: "Raleway-Semibold";
@@ -338,6 +351,12 @@ footer a.designer-link {
     font-family: "Raleway-Semibold";
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .modal-footer .help-other {
+    font-family: "Raleway-Semibold";
+  }
+}
 .modal-footer .help-other::after {
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
   padding-left: 10px;
@@ -397,6 +416,12 @@ footer a.designer-link {
     font-family: "Raleway-Semibold";
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .home-first-post-post-title h4 {
+    font-family: "Raleway-Semibold";
+  }
+}
 .home-first-post-post-excerpt p {
   color: #ffffff;
   font-size: 16px;
@@ -427,14 +452,18 @@ footer a.designer-link {
   font-size: 48px;
   line-height: 59px;
 }
-
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
   .h2-header-line {
     font-family: "Raleway-Semibold" !important;
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .h2-header-line {
+    font-family: "Raleway-Semibold" !important;
+  }
+}
 .h2-header-line::before {
   content: "";
   width: 58px;
@@ -502,14 +531,18 @@ footer a.designer-link {
   font-size: 20px;
   line-height: 30px;
 }
-
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
   .home-page-section2 .section2-columns .section2-single-column h2 {
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .home-page-section2 .section2-columns .section2-single-column h2 {
+    font-family: "Raleway-Semibold";
+  }
+}
 .home-page-section2 .section2-columns .section2-single-column:hover h2 {
   color: #ffffff;
 }
@@ -596,6 +629,12 @@ footer a.designer-link {
 }
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .home-page-section4-tabs .vc_tta-container h2 {
+    font-family: "Raleway-Semibold";
+  }
+}
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .home-page-section4-tabs .vc_tta-container h2 {
     font-family: "Raleway-Semibold";
   }
@@ -723,6 +762,12 @@ footer a.designer-link {
     font-family: "Raleway-Semibold";
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .section-news .news-title {
+    font-family: "Raleway-Semibold";
+  }
+}
 .section-news .news-excerpt {
   color: #333333;
   font-size: 16px;
@@ -747,6 +792,14 @@ footer a.designer-link {
     font-family: "Raleway-Semibold";
   }
 }
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .section-news .news-link a {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 .section-news .news-link a::after {
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
   padding-left: 10px;
@@ -784,6 +837,14 @@ footer a.designer-link {
     font-family: "Raleway-Semibold";
   }
 }
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .section-news .news-title-hover {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 .section-news .news-excerpt-hover {
   color: #fff;
   font-size: 16px;
@@ -805,6 +866,12 @@ footer a.designer-link {
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .section-news .news-link-hover a {
+    font-family: "Raleway-Semibold";
+  }
+}
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .section-news .news-link-hover a {
     font-family: "Raleway-Semibold";
   }
@@ -843,6 +910,13 @@ footer a.designer-link {
   }
 }
 
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .section-news .vc_grid-btn-load_more a {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 .section-news.tab-wrapper {
   padding-top: 100px;
 }
@@ -875,6 +949,17 @@ footer a.designer-link {
 }
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .section-news.tab-wrapper .vc_grid-filter li.vc_grid-filter-item span,
+  .shop-custom-wrapper
+    .woocommerce-custom-category-filter
+    li.category-filter-item
+    a {
+    font-family: "Raleway-Semibold";
+  }
+}
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .section-news.tab-wrapper .vc_grid-filter li.vc_grid-filter-item span,
   .shop-custom-wrapper
     .woocommerce-custom-category-filter
@@ -980,6 +1065,13 @@ footer a.designer-link {
   }
 }
 
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .singl-project-bottom-part .singl-project-title a {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 .singl-project-bottom-part .singl-project-link a {
   color: #e78b48 !important;
   font-size: 14px;
@@ -990,6 +1082,13 @@ footer a.designer-link {
 }
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .singl-project-bottom-part .singl-project-link a {
+    font-family: "Raleway-Semibold";
+  }
+}
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .singl-project-bottom-part .singl-project-link a {
     font-family: "Raleway-Semibold";
   }
@@ -1020,6 +1119,13 @@ footer a.designer-link {
 }
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .help-form-inner-wrapper .help-form-inner-title {
+    font-family: "Raleway-Semibold";
+  }
+}
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .help-form-inner-wrapper .help-form-inner-title {
     font-family: "Raleway-Semibold";
   }
@@ -1324,6 +1430,15 @@ input[type="checkbox"]:not(:checked) + label.error:after {
     font-family: "Raleway-Semibold";
   }
 }
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .section-projects .vc_grid-btn-load_more a,
+  .shop-custom-wrapper a.lmp_button {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 .woocommerce .shop-custom-wrapper ul.products li.product a img,
 .woocommerce.single-product .related ul.products li.product a img {
   margin-bottom: 0;
@@ -1353,6 +1468,15 @@ input[type="checkbox"]:not(:checked) + label.error:after {
     font-family: "Raleway-Semibold";
   }
 }
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .shop-custom-wrapper .woocommerce-loop-product__title,
+  .woocommerce.single-product .related .woocommerce-loop-product__title {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 .shop-custom-wrapper ul.products li.product .price,
 .woocommerce.single-product ul.products li.product .price {
   width: 40%;
@@ -1580,6 +1704,15 @@ input[type="checkbox"]:not(:checked) + label.error:after {
     font-family: "Raleway-Semibold";
   }
 }
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .woocommerce-custom-product-filter .woocommerce-custom-price-filter a,
+  .woocommerce-custom-product-filter .woocommerce-cart-page-link a,
+  .single-product .single-product-cart-link a {
+    font-family: "Raleway-Semibold";
+  }
+}
 .single-product .single-product-cart-link a {
   position: relative;
 }
@@ -1722,6 +1855,13 @@ input[type="checkbox"]:not(:checked) + label.error:after {
     font-family: "Raleway-Semibold";
   }
 }
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .woocommerce.single-product div.product .product_title {
+    font-family: "Raleway-Semibold";
+  }
+}
 .woocommerce.single-product div.product div.summary {
   max-width: 471px;
   margin-bottom: 0;
@@ -1766,6 +1906,12 @@ input[type="checkbox"]:not(:checked) + label.error:after {
     font-family: "Raleway-Semibold" !important;
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .woocommerce.single-product .single-product-description-title {
+    font-family: "Raleway-Semibold" !important;
+  }
+}
 .woocommerce.single-product .left-text {
   max-width: 600px;
 }
@@ -1782,6 +1928,13 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 }
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .woocommerce.single-product div.product form.cart .button {
+    font-family: "Raleway-Semibold";
+  }
+}
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .woocommerce.single-product div.product form.cart .button {
     font-family: "Raleway-Semibold";
   }
@@ -1805,6 +1958,13 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 }
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .woocommerce.single-product .fake-count .quantity-text {
+    font-family: "Raleway-Semibold";
+  }
+}
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .woocommerce.single-product .fake-count .quantity-text {
     font-family: "Raleway-Semibold";
   }
@@ -1956,6 +2116,13 @@ input[type="checkbox"]:not(:checked) + label.error:after {
     font-family: "Raleway-Semibold";
   }
 }
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .woocommerce.single-product .submit-share-wrapper .one-project-share {
+    font-family: "Raleway-Semibold";
+  }
+}
 .woocommerce.single-product
   .submit-share-wrapper
   .one-project-socials
@@ -2103,6 +2270,14 @@ input[type="checkbox"]:not(:checked) + label.error:after {
     font-family: "Raleway-Semibold";
   }
 }
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .woocommerce-thankyou-order-received {
+    font-family: "Raleway-Semibold";
+  }
+}
+
 .woocommerce .woocommerce-customer-details address {
   border: unset;
   padding: 6px 0;
@@ -2163,6 +2338,12 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   font-weight: 700;
   max-width: 168px;
   font-family: "Raleway-Bold";
+}
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .page-template-thanks-for-donation p.to-home a {
+    font-family: "Raleway-Semibold";
+  }
 }
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {

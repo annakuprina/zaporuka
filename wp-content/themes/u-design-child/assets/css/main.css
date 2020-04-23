@@ -700,12 +700,6 @@ If number of partners is less then 5 - slick is not initialized("project-partner
   }
 }
 
-@-moz-document url-prefix() {
-  .proj-timeline-share {
-    align-items: baseline;
-  }
-}
-
 .single-projects .single-proj-news-section {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1044,6 +1038,12 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   }
 }
 
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .one-project-info-title {
+    font-family: "Raleway-Semibold";
+  }
+}
 .one-project-info-text {
   font-size: 16px;
   font-weight: 400;
@@ -1090,6 +1090,12 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .single-proj-other-posts-section .other-projects-single-project .vc_btn3 {
+    font-family: "Raleway-Semibold";
+  }
+}
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .single-proj-other-posts-section .other-projects-single-project .vc_btn3 {
     font-family: "Raleway-Semibold";
   }
@@ -1548,7 +1554,12 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .friends-name {
+    font-family: "Raleway-Semibold";
+  }
+}
 .friends-link {
   color: #333333;
 }
@@ -1610,7 +1621,12 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .one-project-banner .one-project-share {
+    font-family: "Raleway-Semibold";
+  }
+}
 .one-project-banner .one-project-socials .fa-facebook {
   color: #a9a9a9;
   position: relative;
@@ -1689,6 +1705,12 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .one-project-banner .one-project-help span {
+    font-family: "Raleway-Semibold";
+  }
+}
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .one-project-banner .one-project-help span {
     font-family: "Raleway-Semibold";
   }
@@ -2388,7 +2410,12 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .child-info {
+    font-family: "Raleway-Semibold";
+  }
+}
 .child-name-and-age {
   color: #333;
   line-height: 30px;
@@ -2701,6 +2728,12 @@ and shows hidden orange lines near titles on About us page*/
   }
 }
 
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
+    top: 10px;
+  }
+}
 .help_form_wrapper
   .help-form-inner-wrapper
   .help-form-submit-oferta
@@ -2801,6 +2834,12 @@ and shows hidden orange lines near titles on About us page*/
   }
 }
 
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .help .help-item-link {
+    font-family: "Raleway-Semibold";
+  }
+}
 #oferta {
   margin-right: 12px;
   margin-left: 2px;
@@ -3420,6 +3459,12 @@ html[lang="en-US"]
     font-family: "Raleway-Regular";
   }
 }
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  section#bottom-bg .bottom-col-title {
+    font-family: "Raleway-Regular";
+  }
+}
 
 .bottom-content-wrapper {
   display: flex;
@@ -3772,6 +3817,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  #main-content .home-first-post-post-title {
+    font-family: "Raleway-Semibold" !important;
+  }
+}
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   #main-content .home-first-post-post-title {
     font-family: "Raleway-Semibold" !important;
   }
@@ -5959,7 +6010,12 @@ html[lang="en-US"]
     font-family: "Raleway-Semibold" !important;
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .project_banner_section1_left h2 {
+    font-family: "Raleway-Semibold" !important;
+  }
+}
 .project_banner_section1_item {
   width: 200px;
   height: 130px;
@@ -6016,6 +6072,12 @@ html[lang="en-US"]
   }
 }
 
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .project_banner_section1_item .column_text {
+    font-family: "Raleway-Semibold" !important;
+  }
+}
 .project_banner_section1_item .wpb_wrapper {
   display: flex;
   flex-direction: column;
@@ -6071,6 +6133,13 @@ html[lang="en-US"]
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
+  .project_banner_section1_help > .wpb_wrapper p {
+    font-family: "Raleway-Semibold";
+  }
+}
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
   .project_banner_section1_help > .wpb_wrapper p {
     font-family: "Raleway-Semibold";
   }
@@ -6601,6 +6670,12 @@ html[lang="en-US"]
   }
 }
 
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .sliders-tabs-wrapper {
+    font-family: "Raleway-Semibold";
+  }
+}
 .sliders-tabs-wrapper .one-tab-link {
   position: relative;
   padding: 8px 0;
@@ -7868,7 +7943,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     font-family: "Raleway-Semibold";
   }
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .category-mob-select {
+    font-family: "Raleway-Semibold";
+  }
+}
 .berocket_filter_price_slider.ui-widget-content .ui-slider-range,
 .shop-custom-wrapper
   .berocket_filter_slider.ui-widget-content
