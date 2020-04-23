@@ -215,7 +215,7 @@ function shortcode_project_banner(){
 
 add_shortcode('project_partners_mob', 'shortcode_project_partners_mob');
 function shortcode_project_partners_mob(){
-    global $post;
+    global $post, $wpdb;
     $partners_array = get_posts( array(
         'numberposts' => -1,
         'post_type'   => 'partners',
@@ -234,8 +234,11 @@ function shortcode_project_partners_mob(){
     <?php foreach( $partners_array_by_2 as $post_wrapper ){ ?>
         <!-- One slide -->
         <div class="project-partners-slide">
-            <?php foreach( $post_wrapper as $item ){ ?>
-                <img src="<?php echo get_the_post_thumbnail_url($item->ID); ?>" alt="">
+            <?php foreach( $post_wrapper as $item ){
+                $all_posts = $wpdb->get_var( 'SELECT description FROM ' . $wpdb->term_taxonomy . ' WHERE taxonomy = "post_translations" AND description LIKE "%i:' . $item->ID . ';%"' );
+                $all_ids = unserialize($all_posts);
+                ?>
+                <img src="<?php echo get_the_post_thumbnail_url($all_ids[ICL_LANGUAGE_CODE]); ?>" alt="<?php echo $item->post_title; ?>">
             <?php } ?>
         </div><!--end project-partners-slide -->
     <?php } ?>
