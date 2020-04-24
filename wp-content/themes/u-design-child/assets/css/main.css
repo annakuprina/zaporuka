@@ -2611,7 +2611,6 @@ and shows hidden orange lines near titles on About us page*/
   width: 100%;
 }
 
-
 .help .help-form-inner-wrapper .help-form-text {
   padding-bottom: 23px;
 }
@@ -3841,7 +3840,6 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   max-height: unset;
 }
 
-
 .home .help_form_wrapper {
   min-width: 528px;
 }
@@ -3865,7 +3863,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   background-position: 79% -52px !important;
   background-repeat: no-repeat !important;
   background-size: 2530px auto !important;
-} 
+}
 
 .homepage-banner > .wpb_column > .vc_column-inner {
   padding-top: 35px;
@@ -3919,8 +3917,8 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 #main-content .home-first-post-post-title h4 {
-  margin-bottom: 34px;
-  line-height: 42px;
+  margin-bottom: 33px;
+  line-height: 44px;
   font-size: 42px;
   max-width: 280px;
 }
