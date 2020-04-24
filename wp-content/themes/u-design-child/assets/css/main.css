@@ -589,6 +589,16 @@ header#top-wrapper {
     right: 8px;
     top: 9px;
   }
+
+  html[lang="en-US"] #wrapper-1 #navigation-menu .cart-count-in-main-header {
+    right: 51px;
+    top: 6px;
+  }
+
+  html[lang="ru-RU"] #wrapper-1 #navigation-menu .cart-count-in-main-header {
+    right: 10px;
+    top: 8px;
+  }
 }
 @media screen and (max-width: 719px) {
   #top-elements {
@@ -2759,7 +2769,7 @@ and shows hidden orange lines near titles on About us page*/
 
 .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
   position: absolute;
-  right: calc(50% - 47px);
+  right: calc(50% - 63px);
   top: 8px;
 }
 
@@ -2780,6 +2790,7 @@ and shows hidden orange lines near titles on About us page*/
   padding: 14px 30px;
   min-width: 120px;
   width: calc(100% - 30px);
+  width: 183px;
 }
 
 .help .help-form-amount-left #paid-error {
@@ -2986,7 +2997,7 @@ input#oferta:checked:after {
   .help-form-inner-wrapper
   .help-form-submit-oferta
   .help-form-submit::after {
-  right: calc(50% - 46px);
+  right: calc(50% - 65px);
 }
 
 html[lang="ru-RU"]
@@ -2994,7 +3005,7 @@ html[lang="ru-RU"]
   .help-form-inner-wrapper
   .help-form-submit-oferta
   .help-form-submit::after {
-  right: calc(50% - 38px);
+  right: calc(50% - 49px);
 }
 
 html[lang="en-US"]
@@ -3002,7 +3013,7 @@ html[lang="en-US"]
   .help-form-inner-wrapper
   .help-form-submit-oferta
   .help-form-submit::after {
-  right: calc(50% - 38px);
+  right: calc(50% - 48px);
 }
 
 .help #oferta-error {
@@ -3435,8 +3446,19 @@ html[lang="en-US"]
       .help-form-inner-wrapper
       .help-form-oferta
       label:not(.error) {
+      top: 0px;
+    }
+  }
+
+  /*media only for Mozilla */
+  @-moz-document url-prefix() {
+    .home-first-post-form-help
+      .help_form_wrapper
+      .help-form-inner-wrapper
+      .help-form-oferta
+      label:not(.error) {
       position: relative;
-      top: 1px;
+      top: -1px;
     }
   }
 }
@@ -3831,6 +3853,12 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
   margin-top: 85px;
 }
 
+.home .homepage-banner {
+  background-position: -452px -42px !important;
+  background-repeat: no-repeat !important;
+  background-size: 130% 130% !important;
+}
+
 .homepage-banner > .wpb_column > .vc_column-inner {
   padding-top: 35px;
   padding-bottom: 35px;
@@ -3924,15 +3952,24 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 .home .help-form-inner-wrapper .help-form-inner-title {
-  padding-bottom: 21px;
+  padding-bottom: 23px;
 }
 
 .home .help-form-inner-wrapper .help-form-amount {
-  padding-bottom: 23px;
+  padding-bottom: 27px;
+}
+
+.home .help-form-inner-wrapper .help-form-PIB {
+  padding-bottom: 17px;
+  position: relative;
 }
 
 .home .help-form-inner-wrapper .help-form-subscribe {
-  padding-bottom: 23px;
+  padding-bottom: 27px;
+}
+
+.home .help-form-inner-wrapper .help-form-text {
+  padding-bottom: 31px;
 }
 
 .home .help-form-inner-wrapper .help-form-cancel-subscription-text a,
@@ -3941,7 +3978,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 .home .help-form-inner-wrapper .help-form-email-tel {
-  padding-bottom: 23px;
+  padding-bottom: 32px;
 }
 
 .home .help-form-inner-wrapper .help-form-submit-oferta {
@@ -3953,7 +3990,7 @@ html[lang="ru-RU"]
   .help-form-inner-wrapper
   .help-form-submit-oferta
   .help-form-submit::after {
-  right: calc(50% - 40px);
+  right: calc(50% - 50px);
 }
 
 html[lang="en-US"]
@@ -3961,7 +3998,7 @@ html[lang="en-US"]
   .help-form-inner-wrapper
   .help-form-submit-oferta
   .help-form-submit::after {
-  right: calc(50% - 38px);
+  right: calc(50% - 49px);
 }
 /*end desrease the height of payment form on main page*/
 

@@ -1,0 +1,6 @@
+2020-04-24T15:36:00+02:00 CRITICAL Out of memory (allocated 10485760) (tried to allocate 32768 bytes) у C:\OSPanel\domains\zaporuka\wp-admin\includes\ajax-actions.php доступно 2816
+
+2020-04-24T15:39:48+02:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 32768 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\advanced-custom-fields\includes\fields\class-acf-field-radio.php доступно 1
+
+2020-04-24T15:41:03+02:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 114688 bytes) в C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php на строке 241
+
