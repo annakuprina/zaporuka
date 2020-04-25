@@ -219,6 +219,7 @@ h2.h2-header-line::before {
   position: fixed;
   top: 0;
   box-shadow: 1px 2px 7px 0 #e0e0e0;
+  z-index: 999999;
 }
 
 #header-mob #main-top-menu {
@@ -330,6 +331,13 @@ h2.h2-header-line::before {
   font-family: "Proxima-Nova-Regular";
   font-weight: 600;
   letter-spacing: 0.3px;
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .proj-timeline-share {
+    letter-spacing: 0;
+  }
 }
 
 #header-mob .top-bar-help-block a {
@@ -1992,8 +2000,6 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   align-items: center;
   letter-spacing: 1px;
 }
-
-
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
