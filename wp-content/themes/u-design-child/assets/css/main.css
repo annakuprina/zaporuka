@@ -1966,6 +1966,16 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   display: flex;
 }
 
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .proj-timeline-info-right .proj-timeline-help {
+    padding: 19px 34px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+  }
+}
+
 .proj-timeline-help-text {
   margin-right: 8px;
   font-size: 13px;
@@ -1983,10 +1993,12 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   letter-spacing: 1px;
 }
 
+
+
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
   .proj-timeline-share {
-    padding: 16px 37px;
+    padding: 16px 34px;
   }
 }
 
@@ -4015,6 +4027,13 @@ html[lang="en-US"]
   .help-form-subscribe label {
     position: relative;
     top: 2px;
+  }
+}
+
+/* Media for first block on index page */
+@media screen and (max-width: 1400px) {
+  .home .homepage-banner {
+    background-position: 69% -52px !important;
   }
 }
 
