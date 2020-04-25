@@ -4238,6 +4238,7 @@ html[lang="en-US"]
     padding-left: 0 !important;
   }
 }
+
 @media screen and (max-width: 767px) {
   .vc_gitem-animated-block .vc_gitem-zone-img {
     display: none;
