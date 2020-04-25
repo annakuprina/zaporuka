@@ -4064,13 +4064,34 @@ html[lang="en-US"]
     margin-top: 45px;
   }
 }
+
+/* Media for first block on index page */
+@media screen and (max-width: 1150px) {
+  .home .homepage-banner {
+    background-position: 68% -52px !important;
+  }
+
+  .home .help_form_wrapper {
+    min-width: 500px;
+  }
+
+  .home .help-form-inner-wrapper {
+    padding: 42px 30px 27px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  .home .homepage-banner {
+    background-position: 67% 0 !important;
+  }
+
   .home .help-form-oferta-wrapper {
     position: static;
   }
 
   .home .homepage-banner > .wpb_column > .vc_column-inner {
-    padding-top: 59px;
+    padding-top: 80px;
+    padding-bottom: 38px;
     /* padding-top: 139px; */
   }
 
