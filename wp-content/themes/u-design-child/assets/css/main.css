@@ -3854,7 +3854,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 /*FIRST BLOCK ON INDEX PAGE*/
-.home-first-post-image {
+.home .home-first-post-image {
   max-height: unset;
 }
 
