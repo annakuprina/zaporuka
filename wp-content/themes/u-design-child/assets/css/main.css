@@ -4225,14 +4225,14 @@ html[lang="en-US"]
   }
 
   .home .homepage-banner > .wpb_column > .vc_column-inner {
-    padding-top: 119px;
+    padding-top: 140px;
+  }
+
+  .home .homepage-banner {
+    background-position: 64% 61px !important;
   }
 }
-@media screen and (max-width: 941px) {
-  .home .homepage-banner > .wpb_column > .vc_column-inner {
-    padding-top: 141px;
-  }
-}
+
 @media screen and (max-width: 900px) {
   #main-content .home-first-post-post-link a:hover {
     padding-left: 0 !important;
