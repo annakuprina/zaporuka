@@ -353,7 +353,6 @@ jQuery(document).ready(function($) {
           action: "send_cancel_subscription_email"
         },
         success: function(data) {
-          console.log(data.result);
           if (data.result) {
             $(".cancel_subscription_form_inner_wrapper").hide();
             $(".cancel_subscription_form_success_block").show();
