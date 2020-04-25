@@ -4076,7 +4076,7 @@ html[lang="en-US"]
   }
 
   .home .help-form-inner-wrapper {
-    padding: 42px 30px 27px;
+    padding: 30px 30px 11px;
   }
 }
 
@@ -4240,6 +4240,10 @@ html[lang="en-US"]
 }
 
 @media screen and (max-width: 767px) {
+  .home-first-post-image .wpb_column:nth-child(1) {
+    padding-right: 0;
+  }
+
   .vc_gitem-animated-block .vc_gitem-zone-img {
     display: none;
   }
@@ -4365,12 +4369,8 @@ html[lang="en-US"]
     padding-top: 0;
   }
 
-  .home-first-post-post-excerpt {
-    display: none;
-  }
-
   #main-content .home-first-post-post-title h4 {
-    padding-top: 110px;
+    padding-top: 90px;
     font-size: 24px;
     line-height: 33px;
   }
