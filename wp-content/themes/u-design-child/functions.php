@@ -398,7 +398,16 @@ add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) 
     ];
    
 });
+add_filter('wc_ukr_shipping_language', function ($lang) {
+    if (pll_current_language() === 'ru') {
+        return 'ru';
+    }
+    if (pll_current_language() === 'en') {
+        return 'en';
+    }
 
+    return 'ua';
+});
 /* read only for ACF fields for total-collected field*/
 add_filter('acf/load_field/name=total-collected', 'acf_read_only');
 function acf_read_only($field) {
