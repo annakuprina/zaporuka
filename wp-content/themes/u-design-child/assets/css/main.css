@@ -9355,9 +9355,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   padding-top: 25px;
 }
 
-#our_team .team-member-info-hover .vc_gitem-acf-label {
-  font-family: "Raleway-Regular";
-}
 #our_team .our-team-front-wrapper:after {
   content: "";
   position: absolute;
