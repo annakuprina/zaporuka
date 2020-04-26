@@ -1,8 +1,8 @@
 <?php
 /**
- * Customer completed order email
+ * Customer processing order email
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/customer-completed-order.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/emails/customer-processing-order.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -26,12 +26,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
-
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( pll_e( 'Вітаємо'), esc_html( $order->get_billing_first_name() ) ); ?></p>
-<?php /* translators: %s: Site title */ ?>
 
-<p><?php pll_e( 'Ми закінчили обробляти ваше замовлення.'); ?></p>
+<p><?php printf( pll_e( 'Вітаємо'), esc_html( $order->get_billing_first_name() ) ); ?></p>
+<?php /* translators: %s: Order number */ ?>
+<p><?php pll_e( 'Просто повідомляємо &mdash; ми отримали ваше замовлення і воно зараз обробляється:'); ?></p>
 <?php
 
 /*
