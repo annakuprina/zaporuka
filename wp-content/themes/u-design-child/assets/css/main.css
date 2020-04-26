@@ -8646,10 +8646,18 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
   /*For Mozilla only*/
   #ModalHelpForm.opened {
-  scrollbar-face-color: rgb(210,210,210) !important; /* Firefox 63 compatibility */
-  scrollbar-track-color: rgb(46,54,69) !important; /* Firefox 63 compatibility */
-  scrollbar-color: rgb(210,210,210) rgb(46,54,69) !important;
-  scrollbar-width: thin !important;
+    scrollbar-face-color: rgb(
+      210,
+      210,
+      210
+    ) !important; /* Firefox 63 compatibility */
+    scrollbar-track-color: rgb(
+      46,
+      54,
+      69
+    ) !important; /* Firefox 63 compatibility */
+    scrollbar-color: rgb(210, 210, 210) rgb(46, 54, 69) !important;
+    scrollbar-width: thin !important;
   }
 }
 @media screen and (max-width: 500px) {
