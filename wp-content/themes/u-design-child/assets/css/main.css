@@ -1040,7 +1040,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   font-size: 16px;
   font-weight: 400;
   color: #333;
-  font-family: Raleway-Light;
+  font-family: "Raleway-Regular";
 }
 
 .project-money-collected {
@@ -4432,10 +4432,7 @@ html[lang="en-US"]
   .home .homepage-banner > .wpb_column > .vc_column-inner {
     padding-top: 150px;
   }
-
-  .home .home-first-post-post-excerpt {
-    display: none;
-  }
+}
 }
 
 /*---------------------
@@ -5348,9 +5345,7 @@ html[lang="en-US"]
     no-repeat;
 }
 
-.other-projects-row
-  .singl-project-top-part
-  .vc_gitem-row-position-top {
+.other-projects-row .singl-project-top-part .vc_gitem-row-position-top {
   z-index: 2;
 }
 
@@ -10738,3 +10733,4 @@ ul.products li.product:hover .add_to_cart_button:after {
     width: 100%;
   }
 }
+                                                                 
