@@ -77,7 +77,7 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
         $text .= "<p style='color: #888;'> Номер транзакції в системі LiqPay: " . $transaction_id . "</p>";
         $text .= "<p style='color: #888;'> Статус транзакції: " . $payment_status . "</p>";
         if(!empty($user_phone)){
-            $text .= "<p style='color: #888;'> Телефон': " . $user_phone . "</p>";
+            $text .= "<p style='color: #888;'> Телефон: " . $user_phone . "</p>";
         }
         $text .= "<p style='color: #888;'> Призначення платежу: " . $datas . "</p>";
         $text .= "<p style='color: #888;'> Разом змінюємо світ на краще!</p>";
