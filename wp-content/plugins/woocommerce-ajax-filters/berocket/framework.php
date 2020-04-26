@@ -1054,7 +1054,7 @@ if( ! class_exists( 'BeRocket_Framework' ) ) {
         }
 
         public static function register_font_awesome($type = 'all') {
-            if( $type == 'all' || $type == 'fa4' ) {
+            /*if( $type == 'all' || $type == 'fa4' ) {
                 wp_register_style( 'font-awesome', plugins_url( 'assets/css/font-awesome.min.css', __FILE__ ) );
             }
             if( $type == 'all' || $type == 'fa5' ) {
@@ -1067,7 +1067,7 @@ if( ! class_exists( 'BeRocket_Framework' ) ) {
                 add_action('admin_footer', array(__CLASS__, 'fa5live'));
                 add_action('wp_footer', array(__CLASS__, 'fa5live'));
                 wp_enqueue_style( 'font-awesome-5-compat', plugins_url( 'assets/css/fontawesome4-compat.min.css', __FILE__ ) );
-            }
+            }*/
         }
         public static function fa5live() {
             echo '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">';
