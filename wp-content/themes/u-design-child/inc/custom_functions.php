@@ -960,13 +960,16 @@ function shortcode_thanks_block(){
     if($liqpay_answer_transaction_id){
         $order_sum = '<span class="order-sum">' .  $liqpay_answer_summa. ' '  . check_currency() . '</span>';
         if( ICL_LANGUAGE_CODE == 'uk' ) {
+            $thanks_title = 'Дякуємо за ваше добро!';
             $thanks_text = 'Ваша пожертва у розмірі [сумма] буде використана на допомогу підопічним фонду "Запорука". Разом змінюємо світ на краще!';
         }
         elseif ( ICL_LANGUAGE_CODE == 'ru' ) {
+            $thanks_title = 'Спасибо за вашу доброту!';
             $thanks_text = 'Ваше пожертвование в размере [сумма] будет использовано для помощи подопечным фонда "Запорука". Вместе меняем мир к лучшему!';
         }
         elseif ( ICL_LANGUAGE_CODE == 'en' ) {
-            $thanks_text = 'Your donation with the amount of [сумма] will be transfered to help to help wards fund Zaporuka. Together we are changing the world for the better! ';
+            $thanks_title = 'Thank you for your kindness!';
+            $thanks_text = 'Your [сумма] donation will help kids with cancer. Together we change the world for the better!';
         }
         $thanks_text = str_replace('[сумма]', $order_sum, $thanks_text);
         ?>
@@ -974,7 +977,7 @@ function shortcode_thanks_block(){
             <div class="thanks-text-wrapper">
                 <div>
                     <a href="<?php echo home_url(); ?>">
-                        <div><h2 class="h2-header-without-line-white"><?php pll_e( 'Дякуємо за ваше добро!');?></h2></div>
+                        <div><h2 class="h2-header-without-line-white"><?php echo $thanks_title; ?></h2></div>
                         <div class="thanks-text-block">
                             <?php echo $thanks_text; ?>
                         </div>
