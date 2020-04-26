@@ -1447,3 +1447,6 @@ li.one-tab-link:hover {
 .one-project-info-title a:hover {
   opacity: 0.85;
 }
+.ask_for_help_popup div{
+  margin-bottom:10px;
+}
