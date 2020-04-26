@@ -115,9 +115,9 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
         $text .= '<p style="color: #333;margin: 0 50px;"> Благотворительный Фонд "Запорука"</p></div>';
     }elseif ( $lang == 'en' ){
         if ($fio) {
-            $text = "<div style='margin:30px 0;'<p style='color: #333;margin: 0 50px;'>Hello, " . $fio . "!</p></div>";
+            $text = "<div style='margin:30px 0;'><p style='color: #333;margin: 0 50px;'>Hello, " . $fio . "!</p></div>";
         } else {
-            $text = "<div style='margin:30px 0;'<p style='color: #333;margin: 0 50px;'> Hello!</p></div>";
+            $text = "<div style='margin:30px 0;'><p style='color: #333;margin: 0 50px;'> Hello!</p></div>";
         }
         if ($status == "failure") {
             $payment_status ="declined";
@@ -216,7 +216,7 @@ if (isset($_POST['data'])) {
     $new_code = 1;
 
     if( $current_language == 'en' ){
-        $subject = 'Payment report' ;
+        $subject = 'Payment report ' ;
         $liqpay_magazin_tmp = 'Charitable Foundation Zaporuka';
     }elseif( $current_language == 'ru' ){
         $subject = 'Отчет по оплате ';
