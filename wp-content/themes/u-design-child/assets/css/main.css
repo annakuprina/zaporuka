@@ -2734,7 +2734,7 @@ and shows hidden orange lines near titles on About us page*/
 
 .help_form_wrapper .help-form-inner-wrapper .textarea-full,
 .help_form_wrapper .help-form-inner-wrapper .textarea-small {
-  color: rgba(86, 86, 86, 0.8);
+  color: rgb(39, 39, 39);
 }
 
 .help-form-inner-wrapper .help-form-PIB input::-webkit-input-placeholder,
