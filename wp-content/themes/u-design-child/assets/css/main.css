@@ -4382,9 +4382,10 @@ html[lang="en-US"]
   }
 
   #main-content .home-first-post-post-title h4 {
-    padding-top: 180px;
+    padding-top: 130px;
     font-size: 24px;
     line-height: 33px;
+    margin-bottom: 15px;
   }
 
   #main-content .home-first-post-post-link a {
@@ -4433,7 +4434,6 @@ html[lang="en-US"]
     padding-top: 150px;
   }
 }
-
 
 /*---------------------
   HOME PAGE SECTION2
@@ -4842,10 +4842,6 @@ html[lang="en-US"]
 
   .home .help-form-subscribe-left {
     margin-bottom: 10px;
-  }
-
-  #main-content .home-first-post-post-title h4 {
-    margin-bottom: 0;
   }
 
   .home-page-section2-title {
