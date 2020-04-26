@@ -4086,12 +4086,13 @@ html[lang="en-US"]
   }
 
   .home .help-form-oferta-wrapper {
-    position: static;
+    position: relative;
+    left: 1px !important;
   }
 
   .home .homepage-banner > .wpb_column > .vc_column-inner {
-    padding-top: 80px;
-    padding-bottom: 38px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     /* padding-top: 139px; */
   }
 
@@ -4225,11 +4226,11 @@ html[lang="en-US"]
   }
 
   .home .homepage-banner > .wpb_column > .vc_column-inner {
-    padding-top: 140px;
+    padding-top: 100px;
   }
 
   .home .homepage-banner {
-    background-position: 64% 61px !important;
+    background-position: 61% 61px !important;
   }
 }
 
@@ -4241,7 +4242,7 @@ html[lang="en-US"]
 
 @media screen and (max-width: 767px) {
   .home-first-post-image .wpb_column:nth-child(1) {
-    padding-right: 0;
+    padding-right: 0 !important;
   }
 
   .vc_gitem-animated-block .vc_gitem-zone-img {
@@ -4254,7 +4255,7 @@ html[lang="en-US"]
 
   #home-page-content .homepage-banner {
     background-size: auto 420px !important;
-    background-position: top !important;
+    background-position: 53% 45px !important;
   }
 
   .home-first-post-image .vc_gitem-row-position-middle {
@@ -4268,8 +4269,8 @@ html[lang="en-US"]
   }
 
   #home-page-content .home-first-post-image {
-    height: 876px;
-    max-height: 876px;
+    height: 755px;
+    max-height: 755px;
     align-items: flex-start;
   }
 
@@ -4320,9 +4321,10 @@ html[lang="en-US"]
   }
 
   .home .homepage-banner > .wpb_column > .vc_column-inner {
-    padding-top: 165px;
+    padding-top: 200px;
   }
 }
+
 @media screen and (max-width: 500px) {
   .home-first-post-image .wpb_column:nth-child(2) {
     left: calc((100% - 290px) / 2);
@@ -4341,12 +4343,7 @@ html[lang="en-US"]
     font-size: 33px;
     line-height: 40px;
   }
-  /* .homepage-banner-with-thanks-block .home-first-post-image .wpb_column:nth-child(2) {
-    top: 340px;
-    left: calc((100% - 400px) / 2);
-    min-width: 400px;
-    max-width: 400px;
-  }*/
+
   .homepage-banner-with-thanks-block
     .home-first-post-image
     .wpb_column:nth-child(2) {
@@ -4365,12 +4362,13 @@ html[lang="en-US"]
   }
 
   #home-page-content .homepage-banner {
-    background-size: auto 480px !important;
+    background-size: auto 435px !important;
     padding-top: 0;
+    background-position: 52% 45px !important;
   }
 
   #main-content .home-first-post-post-title h4 {
-    padding-top: 90px;
+    padding-top: 180px;
     font-size: 24px;
     line-height: 33px;
   }
@@ -4405,12 +4403,12 @@ html[lang="en-US"]
   }
 
   .home .homepage-banner .help_form_wrapper .help-form-inner-wrapper {
-    padding: 38px 22px 35px;
+    padding: 38px 22px 14px;
   }
 
   #home-page-content .home-first-post-image {
-    height: 985px;
-    max-height: 985px;
+    height: 902px;
+    max-height: 902px;
   }
 
   .home .homepage-banner h2 {
@@ -4419,6 +4417,10 @@ html[lang="en-US"]
 
   .home .homepage-banner > .wpb_column > .vc_column-inner {
     padding-top: 150px;
+  }
+
+  .home .home-first-post-post-excerpt {
+    display: none;
   }
 }
 
@@ -8641,6 +8643,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   #ModalHelpForm.opened .modal-dialog::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
+  }
+  /*For Mozilla only*/
+  #ModalHelpForm.opened {
+  scrollbar-face-color: rgb(210,210,210) !important; /* Firefox 63 compatibility */
+  scrollbar-track-color: rgb(46,54,69) !important; /* Firefox 63 compatibility */
+  scrollbar-color: rgb(210,210,210) rgb(46,54,69) !important;
+  scrollbar-width: thin !important;
   }
 }
 @media screen and (max-width: 500px) {
