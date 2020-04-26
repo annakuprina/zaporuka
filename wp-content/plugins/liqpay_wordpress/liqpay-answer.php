@@ -90,7 +90,7 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
             $text = "<p style='color: #888;'> Приветствуем!</p>";
         }
         if ($status == "failure") {
-            $payment_status ="отклоненно";
+            $payment_status ="отклонен";
             $text .= "<p style='color: #888;'> Извините, но Ваш платеж отклонен</p>";
 
         }elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
@@ -262,9 +262,16 @@ if (isset($_POST['data'])) {
                     $order->update_status('failed');
                 }
             }
+            if ( $current_language == 'uk' ) {
+                $payment_status = "відхилено";
+            } elseif($current_language == 'ru') {
+                $payment_status = "отклонен";
+            } elseif($current_language == 'en') {
+                $payment_status = "declined";
+            }
             if (!$order) {
-                wp_mail($to, $subject . "(" . $status . ")", $message, $headers, '');
-                wp_mail($mail, $subject . "(" . $status . ")", $message, $headers, '');
+                wp_mail($to, $subject . "(" . $payment_status . ")", $message, $headers, '');
+                wp_mail($mail, $subject . "(" . $payment_status . ")", $message, $headers, '');
             }
         }
         exit;
@@ -397,10 +404,17 @@ if (isset($_POST['data'])) {
                 $text_head .= $cost_cult . $valuta_cult . " Вы оплатили. " . $summa . $valuta . ", сумма не соответствует стоимости товара, за разъяснением вопроса, обратитесь к администратору " . get_option('liqpay_mail');
                 $message = $text_head . $message;
             }
+            if ( $current_language == 'uk' ) {
+                $payment_status = "успішна";
+            } elseif($current_language == 'ru') {
+                $payment_status = "успешно";
+            } elseif($current_language == 'en') {
+                $payment_status = $status;
+            }
             if (!$order) {
                 $attachments = (!empty($attachments)) ? $attachments : '';
-                wp_mail($to, $subject . "(" . $status . ")", $message, $headers, $attachments);
-                wp_mail($mail, $subject . "(" . $status . ")", $message . "   Email покупателя - " . $to, $headers, $attachments);
+                wp_mail($to, $subject . "(" . $payment_status . ")", $message, $headers, $attachments);
+                wp_mail($mail, $subject . "(" . $payment_status . ")", $message . "   Email покупателя - " . $to, $headers, $attachments);
             }
         }
 
@@ -420,10 +434,17 @@ if (isset($_POST['data'])) {
                     $woocommerce->cart->empty_cart();
                 }
             }
+            if ( $current_language == 'uk' ) {
+                $payment_status = "платіж знаходиться на перевірці";
+            } elseif($current_language == 'ru') {
+                $payment_status = "платеж находится на проверке";
+            } elseif($current_language == 'en') {
+                $payment_status = str_replace("_", " ", $status);
+            }
             if (!$order) {
                 $attachments = (!empty($attachments)) ? $attachments : '';
-                wp_mail($to, $subject . "(" . $status . ")", $message, $headers, $attachments);
-                wp_mail($mail, $subject . "(" . $status . ")", $message, $headers, $attachments);
+                wp_mail($to, $subject . "(" . $payment_status . ")", $message, $headers, $attachments);
+                wp_mail($mail, $subject . "(" . $payment_status . ")", $message, $headers, $attachments);
             }
         }
         exit;
