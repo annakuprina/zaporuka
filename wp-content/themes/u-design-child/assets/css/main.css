@@ -4244,7 +4244,7 @@ html[lang="en-US"]
   }
 
   .home .homepage-banner {
-    background-position: 61% 61px !important;
+    background-position: 60% 61px !important;
   }
 }
 
@@ -4435,6 +4435,17 @@ html[lang="en-US"]
   }
 }
 
+@media screen and (max-width: 400px) {
+  #main-content .home-first-post-post-title h4 {
+    margin-bottom: 5px;
+  }
+
+  #main-content .home-first-post-post-title h4 {
+    padding-top: 112px;
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
 /*---------------------
   HOME PAGE SECTION2
 ----------------------*/
