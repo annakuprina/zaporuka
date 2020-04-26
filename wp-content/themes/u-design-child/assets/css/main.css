@@ -3878,7 +3878,7 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 .home .homepage-banner {
   margin-top: 0px !important;
   background-image: url(http://zaporuka.testit.in.ua/wp-content/uploads/2020/04/baner_1_1905kh520.jpg?id=3647) !important;
-  background-position: 79% -52px !important;
+  background-position: 89% -52px !important;
   background-repeat: no-repeat !important;
   background-size: 2530px auto !important;
 }
@@ -4035,11 +4035,24 @@ html[lang="en-US"]
     top: 2px;
   }
 }
+/* Media for first block on index page */
+@media screen and (max-width: 1750px) {
+  .home .homepage-banner {
+    background-position: 89% -52px !important;
+  }
+}
 
 /* Media for first block on index page */
 @media screen and (max-width: 1400px) {
   .home .homepage-banner {
-    background-position: 69% -52px !important;
+    background-position: 84% -52px !important;
+  }
+}
+
+/* Media for first block on index page */
+@media screen and (max-width: 1400px) {
+  .home .homepage-banner {
+    background-position: 70% -52px !important;
   }
 }
 
@@ -4082,7 +4095,7 @@ html[lang="en-US"]
 
 @media screen and (max-width: 1024px) {
   .home .homepage-banner {
-    background-position: 67% 0 !important;
+    background-position: 65% 0 !important;
   }
 
   .home .help-form-oferta-wrapper {
