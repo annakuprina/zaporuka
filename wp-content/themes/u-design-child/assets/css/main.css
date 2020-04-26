@@ -219,7 +219,7 @@ h2.h2-header-line::before {
   position: fixed;
   top: 0;
   box-shadow: 1px 2px 7px 0 #e0e0e0;
-  z-index: 999999;
+  /* z-index: 999999; */
 }
 
 #header-mob #main-top-menu {
@@ -8453,6 +8453,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   width: calc(100% - 40px);
   transform: translateY(-50%);
   top: 50%;
+  /* z-index: 999999; */
 }
 
 #ModalHelpForm .help-form-subscribe-right {
