@@ -55,9 +55,9 @@ function insert_history($project_id2, $transaction_id2, $date2, $users_name2, $u
 function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id, $transaction_id, $status, $user_phone, $datas ){
     if ( $lang == 'uk' ){
         if ($fio) {
-            $text = "<p style='color: #888;'>Вітаємо, " . $fio . "!</p>";
+            $text = "<p style='color: #888;'>Вітаємо, " . $fio . "!</p><br/>";
         } else {
-            $text = "<p style='color: #888;'> Вітаємо!</p>";
+            $text = "<p style='color: #888;'> Вітаємо!</p><br/>";
         }
         if ($status == "failure") {
             $payment_status ="відхилено";
@@ -65,7 +65,7 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
 
         }elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
             $payment_status = "успішна";
-            $text .= '<p style="color: #888;"> Дякуємо за ваше добре серце! Завдяки вам підопічні фонду "Запорука" зможуть вчасно отримати необхідну допомогу.</p>';
+            $text .= '<p style="color: #888;"> Дякуємо за ваше добре серце! Завдяки вам підопічні фонду "Запорука" зможуть вчасно отримати необхідну допомогу.</p><br/>';
         }elseif (($status == "wait_secure") || ($status == "wait_accept")) {
             $payment_status = "платіж знаходиться на перевірці";
             $text .= "<p style='color: #888;'> Ваш платіж очікує на перевірку...</p>";
@@ -85,17 +85,17 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
         $text .= "<p style='color: #888;'> Благодійний Фонд 'Запорука'</p>";
     } elseif ( $lang == 'ru' ){
         if ($fio) {
-            $text = "<p style='color: #888;'>Приветствуем, " . $fio . "!</p>";
+            $text = "<p style='color: #888;'>Приветствуем, " . $fio . "!</p><br/>";
         } else {
-            $text = "<p style='color: #888;'> Приветствуем!</p>";
+            $text = "<p style='color: #888;'> Приветствуем!</p><br/>";
         }
         if ($status == "failure") {
-            $payment_status ="отклоненно";
+            $payment_status ="отклонен";
             $text .= "<p style='color: #888;'> Извините, но Ваш платеж отклонен</p>";
 
         }elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
             $payment_status = "успешная";
-            $text .= '<p style="color: #888;"> Спасибо за ваше доброе сердце! Благодаря вам подопечные фонда "Запорука" смогут вовремя получить необходимую помощь.</p>';
+            $text .= '<p style="color: #888;"> Спасибо за ваше доброе сердце! Благодаря вам подопечные фонда "Запорука" смогут вовремя получить необходимую помощь.</p><br/>';
         }elseif (($status == "wait_secure") || ($status == "wait_accept")) {
             $payment_status = "платеж находится на проверке";
             $text .= "<p style='color: #888;'> Ваш платеж ожидает проверку...</p>";
@@ -109,15 +109,15 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
         if(!empty($user_phone)) {
             $text .= "<p style='color: #888;'> Телефон: " . $user_phone . "</p>";
         }
-        $text .= "<p style='color: #888;'> Назначения платежа: " . $datas . "</p>";
-        $text .= "<p style='color: #888;'> Вместе меняем мир к лучшему!</p>";
+        $text .= "<p style='color: #888;'> Назначения платежа: " . $datas . "</p><br/>";
+        $text .= "<p style='color: #888;'> Вместе меняем мир к лучшему!</p><br/>";
         $text .= "<p style='color: #888;'> С благодарностью,</p>";
         $text .= "<p style='color: #888;'> Благотворительный Фонд 'Запорука'</p>";
     }elseif ( $lang == 'en' ){
         if ($fio) {
-            $text = "<p style='color: #888;'>Hello, " . $fio . "!</p>";
+            $text = "<p style='color: #888;'>Hello, " . $fio . "!</p><br/>";
         } else {
-            $text = "<p style='color: #888;'> Hello!</p>";
+            $text = "<p style='color: #888;'> Hello!</p><br/>";
         }
         if ($status == "failure") {
             $payment_status ="declined";
@@ -125,7 +125,7 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
 
         }elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
             $payment_status = "success";
-            $text .= "<p style='color: #888;'> Thank you for your kind heart! Thanks to you, Zaporuka Foundation’s beneficiaries will be able to get the help they need in time.</p>";
+            $text .= "<p style='color: #888;'> Thank you for your kind heart! Thanks to you, Zaporuka Foundation’s beneficiaries will be able to get the help they need in time.</p><br/>";
         }elseif (($status == "wait_secure") || ($status == "wait_accept")) {
             $payment_status = "wait accept";
             $text .= "<p style='color: #888;'> Your payment is pending accept...</p>";
@@ -139,8 +139,8 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
         if(!empty($user_phone)) {
             $text .= "<p style='color: #888;'> Phone Number: " . $user_phone . "</p>";
         }
-        $text .= "<p style='color: #888;'> Purpose of payment: " . $datas . "</p>";
-        $text .= "<p style='color: #888;'> Together we are changing the world for the better! </p>";
+        $text .= "<p style='color: #888;'> Purpose of payment: " . $datas . "</p><br/>";
+        $text .= "<p style='color: #888;'> Together we are changing the world for the better! </p><br/>";
         $text .= "<p style='color: #888;'> With gratitude,</p>";
         $text .= "<p style='color: #888;'> Charitable Foundation Zaporuka</p>";
     }
@@ -262,9 +262,16 @@ if (isset($_POST['data'])) {
                     $order->update_status('failed');
                 }
             }
+            if ( $current_language == 'uk' ) {
+                $payment_status = "відхилено";
+            } elseif($current_language == 'ru') {
+                $payment_status = "отклонен";
+            } elseif($current_language == 'en') {
+                $payment_status = "declined";
+            }
             if (!$order) {
-                wp_mail($to, $subject . "(" . $status . ")", $message, $headers, '');
-                wp_mail($mail, $subject . "(" . $status . ")", $message, $headers, '');
+                wp_mail($to, $subject . "(" . $payment_status . ")", $message, $headers, '');
+                wp_mail($mail, $subject . "(" . $payment_status . ")", $message, $headers, '');
             }
         }
         exit;
@@ -397,10 +404,17 @@ if (isset($_POST['data'])) {
                 $text_head .= $cost_cult . $valuta_cult . " Вы оплатили. " . $summa . $valuta . ", сумма не соответствует стоимости товара, за разъяснением вопроса, обратитесь к администратору " . get_option('liqpay_mail');
                 $message = $text_head . $message;
             }
+            if ( $current_language == 'uk' ) {
+                $payment_status = "успішна";
+            } elseif($current_language == 'ru') {
+                $payment_status = "успешно";
+            } elseif($current_language == 'en') {
+                $payment_status = $status;
+            }
             if (!$order) {
                 $attachments = (!empty($attachments)) ? $attachments : '';
-                wp_mail($to, $subject . "(" . $status . ")", $message, $headers, $attachments);
-                wp_mail($mail, $subject . "(" . $status . ")", $message . "   Email покупателя - " . $to, $headers, $attachments);
+                wp_mail($to, $subject . "(" . $payment_status . ")", $message, $headers, $attachments);
+                wp_mail($mail, $subject . "(" . $payment_status . ")", $message . "   Email покупателя - " . $to, $headers, $attachments);
             }
         }
 
@@ -420,10 +434,17 @@ if (isset($_POST['data'])) {
                     $woocommerce->cart->empty_cart();
                 }
             }
+            if ( $current_language == 'uk' ) {
+                $payment_status = "платіж знаходиться на перевірці";
+            } elseif($current_language == 'ru') {
+                $payment_status = "платеж находится на проверке";
+            } elseif($current_language == 'en') {
+                $payment_status = str_replace("_", " ", $status);
+            }
             if (!$order) {
                 $attachments = (!empty($attachments)) ? $attachments : '';
-                wp_mail($to, $subject . "(" . $status . ")", $message, $headers, $attachments);
-                wp_mail($mail, $subject . "(" . $status . ")", $message, $headers, $attachments);
+                wp_mail($to, $subject . "(" . $payment_status . ")", $message, $headers, $attachments);
+                wp_mail($mail, $subject . "(" . $payment_status . ")", $message, $headers, $attachments);
             }
         }
         exit;
