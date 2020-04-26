@@ -1342,11 +1342,11 @@ li.one-tab-link:hover {
 }
 .media_slider_block .slick-prev {
   left: 30px !important;
-  z-index: 99999;
+  z-index: 99;
 }
 .media_slider_block .slick-next {
   right: 30px !important;
-  z-index: 99999;
+  z-index: 99;
 }
 .media_slider_block .slick-prev:before,
 .media_slider_block .slick-next:before {
