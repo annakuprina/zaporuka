@@ -180,7 +180,7 @@ jQuery(document).ready(function($) {
     message_amount_not_number = "Введіть, будь ласка, тільки цифри";
     message_fio_free = "Введіть, будь ласка, ПІБ";
     message_fio_not_text = "Введіть, будь ласка, тільки текст";
-    message_mail_required = "Введіть, будь ласка, emai";
+    message_mail_required = "Введіть, будь ласка, email";
     message_phone_required = "Введіть, будь ласка, номер телефону";
     message_phone_only_number = "Перевірте, будь ласка,  корректність номеру";
     message_oferta_required = "Погодьтесь, будь ласка, з офертою";
@@ -209,7 +209,7 @@ jQuery(document).ready(function($) {
     message_mail_required = "Please enter email";
     message_phone_required = "Please enter your phone number";
     message_phone_only_number = "Please check the correctness of the number";
-    message_oferta_required = "Please agree with the offer";
+    message_oferta_required = "Please agree to the offer";
     onetime_project_label = "One-time transfer of funds for the project ";
     subscribe_project_label = "Monthly transfer of funds for the project ";
     onetime_fond_lable = "One-time donation to the СF Zaporuka";
