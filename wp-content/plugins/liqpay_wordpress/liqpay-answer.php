@@ -216,13 +216,13 @@ if (isset($_POST['data'])) {
     $new_code = 1;
 
     if( $current_language == 'en' ){
-        $subject = 'Payment report';
+        $subject = 'Payment report' ;
         $liqpay_magazin_tmp = 'Charitable Foundation Zaporuka';
     }elseif( $current_language == 'ru' ){
-        $subject = 'Отчет по оплате';
+        $subject = 'Отчет по оплате ';
         $liqpay_magazin_tmp = 'Благотворительный фонд "Запорука"';
     } elseif( $current_language == 'uk' ) {
-        $subject = 'Звіт по оплаті';
+        $subject = 'Звіт по оплаті ';
         $liqpay_magazin_tmp = get_option('liqpay_magazin');
     }
 
