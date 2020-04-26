@@ -1,8 +1,8 @@
 <?php
 /**
- * Customer processing order email
+ * Customer completed order email
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/customer-processing-order.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/emails/customer-completed-order.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -19,21 +19,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+
+
 /*
  * @hooked WC_Emails::email_header() Output the email header
  */
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
+
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( esc_html__( 'Hi, %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
-<?php /* translators: %s: Order number */ ?>
-<?php if( ICL_LANGUAGE_CODE=='uk' ) { ?>
-    <p><?php printf( esc_html( 'Просто повідомляємо &mdash; ми отримали ваше замовлення  #%s, і воно зараз обробляється: '), esc_html( $order->get_order_number() ) ); ?></p>
-<?php } elseif(ICL_LANGUAGE_CODE=='en'){ ?>
-    <p><?php printf( esc_html( 'Just to let you know &mdash; we\'ve received your order #%s, and it is now being processed: '), esc_html( $order->get_order_number() ) ); ?></p>
-<?php }elseif(ICL_LANGUAGE_CODE=='ru') { ?>
-    <p><?php printf( esc_html( 'Просто сообщаем &mdash; мы получили ваш заказ #%s, и он сейчас обрабатывается: '), esc_html( $order->get_order_number() ) ); ?></p>
-<?php } ?>
+<p><?php printf( pll_e( 'Вітаємо'), esc_html( $order->get_billing_first_name() ) ); ?></p>
+<?php /* translators: %s: Site title */ ?>
+
+<p><?php pll_e( 'Ми закінчили обробляти ваше замовлення.'); ?></p>
 <?php
 
 /*

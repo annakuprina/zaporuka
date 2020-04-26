@@ -19,22 +19,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+
+
 /*
  * @hooked WC_Emails::email_header() Output the email header
  */
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
+
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( esc_html__( 'Hi, %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
+<p><?php printf( pll_e( 'Вітаємо'), esc_html( $order->get_billing_first_name() ) ); ?></p>
 <?php /* translators: %s: Site title */ ?>
 
-<?php if( ICL_LANGUAGE_CODE=='uk' ) { ?>
-    <p><?php esc_html( 'Ми закінчили обробляти ваше замовлення.' ); ?></p>
-<?php } elseif(ICL_LANGUAGE_CODE=='en'){ ?>
-    <p><?php esc_html( 'We have finished processing your order.' ); ?></p>
-<?php }elseif(ICL_LANGUAGE_CODE=='ru') { ?>
-    <p><?php esc_html( 'Мы завершили обработку вашего заказа.' ); ?></p>
-<?php } ?>
+<p><?php pll_e( 'Ми закінчили обробляти ваше замовлення.'); ?></p>
 <?php
 
 /*
