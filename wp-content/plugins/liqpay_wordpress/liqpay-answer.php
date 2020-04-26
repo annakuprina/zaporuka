@@ -55,9 +55,9 @@ function insert_history($project_id2, $transaction_id2, $date2, $users_name2, $u
 function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id, $transaction_id, $status, $user_phone, $datas ){
     if ( $lang == 'uk' ){
         if ($fio) {
-            $text = "<p style='color: #888;'>Вітаємо, " . $fio . "!</p><br/>";
+            $text = "<p style='color: #888;'>Вітаємо, " . $fio . "!</p>\n\r";
         } else {
-            $text = "<p style='color: #888;'> Вітаємо!</p><br/>";
+            $text = "<p style='color: #888;'> Вітаємо!</p>\n\r";
         }
         if ($status == "failure") {
             $payment_status ="відхилено";
@@ -65,7 +65,7 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
 
         }elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
             $payment_status = "успішна";
-            $text .= '<p style="color: #888;"> Дякуємо за ваше добре серце! Завдяки вам підопічні фонду "Запорука" зможуть вчасно отримати необхідну допомогу.</p><br/>';
+            $text .= '<p style="color: #888;"> Дякуємо за ваше добре серце! Завдяки вам підопічні фонду "Запорука" зможуть вчасно отримати необхідну допомогу.</p>\n\r';
         }elseif (($status == "wait_secure") || ($status == "wait_accept")) {
             $payment_status = "платіж знаходиться на перевірці";
             $text .= "<p style='color: #888;'> Ваш платіж очікує на перевірку...</p>";
@@ -79,13 +79,13 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
         if(!empty($user_phone)){
             $text .= "<p style='color: #888;'> Телефон: " . $user_phone . "</p>";
         }
-        $text .= "<p style='color: #888;'> Призначення платежу: " . $datas . "</p>";
-        $text .= "<p style='color: #888;'> Разом змінюємо світ на краще!</p>";
+        $text .= "<p style='color: #888;'> Призначення платежу: " . $datas . "</p>\n\r";
+        $text .= "<p style='color: #888;'> Разом змінюємо світ на краще!</p>\n\r";
         $text .= "<p style='color: #888;'> З вдячністю,</p>";
-        $text .= "<p style='color: #888;'> Благодійний Фонд 'Запорука'</p>";
+        $text .= '<p style="color: #888;"> Благодійний Фонд "Запорука"</p>';
     } elseif ( $lang == 'ru' ){
         if ($fio) {
-            $text = "<p style='color: #888;'>Приветствуем, " . $fio . "!</p><br/>";
+            $text = "<p style='color: #888;'>Приветствуем, " . $fio . "!</p>\n\r";
         } else {
             $text = "<p style='color: #888;'> Приветствуем!</p><br/>";
         }
@@ -112,7 +112,7 @@ function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id
         $text .= "<p style='color: #888;'> Назначения платежа: " . $datas . "</p><br/>";
         $text .= "<p style='color: #888;'> Вместе меняем мир к лучшему!</p><br/>";
         $text .= "<p style='color: #888;'> С благодарностью,</p>";
-        $text .= "<p style='color: #888;'> Благотворительный Фонд 'Запорука'</p>";
+        $text .= '<p style="color: #888;"> Благотворительный Фонд "Запорука"</p>';
     }elseif ( $lang == 'en' ){
         if ($fio) {
             $text = "<p style='color: #888;'>Hello, " . $fio . "!</p><br/>";
@@ -379,7 +379,7 @@ if (isset($_POST['data'])) {
                         $order = wc_get_order($order_id);
                         if ($order) {
                             $order->payment_complete();
-                            $order->update_status('completed');
+                            $order->update_status('processing');
                             $woocommerce->cart->empty_cart();
                         }
                     }
