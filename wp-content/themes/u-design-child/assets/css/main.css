@@ -3983,11 +3983,11 @@ html[lang="en-US"] #footer_bottom .one_fifth:nth-child(2) {
 }
 
 .home .help-form-inner-wrapper .help-form-amount {
-  padding-bottom: 27px;
+  padding-bottom: 23px;
 }
 
 .home .help-form-inner-wrapper .help-form-PIB {
-  padding-bottom: 17px;
+  padding-bottom: 14px;
   position: relative;
 }
 
@@ -4537,7 +4537,7 @@ html[lang="en-US"]
 }
 
 #main-content .home-page-section2 .section2-columns .section2-single-column a {
-  margin-top: 38px;
+  margin-top: 40px;
 }
 #main-content .vc_custom_1579168278861 .vc_column_container:nth-child(1) {
   width: 33.3333%;
@@ -8662,18 +8662,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
   /*For Mozilla only*/
   #ModalHelpForm.opened {
-    scrollbar-face-color: rgb(
-      210,
-      210,
-      210
-    ) !important; /* Firefox 63 compatibility */
-    scrollbar-track-color: rgb(
-      46,
-      54,
-      69
-    ) !important; /* Firefox 63 compatibility */
-    scrollbar-color: rgb(210, 210, 210) rgb(46, 54, 69) !important;
-    scrollbar-width: thin !important;
+    scrollbar-color: #d2d2d2 #eaeaea;
   }
 }
 @media screen and (max-width: 500px) {

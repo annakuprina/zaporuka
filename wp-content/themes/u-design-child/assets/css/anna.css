@@ -11,8 +11,8 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   background-color: #fff !important;
-  -webkit-text-fill-color: rgba(165, 165, 165, 0.8) !important;
-  color: rgba(165, 165, 165, 0.8) !important;
+  /* -webkit-text-fill-color: rgba(165, 165, 165, 0.8) !important; */
+  /* color: rgba(165, 165, 165, 0.8) !important; */
   -webkit-box-shadow: 0 0 0 30px white inset !important;
   box-shadow: 0 0 0 30px white inset !important;
 }
@@ -320,10 +320,10 @@ footer a.designer-link {
   -webkit-transform: translate(0, -500%);
   -ms-transform: translate(0, -500%);
   transform: translate(0, -500%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  -moz-transition: -moz-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  -moz-transition: -moz-transform 0.5s ease-out;
+  -o-transition: -o-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
 }
 .modal-body {
   color: #333333;
@@ -557,7 +557,7 @@ footer a.designer-link {
 }
 .home-page-section2 .section2-columns .section2-single-column a::after {
   content: url(/wp-content/themes/u-design-child/img/arrow-home.svg);
-  padding-left: 10px;
+  padding-left: 9px;
 }
 .home-page-section2 .section2-columns .section2-single-column:hover a {
   visibility: visible;
