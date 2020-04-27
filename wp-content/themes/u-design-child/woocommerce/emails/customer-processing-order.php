@@ -28,7 +28,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %s: Customer first name */ ?>
 
-<p><?php  pll_e( 'Вітаємо'); echo ", " . $order->get_billing_first_name() ; ?></p>
+<p><?php  pll_e( 'Вітаємо'); echo ", " . $order->get_billing_first_name() ; ?>!</p>
 <?php /* translators: %s: Order number */ ?>
 <p><?php pll_e( 'Просто повідомляємо &mdash; ми отримали ваше замовлення і воно зараз обробляється:'); ?></p>
 <?php
