@@ -1,4 +1,0 @@
-2020-03-25T02:51:50+02:00 CRITICAL Out of memory (allocated 56623104) (tried to allocate 69632 bytes) in C:\OSPanel\domains\zaporuka\wp-includes\wp-db.php on line 2957
-
-2020-03-25T02:51:51+02:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 458752 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 913
-
