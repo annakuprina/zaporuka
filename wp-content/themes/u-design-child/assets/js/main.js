@@ -422,4 +422,9 @@ jQuery(document).ready(function ($) {
   if ($("div").hasClass("home-first-thanks-block")) {
     $(".homepage-banner").addClass("homepage-banner-with-thanks-block");
   }
+
+  /*Check if homepage contains payment-cancel block. Then add class "homepage-banner-payment-cancel" to banner block*/
+  if ($("div").hasClass("home-first-payment-cancel")) {
+    $(".homepage-banner").addClass("homepage-banner-payment-cancel");
+  }
 });
