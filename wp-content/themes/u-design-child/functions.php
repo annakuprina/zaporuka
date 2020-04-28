@@ -627,3 +627,11 @@ function create_post_type_separate_categories(){
     register_taxonomy( 'news_category', 'novini', array( 'hierarchical' => true, 'label' => 'Проекти новин', 'query_var' => true, 'rewrite' => true ) );
 
 }
+
+function remove_redirect_guess_404_permalink( $redirect_url ) {
+    if ( is_404() && !isset($_GET['p']) )
+        return false;
+    return $redirect_url;
+}
+
+add_filter( 'redirect_canonical', 'remove_redirect_guess_404_permalink' );
