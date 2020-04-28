@@ -198,7 +198,7 @@ function shortcode_project_banner(){
                             <span><?php pll_e( 'Допомогти');?></span>
                         </a>
                     </p>
-                    <a target="_blank" href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )' class="share">
+                    <a href="#" onclick='window.open("https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink() ); ?>&p[images][0]=<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>", "myWindow", "status = 1, height = 500, width = 360, resizable = 0" )' class="share">
                         <span class="one-project-share"><?php pll_e( 'Подiлитися');?></span>
                         <span class="one-project-socials">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
