@@ -193,7 +193,7 @@ $back_button = !empty($options['404_back_main_' . ICL_LANGUAGE_CODE]) ? $options
 							echo "Для подтверждения отмены регулярного платежа, проверьте почту и перейдите по ссылке в письме";
 						}
 						elseif(ICL_LANGUAGE_CODE=='en'){
-							echo "To confirm the cancel subscription, check your mail and follow the link in the email";
+							echo "To confirm subscription cancellation, check your mail and follow the link in the email";
 						}
 					  	?>
 					  </div>
@@ -410,7 +410,7 @@ function shortcode_friends_volunteers(  ){
                     foreach( $post_wrapper as $post ){
                         $partner_link = get_post_meta($post->ID, 'partner_site_link', true); ?>
                         <div class="home-parnters-img-wrapper">
-                            <a href="<?php echo $partner_link; ?>" target="_blank"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></a>
+                            <a href="//<?php echo $partner_link; ?>" target="_blank"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></a>
                         </div>
                         <?php
                     }
@@ -429,7 +429,7 @@ function shortcode_friends_volunteers(  ){
                     foreach( $post_wrapper as $post ){
                         $partner_link = get_post_meta($post->ID, 'partner_site_link', true); ?>
                         <div class="home-parnters-img-wrapper">
-                            <a href="<?php echo $partner_link; ?>" target="_blank"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></a>
+                            <a href="//<?php echo $partner_link; ?>" target="_blank"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></a>
                         </div>
                         <?php
                     }
@@ -487,41 +487,36 @@ function send_cancel_subscription_email_function() {
 
     if($sql_res){
     	foreach ($sql_res as $value) {
-    		$liqpay_order_id[]=array('order_id'=>$value->order_id,'comments'=>$value->comments);
+    		$liqpay_order_id[]=array('order_id'=>$value->order_id,'comments'=>$value->comments,'summa' =>$value->summa);
     	}
     }
 
     if($liqpay_order_id){
         $symbol = 'грн';
     	if(ICL_LANGUAGE_CODE=='uk'){
-			$start_message =  "Для підтвердження скасування регулярного платежу перейдіть за посиланням нижче<br>";
+			$start_message =  "Для підтвердження скасування регулярного платежу перейдіть за посиланням нижче<br><br>";
 			$subject = 'Скасування регулярного платежу';
 			$redirect_page_link = '/vidminiti-reguljarnij-platizh/';
+			$amount_text = ' в розмiрi ';
 		}
 		elseif(ICL_LANGUAGE_CODE=='ru'){
-			$start_message =  "Для подтверждения отмены регулярного платежа перейдите по ссылке ниже<br>";
+			$start_message =  "Для подтверждения отмены регулярного платежа перейдите по ссылке ниже<br><br>";
 			$subject = 'Отмена регулярного платежа';
 			$redirect_page_link = '/ru/otmenit-reguljarnyj-platezh/';
+            $amount_text = ' в розмере ';
 		}
 		elseif(ICL_LANGUAGE_CODE=='en'){
-			$start_message =  "To confirm the cancellation of the regular payment, follow the link below<br>";
+			$start_message =  "To confirm the cancellation of the recurring payment, follow the link below<br><br>";
 			$subject = 'Cancel recurring payment';
 			$redirect_page_link = '/en/cancel_subscription/';
             $symbol = 'UAH';
+            $amount_text = ' of ';
 		}
     	$mail_body = $start_message;
 
     	$link = site_url() . $redirect_page_link . '?cancel_subscription=1' . '&order_id=';
         foreach ($liqpay_order_id as $order ) {
-            $project_id =  get_option($order['order_id'] . '-liqpay_post_id');
-            if( $project_id != 823 ) {
-                $the_post = get_post( $project_id );
-                $project_name = "на проект " .$the_post->post_title;
-            } else{
-                $project_name = '';
-            }
-
-            $mail_body .= $order['comments'] . " в розмiрi " . $order['summa'] . $symbol . " " . $project_name . " - ";
+            $mail_body .= $order['comments'] . $amount_text . $order['summa'] . $symbol . " - ";
 			$mail_body .= '<a href="'. $link . $order['order_id'].'">' . $link . $order['order_id'] . '</a>' . "<br>";
     	}	   
 

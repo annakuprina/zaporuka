@@ -206,7 +206,7 @@ jQuery(document).ready(function ($) {
     message_mail_required = "Please check if the email is correct";
     message_phone_required = "Please enter your phone number";
     message_phone_only_number = "Please check the correctness of the number";
-    message_oferta_required = "Please agree with the offer";
+    message_oferta_required = "Please agree to the offer";
     onetime_project_label = "One-time transfer of funds for the project ";
     subscribe_project_label = "Monthly transfer of funds for the project ";
     onetime_fond_lable = "One-time donation to the СF Zaporuka";

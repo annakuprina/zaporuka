@@ -55,94 +55,94 @@ function insert_history($project_id2, $transaction_id2, $date2, $users_name2, $u
 function translation_email_body( $lang, $fio, $xdate, $summa, $valuta, $order_id, $transaction_id, $status, $user_phone, $datas ){
     if ( $lang == 'uk' ){
         if ($fio) {
-            $text = "<p style='color: #888;'>Вітаємо, " . $fio . "!</p>";
+            $text = "<div style='margin:30px 0;'><p style='color: #333;margin: 0 50px;'>Вітаємо, " . $fio . "!</p></div>";
         } else {
-            $text = "<p style='color: #888;'> Вітаємо!</p>";
+            $text = "<div style='margin:30px 0;'><p style='color: #333;margin: 0 50px;'> Вітаємо!</p></div>";
         }
         if ($status == "failure") {
             $payment_status ="відхилено";
-            $text .= "<p style='color: #888;'> Вибачте але Ваш платіж відхилено</p>";
+            $text .= "<div style='margin-bottom:30px;'><p style='color: #333;margin: 0 50px;'> Вибачте але Ваш платіж відхилено</p></div>";
 
         }elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
             $payment_status = "успішна";
-            $text .= "<p style='color: #888;'> Дякуємо за ваше добре серце! Завдяки вам підопічні фонду Запорука зможуть вчасно отримати необхідну допомогу.</p>";
+            $text .= '<div style="margin-bottom:30px;"><p style="color: #333;margin: 0 50px;"> Дякуємо за ваше добре серце! Завдяки вам підопічні фонду "Запорука" зможуть вчасно отримати необхідну допомогу.</p></div>';
         }elseif (($status == "wait_secure") || ($status == "wait_accept")) {
             $payment_status = "платіж знаходиться на перевірці";
-            $text .= "<p style='color: #888;'> Ваш платіж очікує на перевірку...</p>";
+            $text .= "<div style='margin-bottom:30px;'><p style='color: #333;margin: 0 50px;'> Ваш платіж очікує на перевірку...</p></div>";
         }
-        $text .= "<p style='color: #888;'> Деталі платежу</p>";
-        $text .= "<p style='color: #888;'> Сума: " . $summa . " " . $valuta . "</p>";
-        $text .= "<p style='color: #888;'> Дата: " . $xdate . "</p>";
-        $text .= "<p style='color: #888;'> Номер заказу: " . $order_id . "</p>";
-        $text .= "<p style='color: #888;'> Номер транзакції в системі LiqPay: " . $transaction_id . "</p>";
-        $text .= "<p style='color: #888;'> Статус транзакції: " . $payment_status . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Деталі платежу</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Сума: " . $summa . " " . $valuta . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Дата: " . $xdate . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Номер заказу: " . $order_id . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Номер транзакції в системі LiqPay: " . $transaction_id . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Статус транзакції: " . $payment_status . "</p>";
         if(!empty($user_phone)){
-            $text .= "<p style='color: #888;'> Телефон': " . $user_phone . "</p>";
+            $text .= "<p style='color: #333;margin: 0 50px;'> Телефон: " . $user_phone . "</p>";
         }
-        $text .= "<p style='color: #888;'> Призначення платежу: " . $datas . "</p>";
-        $text .= "<p style='color: #888;'> Разом змінюємо світ на краще!</p>";
-        $text .= "<p style='color: #888;'> З вдячністю,</p>";
-        $text .= "<p style='color: #888;'> Благодійний Фонд 'Запорука'</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Призначення платежу: " . $datas . "</p>";
+        $text .= "<div style='margin-top:30px;'><p style='color: #333;margin: 0 50px;'> Разом змінюємо світ на краще!</p></div>";
+        $text .= "<div style='margin:30px 0;'><p style='color: #333;margin: 0 50px;'> З вдячністю,</p>";
+        $text .= '<p style="color: #333;margin: 0 50px;"> Благодійний Фонд "Запорука"</p></div>';
     } elseif ( $lang == 'ru' ){
         if ($fio) {
-            $text = "<p style='color: #888;'>Приветствуем, " . $fio . "!</p>";
+            $text = "<div style='margin:30px 0;'><p style='color: #333;margin: 0 50px;'>Приветствуем, " . $fio . "!</p></div>";
         } else {
-            $text = "<p style='color: #888;'> Приветствуем!</p>";
+            $text = "<div style='margin:30px 0;'><p style='color: #333;margin: 0 50px;'>Приветствуем!</p></div>";
         }
         if ($status == "failure") {
-            $payment_status ="отклоненно";
-            $text .= "<p style='color: #888;'> Извините, но Ваш платеж отклонен</p>";
+            $payment_status ="отклонен";
+            $text .= "<div style='margin-bottom:30px;'><p style='color: #333;margin: 0 50px;'> Извините, но Ваш платеж отклонен</p></div>";
 
         }elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
             $payment_status = "успешная";
-            $text .= "<p style='color: #888;'> Спасибо за ваше доброе сердце! Благодаря вам подопечные фонда 'Запорука' смогут вовремя получить необходимую помощь.</p>";
+            $text .= '<div style="margin-bottom:30px;"><p style="color: #333;margin: 0 50px;"> Спасибо за ваше доброе сердце! Благодаря вам подопечные фонда "Запорука" смогут вовремя получить необходимую помощь.</p></div>';
         }elseif (($status == "wait_secure") || ($status == "wait_accept")) {
             $payment_status = "платеж находится на проверке";
-            $text .= "<p style='color: #888;'> Ваш платеж ожидает проверку...</p>";
+            $text .= "<div style='margin-bottom:30px;'><p style='color: #333;margin: 0 50px;'> Ваш платеж ожидает проверку...</p></div>";
         }
-        $text .= "<p style='color: #888;'> Детали платежа</p>";
-        $text .= "<p style='color: #888;'> Сумма: " . $summa . " " . $valuta . "</p>";
-        $text .= "<p style='color: #888;'> Дата: " . $xdate . "</p>";
-        $text .= "<p style='color: #888;'> Номер заказа: " . $order_id . "</p>";
-        $text .= "<p style='color: #888;'> Номер транзакции в системе LiqPay: " . $transaction_id . "</p>";
-        $text .= "<p style='color: #888;'> Статус транзакции: " . $payment_status . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Детали платежа</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Сумма: " . $summa . " " . $valuta . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Дата: " . $xdate . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Номер заказа: " . $order_id . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Номер транзакции в системе LiqPay: " . $transaction_id . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Статус транзакции: " . $payment_status . "</p>";
         if(!empty($user_phone)) {
-            $text .= "<p style='color: #888;'> Телефон': " . $user_phone . "</p>";
+            $text .= "<p style='color: #333;margin: 0 50px;'> Телефон: " . $user_phone . "</p>";
         }
-        $text .= "<p style='color: #888;'> Назначения платежа: " . $datas . "</p>";
-        $text .= "<p style='color: #888;'> Вместе меняем мир к лучшему!</p>";
-        $text .= "<p style='color: #888;'> С благодарностью,</p>";
-        $text .= "<p style='color: #888;'> Благотворительный Фонд 'Запорука'</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Назначения платежа: " . $datas . "</p><br/>";
+        $text .= "<div style='margin-top:30px;'><p style='color: #333;margin: 0 50px;'> Вместе меняем мир к лучшему!</p></div>";
+        $text .= "<div style='margin:30px 0;'><p style='color: #333;margin: 0 50px;'> С благодарностью,</p>";
+        $text .= '<p style="color: #333;margin: 0 50px;"> Благотворительный Фонд "Запорука"</p></div>';
     }elseif ( $lang == 'en' ){
         if ($fio) {
-            $text = "<p style='color: #888;'>Hello, " . $fio . "!</p>";
+            $text = "<div style='margin:30px 0;'><p style='color: #333;margin: 0 50px;'>Hello, " . $fio . "!</p></div>";
         } else {
-            $text = "<p style='color: #888;'> Hello!</p>";
+            $text = "<div style='margin:30px 0;'><p style='color: #333;margin: 0 50px;'> Hello!</p></div>";
         }
         if ($status == "failure") {
             $payment_status ="declined";
-            $text .= "<p style='color: #888;'> Sorry, but your payment was declined.</p>";
+            $text .= "<div style='margin-bottom:30px;'><p style='color: #333;margin: 0 50px;'> Sorry, but your payment was declined.</p></div>";
 
         }elseif ($status == "success" || $status == "sandbox" || $status == "subscribed") {
             $payment_status = "success";
-            $text .= "<p style='color: #888;'> Thank you for your kind heart! Thanks to you, Zaporuka Foundation’s beneficiaries will be able to get the help they need in time.</p>";
+            $text .= "<div style='margin-bottom:30px;'><p style='color: #333;margin: 0 50px;'> Thank you for your kind heart! Thanks to you, Zaporuka Foundation’s beneficiaries will be able to get the help they need in time.</p></div>";
         }elseif (($status == "wait_secure") || ($status == "wait_accept")) {
             $payment_status = "wait accept";
-            $text .= "<p style='color: #888;'> Your payment is pending accept...</p>";
+            $text .= "<div style='margin-bottom:30px;'><p style='color: #333;margin: 0 50px;'> Your payment is pending accept...</p></div>";
         }
-        $text .= "<p style='color: #888;'> Payment Details </p>";
-        $text .= "<p style='color: #888;'> Amount: " . $summa . " " . $valuta . "</p>";
-        $text .= "<p style='color: #888;'> Date: " . $xdate . "</p>";
-        $text .= "<p style='color: #888;'> Order Number: " . $order_id . "</p>";
-        $text .= "<p style='color: #888;'> LiqPay Transaction Number: " . $transaction_id . "</p>";
-        $text .= "<p style='color: #888;'> Transaction Status: " . $payment_status . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Payment Details </p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Amount: " . $summa . " " . $valuta . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Date: " . $xdate . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Order Number: " . $order_id . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> LiqPay Transaction Number: " . $transaction_id . "</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Transaction Status: " . $payment_status . "</p>";
         if(!empty($user_phone)) {
-            $text .= "<p style='color: #888;'> Phone Number: " . $user_phone . "</p>";
+            $text .= "<p style='color: #333;margin: 0 50px;'> Phone Number: " . $user_phone . "</p>";
         }
-        $text .= "<p style='color: #888;'> Purpose of payment: " . $datas . "</p>";
-        $text .= "<p style='color: #888;'> Together we are changing the world for the better! </p>";
-        $text .= "<p style='color: #888;'> With gratitude,</p>";
-        $text .= "<p style='color: #888;'> Charitable Foundation Zaporuka</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Purpose of payment: " . $datas . "</p><br/>";
+        $text .= "<div style='margin-top:30px;'><p style='color: #333;margin: 0 50px;'> Together we are changing the world for the better! </p></div>";
+        $text .= "<div style='margin:30px 0;'><p style='color: #333;margin: 0 50px;'> With gratitude,</p>";
+        $text .= "<p style='color: #333;margin: 0 50px;'> Charitable Foundation Zaporuka</p></div>";
     }
     return $text;
 }
@@ -216,13 +216,13 @@ if (isset($_POST['data'])) {
     $new_code = 1;
 
     if( $current_language == 'en' ){
-        $subject = 'Payment report';
+        $subject = 'Payment report ' ;
         $liqpay_magazin_tmp = 'Charitable Foundation Zaporuka';
     }elseif( $current_language == 'ru' ){
-        $subject = 'Отчет по оплате';
+        $subject = 'Отчет по оплате ';
         $liqpay_magazin_tmp = 'Благотворительный фонд "Запорука"';
     } elseif( $current_language == 'uk' ) {
-        $subject = 'Звіт по оплаті';
+        $subject = 'Звіт по оплаті ';
         $liqpay_magazin_tmp = get_option('liqpay_magazin');
     }
 
@@ -262,9 +262,16 @@ if (isset($_POST['data'])) {
                     $order->update_status('failed');
                 }
             }
+            if ( $current_language == 'uk' ) {
+                $payment_status = "відхилено";
+            } elseif($current_language == 'ru') {
+                $payment_status = "отклонен";
+            } elseif($current_language == 'en') {
+                $payment_status = "declined";
+            }
             if (!$order) {
-                wp_mail($to, $subject . "(" . $status . ")", $message, $headers, '');
-                wp_mail($mail, $subject . "(" . $status . ")", $message, $headers, '');
+                wp_mail($to, $subject . "(" . $payment_status . ")", $message, $headers, '');
+                wp_mail($mail, $subject . "(" . $payment_status . ")", $message, $headers, '');
             }
         }
         exit;
@@ -372,7 +379,7 @@ if (isset($_POST['data'])) {
                         $order = wc_get_order($order_id);
                         if ($order) {
                             $order->payment_complete();
-                            $order->update_status('completed');
+                            $order->update_status('processing');
                             $woocommerce->cart->empty_cart();
                         }
                     }
@@ -397,10 +404,17 @@ if (isset($_POST['data'])) {
                 $text_head .= $cost_cult . $valuta_cult . " Вы оплатили. " . $summa . $valuta . ", сумма не соответствует стоимости товара, за разъяснением вопроса, обратитесь к администратору " . get_option('liqpay_mail');
                 $message = $text_head . $message;
             }
+            if ( $current_language == 'uk' ) {
+                $payment_status = "успішна";
+            } elseif($current_language == 'ru') {
+                $payment_status = "успешно";
+            } elseif($current_language == 'en') {
+                $payment_status = $status;
+            }
             if (!$order) {
                 $attachments = (!empty($attachments)) ? $attachments : '';
-                wp_mail($to, $subject . "(" . $status . ")", $message, $headers, $attachments);
-                wp_mail($mail, $subject . "(" . $status . ")", $message . "   Email покупателя - " . $to, $headers, $attachments);
+                wp_mail($to, $subject . "(" . $payment_status . ")", $message, $headers, $attachments);
+                wp_mail($mail, $subject . "(" . $payment_status . ")", $message . "   Email покупателя - " . $to, $headers, $attachments);
             }
         }
 
@@ -420,10 +434,17 @@ if (isset($_POST['data'])) {
                     $woocommerce->cart->empty_cart();
                 }
             }
+            if ( $current_language == 'uk' ) {
+                $payment_status = "платіж знаходиться на перевірці";
+            } elseif($current_language == 'ru') {
+                $payment_status = "платеж находится на проверке";
+            } elseif($current_language == 'en') {
+                $payment_status = str_replace("_", " ", $status);
+            }
             if (!$order) {
                 $attachments = (!empty($attachments)) ? $attachments : '';
-                wp_mail($to, $subject . "(" . $status . ")", $message, $headers, $attachments);
-                wp_mail($mail, $subject . "(" . $status . ")", $message, $headers, $attachments);
+                wp_mail($to, $subject . "(" . $payment_status . ")", $message, $headers, $attachments);
+                wp_mail($mail, $subject . "(" . $payment_status . ")", $message, $headers, $attachments);
             }
         }
         exit;

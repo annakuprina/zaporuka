@@ -19,21 +19,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+
+
 /*
  * @hooked WC_Emails::email_header() Output the email header
  */
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( esc_html__( 'Hi, %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
+
+<p><?php  pll_e( 'Вітаємо'); echo ", " . $order->get_billing_first_name() ; ?>!</p>
 <?php /* translators: %s: Order number */ ?>
-<?php if( ICL_LANGUAGE_CODE=='uk' ) { ?>
-    <p><?php printf( esc_html( 'Просто повідомляємо &mdash; ми отримали ваше замовлення  #%s, і воно зараз обробляється: '), esc_html( $order->get_order_number() ) ); ?></p>
-<?php } elseif(ICL_LANGUAGE_CODE=='en'){ ?>
-    <p><?php printf( esc_html( 'Just to let you know &mdash; we\'ve received your order #%s, and it is now being processed: '), esc_html( $order->get_order_number() ) ); ?></p>
-<?php }elseif(ICL_LANGUAGE_CODE=='ru') { ?>
-    <p><?php printf( esc_html( 'Просто сообщаем &mdash; мы получили ваш заказ #%s, и он сейчас обрабатывается: '), esc_html( $order->get_order_number() ) ); ?></p>
-<?php } ?>
+<p><?php pll_e( 'Просто повідомляємо &mdash; ми отримали ваше замовлення і воно зараз обробляється:'); ?></p>
 <?php
 
 /*

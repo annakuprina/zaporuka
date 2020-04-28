@@ -148,6 +148,9 @@ add_action('init', function() {
   pll_register_string('u-design-child', 'Друзі та волонтери фонду ');
   pll_register_string('u-design-child', 'Волонтери');
   pll_register_string('u-design-child', 'Выберите год');
+  pll_register_string('u-design-child', 'Вітаємо');
+  pll_register_string('u-design-child', 'Ми закінчили обробляти ваше замовлення.');   
+  pll_register_string('u-design-child', 'Просто повідомляємо &mdash; ми отримали ваше замовлення і воно зараз обробляється:');
   pll_register_string('woocommerce', "removed");
 });
 remove_filter('the_content','wptexturize');
@@ -375,7 +378,7 @@ add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) 
     if ($currentLanguage === 'en') {
         return [
             'method_title' => 'Nova Poshta',
-            'block_title' => 'Enter Nova Poshtaa department',
+            'block_title' => 'Enter Nova Poshta department',
             'placeholder_area' => 'Select region',
             'placeholder_city' => 'Select City',
             'placeholder_warehouse' => 'Select department',
@@ -395,7 +398,16 @@ add_filter('wc_ukr_shipping_get_nova_poshta_translates', function ($translates) 
     ];
    
 });
+add_filter('wc_ukr_shipping_language', function ($lang) {
+    if (pll_current_language() === 'ru') {
+        return 'ru';
+    }
+    if (pll_current_language() === 'en') {
+        return 'en';
+    }
 
+    return 'ua';
+});
 /* read only for ACF fields for total-collected field*/
 add_filter('acf/load_field/name=total-collected', 'acf_read_only');
 function acf_read_only($field) {
