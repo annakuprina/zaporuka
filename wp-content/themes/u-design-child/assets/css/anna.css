@@ -567,7 +567,7 @@ footer a.designer-link {
   .vc_col-sm-4:nth-child(2)
   .section2-single-column {
   border-right: 1px solid rgba(165, 165, 165, 0.25);
-  border-left: 1px solid rgba(165, 165, 165, 0.25);
+  /* border-left: 1px solid rgba(165, 165, 165, 0.25); */
 }
 .home-page-section3 {
   margin-top: 85px;
