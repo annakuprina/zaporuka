@@ -80,10 +80,17 @@ set_theme_mod( 'udesign_include_container', ! udesign_check_page_layout_option( 
 			</header>
 
 			<header id="header-mob">
+                <?php if( ICL_LANGUAGE_CODE == 'uk' ) {
+                    $site_url = '/';
+                }elseif( ICL_LANGUAGE_CODE == 'ru' ) {
+                    $site_url = '/ru';
+                }elseif( ICL_LANGUAGE_CODE == 'en' ) {
+                    $site_url = '/en';
+                } ?>
 				<div class="header-mob-top">
 					<div class="header-mob-logo">
-						<a href="/"><img class="active header-mob-logo-black" src="<?php echo $logo_img_url ?>" alt=""></a>
-						<a href="/"><img class="header-mob-logo-white" src="<?php echo $logo_mob_img_url ?>" alt=""></a>
+						<a href="<?php echo $site_url; ?>"><img class="active header-mob-logo-black" src="<?php echo $logo_img_url ?>" alt=""></a>
+						<a href="<?php echo $site_url; ?>"><img class="header-mob-logo-white" src="<?php echo $logo_mob_img_url ?>" alt=""></a>
 					</div>
 					<div class="header-mob-nav">
 						<div class="hamburger active">
