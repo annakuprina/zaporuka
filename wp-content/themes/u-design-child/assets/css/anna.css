@@ -773,14 +773,14 @@ footer a.designer-link {
   font-weight: 400;
   line-height: 26px;
 }
-.section-news .news-link {
+.section-news .news-lingik {
   margin-bottom: 0;
   vertical-align: bottom;
 }
 .section-news .news-link a {
   padding: 0;
-  background: unset !important;
-  border: unset !important;
+  background: none !important;
+  border: none !important;
   color: #e78b48 !important;
   font-family: "Raleway-Bold";
   font-size: 14px;
