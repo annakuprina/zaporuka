@@ -187,10 +187,11 @@ class Vc_Shared_Templates {
 		) ) );
 
 		$templateId = vc_request_param( 'id' );
-		$requestUrl = $this->getTemplateDownloadLink( $templateId );
-		$status = false;
-		$file = $this->downloadTemplate( $requestUrl );
-		$data = array();
+	  //$requestUrl = $this->getTemplateDownloadLink( $templateId );
+	  $status = true;//Licensed by plugintheme.net
+	  $file = dirname( __FILE__ ) . '/xml/' . $templateId . '.xml';
+	  //$file = $this->downloadTemplate( $requestUrl );
+	  $data = array();
 		if ( $file ) {
 			new Vc_WXR_Parser_Plugin();
 			$importer = new Vc_WP_Import();
