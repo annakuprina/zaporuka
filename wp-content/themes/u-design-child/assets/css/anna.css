@@ -1758,7 +1758,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 /*cart on single product page and shop page*/
 .woocommerce-custom-product-filter .woocommerce-cart-page-link svg,
 .single-product .single-product-cart-link svg {
-  width: 18px;
+  width: 19px;
   height: 18px;
 }
 
