@@ -1755,11 +1755,13 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   padding-right: 10px;
 }
 
-.woocom/**/merce-custom-product-filter .woocommerce-cart-page-link svg,
+/*cart on single product page and shop page*/
+.woocommerce-custom-product-filter .woocommerce-cart-page-link svg,
 .single-product .single-product-cart-link svg {
   width: 18px;
   height: 18px;
 }
+
 .woocommerce-custom-product-filter .woocommerce-cart-page-link {
   position: relative;
 }
