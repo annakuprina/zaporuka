@@ -706,6 +706,12 @@ header#top-wrapper {
 /*One project page. Partners block.
 If number of partners is less then 5 - slick is not initialized("project-partners-carousel-not-initialized" class)*/
 
+.single-projects
+  .project-partners-carousel-wrapper
+  .project-partners-carousel-not-initialized
+  .vc_grid-container-wrapper.vc_clearfix {
+  width: initial;
+}
 .single-projects .project-partners-carousel-not-initialized .wpb_wrapper {
   display: flex;
   justify-content: flex-start;
@@ -2891,6 +2897,8 @@ and shows hidden orange lines near titles on About us page*/
   font-size: 14px;
   font-weight: 700;
   font-family: "Raleway-Bold";
+  position: relative;
+  right: 12px;
 }
 
 /*media only for Safari 9+ */
