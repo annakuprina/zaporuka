@@ -409,7 +409,7 @@ add_filter('wc_ukr_shipping_language', function ($lang) {
     return 'ua';
 });
 
-//add_action('woocommerce_checkout_create_order', 'createOrder_ru_address');
+add_action('woocommerce_checkout_create_order', 'createOrder_ru_address');
 
 function createOrder_ru_address($order){
     if (pll_current_language() === 'ru') {
@@ -436,7 +436,8 @@ function createOrder_ru_address($order){
             $order->set_shipping_address_1($npWarehouse['description']);
             $order->set_billing_address_1($npWarehouse['description']);
             $order->update_meta_data('wc_ukr_shipping_np_warehouse_ref', esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_warehouse']));
-            StorageService::setValue('wc_ukr_shipping_np_selected_warehouse', esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_warehouse']));
+            $StorageService = new StorageService();
+            $StorageService::setValue('wc_ukr_shipping_np_selected_warehouse', esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_warehouse']));
         }
     }
 }
