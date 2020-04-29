@@ -743,7 +743,7 @@ If number of partners is less then 5 - slick is not initialized("project-partner
   padding: 0 20px !important;
   display: flex;
   align-items: center;
-  width: 33.3%;
+  /* width: 33.3%; */
 }
 
 .single-projects
