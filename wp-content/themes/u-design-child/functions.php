@@ -409,9 +409,9 @@ add_filter('wc_ukr_shipping_language', function ($lang) {
     return 'ua';
 });
 
-add_action('woocommerce_checkout_create_order', 'createOrder_ru_address');
+add_action('woocommerce_checkout_create_order', 'createOrder_translated_address');
 
-function createOrder_ru_address($order){
+function createOrder_translated_address($order){
     if ($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_custom_address']) {
         $order->set_shipping_address_1(sanitize_text_field($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_custom_address']));
         $order->set_billing_address_1(sanitize_text_field($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_custom_address']));
