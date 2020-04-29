@@ -856,8 +856,8 @@ footer a.designer-link {
 }
 .section-news .news-link-hover a {
   padding: 0;
-  background: unset !important;
-  border: unset !important;
+  background: none !important;
+  border: none !important;
   color: #fff !important;
   font-family: "Raleway-Bold";
   font-size: 14px;
@@ -1205,7 +1205,7 @@ footer a.designer-link {
 .help-form-inner-wrapper .textarea-full {
   background-color: transparent;
   width: 100%;
-  border: unset;
+  border: none;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(165, 165, 165, 0.47);
   color: rgba(165, 165, 165, 0.8);

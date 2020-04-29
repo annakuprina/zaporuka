@@ -7726,6 +7726,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 .single-novini .single_article_section1 {
   height: 400px;
   z-index: 1;
+  position: relative;
 }
 
 .single-novini .single_section2 {
