@@ -17,7 +17,23 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
+<script type=’text/javascript’>
 
+(function()
+{
+if( window.localStorage )
+{
+if( !localStorage.getItem( ‘firstLoad’ ) )
+{
+localStorage[ ‘firstLoad’ ] = true;
+window.location.reload();
+}
+else
+localStorage.removeItem( ‘firstLoad’ );
+}
+})();
+
+</script>
 <div class="woocommerce-order">
 
 	<?php if ( $order) :
@@ -37,7 +53,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php else : ?>
 
-			<?php if( $order->get_status() == 'processing' || $order->get_status() != 'pending'):?>
+			<?php if( $order->get_status() != 'pending'):?>
 
 				<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 
