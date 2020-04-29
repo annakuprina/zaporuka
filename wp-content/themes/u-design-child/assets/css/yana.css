@@ -107,7 +107,12 @@ h6,
   max-width: 168px;
   font-family: "Raleway-Bold";
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .error_page a {
+    letter-spacing: 0.1px;
+  }
+}
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
   .error_page a {
@@ -1447,6 +1452,6 @@ li.one-tab-link:hover {
 .one-project-info-title a:hover {
   opacity: 0.85;
 }
-.ask_for_help_popup div{
-  margin-bottom:10px;
+.ask_for_help_popup div {
+  margin-bottom: 10px;
 }

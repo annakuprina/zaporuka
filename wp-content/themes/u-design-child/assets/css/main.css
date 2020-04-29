@@ -8741,12 +8741,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   #ModalHelpForm.opened .modal-dialog::-webkit-scrollbar-track {
     background: #ddd;
-    /* opacity: 0.1; */
   }
 
   #ModalHelpForm.opened .modal-dialog::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
   }
+
   /*For Mozilla only*/
   #ModalHelpForm.opened {
     scrollbar-color: #d2d2d2 #eaeaea;
@@ -8774,6 +8774,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #askForHelpModal.opened .modal-dialog::-webkit-scrollbar-track {
   background: #ddd;
+}
+
+/*For Mozilla only*/
+#askForHelpModal.opened {
+  scrollbar-color: #d2d2d2 #eaeaea;
 }
 
 #askForHelpModal.opened .modal-dialog::-webkit-scrollbar-thumb {
@@ -8805,6 +8810,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #sendSmsModalfromHeader.opened .modal-dialog::-webkit-scrollbar-track {
   background: #ddd;
+}
+
+/*For Mozilla only*/
+#sendSmsModalfromHeader.opened {
+  scrollbar-color: #d2d2d2 #eaeaea;
 }
 
 #sendSmsModalfromHeader.opened .modal-dialog::-webkit-scrollbar-thumb {
