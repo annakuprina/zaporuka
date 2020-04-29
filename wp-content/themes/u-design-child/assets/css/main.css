@@ -1289,6 +1289,13 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     justify-content: center;
     width: 100%;
   }
+
+  .single-projects
+    .project-partners-carousel-not-initialized
+    .vc_pageable-slide-wrapper
+    .vc_grid-item {
+    padding: 0 10px !important;
+  }
 }
 @media screen and (max-width: 768px) {
   .single-projects .vc_custom_1580999967196 {
@@ -2868,7 +2875,7 @@ and shows hidden orange lines near titles on About us page*/
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 35px 80px;
+  padding: 35px 60px;
   text-align: center;
   line-height: 26px;
   cursor: pointer;
@@ -2883,7 +2890,7 @@ and shows hidden orange lines near titles on About us page*/
 }
 .help-item:hover {
   background: #fff;
-  padding: 35px 20px;
+  padding: 35px 37px;
 }
 .help-item:hover .help-item-info {
   display: block;
@@ -3289,6 +3296,10 @@ html[lang="en-US"]
   .help input#oferta:after {
     left: 3px;
     top: 8px;
+  }
+
+  .help .help-item-link {
+    position: static;
   }
 
   .help .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left,
@@ -8526,9 +8537,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     width: 100%;
   }
 
-  .woocommerce-cart-page-link svg {
-    width: 19px;
-  }
+
 }
 /*---------
   POPUPS
@@ -10251,11 +10260,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 /*cart*/
-.single-product #page-content .single-product-cart-link .cart-count {
-  top: 3px;
-  left: -1px;
-}
-
 .woocommerce.single-product #wrapper-1 div.product div.summary {
   margin-top: 4px;
 }
@@ -10300,14 +10304,17 @@ div.product form.cart {
 
 #wrapper-1 .cart-customlocation.cart-count {
   top: 7px;
-  left: -1px;
-  width: 14px;
+  left: 1px;
+  width: 15px;
   display: flex;
   justify-content: center;
-  color: #fff;
+color: #fff;
   font-size: 10px;
 }
 
+.single-product #page-content .single-product-cart-link .cart-count {
+  
+}
 #main-content li.product .shop-page-price-title {
   padding: 27px 30px;
   /* background:rgba(255,255,255,0.8); */
@@ -10349,9 +10356,16 @@ div.product form.cart {
 
 .woocommerce.single-product #wrapper-1 .related .shop-page-price-title {
   width: 100%;
-  padding: 35px 32px;
+  padding: 33px 29px;
 }
 
+.woocommerce.single-product
+  #wrapper-1
+  .related
+  .related-product-active
+  .shop-page-price-title {
+  padding: 35px 29px;
+}
 .woocommerce.single-product #wrapper-1 ul.products li.product .price {
   position: relative;
   top: 7px;
@@ -10533,14 +10547,6 @@ ul.products li.product:hover .add_to_cart_button:after {
     .woocommerce-cart-page-link
     .cart-customlocation.cart-count {
     width: 20px;
-  }
-
-  #wrapper-1 .shop-custom-wrapper .cart-customlocation.cart-count {
-    left: 2px;
-  }
-
-  .single-product #page-content .single-product-cart-link .cart-count {
-    left: 0;
   }
 }
 

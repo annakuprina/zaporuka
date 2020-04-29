@@ -1563,9 +1563,11 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   .price {
   width: 100%;
   text-align: left;
-  padding-top: 5px;
-  padding-bottom: 40px;
+  padding-top: 3px;
+  padding-bottom: 44px;
+  position: static !important;
 }
+
 .woocommerce.single-product
   .related
   .product.related-product-active
@@ -1582,7 +1584,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   .add_to_cart_button {
   display: block !important;
   text-align: left;
-  margin-top: 47px;
+  margin-top: 49px;
   opacity: 0.9;
 }
 .woocommerce.single-product
@@ -1751,6 +1753,12 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   position: relative;
   top: 2px;
   padding-right: 10px;
+}
+
+.woocom/**/merce-custom-product-filter .woocommerce-cart-page-link svg,
+.single-product .single-product-cart-link svg {
+  width: 18px;
+  height: 18px;
 }
 .woocommerce-custom-product-filter .woocommerce-cart-page-link {
   position: relative;
