@@ -10417,6 +10417,12 @@ ul.products li.product:hover .add_to_cart_button:after {
   content: url("/wp-content/themes/u-design-child/img/arrow-home.svg") !important;
   padding-left: 10px !important;
 }
+
+/*single product page. Message after adding product to cart*/
+.single-product #wrapper-1 .woocommerce-message .button.wc-forward {
+  padding: 5px 10px 0 10px;
+}
+
 @media screen and (max-width: 1200px) {
   .woocommerce.single-product ul.products {
     margin: 0;
@@ -10530,10 +10536,12 @@ ul.products li.product:hover .add_to_cart_button:after {
     display: block;
     padding-left: 0;
     padding-top: 6px;
+    margin-bottom: 10px;
   }
 
   .single-product #wrapper-1 .woocommerce-message {
     padding: 1em 0 1em 30px;
+    line-height: 20px;
   }
 
   .single-product #wrapper-1 .woocommerce-message::before {
