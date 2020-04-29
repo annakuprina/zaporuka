@@ -10283,8 +10283,14 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   top: -2px;
   left: 0;
   font-size: 18px;
+  color: #ababab;
 }
 
+.woocommerce.single-product #wrapper-1 div.product form.cart {
+  margin-top: 31px;
+  border-top: 1px solid #ddd;
+  padding-top: 42px;
+}
 .woocommerce.single-product
   .fake-count
   .quantity.quantity-numers
