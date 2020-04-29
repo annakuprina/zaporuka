@@ -382,7 +382,7 @@ h2.h2-header-line::before {
 
 #header-mob .help-header-link::after {
   content: url("/wp-content/themes/u-design-child/img/arrow-home.svg");
-  padding-left: 13px;
+  padding-left: 9px;
 }
 
 #header-mob .header-mob-socials {
@@ -8535,6 +8535,15 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .shop-custom-wrapper ul.products.columns-3 li.product {
     width: 100%;
+  }
+
+  #main-content
+    .woocommerce-custom-product-filter
+    .woocommerce-custom-price-filter
+    svg {
+    top: 5px;
+    padding-right: 15px;
+    padding-left: 1px;
   }
 }
 /*---------
