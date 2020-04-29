@@ -409,7 +409,7 @@ add_filter('wc_ukr_shipping_language', function ($lang) {
     return 'ua';
 });
 
-add_action('woocommerce_checkout_create_order', 'createOrder_ru_address', 10, 5);
+//add_action('woocommerce_checkout_create_order', 'createOrder_ru_address');
 
 function createOrder_ru_address($order){
     if (pll_current_language() === 'ru') {
