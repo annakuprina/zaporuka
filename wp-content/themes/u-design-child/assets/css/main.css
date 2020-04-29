@@ -10303,7 +10303,7 @@ div.product form.cart {
 #wrapper-1 .cart-customlocation.cart-count {
   top: 6px;
   left: 1px;
-  width: 15px;
+  width: 16px;
   display: flex;
   justify-content: center;
   color: #fff;
@@ -10420,7 +10420,7 @@ ul.products li.product:hover .add_to_cart_button:after {
 
 /*single product page. Message after adding product to cart*/
 .single-product #wrapper-1 .woocommerce-message .button.wc-forward {
-  padding: 5px 10px 0 10px;
+  padding: 6px 10px 0 10px;
 }
 
 @media screen and (max-width: 1200px) {
