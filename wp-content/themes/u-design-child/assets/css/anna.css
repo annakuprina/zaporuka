@@ -773,7 +773,7 @@ footer a.designer-link {
   font-weight: 400;
   line-height: 26px;
 }
-.section-news .news-lingik {
+.section-news .news-link {
   margin-bottom: 0;
   vertical-align: bottom;
 }
@@ -896,7 +896,7 @@ footer a.designer-link {
   bottom: 30px;
 }
 .section-news .vc_grid-btn-load_more a {
-  background: unset !important;
+  background: none !important;
   color: #e78b48 !important;
   font-family: "Raleway-Bold";
   font-size: 14px;
@@ -1206,6 +1206,7 @@ footer a.designer-link {
   background-color: transparent;
   width: 100%;
   border: none;
+  border-radius: 0;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(165, 165, 165, 0.47);
   color: rgba(165, 165, 165, 0.8);
@@ -1213,6 +1214,12 @@ footer a.designer-link {
   font-weight: 400;
   letter-spacing: 0.3px;
 }
+
+.help-form-inner-wrapper input:not([type="radio"]):not([type="checkbox"]) {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 .help-form-inner-wrapper .textarea-small {
   min-width: 181px;
 }
