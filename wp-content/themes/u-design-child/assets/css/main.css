@@ -10325,6 +10325,13 @@ div.product form.cart {
   font-size: 10px;
 }
 
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  #wrapper-1 .cart-customlocation.cart-count {
+    top: 7px;
+  }
+}
+
 .single-product #page-content .single-product-cart-link .cart-count {
   top: 2px;
 }
