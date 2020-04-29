@@ -10312,15 +10312,22 @@ div.product form.cart {
 
 .single-product #page-content .single-product-cart-link .cart-count {
   top: 2px;
-  left: 2px;
 }
 
 /*single product page. Message after adding product to cart*/
-.single-product .woocommerce-message .button.wc-forward {
+.single-product #wrapper-1 .woocommerce-message .button.wc-forward {
   float: none;
   display: block;
   padding-left: 0;
   padding-top: 6px;
+}
+
+.single-product #wrapper-1 .woocommerce-message {
+  padding: 1em 0 1em 30px;
+}
+
+.single-product #wrapper-1 .woocommerce-message::before {
+  left: 0;
 }
 
 #main-content li.product .shop-page-price-title {
