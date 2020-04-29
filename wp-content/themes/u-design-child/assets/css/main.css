@@ -8536,8 +8536,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .shop-custom-wrapper ul.products.columns-3 li.product {
     width: 100%;
   }
-
-
 }
 /*---------
   POPUPS
@@ -10308,12 +10306,13 @@ div.product form.cart {
   width: 15px;
   display: flex;
   justify-content: center;
-color: #fff;
+  color: #fff;
   font-size: 10px;
 }
 
 .single-product #page-content .single-product-cart-link .cart-count {
-  
+  top: 3px;
+  left: 0;
 }
 #main-content li.product .shop-page-price-title {
   padding: 27px 30px;
