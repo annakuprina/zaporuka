@@ -429,8 +429,11 @@ jQuery(document).ready(function ($) {
   }
 
   /*Iphone check. To add specific positions to cart */
-  var iOSDevice = !!navigator.platform.match(/iPhone/);
-  if (iOSDevice == true) {
+  var isIOS =
+    /iPhone/.test(navigator.platform) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+  if (isIOS == true) {
     $(".single-product").css("color", "red !important");
   }
 
