@@ -718,6 +718,13 @@ If number of partners is less then 5 - slick is not initialized("project-partner
   overflow: hidden;
 }
 
+.single-projects
+  .project-partners-carousel-not-initialized
+  .help_button_single_block
+  a {
+  padding: 0 !important;
+}
+
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
   .proj-timeline-share {
@@ -10397,7 +10404,6 @@ div.product form.cart {
   width: 100%;
   padding: 33px 29px;
 }
-
 
 .woocommerce.single-product #wrapper-1 ul.products li.product .price {
   position: relative;
