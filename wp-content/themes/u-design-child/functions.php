@@ -745,4 +745,4 @@ function defer_parsing_of_js ( $url ) {
     if ( strpos( $url, 'woocommerce-add-to-cart.js' ) ) return $url;
     return "$url' defer ";
 }
-add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+//add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
