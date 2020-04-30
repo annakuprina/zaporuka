@@ -8551,7 +8551,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 ---------*/
 #ModalHelpForm.opened .modal-dialog {
   box-shadow: none;
-  background: transparent;
   width: calc(100% - 40px);
   transform: translateY(-50%);
   top: 50%;
@@ -10302,7 +10301,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   top: -2px;
   left: 0;
   font-size: 18px;
-  color: #ababab;
+  color: #333;
 }
 
 .woocommerce.single-product #wrapper-1 div.product form.cart {
@@ -10399,13 +10398,7 @@ div.product form.cart {
   padding: 33px 29px;
 }
 
-.woocommerce.single-product
-  #wrapper-1
-  .related
-  .related-product-active
-  .shop-page-price-title {
-  padding: 35px 29px;
-}
+
 .woocommerce.single-product #wrapper-1 ul.products li.product .price {
   position: relative;
   top: 7px;
