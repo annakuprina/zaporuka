@@ -714,12 +714,12 @@ function dequeue_woocommerce_styles_scripts() {
             wp_dequeue_script( 'wc-cart' );
             wp_dequeue_script( 'wc-chosen' );
             wp_dequeue_script( 'woocommerce' );
-            wp_dequeue_script( 'prettyPhoto' );
-            wp_dequeue_script( 'prettyPhoto-init' );
-            wp_dequeue_script( 'jquery-blockui' );
-            wp_dequeue_script( 'jquery-placeholder' );
-            wp_dequeue_script( 'fancybox' );
-            wp_dequeue_script( 'jqueryui' );
+//            wp_dequeue_script( 'prettyPhoto' );
+//            wp_dequeue_script( 'prettyPhoto-init' );
+//            wp_dequeue_script( 'jquery-blockui' );
+//            wp_dequeue_script( 'jquery-placeholder' );
+//            wp_dequeue_script( 'fancybox' );
+//            wp_dequeue_script( 'jqueryui' );
         }
     }
 }
