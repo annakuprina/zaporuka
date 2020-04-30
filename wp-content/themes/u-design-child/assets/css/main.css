@@ -10334,6 +10334,15 @@ div.product form.cart {
   color: #fff;
   font-size: 10px;
 }
+/*media only for IOS mob */
+@supports (-webkit-touch-callout: none) {
+  #wrapper-1 .cart-customlocation.cart-count {
+    top: 7px;
+  }
+  .single-product #page-content .single-product-cart-link .cart-count {
+    top: 3px;
+  }
+}
 
 /*media only for Mozilla */
 @-moz-document url-prefix() {
