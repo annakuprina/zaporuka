@@ -723,3 +723,26 @@ function dequeue_woocommerce_styles_scripts() {
         }
     }
 }
+function defer_parsing_of_js ( $url ) {
+    if ( FALSE === strpos( $url, '.js' ) ) return $url;
+    if ( strpos( $url, 'jquery-ui.min.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.dataTables.yadcf.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.dataTables.min.js' ) ) return $url;
+    if ( strpos( $url, 'slick.min.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.validate.min.js' ) ) return $url;
+    if ( strpos( $url, 'dataTables.fixedColumns.min.js' ) ) return $url;
+    if ( strpos( $url, 'jquery-migrate.min.js' ) ) return $url;
+    if ( strpos( $url, 'wow.min.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.blockUI.min.js' ) ) return $url;
+    if ( strpos( $url, 'custom_scrypt_anya.js' ) ) return $url;
+    if ( strpos( $url, 'slick-lightbox.min.js' ) ) return $url;
+    if ( strpos( $url, 'main.js' ) ) return $url;
+    if ( strpos( $url, 'liqpay_form.js' ) ) return $url;
+    if ( strpos( $url, 'custom_scrypt_yana.js' ) ) return $url;
+    if ( strpos( $url, 'add-to-cart.min.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.cookie.js' ) ) return $url;
+    if ( strpos( $url, 'woocommerce-add-to-cart.js' ) ) return $url;
+    return "$url' defer ";
+}
+add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
