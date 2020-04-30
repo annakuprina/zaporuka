@@ -432,7 +432,7 @@ jQuery(document).ready(function ($) {
   }
 
   if ((isMobile = true)) {
-    $(".woocommerce.single-product .related ul.products li.product").on(
+    $(".woocommerce.single-product .related ul.products li.product:not(a)").on(
       "click",
       function (event) {
         $(this).toggleClass("related-product-active");
