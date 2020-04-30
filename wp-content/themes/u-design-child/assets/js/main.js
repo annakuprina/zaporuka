@@ -428,11 +428,11 @@ jQuery(document).ready(function ($) {
     $(".homepage-banner").addClass("homepage-banner-payment-cancel");
   }
 
+  /*Iphone check. To add specific positions to cart */
   var iOSDevice = !!navigator.platform.match(/iPhone/);
   if (iOSDevice == true) {
-    $(".woocommerce.single-product div.product .product_title").css(
-      "color",
-      "red !important"
-    );
+    $(".single-product").css("color", "red !important");
   }
+
+  /*Check if count of products in cart is 1 then add class "disable" to minus*/
 });
