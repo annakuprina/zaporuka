@@ -2934,6 +2934,7 @@ and shows hidden orange lines near titles on About us page*/
 #oferta {
   margin-right: 12px;
   margin-left: 2px;
+  visibility: hidden;
 }
 #oferta:not(:after) {
   opacity: 0;
@@ -2953,7 +2954,7 @@ input#oferta:before {
   border-radius: 2px;
   left: -1px;
   top: 0px;
-  visi
+  visibility: visible;
 }
 input#oferta:after {
   position: absolute;
@@ -2973,6 +2974,7 @@ input#oferta:after {
   transform: rotate(-45deg);
   z-index: 23;
   opacity: 0;
+  visibility: visible;
 }
 input#oferta:checked:after {
   opacity: 1;
