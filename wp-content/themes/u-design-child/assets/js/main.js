@@ -453,4 +453,8 @@ jQuery(document).ready(function ($) {
   // }
 
   /*Check if count of products in cart is 1 then add class "disable" to minus*/
+
+  /*1 Product page. Ralated products carousel.Every related produc
+  has 2 sides: front and back. This code removes link to the product on front side */
+  $(".products .product>.woocommerce-LoopProduct-link").removeAttr("href");
 });
