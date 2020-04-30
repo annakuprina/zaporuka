@@ -418,21 +418,6 @@ jQuery(document).ready(function ($) {
     }
   );
 
-  // var touchmoved;
-  // $(".woocommerce.single-product .related ul.products li.product")
-  //   .on("touchend", function (e) {
-  //     if (touchmoved != true) {
-  //       // button click action
-  //       console.log("you clicked!")
-  //     }
-  //   })
-  //   .on("touchmove", function (e) {
-  //     touchmoved = true;
-  //   })
-  //   .on("touchstart", function () {
-  //     touchmoved = false;
-  //   });
-
   /*Check if homepage contains Thanks block. Then add class "homepage-banner-with-thanks-block" to banner block*/
   if ($("div").hasClass("home-first-thanks-block")) {
     $(".homepage-banner").addClass("homepage-banner-with-thanks-block");
@@ -442,22 +427,4 @@ jQuery(document).ready(function ($) {
   if ($("div").hasClass("home-first-payment-cancel")) {
     $(".homepage-banner").addClass("homepage-banner-payment-cancel");
   }
-
-  /*Iphone check. To add specific positions to cart */
-  // var isIOS =
-  //   /iPhone/.test(navigator.platform) ||
-  //   (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-
-  // if (isIOS == true) {
-  //   $(".single-product").css("color", "red !important");
-  // }
-
-  /*Check if count of products in cart is 1 then add class "disable" to minus*/
-
-  /*1 Product page. Ralated products carousel.Every related produc
-has 2 sides: front and back. This code removes link to the product on front side */
-  // $("a").removeAttr("href");
-
-  // $(".products .product>.woocommerce-LoopProduct-link").attr("href", "#");
-  $(".products .product>.woocommerce-LoopProduct-link").removeAttr("href");
 });
