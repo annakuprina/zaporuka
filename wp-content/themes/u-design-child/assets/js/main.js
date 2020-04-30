@@ -427,4 +427,12 @@ jQuery(document).ready(function ($) {
   if ($("div").hasClass("home-first-payment-cancel")) {
     $(".homepage-banner").addClass("homepage-banner-payment-cancel");
   }
+
+  var iOSDevice = !!navigator.platform.match(/iPhone/);
+  if (iOSDevice == true) {
+    $(".woocommerce.single-product div.product .product_title").css(
+      "color",
+      "red !important"
+    );
+  }
 });
