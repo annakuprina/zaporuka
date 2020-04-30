@@ -691,7 +691,7 @@ function remove_redirect_guess_404_permalink( $redirect_url ) {
 
 add_filter( 'redirect_canonical', 'remove_redirect_guess_404_permalink' );
 /** Disable All WooCommerce  Styles and Scripts Except Shop Pages*/
-add_action( 'wp_enqueue_scripts', 'dequeue_woocommerce_styles_scripts', 99 );
+//add_action( 'wp_enqueue_scripts', 'dequeue_woocommerce_styles_scripts', 99 );
 function dequeue_woocommerce_styles_scripts() {
     if ( function_exists( 'is_woocommerce' ) ) {
         if ( ! is_woocommerce() && ! is_cart() && ! is_checkout() ) {
