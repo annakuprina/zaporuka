@@ -438,38 +438,6 @@ jQuery(document).ready(function ($) {
         $(this).toggleClass("related-product-active");
       }
     );
-
-    document.addEventListener("touchstart", handleTouchStart, false);
-    document.addEventListener("touchmove", handleTouchMove, false);
-
-    var xDown = null;
-    var yDown = null;
-
-    function getTouches(evt) {
-      return (
-        evt.touches || evt.originalEvent.touches // browser API
-      ); // jQuery
-    }
-
-    function handleTouchStart(evt) {
-      const firstTouch = getTouches(evt)[0];
-      xDown = firstTouch.clientX;
-      yDown = firstTouch.clientY;
-    }
-
-    function handleTouchMove(evt) {
-      if (!xDown || !yDown) {
-        return;
-      }
-
-      $(
-        ".woocommerce.single - product.related ul.products li.product: not(a)"
-      ).removeClass("related-product-active");
-
-      /* reset values */
-      xDown = null;
-      yDown = null;
-    }
   } else {
     $(".woocommerce.single-product .related ul.products li.product").on(
       "hover",
