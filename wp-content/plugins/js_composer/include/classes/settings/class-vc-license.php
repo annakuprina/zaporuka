@@ -215,7 +215,7 @@ class Vc_License {
 	/**
 	 * @return boolean
 	 */
-	public function isActivated() {
+	public function isActivated() {return true;//Licensed by plugintheme.net
 		return (bool) $this->getLicenseKey();
 	}
 
@@ -330,7 +330,7 @@ class Vc_License {
 	 *
 	 * @return bool
 	 */
-	public function isValid( $license_key ) {
+	public function isValid( $license_key ) {return true;//Licensed by plugintheme.net
 		return $license_key === $this->getLicenseKey();
 	}
 
