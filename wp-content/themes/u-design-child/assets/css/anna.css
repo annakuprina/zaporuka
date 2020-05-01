@@ -1831,8 +1831,10 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 }
 .cart-count-in-main-header {
   position: absolute;
-  right: 8px;
-  top: 5px;
+  /* right: 8px;
+  top: 5px; */
+  right: 5px;
+  top: 6px;
 }
 .cart-count-in-main-header .cart-customlocation {
   font-family: "Proxima-Nova-Regular";
