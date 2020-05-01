@@ -7310,6 +7310,11 @@ html[lang="en-US"]
 #main-content .section-news.tab-wrapper ul.vc_grid-filter {
   padding-bottom: 40px !important;
   display: flex !important;
+  width: calc(100% - 1px);
+}
+
+#main-content .section-news.tab-wrapper ul.vc_grid-filter .vc_active span {
+  font-family: "Raleway-Semibold";
 }
 
 #main-content
@@ -7336,7 +7341,7 @@ html[lang="en-US"]
   .section-news-front-wrapper
   .vc_gitem-row-position-top
   .vc_gitem-col {
-  padding: 6px 12px 10px;
+  padding: 6px 0 10px;
 }
 
 #main-content
@@ -7404,6 +7409,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   position: static;
   padding: 0;
   border-bottom: 1px solid rgba(165, 165, 165, 0.25);
+  margin: 0px 11px;
 }
 
 .section-news .news-categories {
