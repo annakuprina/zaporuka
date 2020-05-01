@@ -8821,6 +8821,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     overflow-y: scroll;
     top: 50%;
     transform: translateY(-50%);
+    max-width: 570px;
   }
 
   #ModalHelpForm.opened .modal-dialog::-webkit-scrollbar {
