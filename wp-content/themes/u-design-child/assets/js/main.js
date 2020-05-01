@@ -5,6 +5,7 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1,
     arrows: false,
     dots: true,
+    waitForAnimate: false,
   });
 
   // Homepage. Parnters slider. Mobile
@@ -13,6 +14,7 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1,
     arrows: false,
     dots: true,
+    waitForAnimate: false,
   });
 
   // About us page. Write about us slider. Mobile
@@ -21,6 +23,7 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1,
     arrows: false,
     dots: true,
+    waitForAnimate: false,
   });
 
   // FRIENDS SLIDER (DESKTOP AND MOBILE)
@@ -29,6 +32,7 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1,
     arrows: false,
     dots: true,
+    waitForAnimate: false,
   });
 
   // PHOTO SLIDER
@@ -37,6 +41,7 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 3,
     arrows: false,
     dots: true,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -69,6 +74,7 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 3,
     arrows: false,
     dots: true,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -97,6 +103,7 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 3,
     arrows: false,
     dots: true,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -155,6 +162,7 @@ jQuery(document).ready(function ($) {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
+    waitForAnimate: false,
   });
 
   // $(window).on("resize", function() {
@@ -168,6 +176,7 @@ jQuery(document).ready(function ($) {
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -187,6 +196,7 @@ jQuery(document).ready(function ($) {
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 950,
@@ -215,6 +225,7 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 600,
@@ -234,6 +245,7 @@ jQuery(document).ready(function ($) {
     slidesToShow: 2,
     slidesToScroll: 2,
     infinite: true,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 600,
@@ -375,6 +387,8 @@ jQuery(document).ready(function ($) {
       arrows: false,
       slidesToShow: 4,
       slidesToScroll: 4,
+      waitForAnimate: false,
+
       responsive: [
         {
           breakpoint: 1200,
@@ -406,6 +420,7 @@ jQuery(document).ready(function ($) {
     slidesToScroll: maxItems,
     arrows: false,
     dots: true,
+    waitForAnimate: false,
   });
 
   /*fix for IOS mobile. Single product page.Ralated products block.
@@ -414,6 +429,7 @@ jQuery(document).ready(function ($) {
   $(".woocommerce.single-product .related ul.products li.product").on(
     "hover",
     function (event) {
+      // console.log("hovered now");
       $(this).toggleClass("related-product-active");
     }
   );
