@@ -4698,7 +4698,7 @@ html[lang="en-US"]
 
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
-  .help-form-subscribe-left {
+  .help-form-subscribe-right {
     position: relative;
     right: -4px;
   }
