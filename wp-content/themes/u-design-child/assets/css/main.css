@@ -5000,6 +5000,14 @@ html[lang="en-US"]
     right: 3px;
   }
 
+  /*media only for Safari 9+ */
+  @supports (-webkit-hyphens: none) {
+    .home .help-form-subscribe-right {
+      position: static;
+      right: 3px;
+    }
+  }
+  
   .home-page-section2-title {
     margin-top: 0;
   }
