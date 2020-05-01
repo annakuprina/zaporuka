@@ -3036,6 +3036,11 @@ input#oferta:checked:after {
   width: calc((100% - 33px) / 2) !important;
 }
 
+.help-form-subscribe-left {
+  position: relative;
+  right: 3px;
+}
+
 .help-form-inner-wrapper .help-form-text {
   padding-bottom: 22px;
 }
@@ -3545,6 +3550,11 @@ html[lang="en-US"]
 
   .help .help-form-submit {
     margin: 10px 0;
+  }
+
+  .help  .help-form-subscribe-right {
+    position: relative;
+    right: 3px;
   }
 }
 /*
@@ -4947,6 +4957,11 @@ html[lang="en-US"]
 
   .home .help-form-subscribe-left {
     margin-bottom: 10px;
+  }
+
+  .home .help-form-subscribe-right {
+    position: relative;
+    right: 3px;
   }
 
   .home-page-section2-title {
@@ -7560,7 +7575,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .section-news.tab-wrapper
   .vc_grid-filter
   li.vc_grid-filter-item:hover::after {
-  top: 59px;
+  top: 58px;
 }
 
 #main-content .section-news .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item {
@@ -8773,6 +8788,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 @media screen and (max-width: 500px) {
   #ModalHelpForm .help-form-subscribe-right {
     padding-left: 0 !important;
+  }
+
+  #ModalHelpForm .help-form-subscribe-right {
+    position: relative;
+    right: 3px;
   }
 }
 
@@ -10317,11 +10337,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .fake-count
   .quantity.quantity-numers
   .quantity-button.quantity-down {
-  top: 0px;
-  left: 0px;
-  width: 8px;
+  top: -11px;
+  left: 1px;
   height: 1px;
-  background: #333;
+  padding: 5px 0;
 }
 
 .woocommerce.single-product

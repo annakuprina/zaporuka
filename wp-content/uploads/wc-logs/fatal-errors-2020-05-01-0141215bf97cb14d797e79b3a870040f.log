@@ -12,3 +12,5 @@
 
 2020-05-01T12:17:16+02:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 241
 
+2020-05-01T15:38:24+02:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 32768 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\AbstractProductGrid.php доступно 147
+
