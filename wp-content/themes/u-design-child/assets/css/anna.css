@@ -739,8 +739,13 @@ footer a.designer-link {
   border-bottom: 1px solid rgba(165, 165, 165, 0.25);
   padding-bottom: 13px;
 }
+
+.section-news .news-categories .vc_gitem-post-category-name {
+  font-family: "Raleway-Light";
+}
+
 .section-news .news-date {
-  font-family: "Proxima-Nova-Regular";
+  font-family: "Proxima-Nova-Light";
   color: #a5a5a5;
   font-size: 14px;
   font-weight: 400;
@@ -782,7 +787,7 @@ footer a.designer-link {
   background: none !important;
   border: none !important;
   color: #e78b48 !important;
-  font-family: "Raleway-Bold";
+  font-family: "Raleway-Semibold";
   font-size: 14px;
 }
 /*media only for Safari 9+ */
@@ -1831,8 +1836,10 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 }
 .cart-count-in-main-header {
   position: absolute;
-  right: 8px;
-  top: 5px;
+  /* right: 8px;
+  top: 5px; */
+  right: 5px;
+  top: 6px;
 }
 .cart-count-in-main-header .cart-customlocation {
   font-family: "Proxima-Nova-Regular";
