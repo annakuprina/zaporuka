@@ -5010,11 +5010,11 @@ html[lang="en-US"]
 
   /*media only for Safari 9+ */
   @supports (-webkit-hyphens: none) {
-    .help-form-subscribe-right {
+    .help-form-subscribe .help-form-subscribe-right {
       position: static;
     }
 
-    .help-form-subscribe-left {
+    .help-form-subscribe .help-form-subscribe-left {
       position: static;
     }
   }
