@@ -408,6 +408,61 @@ add_filter('wc_ukr_shipping_language', function ($lang) {
 
     return 'ua';
 });
+
+add_action('woocommerce_checkout_create_order', 'createOrder_translated_address');
+
+function createOrder_translated_address($order){
+    if ($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_custom_address']) {
+        $order->set_shipping_address_1(sanitize_text_field($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_custom_address']));
+        $order->set_billing_address_1(sanitize_text_field($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_custom_address']));
+        return;
+    }
+    global $wpdb;
+    if (pll_current_language() === 'ru') {
+        $npArea = $wpdb->get_row("SELECT description_ru FROM wc_ukr_shipping_np_areas WHERE ref = '" . esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_area']) . "'", ARRAY_A);
+        if ($npArea) {
+            $order->set_shipping_state($npArea['description_ru']);
+            $order->set_billing_state($npArea['description_ru']);
+            $order->update_meta_data('wc_ukr_shipping_np_area_ref', esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_area']));
+        }
+        $npCity = $wpdb->get_row("SELECT description_ru FROM wc_ukr_shipping_np_cities WHERE ref = '" . esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_city']) . "'", ARRAY_A);
+        if ($npCity) {
+            $order->set_shipping_city($npCity['description_ru']);
+            $order->set_billing_city($npCity['description_ru']);
+            $order->update_meta_data('wc_ukr_shipping_np_city_ref', esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_city']));
+        }
+        $npWarehouse = $wpdb->get_row("SELECT description_ru FROM wc_ukr_shipping_np_warehouses WHERE ref = '" . esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_warehouse']) . "'", ARRAY_A);
+        if ($npWarehouse) {
+            $order->set_shipping_address_1($npWarehouse['description_ru']);
+            $order->set_billing_address_1($npWarehouse['description_ru']);
+            $order->update_meta_data('wc_ukr_shipping_np_warehouse_ref', esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_warehouse']));
+            $StorageService = new StorageService();
+            $StorageService::setValue('wc_ukr_shipping_np_selected_warehouse', esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_warehouse']));
+        }
+    } else{
+        $npArea = $wpdb->get_row("SELECT description FROM wc_ukr_shipping_np_areas WHERE ref = '" . esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_area']) . "'", ARRAY_A);
+        if ($npArea) {
+            $order->set_shipping_state($npArea['description']);
+            $order->set_billing_state($npArea['description']);
+            $order->update_meta_data('wc_ukr_shipping_np_area_ref', esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_area']));
+        }
+        $npCity = $wpdb->get_row("SELECT description FROM wc_ukr_shipping_np_cities WHERE ref = '" . esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_city']) . "'", ARRAY_A);
+        if ($npCity) {
+            $order->set_shipping_city($npCity['description']);
+            $order->set_billing_city($npCity['description']);
+            $order->update_meta_data('wc_ukr_shipping_np_city_ref', esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_city']));
+        }
+        $npWarehouse = $wpdb->get_row("SELECT description FROM wc_ukr_shipping_np_warehouses WHERE ref = '" . esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_warehouse']) . "'", ARRAY_A);
+        if ($npWarehouse) {
+            $order->set_shipping_address_1($npWarehouse['description']);
+            $order->set_billing_address_1($npWarehouse['description']);
+            $order->update_meta_data('wc_ukr_shipping_np_warehouse_ref', esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_warehouse']));
+            $StorageService = new StorageService();
+            $StorageService::setValue('wc_ukr_shipping_np_selected_warehouse', esc_attr($_POST[WC_UKR_SHIPPING_NP_SHIPPING_NAME . '_warehouse']));
+        }
+    }
+}
+
 /* read only for ACF fields for total-collected field*/
 add_filter('acf/load_field/name=total-collected', 'acf_read_only');
 function acf_read_only($field) {
@@ -635,3 +690,5 @@ function remove_redirect_guess_404_permalink( $redirect_url ) {
 }
 
 add_filter( 'redirect_canonical', 'remove_redirect_guess_404_permalink' );
+
+add_filter('vc_grid_get_grid_data_access','__return_true');
