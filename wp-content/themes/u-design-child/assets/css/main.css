@@ -2663,13 +2663,17 @@ and shows hidden orange lines near titles on About us page*/
 
 /*media only for Mozilla */
 @-moz-document url-prefix() {
-.help-form-subscribe input[type="radio"] {
-    position: relative;
-    cursor: pointer;
+  .help-form-subscribe input[type="radio"] {
     visibility: visible;
   }
 }
 
+/*Microsoft Edge 12-18 (all EdgeHTML) Not Chromium*/
+@supports (-ms-ime-align: auto) {
+  .help-form-subscribe input[type="radio"] {
+    visibility: visible;
+  }
+}
 
 .help-form-subscribe input[type="radio"]:before {
   content: "";
@@ -2951,11 +2955,16 @@ and shows hidden orange lines near titles on About us page*/
 /*media only for Mozilla */
 @-moz-document url-prefix() {
   #oferta {
-    margin-right: 12px;
-    margin-left: 2px;
     visibility: visible;
   }
 }
+/*Microsoft Edge 12-18 (all EdgeHTML) Not Chromium*/
+@supports (-ms-ime-align: auto) {
+  #oferta {
+    visibility: visible;
+  }
+}
+
 #oferta:not(:after) {
   opacity: 0;
 }
@@ -3059,6 +3068,13 @@ input#oferta:checked:after {
 .help-form-subscribe-left {
   position: relative;
   right: 3px;
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .help-form-subscribe-left {
+    position: static;
+  }
 }
 
 .help-form-inner-wrapper .help-form-text {
@@ -3572,7 +3588,7 @@ html[lang="en-US"]
     margin: 10px 0;
   }
 
-  .help  .help-form-subscribe-right {
+  .help .help-form-subscribe-right {
     position: relative;
     right: 3px;
   }
