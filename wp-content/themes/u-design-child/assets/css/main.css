@@ -4696,6 +4696,14 @@ html[lang="en-US"]
   padding-left: 10px;
 }
 
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .help-form-subscribe-left {
+    position: relative;
+    right: -4px;
+  }
+}
+
 /*media for home-page-section2*/
 @media screen and (max-width: 1250px) {
   .vc_custom_1579168014403.section2-text {
@@ -5004,10 +5012,13 @@ html[lang="en-US"]
   @supports (-webkit-hyphens: none) {
     .home .help-form-subscribe-right {
       position: static;
-      right: 3px;
+    }
+
+    .help-form-subscribe-left {
+      position: static;
     }
   }
-  
+
   .home-page-section2-title {
     margin-top: 0;
   }
