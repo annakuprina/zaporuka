@@ -2660,6 +2660,17 @@ and shows hidden orange lines near titles on About us page*/
   cursor: pointer;
   visibility: hidden;
 }
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+.help-form-subscribe input[type="radio"] {
+    position: relative;
+    cursor: pointer;
+    visibility: visible;
+  }
+}
+
+
 .help-form-subscribe input[type="radio"]:before {
   content: "";
   position: absolute;
@@ -2935,6 +2946,15 @@ and shows hidden orange lines near titles on About us page*/
   margin-right: 12px;
   margin-left: 2px;
   visibility: hidden;
+}
+
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  #oferta {
+    margin-right: 12px;
+    margin-left: 2px;
+    visibility: visible;
+  }
 }
 #oferta:not(:after) {
   opacity: 0;
