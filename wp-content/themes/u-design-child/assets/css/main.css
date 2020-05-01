@@ -5010,7 +5010,7 @@ html[lang="en-US"]
 
   /*media only for Safari 9+ */
   @supports (-webkit-hyphens: none) {
-    .home .help-form-subscribe-right {
+    .help-form-subscribe-right {
       position: static;
     }
 
