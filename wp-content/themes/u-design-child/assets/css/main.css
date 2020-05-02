@@ -726,8 +726,8 @@ If number of partners is less then 5 - slick is not initialized("project-partner
 }
 
 #help_section_anchore {
-  padding-top: 100px;
-  margin-top: -100px;
+  padding-top: 150px;
+  margin-top: -150px;
 }
 
 /*media only for Safari 9+ */
