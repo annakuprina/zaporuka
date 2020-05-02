@@ -10925,6 +10925,12 @@ ul.products li.product:hover .add_to_cart_button:after {
   .vc_column-inner .help-page-cancel-btn .vc_btn3 {
     padding: 14px 20px 14px 63px;
   }
+  .vc_column-inner .help-page-cancel-btn .vc_btn3 {
+    margin-bottom: 35px;
+  }
+  h2.help-page-cancel-title {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -10934,10 +10940,6 @@ ul.products li.product:hover .add_to_cart_button:after {
 }
 
 @media screen and (max-width: 500px) {
-  h2.help-page-cancel-title {
-    margin-bottom: 20px;
-  }
-
   .vc_column-inner .help-page-cancel-btn .vc_btn3 {
     padding: 12px 20px 14px 22px;
   }
