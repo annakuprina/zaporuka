@@ -10509,7 +10509,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .fake-count
   .quantity.quantity-numers
   .quantity-button.quantity-down.move-right {
-  left: 10px;
+  left: -3px;
 }
 
 .woocommerce.single-product #wrapper-1 div.product form.cart {
