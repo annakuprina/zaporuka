@@ -976,11 +976,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 }
 .one-project-help:hover {
   text-decoration: none;
-  color: #fbaa6f;
-}
-.one-project-help:hover {
-  text-decoration: none;
-  color: #fbaa6f;
+  color: #e78b48;
 }
 
 .one-project-right {
