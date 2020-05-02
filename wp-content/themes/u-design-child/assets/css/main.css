@@ -9585,7 +9585,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*restyle builder Our team item block. Making inner blocks static not absolute.*/
 
 .aboutus_section3 .our_team_section .our-team-hover-wrapper {
-  padding: 63px 30px;
+  padding: 57px 30px;
 }
 
 .aboutus_section3 .our_team_section .team-member-excerpt-hover {
