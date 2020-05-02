@@ -10921,6 +10921,27 @@ ul.products li.product:hover .add_to_cart_button:after {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 1250px) {
+  .vc_column-inner .help-page-cancel-btn .vc_btn3 {
+    padding: 14px 20px 14px 63px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .vc_column-inner .help-page-cancel-btn .vc_btn3 {
+    padding: 14px 20px 14px 43px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h2.help-page-cancel-title {
+    margin-bottom: 20px;
+  }
+
+  .vc_column-inner .help-page-cancel-btn .vc_btn3 {
+    padding: 12px 20px 14px 22px;
+  }
+}
 /*---------------------
   BECOME PARTNER PAGE
 ----------------------*/
