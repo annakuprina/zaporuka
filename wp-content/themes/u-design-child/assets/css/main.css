@@ -953,8 +953,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 }
 
 .one-project-help {
-  /* color: #e78b48; */
-  color: #f39856;
+  color: #e78b48;
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
