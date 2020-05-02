@@ -2736,6 +2736,13 @@ and shows hidden orange lines near titles on About us page*/
   left: 6px;
 }
 
+/* Media only for iOS devices */
+@supports (-webkit-touch-callout: none) {
+  .help_form_wrapper .help-form-subscribe label {
+    bottom: 2px;
+  }
+}
+
 .help-form-inner-wrapper .help-form-cancel-subscription-text a,
 .help_form_wrapper .help-form-inner-wrapper .help-form-text {
   color: rgba(86, 86, 86, 0.8);
