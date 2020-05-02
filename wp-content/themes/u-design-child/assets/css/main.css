@@ -2197,6 +2197,10 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   padding-top: 60px;
 }
 
+.single-projects .single_proj_block4 a {
+  color: #e78b48 !important;
+}
+
 .single-projects .single-proj-help-section {
   padding-top: 0;
 }
