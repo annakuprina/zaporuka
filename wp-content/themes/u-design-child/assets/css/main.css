@@ -2736,11 +2736,9 @@ and shows hidden orange lines near titles on About us page*/
   left: 6px;
 }
 
-/* Media only for iOS devices */
-@supports (-webkit-touch-callout: none) {
-  .help_form_wrapper .help-form-subscribe label {
-    bottom: 2px;
-  }
+/* iosDevice class(ios device is checked in main.js file) */
+.iosDevice .help_form_wrapper .help-form-subscribe label {
+  bottom: 2px;
 }
 
 .help-form-inner-wrapper .help-form-cancel-subscription-text a,
@@ -10557,15 +10555,14 @@ div.product form.cart {
   color: #fff;
   font-size: 10px;
 }
-/*media only for IOS mob */
-@supports (-webkit-touch-callout: none) {
-  #wrapper-1 .cart-customlocation.cart-count {
+
+/* iosDevice class(ios device is checked in main.js file) */
+  .iosDevice #wrapper-1 .cart-customlocation.cart-count {
     top: 7px;
   }
-  .single-product #page-content .single-product-cart-link .cart-count {
+  .iosDevice .single-product #page-content .single-product-cart-link .cart-count {
     top: 3px;
   }
-}
 
 /*media only for Mozilla */
 @-moz-document url-prefix() {

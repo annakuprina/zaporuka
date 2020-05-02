@@ -487,15 +487,6 @@ jQuery(document).ready(function ($) {
   /*One product page. Check value of product number(input field).
   If number = 1 the make minus btn disable(add class).
   If number is > 9, then move minus to the right*/
-
-  // var productsNumber = document.getElementsByTagName("input")[0].value;
-  // if ((productsNumber = 1)) {
-  //   $(".quantity-down").addClass("disable");
-  //   console.log("disable");
-  // } else {
-  //   $(".quantity-down").removeClass("disable");
-  // }
-
   var currentCounterValue = $("#shop-counter").val();
   currentCounterValue == 1
     ? $(".quantity-down").addClass("disable")
@@ -511,4 +502,11 @@ jQuery(document).ready(function ($) {
       ? $(".quantity-down").addClass("disable")
       : $(".quantity-down").removeClass("disable");
   });
+
+  /*DETECT IOS DEVICE*/
+
+  var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+  if (iOS == true) {
+    $("body").addClass("iosDevice");
+  }
 });
