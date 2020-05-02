@@ -496,23 +496,19 @@ jQuery(document).ready(function ($) {
   //   $(".quantity-down").removeClass("disable");
   // }
 
-  // $(".quantity-button").click(function () {
-  //   var productsNumber = document.getElementsByTagName("input")[0].value;
+  var currentCounterValue = $("#shop-counter").val();
+  currentCounterValue == 1
+    ? $(".quantity-down").addClass("disable")
+    : $(".quantity-down").removeClass("disable");
 
-  //   if (productsNumber > 9) {
-  //     $(".quantity-down").addClass("move-right");
-  //     console.log("more then 9");
-  //   } else {
-  //     $(".quantity-down").removeClass("move-right");
-  //     console.log("less then 9");
-  //   }
-
-  //   if ((productsNumber = 1)) {
-  //     $(".quantity-down").addClass("disable");
-  //     console.log("disable");
-  //   } else {
-  //     $(".quantity-down").removeClass("disable");
-  //     console.log("able");
-  //   }
-  // });
+  $("#shop-counter").on("change paste keyup", function () {
+    var currentCounterValue = $(this).val();
+    console.log(currentCounterValue);
+    currentCounterValue > 9
+      ? $(".quantity-down").addClass("move-right")
+      : $(".quantity-down").removeClass("move-right");
+    currentCounterValue == 1
+      ? $(".quantity-down").addClass("disable")
+      : $(".quantity-down").removeClass("disable");
+  });
 });

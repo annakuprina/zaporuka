@@ -10489,10 +10489,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .fake-count
   .quantity.quantity-numers
   .quantity-button.quantity-down {
-  top: -11px;
-  left: 1px;
+  top: -11.5px;
+  left: -9px;
   height: 1px;
   padding: 5px 0;
+  transform: scaleX(1.5);
 }
 
 .woocommerce.single-product
@@ -10500,7 +10501,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   .fake-count
   .quantity.quantity-numers
   .quantity-button.quantity-down.disable {
-  background: #ababab;
+  color: #ababab;
 }
 
 .woocommerce.single-product
