@@ -3,7 +3,6 @@
 # IDEs and editors
 /.idea
 .project
-.gitignore
 .classpath
 .c9/
 *.launch
