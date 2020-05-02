@@ -725,6 +725,11 @@ If number of partners is less then 5 - slick is not initialized("project-partner
   padding: 0 !important;
 }
 
+#help_section_anchore {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
   .proj-timeline-share {
