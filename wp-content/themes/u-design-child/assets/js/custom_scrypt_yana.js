@@ -167,14 +167,19 @@ jQuery(document).ready(function($) {
       var moneyTotalAmount = $(this)
           .find(".project-money-collected-inner")
           .text();
-      var moneyCurrentCollected = $(this)
-          .find(".project-money-quantity-inner")
-          .text();
-      var progressBarTimeline =
-          (moneyCurrentCollected * 100) / moneyTotalAmount;
-      $(this)
-          .find(".progress-done")
-          .width(progressBarTimeline + "%");
+      if( moneyTotalAmount == '' ) {
+        $(this).find($('.singl-project-timeline-custom')).css('display', 'none');
+      } else{
+        var moneyCurrentCollected = $(this)
+            .find(".project-money-quantity-inner")
+            .text();
+        var progressBarTimeline =
+            (moneyCurrentCollected * 100) / moneyTotalAmount;
+        $(this)
+            .find(".progress-done")
+            .width(progressBarTimeline + "%");
+
+      }
     });
     var lang = jQuery(".lang-item.current-lang a")[0].getAttribute("lang");
     var phone_label;
