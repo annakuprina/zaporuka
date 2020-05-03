@@ -11113,4 +11113,6 @@ ul.products li.product:hover .add_to_cart_button:after {
   }
 
   .cancel_subscription_form .help-form-submit {
-    width: 10
+    width: 100%;
+  }
+}
