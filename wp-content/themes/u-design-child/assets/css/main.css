@@ -10557,12 +10557,13 @@ div.product form.cart {
 }
 
 /* iosDevice class(ios device is checked in main.js file) */
-  .iosDevice #wrapper-1 .cart-customlocation.cart-count {
-    top: 7px;
-  }
-  .iosDevice .single-product #page-content .single-product-cart-link .cart-count {
-    top: 3px;
-  }
+.iosDevice #wrapper-1 .cart-customlocation.cart-count {
+  top: 7px;
+}
+.iosDevice .single-product #page-content .single-product-cart-link .cart-count {
+  top: 3px;
+}
+/*end IOSgit*/
 
 /*media only for Mozilla */
 @-moz-document url-prefix() {
