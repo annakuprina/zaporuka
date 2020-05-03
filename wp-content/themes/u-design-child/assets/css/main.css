@@ -10911,6 +10911,13 @@ ul.products li.product:hover .add_to_cart_button:after {
   }
 }
 
+/* OFERTA PAGE*/
+.oferta-wrapper a:active,
+.oferta-wrapper a:hover,
+.oferta-wrapper a:link,
+.oferta-wrapper a:visited {
+  color: #e78b48;
+}
 /*-----------
   HELP PAGE
 ------------*/
