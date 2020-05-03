@@ -2738,7 +2738,7 @@ and shows hidden orange lines near titles on About us page*/
 
 /* iosDevice class(ios device is checked in main.js file) */
 .iosDevice .help_form_wrapper .help-form-subscribe label {
-  bottom: 2px;
+  bottom: -10px !important;
 }
 
 .help-form-inner-wrapper .help-form-cancel-subscription-text a,
@@ -5146,7 +5146,8 @@ html[lang="en-US"]
 
 #main-content .home-page-section3 .wpb_text_column {
   overflow: hidden;
-  padding-bottom: 59px;
+  padding-bottom: 0;
+  /* padding-bottom: 59px; */
 }
 
 #main-content .home-page-section3 .vc_column-inner {
@@ -10560,10 +10561,10 @@ div.product form.cart {
 .iosDevice #wrapper-1 .cart-customlocation.cart-count {
   top: 7px;
 }
-.iosDevice .single-product #page-content .single-product-cart-link .cart-count {
+.iosDevice.single-product #page-content .single-product-cart-link .cart-count {
   top: 3px;
 }
-/*end IOSgit*/
+/*end IOS*/
 
 /*media only for Mozilla */
 @-moz-document url-prefix() {
