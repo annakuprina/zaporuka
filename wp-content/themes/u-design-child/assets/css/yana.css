@@ -1452,8 +1452,8 @@ li.one-tab-link:hover {
 }
 @media only screen and (max-width: 768px){
   .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product{
-      width: 100%;
-    margin: 0 40px 0 0;
+      width: 100%!important;
+      margin: 0 40px 0 0!important;
   }
 }
 
