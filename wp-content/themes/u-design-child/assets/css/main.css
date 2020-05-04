@@ -5646,6 +5646,13 @@ html[lang="en-US"]
   padding-left: 40px;
 }
 
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .home-page-section6 .other-projects-row .singl-project-link-wrapper {
+    left: 1px;
+  }
+}
+
 .home-page-section6
   .other-projects-row
   .one-project-progress-wrapper
@@ -9674,6 +9681,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 .our_team_mob {
   display: none;
   overflow: hidden;
+}
+
+/*block with orange rectangles*/
+.aboutus_section2 .before_rectangle_block {
+  margin-left: 2px;
 }
 
 .our_team_desk {
