@@ -6946,6 +6946,7 @@ html[lang="en-US"]
     font-size: 20px;
   }
 }
+
 @media screen and (max-width: 500px) {
   .projects-section .one-project-info-text {
     font-size: 16px;
@@ -6953,7 +6954,6 @@ html[lang="en-US"]
 
   .projects-section .one-project-title {
     font-size: 13px;
-
   }
 
   .projects-section .one-project-help span {
@@ -6975,6 +6975,7 @@ html[lang="en-US"]
     padding: 21px 0 10px;
   }
 }
+
 @media screen and (max-width: 400px) {
   #wrapper-1 .project_banner_wrapper_section1 {
     background-position: 34% center !important;
