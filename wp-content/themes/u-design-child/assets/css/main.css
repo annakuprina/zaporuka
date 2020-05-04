@@ -70,6 +70,10 @@
     url("../fonts/Raleway-Bold.otf") format("opentype");
 }
 
+.vc_custom_heading a:hover {
+  opacity: 1 !important;
+}
+
 #main-content {
   width: 100%;
 }
@@ -1815,7 +1819,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 
 .one-project-banner .one-project-help span {
   margin-right: 0;
-  font-family: "Raleway-Bold";
+  font-family: "Raleway-Semibold";
   letter-spacing: 0;
   font-size: 14px;
   position: relative;
@@ -8590,6 +8594,13 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   top: 53px;
 }
 
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .category-filter-item::after {
+    top: 54px;
+  }
+}
+
 #main-content
   .woocommerce-custom-product-filter
   .woocommerce-custom-price-filter
@@ -9418,6 +9429,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   > :last-child {
   margin-left: 0;
   margin-right: 0;
+}
+
+.contact-second-text-block .contact_need_help {
 }
 
 @media screen and (max-width: 1400px) {
@@ -10812,8 +10826,10 @@ div.product form.cart {
 #main-content li.product .woocommerce-Price-amount {
   color: #de7b33;
 }
+
 #main-content li.product:hover .shop-page-price-title {
   background: transparent;
+  padding: 34px 30px;
 }
 
 .single-product #wrapper-1 .single-product-cart-link {

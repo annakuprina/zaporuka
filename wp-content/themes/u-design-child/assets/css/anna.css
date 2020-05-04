@@ -1634,7 +1634,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   width: 100%;
   text-align: left;
   padding-top: 5px;
-  padding-bottom: 40px;
+  padding-bottom: 45px;
 }
 .shop-custom-wrapper .product:hover .woocommerce-Price-amount {
   color: #ffffff;
