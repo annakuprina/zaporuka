@@ -934,7 +934,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 }
 
 .one-project-title {
-  color: #a5a5a5ab;
+  color: #a5a5a5;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.6px;
@@ -963,9 +963,16 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   display: inline-block;
   margin-right: 6px;
   transition: 0.4s ease;
-  letter-spacing: 0.5px;
   font-size: 13.6px;
-  transform: scale(1, 0.93);
+  font-family: "Raleway-Semibold";
+}
+
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .one-project-help span {
+    letter-spacing: 0;
+    transform: none;
+  }
 }
 
 .one-project-help span::after {
@@ -989,6 +996,11 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 
 .one-project-progress {
   margin-bottom: 33px;
+}
+
+.one-project-progress .one-project-progress-bottom {
+  position: relative;
+  top: 1px;
 }
 
 .one-project-progress-top {
@@ -1064,7 +1076,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   font-family: "Proxima-Nova-Regular";
   transform: scale(1, 0.95);
   position: relative;
-  left: -2px;
+  left: 0;
 }
 
 .one-project-info {
@@ -1149,8 +1161,25 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   }
 }
 
-.other-projects-single-project .singl-project-timeline-custom {
+.single-proj-other-posts-section
+  .other-projects-single-project
+  .singl-project-timeline-custom {
   width: 100%;
+  padding: 0;
+}
+
+.single-proj-other-posts-section
+  .singl-project-bottom-part
+  .vc_row
+  .vc_gitem-col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.single-proj-other-posts-section
+  .other-projects-row
+  .one-project-progress-wrapper {
+  padding: 11px 40px;
 }
 
 .single-proj-other-posts-section .vc_grid-item {
@@ -1193,11 +1222,17 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   bottom: 24px;
 }
 
+.single-proj-other-posts-section
+  .other-projects-single-project
+  .singl-project-link-wrapper {
+  left: 40px;
+}
+
 .single-projects
   .other-projects-single-project
   .slick-slide
   .singl-project-bottom-part {
-  padding: 10px 32px 0;
+  padding: 10px 40px 0;
   min-height: 322px;
 }
 @media screen and (max-width: 1300px) {
@@ -1255,13 +1290,14 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   .single-proj-other-posts-section
     .other-projects-row
     .one-project-progress-wrapper {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 
-  .single-proj-other-posts-section
-    .other-projects-row
+  .single-projects
+    .other-projects-single-project
+    .slick-slide
     .singl-project-bottom-part {
-    padding: 10px 10px 0;
+    padding: 10px 20px 0;
   }
 
   .single-proj-other-posts-section
@@ -1274,7 +1310,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     .single-proj-other-posts-section
     .other-projects-row
     .singl-project-link-wrapper {
-    left: 32px;
+    left: 21px;
   }
 }
 
@@ -1445,10 +1481,20 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     .single-proj-other-posts-section
     .other-projects-row
     .singl-project-link-wrapper {
-    left: 10px;
+    left: 21px;
+  }
+
+  .single-proj-other-posts-section
+    .other-projects-row
+    .singl-project-bottom-part {
+    padding: 10px 20px 0 20px;
   }
 }
 @media screen and (max-width: 500px) {
+  .single-proj-other-posts-section .one-project-progress {
+    width: 100%;
+  }
+
   .one-project {
     position: relative;
   }
@@ -2158,7 +2204,7 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
 }
 
 .single-projects .other-projects-single-project .slick-slide {
-  padding-right: 37px;
+  padding-right: 37px !important;
 }
 
 .single-projects
@@ -2403,15 +2449,17 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
     margin-bottom: 40px;
   }
 
-  .single-proj-other-posts-section
-    .other-projects-row
-    .singl-project-bottom-part {
-    padding: 6px 10px 0;
-  }
   .singl-project-bottom-part
     .vc_gitem-row-position-top:nth-child(2)
     .vc_gitem-col {
     padding: 21px 10px 10px;
+  }
+
+  .single-proj-other-posts-section
+    .singl-project-bottom-part
+    .vc_gitem-row-position-top:nth-child(2)
+    .vc_gitem-col {
+    padding: 21px 0 10px;
   }
 
   .singl-project-bottom-part .singl-project-title {
@@ -5439,7 +5487,7 @@ html[lang="en-US"]
 }
 
 #main-content .vc_custom_1579173195839 .one-project-progress {
-  width: calc(100% - 40px);
+  width: 100%;
 }
 
 .home-page-section5 .one-project-left {
@@ -5473,7 +5521,7 @@ html[lang="en-US"]
 }
 
 .home-page-section6 .other-projects-row .one-project-progress-wrapper {
-  padding: 0 30px;
+  padding: 10px 40px 13px 41px;
 }
 
 .home-page-section6 .other-projects-row .singl-project-top-part {
@@ -5537,18 +5585,46 @@ html[lang="en-US"]
 
 .home-page-section6 .one-project-progress-wrapper .project-money-involved {
   position: relative;
-  bottom: -4px;
+  bottom: -3px;
 }
 
 .home-page-section6 .other-projects-row .singl-project-bottom-part {
-  padding: 10px 28px 0;
+  padding: 10px 39px 0;
   min-height: 324px;
 }
-.home-page-section6 .vc_gitem-row-position-top:nth-child(1) .vc_gitem-col {
-  padding: 10px 10px 12px;
+
+.home-page-section6
+  .other-projects-row
+  .singl-project-bottom-part
+  .vc_gitem-row-position-top:nth-child(1)
+  .vc_gitem-col {
+  padding: 10px 0 11px;
 }
+
+.home
+  .other-projects-row
+  .singl-project-top-part
+  .vc_gitem-row-position-top
+  .singl-project-timeline-custom {
+  padding: 0;
+}
+
+.home
+  .home-page-section6
+  .vc_grid.vc_row.vc_grid-gutter-35px
+  .vc_pageable-slide-wrapper {
+  margin-right: -40px;
+}
+
+.home .home-page-section6 .vc_grid.vc_row.vc_grid-gutter-35px .vc_grid-item {
+  padding-right: 40px;
+}
+
+/* .home-page-section6 .vc_gitem-row-position-top:nth-child(1) .vc_gitem-col {
+  padding: 10px 10px 12px;
+} */
 .home-page-section6 .vc_gitem-row-position-top:nth-child(2) .vc_gitem-col {
-  padding: 20px 10px 12px;
+  padding: 20px 0 12px;
 }
 
 .home-page-section6 .other-projects-row .vc_gitem-post-data-source-post_title {
@@ -5556,8 +5632,9 @@ html[lang="en-US"]
 }
 
 .home-page-section6 .other-projects-row .singl-project-link-wrapper {
-  left: 33px;
+  left: 0;
   bottom: 24px;
+  padding-left: 40px;
 }
 
 .home-page-section6
@@ -5570,11 +5647,14 @@ html[lang="en-US"]
 .home-page-section6 .other-projects-row .one-project-progress-top {
   display: flex;
   margin-bottom: 15px;
+  position: relative;
+  top: -1px;
 }
 
 .home-page-section6 .vc_pageable-load-more-btn a {
   transition: 0.4s ease;
 }
+
 .home-page-section6 .vc_pageable-load-more-btn a:hover {
   padding-left: 40px;
 }
@@ -5588,8 +5668,11 @@ html[lang="en-US"]
   }
 
   .home-page-section6 .vc_gitem_row .vc_gitem-col {
-    padding: 10px 20px;
     width: 100%;
+  }
+
+  .home-page-section6 .other-projects-row .one-project-progress-wrapper {
+    padding: 10px 20px 13px 21px;
   }
 
   .home-page-section6 .other-projects-row .singl-project-bottom-part {
@@ -5724,12 +5807,13 @@ html[lang="en-US"]
   width: calc((100% - 80px) / 3);
   box-sizing: content-box;
   padding-right: 0;
-  margin-right: 40px;
+  padding-right: 40px;
 }
+
 .home-page-section7.section-news
   .vc_grid.vc_row.vc_grid-gutter-35px
   .vc_grid-item:nth-child(3n) {
-  margin-right: 0;
+  padding-right: 0;
 }
 
 .home-page-section7 .section-news-desk {
@@ -5743,6 +5827,13 @@ html[lang="en-US"]
 .home-page-section7 .vc_pageable-load-more-btn a {
   transition: 0.4s ease;
 }
+..home-page-section7 {
+}
+
+.home-page-section7 .vc_grid.vc_row.vc_grid-gutter-35px {
+  overflow: hidden;
+}
+
 .home-page-section7 .vc_pageable-load-more-btn a:hover {
   padding-left: 40px;
 }
@@ -5757,7 +5848,9 @@ html[lang="en-US"]
   right: 0;
   background: rgba(0, 0, 0, 0.3);
 }
-
+.strategic-partner-text a {
+  color: #e78b48 !important;
+}
 #main-content
   .home-page-section7.section-news
   .vc_grid.vc_row.vc_grid-gutter-35px
@@ -5778,8 +5871,22 @@ html[lang="en-US"]
   #main-content .section-news .vc_grid .vc_pageable-load-more-btn {
     margin-bottom: 20px;
   }
+
+  /*front part of news item*/
+  #main-content .section-news .section-news-front-wrapper {
+    padding: 20px 20px 30px 20px !important;
+  }
+
+  /*hovered part of news item*/
+  #main-content .section-news .section-news-hover-wrapper {
+    padding: 20px 20px 30px 20px !important;
+  }
+
+  #main-content .section-news .section-news-hover-wrapper .vc_gitem-col {
+    padding: 10px 0;
+  }
 }
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   #main-content
     .home-page-section7.section-news
     .vc_grid.vc_row.vc_grid-gutter-35px
@@ -5799,12 +5906,14 @@ html[lang="en-US"]
     .vc_grid-item:nth-child(2n) {
     margin-right: 0;
   }
-}
+} */
+
 @media screen and (max-width: 900px) {
   .home-page-section7 .vc_pageable-load-more-btn a:hover {
     padding-left: 20px;
   }
 }
+
 @media screen and (max-width: 768px) {
   #main-content .section-news .section-news-desk {
     display: none;
@@ -5823,29 +5932,15 @@ html[lang="en-US"]
     margin-top: 0;
   }
 }
-@media screen and (max-width: 600px) {
-  #main-content
-    .home-page-section7.section-news
-    .vc_grid.vc_row.vc_grid-gutter-35px
-    .vc_grid-item:nth-child(3n) {
-    margin-right: 0;
-  }
-  #main-content
-    .home-page-section7.section-news
-    .vc_grid.vc_row.vc_grid-gutter-35px
-    .vc_grid-item:nth-child(2n) {
-    margin-right: 0;
+
+@media screen and (max-width: 500px) {
+  .home-page-section6
+    .other-projects-row
+    .one-project-progress-wrapper
+    .one-project-progress {
+    width: 100%;
   }
 
-  #main-content
-    .home-page-section7.section-news
-    .vc_grid.vc_row.vc_grid-gutter-35px
-    .vc_grid-item {
-    width: 100%;
-    margin: auto;
-  }
-}
-@media screen and (max-width: 500px) {
   .home-page-section7.section-news > .vc_column_container > .vc_column-inner {
     padding-left: 0;
     padding-right: 0;
@@ -5966,6 +6061,11 @@ html[lang="en-US"]
   .home-page-section8-inner .strategic-partner-text {
     padding-right: 20px !important;
     padding-left: 20px !important;
+  }
+
+  .home .home-page-section7 .vc_pageable-load-more-btn .vc_grid-btn-load_more {
+    margin-top: 20px;
+    margin-bottom: 0px;
   }
 }
 /*end home page section7*/
@@ -6140,10 +6240,15 @@ html[lang="en-US"]
   .friends {
     padding: 40px 20px 75px;
   }
-  .home-page-section8-inner .strategic-partner-text,
   .home-page-section8-inner .strategic-partner-title,
   .home-page-section8-inner .wpb_single_image {
     padding-top: 40px !important;
+    padding-right: 20px;
+    padding-left: 20px !important;
+  }
+
+  .home-page-section8-inner .strategic-partner-text {
+    padding-top: 0 !important;
     padding-right: 20px;
     padding-left: 20px !important;
   }
@@ -6499,12 +6604,30 @@ html[lang="en-US"]
 .section-projects .one-project {
   max-height: 394px;
 }
-
+/*only for Projects page(projects-section class).project item*/
 #main-content
   .projects-section
   .other-projects-row
   .one-project-progress-wrapper {
   padding: 0 41px;
+}
+
+.projects-section .singl-project-bottom-part .vc_gitem_row .vc_gitem-col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*Projects page. project item. help btn*/
+.projects-section .other-projects-row .singl-project-link-wrapper {
+  padding: 0 0 10px 2px;
+  bottom: 24px;
+  left: 40px;
+}
+
+.projects-section .other-projects-row .singl-project-bottom-part {
+  padding: 11px 39px 0;
+  min-height: 324px;
+  height: calc(100% - 256px);
 }
 
 #main-content .projects-section .singl-project-timeline-custom {
@@ -6523,12 +6646,6 @@ html[lang="en-US"]
 #main-content .projects-section .vc_grid-item .project-money-involved {
   position: relative;
   top: 5px;
-}
-
-.projects-section .other-projects-row .singl-project-bottom-part {
-  padding: 11px 28px 0;
-  min-height: 324px;
-  height: calc(100% - 256px);
 }
 
 .projects-section
@@ -6557,12 +6674,6 @@ html[lang="en-US"]
 
 .projects-section .other-projects-row .project-text-block {
   margin-bottom: 6px !important;
-}
-
-.projects-section .other-projects-row .singl-project-link-wrapper {
-  padding: 0 0 10px 2px;
-  bottom: 24px;
-  left: 38px;
 }
 
 .projects-section .vc_tta-panel .vc_tta-panel-heading {
@@ -6601,6 +6712,11 @@ html[lang="en-US"]
 
 .projects-section .other-projects-row .vc_grid-item-mini {
   height: 100%;
+}
+
+.single-proj-other-posts-section .other-projects-row .project-money-involved {
+  position: relative;
+  bottom: -5px;
 }
 @media screen and (max-width: 1400px) {
   #main-content .project_banner_section1_right .vc_column-inner {
@@ -6691,7 +6807,7 @@ html[lang="en-US"]
     .projects-section
     .other-projects-row
     .one-project-progress-wrapper {
-    padding: 0 15px;
+    padding: 0 20px;
   }
 
   .projects-section .other-projects-row .singl-project-bottom-part {
@@ -6716,6 +6832,17 @@ html[lang="en-US"]
 
   .projects-section .other-projects-row .singl-project-link-wrapper {
     bottom: 0;
+  }
+
+  .home .home-page-section6 .one-project-progress-top,
+  .projects-section .other-projects-row .one-project-progress-top,
+  .single-proj-other-posts-section .one-project-progress-top {
+    line-height: 20px !important;
+    margin-top: 10px !important;
+  }
+
+  .projects-section .other-projects-row .one-project-progress {
+    width: 100%;
   }
 }
 @media screen and (max-width: 800px) {
@@ -6820,9 +6947,27 @@ html[lang="en-US"]
   }
 }
 @media screen and (max-width: 500px) {
-  .one-project-progress {
-    width: 100%;
+  .projects-section .one-project-info-text {
+    font-size: 16px;
   }
+
+  .projects-section .one-project-title {
+    font-size: 13px;
+
+  }
+
+  .projects-section .one-project-help span {
+    font-size: 14px;
+  }
+
+  .one-project-progress {
+    width: calc(100% - 40px);
+  }
+
+  #main-content .vc_custom_1579173195839 .one-project-progress {
+    width: calc(100% - 40px);
+  }
+
   .projects-section
     .singl-project-bottom-part
     .vc_gitem-row-position-top:nth-child(2)
@@ -7434,7 +7579,7 @@ html[lang="en-US"]
   .section-news-front-wrapper
   .vc_gitem-row-position-middle
   .vc_gitem-col {
-  padding: 30px 12px 10px;
+  padding: 30px 0 10px;
 }
 
 #main-content
@@ -7442,7 +7587,7 @@ html[lang="en-US"]
   .section-news-front-wrapper
   .vc_gitem-row-position-bottom
   .vc_gitem-col {
-  padding: 2px 12px 10px;
+  padding: 2px 0 10px;
 }
 
 #main-content .section-news .news-link a {
@@ -7494,7 +7639,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   position: static;
   padding: 0;
   border-bottom: 1px solid rgba(165, 165, 165, 0.25);
-  margin: 0px 11px;
+  margin: 0 0;
 }
 
 .section-news .news-categories {
@@ -7662,9 +7807,23 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     margin-bottom: 0;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
+  #main-content .section-news .vc_pageable-slide-wrapper {
+    margin-right: -40px;
+    width: initial;
+  }
+
+  /*homepage news item*/
   #main-content
-    .section-news
+    .home-page-section7.section-news
+    .vc_grid.vc_row.vc_grid-gutter-35px
+    .vc_grid-item {
+    width: calc(50% - 1px);
+  }
+
+  /*news page news item*/
+  #main-content
+    div.section-news
     .vc_grid.vc_row.vc_grid-gutter-35px
     .vc_grid-item {
     width: calc(50% - 1px);
@@ -7673,6 +7832,18 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content .section-news .section-news-front-wrapper,
   #main-content .section-news .section-news-hover-wrapper {
     padding: 15px 20px 20px !important;
+  }
+
+  .home-page-section7.section-news
+    .vc_grid.vc_row.vc_grid-gutter-35px
+    .vc_grid-item {
+    box-sizing: border-box;
+  }
+
+  .home-page-section7.section-news
+    .vc_grid.vc_row.vc_grid-gutter-35px
+    .vc_grid-item:nth-child(3n) {
+    padding-right: 40px;
   }
 
   #main-content .section-news.tab-wrapper ul.vc_grid-filter {
@@ -7720,19 +7891,51 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 }
 @media screen and (max-width: 600px) {
+  /*news page news item*/
   #main-content
-    .section-news--news-page
+    div.section-news
+    div.vc_grid.vc_row.vc_grid-gutter-35px
+    .vc_grid-item {
+    width: 100%;
+  }
+
+  /*homepage news item*/
+  #main-content
+    .home-page-section7.section-news
     .vc_grid.vc_row.vc_grid-gutter-35px
     .vc_grid-item {
     width: 100%;
   }
+
   #main-content
     .section-news--news-page
     .vc_grid.vc_row.vc_grid-gutter-35px
     .vc_grid-item:last-child {
     padding-bottom: 0;
   }
+
+  #main-content
+    .home-page-section7.section-news
+    .vc_grid.vc_row.vc_grid-gutter-35px
+    .vc_grid-item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  #main-content
+    .home-page-section7.section-news
+    .vc_grid.vc_row.vc_grid-gutter-35px
+    .vc_grid-item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  #main-content
+    .home-page-section7.section-news
+    .vc_grid
+    .vc_pageable-load-more-btn {
+    margin-top: 0;
+  }
 }
+
 /*end of news*/
 
 /*-------------------------------------
