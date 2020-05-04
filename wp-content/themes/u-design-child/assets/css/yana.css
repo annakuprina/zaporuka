@@ -1137,8 +1137,10 @@ li.one-tab-link:hover {
   padding-bottom: 40px;
 }
 .report_download {
-  font-family: "Raleway-Bold";
+  font-family: "Raleway-Semibold";
   font-size: 14px;
+  position: relative;
+  left: 1px;
 }
 
 /*media only for Safari 9+ */
