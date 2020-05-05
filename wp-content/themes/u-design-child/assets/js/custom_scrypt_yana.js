@@ -162,11 +162,22 @@ jQuery(document).ready(function($) {
     adaptiveHeight: true
   });
 
+  /*Formatting prices. Split by 3 numbers*/
+  function formatNumber (num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ")
+  }
+
   $(window).bind( 'grid:items:added', function(){
     $(".other-projects-row .vc_grid-item").each(function() {
       var moneyTotalAmount = $(this)
           .find(".project-money-collected-inner")
           .text();
+      console.log(moneyTotalAmount);
+      var moneyTotalAmountFormatted = formatNumber(moneyTotalAmount);
+      console.log(moneyTotalAmountFormatted);
+
+      $(this).find(".project-money-collected-inner").text(moneyTotalAmountFormatted);
+
       if( moneyTotalAmount == '' ) {
         $(this).find($('.singl-project-timeline-custom')).css('display', 'none');
       } else{
@@ -180,6 +191,9 @@ jQuery(document).ready(function($) {
             .width(progressBarTimeline + "%");
 
       }
+      
+
+
     });
     var lang = jQuery(".lang-item.current-lang a")[0].getAttribute("lang");
     var phone_label;

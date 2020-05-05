@@ -2810,7 +2810,9 @@ and shows hidden orange lines near titles on About us page*/
 }
 
 .iosDevice .help-form-subscribe input[type="radio"] {
-  top: 13px;
+  position: relative !important;
+
+  top: 13px !important;
 }
 /*end ios*/
 
