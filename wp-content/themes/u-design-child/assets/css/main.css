@@ -2804,6 +2804,10 @@ and shows hidden orange lines near titles on About us page*/
   left: -20px !important;
 }
 
+.iosDevice .help-form-subscribe-right {
+  position: static;
+}
+
 .help-form-inner-wrapper .help-form-cancel-subscription-text a,
 .help_form_wrapper .help-form-inner-wrapper .help-form-text {
   color: rgba(86, 86, 86, 0.8);
