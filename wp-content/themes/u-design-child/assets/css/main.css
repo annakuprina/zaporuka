@@ -2799,7 +2799,7 @@ and shows hidden orange lines near titles on About us page*/
 
 /* iosDevice class(ios device is checked in main.js file) */
 .iosDevice .help_form_wrapper .help-form-subscribe label {
-  position: relative;
+  position: relative !important;
   bottom: 23px !important;
 }
 .iosDevice .help-form-subscribe-left,
