@@ -10149,6 +10149,21 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-top: 60px;
 }
 
+/*media only for Safari 9+ */
+@supports (-webkit-hyphens: none) {
+  .about_section4 .other-projects-row .one-project-progress-wrapper {
+    padding: 0 10px;
+  }
+
+  .about_section4 .other-projects-row .singl-project-bottom-part {
+    padding: 10px 10px 0;
+  }
+
+  .about_section4 .other-projects-row .singl-project-link-wrapper {
+    left: 10px;
+  }
+}
+
 /* about page media */
 @media screen and (max-width: 1300px) {
   #main-content
