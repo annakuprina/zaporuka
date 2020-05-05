@@ -2800,6 +2800,8 @@ and shows hidden orange lines near titles on About us page*/
 /* iosDevice class(ios device is checked in main.js file) */
 .iosDevice .help_form_wrapper .help-form-subscribe label {
   bottom: -10px !important;
+  position: relative;
+  left: -20px !important;
 }
 
 .help-form-inner-wrapper .help-form-cancel-subscription-text a,
@@ -4727,11 +4729,11 @@ html[lang="en-US"]
   .section2-columns
   .section2-single-column:hover {
   background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
-  padding: 109px 53px 78px 76px;
+  padding: 109px 60px 78px 60px;
 }
 
 #main-content .home-page-section2 .section2-columns .section2-single-column {
-  padding: 135px 53px 52px 76px;
+  padding: 135px 60px 52px 60px;
   height: 100%;
 }
 
@@ -4807,13 +4809,13 @@ html[lang="en-US"]
   }
 
   #main-content .home-page-section2 .section2-columns .section2-single-column {
-    padding: 112px 59px 72px 55px;
+    padding: 112px 60px 72px 60px;
   }
   #main-content
     .home-page-section2
     .section2-columns
     .section2-single-column:hover {
-    padding: 94px 59px 90px 55px;
+    padding: 94px 60px 90px 60px;
   }
 
   #main-content
@@ -8596,7 +8598,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 /*media only for Mozilla */
 @-moz-document url-prefix() {
-  .category-filter-item::after {
+  #main-content
+    .shop-custom-wrapper
+    .woocommerce-custom-category-filter
+    li.category-filter-item::after {
     top: 54px;
   }
 }
