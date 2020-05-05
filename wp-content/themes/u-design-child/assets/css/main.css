@@ -10228,6 +10228,18 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 }
 @media screen and (max-width: 1024px) {
+  .about_section4 .other-projects-row .project-money-quantity {
+    font-size: 15px;
+  }
+
+  .about_section4 .other-projects-row .project-money-collected {
+    font-size: 15px;
+  }
+
+  .about_section4 .other-projects-row .one-project-progress-wrapper {
+    font-size: 15px;
+  }
+
   #wrapper-1 .aboutus_section2 .block_excerpt_container {
     padding: 25px 0 0 20px;
   }
@@ -10523,15 +10535,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     width: 100%;
   }
 
-  .about_section4 .other-projects-row .project-money-quantity {
-    font-size: 15px;
-  }
-  .about_section4 .other-projects-row .project-money-collected {
-    font-size: 15px;
-  }
-  .about_section4 .other-projects-row .one-project-progress-wrapper {
-    font-size: 15px;
-  }
   .aboutus_section2 > .wpb_column > .vc_column-inner > .wpb_wrapper {
     padding: 0 20px;
   }
