@@ -8953,14 +8953,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     margin-left: 5px;
   }
 
-  #ModalHelpForm .help-form-subscribe-left,
-  #ModalHelpForm .help-form-subscribe-right {
-    width: 50% !important;
-  }
-
-  #ModalHelpForm .help-form-subscribe-right {
+  /* #ModalHelpForm .help-form-subscribe-right {
     padding-left: 16px !important;
-  }
+  } */
   #ModalHelpForm input#oferta:before {
     top: 5px;
   }
@@ -9002,10 +8997,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     right: calc(50% - 44px);
   }
 
-  #ModalHelpForm .help-form-subscribe-left,
+  /* #ModalHelpForm .help-form-subscribe-left,
   #ModalHelpForm .help-form-subscribe-right {
     width: 100% !important;
-  }
+  } */
 }
 
 /* @media screen and (max-width: 900px) {
