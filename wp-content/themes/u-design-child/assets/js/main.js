@@ -508,17 +508,4 @@ jQuery(document).ready(function ($) {
   if (iOS == true) {
     $("body").addClass("iosDevice");
   }
-
-  /*Formatting prices. Split by 3 numbers*/
-  // function formatNumber (num) {
-  //   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ")
-  // }
-
-  // $(".project-money-quantity-inner,.left-to-collect-amount,.project-money-collected-inner").each(function() {
-  //   var currentNumber =$(this).text();/*get current not formated number*/
-  //   var formattedNumber = formatNumber (currentNumber);/*format the number(split by 3 numbers)*/ 
-  //   $(this).text(formattedNumber);/*return formatted number to block*/
-  // })
-
-
 });
