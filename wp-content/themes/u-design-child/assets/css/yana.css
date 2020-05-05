@@ -1096,13 +1096,13 @@ li.one-tab-link:hover {
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
   .h2-header-without-line {
-    font-family: "Raleway-Semibold";
+    font-family: "Raleway-Semibold" !important;
   }
 }
 /*media only for Mozilla */
 @-moz-document url-prefix() {
   .h2-header-without-line {
-    font-family: "Raleway-Semibold";
+    font-family: "Raleway-Semibold" !important;
   }
 }
 .report_title {
