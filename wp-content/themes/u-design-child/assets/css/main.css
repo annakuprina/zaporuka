@@ -11063,18 +11063,18 @@ ul.products li.product:hover .add_to_cart_button:after {
     .add_to_cart_button {
     margin-top: 15px;
   }
-  .woocommerce.single-product
+  /* .woocommerce.single-product
     #wrapper-1
     .related
     ul.products
     li.product:hover
     .price {
     padding-bottom: 20px;
-  }
+  } */
 }
 @media screen and (max-width: 1024px) {
   .woocommerce.single-product #wrapper-1 .related .shop-page-price-title {
-    padding: 15px;
+    padding: 33px 15px;
   }
 }
 @media screen and (max-width: 950px) {
