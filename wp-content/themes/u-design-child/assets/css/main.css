@@ -10778,7 +10778,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   SINGLE PRODUCT PAGE
 ----------------------*/
 /*related-product-desktop class adds to product block after js check in main.js file*/
-.woocommerce .product-desktop.product .add_to_cart_button {
+body.woocommerce .product-desktop.product .add_to_cart_button {
   display: block !important;
   color: #de7b33 !important;
   font-family: "Raleway-Bold";
@@ -10786,8 +10786,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-top: 15px !important;
 }
 
-.woocommerce .product-desktop .add_to_cart_button:after,
-.woocommerce .product-desktop:hover .add_to_cart_button:after {
+body.woocommerce .product-desktop .add_to_cart_button:after,
+body.woocommerce .product-desktop:hover .add_to_cart_button:after {
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg) !important;
 }
 
