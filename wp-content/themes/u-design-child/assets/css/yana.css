@@ -1102,7 +1102,7 @@ li.one-tab-link:hover {
 /*media only for Mozilla */
 @-moz-document url-prefix() {
   .h2-header-without-line {
-    font-family: "Raleway-Semibold" !important;
+    font-family: "Raleway-Semibold";
   }
 }
 .report_title {
@@ -1455,11 +1455,16 @@ li.one-tab-link:hover {
   margin-bottom: 10px;
 }
 
-/*@media only screen and (max-width: 768px){*/
-/*  .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product{*/
-/*      width: 100%!important;*/
-/*      margin: 0 40px 0 0!important;*/
-/*  }*/
-/*}*/
-
+/* @media only screen and (max-width: 768px) {
+  .woocommerce ul.products[class*="columns-"] li.product,
+  .woocommerce-page ul.products[class*="columns-"] li.product {
+    width: 100% !important;
+    margin: 0 40px 0 0 !important;
+  }
+} */
+@media only screen and (max-width: 768px) {
+  .woocommerce #main-content .shop-custom-wrapper ul.products {
+    width: 100% !important;
+  }
+}
 
