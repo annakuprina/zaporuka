@@ -11005,7 +11005,7 @@ body.product ul.products {
   /* margin-top: 15px !important; */
 }
 
-ul.products li.product:hover .add_to_cart_button:after {
+ul.products li.product.product-desktop:hover .add_to_cart_button:after {
   content: url("/wp-content/themes/u-design-child/img/arrow-home.svg") !important;
   padding-left: 10px !important;
 }
