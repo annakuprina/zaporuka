@@ -1,0 +1,16 @@
+2020-05-01T12:12:36+02:00 CRITICAL Out of memory (allocated 56623104) (tried to allocate 4096 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\advanced-custom-fields\includes\fields\class-acf-field-select.php доступно 429
+
+2020-05-01T12:12:36+02:00 CRITICAL Out of memory (allocated 56623104) (tried to allocate 32768 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\advanced-custom-fields\includes\fields\class-acf-field-select.php доступно 1
+
+2020-05-01T12:15:12+02:00 CRITICAL Out of memory (allocated 18874368) (tried to allocate 32768 bytes) у C:\OSPanel\domains\zaporuka\wp-content\themes\u-design\udesign_options_page.php доступно 1793
+
+2020-05-01T12:16:34+02:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 241
+
+2020-05-01T12:16:42+02:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 241
+
+2020-05-01T12:17:16+02:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 241
+
+2020-05-01T12:17:16+02:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 114688 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\i18n\states.php доступно 241
+
+2020-05-01T15:38:24+02:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 32768 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\BlockTypes\AbstractProductGrid.php доступно 147
+

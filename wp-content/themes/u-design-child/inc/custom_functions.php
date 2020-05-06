@@ -989,7 +989,7 @@ function shortcode_thanks_block(){
     }
     else{
         ?>
-         <div class="home-first-thanks-block home-first-payment-cancel">
+         <div class="home-first-payment-cancel">
             <div class="thanks-text-wrapper">
                 <div>
                     <a href="<?php echo home_url(); ?>">

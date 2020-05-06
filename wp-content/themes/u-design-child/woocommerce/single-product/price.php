@@ -40,7 +40,7 @@ global $product;
 	</div>
 	<div class="quantity quantity-numers">
 		<div class="quantity-nav"><div class="quantity-button quantity-up">+</div></div>
-		<input type="number" readonly="readonly"  class="input-text qty text" step="1" min="1" max="" name="quantity" value="" size="4" inputmode="numeric">
+		<input type="number" id="shop-counter" readonly="readonly" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" size="4" inputmode="numeric">
 		<div class="quantity-nav"><div class="quantity-button quantity-down">-</div></div>
 	</div>
 </div>

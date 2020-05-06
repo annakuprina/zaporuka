@@ -1,15 +1,15 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   var callHelpPopup = false;
 
   //call Ask for help Modal
-  $( ".contact_need_help button" ).click(function(e) {
+  $(".contact_need_help button").click(function (e) {
     e.preventDefault();
     $("#askForHelpModal").addClass("opened");
     $("body").addClass("noscroll");
   });
 
   //close Ask for help Modal
-  $("#askForHelpModal .closemodale").click(function(e) {
+  $("#askForHelpModal .closemodale").click(function (e) {
     e.preventDefault();
     $("#askForHelpModal").removeClass("opened");
     $("body").removeClass("noscroll");
@@ -18,21 +18,21 @@ jQuery(document).ready(function($) {
   //call help sms modal from header
   $(
     "#custom-top-bar .top-bar-help-block a, #header-mob .top-bar-help-block a"
-  ).click(function(e) {
+  ).click(function (e) {
     e.preventDefault();
     $("#sendSmsModalfromHeader").addClass("opened");
     $("body").addClass("noscroll");
   });
 
   //close help sms modal from header
-  $("#sendSmsModalfromHeader .closemodale").click(function(e) {
+  $("#sendSmsModalfromHeader .closemodale").click(function (e) {
     e.preventDefault();
     $("#sendSmsModalfromHeader").removeClass("opened");
     $("body").removeClass("noscroll");
   });
 
   //call help sms modal from help block
-  $(".help-right .help-item .sms-popup-show").click(function(e) {
+  $(".help-right .help-item .sms-popup-show").click(function (e) {
     e.preventDefault();
     $("#sendSmsModalfromHelpForm").addClass("opened");
     $("body").addClass("noscroll");
@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
   //close help sms modal from help block
   $(
     "#sendSmsModalfromHelpForm .closemodale, #sendSmsModalfromHelpForm .help-other"
-  ).click(function(e) {
+  ).click(function (e) {
     e.preventDefault();
     $("#sendSmsModalfromHelpForm").removeClass("opened");
     $("body").removeClass("noscroll");
@@ -49,14 +49,14 @@ jQuery(document).ready(function($) {
   //call help big modal
   $(
     ".help-header-link a,.mob-menu-right #menu-item-305 a, #menu-Futer-Dopomogti-ukr li:eq(0) a,#menu-Futer-Dopomogti-rus  li:eq(0) a,#menu-Futer-Dopomogti-en li:eq(0) a"
-  ).click(function(e) {
+  ).click(function (e) {
     e.preventDefault();
     callHelpPopup = true;
     $("#ModalHelpForm").addClass("opened");
     $("body").addClass("noscroll");
   });
   //close help big modal
-  $("#ModalHelpForm .closemodale").click(function(e) {
+  $("#ModalHelpForm .closemodale").click(function (e) {
     e.preventDefault();
     callHelpPopup = false;
     $("#ModalHelpForm").removeClass("opened");
@@ -64,22 +64,16 @@ jQuery(document).ready(function($) {
   });
 
   $(".home-page-section2 .section2-columns .section2-single-column").click(
-    function() {
-      var text = $(this)
-        .find(".vc_cta3-actions")
-        .find("a")
-        .attr("href");
+    function () {
+      var text = $(this).find(".vc_cta3-actions").find("a").attr("href");
       window.location.href = text;
     }
   );
 
-  $(".help_form .amount-button").click(function(e) {
+  $(".help_form .amount-button").click(function (e) {
     e.preventDefault();
     var parent = jQuery(this).parent();
-    parent
-      .find(".amount-button")
-      .not(this)
-      .removeClass("active");
+    parent.find(".amount-button").not(this).removeClass("active");
     $(this).toggleClass("active");
     $(parent)
       .parent()
@@ -87,19 +81,19 @@ jQuery(document).ready(function($) {
       .val($(this).attr("summ"));
   });
 
-  jQuery(".help_form label[for='oferta']").click(function(e) {
+  jQuery(".help_form label[for='oferta']").click(function (e) {
     e.preventDefault();
     var parent = jQuery(this).parent();
     var checkBoxes = parent.find("#oferta");
     checkBoxes.prop("checked", !checkBoxes.prop("checked"));
   });
 
-  $(".help_form #paid").on("input", function(e) {
+  $(".help_form #paid").on("input", function (e) {
     var parent = jQuery(this).parents(".help_form");
     parent.find(".amount-button").removeClass("active");
   });
 
-  $(".help_form .help-form-subscribe input").click(function() {
+  $(".help_form .help-form-subscribe input").click(function () {
     change_payment_description($(this).val());
   });
 
@@ -116,7 +110,7 @@ jQuery(document).ready(function($) {
 
   $(
     ".woocommerce-custom-product-filter .filter-cart-price-wrapper .woocommerce-custom-price-filter a"
-  ).click(function(e) {
+  ).click(function (e) {
     e.preventDefault();
     $(".woocommerce-hidden-price-filter").toggleClass("show-me");
     $(this).toggleClass("active-filter");
@@ -128,14 +122,14 @@ jQuery(document).ready(function($) {
   $(".fake-count input").val($('.woocommerce.single-product .cart input').val());
   jQuery(
     ".fake-count .quantity-numers .quantity-nav .quantity-button.quantity-up"
-  ).click(function() {
+  ).click(function () {
     jQuery(
       ".woocommerce.single-product .cart .quantity .quantity-button.quantity-up"
     ).click();
   });
   jQuery(
     ".fake-count .quantity-numers .quantity-nav .quantity-button.quantity-down"
-  ).click(function() {
+  ).click(function () {
     jQuery(
       ".woocommerce.single-product .cart .quantity .quantity-button.quantity-down"
     ).click();
@@ -143,19 +137,22 @@ jQuery(document).ready(function($) {
 
   //help form validation
 
-  //letters validation 
+  //letters validation
   jQuery.validator.addMethod(
     "lettersonly",
-    function(value, element) {
-      return this.optional(element) || /^[a-zA-Z|а-щА-ЩЬьЮюЯяЇїІіЄєҐґ|а-яА-Я|\s]+$/i.test(value);
+    function (value, element) {
+      return (
+        this.optional(element) ||
+        /^[a-zA-Z|а-щА-ЩЬьЮюЯяЇїІіЄєҐґ|а-яА-Я|\s]+$/i.test(value)
+      );
     },
     "Letters only please"
   );
 
-  //phone validation 
+  //phone validation
   jQuery.validator.addMethod(
     "phonesymbols",
-    function(value, element) {
+    function (value, element) {
       // return this.optional(element) || ([\d]{5,10} + $/i.test(value);
       return this.optional(element) || /^[+]?[0-9\d]+$/i.test(value);
     },
@@ -180,7 +177,7 @@ jQuery(document).ready(function($) {
     message_amount_not_number = "Введіть, будь ласка, тільки цифри";
     message_fio_free = "Введіть, будь ласка, ПІБ";
     message_fio_not_text = "Введіть, будь ласка, тільки текст";
-    message_mail_required = "Введіть, будь ласка, email";
+    message_mail_required = "Перевірте, будь ласка, корректність email ";
     message_phone_required = "Введіть, будь ласка, номер телефону";
     message_phone_only_number = "Перевірте, будь ласка,  корректність номеру";
     message_oferta_required = "Погодьтесь, будь ласка, з офертою";
@@ -193,7 +190,7 @@ jQuery(document).ready(function($) {
     message_amount_not_number = "Введите, пожалуйста, только цифры";
     message_fio_free = "Введите, пожалуйста, ФИО";
     message_fio_not_text = "Введите, пожалуйста, только текст";
-    message_mail_required = "Введите, пожалуйста, email";
+    message_mail_required = "Проверьте, пожалуйста, корректность email";
     message_phone_required = "Введите, пожалуйста, номер телефона";
     message_phone_only_number = "Проверьте, пожалуйста, корректность номера";
     message_oferta_required = "Согласитесь, пожалуйста, с офертой";
@@ -206,7 +203,7 @@ jQuery(document).ready(function($) {
     message_amount_not_number = "Please enter only numbers";
     message_fio_free = "Please enter your full name";
     message_fio_not_text = "Please enter only text";
-    message_mail_required = "Please enter email";
+    message_mail_required = "Please check if the email is correct";
     message_phone_required = "Please enter your phone number";
     message_phone_only_number = "Please check the correctness of the number";
     message_oferta_required = "Please agree to the offer";
@@ -223,90 +220,90 @@ jQuery(document).ready(function($) {
     rules: {
       paid: {
         required: true,
-        number: true
+        number: true,
       },
       fio: {
         required: true,
-        lettersonly: true
+        lettersonly: true,
       },
       mail: {
         required: true,
-        email: true
+        email: true,
       },
       phone: {
         required: false,
-        phonesymbols: true
+        phonesymbols: true,
       },
       oferta: {
-        required: true
-      }
+        required: true,
+      },
     },
     messages: {
       paid: {
         required: message_amount_free,
-        number: message_amount_not_number
+        number: message_amount_not_number,
       },
       fio: {
         required: message_fio_free,
-        lettersonly: message_fio_not_text
+        lettersonly: message_fio_not_text,
       },
       mail: {
         required: message_mail_required,
-        email: message_mail_required
+        email: message_mail_required,
       },
       phone: {
         required: message_phone_required,
-        phonesymbols: message_phone_only_number
+        phonesymbols: message_phone_only_number,
       },
       oferta: {
-        required: message_oferta_required
-      }
-    }
+        required: message_oferta_required,
+      },
+    },
   });
 
   form_page_parent.find(".help_form").validate({
     rules: {
       paid: {
         required: true,
-        number: true
+        number: true,
       },
       fio: {
         required: true,
-        lettersonly: true
+        lettersonly: true,
       },
       mail: {
         required: true,
-        email: true
+        email: true,
       },
       phone: {
         required: false,
-        phonesymbols: true
+        phonesymbols: true,
       },
       oferta: {
-        required: true
-      }
+        required: true,
+      },
     },
     messages: {
       paid: {
         required: message_amount_free,
-        number: message_amount_not_number
+        number: message_amount_not_number,
       },
       fio: {
         required: message_fio_free,
-        lettersonly: message_fio_not_text
+        lettersonly: message_fio_not_text,
       },
       mail: {
         required: message_mail_required,
-        email: message_mail_required
+        email: message_mail_required,
       },
       phone: {
         required: message_phone_required,
-        phonesymbols: message_phone_only_number
+        phonesymbols: message_phone_only_number,
       },
       oferta: {
-        required: message_oferta_required
-      }
-    }
+        required: message_oferta_required,
+      },
+    },
   });
 
   //add payment description to Help form
@@ -334,14 +331,10 @@ jQuery(document).ready(function($) {
 
   change_payment_description("pay");
 
-  $(".cancel_subscription_form").submit(function(e) {
+  $(".cancel_subscription_form").submit(function (e) {
     e.preventDefault();
-    var client_mail = $(this)
-      .find('input[name="mail"]')
-      .val();
-    var client_tel = $(this)
-      .find('input[name="phone"]')
-      .val();
+    var client_mail = $(this).find('input[name="mail"]').val();
+    var client_tel = $(this).find('input[name="phone"]').val();
     if ($(this).valid()) {
       $.ajax({
         type: "POST",
@@ -350,9 +343,9 @@ jQuery(document).ready(function($) {
         data: {
           client_mail: client_mail,
           client_tel: client_tel,
-          action: "send_cancel_subscription_email"
+          action: "send_cancel_subscription_email",
         },
-        success: function(data) {
+        success: function (data) {
           if (data.result) {
             $(".cancel_subscription_form_inner_wrapper").hide();
             $(".cancel_subscription_form_success_block").show();
@@ -363,7 +356,7 @@ jQuery(document).ready(function($) {
             $(".cancel_subscription_form_inner_wrapper").show();
             $(".help-form-inner-title").show();
           }
-        }
+        },
       });
     } else {
       return false;
