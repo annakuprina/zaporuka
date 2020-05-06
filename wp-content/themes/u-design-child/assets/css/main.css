@@ -10780,7 +10780,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*related-product-desktop class adds to product block after js check in main.js file*/
 .woocommerce.single-product
   .related
-  .related-product-desktop
+  .related-product-mobile
   .add_to_cart_button {
   display: block !important;
   color: #e78b48 !important;
@@ -10789,7 +10789,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 .woocommerce.single-product
   .related
-  .related-product-desktop
+  .related-product-mobile
   .add_to_cart_button:after {
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
   position: absolute;
