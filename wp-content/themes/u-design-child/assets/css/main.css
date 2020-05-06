@@ -364,11 +364,10 @@ h2.h2-header-line::before {
 
 /*remove letter spacing from mobile IOS header(iosDevice class is pnly for IOS mobile devices. Device check is in main.js file*/
 .iosDevice #header-mob .top-bar-help-block {
-  letter-spacing: 0;
+  letter-spacing: 0 !important;
 }
-
 .iosDevice #header-mob .help-header-link a span {
-  letter-spacing: 0;
+  letter-spacing: 0 !important;
 }
 /*end remove letter spacing IOS*/
 
@@ -10248,15 +10247,15 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 @media screen and (max-width: 1024px) {
   /*universal media for pages Home, About us, Projects, One project page.
   For block with projects*/
-  div.other-projects-row div.project-money-quantity {
+  div.other-projects-row .project-money-quantity {
     font-size: 15px;
   }
 
-  div.other-projects-row div.project-money-collected {
+  div.other-projects-row .project-money-collected {
     font-size: 15px;
   }
 
-  div.other-projects-row div.one-project-progress-wrapper {
+  div.other-projects-row .one-project-progress-wrapper {
     font-size: 15px;
   }
   /*end universal media*/
