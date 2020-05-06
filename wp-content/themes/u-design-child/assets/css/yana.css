@@ -1452,7 +1452,7 @@ li.one-tab-link:hover {
   opacity: 0.85;
 }
 .ask_for_help_popup div {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 /* @media only screen and (max-width: 768px) {
@@ -1471,4 +1471,3 @@ li.one-tab-link:hover {
     margin-right: 0;
   }
 }
-
