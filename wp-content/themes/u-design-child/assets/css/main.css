@@ -10806,7 +10806,7 @@ ul.products li.product:hover .add_to_cart_button:after {
   .related
   .related-product-desktop
   .woocommerce-loop-product__link {
-  padding-top: 170px;
+  /* padding-top: 170px; */
 }
 
 .woocommerce.single-product
