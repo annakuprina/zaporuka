@@ -10777,7 +10777,24 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*---------------------
   SINGLE PRODUCT PAGE
 ----------------------*/
-
+/*related-product-desktop class adds to product block after js check in main.js file*/
+.woocommerce.single-product
+  .related
+  .related-product-desktop
+  .add_to_cart_button {
+  display: block !important;
+  color: #e78b48 !important;
+  font-family: "Raleway-Bold";
+  text-align: left;
+}
+.woocommerce.single-product
+  .related
+  .related-product-desktop
+  .add_to_cart_button:after {
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
+  position: absolute;
+  padding-left: 10px;
+}
 .woocommerce.single-product
   #wrapper-1
   .woocommerce-tabs.wc-tabs-wrapper
