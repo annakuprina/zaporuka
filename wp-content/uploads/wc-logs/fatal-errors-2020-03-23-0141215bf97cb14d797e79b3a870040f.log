@@ -1,8 +1,0 @@
-2020-03-23T16:27:05+02:00 CRITICAL Out of memory (allocated 62914560) (tried to allocate 32768 bytes) в C:\OSPanel\domains\zaporuka\wp-content\plugins\woocommerce\includes\wc-template-functions.php на строке 3360
-
-2020-03-23T16:34:06+02:00 CRITICAL Out of memory (allocated 12582912) (tried to allocate 32768 bytes) у C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\templates\shortcodes\vc_gitem_row.php доступно 1
-
-2020-03-23T16:34:24+02:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 65536 bytes) in C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\include\classes\shortcodes\paginator\class-vc-pageable.php on line 65
-
-2020-03-23T16:37:33+02:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 32768 bytes) в C:\OSPanel\domains\zaporuka\wp-content\plugins\js_composer\config\grids\class-vc-grids-common.php на строке 424
-
