@@ -351,6 +351,15 @@ h2.h2-header-line::before {
   .proj-timeline-share {
     letter-spacing: 0;
   }
+
+  /*remove letter spacing from mobile IOS header*/
+  #header-mob .top-bar-help-block {
+    letter-spacing: 0;
+  }
+
+  #header-mob .help-header-link a span {
+    letter-spacing: 0;
+  }
 }
 
 #header-mob .top-bar-help-block a {
@@ -2798,11 +2807,11 @@ and shows hidden orange lines near titles on About us page*/
 }
 
 /* iosDevice class(ios device is checked in main.js file) */
-.iosDevice .help-form-subscribe-right label,
+/* .iosDevice .help-form-subscribe-right label,
 .iosDevice .help-form-subscribe-left label {
   position: relative !important;
   bottom: -23px !important;
-}
+} */
 
 .iosDevice .help-form-subscribe-right,
 .iosDevice .help-form-subscribe-left {
@@ -2811,8 +2820,7 @@ and shows hidden orange lines near titles on About us page*/
 
 .iosDevice .help-form-subscribe input[type="radio"] {
   position: relative !important;
-
-  top: 13px !important;
+  top: 3px !important;
 }
 /*end ios*/
 
