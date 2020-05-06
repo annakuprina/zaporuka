@@ -10778,28 +10778,19 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   SINGLE PRODUCT PAGE
 ----------------------*/
 /*related-product-desktop class adds to product block after js check in main.js file*/
-.woocommerce.single-product
-  .related
-  .related-product-mobile
-  .add_to_cart_button {
+.woocommerce .product-mobile .add_to_cart_button {
   display: block !important;
-  color: #e78b48 !important;
+  color: #666666 !important;
   font-family: "Raleway-Bold";
   text-align: left;
   margin-top: 15px;
 }
-.woocommerce.single-product
-  .related
-  .related-product-mobile
-  .add_to_cart_button:after,
-ul.products li.product:hover .add_to_cart_button:after {
+.woocommerce .product-mobile .add_to_cart_button:after,
+li.product:hover .add_to_cart_button:after {
   content: url(/wp-content/themes/u-design-child/img/arrow-help.svg) !important;
 }
 
-.woocommerce.single-product
-  .related
-  .related-product-mobile
-  a.ajax_add_to_cart.loading {
+.woocommerce .product-mobile a.ajax_add_to_cart.loading {
   opacity: 0.7;
 }
 
