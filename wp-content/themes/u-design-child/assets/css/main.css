@@ -10786,15 +10786,29 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   color: #e78b48 !important;
   font-family: "Raleway-Bold";
   text-align: left;
+  margin-top: 15px;
 }
 .woocommerce.single-product
   .related
   .related-product-desktop
-  .add_to_cart_button:after {
-  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg);
-  position: absolute;
-  padding-left: 10px;
+  .add_to_cart_button:after,
+ul.products li.product:hover .add_to_cart_button:after {
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg) !important;
 }
+
+.woocommerce.single-product
+  .related
+  .related-product-desktop
+  a.ajax_add_to_cart.loading {
+  opacity: 0.7;
+}
+.woocommerce.single-product
+  .related
+  .related-product-desktop
+  .woocommerce-loop-product__link {
+  padding-top: 170px;
+}
+
 .woocommerce.single-product
   #wrapper-1
   .woocommerce-tabs.wc-tabs-wrapper
@@ -11002,7 +11016,7 @@ body.product ul.products {
   .add_to_cart_button {
   z-index: 50;
   top: 0 !important;
-  margin-top: 15px !important;
+  /* margin-top: 15px !important; */
 }
 
 ul.products li.product:hover .add_to_cart_button:after {
