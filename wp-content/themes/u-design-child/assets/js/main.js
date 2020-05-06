@@ -268,10 +268,10 @@ jQuery(document).ready(function ($) {
     ".header-mob-nav, #header-mob #navigation-menu a, .top-bar-help-block a, .help-header-link a"
   ).click(function () {
     $(".header-mob-bottom").slideToggle();
-    $(".header-mob-logo img").toggleClass("active");
-    $("#header-mob").toggleClass("active");
-    $(".hamburger").toggleClass("active");
-    $(".header-mob-top .close").toggleClass("active");
+    $(".header-mob-logo img").toggleClass("activeItem");
+    $("#header-mob").toggleClass("activeItem");
+    $(".hamburger").toggleClass("activeItem");
+    $(".header-mob-top .close").toggleClass("activeItem");
   });
 
   /*DROPDOWNS FOR SHOP AND REPORTS PAGES MOBILE*/

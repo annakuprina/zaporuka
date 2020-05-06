@@ -365,9 +365,11 @@ h2.h2-header-line::before {
 /*remove letter spacing from mobile IOS header(iosDevice class is pnly for IOS mobile devices. Device check is in main.js file*/
 .iosDevice #header-mob .top-bar-help-block {
   letter-spacing: 0 !important;
+  font-size: 20px !important;
 }
 .iosDevice #header-mob .help-header-link a span {
   letter-spacing: 0 !important;
+  font-size: 20px !important;
 }
 /*end remove letter spacing IOS*/
 
@@ -2829,7 +2831,7 @@ and shows hidden orange lines near titles on About us page*/
 
 .iosDevice .help-form-subscribe input[type="radio"] {
   position: relative !important;
-  top: 4px !important;
+  top: 3px !important;
 }
 /*end ios*/
 
@@ -8878,7 +8880,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .shop-custom-wrapper ul.products.columns-3 li.product {
     max-width: 353px;
-    width: 100%;
+    width: 100% !important;
   }
 }
 @media screen and (max-width: 500px) {
@@ -8919,7 +8921,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*---------
   POPUPS
 ---------*/
-#ModalHelpForm.opened .modal-dialog {
+#ModalHelpForm. .modal-dialog {
   box-shadow: none;
   width: calc(100% - 40px);
   transform: translateY(-50%);
@@ -10249,6 +10251,15 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   For block with projects*/
   div.other-projects-row .project-money-quantity {
     font-size: 15px;
+    margin-right: 0;
+  }
+
+  div.other-projects-row .project-money {
+    margin-right: 10px;
+  }
+
+  div.other-projects-row div.one-project-progress div.one-project-progress-top {
+    margin-top: 5px !important;
   }
 
   div.other-projects-row .project-money-collected {
