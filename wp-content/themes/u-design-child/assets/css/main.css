@@ -8753,7 +8753,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content
     .shop-custom-wrapper
     ul.products
-    li.product:hover
+    li.product.product-desktop:hover
     .woocommerce-loop-product__title {
     font-size: 14px !important;
   }
