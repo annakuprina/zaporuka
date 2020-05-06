@@ -423,14 +423,30 @@ jQuery(document).ready(function ($) {
     waitForAnimate: false,
   });
 
-  /*fix for IOS mobile. Single product page.Ralated products block.
-   When user swipes slider with related product click(tap) effect appears.
-   This fix removes click(tap) effect from swipe event*/
+  /*One Product page.Related Products.
+  Detect user device.If device is tablet or mobile  -add class "related-product-mobile" to one product item.
+  If device is desktop add class "related-product-desktop" */
+
+  /*detect device. If it is mobile device*/
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    $(".single-product .product").addClass("related-product-mobile");
+  } else {
+    /*If it desktop*/
+    $(".single-product .product").addClass("related-product-desktop");
+  }
+
   $(".woocommerce.single-product .related ul.products li.product").on(
     "hover",
     function (event) {
-      // console.log("hovered now");
-      $(this).toggleClass("related-product-active");
+      if ($(this).hasClass("related-product-desktop")) {
+        // console.log("hovered now");
+
+        $(this).toggleClass("related-product-active");
+      }
     }
   );
 
