@@ -1450,10 +1450,10 @@ li.one-tab-link:hover {
 .ask_for_help_popup div{
   margin-bottom:10px;
 }
-@media only screen and (max-width: 768px){
-  .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product{
-      width: 100%!important;
-      margin: 0 40px 0 0!important;
-  }
-}
+/*@media only screen and (max-width: 768px){*/
+/*  .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product{*/
+/*      width: 100%!important;*/
+/*      margin: 0 40px 0 0!important;*/
+/*  }*/
+/*}*/
 
