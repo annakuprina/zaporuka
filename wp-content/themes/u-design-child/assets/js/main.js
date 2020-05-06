@@ -435,20 +435,20 @@ jQuery(document).ready(function ($) {
   ) {
     $(".single-product .product").addClass("related-product-mobile");
   } else {
-    /*If it desktop*/
+  /*If it desktop*/
     $(".single-product .product").addClass("related-product-desktop");
   }
 
-  // $(".woocommerce.single-product .related ul.products li.product").on(
-  //   "hover",
-  //   function (event) {
-  //     if ($(this).hasClass("related-product-desktop")) {
-  //       // console.log("hovered now");
+  $(".woocommerce.single-product .related ul.products li.product").on(
+    "hover",
+    function (event) {
+      if ($(this).hasClass("related-product-desktop")) {
+        // console.log("hovered now");
 
-  //       $(this).toggleClass("related-product-active");
-  //     }
-  //   }
-  // );
+        $(this).toggleClass("related-product-active");
+      }
+    }
+  );
 
   // window.mobileAndTabletCheck = function () {
   //   let check = false;
