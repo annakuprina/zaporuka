@@ -10921,7 +10921,7 @@ div.product form.cart {
   color: #de7b33;
 }
 
-#main-content li.product:hover .shop-page-price-title {
+#main-content li.product.product-desktop:hover .shop-page-price-title {
   background: transparent;
   padding: 34px 30px;
 }
@@ -11449,4 +11449,6 @@ ul.products li.product:hover .add_to_cart_button:after {
   }
 
   .cancel_subscription_form .help-form-submit {
-    wid
+    width: 100%;
+  }
+}
