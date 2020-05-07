@@ -11505,4 +11505,26 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
   #main-content .shop-custom-wrapper li.product .shop-page-price-title {
     padding: 27px 20px;
   }
+
+  .shop-custom-wrapper ul.products li.product .price {
+    width: initial;
+  }
+
+  #wrapper-1
+    #main-content
+    .shop-custom-wrapper
+    .woocommerce-loop-product__title {
+    padding-right: 20px !important;
+    width: initial;
+  }
+
+  #wrapper-1
+    #main-content
+    .shop-custom-wrapper
+    .shop-page-price-title
+    .woocommerce-loop-product__link {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
