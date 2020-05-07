@@ -441,18 +441,18 @@ jQuery(document).ready(function ($) {
   }
 
   // hover on product for desktop devices
-  $(".product").on("hover", function (event) {
-    // If users device is desktop
-    if ($(this).hasClass("product-desktop")) {
-      // if current page is One product page
-      if ($("body").hasClass("single-product")) {
-        $(this).toggleClass("related-product-active");
-        // if current page is Shop page
-      } else {
-        $(this).toggleClass("shop-product-active");
-      }
-    }
-  });
+  // $(".product").on("hover", function (event) {
+  //   // If users device is desktop
+  //   if ($(this).hasClass("product-desktop")) {
+  //     // if current page is One product page
+  //     if ($("body").hasClass("single-product")) {
+  //       $(this).toggleClass("related-product-active");
+  //       // if current page is Shop page
+  //     } else {
+  //       $(this).toggleClass("shop-product-active");
+  //     }
+  //   }
+  // });
 
   /*Check if homepage contains Thanks block. Then add class "homepage-banner-with-thanks-block" to banner block*/
   if ($("div").hasClass("home-first-thanks-block")) {
