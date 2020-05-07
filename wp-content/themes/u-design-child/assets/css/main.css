@@ -2909,7 +2909,20 @@ and shows hidden orange lines near titles on About us page*/
   .help-form-email-tel
   .help-form-amount-tel
   input::-moz-placeholder {
-  color: rgba(86, 86, 86, 0.8);
+  color: rgba(0, 0, 0, 0.7);
+}
+/*mozilla*/
+.help-form-inner-wrapper .help-form-PIB input:-moz-placeholder,
+.help-form-inner-wrapper .help-form-amount-left input:-moz-placeholder,
+.help-form-inner-wrapper
+  .help-form-email-tel
+  .help-form-amount-email
+  input:-moz-placeholder,
+.help-form-inner-wrapper
+  .help-form-email-tel
+  .help-form-amount-tel
+  input:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.7);
 }
 /*mozilla*/
 .help-form-inner-wrapper .help-form-PIB input::-ms-input-placeholder,
@@ -2922,10 +2935,9 @@ and shows hidden orange lines near titles on About us page*/
   .help-form-email-tel
   .help-form-amount-tel
   input::-ms-input-placeholder {
-  /* Edge */
-  color: rgba(86, 86, 86, 0.8);
+  color: rgba(0, 0, 0, 0.7);
 }
-/*edge*/
+/* Edge */
 .help-form-inner-wrapper .help-form-PIB input::placeholder,
 .help-form-inner-wrapper .help-form-amount-left input::placeholder,
 .help-form-inner-wrapper
@@ -2936,7 +2948,6 @@ and shows hidden orange lines near titles on About us page*/
   .help-form-email-tel
   .help-form-amount-tel
   input::placeholder {
-  /* Edge */
   color: rgba(86, 86, 86, 0.8);
 }
 
