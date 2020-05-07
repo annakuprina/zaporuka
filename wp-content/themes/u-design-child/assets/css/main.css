@@ -10902,7 +10902,8 @@ div.product form.cart {
   font-size: 10px;
 }
 
-#wrapper-1 .woocommerce-cart-page-link .cart-customlocation.cart-count {
+#wrapper-1 .woocommerce-cart-page-link .cart-customlocation.cart-count,
+.single-product #page-content .single-product-cart-link .cart-count {
   top: 3px;
   left: -34px;
   width: 24px;
@@ -10913,8 +10914,7 @@ div.product form.cart {
   color: #fff;
   font-size: 10px;
   margin-right: 20px;
-  background: url(/wp-content/themes/u-design-child/img/cart-bg.svg) no-repeat
-    center 0px;
+  background: url(/wp-content/themes/u-design-child/img/cart-bg.svg) no-repeat center 0px;
   background-size: 15px 20px;
   overflow: visible;
 }
