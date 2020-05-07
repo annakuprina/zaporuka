@@ -1,6 +1,7 @@
 /*FONTS*/
 @font-face {
   font-family: "Proxima-Nova-Light";
+  font-display: swap;
   src: url("../fonts/Proxima-Nova-Light.eot") format("eot"),
     url("../fonts/Proxima-Nova-Light.woff") format("woff"),
     url("../fonts/Proxima-Nova-Light.ttf") format("truetype"),
@@ -8,12 +9,14 @@
 }
 @font-face {
   font-family: "Proxima-Nova-Regular";
+  font-display: swap;
   src: url("../fonts/Proxima-Nova-Regular.eot") format("eot"),
     url("../fonts/Proxima-Nova-Regular.woff") format("woff"),
     url("../fonts/Proxima-Nova-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Proxima-Nova-Semibold";
+  font-display: swap;
   src: url("../fonts/Proxima-Nova-Semibold.eot") format("eot"),
     url("../fonts/Proxima-Nova-Semibold.woff") format("woff"),
     url("../fonts/Proxima-Nova-Semibold.ttf") format("truetype"),
@@ -21,12 +24,14 @@
 }
 @font-face {
   font-family: "Proxima-Nova-Bold";
+  font-display: swap;
   src: url("../fonts/Proxima-Nova-Bold.eot") format("eot"),
     url("../fonts/Proxima-Nova-Bold.woff") format("woff"),
     url("../fonts/Proxima-Nova-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Raleway-Light";
+  font-display: swap;
   src: url("../fonts/Raleway-Light.eot") format("eot"),
     url("../fonts/Raleway-Light.woff") format("woff"),
     url("../fonts/Raleway-Light.ttf") format("truetype"),
@@ -34,6 +39,7 @@
 }
 @font-face {
   font-family: "Raleway-Regular";
+  font-display: swap;
   src: url("../fonts/Raleway-Regular.eot") format("eot"),
     url("../fonts/Raleway-Regular.woff") format("woff"),
     url("../fonts/Raleway-Regular.ttf") format("truetype"),
@@ -41,6 +47,7 @@
 }
 @font-face {
   font-family: "Raleway-Medium";
+  font-display: swap;
   src: url("../fonts/Raleway-Medium.eot") format("eot"),
     url("../fonts/Raleway-Medium.woff") format("woff"),
     url("../fonts/Raleway-Medium.ttf") format("truetype"),
@@ -48,6 +55,7 @@
 }
 @font-face {
   font-family: "Raleway-Semibold";
+  font-display: swap;
   src: url("../fonts/Raleway-Semibold.eot") format("eot"),
     url("../fonts/Raleway-Semibold.woff") format("woff"),
     url("../fonts/Raleway-Semibold.ttf") format("truetype"),
@@ -55,6 +63,7 @@
 }
 @font-face {
   font-family: "Raleway-Bold";
+  font-display: swap;
   src: url("../fonts/Raleway-Bold.eot") format("eot"),
     url("../fonts/Raleway-Bold.woff") format("woff"),
     url("../fonts/Raleway-Bold.ttf") format("truetype"),
