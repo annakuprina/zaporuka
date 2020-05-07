@@ -3170,7 +3170,7 @@ input#oferta:checked:after {
 
 .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-left,
 .help-form-inner-wrapper .help-form-subscribe .help-form-subscribe-right {
-  width: calc((100% - 33px) / 2) !important;
+  width: calc((100% - 36px) / 2) !important;
 }
 
 .help-form-subscribe-left {
@@ -5811,6 +5811,11 @@ html[lang="en-US"]
   }
 }
 
+@media screen and (max-width: 400px) {
+  .home-page-section6 .other-projects-row .singl-project-top-part {
+    height: 168px !important;
+  }
+}
 /*---------------------
   HOME PAGE SECTION 7
 ----------------------*/

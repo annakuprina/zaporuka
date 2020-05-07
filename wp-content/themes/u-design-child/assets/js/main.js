@@ -263,15 +263,16 @@ jQuery(document).ready(function ($) {
     $(this).find(".expand-button").toggleClass("expand-button-opened");
   });
 
-  //
   $(
     ".header-mob-nav, #header-mob #navigation-menu a, .top-bar-help-block a, .help-header-link a"
   ).click(function () {
-    $(".header-mob-bottom").slideToggle();
-    $(".header-mob-logo img").toggleClass("active");
-    $("#header-mob").toggleClass("active");
-    $(".hamburger").toggleClass("active");
-    $(".header-mob-top .close").toggleClass("active");
+    if ($("#header-mob").css("display") == "flex") {
+      $(".header-mob-bottom").slideToggle();
+      $(".header-mob-logo img").toggleClass("active");
+      $("#header-mob").toggleClass("active");
+      $(".hamburger").toggleClass("active");
+      $(".header-mob-top .close").toggleClass("active");
+    }
   });
 
   /*DROPDOWNS FOR SHOP AND REPORTS PAGES MOBILE*/
