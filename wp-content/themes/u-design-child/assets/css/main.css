@@ -10895,6 +10895,23 @@ div.product form.cart {
   font-size: 10px;
 }
 
+#wrapper-1 .woocommerce-cart-page-link .cart-customlocation.cart-count {
+  top: 2px;
+  left: -34px;
+  width: 24px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #fff;
+  font-size: 10px;
+  margin-right: 20px;
+  background: url(/wp-content/themes/u-design-child/img/cart-bg.svg) no-repeat
+    center 0px;
+  background-size: 15px 20px;
+  overflow: visible;
+}
+
 /* iosDevice class(ios device is checked in main.js file) */
 .iosDevice #wrapper-1 .cart-customlocation.cart-count {
   top: 7px;

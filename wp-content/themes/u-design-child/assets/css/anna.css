@@ -1772,6 +1772,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .single-product .single-product-cart-link svg {
   width: 19px;
   height: 18px;
+  display: none;
 }
 
 .woocommerce-custom-product-filter .woocommerce-cart-page-link {
