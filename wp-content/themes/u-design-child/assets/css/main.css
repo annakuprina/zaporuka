@@ -10931,7 +10931,7 @@ div.product form.cart {
 
 #main-content li.product.product-desktop:hover .shop-page-price-title {
   background: transparent;
-  padding: 34px 30px;
+  /* padding: 34px 30px; */
 }
 
 .single-product #wrapper-1 .single-product-cart-link {
@@ -11014,7 +11014,7 @@ body.product ul.products {
 }
 
 ul.products li.product.product-desktop:hover .add_to_cart_button:after {
-  content: url("/wp-content/themes/u-design-child/img/arrow-home.svg") !important;
+  /* content: url("/wp-content/themes/u-design-child/img/arrow-home.svg") !important; */
   padding-left: 10px !important;
 }
 
