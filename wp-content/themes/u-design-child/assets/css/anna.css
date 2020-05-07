@@ -1746,11 +1746,11 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .single-product .single-product-cart-link a:hover {
   color: #e78b48 !important;
 } */
-.woocommerce-custom-product-filter
+/* .woocommerce-custom-product-filter
   .woocommerce-custom-price-filter
   a:hover
   svg
-  path,
+  path, */
 .woocommerce-custom-product-filter .woocommerce-cart-page-link a:hover svg path,
 .woocommerce-custom-product-filter
   .woocommerce-custom-price-filter
