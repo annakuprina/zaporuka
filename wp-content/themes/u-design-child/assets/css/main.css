@@ -10918,7 +10918,7 @@ div.product form.cart {
   font-size: 10px;
   margin-right: 20px;
   background: url(/wp-content/themes/u-design-child/img/cart-bg.svg) no-repeat
-    center 0px;
+    5px 0;
   background-size: 15px 20px;
   overflow: visible;
 }
