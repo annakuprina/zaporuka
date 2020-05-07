@@ -5876,8 +5876,8 @@ html[lang="en-US"]
 .home-page-section7 .vc_pageable-load-more-btn a {
   transition: 0.4s ease;
 }
-..home-page-section7 {
-}
+/* ..home-page-section7 {
+} */
 
 .home-page-section7 .vc_grid.vc_row.vc_grid-gutter-35px {
   overflow: hidden;
@@ -9470,8 +9470,8 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-right: 0;
 }
 
-.contact-second-text-block .contact_need_help {
-}
+/* .contact-second-text-block .contact_need_help {
+} */
 
 @media screen and (max-width: 1400px) {
   .contact-second-text-block .h2-title-without-line:last-child h2 {
@@ -10801,7 +10801,7 @@ body.woocommerce .product-mobile:hover .add_to_cart_button:after {
 }
 
 .woocommerce .product-desktop a.ajax_add_to_cart.loading {
-  opacity: 0.7;
+  opacity: 0.72;
 }
 
 .woocommerce.single-product
