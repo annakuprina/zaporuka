@@ -107,7 +107,12 @@ h6,
   max-width: 168px;
   font-family: "Raleway-Bold";
 }
-
+/*media only for Mozilla */
+@-moz-document url-prefix() {
+  .error_page a {
+    letter-spacing: 0.1px;
+  }
+}
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
   .error_page a {
@@ -192,8 +197,9 @@ h6,
 }
 
 .contact_social_icon a:hover {
+  text-shadow: 0px 0px 1px #e78b48;
   color: #e78b48 !important;
-  font-weight: bold !important;
+  /* font-weight: bold !important; */
 }
 
 .contact_social_icon .footer-social-link a:hover .fa {
@@ -274,10 +280,6 @@ h6,
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-}
-.bank-details-block .privat-bank-detail-block {
-  padding-left: 28px;
-  padding-bottom: 9px;
 }
 .contact_help_form {
   padding-top: 85px;
@@ -776,7 +778,7 @@ h6,
 }
 .team-member-title,
 .team-member-title-hover {
-  font-family: "Raleway-Bold";
+  font-family: "Raleway-Semibold";
   font-size: 20px;
   font-weight: 700;
 }
@@ -1094,7 +1096,7 @@ li.one-tab-link:hover {
 /*media only for Safari 9+ */
 @supports (-webkit-hyphens: none) {
   .h2-header-without-line {
-    font-family: "Raleway-Semibold";
+    font-family: "Raleway-Semibold" !important;
   }
 }
 /*media only for Mozilla */
@@ -1135,8 +1137,10 @@ li.one-tab-link:hover {
   padding-bottom: 40px;
 }
 .report_download {
-  font-family: "Raleway-Bold";
+  font-family: "Raleway-Semibold";
   font-size: 14px;
+  position: relative;
+  left: 1px;
 }
 
 /*media only for Safari 9+ */
@@ -1447,13 +1451,23 @@ li.one-tab-link:hover {
 .one-project-info-title a:hover {
   opacity: 0.85;
 }
-.ask_for_help_popup div{
-  margin-bottom:10px;
+.ask_for_help_popup div {
+  margin-bottom: 10px;
 }
-/*@media only screen and (max-width: 768px){*/
-/*  .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product{*/
-/*      width: 100%!important;*/
-/*      margin: 0 40px 0 0!important;*/
-/*  }*/
-/*}*/
 
+/* @media only screen and (max-width: 768px) {
+  .woocommerce ul.products[class*="columns-"] li.product,
+  .woocommerce-page ul.products[class*="columns-"] li.product {
+    width: 100% !important;
+    margin: 0 40px 0 0 !important;
+  }
+} */
+@media only screen and (max-width: 768px) {
+  .woocommerce #main-content .shop-custom-wrapper ul.products {
+    width: 100% !important;
+  }
+  .shop-custom-wrapper ul.products.columns-3 li.product {
+    width: calc((100% - 40px) / 2);
+    margin-right: 0;
+  }
+}

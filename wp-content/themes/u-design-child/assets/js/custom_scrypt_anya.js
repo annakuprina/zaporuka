@@ -119,7 +119,9 @@ jQuery(document).ready(function ($) {
   $(".main-menu-shop-link").prepend($(".cart-count-in-main-header"));
 
   //change original woo quantity
-  $(".fake-count input").val($('.woocommerce.single-product .cart input').val());
+  $(".fake-count input").val(
+    $(".woocommerce.single-product .cart input").val()
+  );
   jQuery(
     ".fake-count .quantity-numers .quantity-nav .quantity-button.quantity-up"
   ).click(function () {

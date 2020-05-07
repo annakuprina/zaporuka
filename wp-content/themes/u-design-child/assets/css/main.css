@@ -365,9 +365,11 @@ h2.h2-header-line::before {
 /*remove letter spacing from mobile IOS header(iosDevice class is pnly for IOS mobile devices. Device check is in main.js file*/
 .iosDevice #header-mob .top-bar-help-block {
   letter-spacing: 0 !important;
+  font-size: 20px !important;
 }
 .iosDevice #header-mob .help-header-link a span {
   letter-spacing: 0 !important;
+  font-size: 20px !important;
 }
 /*end remove letter spacing IOS*/
 
@@ -2829,7 +2831,7 @@ and shows hidden orange lines near titles on About us page*/
 
 .iosDevice .help-form-subscribe input[type="radio"] {
   position: relative !important;
-  top: 4px !important;
+  top: 3px !important;
 }
 /*end ios*/
 
@@ -8734,7 +8736,11 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 }
 @media screen and (max-width: 1024px) {
-  #main-content .shop-custom-wrapper ul.products li.product:hover .price {
+  #main-content
+    .shop-custom-wrapper
+    ul.products
+    li.product.product-desktop:hover
+    .price {
     padding-bottom: 20px;
   }
 
@@ -8745,13 +8751,17 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     li.category-filter-item {
     margin-right: 30px;
   }
-  #main-content .shop-custom-wrapper ul.products li.product:hover .price {
+  #main-content
+    .shop-custom-wrapper
+    ul.products
+    li.product.product-desktop:hover
+    .price {
     padding-bottom: 5px;
   }
   #main-content
     .shop-custom-wrapper
     ul.products
-    li.product:hover
+    li.product.product-desktop:hover
     .woocommerce-loop-product__title {
     font-size: 14px !important;
   }
@@ -8759,7 +8769,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     #main-content
     .shop-custom-wrapper
     ul.products
-    li.product:hover
+    li.product.product-desktop:hover
     .add_to_cart_button {
     margin-top: 25px;
   }
@@ -8867,9 +8877,9 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     padding: 20px;
   }
 
-  .shop-custom-wrapper ul.products.columns-3 li.product {
+  /* .shop-custom-wrapper ul.products.columns-3 li.product {
     width: calc((100% - 82px) / 2);
-  }
+  } */
 }
 @media screen and (max-width: 620px) {
   .woocommerce #main-content .shop-custom-wrapper ul.products {
@@ -8878,7 +8888,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
   .shop-custom-wrapper ul.products.columns-3 li.product {
     max-width: 353px;
-    width: 100%;
+    width: 100% !important;
   }
 }
 @media screen and (max-width: 500px) {
@@ -10249,6 +10259,15 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   For block with projects*/
   div.other-projects-row .project-money-quantity {
     font-size: 15px;
+    margin-right: 0;
+  }
+
+  div.other-projects-row .project-money {
+    margin-right: 10px;
+  }
+
+  div.other-projects-row div.one-project-progress div.one-project-progress-top {
+    margin-top: 5px !important;
   }
 
   div.other-projects-row .project-money-collected {
@@ -10766,6 +10785,23 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*---------------------
   SINGLE PRODUCT PAGE
 ----------------------*/
+/*related-product-desktop class adds to product block after js check in main.js file*/
+body.woocommerce .product-desktop.product .add_to_cart_button {
+  display: block !important;
+  color: #de7b33 !important;
+  font-family: "Raleway-Bold";
+  text-align: left;
+  margin-top: 15px !important;
+}
+
+body.woocommerce .product-desktop .add_to_cart_button:after,
+body.woocommerce .product-desktop:hover .add_to_cart_button:after {
+  content: url(/wp-content/themes/u-design-child/img/arrow-help.svg) !important;
+}
+
+.woocommerce .product-desktop a.ajax_add_to_cart.loading {
+  opacity: 0.7;
+}
 
 .woocommerce.single-product
   #wrapper-1
@@ -10893,9 +10929,9 @@ div.product form.cart {
   color: #de7b33;
 }
 
-#main-content li.product:hover .shop-page-price-title {
+#main-content li.product.product-desktop:hover .shop-page-price-title {
   background: transparent;
-  padding: 34px 30px;
+  /* padding: 34px 30px; */
 }
 
 .single-product #wrapper-1 .single-product-cart-link {
@@ -10970,15 +11006,15 @@ body.product ul.products {
   #wrapper-1
   .related
   ul.products
-  li.product:hover
+  li.product.product-desktop:hover
   .add_to_cart_button {
   z-index: 50;
   top: 0 !important;
-  margin-top: 15px !important;
+  /* margin-top: 15px !important; */
 }
 
-ul.products li.product:hover .add_to_cart_button:after {
-  content: url("/wp-content/themes/u-design-child/img/arrow-home.svg") !important;
+ul.products li.product.product-desktop:hover .add_to_cart_button:after {
+  /* content: url("/wp-content/themes/u-design-child/img/arrow-home.svg") !important; */
   padding-left: 10px !important;
 }
 
@@ -11023,22 +11059,22 @@ ul.products li.product:hover .add_to_cart_button:after {
     #wrapper-1
     .related
     ul.products
-    li.product:hover
+    li.product.product-desktop:hover
     .add_to_cart_button {
     margin-top: 15px;
   }
-  .woocommerce.single-product
+  /* .woocommerce.single-product
     #wrapper-1
     .related
     ul.products
     li.product:hover
     .price {
     padding-bottom: 20px;
-  }
+  } */
 }
 @media screen and (max-width: 1024px) {
   .woocommerce.single-product #wrapper-1 .related .shop-page-price-title {
-    padding: 15px;
+    padding: 33px 15px;
   }
 }
 @media screen and (max-width: 950px) {
