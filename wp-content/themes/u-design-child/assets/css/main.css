@@ -2909,7 +2909,7 @@ and shows hidden orange lines near titles on About us page*/
   .help-form-email-tel
   .help-form-amount-tel
   input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.7);
+  color: green;
 }
 /*mozilla*/
 .help-form-inner-wrapper .help-form-PIB input:-moz-placeholder,
@@ -2922,7 +2922,7 @@ and shows hidden orange lines near titles on About us page*/
   .help-form-email-tel
   .help-form-amount-tel
   input:-moz-placeholder {
-  color: rgba(0, 0, 0, 0.7);
+  color: blue;
 }
 /*mozilla*/
 .help-form-inner-wrapper .help-form-PIB input::-ms-input-placeholder,
@@ -2935,7 +2935,7 @@ and shows hidden orange lines near titles on About us page*/
   .help-form-email-tel
   .help-form-amount-tel
   input::-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.7);
+  color: red;
 }
 /* Edge */
 .help-form-inner-wrapper .help-form-PIB input::placeholder,
@@ -2948,7 +2948,7 @@ and shows hidden orange lines near titles on About us page*/
   .help-form-email-tel
   .help-form-amount-tel
   input::placeholder {
-  color: rgba(86, 86, 86, 0.8);
+  color: pin;
 }
 
 .help-form-inner-wrapper .help-form-submit-oferta .help-form-submit::after {
