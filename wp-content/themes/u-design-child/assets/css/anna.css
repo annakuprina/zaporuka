@@ -1736,14 +1736,14 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .single-product .single-product-cart-link a {
   position: relative;
 }
-.woocommerce-custom-product-filter .woocommerce-custom-price-filter a:hover,
+/* .woocommerce-custom-product-filter .woocommerce-custom-price-filter a:hover,
 .woocommerce-custom-product-filter .woocommerce-cart-page-link a:hover,
 .woocommerce-custom-product-filter
   .woocommerce-custom-price-filter
   a.active-filter,
 .single-product .single-product-cart-link a:hover {
   color: #e78b48 !important;
-}
+} */
 .woocommerce-custom-product-filter
   .woocommerce-custom-price-filter
   a:hover

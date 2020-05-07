@@ -5811,7 +5811,7 @@ html[lang="en-US"]
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .home-page-section6 .other-projects-row .singl-project-top-part {
     height: 168px !important;
   }
@@ -10940,7 +10940,7 @@ div.product form.cart {
 }
 
 .single-product #page-content .single-product-cart-link .cart-count {
-  top: -1px;
+  top: -2px;
 }
 
 #main-content li.product .shop-page-price-title {
