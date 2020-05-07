@@ -1531,7 +1531,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce.single-product .related .product {
   box-shadow: 4px 4px 30px rgba(209, 209, 209, 0.2);
 }
-.shop-custom-wrapper .product.shop-product-active {
+.shop-custom-wrapper .product.shop-product-active:hover {
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
 }
 
@@ -1539,20 +1539,20 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce.single-product
   .related
   ul.products
-  li.product.related-product-active {
+  li.product.related-product-active:hover {
   background-image: linear-gradient(224deg, #f3ae43 0%, #e78b48 100%);
 }
 .woocommerce.single-product
   .related
   ul.products
-  li.product.related-product-active
+  li.product.related-product-active:hover
   .attachment-woocommerce_thumbnail {
   visibility: hidden;
 }
 .woocommerce.single-product
   .related
   ul.products
-  li.product.related-product-active
+  li.product.related-product-active:hover
   .woocommerce-loop-product__title {
   color: #ffffff;
   font-family: "Raleway-Medium";
@@ -1564,7 +1564,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce.single-product
   .related
   ul.products
-  li.product.related-product-active
+  li.product.related-product-active:hover
   .price {
   width: 100%;
   text-align: left;
@@ -1575,7 +1575,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 
 .woocommerce.single-product
   .related
-  .product.related-product-active
+  .product.related-product-active:hover
   .woocommerce-Price-amount {
   color: #ffffff;
   font-size: 32px;
@@ -1585,7 +1585,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce.single-product
   .related
   ul.products
-  li.product.related-product-active
+  li.product.related-product-active:hover
   .add_to_cart_button {
   display: block !important;
   text-align: left;
@@ -1594,14 +1594,14 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 }
 .woocommerce.single-product
   .related
-  .product.related-product-active
+  .product.related-product-active:hover
   .shop-page-price-title {
   bottom: unset;
   top: 0;
 }
 .woocommerce.single-product
   .related
-  .product.related-product-active
+  .product.related-product-active:hover
   .shop-page-price-title
   .woocommerce-loop-product__link {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -1609,7 +1609,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce.single-product
   #main-content
   .related
-  .product.related-product-active
+  .product.related-product-active:hover
   .woocommerce-Price-amount {
   color: #fff;
 }
@@ -1617,18 +1617,18 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 
 #main-content
   .shop-custom-wrapper
-  .product.shop-product-active
+  .product.shop-product-active:hover
   .woocommerce-Price-amount {
   color: #fff;
 }
 
 .shop-custom-wrapper
-  .product.shop-product-active
+  .product.shop-product-active:hover
   .attachment-woocommerce_thumbnail {
   visibility: hidden;
 }
 .shop-custom-wrapper
-  .product.shop-product-active
+  .product.shop-product-active:hover
   .woocommerce-loop-product__title {
   color: #ffffff;
   font-family: "Raleway-Medium";
@@ -1637,13 +1637,15 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   letter-spacing: 0.5px;
   width: 100%;
 }
-.shop-custom-wrapper ul.products li.product.shop-product-active .price {
+.shop-custom-wrapper ul.products li.product.shop-product-active:hover .price {
   width: 100%;
   text-align: left;
   padding-top: 5px;
   padding-bottom: 45px;
 }
-.shop-custom-wrapper .product.shop-product-active .woocommerce-Price-amount {
+.shop-custom-wrapper
+  .product.shop-product-active:hover
+  .woocommerce-Price-amount {
   color: #ffffff;
   font-size: 32px;
   font-family: "Proxima-Nova-Semibold";
@@ -1652,7 +1654,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce
   .shop-custom-wrapper
   ul.products
-  li.product.shop-product-active
+  li.product.shop-product-active:hover
   .add_to_cart_button {
   display: block !important;
   text-align: left;
@@ -1677,12 +1679,12 @@ input[type="checkbox"]:not(:checked) + label.error:after {
   right: 0;
   padding: 0;
 } */
-.shop-custom-wrapper .product.shop-product-active .shop-page-price-title {
+.shop-custom-wrapper .product.shop-product-active:hover .shop-page-price-title {
   bottom: unset;
   top: 0;
 }
 .shop-custom-wrapper
-  .product.shop-product-active
+  .product.shop-product-active:hover
   .shop-page-price-title
   .woocommerce-loop-product__link {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
