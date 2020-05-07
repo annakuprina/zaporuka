@@ -4760,7 +4760,9 @@ html[lang="en-US"]
   .section2-columns
   .section2-single-column:hover {
   background-image: linear-gradient(225deg, #f3ae43 0%, #e78b48 100%);
-  padding: 109px 60px 78px 60px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
 }
 
 #main-content .home-page-section2 .section2-columns .section2-single-column {
@@ -4841,12 +4843,6 @@ html[lang="en-US"]
 
   #main-content .home-page-section2 .section2-columns .section2-single-column {
     padding: 112px 60px 72px 60px;
-  }
-  #main-content
-    .home-page-section2
-    .section2-columns
-    .section2-single-column:hover {
-    padding: 94px 60px 90px 60px;
   }
 
   #main-content
