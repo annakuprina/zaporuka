@@ -8908,7 +8908,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     .woocommerce-custom-price-filter {
     padding-right: 0;
   }
-
+.woocommerce-custom-product-filter .woocommerce-cart-page-link {
+    position: relative;
+    left: 33px;
+}
   .shop-custom-wrapper ul.products.columns-3 li.product {
     width: 100%;
   }
@@ -8918,9 +8921,12 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     .woocommerce-custom-price-filter
     svg {
     top: 5px;
+    left: 2px;
     padding-right: 15px;
     padding-left: 1px;
   }
+
+
 }
 /*---------
   POPUPS
@@ -10788,6 +10794,7 @@ body.woocommerce .product-desktop.product .add_to_cart_button {
   font-family: "Raleway-Bold";
   text-align: left;
   margin-top: 15px !important;
+  letter-spacing: 0 !important;
 }
 
 body.woocommerce .product-desktop .add_to_cart_button:after,

@@ -1706,7 +1706,7 @@ input[type="checkbox"]:not(:checked) + label.error:after {
 .woocommerce-custom-product-filter
   .filter-cart-price-wrapper
   .woocommerce-custom-price-filter {
-  padding-right: 41px;
+  padding-right: 69px;
 }
 .woocommerce-custom-product-filter .woocommerce-custom-price-filter a,
 .woocommerce-custom-product-filter .woocommerce-cart-page-link a,
