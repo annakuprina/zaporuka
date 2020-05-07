@@ -465,7 +465,7 @@ jQuery(document).ready(function ($) {
 
   /*1 Product page. Ralated products carousel.Every related produc
     has 2 sides: front and back. This code removes link to the product on front side */
-  $(".products .product>.woocommerce-LoopProduct-link").removeAttr("href");
+  // $(".products .product>.woocommerce-LoopProduct-link").removeAttr("href");
 
   /*One product page. Check value of product number(input field).
   If number = 1 the make minus btn disable(add class).
