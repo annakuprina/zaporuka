@@ -1777,9 +1777,9 @@ If number of partners is more then 5 - slick is initialized("project-partners-ca
   top: 1px;
   transition: 0.4s ease;
 }
-.one-project-banner .one-project-socials .fa-facebook:hover {
+/* .one-project-banner .one-project-socials .fa-facebook:hover {
   color: #cacaca;
-}
+} */
 
 .one-project-banner .one-project-banner-inner {
   padding: 27px 60px 37px 61px;
