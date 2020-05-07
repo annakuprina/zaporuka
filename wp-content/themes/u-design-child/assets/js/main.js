@@ -165,11 +165,6 @@ jQuery(document).ready(function ($) {
     waitForAnimate: false,
   });
 
-  // $(window).on("resize", function() {
-  //   $(".project-partners-slick-mob").slick('reinit');
-  //   $(".project-partners-slick-mob .slick-dots:not(:first-child)").slice(1).remove();
-  // }).resize();
-
   //REWARDS SLIDER DESKTOP(index page)
   $(".rewards-desktop").slick({
     dots: true,
@@ -308,11 +303,6 @@ jQuery(document).ready(function ($) {
     $(".reports-list-title span:eq(0)").text(currentYear);
     $(".list_reports_wrapper .category-expand-button").toggleClass("active");
   });
-  /*DROPDOWN FOR NEWS PAGE MOBILE*/
-  // console.log("prr");
-  // $(".section-news .vc_grid-filter").prepend(
-  //   "<li class='category-mob-select'>Всi новини111</li>"
-  // );
 
   /*Count progressbar width*/
   var countProgress = function () {
@@ -440,20 +430,6 @@ jQuery(document).ready(function ($) {
     $(".product").addClass("product-desktop");
   }
 
-  // hover on product for desktop devices
-  // $(".product").on("hover", function (event) {
-  //   // If users device is desktop
-  //   if ($(this).hasClass("product-desktop")) {
-  //     // if current page is One product page
-  //     if ($("body").hasClass("single-product")) {
-  //       $(this).toggleClass("related-product-active");
-  //       // if current page is Shop page
-  //     } else {
-  //       $(this).toggleClass("shop-product-active");
-  //     }
-  //   }
-  // });
-
   /*Check if homepage contains Thanks block. Then add class "homepage-banner-with-thanks-block" to banner block*/
   if ($("div").hasClass("home-first-thanks-block")) {
     $(".homepage-banner").addClass("homepage-banner-with-thanks-block");
@@ -463,10 +439,6 @@ jQuery(document).ready(function ($) {
   if ($("div").hasClass("home-first-payment-cancel")) {
     $(".homepage-banner").addClass("homepage-banner-payment-cancel");
   }
-
-  /*1 Product page. Ralated products carousel.Every related produc
-    has 2 sides: front and back. This code removes link to the product on front side */
-  // $(".products .product>.woocommerce-LoopProduct-link").removeAttr("href");
 
   /*One product page. Check value of product number(input field).
   If number = 1 the make minus btn disable(add class).

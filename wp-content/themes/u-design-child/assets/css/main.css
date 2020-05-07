@@ -2883,7 +2883,7 @@ and shows hidden orange lines near titles on About us page*/
 .help_form_wrapper .help-form-inner-wrapper .textarea-small {
   color: rgb(39, 39, 39);
 }
-
+/*webkit*/
 .help-form-inner-wrapper .help-form-PIB input::-webkit-input-placeholder,
 .help-form-inner-wrapper
   .help-form-amount-left
@@ -2896,14 +2896,24 @@ and shows hidden orange lines near titles on About us page*/
   .help-form-email-tel
   .help-form-amount-tel
   input::-webkit-input-placeholder {
-  /* Edge */
   color: rgba(86, 86, 86, 0.8);
 }
-
-.help-form-inner-wrapper .help-form-PIB input::-webkit-input-placeholder,
+/*mozilla*/
+.help-form-inner-wrapper .help-form-PIB input::-moz-placeholder,
+.help-form-inner-wrapper .help-form-amount-left input::-moz-placeholder,
 .help-form-inner-wrapper
-  .help-form-amount-left
-  input::-webkit-input-placeholder,
+  .help-form-email-tel
+  .help-form-amount-email
+  input::-moz-placeholder,
+.help-form-inner-wrapper
+  .help-form-email-tel
+  .help-form-amount-tel
+  input::-moz-placeholder {
+  color: rgba(86, 86, 86, 0.8);
+}
+/*mozilla*/
+.help-form-inner-wrapper .help-form-PIB input::-ms-input-placeholder,
+.help-form-inner-wrapper .help-form-amount-left input::-ms-input-placeholder,
 .help-form-inner-wrapper
   .help-form-email-tel
   .help-form-amount-email
@@ -2915,11 +2925,9 @@ and shows hidden orange lines near titles on About us page*/
   /* Edge */
   color: rgba(86, 86, 86, 0.8);
 }
-
-.help-form-inner-wrapper .help-form-PIB input::-webkit-input-placeholder,
-.help-form-inner-wrapper
-  .help-form-amount-left
-  input::-webkit-input-placeholder,
+/*edge*/
+.help-form-inner-wrapper .help-form-PIB input::placeholder,
+.help-form-inner-wrapper .help-form-amount-left input::placeholder,
 .help-form-inner-wrapper
   .help-form-email-tel
   .help-form-amount-email
@@ -6117,6 +6125,10 @@ html[lang="en-US"]
     padding-left: 20px !important;
   }
 
+  .home-page-section8-inner .strategic-partner-img img {
+    max-width: 240px;
+  }
+
   .home .home-page-section7 .vc_pageable-load-more-btn .vc_grid-btn-load_more {
     margin-top: 20px;
     margin-bottom: 0px;
@@ -8170,11 +8182,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     padding: 81px 20px;
   }
 
-  /* #main-content .single_news_two_posts .vc_column-inner {
-    padding-left: 0;
-    padding-right: 0;
-  } */
-
   .single_news_two_posts .vc_grid.vc_row.vc_grid-gutter-30px .vc_grid-item {
     width: 50%;
   }
@@ -8326,11 +8333,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-right: 0;
 }
 
-/* .reporting_section_tabs .reports_section h2 {
-  padding-bottom: 0;
-  margin-bottom: 40px;
-  line-height: initial;
-} */
 @media screen and (max-width: 1400px) {
   .reporting_section_tabs .list_reports_wrapper {
     padding: 50px 0;
@@ -8439,12 +8441,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     user-select: none;
     z-index: 2;
   }
-
-  /* .reporting_section_tabs .tabs_content .reports_section > div {
-    width: 100%;
-    max-width: 500px;
-    margin-right: 0;
-  } */
 }
 @media screen and (min-width: 900px) {
   .reporting_section_tabs .list_reports_wrapper .one-tab-link {
@@ -8457,10 +8453,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   }
 }
 @media screen and (max-width: 700px) {
-  /* .reporting_section_tabs .list_reports_wrapper .one-tab-link {
-    width: 65px;
-  } */
-
   .reports_section .download_report_wrapper .report_text {
     padding: 25px 30px;
   }
@@ -8877,10 +8869,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   #main-content .shop-custom-wrapper .shop-page-price-title {
     padding: 20px;
   }
-
-  /* .shop-custom-wrapper ul.products.columns-3 li.product {
-    width: calc((100% - 82px) / 2);
-  } */
 }
 @media screen and (max-width: 620px) {
   .woocommerce #main-content .shop-custom-wrapper ul.products {
@@ -8991,9 +8979,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     margin-left: 5px;
   }
 
-  /* #ModalHelpForm .help-form-subscribe-right {
-    padding-left: 16px !important;
-  } */
   #ModalHelpForm input#oferta:before {
     top: 5px;
   }
@@ -9034,25 +9019,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     .help-form-submit::after {
     right: calc(50% - 44px);
   }
-
-  /* #ModalHelpForm .help-form-subscribe-left,
-  #ModalHelpForm .help-form-subscribe-right {
-    width: 100% !important;
-  } */
 }
-
-/* @media screen and (max-width: 900px) {
-  #ModalHelpForm .help-form-submit::after {
-    right: 20px;
-  }
-
-  html[lang="ru-RU"] #ModalHelpForm .help-form-submit::after {
-    right: 28px;
-  }
-  html[lang="en-US"] #ModalHelpForm .help-form-submit::after {
-    right: 32px;
-  }
-} */
 @media screen and (max-width: 767px) {
   #ModalHelpForm .help-form-submit-wrapper {
     width: 100%;
@@ -9475,9 +9442,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   margin-right: 0;
 }
 
-/* .contact-second-text-block .contact_need_help {
-} */
-
 @media screen and (max-width: 1400px) {
   .contact-second-text-block .h2-title-without-line:last-child h2 {
     font-size: 42px;
@@ -9845,7 +9809,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 .vc_gitem-row-position-bottom {
   font-family: "Raleway-Regular";
-  /* font-size: 14px; */
 }
 
 #our_team .team-member-info-hover .field_5e1d98b8bab85_labeled {
@@ -9858,7 +9821,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 
 #wrapper-1 .our-team-middle-block {
   opacity: 0.8;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.7); */
   line-height: 23px;
   font-family: "Raleway-Light";
 }
@@ -9880,7 +9842,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 }
 
 /*Our team section*/
-
 /*restyle builder Our team item block. Making inner blocks static not absolute.*/
 
 .aboutus_section3 .our_team_section .our-team-hover-wrapper {
@@ -10139,11 +10100,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
   width: 100%;
   margin: auto;
 }
-
-/* .write-aboutus-wrapper .about_block6 > .vc_column_container {
-  padding-left: 15px;
-  padding-right: 15px;
-} */
 
 /* Write about us sider */
 .write-about-us-slick-desk .slick-track {
@@ -11087,14 +11043,6 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
     .add_to_cart_button {
     margin-top: 15px;
   }
-  /* .woocommerce.single-product
-    #wrapper-1
-    .related
-    ul.products
-    li.product:hover
-    .price {
-    padding-bottom: 20px;
-  } */
 }
 @media screen and (max-width: 1024px) {
   .woocommerce.single-product #wrapper-1 .related .shop-page-price-title {
@@ -11113,15 +11061,6 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
   #slider2_container.woocommerce-images {
     margin-right: 0;
   }
-  /* 
-  .woocommerce.single-product #wrapper-1 div.product div.summary {
-    max-width: 600px;
-    width: unset;
-    margin-top: 30px;
-  }
-  .woocommerce.single-product #wrapper-1 .woocommerce-tabs {
-    width: 100%;
-  } */
 
   .woocommerce ul.products {
     display: flex;
@@ -11412,12 +11351,6 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
 .woocommerce.single-product #lightbox .lb-details {
   display: none;
 }
-
-/* @media screen and (max-width: 1024px) {
-  .single-product .lightbox {
-    justify-content: flex-start;
-  }
-} */
 
 /*--------------------------
   BECOME A VOLUNTEER PAGE
