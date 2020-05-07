@@ -1462,12 +1462,3 @@ li.one-tab-link:hover {
     margin: 0 40px 0 0 !important;
   }
 } */
-@media only screen and (max-width: 768px) {
-  .woocommerce #main-content .shop-custom-wrapper ul.products {
-    width: 100% !important;
-  }
-  .shop-custom-wrapper ul.products.columns-3 li.product {
-    width: calc((100% - 40px) / 2);
-    margin-right: 0;
-  }
-}

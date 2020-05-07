@@ -8908,10 +8908,10 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     .woocommerce-custom-price-filter {
     padding-right: 0;
   }
-.woocommerce-custom-product-filter .woocommerce-cart-page-link {
+  .woocommerce-custom-product-filter .woocommerce-cart-page-link {
     position: relative;
     left: 33px;
-}
+  }
   .shop-custom-wrapper ul.products.columns-3 li.product {
     width: 100%;
   }
@@ -8925,8 +8925,6 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
     padding-right: 15px;
     padding-left: 1px;
   }
-
-
 }
 /*---------
   POPUPS
@@ -10914,7 +10912,8 @@ div.product form.cart {
   color: #fff;
   font-size: 10px;
   margin-right: 20px;
-  background: url(/wp-content/themes/u-design-child/img/cart-bg.svg) no-repeat center 0px;
+  background: url(/wp-content/themes/u-design-child/img/cart-bg.svg) no-repeat
+    center 0px;
   background-size: 15px 20px;
   overflow: visible;
 }
@@ -10936,7 +10935,7 @@ div.product form.cart {
 }
 
 .single-product #page-content .single-product-cart-link .cart-count {
-  top: 2px;
+  top: -1px;
 }
 
 #main-content li.product .shop-page-price-title {
@@ -11478,5 +11477,23 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
 
   .cancel_subscription_form .help-form-submit {
     width: 100%;
+  }
+}
+
+/*FIX FOR SHOP PAGE WITH ACTIVATED WP ROCKET*/
+@media only screen and (max-width: 768px) {
+  .woocommerce #main-content .shop-custom-wrapper ul.products {
+    width: 100% !important;
+  }
+  .shop-custom-wrapper ul.products.columns-3 li.product {
+    width: calc((100% - 40px) / 2);
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .shop-custom-wrapper ul.products.columns-3 li.product {
+    width: 100% !important;
+    margin-bottom: 40px !important;
   }
 }
