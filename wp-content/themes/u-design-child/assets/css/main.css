@@ -11494,19 +11494,19 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
 @media only screen and (max-width: 500px) {
   .shop-custom-wrapper ul.products.columns-3 li.product {
     width: 100% !important;
-    margin-bottom: 40px !important;
     margin: auto !important;
+    margin-bottom: 40px !important;
   }
 
   .shop-custom-wrapper ul.products.columns-3 li.product:nth-child(2n) {
-    margin-right: 0 !important;
+    /* margin-right: 0 !important; */
   }
 
   #main-content .shop-custom-wrapper li.product .shop-page-price-title {
     padding: 27px 20px;
   }
 
-  .shop-custom-wrapper ul.products li.product .price {
+  div.shop-custom-wrapper ul.products li.product .price {
     width: initial;
   }
 
