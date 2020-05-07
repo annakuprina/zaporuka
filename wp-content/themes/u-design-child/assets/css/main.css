@@ -8929,7 +8929,7 @@ After hover on news item, block "section-news-hover-wrapper" becomes visible.*/
 /*---------
   POPUPS
 ---------*/
-#ModalHelpForm. .modal-dialog {
+#ModalHelpForm.opened .modal-dialog {
   box-shadow: none;
   width: calc(100% - 40px);
   transform: translateY(-50%);
