@@ -11008,6 +11008,10 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
 }
 
 @media screen and (max-width: 1300px) {
+  .single-product .slick-track {
+    width: 100% !important;
+  }
+
   .single-product ul.products li.product {
     margin: 0 20px !important;
     width: calc((100% - 120px) / 3) !important;
