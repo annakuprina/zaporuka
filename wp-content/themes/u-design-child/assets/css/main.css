@@ -11007,7 +11007,12 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
   padding: 6px 10px 0 10px;
 }
 
-
+@media screen and (max-width: 1300px) {
+  .single-product ul.products li.product {
+    margin: 0 20px !important;
+    width: calc((100% - 120px) / 3) !important;
+  }
+}
 @media screen and (max-width: 1200px) {
   .woocommerce.single-product ul.products {
     margin: 0;
