@@ -10935,7 +10935,7 @@ div.product form.cart {
 /* the slides */
 .single-product ul.products li.product {
   margin: 0 20px !important;
-  width: 353px !important;
+  max-width: 353px;
 }
 
 /* the parent */
@@ -10985,7 +10985,10 @@ body.product ul.products {
 .products .slick-track {
   margin-left: unset;
 }
-
+.single-product .related .slick-list .product,
+.single-product .related .slick-track {
+  min-width: 260px !important;
+}
 .woocommerce.single-product
   #wrapper-1
   .related
@@ -11007,16 +11010,6 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
   padding: 6px 10px 0 10px;
 }
 
-@media screen and (max-width: 1300px) {
-  .single-product .slick-track {
-    width: 100% !important;
-  }
-
-  .single-product ul.products li.product {
-    margin: 0 20px !important;
-    width: calc((100% - 120px) / 3) !important;
-  }
-}
 @media screen and (max-width: 1200px) {
   .woocommerce.single-product ul.products {
     margin: 0;
@@ -11068,6 +11061,10 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
     text-align: right;
   }
 
+  .single-product ul.products li.product {
+    max-width: unset;
+  }
+
   #slider2_container.woocommerce-images {
     margin-right: 0;
   }
@@ -11095,10 +11092,6 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
 
   .single-product .related.products {
     margin-bottom: 100px;
-  }
-
-  .single-product ul.products li.product {
-    width: calc((100% - 80px) / 2) !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -11435,12 +11428,11 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
 /*CHECKOUT PAGE*/
 @media only screen and (max-width: 480px) {
   .woocommerce-billing-fields__field-wrapper {
-    display: flex;
+    display: flex; 
     flex-direction: column;
     justify-content: flex-start;
   }
 }
-
 /*FIX FOR SHOP PAGE WITH ACTIVATED WP ROCKET*/
 @media only screen and (max-width: 768px) {
   .woocommerce #main-content .shop-custom-wrapper ul.products {
