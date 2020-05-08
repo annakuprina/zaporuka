@@ -9,6 +9,8 @@
 .settings/
 *.sublime-workspace
 
+/wp-content/uploads
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
