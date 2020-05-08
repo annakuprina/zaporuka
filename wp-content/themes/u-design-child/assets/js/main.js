@@ -192,6 +192,7 @@ jQuery(document).ready(function ($) {
     slidesToShow: 3,
     slidesToScroll: 3,
     waitForAnimate: false,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 950,
