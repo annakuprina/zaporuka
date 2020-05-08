@@ -2909,7 +2909,7 @@ and shows hidden orange lines near titles on About us page*/
   .help-form-email-tel
   .help-form-amount-tel
   input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 1);
 }
 /*mozilla*/
 .help-form-inner-wrapper .help-form-PIB input:-moz-placeholder,
@@ -6134,10 +6134,6 @@ html[lang="en-US"]
   .home-page-section8-inner .strategic-partner-text {
     padding-right: 20px !important;
     padding-left: 20px !important;
-  }
-
-  .home-page-section8-inner .strategic-partner-img img {
-    max-width: 240px;
   }
 
   .home .home-page-section7 .vc_pageable-load-more-btn .vc_grid-btn-load_more {
@@ -11426,6 +11422,15 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
 
   .cancel_subscription_form .help-form-submit {
     width: 100%;
+  }
+}
+
+/*CHECKOUT PAGE*/
+@media only screen and (max-width: 480px) {
+  .woocommerce-billing-fields__field-wrapper {
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
 
