@@ -2909,7 +2909,7 @@ and shows hidden orange lines near titles on About us page*/
   .help-form-email-tel
   .help-form-amount-tel
   input::-moz-placeholder {
-  color: rgba(0, 0, 0, .75);
+  color: rgba(0, 0, 0, 0.75);
 }
 /*mozilla*/
 .help-form-inner-wrapper .help-form-PIB input:-moz-placeholder,
