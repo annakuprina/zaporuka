@@ -10944,7 +10944,7 @@ div.product form.cart {
 }
 
 .single-product ul.products .slick-dots {
-  bottom: -95px;
+  bottom: -94px;
 }
 
 .woocommerce.single-product #wrapper-1 .related .shop-page-price-title {
@@ -11428,7 +11428,7 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
 /*CHECKOUT PAGE*/
 @media only screen and (max-width: 480px) {
   .woocommerce-billing-fields__field-wrapper {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
