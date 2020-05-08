@@ -10936,7 +10936,7 @@ div.product form.cart {
 .single-product ul.products li.product {
   margin: 0 20px !important;
   /* max-width: 353px; */
-  width: 353px;
+  min-width: 353px !important;
 }
 
 /* the parent */
@@ -10986,10 +10986,7 @@ body.product ul.products {
 .products .slick-track {
   margin-left: unset;
 }
-.single-product .related .slick-list .product,
-.single-product .related .slick-track {
-  min-width: 260px !important;
-}
+
 .woocommerce.single-product
   #wrapper-1
   .related
@@ -11009,6 +11006,12 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
 /*single product page. Message after adding product to cart*/
 .single-product #wrapper-1 .woocommerce-message .button.wc-forward {
   padding: 6px 10px 0 10px;
+}
+
+@media screen and (max-width: 1500px) {
+  .single-product ul.products li.product {
+    min-width: inset !important;
+  }
 }
 
 @media screen and (max-width: 1200px) {
