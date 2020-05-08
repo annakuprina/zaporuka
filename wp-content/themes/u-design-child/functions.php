@@ -692,3 +692,4 @@ function remove_redirect_guess_404_permalink( $redirect_url ) {
 add_filter( 'redirect_canonical', 'remove_redirect_guess_404_permalink' );
 
 add_filter('vc_grid_get_grid_data_access','__return_true');
+

@@ -891,8 +891,9 @@ h6,
 .pagination-block a,
 .pagination-children a {
   padding: 0 5px;
-  opacity: 0.3;
-  color: #333333;
+  /*opacity: 0.3;*/
+  /*color: #333333;*/
+  color: #bfbfbf;
   font-size: 14px;
   font-weight: 400;
   font-family: "Proxima-Nova-Regular";
