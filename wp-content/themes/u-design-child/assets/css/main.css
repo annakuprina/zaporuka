@@ -11068,10 +11068,6 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
     text-align: right;
   }
 
-  .single-product ul.products li.product {
-    max-width: unset;
-  }
-
   #slider2_container.woocommerce-images {
     margin-right: 0;
   }
@@ -11099,6 +11095,10 @@ ul.products li.product.product-desktop:hover .add_to_cart_button:after {
 
   .single-product .related.products {
     margin-bottom: 100px;
+  }
+
+  .single-product ul.products li.product {
+    width: calc((100% - 80px) / 2) !important;
   }
 }
 @media screen and (max-width: 768px) {
